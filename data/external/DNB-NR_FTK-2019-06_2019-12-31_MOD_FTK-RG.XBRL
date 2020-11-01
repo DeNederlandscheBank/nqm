@@ -1,0 +1,1317 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?instance-generator id="Excel DPM To XBRL Generator" version="EDX Beta 2.0.0" creationDate="2019-07-08T10:08:06+02:00"?>
+<!-- © De Nederlandsche Bank, Sample XBRL Instance With Fixed Interval Data -->
+<xbrli:xbrl
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xbrli="http://www.xbrl.org/2003/instance"
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
+    xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+    xmlns:find="http://www.eurofiling.info/xbrl/ext/filing-indicators"
+    xmlns:dnb_met="http://www.dnb.nl/xbrl/dict/met"
+    xmlns:dnb_dim="http://www.dnb.nl/xbrl/dict/dim"
+    xmlns:dnb_ftk_dom001="http://www.dnb.nl/xbrl/dict/dom/ftk_dom001"
+    xmlns:dnb_ftk_dom002="http://www.dnb.nl/xbrl/dict/dom/ftk_dom002"
+    xmlns:dnb_ftk_dom003="http://www.dnb.nl/xbrl/dict/dom/ftk_dom003"
+    xmlns:dnb_ftk_dom004="http://www.dnb.nl/xbrl/dict/dom/ftk_dom004"
+    xmlns:dnb_ftk_dom028="http://www.dnb.nl/xbrl/dict/dom/ftk_dom028"
+    xmlns:dnb_ftk_dom030="http://www.dnb.nl/xbrl/dict/dom/ftk_dom030"
+    xmlns:dnb_ftk_dom031="http://www.dnb.nl/xbrl/dict/dom/ftk_dom031"
+    xmlns:dnb_ftk_dom033="http://www.dnb.nl/xbrl/dict/dom/ftk_dom033"
+    xmlns:dnb_ftk_dom035="http://www.dnb.nl/xbrl/dict/dom/ftk_dom035"
+    xmlns:dnb_ftk_dom006="http://www.dnb.nl/xbrl/dict/dom/ftk_dom006"
+    xmlns:dnb_typ="http://www.dnb.nl/xbrl/dict/typ"
+    >
+    <link:schemaRef xlink:type="simple" xlink:href="http://www.dnb.nl/nl/fr/xbrl/fws/dnb-nr/ftk-2019-06/2019-12-31/mod/ftk-rg.xsd"/>
+    <xbrli:unit id="uEUR">
+        <xbrli:measure>iso4217:EUR</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:unit id="uPURE">
+        <xbrli:measure>xbrli:pure</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:context id="C0">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+    <find:fIndicators>
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-CG1</find:filingIndicator> <!-- Tabel groep: Contactgegevens -->
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-RG1</find:filingIndicator> <!-- Tabel groep: Gegevens per reglement -->
+    </find:fIndicators>
+    <xbrli:context id="C1">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim001">dnb_ftk_dom001:mem001</xbrldi:explicitMember> <!-- Contact type | ftk.Contact:Contactpersoon invulling -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim001">dnb_ftk_dom001:mem002</xbrldi:explicitMember> <!-- Contact type | ftk.Contact:Verantwoordelijk bestuurslid rapportage -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4711">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim003">dnb_ftk_dom003:mem003</xbrldi:explicitMember> <!-- Rekeningzijde | ftk.Rekeningzijde:Baten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem095</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Premiebaten -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4712">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim003">dnb_ftk_dom003:mem004</xbrldi:explicitMember> <!-- Rekeningzijde | ftk.Rekeningzijde:Lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem107</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Uitkeringen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4713">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim003">dnb_ftk_dom003:mem001</xbrldi:explicitMember> <!-- Rekeningzijde | ftk.Rekeningzijde:Passiva -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem001</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Technische voorzieningen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim005">dnb_ftk_dom004:mem002</xbrldi:explicitMember> <!-- Subpost | ftk.Postomschrijving:Technische voorzieningen voor risico fonds -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4714">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim003">dnb_ftk_dom003:mem001</xbrldi:explicitMember> <!-- Rekeningzijde | ftk.Rekeningzijde:Passiva -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem001</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Technische voorzieningen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim005">dnb_ftk_dom004:mem003</xbrldi:explicitMember> <!-- Subpost | ftk.Postomschrijving:Technische voorzieningen voor risico deelnemers -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4715">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim003">dnb_ftk_dom003:mem001</xbrldi:explicitMember> <!-- Rekeningzijde | ftk.Rekeningzijde:Passiva -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem001</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Technische voorzieningen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim005">dnb_ftk_dom004:mem004</xbrldi:explicitMember> <!-- Subpost | ftk.Postomschrijving:Technische voorzieningen afgedekt door garantiecontract -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4716">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim099">dnb_ftk_dom028:mem011</xbrldi:explicitMember> <!-- Type actieven | ftk.Deelnemers:Actieven excl. vrijgesteld van premiebetaling o.b.v. arbeidsongeschiktheid -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4717">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim099">dnb_ftk_dom028:mem011</xbrldi:explicitMember> <!-- Type actieven | ftk.Deelnemers:Actieven excl. vrijgesteld van premiebetaling o.b.v. arbeidsongeschiktheid -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4718">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim099">dnb_ftk_dom028:mem011</xbrldi:explicitMember> <!-- Type actieven | ftk.Deelnemers:Actieven excl. vrijgesteld van premiebetaling o.b.v. arbeidsongeschiktheid -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4719">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim099">dnb_ftk_dom028:mem012</xbrldi:explicitMember> <!-- Type actieven | ftk.Deelnemers:Actieven vrijgesteld van premiebetaling o.b.v. arbeidsongeschiktheid -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4720">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim099">dnb_ftk_dom028:mem012</xbrldi:explicitMember> <!-- Type actieven | ftk.Deelnemers:Actieven vrijgesteld van premiebetaling o.b.v. arbeidsongeschiktheid -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4721">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim099">dnb_ftk_dom028:mem012</xbrldi:explicitMember> <!-- Type actieven | ftk.Deelnemers:Actieven vrijgesteld van premiebetaling o.b.v. arbeidsongeschiktheid -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4722">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim099">dnb_ftk_dom028:mem013</xbrldi:explicitMember> <!-- Type actieven | ftk.Deelnemers:Deeltijdpensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4723">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim099">dnb_ftk_dom028:mem013</xbrldi:explicitMember> <!-- Type actieven | ftk.Deelnemers:Deeltijdpensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4724">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim099">dnb_ftk_dom028:mem013</xbrldi:explicitMember> <!-- Type actieven | ftk.Deelnemers:Deeltijdpensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4725">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4726">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4727">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4728">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem002</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Gewezen deelnemers -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4729">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem002</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Gewezen deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4730">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem002</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Gewezen deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4731">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem001</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Ouderdomspensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4732">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem001</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Ouderdomspensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4733">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem001</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Ouderdomspensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4734">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem002</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Arbeidsongeschiktheidspensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4735">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem002</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Arbeidsongeschiktheidspensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4736">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem002</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Arbeidsongeschiktheidspensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4737">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem003</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Partnerpensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4738">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem003</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Partnerpensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4739">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem003</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Partnerpensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4740">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem004</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Wezenpensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4741">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem004</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Wezenpensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4742">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim086">dnb_ftk_dom033:mem004</xbrldi:explicitMember> <!-- Pensioentype | ftk.Pensioentype:Wezenpensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4743">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4744">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4745">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem003</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4746">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem004</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Alle deelnemers -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4747">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem004</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Alle deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem001</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Man -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4748">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem004</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Alle deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim075">dnb_ftk_dom030:mem002</xbrldi:explicitMember> <!-- Geslacht | ftk.Geslacht:Vrouw -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4751">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4769">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem001</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Opbouwpercentage OP in eindloonregeling -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4770">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem002</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Opbouwpercentage OP in middelloonregeling -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4771">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem003</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Opbouwpercentage tijdelijk ouderdomspensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4772">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem004</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Opbouwpercentage overbruggingspensioen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4778">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem005</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Hoogte deelnemersbijdrage ouderdomspensioen (%) -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4780">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem006</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Maximale premiebijdrage in procenten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4787">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem007</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Normale toetredingsleeftijd -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4789">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem008</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Wachttijd -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4791">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem009</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Drempeltijd -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4792">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem010</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Pensioenrichtleeftijd -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4793">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem011</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Minimum pensioenleeftijd -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4794">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem012</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Maximum pensioenleeftijd -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4797">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem013</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Maximaal pensioengevend salaris -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4798">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem014</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Maximale pensioengrondslag -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4802">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem015</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Individuele franchise -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4804">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem016</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Uitruilfactor OP in NP -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4806">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem017</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Uitruilfactor NP in OP -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4830">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem018</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Partnerpensioen in procenten t.o.v. het OP -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4836">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem019</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Wezenpensioen in procenten t.o.v. het OP/NP -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4839">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim100">dnb_ftk_dom035:mem020</xbrldi:explicitMember> <!-- Reglementskenmerk | ftk.Reglementskenmerk:Uitkeringspercentage AOP boven/beneden maximum SV-loon -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4843">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim077">dnb_ftk_dom031:mem002</xbrldi:explicitMember> <!-- Toeslagenpost | ftk.Toeslagverlening:Toegekend toeslagpercentage -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim078">dnb_ftk_dom031:mem023</xbrldi:explicitMember> <!-- Toeslagenbesluit | ftk.Toeslagverlening:Besluit 1 -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4844">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim077">dnb_ftk_dom031:mem005</xbrldi:explicitMember> <!-- Toeslagenpost | ftk.Toeslagverlening:Ingangsdatum toeslagverlening -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim078">dnb_ftk_dom031:mem023</xbrldi:explicitMember> <!-- Toeslagenbesluit | ftk.Toeslagverlening:Besluit 1 -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4845">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim077">dnb_ftk_dom031:mem002</xbrldi:explicitMember> <!-- Toeslagenpost | ftk.Toeslagverlening:Toegekend toeslagpercentage -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim078">dnb_ftk_dom031:mem024</xbrldi:explicitMember> <!-- Toeslagenbesluit | ftk.Toeslagverlening:Besluit 2 -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4846">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem001</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Actieve deelnemers -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim077">dnb_ftk_dom031:mem005</xbrldi:explicitMember> <!-- Toeslagenpost | ftk.Toeslagverlening:Ingangsdatum toeslagverlening -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim078">dnb_ftk_dom031:mem024</xbrldi:explicitMember> <!-- Toeslagenbesluit | ftk.Toeslagverlening:Besluit 2 -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4847">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem006</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Gewezen deelnemers en pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim077">dnb_ftk_dom031:mem002</xbrldi:explicitMember> <!-- Toeslagenpost | ftk.Toeslagverlening:Toegekend toeslagpercentage -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim078">dnb_ftk_dom031:mem023</xbrldi:explicitMember> <!-- Toeslagenbesluit | ftk.Toeslagverlening:Besluit 1 -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4848">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem006</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Gewezen deelnemers en pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim077">dnb_ftk_dom031:mem005</xbrldi:explicitMember> <!-- Toeslagenpost | ftk.Toeslagverlening:Ingangsdatum toeslagverlening -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim078">dnb_ftk_dom031:mem023</xbrldi:explicitMember> <!-- Toeslagenbesluit | ftk.Toeslagverlening:Besluit 1 -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4849">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem006</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Gewezen deelnemers en pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim077">dnb_ftk_dom031:mem002</xbrldi:explicitMember> <!-- Toeslagenpost | ftk.Toeslagverlening:Toegekend toeslagpercentage -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim078">dnb_ftk_dom031:mem024</xbrldi:explicitMember> <!-- Toeslagenbesluit | ftk.Toeslagverlening:Besluit 2 -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4850">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem006</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Gewezen deelnemers en pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim077">dnb_ftk_dom031:mem005</xbrldi:explicitMember> <!-- Toeslagenpost | ftk.Toeslagverlening:Ingangsdatum toeslagverlening -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim078">dnb_ftk_dom031:mem024</xbrldi:explicitMember> <!-- Toeslagenbesluit | ftk.Toeslagverlening:Besluit 2 -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4851">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem006</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Gewezen deelnemers en pensioengerechtigden -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4852">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem039</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Reglementen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim073">dnb_ftk_dom028:mem006</xbrldi:explicitMember> <!-- Deelnemertype | ftk.Deelnemers:Gewezen deelnemers en pensioengerechtigden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim077">dnb_ftk_dom031:mem011</xbrldi:explicitMember> <!-- Toeslagenpost | ftk.Toeslagverlening:Toegekende eenmalige toeslag -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim079"> <!-- Reglementsnaam | ftk.Reglementsnaam -->
+                <dnb_typ:ftk_typ005>Key 52</dnb_typ:ftk_typ005>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <dnb_met:si_ftk_001 contextRef="C1">Text 1</dnb_met:si_ftk_001> <!-- ftk.Naam | K000 x010 y010 -->
+    <dnb_met:si_ftk_002 contextRef="C1">Text 2</dnb_met:si_ftk_002> <!-- ftk.Telefoonnummer | K000 x010 y020 -->
+    <dnb_met:si_ftk_003 contextRef="C1">Text 3</dnb_met:si_ftk_003> <!-- ftk.Email | K000 x010 y030 -->
+    <dnb_met:si_ftk_001 contextRef="C4">Text 4</dnb_met:si_ftk_001> <!-- ftk.Naam | K000 x010 y040 -->
+    <dnb_met:si_ftk_002 contextRef="C4">Text 5</dnb_met:si_ftk_002> <!-- ftk.Telefoonnummer | K000 x010 y050 -->
+    <dnb_met:si_ftk_003 contextRef="C4">Text 6</dnb_met:si_ftk_003> <!-- ftk.Email | K000 x010 y060 -->
+    <dnb_met:mi_ftk_004 contextRef="C4711" unitRef="uEUR" decimals="-3">2493000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | K602 y010 -->
+    <dnb_met:mi_ftk_004 contextRef="C4712" unitRef="uEUR" decimals="-3">2494000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | K602 y020 -->
+    <dnb_met:mi_ftk_004 contextRef="C4713" unitRef="uEUR" decimals="-3">2495000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | K602 y030 -->
+    <dnb_met:mi_ftk_004 contextRef="C4714" unitRef="uEUR" decimals="-3">2496000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | K602 y040 -->
+    <dnb_met:mi_ftk_004 contextRef="C4715" unitRef="uEUR" decimals="-3">2497000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | K602 y050 -->
+    <dnb_met:ii_ftk_064 contextRef="C4716" unitRef="uPURE" decimals="0">191</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y070 -->
+    <dnb_met:ii_ftk_064 contextRef="C4717" unitRef="uPURE" decimals="0">192</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y080 -->
+    <dnb_met:ii_ftk_064 contextRef="C4718" unitRef="uPURE" decimals="0">193</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y090 -->
+    <dnb_met:ii_ftk_064 contextRef="C4719" unitRef="uPURE" decimals="0">194</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y100 -->
+    <dnb_met:ii_ftk_064 contextRef="C4720" unitRef="uPURE" decimals="0">195</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y110 -->
+    <dnb_met:ii_ftk_064 contextRef="C4721" unitRef="uPURE" decimals="0">196</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y120 -->
+    <dnb_met:ii_ftk_064 contextRef="C4722" unitRef="uPURE" decimals="0">197</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y130 -->
+    <dnb_met:ii_ftk_064 contextRef="C4723" unitRef="uPURE" decimals="0">198</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y140 -->
+    <dnb_met:ii_ftk_064 contextRef="C4724" unitRef="uPURE" decimals="0">199</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y150 -->
+    <dnb_met:ii_ftk_064 contextRef="C4725" unitRef="uPURE" decimals="0">200</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y160 -->
+    <dnb_met:ii_ftk_064 contextRef="C4726" unitRef="uPURE" decimals="0">201</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y170 -->
+    <dnb_met:ii_ftk_064 contextRef="C4727" unitRef="uPURE" decimals="0">202</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y180 -->
+    <dnb_met:ii_ftk_064 contextRef="C4728" unitRef="uPURE" decimals="0">203</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y190 -->
+    <dnb_met:ii_ftk_064 contextRef="C4729" unitRef="uPURE" decimals="0">204</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y200 -->
+    <dnb_met:ii_ftk_064 contextRef="C4730" unitRef="uPURE" decimals="0">205</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y210 -->
+    <dnb_met:ii_ftk_064 contextRef="C4731" unitRef="uPURE" decimals="0">206</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y220 -->
+    <dnb_met:ii_ftk_064 contextRef="C4732" unitRef="uPURE" decimals="0">207</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y230 -->
+    <dnb_met:ii_ftk_064 contextRef="C4733" unitRef="uPURE" decimals="0">208</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y240 -->
+    <dnb_met:ii_ftk_064 contextRef="C4734" unitRef="uPURE" decimals="0">209</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y250 -->
+    <dnb_met:ii_ftk_064 contextRef="C4735" unitRef="uPURE" decimals="0">210</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y260 -->
+    <dnb_met:ii_ftk_064 contextRef="C4736" unitRef="uPURE" decimals="0">211</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y270 -->
+    <dnb_met:ii_ftk_064 contextRef="C4737" unitRef="uPURE" decimals="0">212</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y280 -->
+    <dnb_met:ii_ftk_064 contextRef="C4738" unitRef="uPURE" decimals="0">213</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y290 -->
+    <dnb_met:ii_ftk_064 contextRef="C4739" unitRef="uPURE" decimals="0">214</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y300 -->
+    <dnb_met:ii_ftk_064 contextRef="C4740" unitRef="uPURE" decimals="0">215</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y310 -->
+    <dnb_met:ii_ftk_064 contextRef="C4741" unitRef="uPURE" decimals="0">216</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y320 -->
+    <dnb_met:ii_ftk_064 contextRef="C4742" unitRef="uPURE" decimals="0">217</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y330 -->
+    <dnb_met:ii_ftk_064 contextRef="C4743" unitRef="uPURE" decimals="0">218</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y340 -->
+    <dnb_met:ii_ftk_064 contextRef="C4744" unitRef="uPURE" decimals="0">219</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y350 -->
+    <dnb_met:ii_ftk_064 contextRef="C4745" unitRef="uPURE" decimals="0">220</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y360 -->
+    <dnb_met:ii_ftk_064 contextRef="C4746" unitRef="uPURE" decimals="0">221</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y370 -->
+    <dnb_met:ii_ftk_064 contextRef="C4747" unitRef="uPURE" decimals="0">222</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y380 -->
+    <dnb_met:ii_ftk_064 contextRef="C4748" unitRef="uPURE" decimals="0">223</dnb_met:ii_ftk_064> <!-- ftk.Aantal | K602 y390 -->
+    <dnb_met:ei_ftk_343 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_343> <!-- ftk.Reglement nog van toepassing in het lopende jaar | ftk.Selectielijsten:Ja | K602 y400 -->
+    <dnb_met:ei_ftk_344 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_344> <!-- ftk.Reglement gewijzigd | ftk.Selectielijsten:Ja | K602 y410 -->
+    <dnb_met:di_ftk_345 contextRef="C4751">1966-12-31</dnb_met:di_ftk_345> <!-- ftk.Ingangsdatum reglement | K602 y420 -->
+    <dnb_met:ei_ftk_346 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_346> <!-- ftk.Opname actieve deelnemers | ftk.Selectielijsten:Ja | K602 y430 -->
+    <dnb_met:ei_ftk_347 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_347> <!-- ftk.Sprake van pensioenopbouw | ftk.Selectielijsten:Ja | K602 y440 -->
+    <dnb_met:ei_ftk_348 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_348> <!-- ftk.Vrijstelling van verplicht bedrijfstakpensioenfonds | ftk.Selectielijsten:Ja | K602 y450 -->
+    <dnb_met:si_ftk_349 contextRef="C4751">Text 249</dnb_met:si_ftk_349> <!-- ftk.Bedrijfstakpensioenfonds w.v. vrijstelling | K602 y460 -->
+    <dnb_met:ei_ftk_350 contextRef="C4751">dnb_ftk_dom006:mem106</dnb_met:ei_ftk_350> <!-- ftk.Doelgroep reglement | ftk.Selectielijsten:Alle medewerkers | K602 y470 -->
+    <dnb_met:ei_ftk_351 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_351> <!-- ftk.Aanspraak ouderdomspensioen | ftk.Selectielijsten:Ja | K602 y480 -->
+    <dnb_met:ei_ftk_352 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_352> <!-- ftk.Aanspraak tijdelijk ouderdomspensioen | ftk.Selectielijsten:Ja | K602 y490 -->
+    <dnb_met:ei_ftk_353 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_353> <!-- ftk.Aanspraak overbruggingspensioen | ftk.Selectielijsten:Ja | K602 y500 -->
+    <dnb_met:ei_ftk_354 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_354> <!-- ftk.Aanspraak partnerpensioen | ftk.Selectielijsten:Ja | K602 y510 -->
+    <dnb_met:ei_ftk_355 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_355> <!-- ftk.Aanspraak tijdelijk nabestaandenpensioen | ftk.Selectielijsten:Ja | K602 y520 -->
+    <dnb_met:ei_ftk_356 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_356> <!-- ftk.Aanspraak wezenpensioen | ftk.Selectielijsten:Ja | K602 y530 -->
+    <dnb_met:ei_ftk_357 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_357> <!-- ftk.Aanspraak arbeidsongeschiktheidspensioen | ftk.Selectielijsten:Ja | K602 y540 -->
+    <dnb_met:ei_ftk_358 contextRef="C4751">dnb_ftk_dom006:mem166</dnb_met:ei_ftk_358> <!-- ftk.Type pensioenovereenkomst ouderdomspensioen | ftk.Selectielijsten:Uitkeringsovereenkomst | K602 y550 -->
+    <dnb_met:ei_ftk_359 contextRef="C4751">dnb_ftk_dom006:mem117</dnb_met:ei_ftk_359> <!-- ftk.Scheiding tussen verschillende pensioenovereenkomsten | ftk.Selectielijsten:Op hoogte van inkomen | K602 y560 -->
+    <dnb_met:ei_ftk_360 contextRef="C4751">dnb_ftk_dom006:mem066</dnb_met:ei_ftk_360> <!-- ftk.Basis uitkeringsovereenkomst | ftk.Selectielijsten:Eindloon | K602 y570 -->
+    <dnb_met:ei_ftk_361 contextRef="C4751">dnb_ftk_dom006:mem117</dnb_met:ei_ftk_361> <!-- ftk.Scheiding eind- en middelloon | ftk.Selectielijsten:Op hoogte van inkomen | K602 y580 -->
+    <dnb_met:ei_ftk_362 contextRef="C4751">dnb_ftk_dom006:mem115</dnb_met:ei_ftk_362> <!-- ftk.Beperking eindloon | ftk.Selectielijsten:Geen beperkingen | K602 y590 -->
+    <dnb_met:pi_ftk_005 contextRef="C4769" unitRef="uPURE" decimals="4">0.0508</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y600 -->
+    <dnb_met:pi_ftk_005 contextRef="C4770" unitRef="uPURE" decimals="4">0.0509</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y610 -->
+    <dnb_met:pi_ftk_005 contextRef="C4771" unitRef="uPURE" decimals="4">0.051</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y620 -->
+    <dnb_met:pi_ftk_005 contextRef="C4772" unitRef="uPURE" decimals="4">0.0511</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y630 -->
+    <dnb_met:ei_ftk_363 contextRef="C4751">dnb_ftk_dom006:mem062</dnb_met:ei_ftk_363> <!-- ftk.Basis toeslag OP actieve deelnemers | ftk.Selectielijsten:Geen doelgericht beleid | K602 y640 -->
+    <dnb_met:ei_ftk_364 contextRef="C4751">dnb_ftk_dom006:mem151</dnb_met:ei_ftk_364> <!-- ftk.Maatstaf toeslag OP actieve deelnemers | ftk.Selectielijsten:Algemene prijsontwikkeling | K602 y650 -->
+    <dnb_met:ei_ftk_365 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_365> <!-- ftk.Winstdeling bij kapitaalovereenkomst | ftk.Selectielijsten:Ja | K602 y660 -->
+    <dnb_met:ei_ftk_366 contextRef="C4751">dnb_ftk_dom006:mem070</dnb_met:ei_ftk_366> <!-- ftk.Basis vaststelling kapitaalovereenkomst | ftk.Selectielijsten:Streefregeling beoogd eindloon | K602 y670 -->
+    <dnb_met:ei_ftk_367 contextRef="C4751">dnb_ftk_dom006:mem033</dnb_met:ei_ftk_367> <!-- ftk.Basis deelnemersbijdrage OP | ftk.Selectielijsten:Geen | K602 y680 -->
+    <dnb_met:pi_ftk_005 contextRef="C4778" unitRef="uPURE" decimals="4">0.0512</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y690 -->
+    <dnb_met:ei_ftk_368 contextRef="C4751">dnb_ftk_dom006:mem045</dnb_met:ei_ftk_368> <!-- ftk.Basis maxmering premiebijdrage | ftk.Selectielijsten:Geen maximum | K602 y700 -->
+    <dnb_met:pi_ftk_005 contextRef="C4780" unitRef="uPURE" decimals="4">0.0513</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y710 -->
+    <dnb_met:ei_ftk_369 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_369> <!-- ftk.Premiekorting toegestaan | ftk.Selectielijsten:Ja | K602 y720 -->
+    <dnb_met:ei_ftk_370 contextRef="C4751">dnb_ftk_dom006:mem001</dnb_met:ei_ftk_370> <!-- ftk.Aanwending premie bij premieovereenkomst | ftk.Selectielijsten:Beleggen | K602 y730 -->
+    <dnb_met:ei_ftk_371 contextRef="C4751">dnb_ftk_dom006:mem058</dnb_met:ei_ftk_371> <!-- ftk.Basis premiebedrag premieovereenkomst | ftk.Selectielijsten:Percentage van het salaris | K602 y740 -->
+    <dnb_met:ei_ftk_372 contextRef="C4751">dnb_ftk_dom006:mem210</dnb_met:ei_ftk_372> <!-- ftk.Vaststelling premiepercentage deelnemer premieovereenkomst | ftk.Selectielijsten:Vast premiepercentage | K602 y750 -->
+    <dnb_met:ei_ftk_373 contextRef="C4751">dnb_ftk_dom006:mem062</dnb_met:ei_ftk_373> <!-- ftk.Basis toeslag OP inactieve deelnemers | ftk.Selectielijsten:Geen doelgericht beleid | K602 y760 -->
+    <dnb_met:ei_ftk_374 contextRef="C4751">dnb_ftk_dom006:mem151</dnb_met:ei_ftk_374> <!-- ftk.Maatstaf toeslag OP inactieve deelnemers | ftk.Selectielijsten:Algemene prijsontwikkeling | K602 y770 -->
+    <dnb_met:ii_ftk_272 contextRef="C4787" unitRef="uPURE" decimals="0">224</dnb_met:ii_ftk_272> <!-- ftk.Jaren | K602 y780 -->
+    <dnb_met:ei_ftk_375 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_375> <!-- ftk.Wachttijd | ftk.Selectielijsten:Ja | K602 y790 -->
+    <dnb_met:ii_ftk_376 contextRef="C4789" unitRef="uPURE" decimals="0">225</dnb_met:ii_ftk_376> <!-- ftk.Maanden | K602 y800 -->
+    <dnb_met:ei_ftk_377 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_377> <!-- ftk.Drempeltijd | ftk.Selectielijsten:Ja | K602 y810 -->
+    <dnb_met:ii_ftk_376 contextRef="C4791" unitRef="uPURE" decimals="0">226</dnb_met:ii_ftk_376> <!-- ftk.Maanden | K602 y820 -->
+    <dnb_met:ii_ftk_272 contextRef="C4792" unitRef="uPURE" decimals="0">227</dnb_met:ii_ftk_272> <!-- ftk.Jaren | K602 y830 -->
+    <dnb_met:ii_ftk_272 contextRef="C4793" unitRef="uPURE" decimals="0">228</dnb_met:ii_ftk_272> <!-- ftk.Jaren | K602 y840 -->
+    <dnb_met:ii_ftk_272 contextRef="C4794" unitRef="uPURE" decimals="0">229</dnb_met:ii_ftk_272> <!-- ftk.Jaren | K602 y850 -->
+    <dnb_met:ei_ftk_378 contextRef="C4751">dnb_ftk_dom006:mem050</dnb_met:ei_ftk_378> <!-- ftk.Basis voor het pensioengevend salaris | ftk.Selectielijsten:Jaarsalaris | K602 y860 -->
+    <dnb_met:ei_ftk_379 contextRef="C4751">dnb_ftk_dom006:mem045</dnb_met:ei_ftk_379> <!-- ftk.Maximum vaststelling aan pensioengevend salaris of grondslag | ftk.Selectielijsten:Geen maximum | K602 y870 -->
+    <dnb_met:mi_ftk_004 contextRef="C4797" unitRef="uEUR" decimals="-3">2498000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | K602 y880 -->
+    <dnb_met:mi_ftk_004 contextRef="C4798" unitRef="uEUR" decimals="-3">2499000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | K602 y890 -->
+    <dnb_met:ei_ftk_380 contextRef="C4751">dnb_ftk_dom006:mem083</dnb_met:ei_ftk_380> <!-- ftk.Bepaling franchise | ftk.Selectielijsten:Geen franchise | K602 y900 -->
+    <dnb_met:ei_ftk_381 contextRef="C4751">dnb_ftk_dom006:mem061</dnb_met:ei_ftk_381> <!-- ftk.Basis toeslag franchise | ftk.Selectielijsten:Geen toezegging | K602 y910 -->
+    <dnb_met:ei_ftk_382 contextRef="C4751">dnb_ftk_dom006:mem159</dnb_met:ei_ftk_382> <!-- ftk.Maatstaf toeslag franchise | ftk.Selectielijsten:Stijging AOW | K602 y920 -->
+    <dnb_met:mi_ftk_004 contextRef="C4802" unitRef="uEUR" decimals="-3">2500000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | K602 y930 -->
+    <dnb_met:ei_ftk_383 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_383> <!-- ftk.Uitruil van OP in NP mogelijk | ftk.Selectielijsten:Ja | K602 y940 -->
+    <dnb_met:ri_ftk_221 contextRef="C4804" unitRef="uPURE" decimals="2">2.15</dnb_met:ri_ftk_221> <!-- ftk.Factor | K602 y950 -->
+    <dnb_met:ei_ftk_384 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_384> <!-- ftk.Uitruil van NP in OP mogelijk | ftk.Selectielijsten:Ja | K602 y960 -->
+    <dnb_met:ri_ftk_221 contextRef="C4806" unitRef="uPURE" decimals="2">2.16</dnb_met:ri_ftk_221> <!-- ftk.Factor | K602 y970 -->
+    <dnb_met:ei_ftk_385 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_385> <!-- ftk.Individualisering, hoog/laag constructie ouderdomspensioen | ftk.Selectielijsten:Ja | K602 y980 -->
+    <dnb_met:ei_ftk_386 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_386> <!-- ftk.Individualisering, conversie in het kader van verevening | ftk.Selectielijsten:Ja | K602 y990 -->
+    <dnb_met:ei_ftk_387 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_387> <!-- ftk.Individualisering, deeltijdpensioen voor pensioenrichtleeftijd | ftk.Selectielijsten:Ja | K602 y1000 -->
+    <dnb_met:ei_ftk_388 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_388> <!-- ftk.Individualisering, deeltijdpensioen na pensioenrichtleeftijd | ftk.Selectielijsten:Ja | K602 y1010 -->
+    <dnb_met:ei_ftk_389 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_389> <!-- ftk.Individualisering, anders | ftk.Selectielijsten:Ja | K602 y1020 -->
+    <dnb_met:si_ftk_390 contextRef="C4751">Text 250</dnb_met:si_ftk_390> <!-- ftk.Toelichting op mogelijkheden individualisering anders | K602 y1030 -->
+    <dnb_met:ei_ftk_391 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_391> <!-- ftk.Voortzetting bij vrijwillig ontslag | ftk.Selectielijsten:Ja | K602 y1040 -->
+    <dnb_met:ei_ftk_392 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_392> <!-- ftk.Voortzetting bij zorgverlof | ftk.Selectielijsten:Ja | K602 y1050 -->
+    <dnb_met:ei_ftk_393 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_393> <!-- ftk.Voortzetting bij ouderschapsverlof | ftk.Selectielijsten:Ja | K602 y1060 -->
+    <dnb_met:ei_ftk_394 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_394> <!-- ftk.Voortzetting bij een sabbitical leave | ftk.Selectielijsten:Ja | K602 y1070 -->
+    <dnb_met:ei_ftk_395 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_395> <!-- ftk.Voortzetting bij educatief verlof | ftk.Selectielijsten:Ja | K602 y1080 -->
+    <dnb_met:ei_ftk_396 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_396> <!-- ftk.Voortzetting bij langdurig verlof | ftk.Selectielijsten:Ja | K602 y1090 -->
+    <dnb_met:ei_ftk_397 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_397> <!-- ftk.Voortzetting anders | ftk.Selectielijsten:Ja | K602 y1100 -->
+    <dnb_met:si_ftk_398 contextRef="C4751">Text 251</dnb_met:si_ftk_398> <!-- ftk.Toelichting op voortzetting anders | K602 y1110 -->
+    <dnb_met:ei_ftk_399 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_399> <!-- ftk.Uitsluiting o.b.v. functiegroep | ftk.Selectielijsten:Ja | K602 y1120 -->
+    <dnb_met:ei_ftk_400 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_400> <!-- ftk.Uitsluiting vakantiewerkers | ftk.Selectielijsten:Ja | K602 y1130 -->
+    <dnb_met:ei_ftk_401 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_401> <!-- ftk.Uitsluiting stagiaires | ftk.Selectielijsten:Ja | K602 y1140 -->
+    <dnb_met:ei_ftk_402 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_402> <!-- ftk.Uitsluiting oogstmedewerkers | ftk.Selectielijsten:Ja | K602 y1150 -->
+    <dnb_met:ei_ftk_403 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_403> <!-- ftk.Uitsluiting anders | ftk.Selectielijsten:Ja | K602 y1160 -->
+    <dnb_met:si_ftk_404 contextRef="C4751">Text 252</dnb_met:si_ftk_404> <!-- ftk.Toelichting op uitsluiting anders | K602 y1170 -->
+    <dnb_met:ei_ftk_405 contextRef="C4751">dnb_ftk_dom006:mem104</dnb_met:ei_ftk_405> <!-- ftk.Deelname partnerpensioen | ftk.Selectielijsten:Verplicht | K602 y1180 -->
+    <dnb_met:ei_ftk_406 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_406> <!-- ftk.Partnerpensioen ook voor ongehuwde/niet geregistreerde partners | ftk.Selectielijsten:Ja | K602 y1190 -->
+    <dnb_met:ei_ftk_407 contextRef="C4751">dnb_ftk_dom006:mem251</dnb_met:ei_ftk_407> <!-- ftk.Vaststelling hoogte partnerpensioen | ftk.Selectielijsten:Gekoppeld aan ouderdomspensioen | K602 y1200 -->
+    <dnb_met:pi_ftk_005 contextRef="C4830" unitRef="uPURE" decimals="4">0.0514</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y1210 -->
+    <dnb_met:ei_ftk_408 contextRef="C4751">dnb_ftk_dom006:mem247</dnb_met:ei_ftk_408> <!-- ftk.Toezegging partnerpensioen voor actieve deelnemers | ftk.Selectielijsten:Opbouwbasis | K602 y1220 -->
+    <dnb_met:ei_ftk_409 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_409> <!-- ftk.Hoogte partnerpensioen afhankelijk diensttijd | ftk.Selectielijsten:Ja | K602 y1230 -->
+    <dnb_met:ei_ftk_410 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_410> <!-- ftk.Toeslag ingegaan partnerpensioen anders dan toezegging voor het OP | ftk.Selectielijsten:Ja | K602 y1240 -->
+    <dnb_met:ei_ftk_411 contextRef="C4751">dnb_ftk_dom006:mem104</dnb_met:ei_ftk_411> <!-- ftk.Deelname wezenpensioen | ftk.Selectielijsten:Verplicht | K602 y1250 -->
+    <dnb_met:ei_ftk_412 contextRef="C4751">dnb_ftk_dom006:mem251</dnb_met:ei_ftk_412> <!-- ftk.Vaststelling hoogte wezenpensioen | ftk.Selectielijsten:Gekoppeld aan ouderdomspensioen | K602 y1260 -->
+    <dnb_met:pi_ftk_005 contextRef="C4836" unitRef="uPURE" decimals="4">0.0515</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y1270 -->
+    <dnb_met:ei_ftk_413 contextRef="C4751">dnb_ftk_dom006:mem104</dnb_met:ei_ftk_413> <!-- ftk.Deelname arbeidsongeschiktheidspensioen | ftk.Selectielijsten:Verplicht | K602 y1280 -->
+    <dnb_met:ei_ftk_414 contextRef="C4751">dnb_ftk_dom006:mem242</dnb_met:ei_ftk_414> <!-- ftk.Toekenning arbeidsongeschiktheidspensioen | ftk.Selectielijsten:Arbeidsongeschiktheidspensioen boven maximum SV-loon | K602 y1290 -->
+    <dnb_met:pi_ftk_005 contextRef="C4839" unitRef="uPURE" decimals="4">0.0516</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y1300 -->
+    <dnb_met:ei_ftk_415 contextRef="C4751">dnb_ftk_dom006:mem120</dnb_met:ei_ftk_415> <!-- ftk.Franchise arbeidsongeschiktheidspensioen | ftk.Selectielijsten:Maximum SV-loon | K602 y1310 -->
+    <dnb_met:ei_ftk_416 contextRef="C4751">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_416> <!-- ftk.Toeslag ingegaan AOP anders dan toezegging voor het OP | ftk.Selectielijsten:Ja | K602 y1320 -->
+    <dnb_met:ei_ftk_417 contextRef="C4751">dnb_ftk_dom006:mem033</dnb_met:ei_ftk_417> <!-- ftk.Voortzetting pensioenopbouw bij arbeidsongeschiktheid | ftk.Selectielijsten:Geen | K602 y1330 -->
+    <dnb_met:pi_ftk_005 contextRef="C4843" unitRef="uPURE" decimals="4">0.0517</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y1340 -->
+    <dnb_met:di_ftk_069 contextRef="C4844">1967-12-31</dnb_met:di_ftk_069> <!-- ftk.Datum | K602 y1350 -->
+    <dnb_met:pi_ftk_005 contextRef="C4845" unitRef="uPURE" decimals="4">0.0518</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y1360 -->
+    <dnb_met:di_ftk_069 contextRef="C4846">1968-12-31</dnb_met:di_ftk_069> <!-- ftk.Datum | K602 y1370 -->
+    <dnb_met:pi_ftk_005 contextRef="C4847" unitRef="uPURE" decimals="4">0.0519</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y1380 -->
+    <dnb_met:di_ftk_069 contextRef="C4848">1969-12-31</dnb_met:di_ftk_069> <!-- ftk.Datum | K602 y1390 -->
+    <dnb_met:pi_ftk_005 contextRef="C4849" unitRef="uPURE" decimals="4">0.052</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y1400 -->
+    <dnb_met:di_ftk_069 contextRef="C4850">1970-12-31</dnb_met:di_ftk_069> <!-- ftk.Datum | K602 y1410 -->
+    <dnb_met:ei_ftk_241 contextRef="C4851">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_241> <!-- ftk.Eenmalige toeslag toegekend | ftk.Selectielijsten:Ja | K602 y1420 -->
+    <dnb_met:pi_ftk_005 contextRef="C4852" unitRef="uPURE" decimals="4">0.0521</dnb_met:pi_ftk_005> <!-- ftk.Percentage | K602 y1430 -->
+</xbrli:xbrl>
