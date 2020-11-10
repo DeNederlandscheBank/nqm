@@ -54,4 +54,24 @@ Project Organization
 
 --------
 
+Start Project
+-------------
+
+ mkdir data/interim
+
+ python src/features/generator.py --templates data/external/annotations_monument.csv --output data/interim
+
+
+Go to src/features/:
+
+ python shuffle.py
+
+Go to src/models/:
+
+  onmt_build_vocab -config train_config.yaml
+
+  onmt_train -config train_config.yaml
+
+  onmt_translate -model ../../models/model_step_10000.pt -src ../../data/interim/test_en.txt -output ../../data/interim/test_spar.txt
+
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
