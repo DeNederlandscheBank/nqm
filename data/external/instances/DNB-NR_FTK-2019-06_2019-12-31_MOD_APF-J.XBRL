@@ -1,0 +1,1310 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?instance-generator id="Excel DPM To XBRL Generator" version="EDX Beta 2.0.0" creationDate="2019-07-08T10:08:06+02:00"?>
+<!-- © De Nederlandsche Bank, Sample XBRL Instance With Fixed Interval Data -->
+<xbrli:xbrl
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xbrli="http://www.xbrl.org/2003/instance"
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
+    xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+    xmlns:find="http://www.eurofiling.info/xbrl/ext/filing-indicators"
+    xmlns:dnb_met="http://www.dnb.nl/xbrl/dict/met"
+    xmlns:dnb_dim="http://www.dnb.nl/xbrl/dict/dim"
+    xmlns:dnb_ftk_dom001="http://www.dnb.nl/xbrl/dict/dom/ftk_dom001"
+    xmlns:dnb_ftk_dom004="http://www.dnb.nl/xbrl/dict/dom/ftk_dom004"
+    xmlns:dnb_ftk_dom002="http://www.dnb.nl/xbrl/dict/dom/ftk_dom002"
+    xmlns:dnb_ftk_dom017="http://www.dnb.nl/xbrl/dict/dom/ftk_dom017"
+    xmlns:dnb_ftk_dom039="http://www.dnb.nl/xbrl/dict/dom/ftk_dom039"
+    xmlns:dnb_ftk_dom040="http://www.dnb.nl/xbrl/dict/dom/ftk_dom040"
+    xmlns:dnb_ftk_dom006="http://www.dnb.nl/xbrl/dict/dom/ftk_dom006"
+    xmlns:dnb_typ="http://www.dnb.nl/xbrl/dict/typ"
+    >
+    <link:schemaRef xlink:type="simple" xlink:href="http://www.dnb.nl/nl/fr/xbrl/fws/dnb-nr/ftk-2019-06/2019-12-31/mod/apf-j.xsd"/>
+    <xbrli:unit id="uEUR">
+        <xbrli:measure>iso4217:EUR</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:unit id="uPURE">
+        <xbrli:measure>xbrli:pure</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:context id="C0">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+    <find:fIndicators>
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-CG1</find:filingIndicator> <!-- Tabel groep: Contactgegevens -->
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-APF1</find:filingIndicator> <!-- Tabel groep: Organisatie -->
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-APF2</find:filingIndicator> <!-- Tabel groep: Geconsolideerde balans, voor winstbestemming -->
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-APF3</find:filingIndicator> <!-- Tabel groep: Baten- en lastenrekening -->
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-APF4</find:filingIndicator> <!-- Tabel groep: Weerstandsvermogen -->
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-APF5</find:filingIndicator> <!-- Tabel groep: Toelichtingen -->
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-APF6</find:filingIndicator> <!-- Tabel groep: Pension fund governance -->
+    </find:fIndicators>
+    <xbrli:context id="C1">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim001">dnb_ftk_dom001:mem001</xbrldi:explicitMember> <!-- Contact type | ftk.Contact:Contactpersoon invulling -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim001">dnb_ftk_dom001:mem002</xbrldi:explicitMember> <!-- Contact type | ftk.Contact:Verantwoordelijk bestuurslid rapportage -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5290">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem016</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Organisatie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim030">dnb_ftk_dom017:mem007</xbrldi:explicitMember> <!-- Organisatie | ftk.Organisatie:Aantal medewerkers -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5291">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem042</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Geringfencete activa -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim105"> <!-- Registratienummer | ftk.Registratienummer -->
+                <dnb_typ:ftk_typ009>Key 53</dnb_typ:ftk_typ009>
+            </xbrldi:typedMember>
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim106"> <!-- Naam kring | ftk.Naam -->
+                <dnb_typ:ftk_typ010>Key 54</dnb_typ:ftk_typ010>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5292">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem193</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Activa aangehouden t.b.v. het weerstandsvermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5293">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem135</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Activa aangehouden t.b.v. het weerstandsvermogen, deposito's -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5294">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem136</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Activa aangehouden t.b.v. het weerstandsvermogen, kortlopend staatspapier (<=1 jaar) -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5295">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem137</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Activa aangehouden t.b.v. het weerstandsvermogen, overig -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5296">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem139</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vorderingen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5297">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem138</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vorderingen, bancaire tegoeden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5298">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem139</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vorderingen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim108">dnb_ftk_dom040:mem001</xbrldi:explicitMember> <!-- Resterende looptijd | ftk.Tijdsinterval:> 1 jaar -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5299">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem139</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vorderingen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim108">dnb_ftk_dom040:mem002</xbrldi:explicitMember> <!-- Resterende looptijd | ftk.Tijdsinterval:<= 1 jaar -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5300">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem140</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vorderingen, overlopende activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5301">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem064</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Immateriële activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5302">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem141</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Immateriële activa, software -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5303">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem142</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Immateriële activa, overig -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5304">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem143</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Materiële activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5305">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem068</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Overige activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5306">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem144</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem001</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Activa -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5307">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem194</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal eigen vermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem002</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5308">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem145</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Geplaatst kapitaal (stichtingskapitaal) -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem002</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5309">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem195</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Herwaarderingsreserve -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem002</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5310">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem146</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Herwaarderingsreserve, vaste activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem002</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5311">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem147</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Herwaarderingsreserve, immateriële activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem002</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5312">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem148</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Herwaarderingsreserve, overige -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem002</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5313">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem149</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Overige reserves -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem002</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5314">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem071</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Achtergestelde leningen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem003</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Passiva -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5315">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem150</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Voorzieningen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem003</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Passiva -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5316">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem196</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Schulden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem003</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Passiva -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5317">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem151</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Kortlopende schulden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem003</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Passiva -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5318">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem152</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vooruit ontvangen vergoedingen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem003</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Passiva -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5319">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem153</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Overlopende passiva -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem003</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Passiva -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5320">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem154</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Overige schulden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem003</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Passiva -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5321">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem155</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal passiva -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem043</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Financiële positie -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem003</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Passiva -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5322">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem197</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vergoedingen door collectiviteitkringen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5323">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem156</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vergoedingen door collectiviteitkringen, administratievergoedingen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5324">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem157</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vergoedingen door collectiviteitkringen, vermogensbeheervergoeding -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5325">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem158</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vergoedingen door collectiviteitkringen, vergoeding t.b.v. governance -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5326">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem159</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Vergoedingen door collectiviteitkringen, overig -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5327">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem198</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Bijdrage in het weerstandsvermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5328">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem160</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Bijdrage in het weerstandsvermogen, storting -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5329">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem161</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Bijdrage in het weerstandsvermogen, renteresultaat -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5330">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem162</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Bijdrage in het weerstandsvermogen, overig -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5331">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem101</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Andere baten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5332">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem163</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal baten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem004</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Baten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5333">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem199</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Kosten verhaalbaar op collectiviteitkringen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem005</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Lasten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5334">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem164</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Kosten verhaalbaar op collectiviteitkringen, administratiekosten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem005</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Lasten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5335">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem165</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Kosten verhaalbaar op collectiviteitkringen, vermogensbeheerkosten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem005</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Lasten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5336">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem166</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Kosten verhaalbaar op collectiviteitkringen, transactiekosten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem005</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Lasten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5337">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem167</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Kosten verhaalbaar op collectiviteitkringen, governance kosten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem005</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Lasten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5338">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem168</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Kosten verhaalbaar op collectiviteitkringen, overig -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem005</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Lasten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5339">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem169</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Kosten niet verhaalbaar op collectiviteitkring -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem005</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Lasten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5340">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem170</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Wijziging overige voorzieningen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem005</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Lasten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5341">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem171</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem005</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Lasten -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5342">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem172</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Netto resultaat -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem023</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Baten en lasten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem006</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Resultaat -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5343">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem194</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal eigen vermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem007</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Beschikbaar eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5344">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem173</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Achtergestelde leningen voor zover bijdragen aan het weerstandsvermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem007</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Beschikbaar eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5345">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem200</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Aftrekposten -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem007</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Beschikbaar eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5346">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem174</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Aftrekposten, immateriële vaste activa -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem007</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Beschikbaar eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5347">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem175</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Aftrekposten, overig -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem007</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Beschikbaar eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5348">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem176</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal beschikbaar weerstandsvermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem007</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Beschikbaar eigen vermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5349">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem177</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal omvang beheerde vermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem008</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Aan te houden weerstandsvermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5350">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem201</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Minimaal vereist weerstandsvermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem008</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Aan te houden weerstandsvermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5351">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem202</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal alle risico's -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5352">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem178</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Kredietrisico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5353">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem179</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Liquiditeitsrisico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5354">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem180</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Marktriscio -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5355">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem181</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Matchingrisico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5356">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem182</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Uitbestedingsrisico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5357">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem203</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Operationeel risico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5358">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem183</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:IT risico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5359">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem184</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Verzekeringstechnisch risico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5360">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem185</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Integriteitsrisico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5361">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem186</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Juridisch risico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5362">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem187</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Omgevingsrisico -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5363">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem188</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Overige risico's -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5364">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem189</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Aftrek vanwege correlatie-effecten risico's -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem009</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Risicoanalyse -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5365">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem191</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Totaal aan te houden weerstandsvermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem008</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Aan te houden weerstandsvermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5366">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem192</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Weerstandsvermogen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem012</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Solvabiliteit -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim107">dnb_ftk_dom039:mem008</xbrldi:explicitMember> <!-- Financiële groep | ftk.Financiële groep:Aan te houden weerstandsvermogen -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5368">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem044</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Toelichting -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5376">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem045</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Pensioenfonds governance -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5387">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem045</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Pensioenfonds governance -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim109"> <!-- Naam bestuurslid | ftk.Naam -->
+                <dnb_typ:ftk_typ010>Key 55</dnb_typ:ftk_typ010>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5392">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem045</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Pensioenfonds governance -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim110"> <!-- Naam medebeleidsbepaler | ftk.Naam -->
+                <dnb_typ:ftk_typ010>Key 56</dnb_typ:ftk_typ010>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5397">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem045</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Pensioenfonds governance -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim111"> <!-- Naam lid raad van toezicht | ftk.Naam -->
+                <dnb_typ:ftk_typ010>Key 57</dnb_typ:ftk_typ010>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5403">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem045</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Pensioenfonds governance -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim112"> <!-- Naam lid belanghebbendenorgaan | ftk.Naam -->
+                <dnb_typ:ftk_typ010>Key 58</dnb_typ:ftk_typ010>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5406">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem045</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Pensioenfonds governance -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim105"> <!-- Registratienummer | ftk.Registratienummer -->
+                <dnb_typ:ftk_typ009>Key 59</dnb_typ:ftk_typ009>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C5410">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim008">dnb_ftk_dom002:mem045</xbrldi:explicitMember> <!-- Deelgebied | ftk.Aandachtsgebied:Pensioenfonds governance -->
+            <xbrldi:typedMember dimension="dnb_dim:ftk_dim116"> <!-- Naam lid Verantwoordingsorgaan | ftk.Naam -->
+                <dnb_typ:ftk_typ010>Key 60</dnb_typ:ftk_typ010>
+            </xbrldi:typedMember>
+        </xbrli:scenario>
+    </xbrli:context>
+    <dnb_met:si_ftk_001 contextRef="C1">Text 1</dnb_met:si_ftk_001> <!-- ftk.Naam | K000 x010 y010 -->
+    <dnb_met:si_ftk_002 contextRef="C1">Text 2</dnb_met:si_ftk_002> <!-- ftk.Telefoonnummer | K000 x010 y020 -->
+    <dnb_met:si_ftk_003 contextRef="C1">Text 3</dnb_met:si_ftk_003> <!-- ftk.Email | K000 x010 y030 -->
+    <dnb_met:si_ftk_001 contextRef="C4">Text 4</dnb_met:si_ftk_001> <!-- ftk.Naam | K000 x010 y040 -->
+    <dnb_met:si_ftk_002 contextRef="C4">Text 5</dnb_met:si_ftk_002> <!-- ftk.Telefoonnummer | K000 x010 y050 -->
+    <dnb_met:si_ftk_003 contextRef="C4">Text 6</dnb_met:si_ftk_003> <!-- ftk.Email | K000 x010 y060 -->
+    <dnb_met:ii_ftk_064 contextRef="C5290" unitRef="uPURE" decimals="0">231</dnb_met:ii_ftk_064> <!-- ftk.Aantal | APF001-1 x010 y010 -->
+    <dnb_met:mi_ftk_004 contextRef="C5291" unitRef="uEUR" decimals="-3">2514000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF001-2 x030 -->
+    <dnb_met:mi_ftk_004 contextRef="C5292" unitRef="uEUR" decimals="-3">2515000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y010 -->
+    <dnb_met:mi_ftk_004 contextRef="C5293" unitRef="uEUR" decimals="-3">2516000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y020 -->
+    <dnb_met:mi_ftk_004 contextRef="C5294" unitRef="uEUR" decimals="-3">2517000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y030 -->
+    <dnb_met:mi_ftk_004 contextRef="C5295" unitRef="uEUR" decimals="-3">2518000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y040 -->
+    <dnb_met:mi_ftk_004 contextRef="C5296" unitRef="uEUR" decimals="-3">2519000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y050 -->
+    <dnb_met:mi_ftk_004 contextRef="C5297" unitRef="uEUR" decimals="-3">2520000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y060 -->
+    <dnb_met:mi_ftk_004 contextRef="C5298" unitRef="uEUR" decimals="-3">2521000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y070 -->
+    <dnb_met:mi_ftk_004 contextRef="C5299" unitRef="uEUR" decimals="-3">2522000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y080 -->
+    <dnb_met:mi_ftk_004 contextRef="C5300" unitRef="uEUR" decimals="-3">2523000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y090 -->
+    <dnb_met:mi_ftk_004 contextRef="C5301" unitRef="uEUR" decimals="-3">2524000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y100 -->
+    <dnb_met:mi_ftk_004 contextRef="C5302" unitRef="uEUR" decimals="-3">2525000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y110 -->
+    <dnb_met:mi_ftk_004 contextRef="C5303" unitRef="uEUR" decimals="-3">2526000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y120 -->
+    <dnb_met:mi_ftk_004 contextRef="C5304" unitRef="uEUR" decimals="-3">2527000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y130 -->
+    <dnb_met:mi_ftk_004 contextRef="C5305" unitRef="uEUR" decimals="-3">2528000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y140 -->
+    <dnb_met:mi_ftk_004 contextRef="C5306" unitRef="uEUR" decimals="-3">2529000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y150 -->
+    <dnb_met:mi_ftk_004 contextRef="C5307" unitRef="uEUR" decimals="-3">2530000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y160 -->
+    <dnb_met:mi_ftk_004 contextRef="C5308" unitRef="uEUR" decimals="-3">2531000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y170 -->
+    <dnb_met:mi_ftk_004 contextRef="C5309" unitRef="uEUR" decimals="-3">2532000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y180 -->
+    <dnb_met:mi_ftk_004 contextRef="C5310" unitRef="uEUR" decimals="-3">2533000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y190 -->
+    <dnb_met:mi_ftk_004 contextRef="C5311" unitRef="uEUR" decimals="-3">2534000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y200 -->
+    <dnb_met:mi_ftk_004 contextRef="C5312" unitRef="uEUR" decimals="-3">2535000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y210 -->
+    <dnb_met:mi_ftk_004 contextRef="C5313" unitRef="uEUR" decimals="-3">2536000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y220 -->
+    <dnb_met:mi_ftk_004 contextRef="C5314" unitRef="uEUR" decimals="-3">2537000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y230 -->
+    <dnb_met:mi_ftk_004 contextRef="C5315" unitRef="uEUR" decimals="-3">2538000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y240 -->
+    <dnb_met:mi_ftk_004 contextRef="C5316" unitRef="uEUR" decimals="-3">2539000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y250 -->
+    <dnb_met:mi_ftk_004 contextRef="C5317" unitRef="uEUR" decimals="-3">2540000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y260 -->
+    <dnb_met:mi_ftk_004 contextRef="C5318" unitRef="uEUR" decimals="-3">2541000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y270 -->
+    <dnb_met:mi_ftk_004 contextRef="C5319" unitRef="uEUR" decimals="-3">2542000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y280 -->
+    <dnb_met:mi_ftk_004 contextRef="C5320" unitRef="uEUR" decimals="-3">2543000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y290 -->
+    <dnb_met:mi_ftk_004 contextRef="C5321" unitRef="uEUR" decimals="-3">2544000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF002 x010 y300 -->
+    <dnb_met:mi_ftk_004 contextRef="C5322" unitRef="uEUR" decimals="-3">2545000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y010 -->
+    <dnb_met:mi_ftk_004 contextRef="C5323" unitRef="uEUR" decimals="-3">2546000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y020 -->
+    <dnb_met:mi_ftk_004 contextRef="C5324" unitRef="uEUR" decimals="-3">2547000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y030 -->
+    <dnb_met:mi_ftk_004 contextRef="C5325" unitRef="uEUR" decimals="-3">2548000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y040 -->
+    <dnb_met:mi_ftk_004 contextRef="C5326" unitRef="uEUR" decimals="-3">2549000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y050 -->
+    <dnb_met:mi_ftk_004 contextRef="C5327" unitRef="uEUR" decimals="-3">2550000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y060 -->
+    <dnb_met:mi_ftk_004 contextRef="C5328" unitRef="uEUR" decimals="-3">2551000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y070 -->
+    <dnb_met:mi_ftk_004 contextRef="C5329" unitRef="uEUR" decimals="-3">2552000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y080 -->
+    <dnb_met:mi_ftk_004 contextRef="C5330" unitRef="uEUR" decimals="-3">2553000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y090 -->
+    <dnb_met:mi_ftk_004 contextRef="C5331" unitRef="uEUR" decimals="-3">2554000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y100 -->
+    <dnb_met:mi_ftk_004 contextRef="C5332" unitRef="uEUR" decimals="-3">2555000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y110 -->
+    <dnb_met:mi_ftk_004 contextRef="C5333" unitRef="uEUR" decimals="-3">2556000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y120 -->
+    <dnb_met:mi_ftk_004 contextRef="C5334" unitRef="uEUR" decimals="-3">2557000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y130 -->
+    <dnb_met:mi_ftk_004 contextRef="C5335" unitRef="uEUR" decimals="-3">2558000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y140 -->
+    <dnb_met:mi_ftk_004 contextRef="C5336" unitRef="uEUR" decimals="-3">2559000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y150 -->
+    <dnb_met:mi_ftk_004 contextRef="C5337" unitRef="uEUR" decimals="-3">2560000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y160 -->
+    <dnb_met:mi_ftk_004 contextRef="C5338" unitRef="uEUR" decimals="-3">2561000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y170 -->
+    <dnb_met:mi_ftk_004 contextRef="C5339" unitRef="uEUR" decimals="-3">2562000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y180 -->
+    <dnb_met:mi_ftk_004 contextRef="C5340" unitRef="uEUR" decimals="-3">2563000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y190 -->
+    <dnb_met:mi_ftk_004 contextRef="C5341" unitRef="uEUR" decimals="-3">2564000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y200 -->
+    <dnb_met:mi_ftk_004 contextRef="C5342" unitRef="uEUR" decimals="-3">2565000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF003 x010 y210 -->
+    <dnb_met:mi_ftk_004 contextRef="C5343" unitRef="uEUR" decimals="-3">2566000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y010 -->
+    <dnb_met:mi_ftk_004 contextRef="C5344" unitRef="uEUR" decimals="-3">2567000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y020 -->
+    <dnb_met:mi_ftk_004 contextRef="C5345" unitRef="uEUR" decimals="-3">2568000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y030 -->
+    <dnb_met:mi_ftk_004 contextRef="C5346" unitRef="uEUR" decimals="-3">2569000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y040 -->
+    <dnb_met:mi_ftk_004 contextRef="C5347" unitRef="uEUR" decimals="-3">2570000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y050 -->
+    <dnb_met:mi_ftk_004 contextRef="C5348" unitRef="uEUR" decimals="-3">2571000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y060 -->
+    <dnb_met:mi_ftk_004 contextRef="C5349" unitRef="uEUR" decimals="-3">2572000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y070 -->
+    <dnb_met:mi_ftk_004 contextRef="C5350" unitRef="uEUR" decimals="-3">2573000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y080 -->
+    <dnb_met:mi_ftk_004 contextRef="C5351" unitRef="uEUR" decimals="-3">2574000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y090 -->
+    <dnb_met:mi_ftk_004 contextRef="C5352" unitRef="uEUR" decimals="-3">2575000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y100 -->
+    <dnb_met:mi_ftk_004 contextRef="C5353" unitRef="uEUR" decimals="-3">2576000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y110 -->
+    <dnb_met:mi_ftk_004 contextRef="C5354" unitRef="uEUR" decimals="-3">2577000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y120 -->
+    <dnb_met:mi_ftk_004 contextRef="C5355" unitRef="uEUR" decimals="-3">2578000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y130 -->
+    <dnb_met:mi_ftk_004 contextRef="C5356" unitRef="uEUR" decimals="-3">2579000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y140 -->
+    <dnb_met:mi_ftk_004 contextRef="C5357" unitRef="uEUR" decimals="-3">2580000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y150 -->
+    <dnb_met:mi_ftk_004 contextRef="C5358" unitRef="uEUR" decimals="-3">2581000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y160 -->
+    <dnb_met:mi_ftk_004 contextRef="C5359" unitRef="uEUR" decimals="-3">2582000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y170 -->
+    <dnb_met:mi_ftk_004 contextRef="C5360" unitRef="uEUR" decimals="-3">2583000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y180 -->
+    <dnb_met:mi_ftk_004 contextRef="C5361" unitRef="uEUR" decimals="-3">2584000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y190 -->
+    <dnb_met:mi_ftk_004 contextRef="C5362" unitRef="uEUR" decimals="-3">2585000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y200 -->
+    <dnb_met:mi_ftk_004 contextRef="C5363" unitRef="uEUR" decimals="-3">2586000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y210 -->
+    <dnb_met:mi_ftk_004 contextRef="C5364" unitRef="uEUR" decimals="-3">2587000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y220 -->
+    <dnb_met:mi_ftk_004 contextRef="C5365" unitRef="uEUR" decimals="-3">2588000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y230 -->
+    <dnb_met:mi_ftk_004 contextRef="C5366" unitRef="uEUR" decimals="-3">2589000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | APF004 x010 y240 -->
+    <dnb_met:si_ftk_442 contextRef="C5368">Text 272</dnb_met:si_ftk_442> <!-- ftk.Toelichting bij mutaties op de organisatie | APF005 x010 y010 -->
+    <dnb_met:ei_ftk_443 contextRef="C5368">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_443> <!-- ftk.APF aangesloten bij de Pensioenfederatie | ftk.Selectielijsten:Ja | APF005 x010 y020 -->
+    <dnb_met:si_ftk_444 contextRef="C5368">Text 273</dnb_met:si_ftk_444> <!-- ftk.Toelichting op activa | APF005 x010 y030 -->
+    <dnb_met:si_ftk_445 contextRef="C5368">Text 274</dnb_met:si_ftk_445> <!-- ftk.Toelichting op passiva | APF005 x010 y040 -->
+    <dnb_met:si_ftk_446 contextRef="C5368">Text 275</dnb_met:si_ftk_446> <!-- ftk.Toelichting baten | APF005 x010 y050 -->
+    <dnb_met:si_ftk_447 contextRef="C5368">Text 276</dnb_met:si_ftk_447> <!-- ftk.Toelichting lasten | APF005 x010 y060 -->
+    <dnb_met:si_ftk_448 contextRef="C5368">Text 277</dnb_met:si_ftk_448> <!-- ftk.Toelichting op resultaat | APF005 x010 y070 -->
+    <dnb_met:ei_ftk_449 contextRef="C5368">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_449> <!-- ftk.Beroepsaansprakelijkheidsverzekering afgesloten | ftk.Selectielijsten:Ja | APF005 x010 y080 -->
+    <dnb_met:si_ftk_450 contextRef="C5368">Text 278</dnb_met:si_ftk_450> <!-- ftk.Toelichting weerstandsvermogen | APF005 x010 y090 -->
+    <dnb_met:ei_ftk_074 contextRef="C5376">dnb_ftk_dom006:mem091</dnb_met:ei_ftk_074> <!-- ftk.Bestuursmodel | ftk.Selectielijsten:Paritair | APF006-1 x010 y010 -->
+    <dnb_met:si_ftk_451 contextRef="C5376">Text 279</dnb_met:si_ftk_451> <!-- ftk.Deskundigheidsbevordering | APF006-1 x010 y020 -->
+    <dnb_met:ei_ftk_089 contextRef="C5376">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_089> <!-- ftk.Zelfevaluatie bestuur | ftk.Selectielijsten:Ja | APF006-1 x010 y030 -->
+    <dnb_met:si_ftk_452 contextRef="C5376">Text 280</dnb_met:si_ftk_452> <!-- ftk.Toelichting Raad van Toezicht | APF006-1 x010 y040 -->
+    <dnb_met:ei_ftk_453 contextRef="C5376">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_453> <!-- ftk.Samengevoegd belanghebbendenorgaan | ftk.Selectielijsten:Ja | APF006-1 x010 y050 -->
+    <dnb_met:ei_ftk_454 contextRef="C5376">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_454> <!-- ftk.Vergadering van belanghebbendenorganen | ftk.Selectielijsten:Ja | APF006-1 x010 y060 -->
+    <dnb_met:ei_ftk_455 contextRef="C5376">dnb_ftk_dom006:mem098</dnb_met:ei_ftk_455> <!-- ftk.Belanghebbendorgaan voor alle kringen operationeel | ftk.Selectielijsten:Ja | APF006-1 x010 y070 -->
+    <dnb_met:si_ftk_080 contextRef="C5387">Text 281</dnb_met:si_ftk_080> <!-- ftk.Aanhef | APF006-2 x020 -->
+    <dnb_met:si_ftk_081 contextRef="C5387">Text 282</dnb_met:si_ftk_081> <!-- ftk.Functie | APF006-2 x030 -->
+    <dnb_met:si_ftk_085 contextRef="C5387">Text 283</dnb_met:si_ftk_085> <!-- ftk.Geleding | APF006-2 x040 -->
+    <dnb_met:si_ftk_086 contextRef="C5387">Text 284</dnb_met:si_ftk_086> <!-- ftk.Type bestuurder | APF006-2 x050 -->
+    <dnb_met:di_ftk_082 contextRef="C5387">1973-12-31</dnb_met:di_ftk_082> <!-- ftk.Geboortedatum | APF006-2 x060 -->
+    <dnb_met:di_ftk_083 contextRef="C5387">1974-12-31</dnb_met:di_ftk_083> <!-- ftk.Functie sinds | APF006-2 x070 -->
+    <dnb_met:di_ftk_084 contextRef="C5387">1975-12-31</dnb_met:di_ftk_084> <!-- ftk.Einde zittingsduur | APF006-2 x080 -->
+    <dnb_met:si_ftk_080 contextRef="C5392">Text 285</dnb_met:si_ftk_080> <!-- ftk.Aanhef | APF006-3 x020 -->
+    <dnb_met:si_ftk_081 contextRef="C5392">Text 286</dnb_met:si_ftk_081> <!-- ftk.Functie | APF006-3 x030 -->
+    <dnb_met:di_ftk_082 contextRef="C5392">1976-12-31</dnb_met:di_ftk_082> <!-- ftk.Geboortedatum | APF006-3 x040 -->
+    <dnb_met:di_ftk_083 contextRef="C5392">1977-12-31</dnb_met:di_ftk_083> <!-- ftk.Functie sinds | APF006-3 x050 -->
+    <dnb_met:di_ftk_084 contextRef="C5392">1978-12-31</dnb_met:di_ftk_084> <!-- ftk.Einde zittingsduur | APF006-3 x060 -->
+    <dnb_met:si_ftk_080 contextRef="C5397">Text 287</dnb_met:si_ftk_080> <!-- ftk.Aanhef | APF006-4 x020 -->
+    <dnb_met:si_ftk_081 contextRef="C5397">Text 288</dnb_met:si_ftk_081> <!-- ftk.Functie | APF006-4 x030 -->
+    <dnb_met:di_ftk_082 contextRef="C5397">1979-12-31</dnb_met:di_ftk_082> <!-- ftk.Geboortedatum | APF006-4 x040 -->
+    <dnb_met:di_ftk_083 contextRef="C5397">1980-12-31</dnb_met:di_ftk_083> <!-- ftk.Functie sinds | APF006-4 x050 -->
+    <dnb_met:di_ftk_084 contextRef="C5397">1981-12-31</dnb_met:di_ftk_084> <!-- ftk.Einde zittingsduur | APF006-4 x060 -->
+    <dnb_met:si_ftk_080 contextRef="C5403">Text 289</dnb_met:si_ftk_080> <!-- ftk.Aanhef | APF006-5 x020 -->
+    <dnb_met:si_ftk_081 contextRef="C5403">Text 290</dnb_met:si_ftk_081> <!-- ftk.Functie | APF006-5 x030 -->
+    <dnb_met:si_ftk_085 contextRef="C5403">Text 291</dnb_met:si_ftk_085> <!-- ftk.Geleding | APF006-5 x040 -->
+    <dnb_met:di_ftk_082 contextRef="C5403">1982-12-31</dnb_met:di_ftk_082> <!-- ftk.Geboortedatum | APF006-5 x050 -->
+    <dnb_met:di_ftk_083 contextRef="C5403">1983-12-31</dnb_met:di_ftk_083> <!-- ftk.Functie sinds | APF006-5 x060 -->
+    <dnb_met:di_ftk_084 contextRef="C5403">1984-12-31</dnb_met:di_ftk_084> <!-- ftk.Einde zittingsduur | APF006-5 x070 -->
+    <dnb_met:si_ftk_458 contextRef="C5406">Text 292</dnb_met:si_ftk_458> <!-- ftk.Naam kring | APF006-6 x020 -->
+    <dnb_met:si_ftk_080 contextRef="C5410">Text 293</dnb_met:si_ftk_080> <!-- ftk.Aanhef | APF006-7 x020 -->
+    <dnb_met:si_ftk_081 contextRef="C5410">Text 294</dnb_met:si_ftk_081> <!-- ftk.Functie | APF006-7 x030 -->
+    <dnb_met:si_ftk_085 contextRef="C5410">Text 295</dnb_met:si_ftk_085> <!-- ftk.Geleding | APF006-7 x040 -->
+    <dnb_met:di_ftk_082 contextRef="C5410">1985-12-31</dnb_met:di_ftk_082> <!-- ftk.Geboortedatum | APF006-7 x050 -->
+    <dnb_met:di_ftk_083 contextRef="C5410">1986-12-31</dnb_met:di_ftk_083> <!-- ftk.Functie sinds | APF006-7 x060 -->
+    <dnb_met:di_ftk_084 contextRef="C5410">1987-12-31</dnb_met:di_ftk_084> <!-- ftk.Einde zittingsduur | APF006-7 x070 -->
+</xbrli:xbrl>

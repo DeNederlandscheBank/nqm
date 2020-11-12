@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?instance-generator id="Excel DPM To XBRL Generator" version="EDX Beta 2.0.0" creationDate="2019-07-08T10:08:06+02:00"?>
+<!-- © De Nederlandsche Bank, Sample XBRL Instance With Fixed Interval Data -->
+<xbrli:xbrl
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xbrli="http://www.xbrl.org/2003/instance"
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
+    xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+    xmlns:find="http://www.eurofiling.info/xbrl/ext/filing-indicators"
+    xmlns:dnb_met="http://www.dnb.nl/xbrl/dict/met"
+    xmlns:dnb_dim="http://www.dnb.nl/xbrl/dict/dim"
+    xmlns:dnb_ftk_dom001="http://www.dnb.nl/xbrl/dict/dom/ftk_dom001"
+    xmlns:dnb_ftk_dom002="http://www.dnb.nl/xbrl/dict/dom/ftk_dom002"
+    xmlns:dnb_ftk_dom003="http://www.dnb.nl/xbrl/dict/dom/ftk_dom003"
+    xmlns:dnb_ftk_dom004="http://www.dnb.nl/xbrl/dict/dom/ftk_dom004"
+    xmlns:dnb_ftk_dom005="http://www.dnb.nl/xbrl/dict/dom/ftk_dom005"
+    >
+    <link:schemaRef xlink:type="simple" xlink:href="http://www.dnb.nl/nl/fr/xbrl/fws/dnb-nr/ftk-2019-06/2019-12-31/mod/ftk-dg.xsd"/>
+    <xbrli:unit id="uEUR">
+        <xbrli:measure>iso4217:EUR</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:unit id="uPURE">
+        <xbrli:measure>xbrli:pure</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:context id="C0">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+    <find:fIndicators>
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-CG1</find:filingIndicator> <!-- Tabel groep: Contactgegevens -->
+        <find:filingIndicator contextRef="C0" find:filed="true">TG-DG1</find:filingIndicator> <!-- Tabel groep: Dekkingsgraadrapportage -->
+    </find:fIndicators>
+    <xbrli:context id="C1">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim001">dnb_ftk_dom001:mem001</xbrldi:explicitMember> <!-- Contact type | ftk.Contact:Contactpersoon invulling -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C4">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim001">dnb_ftk_dom001:mem002</xbrldi:explicitMember> <!-- Contact type | ftk.Contact:Verantwoordelijk bestuurslid rapportage -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C7">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem001</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Dekkingsgraad -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim003">dnb_ftk_dom003:mem001</xbrldi:explicitMember> <!-- Rekeningzijde | ftk.Rekeningzijde:Passiva -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem001</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Technische voorzieningen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim005">dnb_ftk_dom004:mem002</xbrldi:explicitMember> <!-- Subpost | ftk.Postomschrijving:Technische voorzieningen voor risico fonds -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C8">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem001</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Dekkingsgraad -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim003">dnb_ftk_dom003:mem001</xbrldi:explicitMember> <!-- Rekeningzijde | ftk.Rekeningzijde:Passiva -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem001</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Technische voorzieningen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim005">dnb_ftk_dom004:mem003</xbrldi:explicitMember> <!-- Subpost | ftk.Postomschrijving:Technische voorzieningen voor risico deelnemers -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C9">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem001</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Dekkingsgraad -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim003">dnb_ftk_dom003:mem001</xbrldi:explicitMember> <!-- Rekeningzijde | ftk.Rekeningzijde:Passiva -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim004">dnb_ftk_dom004:mem001</xbrldi:explicitMember> <!-- Hoofdpost | ftk.Postomschrijving:Technische voorzieningen -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim005">dnb_ftk_dom004:mem004</xbrldi:explicitMember> <!-- Subpost | ftk.Postomschrijving:Technische voorzieningen afgedekt door garantiecontract -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C10">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem001</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Dekkingsgraad -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim006">dnb_ftk_dom005:mem001</xbrldi:explicitMember> <!-- Solvabiliteitspost | ftk.Solvabiliteit:Aanwezige solvabiliteit -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C11">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem001</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Dekkingsgraad -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim006">dnb_ftk_dom005:mem002</xbrldi:explicitMember> <!-- Solvabiliteitspost | ftk.Solvabiliteit:Dekkingsgraden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim007">dnb_ftk_dom005:mem003</xbrldi:explicitMember> <!-- Dekkingsgraadtype | ftk.Solvabiliteit:Dekkingsgraad -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C12">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem001</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Dekkingsgraad -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim006">dnb_ftk_dom005:mem002</xbrldi:explicitMember> <!-- Solvabiliteitspost | ftk.Solvabiliteit:Dekkingsgraden -->
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim007">dnb_ftk_dom005:mem004</xbrldi:explicitMember> <!-- Dekkingsgraadtype | ftk.Solvabiliteit:Beleidsdekkingsgraad -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <xbrli:context id="C13">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://standards.iso.org/iso/17442">LEGALIDENTIFIER20P32</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2018-12-31</xbrli:instant>
+        </xbrli:period>
+        <xbrli:scenario>
+            <xbrldi:explicitMember dimension="dnb_dim:ftk_dim002">dnb_ftk_dom002:mem001</xbrldi:explicitMember> <!-- Aandachtsgebied | ftk.Aandachtsgebied:Dekkingsgraad -->
+        </xbrli:scenario>
+    </xbrli:context>
+    <dnb_met:si_ftk_001 contextRef="C1">Text 1</dnb_met:si_ftk_001> <!-- ftk.Naam | K000 x010 y010 -->
+    <dnb_met:si_ftk_002 contextRef="C1">Text 2</dnb_met:si_ftk_002> <!-- ftk.Telefoonnummer | K000 x010 y020 -->
+    <dnb_met:si_ftk_003 contextRef="C1">Text 3</dnb_met:si_ftk_003> <!-- ftk.Email | K000 x010 y030 -->
+    <dnb_met:si_ftk_001 contextRef="C4">Text 4</dnb_met:si_ftk_001> <!-- ftk.Naam | K000 x010 y040 -->
+    <dnb_met:si_ftk_002 contextRef="C4">Text 5</dnb_met:si_ftk_002> <!-- ftk.Telefoonnummer | K000 x010 y050 -->
+    <dnb_met:si_ftk_003 contextRef="C4">Text 6</dnb_met:si_ftk_003> <!-- ftk.Email | K000 x010 y060 -->
+    <dnb_met:mi_ftk_004 contextRef="C7" unitRef="uEUR" decimals="-3">1000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | M101 x010 y010 -->
+    <dnb_met:mi_ftk_004 contextRef="C8" unitRef="uEUR" decimals="-3">2000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | M101 x010 y020 -->
+    <dnb_met:mi_ftk_004 contextRef="C9" unitRef="uEUR" decimals="-3">3000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | M101 x010 y030 -->
+    <dnb_met:mi_ftk_004 contextRef="C10" unitRef="uEUR" decimals="-3">4000</dnb_met:mi_ftk_004> <!-- ftk.Bedrag | M101 x010 y040 -->
+    <dnb_met:pi_ftk_005 contextRef="C11" unitRef="uPURE" decimals="4">0.0001</dnb_met:pi_ftk_005> <!-- ftk.Percentage | M101 x010 y050 -->
+    <dnb_met:pi_ftk_005 contextRef="C12" unitRef="uPURE" decimals="4">0.0002</dnb_met:pi_ftk_005> <!-- ftk.Percentage | M101 x010 y060 -->
+    <dnb_met:si_ftk_006 contextRef="C13">Text 7</dnb_met:si_ftk_006> <!-- ftk.Toelichting op de dekkingsgraadrapportage | M101 x010 y070 -->
+</xbrli:xbrl>
