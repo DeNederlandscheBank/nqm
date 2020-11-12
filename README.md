@@ -74,4 +74,6 @@ Go to src/models/:
 
   onmt_translate -model ../../models/model_step_10000.pt -src ../../data/interim/test_en.txt -output ../../data/interim/test_spar.txt
 
+  python decode_lines.py
+
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
