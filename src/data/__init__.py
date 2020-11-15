@@ -1,4 +1,6 @@
 from .xbrl2rdf import *
+from .instance import *
+from .linkbase import *
 from .UrlUtil import *
 from .XmlUtil import *
 # from .XbrlUtil import *
