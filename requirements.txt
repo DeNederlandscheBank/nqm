@@ -11,8 +11,8 @@ python-dotenv>=0.5.1
 lxml
 jupyterlab
 matplotlib
-rdflib
 rdfextras
 ontospy
 pandas
 neo4j
+OpenNMT-py==2.0.0rc1
