@@ -1,6 +1,6 @@
 from .xbrl2rdf import *
-from .instance import *
-from .linkbase import *
+from .process_instance import *
+from .process_linkbase import *
 from .UrlUtil import *
 from .XmlUtil import *
 # from .XbrlUtil import *
