@@ -5,8 +5,10 @@ import src.data
 
 def processLinkBase(element, params):
 
-    params['output'] = StringIO()
-    params['log'] = StringIO()
+    if 'output' not in params.keys():
+        params['output'] = StringIO()
+    if 'log' not in params.keys():
+        params['log'] = StringIO()
     ns = params['namespaces']
     base = params['base']
  
@@ -20,7 +22,7 @@ def processLinkBase(element, params):
         elif node_type == "simple":
             params = checkSimpleLink(node, params)
 
-    params['output'].write("processing linkbase "+base+"\n")
+    params['log'].write("processing linkbase "+base+"\n")
 
     for node in element:
 
@@ -299,7 +301,10 @@ def getTurtleName(loc, base, ns):
     # locator to a virtual object, e.g. rendering resource
     # that doesn't have a literal value such a string or node
     # this hack as it uses locally scoped labels for names
-    p = '_:' + loc['label']
+    if loc['label'][-1]=='.':
+        p = '_:' + loc['label'][0:-1]
+    else:
+        p = '_:' + loc['label']
     return p
 
 uris = dict()
@@ -336,7 +341,10 @@ def shortRoleName(role, arc, ns):
     # else
     #     prefix = _strdup(prefix);
 
-    return base + ":" + name
+    if "http" in base:
+        return "<"+base+"/"+ name+">"
+    else: 
+        return base+":" + name
     # return None
 
 # generate base, prefix and name from role or arcrole URI
