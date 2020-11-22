@@ -214,7 +214,8 @@ def translateXLink(node, arcs, locators, params):
     xlink_id = node.attrib.get('id', None)
     xlink_base = node.attrib.get('base', None)
 
-    output.write("# "+str(etree.QName(node.tag).localname)+" with role "+str(xlink_role) + "\n")
+    output.write("# localname: "+str(etree.QName(node.tag).localname)+" with role "+str(xlink_role) + "\n")
+    output.write("# base     : "+str(base)+"\n")
 
     # footnoteLink has xlink:role="http://www.xbrl.org/2003/role/link"
     # which isn't really worth noting in the RDF, so suppress it here
