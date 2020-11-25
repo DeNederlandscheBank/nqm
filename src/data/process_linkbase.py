@@ -184,6 +184,8 @@ def processExtendedLink(node, params):
             #     xlink->arc = arc;
 
             # xlink->lastArc = arc;
+        else:
+            print("Unknown type")
 
     for locator in xlink['locators']:    # if locator is not None:
         labels_nodes[locator['label']].append(locator)
@@ -211,14 +213,50 @@ def translateXLink(node, arcs, locators, params):
     output = params['output']
 
     xlink_role = node.attrib.get('{http://www.w3.org/1999/xlink}role', None)
-    xlink_id = node.attrib.get('id', None)
-    xlink_base = node.attrib.get('base', None)
+    xlink_id = node.attrib.get('{http://www.w3.org/1999/xlink}id', None)
+    xlink_base = node.attrib.get('{http://www.w3.org/1999/xlink}base', None)
 
     output.write("# localname: "+str(etree.QName(node.tag).localname)+" with role "+str(xlink_role) + "\n")
     output.write("# base     : "+str(base)+"\n")
 
     # footnoteLink has xlink:role="http://www.xbrl.org/2003/role/link"
     # which isn't really worth noting in the RDF, so suppress it here
+
+    for idx, locator in enumerate(locators):
+    #     if 'href' in locator.keys():
+    #         output.write("_:"+locator['label']+" "+str(locator['href'])+"\n")
+    #         output.write("    xl:type xbrll:locator.\n")
+        if 'node' in locator.keys():
+            if locator['label'][-1]=='.':
+                output.write("_:"+locator['label'][0:-1]+" \n")
+            else:
+                output.write("_:"+locator['label']+" \n")
+
+            output.write("    xbrll:hasType xbrll:Resource;\n")
+
+            role = locator.get('role', None)
+            if role:
+                role = shortRoleName(role, 0, params)
+                output.write("    xbrll:hasRole "+role+";\n")
+
+            lang = locator.get('lang', None)
+            if (lang):
+                output.write('    rdf:lang "'+lang+'";\n')
+
+            count = len(locator['node'])
+            if count >= 1:
+                xml = ''
+                for child in locator['node']:
+                    if child.text is not None:
+                        xml += str(child.text)
+                output.write('    rdf:value """'+str(xml)+'"""^^rdf:XMLLiteral.\n')
+            else:
+                content = locator['node'].text
+                lang = locator.get('lang', None)
+                if lang:
+                    output.write('    rdf:value """'+str(content)+'"""@'+lang+'.\n')
+                else:
+                    output.write('    rdf:value """'+str(content)+'""".\n')
 
     for arc in arcs:
         for fromloc in arc['fromloc']:
@@ -227,24 +265,21 @@ def translateXLink(node, arcs, locators, params):
                 params['linkNumber'] += 1
 
                 str_subject = getTurtleName(fromloc, base, ns)
-                str_predicate = shortRoleName(arc['role'], 1, ns)
+                str_predicate = shortRoleName(arc['role'], 1, params)
                 str_object = getTurtleName(toloc, base, ns)
 
                 output.write("_:link"+str(params['linkNumber'])+" "+str(str_predicate)+"[\n")
-                output.write("    xl:type xl:link;\n")
+                output.write("    xbrll:hasType xbrll:link;\n")
 
                 if xlink_role is not None:
-                    role = shortRoleName(xlink_role, 0, ns)
-                    output.write("    xl:role "+role+";\n")
+                    role = shortRoleName(xlink_role, 0, params)
+                    output.write("    xbrll:hasRole "+role+";\n")
 
-                toloc_role = toloc.get('role', None)
-                if toloc_role:
-                    role = shortRoleName(toloc_role, 0, ns)
-                    output.write("    xlink:role "+role+";\n")
+                if xlink_base is not None:
+                    output.write("    xbrll:hasBase "+xlink_base+";\n")
 
-                toloc_lang = toloc.get('lang', None)
-                if (toloc_lang):
-                    output.write('    rdf:lang "'+toloc_lang+'";\n')
+                if xlink_id is not None:
+                    output.write("    xbrll:hasId "+xlink_id+";\n")
 
                 arc_use = arc.get('use', None)
                 if arc_use:
@@ -258,30 +293,12 @@ def translateXLink(node, arcs, locators, params):
                 if arc_order:
                     output.write('    xl:order "'+arc_order+'"^^xsd:decimal;\n')
 
-                output.write("    xl:from "+str_subject+ ";\n")
-
                 arc_weight = arc.get('weight', None)
                 if arc_weight:
                     output.write('    xl:weight "'+arc_weight+'"^^xsd:decimal;\n')
 
-                node = toloc.get("node", None)
-                if node is not None:
-                    count = len(node)
-                    if count >= 1:
-                        xml = ''
-                        for child in node:
-                            xml += str(child.text)
-                        output.write('    rdf:value """'+str(xml)+'"""^^rdf:XMLLiteral;\n')
-                    else:
-                        content = node.text
-                        toloc_lang = toloc.get('lang', None)
-                        if toloc_lang:
-                            output.write('    rdf:value """'+str(content)+'"""@'+toloc_lang+';\n')
-                        else:
-                            output.write('    rdf:value """'+str(content)+'""";\n')
-                else:
-                    output.write("    xl:to "+str_object+";\n")
-
+                output.write('    xl:from '+str_subject+';\n')
+                output.write('    xl:to '+str_object+';\n')
                 output.write("    ].\n")
 
     return params
@@ -328,13 +345,19 @@ def findId(uri, base, ns, name):
         return (ns, name)
     return None
 
-def shortRoleName(role, arc, ns):
+def shortRoleName(role, arc, params):
+
+    ns = params['namespaces']
 
     base, name = splitRole(role)
+    for key in ns:
+        if role == ns[key]:
+            return "<"+base+"/"+name+">"
 
     for key in ns:
         if base == ns[key]:
             base = key
+
 
     # if prefix is None:
     #     prefix = arc ? genArcRolePrefixName() : genRolePrefixName()
