@@ -154,7 +154,7 @@ def getFact(fact, params):
         params = genFactName(params)
         output.write('    xl:type xbrll:Tuple;\n')
         output.write('    xbrll:fromReport '+report+';\n')
-        output.write('    rdf:type '+namespace+':'+name+';\n')
+        output.write('    xbrll:hasDimension '+namespace+':'+name+';\n')
         output.write('    xbrli:content (\n')
         for item in child_fact_name:
             output.write('        '+item+'\n')
@@ -162,7 +162,7 @@ def getFact(fact, params):
     else:
         params = genFactName(params)
         output.write('    xbrll:fromReport '+report+';\n')
-        output.write('    rdf:type '+namespace+':'+name+';\n')
+        output.write('    xbrll:hasDimension '+namespace+':'+name+';\n')
         unitRef = fact.attrib.get("unitRef", None)
         if unitRef is not None:
             # numeric fact

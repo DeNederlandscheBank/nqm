@@ -192,7 +192,6 @@ xbrll:dimensionalItem a owl:ObjectProperty, rdf:Property ;
 	 rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
 	.
 
-
 xbrll:scenarioItem a owl:ObjectProperty, rdf:Property ;
 	 rdfs:label "Scenario Item"@en ;
 	 rdfs:domain xbrll:Scenario ;
@@ -215,11 +214,19 @@ xbrll:axis a rdf:Property, owl:ObjectProperty;
 	rdfs:range skos:Concept ;
 	.
 
-xbrll:member a rdf:Property, owl:ObjectProperty;
+xbrll:domain-member a rdf:Property, owl:ObjectProperty;
 	rdfs:label "Member"@en ;
 	rdfs:comment "Domain member"@en ;
 	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
 	rdfs:domain xbrll:DimensionalItem;
+	rdfs:range skos:Concept ;
+	.
+
+xbrll:element-label a rdf:Property, owl:ObjectProperty;
+	rdfs:label "Label"@en ;
+	rdfs:comment "Element label"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	rdfs:domain xbrll:DimensionalItem; # unsure
 	rdfs:range skos:Concept ;
 	.
 
