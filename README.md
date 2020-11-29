@@ -57,10 +57,17 @@ Project Organization
 Start Project
 -------------
 
+Make two folders manually or with code:
+
  mkdir data/interim
 
- python src/features/generator.py --templates data/external/annotations_monument.csv --output data/interim
+ mkdir data/processed
 
+Put the annotations_monument.csv in the interim folder
+
+ python src/features/generator.py --templates data/interim/annotations_monument.csv --output data/processed
+
+ python src/features/split_in_train_dev_test.py --dataset data/processed/data
 
 Go to src/features/:
 
@@ -72,7 +79,7 @@ Go to src/models/:
 
   onmt_train -config train_config.yaml
 
-  onmt_translate -model ../../models/model_step_10000.pt -src ../../data/interim/test_en.txt -output ../../data/interim/test_spar.txt
+  onmt_translate -model ../../models/model_step_10000.pt -src ../../data/processed/test_en.txt -output ../../data/processed/test_sparql_model.txt
 
   python decode_lines.py
 
