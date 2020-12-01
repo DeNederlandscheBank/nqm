@@ -57,30 +57,41 @@ Project Organization
 Start Project
 -------------
 
-Make two folders manually or with code:
+### Install packages
 
- mkdir data/interim
+At the root:
 
- mkdir data/processed
+    pip install -r requirements.txt
 
-Put the annotations_monument.csv in the interim folder
 
- python src/features/generator.py --templates data/interim/annotations_monument.csv --output data/processed
+### Pipeline for preparing data and running model
 
- python src/features/split_in_train_dev_test.py --dataset data/processed/data
+Open your git bash:
+    
+    cd src/
+    
+    ./pipeline.sh
 
-Go to src/features/:
 
- python shuffle.py
 
-Go to src/models/:
+### Test your model:
 
-  onmt_build_vocab -config train_config.yaml
+In your bash:
 
-  onmt_train -config train_config.yaml
+    cd models/
 
-  onmt_translate -model ../../models/model_step_10000.pt -src ../../data/processed/test_en.txt -output ../../data/processed/test_sparql_model.txt
+    onmt_translate -model ../../models/model_step_10000.pt -src ../../data/processed/test_en.txt -output ../../data/processed/test_sparql_model.txt
 
-  python decode_lines.py
+
+Note that onmt_translate is written as:
+   
+    onmt_translate -model path_to_saved_model/model -src path_to_input_text/text -output path_to_output/file
+
+
+If you want to decode the output of the test files into more of an sparql output:
+
+    python decode_lines.py
+
+
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
