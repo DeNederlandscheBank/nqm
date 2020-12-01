@@ -68,7 +68,7 @@ def processElements(node, base, targetNs, params):
                 output.write("    rdf:type "+child_type+" ;\n")
 
             if child_id is not None:
-                output.write('    rdf:id "'+child_id+'" ;\n')
+                output.write('    rdf:id '+turtlename(base, child_id, ns)+' ;\n')
 
             if child_periodType is not None:
                 output.write('    xbrli:periodType "'+child_periodType+'" ;\n')

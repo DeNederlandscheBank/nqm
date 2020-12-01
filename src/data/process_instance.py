@@ -12,7 +12,7 @@ def genReport(params):
 def getContext(context, params):
     output = params['output']
     output.write("_:context_"+context.attrib['id']+"\n")
-    output.write('    xl:type xbrll:Context;\n')
+    output.write('    xl:type xbrll:Context ;\n')
 
     # every context element has one entity element
     # and that must have an identifier and scheme
@@ -31,7 +31,7 @@ def getContext(context, params):
     #     output.write('        xbrli:scheme <'+scheme+'>;\n        ];\n')
     # alternative 2
     segment = getContextNode(context, "segment")
-    output.write('    xbrll:Entity <'+scheme+':'+ identifier.text+'>;\n')
+    output.write('    xbrll:Entity <'+scheme+':'+ identifier.text+'> ;\n')
 
     # each context may have one scenario element
     scenario = getContextNode(context, "scenario")
@@ -43,27 +43,27 @@ def getContext(context, params):
                 if namespace == params['namespaces'][key]:
                     namespace = key
             name = etree.QName(child).localname
-            xml += '        '+str(namespace)+':'+name+' "'+str(child.text)+'"^^rdf:XMLLiteral;\n'
-        output.write('    xbrll:hasScenario [\n'+xml+'        ];\n')
+            xml += '        '+str(namespace)+':'+name+' "'+str(child.text)+'"^^rdf:XMLLiteral ;\n'
+        output.write('    xbrll:hasScenario [\n'+xml+'        ] ;\n')
 
     # every context element has one period element
     period = getContextNode(context, 'period')
     child = period[0]
     if etree.QName(child).localname == "instant":
         instant = child.text
-        output.write('    xbrll:instant "'+instant+'"^^xsd:date.\n')
+        output.write('    xbrll:instant "'+instant+'"^^xsd:date ;\n    .\n')
     elif etree.QName(child).localname == "forever":
-        output.write('    xbrll:Period xbrll:forever.\n')
+        output.write('    xbrll:Period xbrll:forever ;\n    .\n')
     else: # expect sequence of startDate endDate pairs
         output.write('    xbrll:Period (\n')
         while child is not None:
             value = child.text
-            output.write('        [ xbrll:startDate "'+value+'"^^xsd:date;\n')
+            output.write('        [ xbrll:startDate "'+value+'"^^xsd:date ;\n')
             child = child.getnext()
             value = child.text
-            output.write('          xbrll:endDate "'+value+'"^^xsd:date; ]\n')
+            output.write('          xbrll:endDate "'+value+'"^^xsd:date ; ]\n')
             child = child.getnext()
-        output.write('        ).\n')
+        output.write('        ) ;\n    .\n')
     return params
 
 
@@ -89,8 +89,8 @@ def getUnit(unit, params):
         numerator = getNumerator(child)
         denominator = getDenominator(child)
         output.write('_:unit_'+unit_id+'\n')
-        output.write('    xbrli:numerator '+numerator+';\n')
-        output.write('    xbrli:denominator '+denominator+'.\n')
+        output.write('    xbrli:numerator '+numerator+' ;\n')
+        output.write('    xbrli:denominator '+denominator+' ;\n    .\n')
     return params
 
 
@@ -120,14 +120,14 @@ def getSchemaRef(node, params):
         params['log'].write('could not identify schema location\n')
     else:
         params['output'].write("_:schemaRef\n")
-        params['output'].write('    xlink:schemaRef <'+uri+'>;\n')
-        params['output'].write('    xbrll:fromReport '+params['report']+'.\n')
+        params['output'].write('    xlink:schemaRef <'+uri+'> ;\n')
+        params['output'].write('    xbrll:fromReport '+params['report']+' ;\n    .\n')
     return params
 
 def genFactName(params):
     params['fact_count'] += 1
     params['output'].write("_:fact" +str(params['fact_count'])+"\n")
-    params['output'].write('    xl:type xbrll:Fact;\n')
+    params['output'].write('    xl:type xbrll:Fact ;\n')
     return params
 
 def getFact(fact, params):
@@ -152,17 +152,17 @@ def getFact(fact, params):
             params = getFact(child, params)
             child_fact_name.append('_:fact'+str(params['fact_count'])+"\n")
         params = genFactName(params)
-        output.write('    xl:type xbrll:Tuple;\n')
-        output.write('    xbrll:fromReport '+report+';\n')
-        output.write('    xbrll:hasDimension '+namespace+':'+name+';\n')
+        output.write('    xl:type xbrll:Tuple ;\n')
+        output.write('    xbrll:fromReport '+report+' ;\n')
+        output.write('    xbrll:hasDimension '+namespace+':'+name+' ;\n')
         output.write('    xbrli:content (\n')
         for item in child_fact_name:
             output.write('        '+item+'\n')
         output.write('    ).\n')
     else:
         params = genFactName(params)
-        output.write('    xbrll:fromReport '+report+';\n')
-        output.write('    xbrll:hasDimension '+namespace+':'+name+';\n')
+        output.write('    xbrll:fromReport '+report+' ;\n')
+        output.write('    xbrll:hasDimension '+namespace+':'+name+' ;\n')
         unitRef = fact.attrib.get("unitRef", None)
         if unitRef is not None:
             # numeric fact
@@ -171,17 +171,17 @@ def getFact(fact, params):
                 dot = "decimal"
             else:
                 dot = "integer"
-            output.write('    rdf:value "'+value+'"^^xsd:'+dot+';\n')
+            output.write('    rdf:value "'+value+'"^^xsd:'+dot+' ;\n')
             decimals = fact.attrib.get("decimals", None)
             if decimals is not None:
-                output.write('    xbrll:decimals "'+decimals+'"^^xsd:integer;\n')
+                output.write('    xbrll:decimals "'+decimals+'"^^xsd:integer ;\n')
             precision = fact.attrib.get("precision", None)
             if precision is not None:
-                output.write('    xbrll:precision "'+precision+'"^^xsd:integer;\n')
+                output.write('    xbrll:precision "'+precision+'"^^xsd:integer ;\n')
             balance = fact.attrib.get("balance", None)
             # if balance is not None:
             #     output.write('    xbrli:balance "'+balance+'"\n')
-            output.write('    xbrll:hasUnit _:unit_'+unitRef+';\n')
+            output.write('    xbrll:hasUnit _:unit_'+unitRef+' ;\n')
         else: 
             # non-numeric fact
             count = len(fact)
@@ -194,10 +194,10 @@ def getFact(fact, params):
                 content = fact.text
                 lang = fact.attrib.get("lang", None)
                 if lang is not None:
-                    output.write('    xbrll:Resource """'+content+'"""@'+lang+';\n')
+                    output.write('    xbrll:Resource """'+content+'"""@'+lang+' ;\n')
                 else:
-                    output.write('    xbrll:Resource """'+content+'""";\n')
-        output.write('    xbrll:hasContext _:context_'+contextRef+'.\n')
+                    output.write('    xbrll:Resource """'+content+'""" ;\n')
+        output.write('    xbrll:hasContext _:context_'+contextRef+' ;\n    .\n')
     return params
 
 

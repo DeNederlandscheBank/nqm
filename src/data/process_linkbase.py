@@ -14,6 +14,8 @@ def processLinkBase(element, params):
     # locators is the list of locators already defined
     if 'defined_locators' not in params.keys():
         params['defined_locators'] = list()
+    if 'defined_resources' not in params.keys():
+        params['defined_resources'] = list()
     
     ns = params['namespaces']
 
@@ -212,51 +214,57 @@ def translateResources(node, locators, params):
 
         if 'node' in locator.keys():
 
-            if header_printed == False:
-                output.write("\n# RESOURCES\n")
-                output.write("# localname: "+str(etree.QName(node.tag).localname)+"\n")
-                output.write("# role: "+str(node.attrib.get('{http://www.w3.org/1999/xlink}role', None)) + "\n")
-                output.write("# base: "+str(base)+"\n\n")
-                header_printed = True
-
             label = locator['label']
             if label[-1]==".":
                 label = label[0:-1]
-            output.write(turtlename(base, label, ns)+"\n")
+            name = turtlename(base, label, ns)
 
-            role = locator.get('role', None)
-            if role:
-                role = shortRoleName(role, 0, params)
-                output.write("    xlink:role "+role+";\n")
+            if name.lower() not in params['defined_resources']: # if not already defined then define
 
-            title = locator.get('title', None)
-            if title:
-                title = shortRoleName(title, 0, params)
-                output.write("    xlink:title "+title+";\n")
+                if header_printed == False:
+                    output.write("\n# RESOURCES\n")
+                    output.write("# localname: "+str(etree.QName(node.tag).localname)+"\n")
+                    output.write("# role: "+str(node.attrib.get('{http://www.w3.org/1999/xlink}role', None)) + "\n")
+                    output.write("# base: "+str(base)+"\n\n")
+                    header_printed = True
 
-            l_type = locator.get('type', None)
-            if l_type:
-                l_type = shortRoleName(l_type, 0, params)
-                output.write("    xlink:type "+l_type+";\n")
+                output.write(name+"\n")
 
-            lang = locator.get('lang', None)
-            if (lang):
-                output.write('    rdf:lang "'+lang+'";\n')
+                role = locator.get('role', None)
+                if role:
+                    role = shortRoleName(role, 0, params)
+                    output.write("    xlink:role "+role+" ;\n")
 
-            count = len(locator['node'])
-            if count >= 1:
-                xml = ''
-                for child in locator['node']:
-                    if child.text is not None:
-                        xml += str(child.text)
-                output.write('    rdf:value """'+str(xml)+'"""^^rdf:XMLLiteral.\n')
-            else:
-                content = locator['node'].text
+                title = locator.get('title', None)
+                if title:
+                    title = shortRoleName(title, 0, params)
+                    output.write("    xlink:title "+title+" ;\n")
+
+                l_type = locator.get('type', None)
+                if l_type:
+                    l_type = shortRoleName(l_type, 0, params)
+                    output.write("    xlink:type "+l_type+" ;\n")
+
                 lang = locator.get('lang', None)
-                if lang:
-                    output.write('    rdf:value """'+str(content)+'"""@'+lang+'.\n')
+                if (lang):
+                    output.write('    rdf:lang "'+lang+'" ;\n')
+
+                count = len(locator['node'])
+                if count >= 1:
+                    xml = ''
+                    for child in locator['node']:
+                        if child.text is not None:
+                            xml += str(child.text)
+                    output.write('    rdf:value """'+str(xml)+'"""^^rdf:XMLLiteral ;\n    .\n')
                 else:
-                    output.write('    rdf:value """'+str(content)+'""".\n')
+                    content = locator['node'].text
+                    lang = locator.get('lang', None)
+                    if lang:
+                        output.write('    rdf:value """'+str(content)+'"""@'+lang+' ;\n    .\n')
+                    else:
+                        output.write('    rdf:value """'+str(content)+'""" ;\n    .\n')
+
+                params['defined_resources'].append(name.lower())
 
 def translateLocators(node, locators, params):
 
@@ -274,6 +282,7 @@ def translateLocators(node, locators, params):
             if label[-1]==".": # sometimes the label end with a dot -> delete
                 label = label[0:-1]
             name = turtlename(base, label, ns)
+
             if name.lower() not in params['defined_locators']: # if not already defined then define
 
                 if header_printed == False:
@@ -284,32 +293,32 @@ def translateLocators(node, locators, params):
                     header_printed = True
 
                 output.write(name+"\n")
-                output.write('    xl:type xbrll:locator;\n')
+                output.write('    xl:type xbrll:locator ;\n')
 
                 role = locator.get('role', None)
                 if role is not None:
                     role = shortRoleName(role, 0, params)
-                    output.write("    xlink:role "+role+";\n")
+                    output.write("    xlink:role "+role+" ;\n")
 
                 xlink_id = locator.get('id', None)
                 if xlink_id is not None:
                     xlink_id = shortRoleName(xlink_id, 0, params)
-                    output.write('    xlink:id <'+xlink_id+'>;\n')
+                    output.write('    xlink:id <'+xlink_id+'> ;\n')
 
                 xlink_base = locator.get('base', None)
                 if xlink_base is not None:
-                    output.write('    xlink:base <'+xlink_base+'>;\n')
+                    output.write('    xlink:base <'+xlink_base+'> ;\n')
 
                 # create absolute uri instead of relative
                 href = str(urllib.parse.urljoin(params['abs_base'], locator['href']))
-                output.write('    xlink:href """'+href+'"""^^rdf:XMLLiteral;\n')
+                output.write('    xlink:href """'+href+'"""^^rdf:XMLLiteral ;\n')
 
                 # extract concept name and define concept
                 if "#" in href:
                     short = href.split("#")[1]
                 # if '_' in short:
                 #     short = short.split("_")[1]
-                output.write('    xbrll:concept '+turtlename(base, short, ns)+".\n")
+                output.write('    xbrll:concept '+turtlename(base, short, ns)+";\n    .\n")
 
                 params['defined_locators'].append(name.lower())
 
@@ -343,7 +352,7 @@ def translateXLink(node, arcs, locators, params):
 
                 output.write(turtlename(base, "link"+str(params['linkNumber']), ns)+"\n")
 
-                output.write("    xl:type "+str(str_arcrole)+";\n")
+                output.write("    xl:type "+str(str_arcrole)+" ;\n")
 
                 # role = toloc.get('role', None)
                 # if role:
@@ -356,22 +365,22 @@ def translateXLink(node, arcs, locators, params):
 
                 arc_use = arc.get('use', None)
                 if arc_use:
-                    output.write('    xl:use "prohibited";\n')
+                    output.write('    xl:use "prohibited" ;\n')
 
                 arc_priority = arc.get('priority', None)
                 if arc_priority:
-                    output.write('    xl:priority "'+ str(arc_priority) + '"^^xsd:integer;\n')
+                    output.write('    xl:priority "'+ str(arc_priority) + '"^^xsd:integer ;\n')
 
                 arc_order = arc.get('order', None)
                 if arc_order:
-                    output.write('    xl:order "'+arc_order+'"^^xsd:decimal;\n')
+                    output.write('    xl:order "'+arc_order+'"^^xsd:decimal ;\n')
 
                 arc_weight = arc.get('weight', None)
                 if arc_weight:
-                    output.write('    xl:weight "'+arc_weight+'"^^xsd:decimal;\n')
+                    output.write('    xl:weight "'+arc_weight+'"^^xsd:decimal ;\n')
 
-                output.write('    xl:from '+str_subject+';\n')
-                output.write('    xl:to '+str_object+'.\n')
+                output.write('    xl:from '+str_subject+' ;\n')
+                output.write('    xl:to '+str_object+' ;\n    .\n')
 
     return params
 
