@@ -16,6 +16,8 @@ def processLinkBase(element, params):
         params['defined_locators'] = list()
     if 'defined_resources' not in params.keys():
         params['defined_resources'] = list()
+    if 'defined_links' not in params.keys():
+        params['defined_links'] = list()
     
     ns = params['namespaces']
 
@@ -298,7 +300,7 @@ def translateLocators(node, locators, params):
                 role = locator.get('role', None)
                 if role is not None:
                     role = shortRoleName(role, 0, params)
-                    output.write("    xlink:role "+role+" ;\n")
+                    output.write("    xl:role "+role+" ;\n")
 
                 xlink_id = locator.get('id', None)
                 if xlink_id is not None:
@@ -318,7 +320,7 @@ def translateLocators(node, locators, params):
                     short = href.split("#")[1]
                 # if '_' in short:
                 #     short = short.split("_")[1]
-                output.write('    xbrll:concept '+turtlename(base, short, ns)+";\n    .\n")
+                output.write('    rdf:id '+turtlename(base, short, ns)+";\n    .\n")
 
                 params['defined_locators'].append(name.lower())
 
@@ -350,14 +352,9 @@ def translateXLink(node, arcs, locators, params):
                 str_arcrole = shortRoleName(arc['role'], 1, params)
                 str_object = getTurtleName(toloc, base, ns)
 
-                output.write(turtlename(base, "link"+str(params['linkNumber']), ns)+"\n")
+                link_def = ''
 
-                output.write("    xl:type "+str(str_arcrole)+" ;\n")
-
-                # role = toloc.get('role', None)
-                # if role:
-                #     role = shortRoleName(role, 0, params)
-                #     output.write("    xlink:role "+role+";\n")
+                link_def += "    xl:type "+str(str_arcrole)+" ;\n"
 
                 # xlink_id = toloc.get('id', None)
                 # if xlink_id is not None:
@@ -365,29 +362,35 @@ def translateXLink(node, arcs, locators, params):
 
                 arc_use = arc.get('use', None)
                 if arc_use:
-                    output.write('    xl:use "prohibited" ;\n')
+                    link_def += '    xl:use "prohibited" ;\n'
 
                 arc_priority = arc.get('priority', None)
                 if arc_priority:
-                    output.write('    xl:priority "'+ str(arc_priority) + '"^^xsd:integer ;\n')
+                    link_def += '    xl:priority "'+ str(arc_priority) + '"^^xsd:integer ;\n'
 
                 arc_order = arc.get('order', None)
                 if arc_order:
-                    output.write('    xl:order "'+arc_order+'"^^xsd:decimal ;\n')
+                    link_def += '    xl:order "'+arc_order+'"^^xsd:decimal ;\n'
 
                 arc_weight = arc.get('weight', None)
                 if arc_weight:
-                    output.write('    xl:weight "'+arc_weight+'"^^xsd:decimal ;\n')
+                    link_def += '    xl:weight "'+arc_weight+'"^^xsd:decimal ;\n'
 
-                output.write('    xl:from '+str_subject+' ;\n')
-                output.write('    xl:to '+str_object+' ;\n    .\n')
+                link_def += '    xl:from '+str_subject+' ;\n'
+                link_def += '    xl:to '+str_object+' ;\n'
+
+                if link_def.lower() not in params['defined_links']:
+                    output.write(turtlename(base, "link"+str(params['linkNumber']), ns)+"\n")
+                    output.write(link_def)
+                    output.write('    .\n')
+                    params['defined_links'].append(link_def.lower())
 
     return params
 
 def turtlename(base, name, ns):
 
     if 'http' in base:
-        return '<'+base+":"+name+">"
+        return '<'+base+"/"+name+">"
     else:
         return base+":"+name
 

@@ -74,6 +74,12 @@ def processElements(node, base, targetNs, params):
                 output.write('    xbrli:periodType "'+child_periodType+'" ;\n')
 
             output.write('    .\n')
+
+            # if child_id is not None:
+            #     output.write(turtlename(base, child_id, ns)+'\n')
+            #     output.write('    rdf:id '+ turtlename(base, child_name, ns)+" ;\n")
+            #     output.write('    .\n')
+
             # if child_balance is not None:
             #     output.write(';\n    xbrli:balance "'+child_balance+ '"')
 
@@ -82,6 +88,6 @@ def processElements(node, base, targetNs, params):
 def turtlename(base, name, ns):
 
     if 'http' in base:
-        return '<'+base+":"+name+">"
+        return '<'+base+"/"+name+">"
     else:
         return base+":"+name
