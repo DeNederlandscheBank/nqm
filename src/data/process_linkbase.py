@@ -125,6 +125,14 @@ def processExtendedLink(node, params):
         child_type = child.attrib['{http://www.w3.org/1999/xlink}type']
         if child_type == 'locator':
 
+            for key in child.attrib:
+                if key not in ['{http://www.w3.org/1999/xlink}href',
+                               '{http://www.w3.org/1999/xlink}type',
+                               '{http://www.w3.org/1999/xlink}role',
+                               '{http://www.w3.org/1999/xlink}title',
+                               '{http://www.w3.org/1999/xlink}label']:
+                    print("Unknown locator attribute: " + str(key))
+
             locator = {'href': child.attrib.get('{http://www.w3.org/1999/xlink}href', None),
                        'role': child.attrib.get('{http://www.w3.org/1999/xlink}role', None),
                        'title': child.attrib.get('{http://www.w3.org/1999/xlink}title', None),
@@ -132,49 +140,84 @@ def processExtendedLink(node, params):
 
             xlink['locators'].append(locator)
 
-            # if xlink->loc:
-            #     xlink->lastLoc->next = loc;
-            # else
-            #     xlink->loc = loc;
-
-            # xlink->lastLoc = loc;
-
         elif child_type == 'resource':
+
+            for key in child.attrib:
+                if key not in ['{http://www.w3.org/XML/1998/namespace}lang',
+                               '{http://www.w3.org/1999/xlink}role',
+                               '{http://www.w3.org/1999/xlink}title',
+                               '{http://www.w3.org/1999/xlink}label',
+                               '{http://www.w3.org/1999/xlink}type',
+                               'name',
+                               'output',
+                               'fallbackValue',
+                               'bindAsSequence',
+                               'id',
+                               'aspectModel',
+                               'test',
+                               'implicitFiltering',
+                               'parentChildOrder',
+                               'abstract',
+                               'merge',
+                               'select',
+                               'as',
+                               'variable',
+                               'dimension',
+                               'matchAny']:
+                    print("Unknown resource attribute: " + str(key))
 
             resource = {'node': child,
                         'lang': child.attrib.get('{http://www.w3.org/XML/1998/namespace}lang', None),
                         'role': child.attrib.get('{http://www.w3.org/1999/xlink}role', None),
                         'title': child.attrib.get('{http://www.w3.org/1999/xlink}title', None),
-                        'label': child.attrib.get('{http://www.w3.org/1999/xlink}label', None),
-                        'type': child.attrib.get('{http://www.w3.org/1999/xlink}type', None)}
+                        'label': child.attrib.get('{http://www.w3.org/1999/xlink}label', None)}
+
+            for key in ['name', 'output', 'fallbackValue', 'bindAsSequence','id',
+                        'aspectModel', 'test', 'implicitFiltering','parentChildOrder',
+                        'abstract', 'merge', 'select', 'as', 'variable', 'dimension', 'matchAny']:
+                value = child.attrib.get(key, None)
+                if value is not None:
+                    resource[key] = value
 
             xlink['locators'].append(resource)
 
         elif child_type == "arc":
 
+            for key in child.attrib:
+                if key not in ['{http://www.w3.org/1999/xlink}from',
+                               '{http://www.w3.org/1999/xlink}to',
+                               '{http://www.w3.org/1999/xlink}arcrole',
+                               '{http://www.w3.org/1999/xlink}title',
+                               '{http://www.w3.org/1999/xlink}type',
+                               '{http://xbrl.org/2005/xbrldt}contextElement',
+                               '{http://xbrl.org/2005/xbrldt}closed',
+                               '{http://xbrl.org/2005/xbrldt}targetRole',
+                               '{http://xbrl.org/2005/xbrldt}usable',
+                               'order', 
+                               'use', 
+                               'priority', 
+                               'weight',
+                               'name',
+                               'cover',
+                               'complement',
+                               'axis']:
+                    print("Unknown arc attribute: " + str(key))
+
             arc = {'fromlabel': child.attrib.get('{http://www.w3.org/1999/xlink}from', None),
                    'tolabel': child.attrib.get('{http://www.w3.org/1999/xlink}to', None),
                    'role': child.attrib.get('{http://www.w3.org/1999/xlink}arcrole', None),
+                   'type': child.attrib.get('{http://www.w3.org/1999/xlink}type', None),
                    'title': child.attrib.get('{http://www.w3.org/1999/xlink}title', None),
                    'contextElement': child.attrib.get("{http://xbrl.org/2005/xbrldt}contextElement", None),
-                   'closed': child.attrib.get("{http://xbrl.org/2005/xbrldt}closed", None)}
+                   'closed': child.attrib.get("{http://xbrl.org/2005/xbrldt}closed", None),
+                   'usable': child.attrib.get("{http://xbrl.org/2005/xbrldt}usable", None),
+                   'targetRole': child.attrib.get('{http://xbrl.org/2005/xbrldt}targetRole', None)
+                   }
 
-            order = child.attrib.get("order", None)
-            if order is not None:
-                arc['order'] = order
-
-            use = child.attrib.get('use', None)
-            if use is not None:
-                arc['use'] = use
-            # arc->use = (use && samestring(use, "prohibited") ? 1 : 0);
-
-            priority = child.attrib.get('priority', None)
-            if priority is not None:
-                arc['priority'] = priority
-
-            weight = child.attrib.get("weight", None)
-            if weight is not None:
-                arc['weight'] = weight
+            for key in ['order', 'use', 'priority', 'weight', 'name', 'cover', 'complement', 'axis']:
+                value = child.attrib.get(key, None)
+                if value is not None:
+                    arc[key] = value
 
             xlink['arcs'].append(arc)
 
@@ -234,6 +277,13 @@ def translateResources(node, locators, params):
 
                 output.write(name+"\n")
 
+                for key in ['name', 'output', 'fallbackValue', 'bindAsSequence','id',
+                            'aspectModel', 'test', 'implicitFiltering','parentChildOrder',
+                            'abstract', 'merge', 'select', 'as', 'variable', 'dimension', 'matchAny']:
+                    value = locator.get(key, None)
+                    if value is not None:
+                        output.write('    xl:'+key+' "'+value+'" ;\n')
+
                 role = locator.get('role', None)
                 if role:
                     role = shortRoleName(role, 0, params)
@@ -243,11 +293,6 @@ def translateResources(node, locators, params):
                 if title:
                     title = shortRoleName(title, 0, params)
                     output.write("    xlink:title "+title+" ;\n")
-
-                l_type = locator.get('type', None)
-                if l_type:
-                    l_type = shortRoleName(l_type, 0, params)
-                    output.write("    xlink:type "+l_type+" ;\n")
 
                 lang = locator.get('lang', None)
                 if (lang):
@@ -356,19 +401,48 @@ def translateXLink(node, arcs, locators, params):
 
                 link_def = ''
 
-                link_def += "    xl:type "+str(str_arcrole)+" ;\n"
+                link_def += "    xlink:role "+str(str_arcrole)+" ;\n"
 
                 # xlink_id = toloc.get('id', None)
                 # if xlink_id is not None:
                 #     output.write("    xlink:id "+xlink_id+";\n")
 
+                # type not included
+                # arc_type = arc.get('type', None)
+                # if arc_type:
+                #     link_def += '    xl:type "'+arc_type+'" ;\n'
+
                 arc_contextElement = arc.get('contextElement', None)
                 if arc_contextElement:
                     link_def += '    xbrldt:contextElement "'+arc_contextElement+'" ;\n'
 
+                arc_targetRole = arc.get('targetRole', None)
+                if arc_targetRole:
+                    link_def += '    xbrldt:targetRole "'+arc_targetRole+'" ;\n'
+
                 arc_closed = arc.get('closed', None)
                 if arc_closed:
                     link_def += '    xbrldt:closed "'+arc_closed+'" ;\n'
+
+                arc_usable = arc.get('usable', None)
+                if arc_usable:
+                    link_def += '    xbrldt:usable "'+arc_usable+'" ;\n'
+
+                arc_cover = arc.get('cover', None)
+                if arc_cover:
+                    link_def += '    xl:cover "'+arc_cover+'" ;\n'
+
+                arc_axis = arc.get('axis', None)
+                if arc_axis:
+                    link_def += '    xl:axis "'+arc_axis+'" ;\n'
+
+                arc_complement = arc.get('complement', None)
+                if arc_complement:
+                    link_def += '    xl:complement "'+arc_complement+'" ;\n'
+
+                arc_name = arc.get('name', None)
+                if arc_name:
+                    link_def += '    xl:name "'+arc_name+'" ;\n'
 
                 arc_use = arc.get('use', None)
                 if arc_use:
