@@ -155,7 +155,9 @@ def processExtendedLink(node, params):
             arc = {'fromlabel': child.attrib.get('{http://www.w3.org/1999/xlink}from', None),
                    'tolabel': child.attrib.get('{http://www.w3.org/1999/xlink}to', None),
                    'role': child.attrib.get('{http://www.w3.org/1999/xlink}arcrole', None),
-                   'title': child.attrib.get('{http://www.w3.org/1999/xlink}title', None)}
+                   'title': child.attrib.get('{http://www.w3.org/1999/xlink}title', None),
+                   'contextElement': child.attrib.get("{http://xbrl.org/2005/xbrldt}contextElement", None),
+                   'closed': child.attrib.get("{http://xbrl.org/2005/xbrldt}closed", None)}
 
             order = child.attrib.get("order", None)
             if order is not None:
@@ -359,6 +361,14 @@ def translateXLink(node, arcs, locators, params):
                 # xlink_id = toloc.get('id', None)
                 # if xlink_id is not None:
                 #     output.write("    xlink:id "+xlink_id+";\n")
+
+                arc_contextElement = arc.get('contextElement', None)
+                if arc_contextElement:
+                    link_def += '    xbrldt:contextElement "'+arc_contextElement+'" ;\n'
+
+                arc_closed = arc.get('closed', None)
+                if arc_closed:
+                    link_def += '    xbrldt:closed "'+arc_closed+'" ;\n'
 
                 arc_use = arc.get('use', None)
                 if arc_use:
