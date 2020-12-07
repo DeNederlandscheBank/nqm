@@ -16,3 +16,4 @@ ontospy
 pandas
 neo4j
 OpenNMT-py==2.0.0rc1
+tqdm
