@@ -67,10 +67,10 @@ At the root:
 ### Pipeline for preparing data and running model
 
 Open your git bash:
-    
+
     cd src/
-    
-    ./pipeline.sh
+
+    pipeline.bat
 
 
 
@@ -78,13 +78,11 @@ Open your git bash:
 
 In your bash:
 
-    cd models/
-
     onmt_translate -model ../../models/model_step_10000.pt -src ../../data/processed/test_en.txt -output ../../data/processed/test_sparql_model.txt
 
 
 Note that onmt_translate is written as:
-   
+
     onmt_translate -model path_to_saved_model/model -src path_to_input_text/text -output path_to_output/file
 
 

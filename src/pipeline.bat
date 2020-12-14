@@ -1,6 +1,6 @@
 echo "Making directories..."
-mkdir ../data/interim
-mkdir ../data/processed
+mkdir ..\data\interim
+mkdir ..\data\processed
 
 echo 'Putting the annotations_monument.csv in the interim folder...'
 copy "..\data\external\annotations_monument.csv" "..\data\interim"
