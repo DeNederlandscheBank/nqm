@@ -64,6 +64,15 @@ At the root:
     pip install -r requirements.txt
 
 
+### Change the build_vocap.py file
+
+We need to change the build_vocab.py file to get it working. In order to do that you have to change that file in the location that pip stored it in. This will probably be somewhere in anaconda3\envs\your_env_name\lib\site-packages\onmt\bin\build_vocab.py. You can however also run the bat file below and use this to find the file (it will show in the error). Here you have to change line 46 to:
+
+     with open(save_path, "w",  encoding="utf-8") as fo:
+
+
+
+
 ### Pipeline for preparing data and running model
 
 Open your git bash:
