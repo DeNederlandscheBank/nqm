@@ -464,7 +464,7 @@ def translateXLink(node, arcs, locators, params):
                 link_def += '    xl:to '+str_object.lower()+' ;\n'
 
                 if link_def.lower() not in params['defined_links']:
-                    output.write(turtlename(base, "link"+str(params['linkNumber']), ns)+"\n")
+                    output.write(turtlename(base, "link"+str(params['linkNumber']), ns).lower()+"\n")
                     output.write(link_def)
                     output.write('    .\n')
                     params['defined_links'].append(link_def.lower())

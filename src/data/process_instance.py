@@ -43,7 +43,10 @@ def getContext(context, params):
                 if namespace == params['namespaces'][key]:
                     namespace = key
             name = etree.QName(child).localname
-            xml += '        '+str(namespace)+':'+name+' "'+str(child.text)+'"^^rdf:XMLLiteral ;\n'
+            if child.text is not None:
+                xml += '        '+str(namespace)+':'+name+' '+str(child.text).lower()+' ;\n'
+            else:
+                xml += '        '+str(namespace)+':'+name+' "'+str(child.text).lower()+'" ;\n'
         output.write('    xbrll:hasScenario [\n'+xml+'        ] ;\n')
 
     # every context element has one period element
@@ -220,7 +223,10 @@ def processInstance(root, base, namespaces):
 
     params['output'].write('# the namespaces\n')
     for namespace in namespaces.keys():
-        params['output'].write("@prefix "+namespace+": <"+namespaces[namespace]+">.\n")
+        if "#" in namespaces[namespace]:
+            params['output'].write("@prefix "+namespace.lower()+": <"+namespaces[namespace].lower()+">.\n")
+        else:
+            params['output'].write("@prefix "+namespace.lower()+": <"+namespaces[namespace].lower()+"/>.\n")
     params['output'].write('\n\n')
 
     params = genReport(params)
