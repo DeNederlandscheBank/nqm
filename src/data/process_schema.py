@@ -62,13 +62,13 @@ def processElements(node, base, targetNs, params):
             child_periodType = child.attrib.get('{http://www.xbrl.org/2003/instance}periodType', None)
             child_balance = child.attrib.get('balance', None)
 
-            output.write(turtlename(base, child_name, ns)+"\n")
+            output.write(turtlename(base, child_name, ns).lower()+"\n")
 
             if child_type is not None:
-                output.write("    rdf:type "+child_type+" ;\n")
+                output.write("    rdf:type "+child_type.lower()+" ;\n")
 
             if child_id is not None:
-                output.write('    rdf:id '+turtlename(base, child_id, ns)+' ;\n')
+                output.write('    rdf:id '+turtlename(base, child_id, ns).lower()+' ;\n')
 
             if child_periodType is not None:
                 output.write('    xbrli:periodType "'+child_periodType+'" ;\n')

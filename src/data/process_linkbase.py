@@ -275,7 +275,7 @@ def translateResources(node, locators, params):
                     output.write("# base: "+str(base)+"\n\n")
                     header_printed = True
 
-                output.write(name+"\n")
+                output.write(name.lower()+"\n")
 
                 for key in ['name', 'output', 'fallbackValue', 'bindAsSequence','id',
                             'aspectModel', 'test', 'implicitFiltering','parentChildOrder',
@@ -341,7 +341,7 @@ def translateLocators(node, locators, params):
                     output.write("# base: "+str(base)+"\n\n")
                     header_printed = True
 
-                output.write(name+"\n")
+                output.write(name.lower()+"\n")
                 output.write('    xl:type xbrll:locator ;\n')
 
                 role = locator.get('role', None)
@@ -367,7 +367,7 @@ def translateLocators(node, locators, params):
                     short = href.split("#")[1]
                 # if '_' in short:
                 #     short = short.split("_")[1]
-                output.write('    rdf:id '+turtlename(base, short, ns)+";\n    .\n")
+                output.write('    rdf:id '+turtlename(base, short, ns).lower()+";\n    .\n")
 
                 params['defined_locators'].append(name.lower())
 
@@ -460,8 +460,8 @@ def translateXLink(node, arcs, locators, params):
                 if arc_weight:
                     link_def += '    xl:weight "'+arc_weight+'"^^xsd:decimal ;\n'
 
-                link_def += '    xl:from '+str_subject+' ;\n'
-                link_def += '    xl:to '+str_object+' ;\n'
+                link_def += '    xl:from '+str_subject.lower()+' ;\n'
+                link_def += '    xl:to '+str_object.lower()+' ;\n'
 
                 if link_def.lower() not in params['defined_links']:
                     output.write(turtlename(base, "link"+str(params['linkNumber']), ns)+"\n")
