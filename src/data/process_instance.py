@@ -43,10 +43,24 @@ def getContext(context, params):
                 if namespace == params['namespaces'][key]:
                     namespace = key
             name = etree.QName(child).localname
-            if child.text is not None:
-                xml += '        '+str(namespace)+':'+name+' '+str(child.text).lower()+' ;\n'
+            # a scenario may have a typed member with a dimension and a single child element
+            if name == 'typedMember':                
+                child_child = child.getchildren()[0]
+                child_child_namespace = etree.QName(child_child).namespace
+                for key in params['namespaces']:
+                    if child_child_namespace == params['namespaces'][key]:
+                        child_child_namespace = key
+                xml += '        xbrll:hasTypedMember [\n            xbrll:hasDimension {} ;\n            {}:{} "{}" ;\n            ] ;\n'.format(
+                    child.values()[0], 
+                    child_child_namespace,
+                    etree.QName(child_child).localname,
+                    str(child_child.text).replace('"',"'").lower()
+                )
+                
+            elif child.text is not None:
+                xml += '        '+str(namespace)+':'+name+' '+str(child.text).replace('"',"'").lower()+' ;\n'
             else:
-                xml += '        '+str(namespace)+':'+name+' "'+str(child.text).lower()+'" ;\n'
+                xml += '        '+str(namespace)+':'+name+' "'+str(child.text).replace('"',"'").lower()+'" ;\n'
         output.write('    xbrll:hasScenario [\n'+xml+'        ] ;\n')
 
     # every context element has one period element
@@ -191,10 +205,10 @@ def getFact(fact, params):
             if count >= 1:
                 xml = ''
                 for child in fact:
-                    xml += etree.tostring(child)
+                    xml += etree.tostring(child).replace('"',"'") # use single quotation mark if string has quotation marks
                 output.write('    xbrll:Resource """'+xml+'"""^^rdf:XMLLiteral.\n')
             else:
-                content = fact.text
+                content = fact.text.replace('"',"'")
                 lang = fact.attrib.get("lang", None)
                 if lang is not None:
                     output.write('    xbrll:Resource """'+content+'"""@'+lang+' ;\n')
