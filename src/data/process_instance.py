@@ -31,7 +31,7 @@ def getContext(context, params):
     #     output.write('        xbrli:scheme <'+scheme+'>;\n        ];\n')
     # alternative 2
     segment = getContextNode(context, "segment")
-    output.write('    xbrll:Entity <'+scheme+':'+ identifier.text+'> ;\n')
+    output.write('    gleif-l1:LEI "'+identifier.text+'" ;\n')
 
     # each context may have one scenario element
     scenario = getContextNode(context, "scenario")
