@@ -9,31 +9,30 @@ def processSchema(element, params):
     # output contains the ttl output
     if 'output' not in params.keys():
         params['output'] = StringIO()
+
+    # log is for info, warnings and errors
     if 'log' not in params.keys():
         params['log'] = StringIO()
+    params['log'].write("processing schema   "+base+"\n")
     
     ns = params['namespaces']
 
     base = params['base']
     base = base.replace("eu/eu", "eu") # strange difference between actual location and uri
     base = base.replace("nl/fr/", "") # strange difference between actual location and uri
+
     params['abs_base'] = params['base']
     for key in ns:
         if base.lower() == ns[key].lower():
             base = key
     params['base'] = base
  
-    params['log'].write("processing schema   "+base+"\n")
-
     targetNs = element.attrib.get("targetNamespace")
-
-    if targetNs in ["http://www.xbrl.org/2003/instance",
-                    "http://xbrl.org/2005/xbrldt",
-                    "http://www.xbrl.org/2003/XLink", 
-                    "http://xbrl.org/2008/variable",
-                    "http://www.xbrl.org/2003/linkbase"]:
-        return params
-    else:
+    if targetNs not in ["http://www.xbrl.org/2003/instance",
+                        "http://xbrl.org/2005/xbrldt",
+                        "http://www.xbrl.org/2003/XLink", 
+                        "http://xbrl.org/2008/variable",
+                        "http://www.xbrl.org/2003/linkbase"]:
         processElements(element, base, targetNs, params)
 
     return params
@@ -54,34 +53,34 @@ def processElements(node, base, targetNs, params):
             output.write("# base: "+str(base)+"\n\n")
             header_printed = True
 
-        if (child.tag == '{http://www.w3.org/2001/XMLSchema}element'):
+        if child.tag=='{http://www.w3.org/2001/XMLSchema}element':
 
             child_name = child.attrib.get('name', None)
-            child_id = child.attrib.get('id', None)
-            child_type = child.attrib.get('type', None)
-            child_periodType = child.attrib.get('{http://www.xbrl.org/2003/instance}periodType', None)
-            child_balance = child.attrib.get('balance', None)
-
             output.write(turtlename(base, child_name, ns).lower()+"\n")
 
+            child_type = child.attrib.get('type', None)
             if child_type is not None:
-                output.write("    rdf:type "+child_type.lower()+" ;\n")
+                if child_type in ['string', 'anyType', 'anyURI', 'xhtml.html.type',
+                                  'listener.type', 'action.type', 'script.type',
+                                  'dispatchEvent.type', 'addEventListener.type',
+                                  'removeEventListener.type', 'stopPropagation.type']:
+                    child_type = "xbrll:"+ child_type
 
+                output.write("    rdf:type "+child_type+" ;\n")
+
+            child_id = child.attrib.get('id', None)
             if child_id is not None:
                 output.write('    rdf:id '+turtlename(base, child_id, ns).lower()+' ;\n')
 
+            child_periodType = child.attrib.get('{http://www.xbrl.org/2003/instance}periodType', None)
             if child_periodType is not None:
-                output.write('    xbrli:periodType "'+child_periodType+'" ;\n')
+                output.write('    xbrll:periodType "'+child_periodType+'" ;\n')
+
+            child_balance = child.attrib.get('balance', None)
+            if child_periodType is not None:
+                output.write('    xbrll:Balance "'+child_balance+'" ;\n')
 
             output.write('    .\n')
-
-            # if child_id is not None:
-            #     output.write(turtlename(base, child_id, ns)+'\n')
-            #     output.write('    rdf:id '+ turtlename(base, child_name, ns)+" ;\n")
-            #     output.write('    .\n')
-
-            # if child_balance is not None:
-            #     output.write(';\n    xbrli:balance "'+child_balance+ '"')
 
     return params
 

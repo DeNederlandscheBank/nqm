@@ -11,13 +11,13 @@ def processLinkBase(element, params):
         params['output'] = StringIO()
     if 'log' not in params.keys():
         params['log'] = StringIO()
-    # locators is the list of locators already defined
+    # locators is the set of locators already defined
     if 'defined_locators' not in params.keys():
-        params['defined_locators'] = list()
+        params['defined_locators'] = set()
     if 'defined_resources' not in params.keys():
-        params['defined_resources'] = list()
+        params['defined_resources'] = set()
     if 'defined_links' not in params.keys():
-        params['defined_links'] = list()
+        params['defined_links'] = set()
     
     ns = params['namespaces']
 
@@ -31,9 +31,7 @@ def processLinkBase(element, params):
     params['base'] = base
  
     params['log'].write("checking linkbase   "+base+"\n")
-
     for node in element:
-
         node_type = node.attrib.get('{http://www.w3.org/1999/xlink}type', None)
         if node_type == 'extended':
             params = checkExtendedLink(node, params)
@@ -41,11 +39,8 @@ def processLinkBase(element, params):
             params = checkSimpleLink(node, params)
 
     params['log'].write("processing linkbase "+base+"\n")
-
     for node in element:
-
         node_type = node.attrib.get('{http://www.w3.org/1999/xlink}type', None)
-
         if node_type == "extended":
             params = processExtendedLink(node, params)
         elif node_type == "simple":
@@ -163,7 +158,10 @@ def processExtendedLink(node, params):
                                'as',
                                'variable',
                                'dimension',
-                               'matchAny']:
+                               'matchAny',
+                               'matches',
+                               'strict',
+                               'scheme']:
                     print("Unknown resource attribute: " + str(key))
 
             resource = {'node': child,
@@ -174,7 +172,8 @@ def processExtendedLink(node, params):
 
             for key in ['name', 'output', 'fallbackValue', 'bindAsSequence','id',
                         'aspectModel', 'test', 'implicitFiltering','parentChildOrder',
-                        'abstract', 'merge', 'select', 'as', 'variable', 'dimension', 'matchAny']:
+                        'abstract', 'merge', 'select', 'as', 'variable', 'dimension', 
+                        'matchAny', 'matches', 'strict', 'scheme']:
                 value = child.attrib.get(key, None)
                 if value is not None:
                     resource[key] = value
@@ -279,10 +278,12 @@ def translateResources(node, locators, params):
 
                 for key in ['name', 'output', 'fallbackValue', 'bindAsSequence','id',
                             'aspectModel', 'test', 'implicitFiltering','parentChildOrder',
-                            'abstract', 'merge', 'select', 'as', 'variable', 'dimension', 'matchAny']:
+                            'abstract', 'merge', 'select', 'as', 'variable', 'dimension', 
+                            'matchAny', 'matches', 'strict', 'scheme']:
                     value = locator.get(key, None)
                     if value is not None:
-                        output.write('    xl:'+key+' "'+value+'" ;\n')
+                        value = value.replace("\\", "\\\\")
+                        output.write('    xl:'+key+' """'+value+'"""^^rdf:XMLLiteral ;\n')
 
                 role = locator.get('role', None)
                 if role:
@@ -313,7 +314,7 @@ def translateResources(node, locators, params):
                     else:
                         output.write('    rdf:value """'+str(content)+'""" ;\n    .\n')
 
-                params['defined_resources'].append(name.lower())
+                params['defined_resources'].add(name.lower())
 
 def translateLocators(node, locators, params):
 
@@ -369,7 +370,7 @@ def translateLocators(node, locators, params):
                 #     short = short.split("_")[1]
                 output.write('    rdf:id '+turtlename(base, short, ns).lower()+";\n    .\n")
 
-                params['defined_locators'].append(name.lower())
+                params['defined_locators'].add(name.lower())
 
 def translateXLink(node, arcs, locators, params):
 
@@ -463,11 +464,11 @@ def translateXLink(node, arcs, locators, params):
                 link_def += '    xl:from '+str_subject.lower()+' ;\n'
                 link_def += '    xl:to '+str_object.lower()+' ;\n'
 
-                if link_def.lower() not in params['defined_links']:
-                    output.write(turtlename(base, "link"+str(params['linkNumber']), ns).lower()+"\n")
-                    output.write(link_def)
-                    output.write('    .\n')
-                    params['defined_links'].append(link_def.lower())
+                # if link_def.lower() not in params['defined_links']:
+                output.write(turtlename(base, "link"+str(params['linkNumber']), ns).lower()+"\n")
+                output.write(link_def)
+                output.write('    .\n')
+                    # params['defined_links'].add(link_def.lower())
 
     return params
 

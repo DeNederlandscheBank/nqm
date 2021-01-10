@@ -75,10 +75,13 @@ target/
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
 
-# exclude data except external data
-/data/raw/
-/data/processed/
-/data/interim/
+# exclude data
+/data/external/
+/data/nqm/raw/
+/data/nqm/processed/
+/data/nqm/interim/
+/data/nqm/dictionares/
+/data/rdf/
 
 # Mac OS-specific storage files
 .DS_Store

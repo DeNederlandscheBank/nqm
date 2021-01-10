@@ -71,9 +71,9 @@ if __name__ == '__main__':
                 train_sparql_lines.append(sparql_line)
                 train_en_lines.append(en_line)
 
-        with io.open('data/processed/train_sparql.txt', 'w', encoding="utf-8") as train_sparql, io.open('data/processed/train_en.txt', 'w', encoding="utf-8") as train_en, \
-                io.open('data/processed/dev_sparql.txt', 'w', encoding="utf-8") as dev_sparql, io.open('data/processed/dev_en.txt', 'w', encoding="utf-8") as dev_en, \
-                io.open('data/processed/test_sparql.txt', 'w', encoding="utf-8") as test_sparql, io.open('data/processed/test_en.txt', 'w', encoding="utf-8") as test_en:
+        with io.open('data/nqm/processed/train_sparql.txt', 'w', encoding="utf-8") as train_sparql, io.open('data/nqm/processed/train_en.txt', 'w', encoding="utf-8") as train_en, \
+                io.open('data/nqm/processed/dev_sparql.txt', 'w', encoding="utf-8") as dev_sparql, io.open('data/nqm/processed/dev_en.txt', 'w', encoding="utf-8") as dev_en, \
+                io.open('data/nqm/processed/test_sparql.txt', 'w', encoding="utf-8") as test_sparql, io.open('data/nqm/processed/test_en.txt', 'w', encoding="utf-8") as test_en:
 
             train_sparql.writelines(train_sparql_lines)
             train_en.writelines(train_en_lines)

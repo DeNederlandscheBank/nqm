@@ -1,18 +1,18 @@
 ## Where the samples will be written
-save_data: ../../data/dictionaries/processed
+save_data: ../../data/nqm/dictionaries/processed
 ## Where the vocab(s) will be written
-src_vocab: ../../data/dictionaries/processed.vocab.src
-tgt_vocab: ../../data/dictionaries/processed.vocab.tgt
+src_vocab: ../../data/nqm/dictionaries/processed.vocab.src
+tgt_vocab: ../../data/nqm/dictionaries/processed.vocab.tgt
 
 
 # Corpus opts:
 data:
     corpus_1:
-        path_src: ../../data/processed/train_en_shuff.txt
-        path_tgt: ../../data/processed/train_sparql_shuf.txt
+        path_src: ../../data/nqm/processed/train_en_shuff.txt
+        path_tgt: ../../data/nqm/processed/train_sparql_shuf.txt
     valid:
-        path_src: ../../data/processed/dev_en.txt
-        path_tgt: ../../data/processed/dev_sparql.txt
+        path_src: ../../data/nqm/processed/dev_en.txt
+        path_tgt: ../../data/nqm/processed/dev_sparql.txt
 
 
 
