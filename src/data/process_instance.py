@@ -5,32 +5,33 @@ from collections import defaultdict
 def genReport(params):
     params['report'] = "_:report1"
     params['output'].write(params['report']+"\n")
-    params['output'].write('    rdf:type xbrll:Report;\n')
+    params['output'].write('    xl:type xbrll:Report;\n')
     params['output'].write('    xbrll:file "'+params['base']+'".\n')
     return params
 
 def getContext(context, params):
     output = params['output']
-
     output.write("_:context_"+context.attrib['id']+"\n")
-    output.write('    rdf:type xbrll:Context ;\n')
+    output.write('    xl:type xbrll:Context ;\n')
 
     # every context element has one entity element
     # and that must have an identifier and scheme
+    # entity element has optional segment
     identifier = context[0][0]
     scheme = identifier.attrib["scheme"]
-    if scheme == "http://standards.iso.org/iso/17442": # we have a lei-code
-        output.write('    xbrll:Entity [\n')
-        output.write('        gleif-l1:LEI "'+identifier.text+'";\n        ] ;\n')
-    else:
-        output.write('    xbrll:Entity [\n')
-        output.write('        xbrli:identifier "'+identifier.text+'" ;\n')
-        output.write('        xbrli:scheme <'+scheme+'> ;\n        ] ;\n')
-
-    # entity element has optional segment
+    # if scheme == "http://standards.iso.org/iso/17442": # we have a lei-code, so map to dnb namespace
+    #     output.write('    xbrli:entity <dnb:entity:lei-code:'+identifier.text+'>;\n')
+    # else:        
+    #     output.write('    xbrli:entity [\n')
+    #     segment = getContextNode(context, "segment")
+    #     if segment is not None:
+    #         xml = segment[0]
+    #         output.write('        xbrli:segment """'+xml+'"""^^rdf:XMLLiteral;\n')
+    #     output.write('        xbrli:identifier "'+identifier.text+'";\n')
+    #     output.write('        xbrli:scheme <'+scheme+'>;\n        ];\n')
+    # alternative 2
     segment = getContextNode(context, "segment")
-    if segment is not None:
-        output.write('    xbrll:Segment """'+segment[0]+'"""^^rdf:XMLLiteral;\n')
+    output.write('    gleif-l1:LEI "'+identifier.text+'" ;\n')
 
     # each context may have one scenario element
     scenario = getContextNode(context, "scenario")
@@ -98,15 +99,15 @@ def getUnit(unit, params):
     if ((child is not None) and (etree.QName(child).localname == "measure")):
         measure = child.text
         if ":" in measure:
-            output.write('_:unit_'+unit_id+' xbrll:measure '+measure+'.\n')
+            output.write('_:unit_'+unit_id+' xbrli:measure '+measure+'.\n')
         else:
-            output.write('_:unit_'+unit_id+' xbrll:measure xbrll:'+measure+'.\n')
+            output.write('_:unit_'+unit_id+' xbrli:measure xbrli:'+measure+'.\n')
     elif etree.QName(child).localname == "divide":
         numerator = getNumerator(child)
         denominator = getDenominator(child)
         output.write('_:unit_'+unit_id+'\n')
-        output.write('    xbrll:numerator '+numerator+' ;\n')
-        output.write('    xbrll:denominator '+denominator+' ;\n    .\n')
+        output.write('    xbrli:numerator '+numerator+' ;\n')
+        output.write('    xbrli:denominator '+denominator+' ;\n    .\n')
     return params
 
 
@@ -143,7 +144,7 @@ def getSchemaRef(node, params):
 def genFactName(params):
     params['fact_count'] += 1
     params['output'].write("_:fact" +str(params['fact_count'])+"\n")
-    params['output'].write('    rdf:type xbrll:Fact ;\n')
+    params['output'].write('    xl:type xbrll:Fact ;\n')
     return params
 
 def getFact(fact, params):
@@ -168,10 +169,10 @@ def getFact(fact, params):
             params = getFact(child, params)
             child_fact_name.append('_:fact'+str(params['fact_count'])+"\n")
         params = genFactName(params)
-        output.write('    rdf:type xbrll:Tuple ;\n')
+        output.write('    xl:type xbrll:Tuple ;\n')
         output.write('    xbrll:fromReport '+report+' ;\n')
         output.write('    xbrll:hasDimension '+namespace+':'+name+' ;\n')
-        output.write('    xbrll:content (\n')
+        output.write('    xbrli:content (\n')
         for item in child_fact_name:
             output.write('        '+item+'\n')
         output.write('    ).\n')
@@ -237,9 +238,9 @@ def processInstance(root, base, namespaces):
     params['output'].write('# the namespaces\n')
     for namespace in namespaces.keys():
         if "#" in namespaces[namespace]:
-            params['output'].write("@prefix "+namespace.lower()+": <"+namespaces[namespace].lower()+">.\n")
+            params['output'].write("@prefix "+namespace.lower()+": <"+namespaces[namespace]+">.\n")
         else:
-            params['output'].write("@prefix "+namespace.lower()+": <"+namespaces[namespace].lower()+"/>.\n")
+            params['output'].write("@prefix "+namespace.lower()+": <"+namespaces[namespace]+"/>.\n")
     params['output'].write('\n\n')
 
     params = genReport(params)

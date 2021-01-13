@@ -13,20 +13,21 @@ def processSchema(element, params):
     # log is for info, warnings and errors
     if 'log' not in params.keys():
         params['log'] = StringIO()
-    params['log'].write("processing schema   "+base+"\n")
     
     ns = params['namespaces']
 
     base = params['base']
     base = base.replace("eu/eu", "eu") # strange difference between actual location and uri
-    base = base.replace("nl/fr/", "") # strange difference between actual location and uri
+    base = base.replace("nl/fr/", "") # strange difference between actual location and uri    base = base.replace("nl/fr/", "") # strange difference between actual location and uri
+
+    params['log'].write("processing schema   "+base+"\n")    
 
     params['abs_base'] = params['base']
     for key in ns:
         if base.lower() == ns[key].lower():
             base = key
     params['base'] = base
- 
+    
     targetNs = element.attrib.get("targetNamespace")
     if targetNs not in ["http://www.xbrl.org/2003/instance",
                         "http://xbrl.org/2005/xbrldt",
@@ -77,7 +78,7 @@ def processElements(node, base, targetNs, params):
                 output.write('    xbrll:periodType "'+child_periodType+'" ;\n')
 
             child_balance = child.attrib.get('balance', None)
-            if child_periodType is not None:
+            if child_balance is not None:
                 output.write('    xbrll:Balance "'+child_balance+'" ;\n')
 
             output.write('    .\n')
