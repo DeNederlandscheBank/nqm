@@ -21,4 +21,6 @@ onmt_build_vocab -config train_config.yaml
 echo 'Training model...'
 onmt_train -config train_config.yaml
 
+cd ..
+
 echo 'Done! Thank you for your patience'
