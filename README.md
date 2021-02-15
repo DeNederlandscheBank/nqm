@@ -72,6 +72,15 @@ We need to change the build_vocab.py file to get it working. In order to do that
 
 
 
+### Desired structure for template data
+
+The generator.py for the dictionaries expects the following structure for the template:
+
+    target_class; target_class; target_class; question; query; generator_query; id
+
+The target_class variables and Id are optional. In case no ID is given for a template, the line number will be taken as ID.
+
+The templates should be given in a .csv file with each line being a template.
 
 ### Pipeline for preparing data and running model
 
