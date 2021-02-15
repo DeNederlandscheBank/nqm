@@ -52,7 +52,7 @@ def query_dbpedia( query ):
     param["format"] = "JSON"
     param["CXML_redir_for_subjs"] = "121"
     param["CXML_redir_for_hrefs"] = ""
-    param["timeout"] = "600" 
+    param["timeout"] = "600"
     param["debug"] = "on"
     try:
         resp = urllib.request.urlopen(ENDPOINT + "?" + urllib.parse.urlencode(param))
@@ -168,26 +168,29 @@ def reverse_shorten_query( sparql ):
     sparql = re.sub(r'_obd_ ([\S]+)', 'order by desc (\\1)', sparql, flags=re.IGNORECASE)
     return sparql
 
-
+# (MG): read in template file, required structure noted in readme.md
 def read_template_file(file):
     annotations = list()
     line_number = 1
     with open(file) as f:
         for line in f:
             values = line[:-1].split(';')
-            target_classes = [values[0] or None, values[1] or None, values[2] or None]
+            target_classes = [values[0] or None, values[1] or None,\
+             values[2] or None] # (MG): "or None" keeps length of list flexible
             question = values[3]
             query = values[4]
             generator_query = values[5]
             id = values[6] if (len(values) >= 7 and values[6]) else line_number
             line_number += 1
-            annotation = Annotation(question, query, generator_query, id, target_classes)
+            annotation = Annotation(\
+            question, query, generator_query, id, target_classes)
             annotations.append(annotation)
     return annotations
 
-
+# (MG): save templates as annotation
 class Annotation:
-    def __init__(self, question, query, generator_query, id=None, target_classes=None):
+    def __init__(self, question, query, generator_query,\
+     id=None, target_classes=None):
         self.question = question
         self.query = query
         self.generator_query = generator_query
@@ -195,7 +198,7 @@ class Annotation:
         self.target_classes = target_classes if target_classes != None else []
         self.variables = extract_variables(generator_query)
 
-
+# (MG): find variables in query by checking for the variable "indicator" signs
 def extract_variables(query):
     variables = []
     query_form_pattern = r'^.*?where'
@@ -203,6 +206,7 @@ def extract_variables(query):
     if query_form_match:
         letter_pattern = r'\?(\w)'
         variables = re.findall(letter_pattern, query_form_match.group(0))
+    print(variables)
     return variables
 
 
