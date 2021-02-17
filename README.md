@@ -78,7 +78,7 @@ The generator.py for the dictionaries expects the following structure for the te
 
     target_class; target_class; target_class; question; query; generator_query; id
 
-The target_class variables and Id are optional. In case no ID is given for a template, the line number will be taken as ID.
+The target_class are treated to belong to one variable in the query(MG: not 100% sure about this yet). The target_class variables and Id are optional. In case no ID is given for a template, the line number will be taken as ID.
 
 The templates should be given in a .csv file with each line being a template.
 

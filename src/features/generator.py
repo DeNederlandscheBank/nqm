@@ -177,11 +177,20 @@ def build_dataset_pair(binding, template):
 
 
 def generate_dataset(templates, output_dir, file_mode):
+    """
+        Input: list of Annotation elements, output_directory, file_mode
+        Output: questions dataset, query dataset
+
+        This function will generate dataset from the given templates and
+        store it to the output directory.
+    """
     cache = dict()
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     it = 0
-    with io.open(output_dir + '/data_en.txt', file_mode, encoding="utf-8") as english_questions, io.open(output_dir + '/data_sparql.txt', file_mode, encoding="utf-8") as sparql_queries:
+    with io.open(output_dir + '/data_en.txt', file_mode, encoding="utf-8") \
+     as english_questions, io.open(output_dir + '/data_sparql.txt', file_mode,\
+     encoding="utf-8") as sparql_queries:
         for template in tqdm(templates):
             it = it + 1
             print("for {}th template".format(it))
@@ -235,6 +244,17 @@ def generate_dataset(templates, output_dir, file_mode):
 
 
 def get_results_of_generator_query(cache, template):
+    """
+    (MG): This function collects the results of the generator query. ???
+    First, the generator query is prepared using a cascaded approach going
+    from more adaptions to less adaptions.
+    If the query was treated before the results stored in the cache will
+    be taken.
+    Otherwise, the database is queried and it is checked whether the
+    desired anmount of examples was found. If yes, cache is appended and
+    else the next attempt is done referring to cascaded approach from
+    above.
+    """
     generator_query = getattr(template, 'generator_query')
     def first_attempt(template): return prepare_generator_query(template)
     def second_attempt(template): return prepare_generator_query(
@@ -242,8 +262,10 @@ def get_results_of_generator_query(cache, template):
     def third_attempt(template): return prepare_generator_query(
         template, add_type_requirements=False)
 
-    for attempt, prepare_query in enumerate([first_attempt, second_attempt, third_attempt], start=1):
-        query = prepare_query(template)
+    for attempt, prepare_query in enumerate([first_attempt, second_attempt,\
+     third_attempt], start=1):
+        query = prepare_query(template) # (MG): prepare_query is expression for
+        # for-loop; function executed is first_attempt(template) etc.
         if query in cache:
             results = cache[query]
             break
@@ -274,6 +296,20 @@ def add_requirement(query, where_replacement):
 
 
 def prepare_generator_query(template, add_type_requirements=True, do_special_class_replacement=True):
+    """
+    (MG): This function prepares the query for the generator. The "where"
+    element of the query is replaced by a more extensive string. This happens
+    irrespectively of the chosen function inputs and if the variable treated
+    has a type or not.
+    If the variable has a type (not None), then the target class is
+    normalized to belong to the knowledge base. This can be prevented by
+    setting add_type_requirements as FALSE. Inside this process, dependent on
+    whether the variable belongs to subclass or the target_class belongs to
+    a set of special classes different adaptions to the query are perfomed.
+    If variable is not a subclass and not a special class, then the general
+    class replacement is perfomed. This adaptions to the query aim to
+    specify the "where" keyword in a more detailed manner.
+    """
     generator_query = getattr(template, 'generator_query')
     target_classes = getattr(template, 'target_classes')
     variables = getattr(template, 'variables')
@@ -309,10 +345,12 @@ def normalize(ontology_class):
 
 
 if __name__ == '__main__':
-    # (MG): take in arguments for execution of generator
-    # (MG): continue: use to continue after exception happened
-    # (MG): templates (required): start file, templates for directionary
-    # (MG): output (required): output directory
+    """
+        (MG): take in arguments for execution of generator:
+        continue: use to continue after exception happened
+        templates (required): start file, templates for directionary
+        output (required): output directory
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument('--continue', dest='continue_generation',
                         action='store_true', help='Continue after exception')
@@ -362,7 +400,7 @@ if __name__ == '__main__':
     used_resources = collections.Counter(json.loads(open(
         resource_dump_file).read())) if use_resources_dump \
         else collections.Counter()
-    file_mode = 'a' if use_resources_dump else 'w'
+    file_mode = 'a' if use_resources_dump else 'w' # (MG): append vs write
     templates = read_template_file(template_file)
 
     try:

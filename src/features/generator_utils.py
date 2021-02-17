@@ -198,7 +198,9 @@ class Annotation:
         self.target_classes = target_classes if target_classes != None else []
         self.variables = extract_variables(generator_query)
 
-# (MG): find variables in query by checking for the variable "indicator" signs
+# (MG): find variables in query by checking for the variable pattern symbols
+# (MG): not sure how this pattern exactly works, but will have to trust the code
+# (MG): this however could give problem for own templates
 def extract_variables(query):
     variables = []
     query_form_pattern = r'^.*?where'
@@ -206,7 +208,6 @@ def extract_variables(query):
     if query_form_match:
         letter_pattern = r'\?(\w)'
         variables = re.findall(letter_pattern, query_form_match.group(0))
-    print(variables)
     return variables
 
 
