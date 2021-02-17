@@ -187,7 +187,7 @@ def read_template_file(file):
             annotations.append(annotation)
     return annotations
 
-# (MG): save templates as annotation
+# (MG): save templates as annotation object
 class Annotation:
     def __init__(self, question, query, generator_query,\
      id=None, target_classes=None):

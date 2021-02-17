@@ -50,6 +50,16 @@ EXAMPLES_PER_TEMPLATE = 600
 
 
 def extract_bindings(data, template):
+    """
+    (MG): This function extracts the "connection" between the template and the
+    concrete data returned by querying the database.
+    The number of matches is limited by a fixed constant. If there are more
+    examples than desired, the number of matches is capped by first sorting
+    the matches using sort_matches.
+    The function returns a list of the bindings. Each binding is a dictionary
+    containing for each variable the resource (i.e. object) and the label. With
+    this information the query/question can be constructed.
+    """
     matches = list()
     for match in data:
         matches.append(match)
@@ -82,6 +92,12 @@ def extract_bindings(data, template):
 
 
 def sort_matches(matches, template):
+    """
+    (MG): This function sorts the matches, in order to allow to keep the "best"
+    matches, if there are more matches than desired.
+    The sorting is done on basis of a priority measure and the frequency of
+    usage. If possible triple matches/double matches are preferred.
+    """
     variables = getattr(template, 'variables')
     def get_usages(match): return [
         used_resources[match[variable]["value"]] for variable in variables]
@@ -245,7 +261,7 @@ def generate_dataset(templates, output_dir, file_mode):
 
 def get_results_of_generator_query(cache, template):
     """
-    (MG): This function collects the results of the generator query. ???
+    (MG): This function collects the results of the generator query.
     First, the generator query is prepared using a cascaded approach going
     from more adaptions to less adaptions.
     If the query was treated before the results stored in the cache will
@@ -271,8 +287,8 @@ def get_results_of_generator_query(cache, template):
             break
         logging.debug('{}. attempt generator_query: {}'.format(attempt, query))
         results = query_dbpedia(query)
-        sufficient_examples = len(
-            results["results"]["bindings"]) >= EXAMPLES_PER_TEMPLATE/3
+        sufficient_examples = \
+            len(results["results"]["bindings"]) >= EXAMPLES_PER_TEMPLATE/3
         if sufficient_examples:
             cache[query] = results
             break
@@ -295,7 +311,8 @@ def add_requirement(query, where_replacement):
     return query.replace(" where { ", where_replacement)
 
 
-def prepare_generator_query(template, add_type_requirements=True, do_special_class_replacement=True):
+def prepare_generator_query(template, add_type_requirements=True,\
+ do_special_class_replacement=True):
     """
     (MG): This function prepares the query for the generator. The "where"
     element of the query is replaced by a more extensive string. This happens
@@ -319,6 +336,7 @@ def prepare_generator_query(template, add_type_requirements=True, do_special_cla
             generator_query, LABEL_REPLACEMENT.format(variable=variable))
         variable_has_a_type = len(target_classes) > i and target_classes[i]
         if variable_has_a_type and add_type_requirements:
+            # (MG): variable_has_a_type is not a real boolean
             normalized_target_class = normalize(target_classes[i])
             if variable_is_subclass(generator_query, variable):
                 generator_query = add_requirement(generator_query, SUBCLASS_REPLACEMENT.format(
@@ -373,8 +391,7 @@ if __name__ == '__main__':
    # (MG): Initiate logging file
     time = datetime.datetime.today()
     logging.basicConfig(
-        filename='{}/generator_{:%Y-%m-%d-%H-%M}.log'.format(output_dir, time),
-         level=logging.DEBUG)
+        filename='{}/generator_{:%Y-%m-%d-%H-%M}.log'.format(output_dir, time), level=logging.DEBUG)
 
     # (MG): Check whether there exitst already some resources to be used
     # (MG): from previous run probably
