@@ -8,6 +8,8 @@ https://arxiv.org/abs/1708.07624
 
 Version 1.0.0
 
+Docstrings and comments added by Jan-Marc Glowienke (MG)
+
 """
 import collections
 import http.client
@@ -46,6 +48,7 @@ def save_cache ( file, cache ):
         json.dump(ordered, outfile)
 
 def query_dbpedia( query ):
+    """ (MG): Extract information from database """
     param = dict()
     param["default-graph-uri"] = GRAPH
     param["query"] = query
@@ -131,6 +134,7 @@ def decode ( encoded_sparql ):
 
 
 def normalize_predicates( sparql ):
+    """ (MG): Ensure the use of the same keywords """
     for standard in STANDARDS:
         for alternative in STANDARDS[standard]:
             sparql = sparql.replace(alternative, standard)
@@ -139,6 +143,10 @@ def normalize_predicates( sparql ):
 
 
 def do_replacements( sparql ):
+    """
+    (MG): Replace signs by encoding words in the query, e.g. "(" becomes
+    bracket_open. Simplify learning for translation.
+    """
     for r in REPLACEMENTS:
         encoding = r[-1]
         for original in r[:-1]:

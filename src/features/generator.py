@@ -8,6 +8,8 @@ https://arxiv.org/abs/1708.07624
 
 Version 1.0.0
 
+Docstrings and comments added by Jan-Marc Glowienke (MG)
+
 """
 import argparse
 import collections
@@ -237,7 +239,7 @@ def generate_dataset(templates, output_dir, file_mode):
                                       dataset_pair['sparql'])
                         c = re.search('brack_close(.*)',
                                       dataset_pair['sparql'])
-                        # print a.group(1),b.group(1)
+                        # print(a.group(1),b.group(1))
                         a = a.group(1)
                         b = b.group(1)
                         c = c.group(1)
@@ -422,13 +424,13 @@ if __name__ == '__main__':
 
     try:
         generate_dataset(templates, output_dir, file_mode)
-    except:
+    except: # (MG): exception occured
         print('exception occured, look for error in log file')
         save_cache(resource_dump_file, used_resources)
-    else:
+    else:  # (MG): no exception happened
         save_cache(
             '{}/used_resources_{:%Y-%m-%d-%H-%M}.json'.format(output_dir, time),\
              used_resources)
-    finally:
+    finally: # (MG): always execute this
         log_statistics(used_resources, SPECIAL_CLASSES,
                        not_instanced_templates)
