@@ -84,6 +84,7 @@ target/
 /data/rdf/
 data/interim
 data/processed
+data/eiopa/2_interim
 
 # Mac OS-specific storage files
 .DS_Store
