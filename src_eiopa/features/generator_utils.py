@@ -3,6 +3,8 @@
 
 Neural SPARQL Machines - Generator utils.
 
+Adapted to new dataset by Jan-Marc Glowienke
+
 'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
 https://arxiv.org/abs/1708.07624
 

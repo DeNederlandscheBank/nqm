@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 """
 
-Neural SPARQL Machines - Generator module - Adapted to new dataset by Jan-Marc
-Glowienke
+Neural SPARQL Machines - Generator module
+
+Adapted to new dataset by Jan-Marc Glowienke
 
 'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
 https://arxiv.org/abs/1708.07624
@@ -394,7 +395,7 @@ if __name__ == '__main__':
    # (MG): Initiate logging file
     time = datetime.datetime.today()
     logging.basicConfig(
-        filename='{}/generator_{:%Y-%m-%d-%H-%M}.log'.format(output_dir, time), level=logging.DEBUG)
+        filename='{}/logs/generator_{:%Y-%m-%d-%H-%M}.log'.format(output_dir, time), level=logging.DEBUG)
 
     # (MG): Check whether there exitst already some resources to be used
     # (MG): from previous run probably

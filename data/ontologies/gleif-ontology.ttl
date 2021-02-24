@@ -635,4 +635,3 @@ gleif-L1:RegistrationStatus a owl:Class ;
 
 [] a owl:AllDifferent ;
     owl:members ( gleif-L1:RegistrationStatusAnnulled gleif-L1:RegistrationStatusDuplicate gleif-L1:RegistrationStatusIssued gleif-L1:RegistrationStatusLapsed gleif-L1:RegistrationStatusPendingArchival gleif-L1:RegistrationStatusPendingTransfer gleif-L1:RegistrationStatusMerged gleif-L1:RegistrationStatusRetired ) .
-
