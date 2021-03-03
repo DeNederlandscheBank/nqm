@@ -1,1 +1,3 @@
-;;;where is <A>;select ?a where { ?x gleif-L1:hasLegalName <A>. ?x gleif-L1:hasLegalAddress/gleif-base:hasCity ?a. };select distinct(?a) where { ?x gleif-L1:hasLegalName []. ?x gleif-L1:hasLegalAddress/gleif-base:hasCity ?a. }
+;;;where is <A>;select ?a where { ?x gleif-L1:hasLegalName <A>. ?x gleif-L1:hasLegalAddress/gleif-base:hasCity ?a. };select distinct ?a where { ?b gleif-base:hasLegalJurisdiction CountryCodes:NL.  ?b gleif-L1:hasLegalName ?a. ?b gleif-L1:hasLegalAddress/gleif-base:hasCity []. }
+dbo:Monument;;;is <A> a <B>;ask where { <A> rdf:type <B> };select distinct(?a) ?b where { ?a a ?b }
+dbo:Monument;;;where is <A> located in;select ?a where { <A> dbo:location ?a };select distinct(?a) where { ?a dbo:location [] }
