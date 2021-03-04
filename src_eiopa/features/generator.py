@@ -28,7 +28,9 @@ EXAMPLES_PER_TEMPLATE = 100
 
 
 def build_dataset_pair(binding, template):
-    """ Taken from LiberAi """
+    """ Taken from LiberAi
+    Returns dictionary with query and natural language question
+     """
     english = getattr(template, 'question')
     sparql = getattr(template, 'query')
     for variable in binding:
@@ -41,11 +43,59 @@ def build_dataset_pair(binding, template):
             sparql = sparql.replace(placeholder, uri)
 
     sparql = encode(sparql)
-    dataset_pair = {'english': english, 'sparql': sparql}
+    dataset_pair = {'natural_language': english, 'query': sparql}
     return dataset_pair
 
+def generate_dataset(templates,output_dir,file_mode,job_id):
+    """
+        This function will generate dataset from the given templates and
+        store it to the output directory.
+    """
+    cache = dict()
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    it = 0
+    with io.open(output_dir + '/data_nl-{}.txt'.format(job_id), file_mode,\
+                encoding = "utf-8") as nl_questions,\
+         io.open(output_dir + '/data_ql-{}.txt'.format(job_id),file_mode,\
+                encoding='utf-8') as queries:
+        for template in tqdm(templates):
+            it = it + 1
+            try:
+                # get list of results for generator_query
+                results = get_results_of_generator_query(cache,template)
+                if results is None:
+                    logging.debug("no data for {}".format(template.question))
+                    not_instanced_templates.update([template.question])
+                    continue
 
+                for item in results:
+                    dataset_pair = build_dataset_pair(item,template)
 
+                    if dataset_pair:
+                        # dataset_pair['natural_language'] = " ".join(
+                        #     dataset_pair['natural_language'].split())
+                        nl_questions.write("{}\n"\
+                                .format(dataset_pair['natural_language']))
+
+                        queries.write("{}\n".format(dataset_pair['query']))
+
+            except:
+                exception = traceback.format_exc()
+                logging.error('template {} caused exception {}'.format(
+                    getattr(template, 'id'), exception))
+                logging.info(
+                    '1. fix problem\n2. remove templates until the exception \
+                     template in the template file\n3. restart with `-- \
+                     continue` parameter')
+                raise Exception()
+
+def get_results_of_generator_query(cache,template):
+    """
+    Return list of items to fill placeholder in template query by
+    using the generator_query
+    """
+    return False
 
 
 if __name__ == '__main__':
@@ -109,7 +159,7 @@ if __name__ == '__main__':
     templates = read_template_file(template_file)
 
     try:
-        generate_dataset(templates, output_dir, file_mode)
+        generate_dataset(templates, output_dir, file_mode, job_id)
     except: # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
