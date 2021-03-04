@@ -57,7 +57,7 @@ if __name__ == '__main__':
     """
     parser = argparse.ArgumentParser()
     # parser.add_argument('--continue', dest='continue_generation',
-                        action='store_true', help='Continue after exception')
+                        # action='store_true', help='Continue after exception')
     requiredNamed = parser.add_argument_group('required named arguments')
     requiredNamed.add_argument('--templates', dest='templates',
                                metavar='templateFile', help='templates',
@@ -65,20 +65,21 @@ if __name__ == '__main__':
     requiredNamed.add_argument(
         '--output', dest='output', metavar='outputDirectory',
         help='dataset directory', required=True)
+    requiredNamed.add_argument(
+        '--id', dest='id', metavar = 'identifier', help = 'job identifier',
+        required = True)
     args = parser.parse_args()
 
     template_file = args.templates
     output_dir = args.output
-    use_resources_dump = args.continue_generation # (MG): Value is TRUE when
+    job_id = args.id
+    use_resources_dump = False #args.continue_generation # (MG): Value is TRUE when
     # continuing on existing dump
 
-   # print use_resources_dump => False
-
    # (MG): Initiate logging file
-    time = datetime.datetime.today()
     logging.basicConfig(
-        filename='{}/logs/generator_{:%Y-%m-%d-%H-%M}.log'.format(output_dir, time), level=logging.DEBUG)
-
+        filename='{}/logs/generator_{}.log'.format(output_dir, job_id), level=logging.DEBUG)
+    """
     # (MG): Check whether there exitst already some resources to be used
     # (MG): from previous run probably
     resource_dump_file = output_dir + '/resource_dump.json'
@@ -94,15 +95,16 @@ if __name__ == '__main__':
             resource_dump_file)
         print(warning_message)
         sys.exit(1)
-
+    """
     importlib.reload(sys)
 
     # (MG): initiate file for collection of templates
     not_instanced_templates = collections.Counter()
     # (MG): create collection for used_resources or empty collection
-    used_resources = collections.Counter(json.loads(open(
-        resource_dump_file).read())) if use_resources_dump \
-        else collections.Counter()
+    # used_resources = collections.Counter(json.loads(open(
+    #     resource_dump_file).read())) if use_resources_dump \
+    #     else collections.Counter()
+    used_resource = collections.Counter()
     file_mode = 'a' if use_resources_dump else 'w' # (MG): append vs write
     templates = read_template_file(template_file)
 
@@ -110,11 +112,11 @@ if __name__ == '__main__':
         generate_dataset(templates, output_dir, file_mode)
     except: # (MG): exception occured
         print('exception occured, look for error in log file')
-        save_cache(resource_dump_file, used_resources)
+        # save_cache(resource_dump_file, used_resources)
     else:  # (MG): no exception happened
         save_cache(
-            '{}/used_resources_{:%Y-%m-%d-%H-%M}.json'.format(output_dir, time),\
+            '{}/logs/used_resources_{}.json'.format(output_dir, job_id),\
              used_resources)
-    finally: # (MG): always execute this
-        log_statistics(used_resources, SPECIAL_CLASSES,
-                       not_instanced_templates)
+    # finally: # (MG): always execute this
+    #     log_statistics(used_resources, SPECIAL_CLASSES,
+    #                    not_instanced_templates)
