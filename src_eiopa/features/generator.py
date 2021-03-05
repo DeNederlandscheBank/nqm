@@ -24,7 +24,48 @@ from generator_utils import log_statistics, save_cache, query_dbpedia,\
  strip_brackets, encode, read_template_file
 import importlib
 
+from rdflib import URIRef, term, Graph, Literal, Namespace
+from rdflib.namespace import OWL,RDF, RDFS, SKOS, XSD
+
 EXAMPLES_PER_TEMPLATE = 100
+
+
+def initialize_graph():
+    """ Initializes the database graph and returns the graph """
+    EIOPA_DATA_PATH = os.path.join("data", "eiopa","1_external", "eiopa")
+    GLEIF_DATA_PATH = os.path.join("data", "eiopa", "1_external","gleif")
+
+    g = Graph()
+    with open(os.path.join(EIOPA_DATA_PATH,'eiopa_register.ttl'), "rb") as fp:
+        g.parse(data = fp.read(), format = 'turtle')
+    with open(os.path.join(GLEIF_DATA_PATH,'gleif-L1-extract.ttl'), "rb")\
+            as fp:
+        g.parse(data = fp.read(), format = 'turtle')
+    with open(os.path.join(GLEIF_DATA_PATH,'EntityLegalFormData.ttl'), "rb")\
+            as fp:
+        g.parse(data = fp.read(), format = 'turtle')
+    print("Graph has {} statements.".format(len(g)))
+    logging.debug("Graph has {} statements.".format(len(g)))
+    return g
+
+
+def query_database(query):
+    """ Returns list of query results """
+    results = []
+    for row in graph_database.query(query):
+        items = []
+        for item in row:
+            items.append(str(get_name(item)))
+        results.append(items)
+
+    return results
+
+def get_name(uri):
+    """ Visualize the name of uri without namespace. Taken from Willem Jan """
+    if isinstance(uri, term.URIRef):
+        return uri.n3().split("/")[-1][0:-1]
+    else:
+        return uri
 
 
 def build_dataset_pair(binding, template):
@@ -45,6 +86,7 @@ def build_dataset_pair(binding, template):
     sparql = encode(sparql)
     dataset_pair = {'natural_language': english, 'query': sparql}
     return dataset_pair
+
 
 def generate_dataset(templates,output_dir,file_mode,job_id):
     """
@@ -72,7 +114,7 @@ def generate_dataset(templates,output_dir,file_mode,job_id):
                 for item in results:
                     dataset_pair = build_dataset_pair(item,template)
 
-                    if dataset_pair:
+                    if dataset_pair is not None:
                         # dataset_pair['natural_language'] = " ".join(
                         #     dataset_pair['natural_language'].split())
                         nl_questions.write("{}\n"\
@@ -90,12 +132,48 @@ def generate_dataset(templates,output_dir,file_mode,job_id):
                      continue` parameter')
                 raise Exception()
 
+
 def get_results_of_generator_query(cache,template):
     """
     Return list of items to fill placeholder in template query by
-    using the generator_query
+    using the generator_query.
+    Only returns results if sufficient amount of items was found, otherwise
+    returns "None". The threshold is defined by EXAMPLES_PER_TEMPLATE
     """
-    return False
+    generator_query = template.generator_query
+    results = None
+    print("Get_results: Generator_query: ",generator_query)
+    def attempt_one(template): return prepare_generator_query(template)
+    def attempt_two(template):
+        return prepare_generator_query(template, add_type_requirements = False)
+
+    for attempt,prepare_query in enumerate([attempt_one,attempt_two],start=1):
+        generator_query = prepare_query(template)
+
+        if generator_query in cache:
+            results = cache[generator_query]
+            break
+        logging.debug('{}. attempt generator_query: {}'.format(attempt,
+                                                            generator_query))
+        results = query_database(generator_query)
+        print("Get_results: Results:\n ",results)
+        if len(results) >= EXAMPLES_PER_TEMPLATE:
+            cache[generator_query] = results
+            break
+    return results
+
+
+def prepare_generator_query(template, add_type_requirements = True):
+    """
+    This function prepares the generator query to be used to query the
+    database.
+    At the moment, it is performing no action
+    """
+    generator_query = getattr(template, 'generator_query')
+    target_classes = getattr(template, 'target_classes')
+    variables = getattr(template, 'variables')
+
+    return generator_query
 
 
 if __name__ == '__main__':
@@ -157,6 +235,8 @@ if __name__ == '__main__':
     used_resource = collections.Counter()
     file_mode = 'a' if use_resources_dump else 'w' # (MG): append vs write
     templates = read_template_file(template_file)
+    print("     Initializing Graph: This takes some time")
+    graph_database = initialize_graph() # Works with fixed datapath
 
     try:
         generate_dataset(templates, output_dir, file_mode, job_id)
