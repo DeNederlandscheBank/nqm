@@ -68,23 +68,34 @@ def get_name(uri):
         return uri
 
 
-def build_dataset_pair(binding, template):
+def build_dataset_pair(item, template):
     """ Taken from LiberAi
     Returns dictionary with query and natural language question
+    Currently only able to work with one variable
      """
-    english = getattr(template, 'question')
-    sparql = getattr(template, 'query')
-    for variable in binding:
-        uri = binding[variable]['uri']
-        label = binding[variable]['label']
-        placeholder = '<{}>'.format(str.upper(variable))
-        if placeholder in english and label is not None:
-            english = english.replace(placeholder, strip_brackets(label))
-        if placeholder in sparql and uri is not None:
-            sparql = sparql.replace(placeholder, uri)
+    natural_language = getattr(template, 'question')
+    query = getattr(template, 'query')
 
-    sparql = encode(sparql)
-    dataset_pair = {'natural_language': english, 'query': sparql}
+    for cnt,variable in enumerate(template.variables):
+        placeholder = "<{}>".format(str.upper(variable))
+        if placeholder in natural_language:
+            natural_language = natural_language.replace(placeholder,
+                                        strip_brackets(item[cnt]))
+        if placeholder in query:
+            query = query.replace(placeholder,strip_brackets(item[cnt]))
+
+    # for variable in binding:
+    #     uri = binding[variable]['uri']
+    #     label = binding[variable]['label']
+    #     placeholder = '<{}>'.format(str.upper(variable))
+    #     if placeholder in english and label is not None:
+    #         english = english.replace(placeholder, strip_brackets(label))
+    #     if placeholder in sparql and uri is not None:
+    #         sparql = sparql.replace(placeholder, uri)
+
+    query = encode(query)
+    dataset_pair = {'natural_language': natural_language,
+                    'query': query}
     return dataset_pair
 
 
@@ -142,7 +153,7 @@ def get_results_of_generator_query(cache,template):
     """
     generator_query = template.generator_query
     results = None
-    print("Get_results: Generator_query: ",generator_query)
+    # print("Get_results: Generator_query: ",generator_query)
     def attempt_one(template): return prepare_generator_query(template)
     def attempt_two(template):
         return prepare_generator_query(template, add_type_requirements = False)
@@ -156,7 +167,7 @@ def get_results_of_generator_query(cache,template):
         logging.debug('{}. attempt generator_query: {}'.format(attempt,
                                                             generator_query))
         results = query_database(generator_query)
-        print("Get_results: Results:\n ",results)
+        # print("Get_results: Results:\n ",results)
         if len(results) >= EXAMPLES_PER_TEMPLATE:
             cache[generator_query] = results
             break
@@ -244,9 +255,10 @@ if __name__ == '__main__':
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
     else:  # (MG): no exception happened
-        save_cache(
-            '{}/logs/used_resources_{}.json'.format(output_dir, job_id),\
-             used_resources)
+        print("Success for generator!")
+        # save_cache(
+        #     '{}/logs/used_resources_{}.json'.format(output_dir, job_id),\
+        #      used_resources)
     # finally: # (MG): always execute this
     #     log_statistics(used_resources, SPECIAL_CLASSES,
     #                    not_instanced_templates)
