@@ -85,6 +85,8 @@ target/
 data/interim
 data/processed
 data/eiopa/2_interim
+data/eiopa/3_processed
+data/eiopa/4_dictionaries
 
 # Mac OS-specific storage files
 .DS_Store
