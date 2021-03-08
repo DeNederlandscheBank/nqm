@@ -1,26 +1,27 @@
-echo "Making directories..."
-mkdir ..\data\nqm\interim
-mkdir ..\data\nqm\processed
+:: full pipeline EIOPA that you can run to prepare the data and train the model
 
-echo 'Putting the annotations_monument.csv in the interim folder...'
-copy "..\data\nqm\external\annotations_monument.csv" "..\data\nqm\interim"
+cd ..
+echo "Making directories..."
+mkdir .\data\eiopa\3_processed\logs
+
+echo "Generate job id"
+:: .bat script has no date added for job id, since that is complicated due to locale dependent time format
+set /a num=$random$
 
 echo 'Generating data (train, test, dev)...'
 cd ..
-python src/features/generator.py --templates data/nqm/interim/annotations_monument.csv --output data/nqm/processed
-python src/features/split_in_train_dev_test.py --dataset data/nqm/processed/data
+python ./src_eiopa/features/generator.py --templates data/eiopa/1_external/templates.csv --output data/eiopa/3_processed --id %num%
 
-echo 'Shuffling data...'
-cd src/features
-python shuffle.py
+:: echo 'Shuffling data...'
+:: cd src/features
+:: python shuffle.py
 
-echo 'Making vocabularies...'
-cd ../models
-onmt_build_vocab -config train_config.yaml
+:: echo 'Making vocabularies...'
+:: cd ../models
+:: onmt_build_vocab -config train_config.yaml
 
-echo 'Training model...'
-onmt_train -config train_config.yaml
+:: echo 'Training model...'
+:: onmt_train -config train_config.yaml
 
-cd ..
 
 echo 'Done! Thank you for your patience'

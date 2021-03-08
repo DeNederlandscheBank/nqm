@@ -1,8 +1,9 @@
 #!/bin/bash
 # full pipeline EIOPA that you can run to prepare the data and train the model
 
+cd ..
 echo "Making directories..."
-mkdir ../data/eiopa/3_processed/logs
+mkdir /data/eiopa/3_processed/logs
 # mkdir ../data/nqm/processed
 
 echo "Generate job ID"
@@ -15,7 +16,6 @@ echo $ID
 # cp ../data/nqm/external/annotations_monument.csv ../data/nqm/interim
 
 echo 'Generating data (train, test, dev)...'
-cd ..
 python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates.csv --output data/eiopa/3_processed --id $ID
 # python src_eiopa/features/split_in_train_dev_test.py --dataset data/nqm/processed/data
 #
