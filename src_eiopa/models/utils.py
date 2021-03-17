@@ -17,10 +17,11 @@ from torchtext.vocab import Vocab
 import io
 from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import DataLoader
+from os import join
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-EN_TOKENIZER = get_tokenizer('spacy', language='en_core_web_sm')
+NL_TOKENIZER = get_tokenizer('spacy', language='en_core_web_sm')
 QL_TOKENIZER = get_tokenizer('spacy', language='en_core_web_sm')
 BATCH_SIZE = 128
 PAD_IDX = de_vocab['<pad>']
@@ -38,7 +39,7 @@ def build_vocab(filepath, tokenizer):
     return Vocab(counter, specials=['<unk>', '<pad>', '<bos>', '<eos>'])
 
 def data_process(vocab_nl, vocab_ql,path_nl,path_ql,
-                nl_tokenizer = EN_TOKENIZER, ql_tokenizer = QL_TOKENIZER):
+                nl_tokenizer, ql_tokenizer):
     '''
     Returns a dataset with tuple elements containing tensors for the natural
     language and query language. The data is processed using the input
@@ -75,21 +76,27 @@ def generate_batch(data_batch):
                                 )
     nl_batch = pad_sequence(nl_batch, padding_value=PAD_IDX)
     ql_batch = pad_sequence(ql_batch, padding_value=PAD_IDX)
-    return de_batch, en_batch
+    return nl_batch, ql_batch
 
-def create_data_loader(vocab_nl,vocab_ql,):
+def create_data_loader(path_nl, path_ql,
+                        vocab_nl, vocab_ql,
+                        nl_tokenizer = NL_TOKENIZER,
+                        ql_tokenizer = QL_TOKENIZER,
+                        shuffle = True,
+                        batch_size = BATCH_SIZE):
     '''
-    Return a fully fucntional dataloader
+    Returns a fully functional torch DataLoader for a translation dataset.
+    This function combines the other function of this script.
+    Expects data as seperate files and line by line.
     '''
-
-
-
-
-
-
-
-
-
+    data = data_process(vocab_nl, vocab_ql,path_nl,path_ql,
+                        nl_tokenizer, ql_tokenizer)
+    return DataLoader(data,batch_size=batch_size,shuffle = shuffle,
+                        collate_fn = generate_batch)
 
 if __name__ == "__main__":
     print("Executing utils")
+
+    train_path_nl = join("..","..","data","eiopa","3_processed","data_nl_05-03_13-12_baseline.txt")
+    train_path_ql = join("..","..","data","eiopa","3_processed","data_ql-05-03_13-12_baseline.txt")
+    train_data  = create_data_loader(train_path_nl,train_path_ql,)
