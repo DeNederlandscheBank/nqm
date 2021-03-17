@@ -87,6 +87,8 @@ data/processed
 data/eiopa/2_interim
 data/eiopa/3_processed
 data/eiopa/4_dictionaries
+src_eiopa/models/.data
+src_eiopa/models/data
 
 # Mac OS-specific storage files
 .DS_Store
