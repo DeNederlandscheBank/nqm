@@ -61,6 +61,8 @@ def generate_batch(data_batch):
     '''
     Add BOS and EOS index to sentences. All sequences in the batch are
     padded to equal length.
+    The formatting is [sequence_length,batch_size]. This might be confusing,
+    since you cannot look manually at the rows to "read" the sentences.
     '''
     nl_batch, ql_batch = [], []
     for (nl_item, ql_item) in data_batch:
