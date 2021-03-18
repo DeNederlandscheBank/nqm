@@ -17,17 +17,13 @@ from torchtext.vocab import Vocab
 import io
 from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import DataLoader
-from os import join
+
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 NL_TOKENIZER = get_tokenizer('spacy', language='en_core_web_sm')
 QL_TOKENIZER = get_tokenizer('spacy', language='en_core_web_sm')
 BATCH_SIZE = 128
-PAD_IDX = de_vocab['<pad>']
-BOS_IDX = de_vocab['<bos>']
-EOS_IDX = de_vocab['<eos>']
-
 
 
 def build_vocab(filepath, tokenizer):
@@ -89,6 +85,10 @@ def create_data_loader(path_nl, path_ql,
     This function combines the other function of this script.
     Expects data as seperate files and line by line.
     '''
+    global PAD_IDX,BOS_IDX,EOS_IDX
+    PAD_IDX = vocab_nl['<pad>']
+    BOS_IDX = vocab_nl['<bos>']
+    EOS_IDX = vocab_nl['<eos>']
     data = data_process(vocab_nl, vocab_ql,path_nl,path_ql,
                         nl_tokenizer, ql_tokenizer)
     return DataLoader(data,batch_size=batch_size,shuffle = shuffle,
@@ -96,7 +96,3 @@ def create_data_loader(path_nl, path_ql,
 
 if __name__ == "__main__":
     print("Executing utils")
-
-    train_path_nl = join("..","..","data","eiopa","3_processed","data_nl_05-03_13-12_baseline.txt")
-    train_path_ql = join("..","..","data","eiopa","3_processed","data_ql-05-03_13-12_baseline.txt")
-    train_data  = create_data_loader(train_path_nl,train_path_ql,)
