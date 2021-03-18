@@ -3,7 +3,7 @@
 
 cd ..
 echo "Making directories..."
-mkdir /data/eiopa/3_processed/logs
+mkdir ./data/eiopa/3_processed/logs
 # mkdir ../data/nqm/processed
 
 echo "Generate job ID"
@@ -32,4 +32,5 @@ python src_eiopa/features/generator.py --templates data/eiopa/1_external/templat
 #
 # cd ..
 
+cd src_eiopa
 echo 'Done! Thank you for your patience'
