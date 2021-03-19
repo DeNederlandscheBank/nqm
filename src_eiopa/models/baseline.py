@@ -182,8 +182,8 @@ def count_parameters(model: nn.Module):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
 def init_model( device, input_dim, output_dim,
-                enc_emb_dim = 32, dec_emb_dim = 32,
-                enc_hid_dim = 64, dec_hid_dim = 64, attn_dim = 8,
+                enc_emb_dim = 128, dec_emb_dim = 128,
+                enc_hid_dim = 256, dec_hid_dim = 256, attn_dim = 8,
                 enc_dropout = 0.5, dec_dropout = 0.5):
     enc = Encoder(input_dim, enc_emb_dim,
                     enc_hid_dim, dec_hid_dim, enc_dropout)
@@ -258,3 +258,17 @@ def evaluate(model: nn.Module,
             epoch_loss += loss.item()
 
     return epoch_loss / len(iterator)
+
+def translate(sentence,model, vocab_nl,vocab_ql,nl_tokenizer,ql_tokenizer):
+
+    item = torch.tensor([vocab_nl[token] for token in nl_tokenizer(sentence)],
+                        dtype=torch.long)
+    input = torch.cat([torch.tensor([BOS_IDX]), item,
+                            torch.tensor([EOS_IDX])], dim=0).to(device)
+    trg = torch.zeros(len(input)+20).to(device)
+
+    output = model(input,trg,0)
+
+    translation = [vocab_ql.itos[index] for index in trg]
+
+    return translation
