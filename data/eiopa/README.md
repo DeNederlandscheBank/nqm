@@ -1,6 +1,6 @@
-This folder contains data from EIOPA register for European insurance companies and the accompanying GLEIF identifier data.
+The folder __1_external__ contains data from EIOPA register for European insurance companies and the accompanying GLEIF identifier data.
 
-Furthermore, there are several files for templates:
+Furthermore, there are several files containing templates to build the dataset for training the translation model:
 
 __Templates_train_val__: set of templates, consisting of a natural language question, the corresponding SPARQL query and a generator query to generate the dataset
 
