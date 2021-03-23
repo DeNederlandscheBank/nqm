@@ -3,7 +3,7 @@
 
 cd ..
 echo "Making directories..."
-mkdir ./data/eiopa/3_processed/logs
+mkdir ./data/eiopa/2_interim/logs
 # mkdir ../data/nqm/processed
 
 echo "Generate job ID"
