@@ -99,7 +99,7 @@ def build_dataset_pair(item, template):
     return dataset_pair
 
 
-def generate_dataset(templates,output_dir,file_mode,job_id):
+def generate_dataset(templates,output_dir,file_mode,job_id,type):
     """
         This function will generate dataset from the given templates and
         store it to the output directory.
@@ -108,10 +108,10 @@ def generate_dataset(templates,output_dir,file_mode,job_id):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     it = 0
-    with io.open(output_dir + '/data_{}.nl'.format(job_id), file_mode,\
-                encoding = "utf-8") as nl_questions,\
-         io.open(output_dir + '/data_{}.ql'.format(job_id),file_mode,\
-                encoding='utf-8') as queries:
+    with io.open(output_dir + '/data_{0}_{1}.nl'.format(type,job_id),
+                file_mode,encoding = "utf-8") as nl_questions,\
+         io.open(output_dir + '/data_{0}_{1}.ql'.format(type,job_id),
+                file_mode,encoding='utf-8') as queries:
         for template in tqdm(templates):
             it = it + 1
             try:
@@ -207,11 +207,15 @@ if __name__ == '__main__':
     requiredNamed.add_argument(
         '--id', dest='id', metavar = 'identifier', help = 'job identifier',
         required = True)
+    requiredNamed.add_argument(
+        '--type', dest='type', metavar = 'filetype', help = 'type of templates: train/val or test_x'
+    )
     args = parser.parse_args()
 
     template_file = args.templates
     output_dir = args.output
     job_id = args.id
+    type = args.type
     use_resources_dump = False #args.continue_generation # (MG): Value is TRUE when
     # continuing on existing dump
 
@@ -250,7 +254,7 @@ if __name__ == '__main__':
     graph_database = initialize_graph() # Works with fixed datapath
 
     try:
-        generate_dataset(templates, output_dir, file_mode, job_id)
+        generate_dataset(templates, output_dir, file_mode, job_id, type)
     except: # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
