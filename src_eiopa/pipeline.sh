@@ -4,6 +4,7 @@
 cd ..
 echo "Making directories..."
 mkdir ./data/eiopa/2_interim/logs
+mkdir ./data/eiopa/3_processed/logs
 # mkdir ../data/nqm/processed
 
 echo "Generate job ID"
@@ -17,7 +18,7 @@ echo $ID
 
 echo 'Generating data (train, validation) and shuffling...'
 python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates.csv --output data/eiopa/2_interim --id $ID --type train_val
-# python src_eiopa/features/split_in_train_dev_test.py --dataset data/nqm/processed/data
+# python src_eiopa/features/splitter.py --inputPath  data/eiopa/2_interim/data_train_val_23-03_12-05_8144 --outputPath data/eiopa/3_processed/data_23-03_12-05_8144 --split 80
 # echo 'Shuffling data...'
 # cd src/features
 # python shuffle.py
