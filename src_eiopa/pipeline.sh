@@ -26,6 +26,7 @@ echo 'Generating test data...'
 python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_1.csv --output data/eiopa/3_processed --id $ID --type test_1
 python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_2.csv --output data/eiopa/3_processed --id $ID --type test_2
 python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_3.csv --output data/eiopa/3_processed --id $ID --type test_3
+
 # echo 'Making vocabularies...'
 # cd ../models
 # onmt_build_vocab -config train_config.yaml
