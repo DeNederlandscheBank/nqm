@@ -8,9 +8,10 @@ import argparse
 import random
 import os
 import io
+from sklearn.model_selection import train_test_split
 
 
-def split_datasets(query_file,nl_file,outdir,train_split):
+def split_datasets(query_file,nl_file,out_dir,train_split):
     """
     This function splits the natural language questions and queries into
     a train and validation part.
@@ -22,16 +23,31 @@ def split_datasets(query_file,nl_file,outdir,train_split):
         ql = query_org.readlines()
         nl = nl_org.readlines()
 
-        lines = len(ql)+1
-        val_selection = random.sample(range(lines),int(lines * split /100))
+        train_split = train_split / 100
+
+        train_ql, val_ql, train_nl, val_nl = train_test_split(ql,nl,\
+                                                train_size = train_split,\
+                                                random_state = 42,\
+                                                shuffle = True)
+
+        with io.open(out_dir + "_train.ql", 'w', encoding = 'utf-8')\
+                as ql_train,\
+                io.open(out_dir + "_val.ql", 'w', encoding = 'utf-8')\
+                    as ql_val,\
+                io.open(out_dir + "_train.nl", 'w', encoding = 'utf-8')\
+                    as nl_train,\
+                io.open(out_dir + "_val.nl", 'w', encoding = 'utf-8')\
+                    as nl_val:
 
 
-        train_ql = []
-        train_nl = []
-        val_ql = []
-        val_nl = []
+            ql_train.writelines(train_ql)
+            ql_val.writelines(val_ql)
+            nl_train.writelines(train_nl)
+            nl_val.writelines(val_nl)
 
-    return False
+
+
+    return True
 
 
 if __name__ == '__main__':
