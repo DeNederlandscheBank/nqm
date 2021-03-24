@@ -19,7 +19,7 @@ echo $ID
 echo 'Generating data (train, validation)...'
 python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates.csv --output data/eiopa/2_interim --id $ID --type train_val
 echo 'Splitting data intro train and validation...'
-python src_eiopa/features/splitter.py --inputPath  data/eiopa/2_interim/data_train_val_$ID --outputPath data/eiopa/3_processed/data_$ID --split 80
+python src_eiopa/features/splitter.py --inputPath  data/eiopa/2_interim/data_$ID --outputPath data/eiopa/3_processed/data_$ID --split 80
 
 echo 'Generating test data...'
 python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_1.csv --output data/eiopa/3_processed --id $ID --type test_1

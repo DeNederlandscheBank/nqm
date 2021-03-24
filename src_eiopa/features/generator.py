@@ -108,9 +108,9 @@ def generate_dataset(templates,output_dir,file_mode,job_id,type):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     it = 0
-    with io.open(output_dir + '/data_{0}_{1}.nl'.format(type,job_id),
+    with io.open(output_dir + '/data_{1}_{0}.nl'.format(type,job_id),
                 file_mode,encoding = "utf-8") as nl_questions,\
-         io.open(output_dir + '/data_{0}_{1}.ql'.format(type,job_id),
+         io.open(output_dir + '/data_{1}_{0}.ql'.format(type,job_id),
                 file_mode,encoding='utf-8') as queries:
         for template in tqdm(templates):
             it = it + 1

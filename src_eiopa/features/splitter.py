@@ -64,10 +64,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     dataset_file = os.path.splitext(args.dataset)[0]
-    query_file = dataset_file + ".ql"
-    nl_file = dataset_file + ".nl"
+    query_file = dataset_file + '_train_val' + ".ql"
+    nl_file = dataset_file + '_train_val' + ".nl"
     train_split = int(args.split)
     outdir = os.path.splitext(args.outdir)[0]
 
 
-    split_datasets(query_file,nl_file,outdir,train_split)    
+    split_datasets(query_file,nl_file,outdir,train_split)
+
+    print("Splitting sucessfull!")
