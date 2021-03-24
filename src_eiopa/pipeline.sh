@@ -16,12 +16,10 @@ echo $ID
 # echo 'Putting the annotations_monument.csv in the interim folder...'
 # cp ../data/nqm/external/annotations_monument.csv ../data/nqm/interim
 
-echo 'Generating data (train, validation) and shuffling...'
+echo 'Generating data (train, validation)...'
 python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates.csv --output data/eiopa/2_interim --id $ID --type train_val
-# python src_eiopa/features/splitter.py --inputPath  data/eiopa/2_interim/data_train_val_23-03_12-05_8144 --outputPath data/eiopa/3_processed/data_23-03_12-05_8144 --split 80
-# echo 'Shuffling data...'
-# cd src/features
-# python shuffle.py
+echo 'Splitting data intro train and validation...'
+python src_eiopa/features/splitter.py --inputPath  data/eiopa/2_interim/data_train_val_$ID --outputPath data/eiopa/3_processed/data_$ID --split 80
 
 echo 'Generating test data...'
 python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_1.csv --output data/eiopa/3_processed --id $ID --type test_1
