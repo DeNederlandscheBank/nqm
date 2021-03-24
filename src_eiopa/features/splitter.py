@@ -45,8 +45,6 @@ def split_datasets(query_file,nl_file,out_dir,train_split):
             nl_train.writelines(train_nl)
             nl_val.writelines(val_nl)
 
-
-
     return True
 
 
@@ -71,4 +69,5 @@ if __name__ == '__main__':
     train_split = int(args.split)
     outdir = os.path.splitext(args.outdir)[0]
 
-    split_datasets(query_file,nl_file,outdir,train_split)
+
+    split_datasets(query_file,nl_file,outdir,train_split)    
