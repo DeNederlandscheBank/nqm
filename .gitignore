@@ -88,6 +88,8 @@ data/eiopa/2_interim
 data/eiopa/3_processed
 src_eiopa/models/.data
 src_eiopa/models/data
+src_eiopa/features/example
+fairseq-data-bin/
 
 # Mac OS-specific storage files
 .DS_Store
