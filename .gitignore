@@ -92,6 +92,9 @@ src_eiopa/features/example
 fairseq-data-bin/
 models/wmt16.en-de.joined-dict.transformer
 
+# exclude model files
+*.pt
+
 # Mac OS-specific storage files
 .DS_Store
 
