@@ -78,7 +78,7 @@ target/
 # exclude data
 data/eiopa/2_interim
 data/eiopa/3_processed
-fairseq-data-bin/
+fairseq-data-bin-*
 
 
 # exclude model files
