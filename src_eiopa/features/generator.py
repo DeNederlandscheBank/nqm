@@ -30,10 +30,10 @@ from rdflib.namespace import OWL,RDF, RDFS, SKOS, XSD
 EXAMPLES_PER_TEMPLATE = 100
 
 
-def initialize_graph():
+def initialize_graph(graph_data_path):
     """ Initializes the database graph and returns the graph """
-    EIOPA_DATA_PATH = os.path.join("data", "eiopa","1_external", "eiopa")
-    GLEIF_DATA_PATH = os.path.join("data", "eiopa", "1_external","gleif")
+    EIOPA_DATA_PATH = os.path.join(graph_data_path, "eiopa")
+    GLEIF_DATA_PATH = os.path.join(graph_data_path,"gleif")
 
     g = Graph()
     with open(os.path.join(EIOPA_DATA_PATH,'eiopa_register.ttl'), "rb") as fp:
@@ -210,6 +210,9 @@ if __name__ == '__main__':
     requiredNamed.add_argument(
         '--type', dest='type', metavar = 'filetype', help = 'type of templates: train/val or test_x'
     )
+    requiredNamed.add_argument(
+        '--graph-data-path', dest='graph_data_path',required = True, help = 'path to folder containing graph data'
+    )
     args = parser.parse_args()
 
     template_file = args.templates
@@ -251,7 +254,7 @@ if __name__ == '__main__':
     file_mode = 'a' if use_resources_dump else 'w' # (MG): append vs write
     templates = read_template_file(template_file)
     print("     Initializing Graph: This takes some time")
-    graph_database = initialize_graph() # Works with fixed datapath
+    graph_database = initialize_graph(args.graph_data_path)
 
     try:
         generate_dataset(templates, output_dir, file_mode, job_id, type)

@@ -10,14 +10,14 @@ echo "Generate job id"
 set /a num=$random$
 
 echo 'Generating data (train, validation)...'
-python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates.csv --output data/eiopa/3_processed --id %num%
+python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates.csv --output data/eiopa/3_processed --id %num% --graph-data-path data/eiopa/1_external
 echo 'Splitting data intro train and validation...'
 python src_eiopa/features/splitter.py --inputPath  data/eiopa/2_interim/data_train_val_%num% --outputPath data/eiopa/3_processed/data_%num% --split 80
 
 echo 'Generating test data...'
-python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_1.csv --output data/eiopa/3_processed --id %num% --type test_1
-python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_2.csv --output data/eiopa/3_processed --id %num% --type test_2
-python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_3.csv --output data/eiopa/3_processed --id %num% --type test_3
+python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_1.csv --output data/eiopa/3_processed --id %num% --type test_1 --graph-data-path data/eiopa/1_external
+python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_2.csv --output data/eiopa/3_processed --id %num% --type test_2 --graph-data-path data/eiopa/1_external
+python src_eiopa/features/generator.py --templates data/eiopa/1_external/templates_test_3.csv --output data/eiopa/3_processed --id %num% --type test_3 --graph-data-path data/eiopa/1_external
 
 :: echo 'Making vocabularies...'
 :: cd ../models
@@ -26,5 +26,5 @@ python src_eiopa/features/generator.py --templates data/eiopa/1_external/templat
 :: echo 'Training model...'
 :: onmt_train -config train_config.yaml
 
-
+cd scripts
 echo 'Done! Thank you for your patience'
