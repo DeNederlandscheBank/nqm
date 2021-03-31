@@ -76,21 +76,10 @@ target/
 .ipynb_checkpoints/
 
 # exclude data
-/data/external/
-/data/nqm/raw/
-/data/nqm/processed/
-/data/nqm/interim/
-/data/nqm/dictionares/
-/data/rdf/
-data/interim
-data/processed
 data/eiopa/2_interim
 data/eiopa/3_processed
-src_eiopa/models/.data
-src_eiopa/models/data
-src_eiopa/features/example
 fairseq-data-bin/
-models/wmt16.en-de.joined-dict.transformer
+
 
 # exclude model files
 *.pt
