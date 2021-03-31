@@ -1,7 +1,7 @@
 # #!/bin/bash
 #
-DATA_DIR=../../data/eiopa/4_dictionaries
-MODEL_DIR=../../models
+DATA_DIR=../data/eiopa/4_dictionaries
+MODEL_DIR=../models
 
 mkdir -p $MODEL_DIR/checkpoints
 
