@@ -1,5 +1,5 @@
 # #!/bin/bash
-#
+
 DATA_DIR=../data/eiopa/4_dictionaries
 MODEL_DIR=../models
 ID=31181 # find in build script or end of fairseq-data-bin
