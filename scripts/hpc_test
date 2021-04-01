@@ -19,15 +19,15 @@ ID=31181
 
 echo $WORK_DIR
 
-if [ -d "$WORK_DIR"]; then
+if [[ -d "$WORK_DIR"]]; then
   echo $WORK_DIR
 fi
 
-if [ -d "$IN_DIR"]; then
+if [[ -d "$IN_DIR"]]; then
   echo $IN_DIR
 fi
 
-if [ -d "$MODEL_DIR"]; then
+if [[ -d "$MODEL_DIR"]]; then
   echo $MODEL_DIR
 fi
 
