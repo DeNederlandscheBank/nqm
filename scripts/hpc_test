@@ -17,15 +17,17 @@ IN_DIR=$WORK_DIR/data/eiopa/4_dictionaries
 FILE=$IN_DIR/data_24-03_14-14_31181
 ID=31181
 
-if [ -d $WORK_DIR]; then
+echo $WORK_DIR
+
+if [ -d "$WORK_DIR"]; then
   echo $WORK_DIR
 fi
 
-if [ -d $IN_DIR]; then
+if [ -d "$IN_DIR"]; then
   echo $IN_DIR
 fi
 
-if [ -d $MODEL_DIR]; then
+if [ -d "$MODEL_DIR"]; then
   echo $MODEL_DIR
 fi
 
