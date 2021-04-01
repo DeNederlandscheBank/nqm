@@ -5,7 +5,7 @@
 #SBATCH --mem-per-cpu=8G
 #SBATCH --time=0:15:00
 #SBATCH --job-name=fairseq_transformer
-#SBATCH --output=outputs/output-%J.log
+#SBATCH --output=output-%J.log
 
 WORK_DIR = $HOME/nqm
 MODEL_DIR=$WORK_DIR/models
