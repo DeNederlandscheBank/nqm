@@ -19,30 +19,23 @@ ID=31181
 
 echo $WORK_DIR
 
-if [[ -d "$WORK_DIR"]]; then
-  echo $WORK_DIR
+[[ -d "$WORK_DIR" ]] && echo "$WORK_DIR exists"
+[[ -d "$IN_DIR" ]] && echo "$IN_DIR exists"
+[[ -d "$MODEL_DIR" ]] && echo "$MODEL_DIR exists"
+
+
+pip3 install --user -r $WORK_DIR/requirements.txt
+pip3 install --user fairseq
+
+if  [ !  -f "$IN_DIR/fairseq-data-bin-$ID" ]; then
+     $SRC_DIR/fairseq-preprocess -s nl -t ql --trainpref $FILE-train --validpref $FILE-val --testpref $FILE-test_1 --destdir $IN_DIR/fairseq-data-bin-$ID
 fi
 
-if [[ -d "$IN_DIR"]]; then
-  echo $IN_DIR
-fi
-
-if [[ -d "$MODEL_DIR"]]; then
-  echo $MODEL_DIR
-fi
-
-# pip3 install --user -r $WORK_DIR/requirements.txt
-# pip3 install --user fairseq
-#
-# if ! [ -f "$IN_DIR/fairseq-data-bin-$ID" ]; then
-#     $SRC_DIR/fairseq-preprocess -s nl -t ql --trainpref $FILE-train --validpref $FILE-val --testpref $FILE-test_1 --destdir $IN_DIR/fairseq-data-bin-$ID
-# fi
-#
-# $SRC_DIR/fairseq-train $DATA_DIR/fairseq-data-bin-$ID \
-# -a transformer_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
-# --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
-# --min-lr '1e-09' --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
-# --criterion label_smoothed_cross_entropy \
-# --warmup-updates 4000 --warmup-init-lr '1e-07' \
-# --max-epoch 1 --save-interval 50 --valid-subset valid \
-# --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR/transformer_iwslt_de_en
+$SRC_DIR/fairseq-train $DATA_DIR/fairseq-data-bin-$ID \
+ -a transformer_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
+ --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
+ --min-lr '1e-09' --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
+ --criterion label_smoothed_cross_entropy \
+ --warmup-updates 4000 --warmup-init-lr '1e-07' \
+ --max-epoch 1 --save-interval 50 --valid-subset valid \
+ --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR/transformer_iwslt_de_en
