@@ -6,4 +6,3 @@ torchvision
 tqdm
 rdflib
 scikit-learn
-fairseq
