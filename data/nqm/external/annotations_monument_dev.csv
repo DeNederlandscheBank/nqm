@@ -1,3 +1,0 @@
-dbo:Monument;;;is <A> a <B>;ask where { <A> rdf:type <B> };select distinct(?a) ?b where { ?a a ?b }
-dbo:Monument;;;what is <A>;select ?a where { <A> dbo:abstract ?a };select distinct(?a) where { ?a dbo:abstract [] }
-;;;which <A> has the most <B>;select ?a count(*) as ?c where { ?a rdf:type <A> . ?b rdf:type <B> . ?b [] ?a } group by ?a order by desc(?c);select distinct(?a) ?b where { ?a a dbo:Monument . ?a rdf:type ?a . ?b rdf:type ?b . ?b [] ?a }

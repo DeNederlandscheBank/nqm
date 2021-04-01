@@ -76,17 +76,13 @@ target/
 .ipynb_checkpoints/
 
 # exclude data
-/data/external/
-/data/nqm/raw/
-/data/nqm/processed/
-/data/nqm/interim/
-/data/nqm/dictionares/
-/data/rdf/
-data/interim
-data/processed
 data/eiopa/2_interim
 data/eiopa/3_processed
-data/eiopa/4_dictionaries
+fairseq-data-bin-*
+
+
+# exclude model files
+*.pt
 
 # Mac OS-specific storage files
 .DS_Store

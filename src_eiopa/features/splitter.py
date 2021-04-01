@@ -30,13 +30,13 @@ def split_datasets(query_file,nl_file,out_dir,train_split):
                                                 random_state = 42,\
                                                 shuffle = True)
 
-        with io.open(out_dir + "_train.ql", 'w', encoding = 'utf-8')\
+        with io.open(out_dir + "-train.ql", 'w', encoding = 'utf-8')\
                 as ql_train,\
-                io.open(out_dir + "_val.ql", 'w', encoding = 'utf-8')\
+                io.open(out_dir + "-val.ql", 'w', encoding = 'utf-8')\
                     as ql_val,\
-                io.open(out_dir + "_train.nl", 'w', encoding = 'utf-8')\
+                io.open(out_dir + "-train.nl", 'w', encoding = 'utf-8')\
                     as nl_train,\
-                io.open(out_dir + "_val.nl", 'w', encoding = 'utf-8')\
+                io.open(out_dir + "-val.nl", 'w', encoding = 'utf-8')\
                     as nl_val:
 
 
@@ -64,8 +64,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     dataset_file = os.path.splitext(args.dataset)[0]
-    query_file = dataset_file + '_train_val' + ".ql"
-    nl_file = dataset_file + '_train_val' + ".nl"
+    query_file = dataset_file + '-train_val' + ".ql"
+    nl_file = dataset_file + '-train_val' + ".nl"
     train_split = int(args.split)
     outdir = os.path.splitext(args.outdir)[0]
 
