@@ -9,7 +9,7 @@
 
 WORK_DIR = $HOME/nqm
 MODEL_DIR=$WORK_DIR/models
-SRC_DIR=$HOME/.local/lib/python3.8/site-packages/fairseq_cli
+SRC_DIR=$HOME/.local/bin
 IN_DIR=$WORK_DIR/data/eiopa/4_dictionaries
 FILE=$IN_DIR/data_24-03_14-14_31181
 ID=31181
@@ -22,10 +22,10 @@ pip3 install --user -r $WORK_DIR/requirements.txt
 pip3 install --user fairseq
 
 if ! [ -f "$IN_DIR/fairseq-data-bin-$ID" ]; then
-    python3 $SRC_DIR/preprocess.py -s nl -t ql --trainpref $FILE-train --validpref $FILE-val --testpref $FILE-test_1 --destdir $IN_DIR/fairseq-data-bin-$ID
+    $SRC_DIR/fairseq-preprocess -s nl -t ql --trainpref $FILE-train --validpref $FILE-val --testpref $FILE-test_1 --destdir $IN_DIR/fairseq-data-bin-$ID
 fi
 
-python3 $SRC_DIR/train.py $DATA_DIR/fairseq-data-bin-$ID \
+$SRC_DIR/fairseq-train $DATA_DIR/fairseq-data-bin-$ID \
 -a transformer_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
 --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
 --min-lr '1e-09' --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
