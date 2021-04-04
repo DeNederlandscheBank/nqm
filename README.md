@@ -57,11 +57,31 @@ Project Organization
 Start Project
 -------------
 
-### Install packages
+Clone the complete repository.
 
-At the root:
+### Prerequisites
+
+ - Python version >= 3.6
+
+### Create virtual environment
+
+It is advisable to use a virtual environment for this project. One option is
+to use conda:
+
+    conda env create -f environment.yml
+
+When working on this project using MacOS, working with the conda environment
+has been more stable. When you want to use jupyter notebooks, then 'nb_conda'
+has to be installed additionally.
+
+Another option is to use pip together with your favourite virtual environment
+application.
 
     pip install -r requirements.txt
+    pip install fairseq
+
+First installing the 'requirements.txt' including pytorch amongst others and
+then 'fairseq' seperately prevents possible issues with Intel OpenMP library.
 
 
 ### Change the build_vocap.py file
