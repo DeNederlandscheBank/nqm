@@ -1,7 +1,7 @@
 #!/bin/bash
 # full pipeline EIOPA that you can run to prepare the data and train the model
+# this script should be run from the root
 
-cd .. # pipeline is run from root directory of project
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs
 mkdir -p ./data/eiopa/3_processed/logs
@@ -35,5 +35,4 @@ python src_eiopa/features/generator.py \
   --output $OUT_DIR --id $ID --type test \
   --graph-data-path $DATA_DIR --folder test_templates
 
-cd scripts
 echo 'Done! Thank you for your patience'
