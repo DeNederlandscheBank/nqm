@@ -1,2 +1,4 @@
+# This excludes the generated query language (.ql) and natural language
+# questions (.nl) files from the language statistics of github. 
 *.ql linguist-generated
 *.nl linguist-generated
