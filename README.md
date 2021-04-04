@@ -83,6 +83,17 @@ application.
 First installing the 'requirements.txt' including pytorch amongst others and
 then 'fairseq' seperately prevents possible issues with Intel OpenMP library.
 
+### Template files
+
+There is the possibility to create own template files or use the
+pre-made ones.
+
+*Add more extensive description about this*
+
+Important for data creation using the '--folder' option is that the files
+in the folder must have unique identifier, e.g. an integer, at the fifth-
+last position, e.g. "test_5.csv" or "test_file_5.txt"
+
 
 ### Change the build_vocap.py file
 
