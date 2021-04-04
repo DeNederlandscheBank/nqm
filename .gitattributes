@@ -1,1 +1,2 @@
-data/eiopa/4_dictionaries/* linguist-vendored
+*.ql linguist-generated
+*.nl linguist-generated
