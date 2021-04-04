@@ -195,12 +195,14 @@ if __name__ == '__main__':
         output (required): output directory
     """
     parser = argparse.ArgumentParser()
-    # parser.add_argument('--continue', dest='continue_generation',
-                        # action='store_true', help='Continue after exception')
+    parser.add_argument('--folder', dest='use_folder',
+                        metavar='template_folder',
+                        help='use folder for templates')
     requiredNamed = parser.add_argument_group('required named arguments')
     requiredNamed.add_argument('--templates', dest='templates',
                                metavar='templateFile', help='templates',
-                                required=True)
+                                required=True) # This should be a directory
+                                # when 'folder' option is used.
     requiredNamed.add_argument(
         '--output', dest='output', metavar='outputDirectory',
         help='dataset directory', required=True)
@@ -213,14 +215,16 @@ if __name__ == '__main__':
     requiredNamed.add_argument(
         '--graph-data-path', dest='graph_data_path',required = True, help = 'path to folder containing graph data'
     )
+
     args = parser.parse_args()
 
     template_file = args.templates
     output_dir = args.output
     job_id = args.id
     type = args.type
-    use_resources_dump = False #args.continue_generation # (MG): Value is TRUE when
-    # continuing on existing dump
+    use_resources_dump = False #args.continue_generation # (MG): Value is TRUE
+    # when continuing on existing dump
+    use_folder = args.use_folder
 
    # (MG): Initiate logging file
     logging.basicConfig(
@@ -252,12 +256,22 @@ if __name__ == '__main__':
     #     else collections.Counter()
     used_resource = collections.Counter()
     file_mode = 'a' if use_resources_dump else 'w' # (MG): append vs write
-    templates = read_template_file(template_file)
     print("     Initializing Graph: This takes some time")
     graph_database = initialize_graph(args.graph_data_path)
 
     try:
-        generate_dataset(templates, output_dir, file_mode, job_id, type)
+        if args.use_folder != None:
+            print("Using folder for templates")
+            files = os.listdir(os.path.join(template_file,use_folder))
+            for file in files:
+                file_type = type + "_" + file[-5]
+                templates = read_template_file(os.path.join(
+                                            template_file,use_folder,file))
+                generate_dataset(templates, output_dir,
+                                    file_mode, job_id, file_type)
+        else:
+            templates = read_template_file(template_file)
+            generate_dataset(templates, output_dir, file_mode, job_id, type)
     except: # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
