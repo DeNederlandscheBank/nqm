@@ -31,17 +31,9 @@ python src_eiopa/features/splitter.py \
 
 echo 'Generating test data...'
 python src_eiopa/features/generator.py \
-  --templates $DATA_DIR/templates_test_1.csv \
-  --output $OUT_DIR --id $ID --type test_1 \
-  --graph-data-path $DATA_DIR
-python src_eiopa/features/generator.py \
-  --templates $DATA_DIR/templates_test_2.csv \
-  --output $OUT_DIR --id $ID --type test_2 \
-  --graph-data-path $DATA_DIR
-python src_eiopa/features/generator.py \
-  --templates $DATA_DIR/templates_test_3.csv \
-  --output $OUT_DIR --id $ID --type test_3 \
-  --graph-data-path $DATA_DIR
+  --templates $DATA_DIR \
+  --output $OUT_DIR --id $ID --type test \
+  --graph-data-path $DATA_DIR --folder test_templates
 
 cd scripts
 echo 'Done! Thank you for your patience'
