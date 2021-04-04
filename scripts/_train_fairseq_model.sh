@@ -25,4 +25,5 @@ fairseq-train $DATA_DIR/fairseq-data-bin-$ID \
 --criterion label_smoothed_cross_entropy \
 --warmup-updates 4000 --warmup-init-lr '1e-07' \
 --max-epoch 500 --save-interval 50 --valid-subset valid,test \
---adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR/transformer_iwslt_de_en
+--adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR/transformer_iwslt_de_en \
+--batch-size 256
