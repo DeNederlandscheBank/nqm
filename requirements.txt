@@ -1,7 +1,7 @@
 # requirements file for pip. This builds an environment which can be
 # used for dataset work on RDF and fairseq/torch model training/evaluating
 torchaudio
-torch
+torch>=1.5
 torchvision
 tqdm
 rdflib
