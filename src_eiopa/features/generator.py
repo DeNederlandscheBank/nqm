@@ -20,30 +20,30 @@ import traceback
 from tqdm import tqdm
 import io
 
-from generator_utils import log_statistics, save_cache, query_dbpedia,\
- strip_brackets, encode, read_template_file
+from generator_utils import log_statistics, save_cache, query_dbpedia, \
+    strip_brackets, encode, read_template_file
 import importlib
 
 from rdflib import URIRef, term, Graph, Literal, Namespace
-from rdflib.namespace import OWL,RDF, RDFS, SKOS, XSD
+from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
 
 EXAMPLES_PER_TEMPLATE = 100
 
 
 def initialize_graph(graph_data_path):
     """ Initializes the database graph and returns the graph """
-    EIOPA_DATA_PATH = os.path.join(graph_data_path, "eiopa")
-    GLEIF_DATA_PATH = os.path.join(graph_data_path,"gleif")
+    eiopa_data_path = os.path.join(graph_data_path, "eiopa")
+    gleif_data_path = os.path.join(graph_data_path, "gleif")
 
     g = Graph()
-    with open(os.path.join(EIOPA_DATA_PATH,'eiopa_register.ttl'), "rb") as fp:
-        g.parse(data = fp.read(), format = 'turtle')
-    with open(os.path.join(GLEIF_DATA_PATH,'gleif-L1-extract.ttl'), "rb")\
+    with open(os.path.join(eiopa_data_path, 'eiopa_register.ttl'), "rb") as fp:
+        g.parse(data=fp.read(), format='turtle')
+    with open(os.path.join(gleif_data_path, 'gleif-L1-extract.ttl'), "rb") \
             as fp:
-        g.parse(data = fp.read(), format = 'turtle')
-    with open(os.path.join(GLEIF_DATA_PATH,'EntityLegalFormData.ttl'), "rb")\
+        g.parse(data=fp.read(), format='turtle')
+    with open(os.path.join(gleif_data_path, 'EntityLegalFormData.ttl'), "rb") \
             as fp:
-        g.parse(data = fp.read(), format = 'turtle')
+        g.parse(data=fp.read(), format='turtle')
     print("Graph has {} statements.".format(len(g)))
     logging.debug("Graph has {} statements.".format(len(g)))
     return g
@@ -59,6 +59,7 @@ def query_database(query):
         results.append(items)
 
     return results
+
 
 def get_name(uri):
     """ Visualize the name of uri without namespace. Taken from Willem Jan """
@@ -76,13 +77,13 @@ def build_dataset_pair(item, template):
     natural_language = getattr(template, 'question')
     query = getattr(template, 'query')
 
-    for cnt,variable in enumerate(template.variables):
+    for cnt, variable in enumerate(template.variables):
         placeholder = "<{}>".format(str.upper(variable))
         if placeholder in natural_language:
             natural_language = natural_language.replace(placeholder,
-                                        strip_brackets(item[cnt]))
+                                                        strip_brackets(item[cnt]))
         if placeholder in query:
-            query = query.replace(placeholder,strip_brackets(item[cnt]))
+            query = query.replace(placeholder, strip_brackets(item[cnt]))
 
     # for variable in binding:
     #     uri = binding[variable]['uri']
@@ -99,7 +100,7 @@ def build_dataset_pair(item, template):
     return dataset_pair
 
 
-def generate_dataset(templates,output_dir,file_mode,job_id,type):
+def generate_dataset(templates, output_dir, file_mode, job_id, type):
     """
         This function will generate dataset from the given templates and
         store it to the output directory.
@@ -108,27 +109,27 @@ def generate_dataset(templates,output_dir,file_mode,job_id,type):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     it = 0
-    with io.open(output_dir + '/data_{1}-{0}.nl'.format(type,job_id),
-                file_mode,encoding = "utf-8") as nl_questions,\
-         io.open(output_dir + '/data_{1}-{0}.ql'.format(type,job_id),
-                file_mode,encoding='utf-8') as queries:
+    with io.open(output_dir + '/data_{1}-{0}.nl'.format(type, job_id),
+                 file_mode, encoding="utf-8") as nl_questions, \
+            io.open(output_dir + '/data_{1}-{0}.ql'.format(type, job_id),
+                    file_mode, encoding='utf-8') as queries:
         for template in tqdm(templates):
             it = it + 1
             try:
                 # get list of results for generator_query
-                results = get_results_of_generator_query(cache,template)
+                results = get_results_of_generator_query(cache, template)
                 if results is None:
                     logging.debug("no data for {}".format(template.question))
                     not_instanced_templates.update([template.question])
                     continue
 
                 for item in results:
-                    dataset_pair = build_dataset_pair(item,template)
+                    dataset_pair = build_dataset_pair(item, template)
 
                     if dataset_pair is not None:
                         # dataset_pair['natural_language'] = " ".join(
                         #     dataset_pair['natural_language'].split())
-                        nl_questions.write("{}\n"\
+                        nl_questions.write("{}\n"
                                 .format(dataset_pair['natural_language']))
 
                         queries.write("{}\n".format(dataset_pair['query']))
@@ -144,7 +145,7 @@ def generate_dataset(templates,output_dir,file_mode,job_id,type):
                 raise Exception()
 
 
-def get_results_of_generator_query(cache,template):
+def get_results_of_generator_query(cache, template):
     """
     Return list of items to fill placeholder in template query by
     using the generator_query.
@@ -153,19 +154,22 @@ def get_results_of_generator_query(cache,template):
     """
     generator_query = template.generator_query
     results = None
-    # print("Get_results: Generator_query: ",generator_query)
-    def attempt_one(template): return prepare_generator_query(template)
-    def attempt_two(template):
-        return prepare_generator_query(template, add_type_requirements = False)
 
-    for attempt,prepare_query in enumerate([attempt_one,attempt_two],start=1):
+    # print("Get_results: Generator_query: ",generator_query)
+    def attempt_one(template):
+        return prepare_generator_query(template)
+
+    def attempt_two(template):
+        return prepare_generator_query(template, add_type_requirements=False)
+
+    for attempt, prepare_query in enumerate([attempt_one, attempt_two], start=1):
         generator_query = prepare_query(template)
 
         if generator_query in cache:
             results = cache[generator_query]
             break
         logging.debug('{}. attempt generator_query: {}'.format(attempt,
-                                                            generator_query))
+                                                               generator_query))
         results = query_database(generator_query)
         # print("Get_results: Results:\n ",results)
         if len(results) >= EXAMPLES_PER_TEMPLATE:
@@ -174,7 +178,7 @@ def get_results_of_generator_query(cache,template):
     return results
 
 
-def prepare_generator_query(template, add_type_requirements = True):
+def prepare_generator_query(template, add_type_requirements=True):
     """
     This function prepares the generator query to be used to query the
     database.
@@ -201,19 +205,19 @@ if __name__ == '__main__':
     requiredNamed = parser.add_argument_group('required named arguments')
     requiredNamed.add_argument('--templates', dest='templates',
                                metavar='templateFile', help='templates',
-                                required=True) # This should be a directory
-                                # when 'folder' option is used.
+                               required=True)  # This should be a directory
+    # when 'folder' option is used.
     requiredNamed.add_argument(
         '--output', dest='output', metavar='outputDirectory',
         help='dataset directory', required=True)
     requiredNamed.add_argument(
-        '--id', dest='id', metavar = 'identifier', help = 'job identifier',
-        required = True)
+        '--id', dest='id', metavar='identifier', help='job identifier',
+        required=True)
     requiredNamed.add_argument(
-        '--type', dest='type', metavar = 'filetype', help = 'type of templates: train/val or test_x'
+        '--type', dest='type', metavar='filetype', help='type of templates: train/val or test_x'
     )
     requiredNamed.add_argument(
-        '--graph-data-path', dest='graph_data_path',required = True, help = 'path to folder containing graph data'
+        '--graph-data-path', dest='graph_data_path', required=True, help='path to folder containing graph data'
     )
 
     args = parser.parse_args()
@@ -222,11 +226,11 @@ if __name__ == '__main__':
     output_dir = args.output
     job_id = args.id
     type = args.type
-    use_resources_dump = False #args.continue_generation # (MG): Value is TRUE
+    use_resources_dump = False  # args.continue_generation # (MG): Value is TRUE
     # when continuing on existing dump
     use_folder = args.use_folder
 
-   # (MG): Initiate logging file
+    # (MG): Initiate logging file
     logging.basicConfig(
         filename='{}/logs/generator_{}.log'.format(output_dir, job_id), level=logging.DEBUG)
     """
@@ -255,24 +259,24 @@ if __name__ == '__main__':
     #     resource_dump_file).read())) if use_resources_dump \
     #     else collections.Counter()
     used_resource = collections.Counter()
-    file_mode = 'a' if use_resources_dump else 'w' # (MG): append vs write
+    file_mode = 'a' if use_resources_dump else 'w'  # (MG): append vs write
     print("     Initializing Graph: This takes some time")
     graph_database = initialize_graph(args.graph_data_path)
 
     try:
-        if args.use_folder != None:
+        if args.use_folder is not None:
             print("Using folder for templates")
-            files = os.listdir(os.path.join(template_file,use_folder))
+            files = os.listdir(os.path.join(template_file, use_folder))
             for file in files:
                 file_type = type + "_" + file[-5]
                 templates = read_template_file(os.path.join(
-                                            template_file,use_folder,file))
+                    template_file, use_folder, file))
                 generate_dataset(templates, output_dir,
-                                    file_mode, job_id, file_type)
+                                 file_mode, job_id, file_type)
         else:
             templates = read_template_file(template_file)
             generate_dataset(templates, output_dir, file_mode, job_id, type)
-    except: # (MG): exception occured
+    except:  # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
     else:  # (MG): no exception happened
