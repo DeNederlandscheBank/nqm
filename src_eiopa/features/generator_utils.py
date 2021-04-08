@@ -76,6 +76,9 @@ def strip_brackets(s):
         s = s[:s.index(",")]
     return s.strip().lower()
 
+def add_quotation_marks(s):
+    return '"' + s + '"'
+
 
 REPLACEMENTS = [
     ['dbo:', 'http://dbpedia.org/ontology/', 'dbo_'],

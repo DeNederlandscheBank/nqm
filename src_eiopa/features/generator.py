@@ -20,8 +20,8 @@ import traceback
 from tqdm import tqdm
 import io
 
-from generator_utils import log_statistics, save_cache, query_dbpedia, \
-    strip_brackets, encode, read_template_file
+from src_eiopa.features.generator_utils import log_statistics, save_cache, query_dbpedia, \
+    strip_brackets, encode, read_template_file, add_quotation_marks
 import importlib
 
 from rdflib import URIRef, term, Graph, Literal, Namespace
@@ -83,8 +83,8 @@ def build_dataset_pair(item, template):
             natural_language = natural_language.replace(placeholder,
                                                         strip_brackets(item[cnt]))
         if placeholder in query:
-            query = query.replace(placeholder, strip_brackets(item[cnt]))
-
+            item_ = strip_brackets(item[cnt])
+            query = query.replace(placeholder, add_quotation_marks(item_))
     query = encode(query)
     dataset_pair = {'natural_language': natural_language,
                     'query': query}
