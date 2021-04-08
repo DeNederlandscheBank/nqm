@@ -85,15 +85,6 @@ def build_dataset_pair(item, template):
         if placeholder in query:
             query = query.replace(placeholder, strip_brackets(item[cnt]))
 
-    # for variable in binding:
-    #     uri = binding[variable]['uri']
-    #     label = binding[variable]['label']
-    #     placeholder = '<{}>'.format(str.upper(variable))
-    #     if placeholder in english and label is not None:
-    #         english = english.replace(placeholder, strip_brackets(label))
-    #     if placeholder in sparql and uri is not None:
-    #         sparql = sparql.replace(placeholder, uri)
-
     query = encode(query)
     dataset_pair = {'natural_language': natural_language,
                     'query': query}
