@@ -20,7 +20,7 @@ import traceback
 from tqdm import tqdm
 import io
 
-from generator_utils import log_statistics, save_cache, query_dbpedia, \
+from src_eiopa.features.generator_utils import log_statistics, save_cache, query_dbpedia, \
     strip_brackets, encode, read_template_file
 import importlib
 
