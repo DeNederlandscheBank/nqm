@@ -27,6 +27,8 @@ import importlib
 from rdflib import URIRef, term, Graph, Literal, Namespace
 from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
 
+from sacremoses import MosesTokenizer,MosesDetokenizer
+
 EXAMPLES_PER_TEMPLATE = 100
 
 
@@ -69,10 +71,13 @@ def get_name(uri):
         return uri
 
 
-def build_dataset_pair(item, template):
+def build_dataset_pair(item, template, mt):
     """ Taken from LiberAi
-    Returns dictionary with query and natural language question
+    Returns dataset_pair with query and natural language question
     Currently only able to work with one variable
+    Natural language question is tokenized using Moses and joined back to
+    1 string with all tokens seperated by ' '.
+    Queries are tokenized using a special hand-made tokenizer.
      """
     natural_language = getattr(template, 'question')
     query = getattr(template, 'query')
@@ -80,18 +85,19 @@ def build_dataset_pair(item, template):
     for cnt, variable in enumerate(template.variables):
         placeholder = "<{}>".format(str.upper(variable))
         if placeholder in natural_language:
-            natural_language = natural_language.replace(placeholder,
-                                                        strip_brackets(item[cnt]))
+            item_nl = strip_brackets(item[cnt])
+            natural_language = natural_language.replace(placeholder, item_nl)
+            natural_language = ' '.join(mt.tokenize(natural_language))
         if placeholder in query:
-            item_ = strip_brackets(item[cnt])
-            query = query.replace(placeholder, add_quotation_marks(item_))
+            item_ = add_quotation_marks(strip_brackets(item[cnt]))
+            query = query.replace(placeholder, item_)
     query = encode(query)
-    dataset_pair = {'natural_language': natural_language,
-                    'query': query}
+    dataset_pair = { 'natural_language': natural_language,
+                     'query': query }
     return dataset_pair
 
 
-def generate_dataset(templates, output_dir, file_mode, job_id, type):
+def generate_dataset(templates, output_dir, file_mode, job_id, type, mt):
     """
         This function will generate dataset from the given templates and
         store it to the output directory.
@@ -115,7 +121,7 @@ def generate_dataset(templates, output_dir, file_mode, job_id, type):
                     continue
 
                 for item in results:
-                    dataset_pair = build_dataset_pair(item, template)
+                    dataset_pair = build_dataset_pair(item, template, mt)
 
                     if dataset_pair is not None:
                         # dataset_pair['natural_language'] = " ".join(
@@ -205,10 +211,16 @@ if __name__ == '__main__':
         '--id', dest='id', metavar='identifier', help='job identifier',
         required=True)
     requiredNamed.add_argument(
-        '--type', dest='type', metavar='filetype', help='type of templates: train/val or test_x'
+        '--type', dest='type', metavar='filetype',required = True,
+        help='type of templates: train/val or test_x'
     )
     requiredNamed.add_argument(
-        '--graph-data-path', dest='graph_data_path', required=True, help='path to folder containing graph data'
+        '--graph-data-path', dest='graph_data_path',
+        required=True, help='path to folder containing graph data'
+    )
+    requiredNamed.add_argument(
+        '--input-language' , dest='input_lang',
+        required=True, help = "input language as abbreviation"
     )
 
     args = parser.parse_args()
@@ -254,6 +266,8 @@ if __name__ == '__main__':
     print("     Initializing Graph: This takes some time")
     graph_database = initialize_graph(args.graph_data_path)
 
+    moses_tokenizer = MosesTokenizer(lang=args.input_lang)
+
     try:
         if args.use_folder is not None:
             print("Using folder for templates")
@@ -263,10 +277,11 @@ if __name__ == '__main__':
                 templates = read_template_file(os.path.join(
                     template_file, use_folder, file))
                 generate_dataset(templates, output_dir,
-                                 file_mode, job_id, file_type)
+                                 file_mode, job_id, file_type, moses_tokenizer)
         else:
             templates = read_template_file(template_file)
-            generate_dataset(templates, output_dir, file_mode, job_id, type)
+            generate_dataset(templates, output_dir, file_mode,
+                             job_id, type, moses_tokenizer)
     except:  # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
