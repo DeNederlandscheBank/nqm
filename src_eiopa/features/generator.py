@@ -8,26 +8,19 @@ Jan-Marc Glowienke
 """
 import argparse
 import collections
-import datetime
-import json
+import importlib
+import io
 import logging
-import operator
 import os
-import random
-import re
 import sys
 import traceback
+
+from rdflib import term, Graph
+from sacremoses import MosesTokenizer
 from tqdm import tqdm
-import io
 
-from src_eiopa.features.generator_utils import log_statistics, save_cache, query_dbpedia, \
-    strip_brackets, sparql_encode, read_template_file, add_quotation_marks
-import importlib
-
-from rdflib import URIRef, term, Graph, Literal, Namespace
-from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
-
-from sacremoses import MosesTokenizer,MosesDetokenizer
+from src_eiopa.features.generator_utils import strip_brackets, sparql_encode, \
+    read_template_file, add_quotation_marks
 
 EXAMPLES_PER_TEMPLATE = 100
 
@@ -97,7 +90,7 @@ def build_dataset_pair(item, template, mt):
     return dataset_pair
 
 
-def generate_dataset(templates, output_dir, file_mode, job_id, type, mt):
+def generate_dataset(templates, output_dir, file_mode, job_id, type_, mt):
     """
         This function will generate dataset from the given templates and
         store it to the output directory.
@@ -106,9 +99,9 @@ def generate_dataset(templates, output_dir, file_mode, job_id, type, mt):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     it = 0
-    with io.open(output_dir + '/data_{1}-{0}.nl'.format(type, job_id),
+    with io.open(output_dir + '/data_{1}-{0}.nl'.format(type_, job_id),
                  file_mode, encoding="utf-8") as nl_questions, \
-            io.open(output_dir + '/data_{1}-{0}.ql'.format(type, job_id),
+            io.open(output_dir + '/data_{1}-{0}.ql'.format(type_, job_id),
                     file_mode, encoding='utf-8') as queries:
         for template in tqdm(templates):
             it = it + 1
@@ -124,10 +117,9 @@ def generate_dataset(templates, output_dir, file_mode, job_id, type, mt):
                     dataset_pair = build_dataset_pair(item, template, mt)
 
                     if dataset_pair is not None:
-                        # dataset_pair['natural_language'] = " ".join(
-                        #     dataset_pair['natural_language'].split())
                         nl_questions.write("{}\n"
-                                .format(dataset_pair['natural_language']))
+                                           .format(
+                            dataset_pair['natural_language']))
 
                         queries.write("{}\n".format(dataset_pair['query']))
 
@@ -159,7 +151,8 @@ def get_results_of_generator_query(cache, template):
     def attempt_two(template):
         return prepare_generator_query(template, add_type_requirements=False)
 
-    for attempt, prepare_query in enumerate([attempt_one, attempt_two], start=1):
+    for attempt, prepare_query in enumerate([attempt_one, attempt_two],
+                                            start=1):
         generator_query = prepare_query(template)
 
         if generator_query in cache:
@@ -211,7 +204,7 @@ if __name__ == '__main__':
         '--id', dest='id', metavar='identifier', help='job identifier',
         required=True)
     requiredNamed.add_argument(
-        '--type', dest='type', metavar='filetype',required = True,
+        '--type', dest='type', metavar='filetype', required=True,
         help='type of templates: train/val or test_x'
     )
     requiredNamed.add_argument(
@@ -219,8 +212,8 @@ if __name__ == '__main__':
         required=True, help='path to folder containing graph data'
     )
     requiredNamed.add_argument(
-        '--input-language' , dest='input_lang',
-        required=True, help = "input language as abbreviation"
+        '--input-language', dest='input_lang',
+        required=True, help="input language as abbreviation"
     )
 
     args = parser.parse_args()
@@ -235,7 +228,8 @@ if __name__ == '__main__':
 
     # (MG): Initiate logging file
     logging.basicConfig(
-        filename='{}/logs/generator_{}.log'.format(output_dir, job_id), level=logging.DEBUG)
+        filename='{}/logs/generator_{}.log'.format(output_dir, job_id),
+        level=logging.DEBUG)
     """
     # (MG): Check whether there exitst already some resources to be used
     # (MG): from previous run probably
