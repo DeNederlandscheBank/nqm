@@ -6,3 +6,4 @@ torchvision
 tqdm
 rdflib
 scikit-learn
+sacremoses
