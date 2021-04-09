@@ -221,7 +221,7 @@ if __name__ == '__main__':
     template_file = args.templates
     output_dir = args.output
     job_id = args.id
-    type = args.type
+    type_ = args.type
     use_resources_dump = False  # args.continue_generation # (MG): Value is TRUE
     # when continuing on existing dump
     use_folder = args.use_folder
@@ -267,7 +267,7 @@ if __name__ == '__main__':
             print("Using folder for templates")
             files = os.listdir(os.path.join(template_file, use_folder))
             for file in files:
-                file_type = type + "_" + file[-5]
+                file_type = type_ + "_" + file[-5]
                 templates = read_template_file(os.path.join(
                     template_file, use_folder, file))
                 generate_dataset(templates, output_dir,
@@ -275,7 +275,7 @@ if __name__ == '__main__':
         else:
             templates = read_template_file(template_file)
             generate_dataset(templates, output_dir, file_mode,
-                             job_id, type, moses_tokenizer)
+                             job_id, type_, moses_tokenizer)
     except:  # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
