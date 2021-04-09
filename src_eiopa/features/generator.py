@@ -19,7 +19,7 @@ from rdflib import term, Graph
 from sacremoses import MosesTokenizer
 from tqdm import tqdm
 
-from src_eiopa.features.generator_utils import strip_brackets, sparql_encode, \
+from generator_utils import strip_brackets, sparql_encode, \
     read_template_file, add_quotation_marks
 
 EXAMPLES_PER_TEMPLATE = 100
@@ -268,6 +268,7 @@ if __name__ == '__main__':
             files = os.listdir(os.path.join(template_file, use_folder))
             for file in files:
                 file_type = type_ + "_" + file[-5]
+                print("Generating file: {}".format(file_type))
                 templates = read_template_file(os.path.join(
                     template_file, use_folder, file))
                 generate_dataset(templates, output_dir,
