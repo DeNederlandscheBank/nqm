@@ -21,7 +21,7 @@ from tqdm import tqdm
 import io
 
 from src_eiopa.features.generator_utils import log_statistics, save_cache, query_dbpedia, \
-    strip_brackets, encode, read_template_file, add_quotation_marks
+    strip_brackets, sparql_encode, read_template_file, add_quotation_marks
 import importlib
 
 from rdflib import URIRef, term, Graph, Literal, Namespace
@@ -91,7 +91,7 @@ def build_dataset_pair(item, template, mt):
         if placeholder in query:
             item_ = add_quotation_marks(strip_brackets(item[cnt]))
             query = query.replace(placeholder, item_)
-    query = encode(query)
+    query = sparql_encode(query)
     dataset_pair = { 'natural_language': natural_language,
                      'query': query }
     return dataset_pair

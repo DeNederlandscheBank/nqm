@@ -107,7 +107,9 @@ REPLACEMENTS = [
     [' <= ', ' math_leq '],
     [' >= ', ' math_geq '],
     [' < ', ' math_lt '],
-    [' > ', ' math_gt ']
+    [' > ', ' math_gt '],
+    [' "', ' quot_mark_l '],
+    ['" ', ' quot_marks_r ']
 ]
 
 
@@ -126,25 +128,16 @@ STANDARDS = {
         'dbo_partner': ['dbp_partner']
 }
 
-def encode( sparql ):
+def sparql_encode( sparql ):
     encoded_sparql = do_replacements(sparql)
     shorter_encoded_sparql = shorten_query(encoded_sparql)
-    normalized = normalize_predicates(shorter_encoded_sparql)
-    return normalized
+    return shorter_encoded_sparql
 
-def decode ( encoded_sparql ):
+def sparql_decode ( encoded_sparql ):
     short_sparql = reverse_replacements(encoded_sparql)
     sparql = reverse_shorten_query(short_sparql)
     return sparql
 
-
-def normalize_predicates( sparql ):
-    """ (MG): Ensure the use of the same keywords """
-    for standard in STANDARDS:
-        for alternative in STANDARDS[standard]:
-            sparql = sparql.replace(alternative, standard)
-
-    return sparql
 
 
 def do_replacements( sparql ):
@@ -225,9 +218,9 @@ def extract_variables(query):
 
 
 def extract_encoded_entities( encoded_sparql ):
-    sparql = decode(encoded_sparql)
+    sparql = sparql_decode(encoded_sparql)
     entities = extract_entities(sparql)
-    encoded_entities = list(map(encode, entities))
+    encoded_entities = list(map(sparql_encode, entities))
     return encoded_entities
 
 
