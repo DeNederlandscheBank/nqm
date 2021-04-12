@@ -9,6 +9,7 @@ mkdir -p ./data/eiopa/3_processed/logs
 
 DATA_DIR=data/eiopa/1_external # input data location
 OUT_DIR=data/eiopa/3_processed
+INT_DIR=data/eiopa/2_interim
 
 echo "Generate job ID"
 # RANDOM=$(date +%s%N | cut -b10-19)
@@ -16,24 +17,43 @@ ID=$(date +"%d-%m_%H-%M")_$RANDOM
 echo "Job ID is set at:"
 echo "$ID"
 
+BPE_CODE=$OUT_DIR/$ID-bpe_codes
+
 # echo 'Putting the annotations_monument.csv in the interim folder...'
 # cp ../data/nqm/external/annotations_monument.csv ../data/nqm/interim
 
 echo 'Generating data (train, validation)...'
 python src_eiopa/features/generator.py \
   --templates $DATA_DIR/templates.csv \
-  --output data/eiopa/2_interim --id "$ID" --type train_val \
+  --output $INT_DIR --id "$ID" --type train_val \
   --graph-data-path $DATA_DIR --input-language en
 echo 'Splitting data intro train and validation...'
 python src_eiopa/features/splitter.py \
-  --inputPath  data/eiopa/2_interim/data_"$ID" \
-  --outputPath $OUT_DIR/data_"$ID" --split 80
+  --inputPath  $INT_DIR/data_"$ID" \
+  --outputPath $INT_DIR/data_"$ID" --split 80
 
 echo 'Generating test data...'
 python src_eiopa/features/generator.py \
   --templates $DATA_DIR \
-  --output $OUT_DIR --id "$ID" --type test \
+  --output $INT_DIR --id "$ID" --type test \
   --graph-data-path $DATA_DIR --folder test_templates \
   --input-language en
+
+echo 'Applying BPE using subword_nmt'
+python -m subword_nmt.learn_bpe \
+  --symbols 50 \
+  --input $INT_DIR/data_$ID-train.nl \
+  --output $BPE_CODE
+
+for L in nl ql; do
+    for f in train.$L val.$L test_1.$L test_2.$L test_3.$L; do
+        echo "apply_bpe.py to ${f}..."
+        python -m subword_nmt.apply_bpe \
+        --codes $BPE_CODE \
+        --input $INT_DIR/data_$ID-$f \
+        --output $OUT_DIR/data_$ID-$f
+    done
+done
+
 
 echo 'Done! Thank you for your patience'
