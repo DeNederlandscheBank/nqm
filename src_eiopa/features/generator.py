@@ -19,7 +19,7 @@ from rdflib import term, Graph
 from sacremoses import MosesTokenizer
 from tqdm import tqdm
 
-from generator_utils import strip_brackets, sparql_encode, \
+from generator_utils import strip_item, sparql_encode, \
     read_template_file, add_quotation_marks
 
 EXAMPLES_PER_TEMPLATE = 100
@@ -78,11 +78,11 @@ def build_dataset_pair(item, template, mt):
     for cnt, variable in enumerate(template.variables):
         placeholder = "<{}>".format(str.upper(variable))
         if placeholder in natural_language:
-            item_nl = strip_brackets(item[cnt])
+            item_nl = strip_item(item[cnt])
             natural_language = natural_language.replace(placeholder, item_nl)
             natural_language = ' '.join(mt.tokenize(natural_language))
         if placeholder in query:
-            item_ = add_quotation_marks(strip_brackets(item[cnt]))
+            item_ = add_quotation_marks(strip_item(item[cnt]))
             query = query.replace(placeholder, item_)
     query = sparql_encode(query)
     dataset_pair = { 'natural_language': natural_language,

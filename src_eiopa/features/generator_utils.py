@@ -52,8 +52,9 @@ def save_cache(file, cache):
         json.dump(ordered, outfile)
 
 
-def strip_brackets(s):
+def strip_item(s):
     s = re.sub(r'\([^)]*\)', '', s)
+    s = re.sub(r'"', '', s)
     if "," in s:
         s = s[:s.index(",")]
     return s.strip().lower()
@@ -92,7 +93,8 @@ REPLACEMENTS = [
     [' < ', ' math_lt '],
     [' > ', ' math_gt '],
     [' "', ' quot_mark_l '],
-    ['" ', ' quot_marks_r ']
+    ['" ', ' quot_mark_r '],
+    ['"', ' quot_mark_n ']
 ]
 
 
