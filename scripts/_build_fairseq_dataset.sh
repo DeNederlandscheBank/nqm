@@ -2,7 +2,7 @@
 
 # Use this script from the root!
 # Similiar to before, the ID variable needs to be corrected to the correct value.
-ID=12864
+ID=1689
 DIRECTORY=data/eiopa/5_model_input
 #COUNT_TEST=$((`ls -l data/eiopa/1_external/test_templates | wc -l` -1 ))
 FILE=$DIRECTORY/data_$ID
