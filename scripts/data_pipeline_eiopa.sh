@@ -17,10 +17,7 @@ ID=$(date +"%d-%m_%H-%M")_$RANDOM
 echo "Job ID is set at:"
 echo "$ID"
 
-BPE_CODE=$OUT_DIR/$ID-bpe_codes
-
-# echo 'Putting the annotations_monument.csv in the interim folder...'
-# cp ../data/nqm/external/annotations_monument.csv ../data/nqm/interim
+BPE_CODE=$OUT_DIR/$ID-bpe.codes
 
 echo 'Generating data (train, validation)...'
 python src_eiopa/features/generator.py \
@@ -39,21 +36,37 @@ python src_eiopa/features/generator.py \
   --graph-data-path $DATA_DIR --folder test_templates \
   --input-language en
 
-echo 'Applying BPE using subword_nmt'
-python -m subword_nmt.learn_bpe \
-  --symbols 50 \
-  --input $INT_DIR/data_$ID-train.nl \
-  --output $BPE_CODE
+echo 'Learning BPE codes using subword_nmt'
+python src_eiopa/subword-nmt/subword_nmt/learn_joint_bpe_and_vocab.py \
+  --input $INT_DIR/data_"$ID"-train.nl $INT_DIR/data_"$ID"-train.ql \
+  --output $BPE_CODE \
+  --write-vocabulary $OUT_DIR/$ID-vocab.nl $OUT_DIR/$ID-vocab.ql \
+  --symbols 50
 
+#python -m subword_nmt.learn_bpe \
+#  --symbols 50 \
+#  --input $INT_DIR/data_"$ID"-train.nl \
+#  --output "$BPE_CODE"
+
+# TODO: change for loop to use automatic counter for test_x
 for L in nl ql; do
     for f in train.$L val.$L test_1.$L test_2.$L test_3.$L; do
         echo "apply_bpe.py to ${f}..."
-        python -m subword_nmt.apply_bpe \
-        --codes $BPE_CODE \
-        --input $INT_DIR/data_$ID-$f \
-        --output $OUT_DIR/data_$ID-$f
+        python src_eiopa/subword-nmt/subword_nmt/apply_bpe.py \
+        --codes "$BPE_CODE" \
+        --input $INT_DIR/data_"$ID"-$f \
+        --output $OUT_DIR/data_"$ID"-$f \
+        --vocabulary $OUT_DIR/$ID-vocab.$L
     done
 done
+
+#python src_eiopa/subword-nmt/subword_nmt/learn_joint_bpe_and_vocab.py \
+# --input data/eiopa/3_processed/data_12-04_18-54_12942-train.nl data/eiopa/3_processed/data_12-04_18-54_12942-train.ql \
+#  --output data/eiopa/4_dictionaries/joint-bpe-codes \
+#  --write-vocabulary data/eiopa/4_dictionaries/vocab.nl data/eiopa/4_dictionaries/vocab.ql
+#
+
+
 
 
 echo 'Done! Thank you for your patience'
