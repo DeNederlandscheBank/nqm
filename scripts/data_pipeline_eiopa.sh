@@ -5,11 +5,13 @@
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs
 mkdir -p ./data/eiopa/3_processed/logs
+mkdir -p ./data/eiopa/4_dictionaries
 # mkdir ../data/nqm/processed
 
 DATA_DIR=data/eiopa/1_external # input data location
 OUT_DIR=data/eiopa/3_processed
 INT_DIR=data/eiopa/2_interim
+DICT_DIR=data/eiopa/4_dictionaries
 
 echo "Generate job ID"
 # RANDOM=$(date +%s%N | cut -b10-19)
@@ -17,7 +19,7 @@ ID=$(date +"%d-%m_%H-%M")_$RANDOM
 echo "Job ID is set at:"
 echo "$ID"
 
-BPE_CODE=$OUT_DIR/$ID-bpe.codes
+BPE_CODE=$DICT_DIR/$ID-bpe.codes
 
 echo 'Generating data (train, validation)...'
 python src_eiopa/features/generator.py \
@@ -40,13 +42,8 @@ echo 'Learning BPE codes using subword_nmt'
 python src_eiopa/subword-nmt/subword_nmt/learn_joint_bpe_and_vocab.py \
   --input $INT_DIR/data_"$ID"-train.nl $INT_DIR/data_"$ID"-train.ql \
   --output $BPE_CODE \
-  --write-vocabulary $OUT_DIR/$ID-vocab.nl $OUT_DIR/$ID-vocab.ql \
+  --write-vocabulary $DICT_DIR/$ID-vocab.nl $DICT_DIR/$ID-vocab.ql \
   --symbols 50
-
-#python -m subword_nmt.learn_bpe \
-#  --symbols 50 \
-#  --input $INT_DIR/data_"$ID"-train.nl \
-#  --output "$BPE_CODE"
 
 # TODO: change for loop to use automatic counter for test_x
 for L in nl ql; do
@@ -56,17 +53,8 @@ for L in nl ql; do
         --codes "$BPE_CODE" \
         --input $INT_DIR/data_"$ID"-$f \
         --output $OUT_DIR/data_"$ID"-$f \
-        --vocabulary $OUT_DIR/$ID-vocab.$L
+        --vocabulary $DICT_DIR/$ID-vocab.$L
     done
 done
-
-#python src_eiopa/subword-nmt/subword_nmt/learn_joint_bpe_and_vocab.py \
-# --input data/eiopa/3_processed/data_12-04_18-54_12942-train.nl data/eiopa/3_processed/data_12-04_18-54_12942-train.ql \
-#  --output data/eiopa/4_dictionaries/joint-bpe-codes \
-#  --write-vocabulary data/eiopa/4_dictionaries/vocab.nl data/eiopa/4_dictionaries/vocab.ql
-#
-
-
-
 
 echo 'Done! Thank you for your patience'
