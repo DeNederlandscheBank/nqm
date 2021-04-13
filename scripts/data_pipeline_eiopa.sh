@@ -5,13 +5,13 @@
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs
 mkdir -p ./data/eiopa/3_processed/logs
-mkdir -p ./data/eiopa/4_dictionaries
+mkdir -p ./data/eiopa/4_vocabularies
 # mkdir ../data/nqm/processed
 
 DATA_DIR=data/eiopa/1_external # input data location
 OUT_DIR=data/eiopa/3_processed
 INT_DIR=data/eiopa/2_interim
-DICT_DIR=data/eiopa/4_dictionaries
+DICT_DIR=data/eiopa/4_vocabularies
 TEST_TEMPLATES=test_templates
 
 echo "Generate job ID"
