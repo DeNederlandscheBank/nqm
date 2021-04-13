@@ -1,12 +1,16 @@
 #!/bin/bash
 
+# This script copies the required model files using $ID and places them in the
+# correct directory. The name is adapated using $ID_new. These two variables
+# have to be adapted to the desired values.
+ID=13-04_16-06_12864
+ID_NEW=12864
+
 DATA_DIR=data/eiopa/3_processed
 VOC_DIR=data/eiopa/4_vocabularies
 TGT_DIR=data/eiopa/5_model_input
 COUNT_TEST=$((`ls -l data/eiopa/1_external/test_templates | wc -l` -1 ))
 
-ID=13-04_16-06_12864
-ID_NEW=12864
 
 # Copy language pairs to correct folder
 for L in nl ql; do
