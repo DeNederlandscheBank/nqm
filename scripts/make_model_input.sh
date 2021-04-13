@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Use this script from the root!
 # This script copies the required model files using $ID and places them in the
 # correct directory. The name is adapated using $ID_new. These two variables
 # have to be adapted to the desired values.

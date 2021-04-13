@@ -1,6 +1,6 @@
 #!/bin/bash
 # full pipeline EIOPA that you can run to prepare the data and train the model
-# this script should be run from the root
+# Use this script from the root!
 
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs
