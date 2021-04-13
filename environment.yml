@@ -64,6 +64,7 @@ dependencies:
   - rdflib=5.0.0
   - readline=8.1
   - requests=2.25.1
+  - sacremoses=0.0.43
   - scikit-learn=0.22.1
   - scipy=1.4.1
   - setuptools=52.0.0

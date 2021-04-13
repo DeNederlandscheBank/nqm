@@ -1,0 +1,1 @@
+;;;where is <A>;select ?a where { ?x gleif-L1:hasLegalName <A>. ?x gleif-L1:hasLegalAddress/gleif-base:hasCity ?a. };select distinct ?a where { ?b gleif-base:hasLegalJurisdiction CountryCodes:NL.  ?b gleif-L1:hasLegalName ?a. ?b gleif-L1:hasLegalAddress/gleif-base:hasCity []. }

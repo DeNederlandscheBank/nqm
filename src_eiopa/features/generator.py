@@ -8,24 +8,19 @@ Jan-Marc Glowienke
 """
 import argparse
 import collections
-import datetime
-import json
+import importlib
+import io
 import logging
-import operator
 import os
-import random
-import re
 import sys
 import traceback
+
+from rdflib import term, Graph
+from sacremoses import MosesTokenizer
 from tqdm import tqdm
-import io
 
-from generator_utils import log_statistics, save_cache, query_dbpedia, \
-    strip_brackets, encode, read_template_file
-import importlib
-
-from rdflib import URIRef, term, Graph, Literal, Namespace
-from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
+from generator_utils import strip_item, sparql_encode, \
+    read_template_file, add_quotation_marks
 
 EXAMPLES_PER_TEMPLATE = 100
 
@@ -69,10 +64,13 @@ def get_name(uri):
         return uri
 
 
-def build_dataset_pair(item, template):
+def build_dataset_pair(item, template, mt):
     """ Taken from LiberAi
-    Returns dictionary with query and natural language question
+    Returns dataset_pair with query and natural language question
     Currently only able to work with one variable
+    Natural language question is tokenized using Moses and joined back to
+    1 string with all tokens seperated by ' '.
+    Queries are tokenized using a special hand-made tokenizer.
      """
     natural_language = getattr(template, 'question')
     query = getattr(template, 'query')
@@ -80,27 +78,19 @@ def build_dataset_pair(item, template):
     for cnt, variable in enumerate(template.variables):
         placeholder = "<{}>".format(str.upper(variable))
         if placeholder in natural_language:
-            natural_language = natural_language.replace(placeholder,
-                                                        strip_brackets(item[cnt]))
+            item_nl = strip_item(item[cnt])
+            natural_language = natural_language.replace(placeholder, item_nl)
+            natural_language = ' '.join(mt.tokenize(natural_language))
         if placeholder in query:
-            query = query.replace(placeholder, strip_brackets(item[cnt]))
-
-    # for variable in binding:
-    #     uri = binding[variable]['uri']
-    #     label = binding[variable]['label']
-    #     placeholder = '<{}>'.format(str.upper(variable))
-    #     if placeholder in english and label is not None:
-    #         english = english.replace(placeholder, strip_brackets(label))
-    #     if placeholder in sparql and uri is not None:
-    #         sparql = sparql.replace(placeholder, uri)
-
-    query = encode(query)
-    dataset_pair = {'natural_language': natural_language,
-                    'query': query}
+            item_ = add_quotation_marks(strip_item(item[cnt]))
+            query = query.replace(placeholder, item_)
+    query = sparql_encode(query)
+    dataset_pair = { 'natural_language': natural_language,
+                     'query': query }
     return dataset_pair
 
 
-def generate_dataset(templates, output_dir, file_mode, job_id, type):
+def generate_dataset(templates, output_dir, file_mode, job_id, type_, mt):
     """
         This function will generate dataset from the given templates and
         store it to the output directory.
@@ -109,9 +99,9 @@ def generate_dataset(templates, output_dir, file_mode, job_id, type):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     it = 0
-    with io.open(output_dir + '/data_{1}-{0}.nl'.format(type, job_id),
+    with io.open(output_dir + '/data_{1}-{0}.nl'.format(type_, job_id),
                  file_mode, encoding="utf-8") as nl_questions, \
-            io.open(output_dir + '/data_{1}-{0}.ql'.format(type, job_id),
+            io.open(output_dir + '/data_{1}-{0}.ql'.format(type_, job_id),
                     file_mode, encoding='utf-8') as queries:
         for template in tqdm(templates):
             it = it + 1
@@ -124,13 +114,12 @@ def generate_dataset(templates, output_dir, file_mode, job_id, type):
                     continue
 
                 for item in results:
-                    dataset_pair = build_dataset_pair(item, template)
+                    dataset_pair = build_dataset_pair(item, template, mt)
 
                     if dataset_pair is not None:
-                        # dataset_pair['natural_language'] = " ".join(
-                        #     dataset_pair['natural_language'].split())
                         nl_questions.write("{}\n"
-                                .format(dataset_pair['natural_language']))
+                                           .format(
+                            dataset_pair['natural_language']))
 
                         queries.write("{}\n".format(dataset_pair['query']))
 
@@ -162,7 +151,8 @@ def get_results_of_generator_query(cache, template):
     def attempt_two(template):
         return prepare_generator_query(template, add_type_requirements=False)
 
-    for attempt, prepare_query in enumerate([attempt_one, attempt_two], start=1):
+    for attempt, prepare_query in enumerate([attempt_one, attempt_two],
+                                            start=1):
         generator_query = prepare_query(template)
 
         if generator_query in cache:
@@ -214,10 +204,16 @@ if __name__ == '__main__':
         '--id', dest='id', metavar='identifier', help='job identifier',
         required=True)
     requiredNamed.add_argument(
-        '--type', dest='type', metavar='filetype', help='type of templates: train/val or test_x'
+        '--type', dest='type', metavar='filetype', required=True,
+        help='type of templates: train/val or test_x'
     )
     requiredNamed.add_argument(
-        '--graph-data-path', dest='graph_data_path', required=True, help='path to folder containing graph data'
+        '--graph-data-path', dest='graph_data_path',
+        required=True, help='path to folder containing graph data'
+    )
+    requiredNamed.add_argument(
+        '--input-language', dest='input_lang',
+        required=True, help="input language as abbreviation"
     )
 
     args = parser.parse_args()
@@ -225,14 +221,15 @@ if __name__ == '__main__':
     template_file = args.templates
     output_dir = args.output
     job_id = args.id
-    type = args.type
+    type_ = args.type
     use_resources_dump = False  # args.continue_generation # (MG): Value is TRUE
     # when continuing on existing dump
     use_folder = args.use_folder
 
     # (MG): Initiate logging file
     logging.basicConfig(
-        filename='{}/logs/generator_{}.log'.format(output_dir, job_id), level=logging.DEBUG)
+        filename='{}/logs/generator_{}.log'.format(output_dir, job_id),
+        level=logging.DEBUG)
     """
     # (MG): Check whether there exitst already some resources to be used
     # (MG): from previous run probably
@@ -263,19 +260,23 @@ if __name__ == '__main__':
     print("     Initializing Graph: This takes some time")
     graph_database = initialize_graph(args.graph_data_path)
 
+    moses_tokenizer = MosesTokenizer(lang=args.input_lang)
+
     try:
         if args.use_folder is not None:
             print("Using folder for templates")
             files = os.listdir(os.path.join(template_file, use_folder))
             for file in files:
-                file_type = type + "_" + file[-5]
+                file_type = type_ + "_" + file[-5]
+                print("Generating file: {}".format(file_type))
                 templates = read_template_file(os.path.join(
                     template_file, use_folder, file))
                 generate_dataset(templates, output_dir,
-                                 file_mode, job_id, file_type)
+                                 file_mode, job_id, file_type, moses_tokenizer)
         else:
             templates = read_template_file(template_file)
-            generate_dataset(templates, output_dir, file_mode, job_id, type)
+            generate_dataset(templates, output_dir, file_mode,
+                             job_id, type_, moses_tokenizer)
     except:  # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
