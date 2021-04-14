@@ -21,6 +21,8 @@ OUT_FILE=$MODEL_DIR/out_$ID/translations.txt
 pip3 install --quiet --user -r $WORK_DIR/requirements.txt
 pip3 install --quiet --user fairseq
 
+mkdir -p $MODEL_DIR/out_$ID
+
 [[ -d "$WORK_DIR" ]] && echo "$WORK_DIR exists"
 
 [[ -d "$IN_DIR/fairseq-data-bin-$ID" ]] \
@@ -31,13 +33,14 @@ pip3 install --quiet --user fairseq
 
 echo "Model training is started"
 $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
+  --tensorboard-logdir $MODEL_DIR/out_$ID/
  -a transformer_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
  --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
  --min-lr '1e-09' --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
  --criterion label_smoothed_cross_entropy --scoring bleu \
  --warmup-updates 4000 --warmup-init-lr '1e-07' \
  --max-epoch 2 --save-interval 2 --valid-subset valid \
- --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR/transformer_iwslt_de_en \
+ --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR/transformer_iwslt_de_en_$ID \
  --batch-size 256 --keep-best-checkpoints 1 --patience 50
   --eval-bleu \
   --eval-bleu-args '{"beam": 5}' \
