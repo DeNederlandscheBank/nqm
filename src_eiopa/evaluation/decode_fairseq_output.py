@@ -29,12 +29,12 @@ def read_in_generated_data(in_file):
                         "Mismatch in available true and translated "
                         "sentences! \n Please check that for every "
                         "true sentence (T) there is an translation "
-                        "available (H) in the generated file! Error "
+                        "available (D) in the generated file! Error "
                         "ocurred for translation {}".format(head))
             elif line.startswith('Generate') is True:
                 result = line[:-1]
+                print('Result:', result)
     f.close()
-    print('Result:', result)
     return results
 
 
