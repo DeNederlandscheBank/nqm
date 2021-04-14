@@ -2,8 +2,8 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=7G
-#SBATCH --time=1:00:00
+#SBATCH --mem-per-cpu=16G
+#SBATCH --time=12:00:00
 #SBATCH --job-name=fairseq_transformer
 #SBATCH --output=output-%J.log
 
@@ -33,20 +33,21 @@ mkdir -p $MODEL_DIR/out_$ID
 
 echo "Model training is started"
 $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
-  --tensorboard-logdir $MODEL_DIR/out_$ID/ \
   --arch transformer_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
   --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
   --min-lr '1e-09' --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
   --criterion label_smoothed_cross_entropy --scoring bleu \
   --warmup-updates 4000 --warmup-init-lr '1e-07' \
-  --max-epoch 2 --save-interval 2 --valid-subset valid \
+  --max-epoch 200 --save-interval 30 --valid-subset valid \
   --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR \
-  --batch-size 256 --keep-best-checkpoints 1 --patience 50 \
+  --batch-size 256 --keep-best-checkpoints 1 --patience 20 \
   --eval-bleu \
   --eval-bleu-args '{"beam": 5}' \
   --eval-bleu-detok space \
   --eval-bleu-remove-bpe \
-  --best-checkpoint-metric bleu --maximize-best-checkpoint-metric
+  --best-checkpoint-metric bleu --maximize-best-checkpoint-metric \
+  --stop-time-hours 11 \
+#  --tensorboard-logdir $MODEL_DIR/out_$ID/ \
 
 echo "Generate translations using fairseq-generate"
 $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
