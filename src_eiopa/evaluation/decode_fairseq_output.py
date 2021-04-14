@@ -18,10 +18,10 @@ def read_in_generated_data(in_file):
                 # only take index number and sentence,
                 # delete \n from end of sentence
                 tmp = [int(head.split('-')[1]), sparql_decode(sentence[:-1])]
-            elif line.startswith('H') is True:
+            elif line.startswith('D') is True:
                 head, score, sentence = line.split('\t')
                 if int(head.split('-')[1]) == tmp[0]:
-                    tmp.append(sparql_decode(line.split('\t')[2][:-1]))
+                    tmp.append(sparql_decode(sentence[:-1]))
                     results.append(tmp)
                     del tmp
                 else:
