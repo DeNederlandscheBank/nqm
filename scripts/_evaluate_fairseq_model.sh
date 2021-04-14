@@ -1,12 +1,12 @@
 #!/bin/bash
 
 ID=1689
-DATA_DIR=data/eiopa/5_model_input
+IN_DIR=data/eiopa/5_model_input
 MODEL_DIR=models/transformer_iwslt_de_en
 OUT_FILE=$MODEL_DIR/out_$ID/translation_test.txt
 
 echo "Generate translations using fairseq-generate"
-fairseq-generate $DATA_DIR/fairseq-data-bin-$ID \
+fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
   --gen-subset test \
   --path $MODEL_DIR/checkpoint_best.pt \
   --results-path $MODEL_DIR/out_$ID \
