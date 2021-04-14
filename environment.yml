@@ -94,4 +94,5 @@ dependencies:
     - pyyaml==5.4.1
     - regex==2021.3.17
     - sacrebleu==1.5.1
+    - subword-nmt==0.3.7
 prefix: /Users/jan_marcglowienke/anaconda3/envs/nqm_fairseq

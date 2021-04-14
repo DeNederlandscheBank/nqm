@@ -7,3 +7,4 @@ tqdm
 rdflib
 scikit-learn
 sacremoses
+subword-nmt
