@@ -46,7 +46,7 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --eval-bleu-detok space \
   --eval-bleu-remove-bpe \
   --best-checkpoint-metric bleu --maximize-best-checkpoint-metric \
-  --stop-time-hours 11 \
+  --stop-time-hours 11 --cpu  \
 #  --tensorboard-logdir $MODEL_DIR/out_$ID/ \
 
 echo "Generate translations using fairseq-generate"
