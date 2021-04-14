@@ -41,7 +41,7 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
  --batch-size 256 --keep-best-checkpoints 1 --patience 50
   --eval-bleu \
   --eval-bleu-args '{"beam": 5}' \
-  --eval-bleu-detok \
+  --eval-bleu-detok space \
   --eval-bleu-remove-bpe \
   --best-checkpoint-metric bleu --maximize-best-checkpoint-metric
 
