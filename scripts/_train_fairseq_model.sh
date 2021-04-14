@@ -1,8 +1,8 @@
 # #!/bin/bash
 
-IN_DIR=data/eiopa/5_model_input
-MODEL_DIR=models
 ID=1689 # find in build script or end of fairseq-data-bin
+IN_DIR=data/eiopa/5_model_input
+MODEL_DIR=/models/transformer_iwslt_de_en_$ID
 
 #mkdir -p $MODEL_DIR/checkpoints
 
@@ -36,7 +36,7 @@ fairseq-train $IN_DIR/fairseq-data-bin-$ID \
  --criterion label_smoothed_cross_entropy --scoring bleu \
  --warmup-updates 4000 --warmup-init-lr '1e-07' \
  --max-epoch 1 --save-interval 1 --valid-subset valid \
- --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR/transformer_iwslt_de_en_$ID \
+ --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR \
  --batch-size 128 --keep-best-checkpoints 1 --patience 50 \
  --eval-bleu \
   --eval-bleu-args '{"beam": 5}' \
