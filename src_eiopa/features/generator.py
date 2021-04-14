@@ -20,12 +20,8 @@ import traceback
 from tqdm import tqdm
 import io
 
-from src_eiopa.features.generator_utils import log_statistics, save_cache, query_dbpedia, \
-    strip_brackets, encode, read_template_file
-import importlib
-
-from rdflib import URIRef, term, Graph, Literal, Namespace
-from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
+from generator_utils import strip_item, sparql_encode, \
+    read_template_file, add_quotation_marks
 
 EXAMPLES_PER_TEMPLATE = 100
 

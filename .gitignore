@@ -78,8 +78,8 @@ target/
 # exclude data
 data/eiopa/2_interim
 data/eiopa/3_processed
+data/eiopa/4_vocabularies
 fairseq-data-bin-*
-
 
 # exclude model files
 *.pt
