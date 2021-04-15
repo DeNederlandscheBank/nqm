@@ -6,9 +6,12 @@ query.
 
 from fairseq.models.transformer import TransformerModel
 
-from src_eiopa.generator import query_database
-from src_eiopa.generator_utils import sparql_decode
-
+try:
+    from src_eiopa.generator import query_database
+    from src_eiopa.generator_utils import sparql_decode
+except:
+    from nqm.src_eiopa.generator import query_database
+    from nqm.src_eiopa.generator_utils import sparql_decode
 
 def translate(question, model_data_dir):
     model = TransformerModel.from_pretrained(
