@@ -60,6 +60,6 @@ $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
   --remove-bpe
 
 echo "Decode the queries"
-python3 src_eiopa/evaluation/decode_fairseq_output.py \
+python3 src_eiopa/decode_fairseq_output.py \
   --in-file $MODEL_DIR/out_$ID/generate-test.txt \
   --out-file $OUT_FILE

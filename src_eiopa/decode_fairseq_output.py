@@ -4,7 +4,7 @@
 
  Read in generated fairseq data and output file with true and generated queries
 """
-from decoder import sparql_decode
+from generator_utils import sparql_decode
 import os
 import argparse
 
