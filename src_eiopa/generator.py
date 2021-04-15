@@ -23,7 +23,7 @@ try:
     from generator_utils import strip_item, sparql_encode, \
     read_template_file, add_quotation_marks
 except:
-    from src_eiopa.generator_utils import strip_item, sparql_encode, \
+    from nqm.src_eiopa.generator_utils import strip_item, sparql_encode, \
     read_template_file, add_quotation_marks
 
 EXAMPLES_PER_TEMPLATE = 100
