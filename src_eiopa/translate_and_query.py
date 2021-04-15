@@ -36,5 +36,4 @@ if __name__ == '__main__':
     from generator import initialize_graph
 
     g = initialize_graph('data/eiopa/1_external')
-
     translate_and_query('Where is aegon?', 'models/bot', g)
