@@ -6,8 +6,8 @@ query.
 
 from fairseq.models.transformer import TransformerModel
 
-from generator import query_database
-from generator_utils import sparql_decode
+from src_eiopa.generator import query_database
+from src_eiopa.generator_utils import sparql_decode
 
 
 def translate(question, model_data_dir):
@@ -26,7 +26,6 @@ def translate(question, model_data_dir):
 
 def translate_and_query(question, model_data_dir, graph):
     sparql = translate(question, model_data_dir)
-
     results = query_database(sparql, graph)
 
     return results

@@ -19,7 +19,11 @@ from rdflib import term, Graph
 from sacremoses import MosesTokenizer
 from tqdm import tqdm
 
-from generator_utils import strip_item, sparql_encode, \
+try:
+    from generator_utils import strip_item, sparql_encode, \
+    read_template_file, add_quotation_marks
+except:
+    from src_eiopa.generator_utils import strip_item, sparql_encode, \
     read_template_file, add_quotation_marks
 
 EXAMPLES_PER_TEMPLATE = 100
