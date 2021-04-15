@@ -23,17 +23,17 @@ echo "$ID"
 BPE_CODE=$DICT_DIR/$ID-bpe.codes
 
 echo 'Generating data (train, validation)...'
-python src_eiopa/features/generator.py \
+python src_eiopa/generator.py \
   --templates $DATA_DIR/templates.csv \
   --output $INT_DIR --id "$ID" --type train_val \
   --graph-data-path $DATA_DIR --input-language en
 echo 'Splitting data intro train and validation...'
-python src_eiopa/features/splitter.py \
+python src_eiopa/splitter.py \
   --inputPath  $INT_DIR/data_"$ID" \
   --outputPath $INT_DIR/data_"$ID" --split 80
 
 echo 'Generating test data...'
-python src_eiopa/features/generator.py \
+python src_eiopa/generator.py \
   --templates $DATA_DIR \
   --output $INT_DIR --id "$ID" --type test \
   --graph-data-path $DATA_DIR --folder $TEST_TEMPLATES \

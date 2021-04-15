@@ -27,6 +27,7 @@ EXAMPLES_PER_TEMPLATE = 100
 
 def initialize_graph(graph_data_path):
     """ Initializes the database graph and returns the graph """
+    print("     Initializing Graph: This takes some time")
     eiopa_data_path = os.path.join(graph_data_path, "eiopa")
     gleif_data_path = os.path.join(graph_data_path, "gleif")
 
@@ -44,10 +45,10 @@ def initialize_graph(graph_data_path):
     return g
 
 
-def query_database(query):
+def query_database(query, graph):
     """ Returns list of query results """
     results = []
-    for row in graph_database.query(query):
+    for row in graph.query(query):
         items = []
         for item in row:
             items.append(str(get_name(item)))
@@ -90,10 +91,12 @@ def build_dataset_pair(item, template, mt):
     return dataset_pair
 
 
-def generate_dataset(templates, output_dir, file_mode, job_id, type_, mt):
+def generate_dataset(templates, output_dir, file_mode, job_id,
+                     type_, mt, graph_database):
     """
         This function will generate dataset from the given templates and
         store it to the output directory.
+        :param graph_database:
     """
     cache = dict()
     if not os.path.exists(output_dir):
@@ -107,7 +110,8 @@ def generate_dataset(templates, output_dir, file_mode, job_id, type_, mt):
             it = it + 1
             try:
                 # get list of results for generator_query
-                results = get_results_of_generator_query(cache, template)
+                results = get_results_of_generator_query(cache, template,
+                                                         graph_database)
                 if results is None:
                     logging.debug("no data for {}".format(template.question))
                     not_instanced_templates.update([template.question])
@@ -118,7 +122,7 @@ def generate_dataset(templates, output_dir, file_mode, job_id, type_, mt):
 
                     if dataset_pair is not None:
                         nl_questions.write("{}\n"
-                                           .format(
+                            .format(
                             dataset_pair['natural_language']))
 
                         queries.write("{}\n".format(dataset_pair['query']))
@@ -134,12 +138,13 @@ def generate_dataset(templates, output_dir, file_mode, job_id, type_, mt):
                 raise Exception()
 
 
-def get_results_of_generator_query(cache, template):
+def get_results_of_generator_query(cache, template, graph_database):
     """
     Return list of items to fill placeholder in template query by
     using the generator_query.
     Only returns results if sufficient amount of items was found, otherwise
     returns "None". The threshold is defined by EXAMPLES_PER_TEMPLATE
+    :param graph_database:
     """
     generator_query = template.generator_query
     results = None
@@ -160,7 +165,7 @@ def get_results_of_generator_query(cache, template):
             break
         logging.debug('{}. attempt generator_query: {}'.format(attempt,
                                                                generator_query))
-        results = query_database(generator_query)
+        results = query_database(generator_query, graph_database)
         # print("Get_results: Results:\n ",results)
         if len(results) >= EXAMPLES_PER_TEMPLATE:
             cache[generator_query] = results
@@ -257,7 +262,6 @@ if __name__ == '__main__':
     #     else collections.Counter()
     used_resource = collections.Counter()
     file_mode = 'a' if use_resources_dump else 'w'  # (MG): append vs write
-    print("     Initializing Graph: This takes some time")
     graph_database = initialize_graph(args.graph_data_path)
 
     moses_tokenizer = MosesTokenizer(lang=args.input_lang)
@@ -271,12 +275,12 @@ if __name__ == '__main__':
                 print("Generating file: {}".format(file_type))
                 templates = read_template_file(os.path.join(
                     template_file, use_folder, file))
-                generate_dataset(templates, output_dir,
-                                 file_mode, job_id, file_type, moses_tokenizer)
+                generate_dataset(templates, output_dir, file_mode, job_id,
+                                 file_type, moses_tokenizer, graph_database)
         else:
             templates = read_template_file(template_file)
-            generate_dataset(templates, output_dir, file_mode,
-                             job_id, type_, moses_tokenizer)
+            generate_dataset(templates, output_dir, file_mode, job_id, type_,
+                             moses_tokenizer, graph_database)
     except:  # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
