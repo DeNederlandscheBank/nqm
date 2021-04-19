@@ -274,6 +274,7 @@ if __name__ == '__main__':
         if args.use_folder is not None:
             print("Using folder for templates")
             files = os.listdir(os.path.join(template_file, use_folder))
+            files = list(filter(lambda f: f.endswith('.csv'), files))
             for file in files:
                 file_type = type_ + "_" + file[-5]
                 print("Generating file: {}".format(file_type))
