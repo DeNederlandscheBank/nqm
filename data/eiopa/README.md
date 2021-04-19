@@ -1,11 +1,12 @@
-The folder __1_external__ contains data from EIOPA register for European insurance companies and the accompanying GLEIF identifier data.
+The folder __1_external__ contains external data, which is used for building the dataset. This entails:
 
-Furthermore, there are several files containing templates to build the dataset for training the translation model:
+- Data from the  EIOPA register for European insurance companies and the accompanying GLEIF identifier data. This data is already in RDF format and is used to build the underlying graph
+- Templates containing natural language questions and SPARQL queries with a placeholder. This placeholder is to be filled using the generator query. There are several files for training, validation and testing. Test templates are in a folder to enable faster generation further on in the process. More detailed description can be found in the folder read-me.
 
-__Templates_train_val__: set of templates, consisting of a natural language question, the corresponding SPARQL query and a generator query to generate the dataset
+__2_interim__ contains raw natural language-query pairs, where the placeholder is already filled in.
 
-__templates_test_1__: Question is not seen before, but query should be known
+__3_preprocessed__ contains the ready-to-use language pairs. These are already byte-pair encoded.
 
-__templates_test_2__: new query, which is combination of elements in train/validation queries; extra difficulty: looks for two variables
+__4_vocabularies__ containes some "helper" files from the proprocessing like the vocabularies and the byte-pair encodings.
 
-__templates_test_3__: question and queries were seen before, but new names. This achieved by not only selecting dutch insurances, but from whole Europe
+__5_model_input__ is used to make the repo more light and is the next to 1_external the only one synced to the repo. It contains the files needed to train the network und build the binarized fairseq dataset. You can copy the files and adapt the names here manually or use a script from the script folder for this. __THIS SETUP CAN BE CHANGED LATER__. 
