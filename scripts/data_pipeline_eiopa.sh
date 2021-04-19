@@ -24,7 +24,7 @@ BPE_CODE=$DICT_DIR/$ID-bpe.codes
 
 echo 'Generating data (train, validation)...'
 python src_eiopa/generator.py \
-  --templates $DATA_DIR/templates.csv \
+  --templates $DATA_DIR/templates_newnames.csv \
   --output $INT_DIR --id "$ID" --type train_val \
   --graph-data-path $DATA_DIR --input-language en
 echo 'Splitting data intro train and validation...'
@@ -46,7 +46,7 @@ python src_eiopa/subword-nmt/subword_nmt/learn_joint_bpe_and_vocab.py \
   --write-vocabulary $DICT_DIR/$ID-vocab.nl $DICT_DIR/$ID-vocab.ql \
   --symbols 50
 
-COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES | wc -l` -1 ))
+COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 
 # Apply bpe to all relevant files
 for L in nl ql; do # both languages
