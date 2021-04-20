@@ -10,11 +10,12 @@
 module switch intel gcc
 module load python
 
+ID=15031
+
 WORK_DIR=$HOME/nqm
 SRC_DIR=$HOME/.local/bin
 IN_DIR=$WORK_DIR/data/eiopa/5_model_input
-FILE=$IN_DIR/data_14126
-ID=14126
+FILE=$IN_DIR/data_$ID
 MODEL_DIR=$WORK_DIR/models/transformer_iwslt_de_en_$ID
 OUT_FILE=$MODEL_DIR/out_$ID/translations.txt
 
