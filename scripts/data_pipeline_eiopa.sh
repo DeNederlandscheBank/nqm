@@ -44,7 +44,7 @@ python src_eiopa/subword-nmt/subword_nmt/learn_joint_bpe_and_vocab.py \
   --input $INT_DIR/data_"$ID"-train.nl $INT_DIR/data_"$ID"-train.ql \
   --output $BPE_CODE \
   --write-vocabulary $DICT_DIR/$ID-vocab.nl $DICT_DIR/$ID-vocab.ql \
-  --symbols 100
+  --symbols 500
 
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 

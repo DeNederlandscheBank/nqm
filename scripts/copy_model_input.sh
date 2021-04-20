@@ -4,13 +4,13 @@
 # This script copies the required model files using $ID and places them in the
 # correct directory. The name is adapated using $ID_new. These two variables
 # have to be adapted to the desired values.
-ID=20-04_10-53_14126
-ID_NEW=14126
+ID=20-04_19-02_15031
+ID_NEW=15031
 
 DATA_DIR=data/eiopa/3_processed
 VOC_DIR=data/eiopa/4_vocabularies
 TGT_DIR=data/eiopa/5_model_input
-COUNT_TEST=$((`ls -l data/eiopa/1_external/test_templates/*.csv | wc -l` -1 ))
+COUNT_TEST=$((`ls -l data/eiopa/1_external/test_templates/*.csv | wc -l`))
 
 
 # Copy language pairs to correct folder
