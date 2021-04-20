@@ -15,7 +15,7 @@ fairseq-train $IN_DIR/fairseq-data-bin-$ID \
  --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR \
  --batch-size 128 --keep-best-checkpoints 1 --patience 50 \
  --eval-bleu \
-  --eval-bleu-args '{"beam": 5}' \
+  --eval-bleu-args '{"beam": 5, "max_len_a": 1.2, "max_len_b": 10}' \
   --eval-bleu-detok space \
   --eval-bleu-remove-bpe \
   --best-checkpoint-metric bleu --maximize-best-checkpoint-metric
