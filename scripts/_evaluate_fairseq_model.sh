@@ -13,8 +13,7 @@ fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
   --beam 5  \
   --batch-size 128 \
   --scoring bleu \
-  --remove-bpe \
-  --empty-cache-freq 5
+  --remove-bpe
 
 echo "Decode the queries"
 python src_eiopa/decode_fairseq_output.py \
