@@ -4,9 +4,9 @@
 
  Read in generated fairseq data and output file with true and generated queries
 """
-from generator_utils import sparql_decode
-import os
 import argparse
+
+from generator_utils import sparql_decode
 
 
 def read_in_generated_data(in_file):
@@ -35,7 +35,7 @@ def read_in_generated_data(in_file):
                 result = line[:-1]
                 print('Result:', result)
     f.close()
-    return results
+    return results, result
 
 
 def write_queries(results, out_file):
@@ -47,6 +47,14 @@ def write_queries(results, out_file):
     target.close()
 
 
+def save_result(item, file, summary_file):
+    with open(summary_file, 'w', encoding='utf-8') as tgt:
+        tgt.writelines(file.split("/")[-1] + ':\n')
+        tgt.writelines(item)
+        tgt.writelines('\n')
+    tgt.close()
+
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
@@ -54,6 +62,12 @@ if __name__ == "__main__":
                         help='generated translations', required=True)
     parser.add_argument('--out-file', dest='output_file',
                         help='file directory to write output', required=True)
+    parser.add_argument('--summary-file', dest='sum_file',
+                        help='file to summarize evaluation results')
     args = parser.parse_args()
 
-    write_queries(read_in_generated_data(args.input_file), args.output_file)
+    results_list, result = read_in_generated_data(args.input_file)
+    write_queries(results_list, args.output_file)
+
+    if args.sum_file:
+        save_result(result, args.output_file, args.sum_file)
