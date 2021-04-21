@@ -10,11 +10,12 @@
 module switch intel gcc
 module load python
 
+ID=15031
+
 WORK_DIR=$HOME/nqm
 SRC_DIR=$HOME/.local/bin
 IN_DIR=$WORK_DIR/data/eiopa/5_model_input
-FILE=$IN_DIR/data_1689
-ID=1689
+FILE=$IN_DIR/data_$ID
 MODEL_DIR=$WORK_DIR/models/transformer_iwslt_de_en_$ID
 OUT_FILE=$MODEL_DIR/out_$ID/translations.txt
 
@@ -47,7 +48,7 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --eval-bleu-remove-bpe \
   --best-checkpoint-metric bleu --maximize-best-checkpoint-metric \
   --stop-time-hours 11 --cpu  \
-#  --tensorboard-logdir $MODEL_DIR/out_$ID/ \
+  --tensorboard-logdir $MODEL_DIR/out_$ID/
 
 echo "Generate translations using fairseq-generate"
 $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
