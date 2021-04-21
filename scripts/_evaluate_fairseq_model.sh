@@ -1,10 +1,10 @@
 #!/bin/bash
 
-ID=1689-13
+ID=14126
 DATA_DIR=data/eiopa/1_external
 TEST_TEMPLATES=test_templates
 IN_DIR=data/eiopa/5_model_input
-MODEL_DIR=models/transformer_iwslt_de_en_1689
+MODEL_DIR=models/transformer_iwslt_de_en_$ID
 OUT_DIR=$MODEL_DIR/out_$ID
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 
