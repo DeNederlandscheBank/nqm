@@ -1,8 +1,7 @@
 #!/bin/bash
-
 # Use this script from the root!
 # Similiar to before, the ID variable needs to be corrected to the correct value.
-ID=1689
+ID=5847
 DIRECTORY=data/eiopa/5_model_input
 DATA_DIR=data/eiopa/1_external
 TEST_TEMPLATES=test_templates

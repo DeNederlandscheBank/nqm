@@ -16,14 +16,14 @@ IN_DIR=$WORK_DIR/data/eiopa/5_model_input
 FILE=$IN_DIR/data_1689
 ID=1689
 MODEL_DIR=$WORK_DIR/models/transformer_iwslt_de_en_$ID
-OUT_FILE=$MODEL_DIR/out_$ID/translations.txt
+OUT_DIR=$MODEL_DIR/out_$ID
 
 pip3 install --quiet --user -r $WORK_DIR/requirements.txt
 pip3 install --quiet --user fairseq
 
 mkdir -p $MODEL_DIR/out_$ID
 
-[[ -d "$WORK_DIR" ]] && echo "$WORK_DIR exists"
+[[ -d "$FILE" ]] && echo "$FILE exists"
 
 [[ -d "$IN_DIR/fairseq-data-bin-$ID" ]] \
  && { echo "fairseq-data-bin-$ID already exists"} \
@@ -62,4 +62,4 @@ $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
 echo "Decode the queries"
 python3 src_eiopa/decode_fairseq_output.py \
   --in-file $MODEL_DIR/out_$ID/generate-test.txt \
-  --out-file $OUT_FILE
+  --out-file $OUT_DIR/translations.txt

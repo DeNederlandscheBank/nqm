@@ -11,6 +11,7 @@ from generator_utils import sparql_decode
 
 def read_in_generated_data(in_file):
     results = []
+    result = None
     with open(in_file, 'r') as f:
         for line in f.readlines():
             if line.startswith('T') is True:
