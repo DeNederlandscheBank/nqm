@@ -22809,6 +22809,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "h0073",
+        "nn re",
         "nn re (netherlands) n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "h0073" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22819,7 +22820,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-H0074> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "achmea reinsurance company n.v.",
+    eiopa-Base:hasIdentifyingName "achmea re",
+        "achmea reinsurance company n.v.",
         "h0074" ;
     eiopa-Base:hasInsuranceUndertakingID "h0074" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22830,7 +22832,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-H0088> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "h0088",
+    eiopa-Base:hasIdentifyingName "de hoop",
+        "h0088",
         "n.v. levensverzekering-maatschappij \"de hoop\"" ;
     eiopa-Base:hasInsuranceUndertakingID "h0088" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22842,7 +22845,8 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "h0089",
-        "stichtsche onderlinge brand-herverzekering u.a." ;
+        "stichtsche onderlinge brand-herverzekering u.a.",
+        "stichtse her" ;
     eiopa-Base:hasInsuranceUndertakingID "h0089" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "01/09/2008 02:00:00" ;
@@ -22853,6 +22857,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "h0125",
+        "rabo her",
         "rabo herverzekeringsmaatschappij n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "h0125" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22863,7 +22868,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-H0132> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "abn amro captive n.v.",
+    eiopa-Base:hasIdentifyingName "abn amro captive",
+        "abn amro captive n.v.",
         "h0132" ;
     eiopa-Base:hasInsuranceUndertakingID "h0132" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22874,7 +22880,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-H0133> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "blue square re n.v.",
+    eiopa-Base:hasIdentifyingName "blue square re",
+        "blue square re n.v.",
         "h0133" ;
     eiopa-Base:hasInsuranceUndertakingID "h0133" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22886,7 +22893,8 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "h0134",
-        "n.v. univé her" ;
+        "n.v. univé her",
+        "unive her" ;
     eiopa-Base:hasInsuranceUndertakingID "h0134" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "11/09/2012 02:00:00" ;
@@ -22896,7 +22904,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0008> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "aegon spaarkas n.v.",
+    eiopa-Base:hasIdentifyingName "aegon spaarkas",
+        "aegon spaarkas n.v.",
         "l0008" ;
     eiopa-Base:hasInsuranceUndertakingID "l0008" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22907,7 +22916,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0017> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "goudse levensverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "goudse leven",
+        "goudse levensverzekeringen n.v.",
         "l0017" ;
     eiopa-Base:hasInsuranceUndertakingID "l0017" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22929,7 +22939,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0029> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "l0029",
+    eiopa-Base:hasIdentifyingName "gravenhage",
+        "l0029",
         "onderlinge levensverzekering-maatschappij \"'s-gravenhage\" u.a." ;
     eiopa-Base:hasInsuranceUndertakingID "l0029" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22941,7 +22952,8 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0046",
-        "nationale-nederlanden levensverzekering maatschappij n.v." ;
+        "nationale-nederlanden levensverzekering maatschappij n.v.",
+        "nn leven" ;
     eiopa-Base:hasInsuranceUndertakingID "l0046" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "01/01/1901 01:00:00" ;
@@ -22951,7 +22963,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0058> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "asr levensverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "asr leven",
+        "asr levensverzekering n.v.",
         "l0058" ;
     eiopa-Base:hasInsuranceUndertakingID "l0058" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22962,7 +22975,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0077> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "aegon levensverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "aegon leven",
+        "aegon levensverzekering n.v.",
         "l0077" ;
     eiopa-Base:hasInsuranceUndertakingID "l0077" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22974,6 +22988,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0093",
+        "vvaa leven",
         "vvaa levensverzekeringen n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0093" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22985,6 +23000,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0104",
+        "monuta",
         "monuta verzekeringen n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0104" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -22996,6 +23012,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0116",
+        "robein leven ",
         "robein leven n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0116" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23007,6 +23024,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0119",
+        "scildon",
         "scildon n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0119" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23017,7 +23035,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0129> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "klaverblad levensverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "klaverblad leven",
+        "klaverblad levensverzekering n.v.",
         "l0129" ;
     eiopa-Base:hasInsuranceUndertakingID "l0129" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23029,6 +23048,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0131",
+        "proteq leven",
         "proteq levensverzekeringen n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0131" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23039,7 +23059,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0150> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "abn amro levensverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "abn amro leven",
+        "abn amro levensverzekering n.v.",
         "l0150" ;
     eiopa-Base:hasInsuranceUndertakingID "l0150" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23051,6 +23072,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0151",
+        "leidsche",
         "leidsche verzekering maatschappij n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0151" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23062,6 +23084,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0155",
+        "waard leven",
         "waard leven n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0155" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23072,7 +23095,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0171> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "dela natura- en levensverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "dela",
+        "dela natura- en levensverzekeringen n.v.",
         "l0171" ;
     eiopa-Base:hasInsuranceUndertakingID "l0171" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23083,7 +23107,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0180> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "achmea pensioen- en levensverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "achmea leven",
+        "achmea pensioen- en levensverzekeringen n.v.",
         "l0180" ;
     eiopa-Base:hasInsuranceUndertakingID "l0180" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23094,7 +23119,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0182> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "brand new day levensverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "brand new day",
+        "brand new day levensverzekeringen n.v.",
         "l0182" ;
     eiopa-Base:hasInsuranceUndertakingID "l0182" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23105,7 +23131,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-L0187> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "bnp paribas cardif levensverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "bnp paribas cardif",
+        "bnp paribas cardif levensverzekeringen n.v.",
         "l0187" ;
     eiopa-Base:hasInsuranceUndertakingID "l0187" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23117,7 +23144,8 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0215",
-        "n.v. noordhollandsche van 1816, levensverzekeringsmaatschappij" ;
+        "n.v. noordhollandsche van 1816, levensverzekeringsmaatschappij",
+        "noordhollandsche van 1816 leven" ;
     eiopa-Base:hasInsuranceUndertakingID "l0215" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "03/01/2008 01:00:00" ;
@@ -23128,6 +23156,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0216",
+        "srlev ",
         "srlev n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0216" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23139,6 +23168,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "n0015",
+        "yarden",
         "yarden uitvaartverzekeringen n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "n0015" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23182,7 +23212,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-R140256> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "lifetri verzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "lifetri",
+        "lifetri verzekeringen n.v.",
         "r140256" ;
     eiopa-Base:hasInsuranceUndertakingID "r140256" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23216,6 +23247,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "r161589",
+        "uk p&i club",
         "uk p&i club n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "r161589" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23226,7 +23258,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-R162036> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "lemonade insurance n.v.",
+    eiopa-Base:hasIdentifyingName "lemonade",
+        "lemonade insurance n.v.",
         "r162036" ;
     eiopa-Base:hasInsuranceUndertakingID "r162036" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23237,7 +23270,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0010> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "vvaa schadeverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "vvaa schade",
+        "vvaa schadeverzekeringen n.v.",
         "w0010" ;
     eiopa-Base:hasInsuranceUndertakingID "w0010" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23248,7 +23282,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0035> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "goudse schadeverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "goudse schade",
+        "goudse schadeverzekeringen n.v.",
         "w0035" ;
     eiopa-Base:hasInsuranceUndertakingID "w0035" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23259,7 +23294,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0060> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "mercurius schadeverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "mercurius",
+        "mercurius schadeverzekeringen n.v.",
         "w0060" ;
     eiopa-Base:hasInsuranceUndertakingID "w0060" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23270,7 +23306,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0064> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "n.v. verzekeringsbedrijf groot amsterdam (vga)",
+    eiopa-Base:hasIdentifyingName "groot amsterdam (vga)",
+        "n.v. verzekeringsbedrijf groot amsterdam (vga)",
         "w0064" ;
     eiopa-Base:hasInsuranceUndertakingID "w0064" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23281,7 +23318,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0065> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "aegon schadeverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "aegon schade",
+        "aegon schadeverzekering n.v.",
         "w0065" ;
     eiopa-Base:hasInsuranceUndertakingID "w0065" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23292,7 +23330,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0083> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "vivat schadeverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "reaal schade",
+        "vivat schadeverzekeringen n.v.",
         "w0083" ;
     eiopa-Base:hasInsuranceUndertakingID "w0083" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23304,6 +23343,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "n.v. noordhollandsche van 1816, schadeverzekeringsmaatschappij",
+        "noordhollandsche van 1816 schade",
         "w0087" ;
     eiopa-Base:hasInsuranceUndertakingID "w0087" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23314,7 +23354,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0109> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "klaverblad schadeverzekeringsmaatschappij n.v.",
+    eiopa-Base:hasIdentifyingName "klaverblad schade",
+        "klaverblad schadeverzekeringsmaatschappij n.v.",
         "w0109" ;
     eiopa-Base:hasInsuranceUndertakingID "w0109" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23326,6 +23367,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "nationale-nederlanden schadeverzekering maatschappij n.v.",
+        "nn schade",
         "w0123" ;
     eiopa-Base:hasInsuranceUndertakingID "w0123" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23337,7 +23379,8 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "onderlinge verzekering maatschappij zlm u.a.",
-        "w0128" ;
+        "w0128",
+        "zlm" ;
     eiopa-Base:hasInsuranceUndertakingID "w0128" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "01/01/1901 01:00:00" ;
@@ -23347,7 +23390,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0132> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "asr schadeverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "asr schade ",
+        "asr schadeverzekering n.v.",
         "w0132" ;
     eiopa-Base:hasInsuranceUndertakingID "w0132" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23358,7 +23402,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0143> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "unilever insurances n.v.",
+    eiopa-Base:hasIdentifyingName "unilever insurances ",
+        "unilever insurances n.v.",
         "w0143" ;
     eiopa-Base:hasInsuranceUndertakingID "w0143" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23369,7 +23414,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0145> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "n.v. schadeverzekering-maatschappij bovemij",
+    eiopa-Base:hasIdentifyingName "bovemij",
+        "n.v. schadeverzekering-maatschappij bovemij",
         "w0145" ;
     eiopa-Base:hasInsuranceUndertakingID "w0145" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23380,7 +23426,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0147> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "ansvar verzekeringsmaatschappij n.v.",
+    eiopa-Base:hasIdentifyingName "ansvar",
+        "ansvar verzekeringsmaatschappij n.v.",
         "w0147" ;
     eiopa-Base:hasInsuranceUndertakingID "w0147" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23391,7 +23438,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0164> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge verzekering maatschappij donatus u.a.",
+    eiopa-Base:hasIdentifyingName "donatus",
+        "onderlinge verzekering maatschappij donatus u.a.",
         "w0164" ;
     eiopa-Base:hasInsuranceUndertakingID "w0164" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23403,7 +23451,8 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "algemene friese onderlinge schadeverzekeringsmaatschappij \"zevenwouden\" u.a.",
-        "w0174" ;
+        "w0174",
+        "zevenwouden" ;
     eiopa-Base:hasInsuranceUndertakingID "w0174" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "01/01/1901 01:00:00" ;
@@ -23436,6 +23485,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "e.o.c. onderlinge schepenverzekering u.a.",
+        "eoc",
         "w0219" ;
     eiopa-Base:hasInsuranceUndertakingID "w0219" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23446,7 +23496,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0281> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge verzekeringsmaatschappij univé samen u.a.",
+    eiopa-Base:hasIdentifyingName "midden drenthe",
+        "onderlinge verzekeringsmaatschappij univé samen u.a.",
         "w0281" ;
     eiopa-Base:hasInsuranceUndertakingID "w0281" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23479,7 +23530,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0319> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "n.v. schadeverzekeringsmaatschappij maas lloyd",
+    eiopa-Base:hasIdentifyingName "maas lloyd",
+        "n.v. schadeverzekeringsmaatschappij maas lloyd",
         "w0319" ;
     eiopa-Base:hasInsuranceUndertakingID "w0319" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23512,7 +23564,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0389> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge verzekerings-maatschappij \"noord nederlandsche p&i club\" u.a.",
+    eiopa-Base:hasIdentifyingName "noord-nederlandsche p&i club",
+        "onderlinge verzekerings-maatschappij \"noord nederlandsche p&i club\" u.a.",
         "w0389" ;
     eiopa-Base:hasInsuranceUndertakingID "w0389" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23534,7 +23587,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0449> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge hagelverzekering maatschappij agriver b.a.",
+    eiopa-Base:hasIdentifyingName "agriver hagel",
+        "onderlinge hagelverzekering maatschappij agriver b.a.",
         "w0449" ;
     eiopa-Base:hasInsuranceUndertakingID "w0449" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23545,7 +23599,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1027> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "das nederlandse rechtsbijstand verzekeringmaatschappij n.v.",
+    eiopa-Base:hasIdentifyingName "das",
+        "das nederlandse rechtsbijstand verzekeringmaatschappij n.v.",
         "w1027" ;
     eiopa-Base:hasInsuranceUndertakingID "w1027" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23557,6 +23612,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "de vereende n.v.",
+        "verenigde assurantiebedrijven",
         "w1031" ;
     eiopa-Base:hasInsuranceUndertakingID "w1031" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23578,7 +23634,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1104> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "bos fruit aardappelen onderlinge verzekeringen bfao u.a.",
+    eiopa-Base:hasIdentifyingName "bos fruit aardappelen",
+        "bos fruit aardappelen onderlinge verzekeringen bfao u.a.",
         "w1104" ;
     eiopa-Base:hasInsuranceUndertakingID "w1104" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23589,7 +23646,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1219> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "abn amro schadeverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "abn amro schade ",
+        "abn amro schadeverzekering n.v.",
         "w1219" ;
     eiopa-Base:hasInsuranceUndertakingID "w1219" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23601,6 +23659,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "glasassurantie maatschappij midglas n.v.",
+        "midglas",
         "w1258" ;
     eiopa-Base:hasInsuranceUndertakingID "w1258" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23622,7 +23681,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1423> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge waarborgmaatschappij centrale zorgverzekeraars groep, aanvullende verzekering zorgverzekeraar u.a.",
+    eiopa-Base:hasIdentifyingName "cz groep aanvullende",
+        "onderlinge waarborgmaatschappij centrale zorgverzekeraars groep, aanvullende verzekering zorgverzekeraar u.a.",
         "w1423" ;
     eiopa-Base:hasInsuranceUndertakingID "w1423" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23633,7 +23693,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1487> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "n.v. hagelunie",
+    eiopa-Base:hasIdentifyingName "hagelunie",
+        "n.v. hagelunie",
         "w1487" ;
     eiopa-Base:hasInsuranceUndertakingID "w1487" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23644,7 +23705,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1497> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "mutual insurance association \"munis\" (onderlinge verzekeringsmaatschappij \"munis\") u.a.",
+    eiopa-Base:hasIdentifyingName "munis",
+        "mutual insurance association \"munis\" (onderlinge verzekeringsmaatschappij \"munis\") u.a.",
         "w1497" ;
     eiopa-Base:hasInsuranceUndertakingID "w1497" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23655,7 +23717,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1576> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "dsw ziektekostenverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "dsw ziektekosten ",
+        "dsw ziektekostenverzekeringen n.v.",
         "w1576" ;
     eiopa-Base:hasInsuranceUndertakingID "w1576" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23666,7 +23729,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1589> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "reis- en rechtshulp n.v.",
+    eiopa-Base:hasIdentifyingName "reis en rechtshulp ",
+        "reis- en rechtshulp n.v.",
         "w1589" ;
     eiopa-Base:hasInsuranceUndertakingID "w1589" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23678,6 +23742,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "centrale ziektekostenverzekering nzv n.v.",
+        "delta lloyd zorg",
         "w1619" ;
     eiopa-Base:hasInsuranceUndertakingID "w1619" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23688,7 +23753,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1642> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "n.v. verzekering maatschappij \"de burcht\"",
+    eiopa-Base:hasIdentifyingName "de burcht",
+        "n.v. verzekering maatschappij \"de burcht\"",
         "w1642" ;
     eiopa-Base:hasInsuranceUndertakingID "w1642" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23699,7 +23765,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1650> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "uvm verzekeringsmaatschappij n.v.",
+    eiopa-Base:hasIdentifyingName "uvm",
+        "uvm verzekeringsmaatschappij n.v.",
         "w1650" ;
     eiopa-Base:hasInsuranceUndertakingID "w1650" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23710,7 +23777,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1680> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "nn non-life insurance n.v.",
+    eiopa-Base:hasIdentifyingName "ing insurance services ",
+        "nn non-life insurance n.v.",
         "w1680" ;
     eiopa-Base:hasInsuranceUndertakingID "w1680" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23721,7 +23789,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1686> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "achmea schadeverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "achmea schade",
+        "achmea schadeverzekeringen n.v.",
         "w1686" ;
     eiopa-Base:hasInsuranceUndertakingID "w1686" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23732,7 +23801,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1702> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "actua schadeverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "actua schade ",
+        "actua schadeverzekering n.v.",
         "w1702" ;
     eiopa-Base:hasInsuranceUndertakingID "w1702" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23743,7 +23813,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1706> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge waarborgmaatschappij voor instellingen in de gezondheidszorg medirisk b.a.",
+    eiopa-Base:hasIdentifyingName "medirisk",
+        "onderlinge waarborgmaatschappij voor instellingen in de gezondheidszorg medirisk b.a.",
         "w1706" ;
     eiopa-Base:hasInsuranceUndertakingID "w1706" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23754,7 +23825,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1709> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "akzo nobel assurantie n.v.",
+    eiopa-Base:hasIdentifyingName "akzo nobel assurantie ",
+        "akzo nobel assurantie n.v.",
         "w1709" ;
     eiopa-Base:hasInsuranceUndertakingID "w1709" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23765,7 +23837,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1710> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "ohra ziektekostenverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "ohra ziektekosten",
+        "ohra ziektekostenverzekeringen n.v.",
         "w1710" ;
     eiopa-Base:hasInsuranceUndertakingID "w1710" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23788,6 +23861,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "n.v. schadeverzekering metaal en technische bedrijfstakken",
+        "schade metaal en technische bedrijfstakken",
         "w1727" ;
     eiopa-Base:hasInsuranceUndertakingID "w1727" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23798,7 +23872,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1743> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "oom global care n.v.",
+    eiopa-Base:hasIdentifyingName "oom global care ",
+        "oom global care n.v.",
         "w1743" ;
     eiopa-Base:hasInsuranceUndertakingID "w1743" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23809,7 +23884,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1749> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "oom schadeverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "oom schade ",
+        "oom schadeverzekering n.v.",
         "w1749" ;
     eiopa-Base:hasInsuranceUndertakingID "w1749" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23820,7 +23896,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1752> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge waarborgmaatschappij centramed b.a.",
+    eiopa-Base:hasIdentifyingName "centramed",
+        "onderlinge waarborgmaatschappij centramed b.a.",
         "w1752" ;
     eiopa-Base:hasInsuranceUndertakingID "w1752" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23832,6 +23909,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "w1767",
+        "waard schade ",
         "waard schade n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "w1767" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23842,7 +23920,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1788> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onvz ziektekostenverzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "onvz ziektekostenverzekeraar",
+        "onvz ziektekostenverzekeraar n.v.",
         "w1788" ;
     eiopa-Base:hasInsuranceUndertakingID "w1788" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23854,6 +23933,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "onderlinge waarborgmaatschappij sazas u.a.",
+        "sazas",
         "w1789" ;
     eiopa-Base:hasInsuranceUndertakingID "w1789" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23864,7 +23944,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1805> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "ns insurance n.v.",
+    eiopa-Base:hasIdentifyingName "ns insurance ",
+        "ns insurance n.v.",
         "w1805" ;
     eiopa-Base:hasInsuranceUndertakingID "w1805" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23876,6 +23957,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "onderlinge verzekeringmaatschappij \"som\" u.a.",
+        "som",
         "w1806" ;
     eiopa-Base:hasInsuranceUndertakingID "w1806" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23887,6 +23969,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "w1817",
+        "zilveren kruis zorg",
         "zilveren kruis zorgverzekeringen n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "w1817" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23897,7 +23980,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1825> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "achmea zorgverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "achmea zorg",
+        "achmea zorgverzekeringen n.v.",
         "w1825" ;
     eiopa-Base:hasInsuranceUndertakingID "w1825" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23908,7 +23992,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1840> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "bnp paribas cardif schadeverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "bnp paribas cardif",
+        "bnp paribas cardif schadeverzekeringen n.v.",
         "w1840" ;
     eiopa-Base:hasInsuranceUndertakingID "w1840" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23919,7 +24004,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1860> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "anker insurance company n.v.",
+    eiopa-Base:hasIdentifyingName "anker",
+        "anker insurance company n.v.",
         "w1860" ;
     eiopa-Base:hasInsuranceUndertakingID "w1860" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23942,6 +24028,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "n.v. univé schade",
+        "unive schade",
         "w1875" ;
     eiopa-Base:hasInsuranceUndertakingID "w1875" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23953,6 +24040,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "n.v. univé zorg",
+        "unive zorg",
         "w1877" ;
     eiopa-Base:hasInsuranceUndertakingID "w1877" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23963,7 +24051,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1886> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onvz aanvullende verzekering n.v.",
+    eiopa-Base:hasIdentifyingName "onvz aanvullende",
+        "onvz aanvullende verzekering n.v.",
         "w1886" ;
     eiopa-Base:hasInsuranceUndertakingID "w1886" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23975,6 +24064,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "cz zorgverzekeringen n.v.",
+        "ohra zorg",
         "w1889" ;
     eiopa-Base:hasInsuranceUndertakingID "w1889" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23985,7 +24075,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1899> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge waarborgmaatschappij dsw zorgverzekeraar u.a.",
+    eiopa-Base:hasIdentifyingName "dsw zorg",
+        "onderlinge waarborgmaatschappij dsw zorgverzekeraar u.a.",
         "w1899" ;
     eiopa-Base:hasInsuranceUndertakingID "w1899" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23996,7 +24087,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1902> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "stad holland zorgverzekeraar onderlinge waarborgmaatschappij u.a.",
+    eiopa-Base:hasIdentifyingName "stad holland zorg",
+        "stad holland zorgverzekeraar onderlinge waarborgmaatschappij u.a.",
         "w1902" ;
     eiopa-Base:hasInsuranceUndertakingID "w1902" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24008,7 +24100,8 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u.a.",
-        "w1904" ;
+        "w1904",
+        "zorg en zekerheid" ;
     eiopa-Base:hasInsuranceUndertakingID "w1904" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "01/01/2006 01:00:00" ;
@@ -24018,7 +24111,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1906> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge waarborgmaatschappij centrale zorgverzekeraars groep, zorgverzekeraar u.a.",
+    eiopa-Base:hasIdentifyingName "cz groep, zorg",
+        "onderlinge waarborgmaatschappij centrale zorgverzekeraars groep, zorgverzekeraar u.a.",
         "w1906" ;
     eiopa-Base:hasInsuranceUndertakingID "w1906" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24029,7 +24123,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1908> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "iza zorgverzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "iza zorg",
+        "iza zorgverzekeraar n.v.",
         "w1908" ;
     eiopa-Base:hasInsuranceUndertakingID "w1908" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24041,6 +24136,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "n.v. zorgverzekeraar umc",
+        "umc",
         "w1909" ;
     eiopa-Base:hasInsuranceUndertakingID "w1909" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24051,7 +24147,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1910> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "national academic verzekeringsmaatschappij n.v.",
+    eiopa-Base:hasIdentifyingName "national academic",
+        "national academic verzekeringsmaatschappij n.v.",
         "w1910" ;
     eiopa-Base:hasInsuranceUndertakingID "w1910" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24062,7 +24159,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1911> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "interpolis zorgverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "interpolis zorg",
+        "interpolis zorgverzekeringen n.v.",
         "w1911" ;
     eiopa-Base:hasInsuranceUndertakingID "w1911" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24073,7 +24171,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1913> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "fbto zorgverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "fbto zorg",
+        "fbto zorgverzekeringen n.v.",
         "w1913" ;
     eiopa-Base:hasInsuranceUndertakingID "w1913" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24084,7 +24183,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1920> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "vgz zorgverzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "vgz zorg",
+        "vgz zorgverzekeraar n.v.",
         "w1920" ;
     eiopa-Base:hasInsuranceUndertakingID "w1920" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24095,7 +24195,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1921> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "asr basis ziektekostenverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "asr basis ziektekosten",
+        "asr basis ziektekostenverzekeringen n.v.",
         "w1921" ;
     eiopa-Base:hasInsuranceUndertakingID "w1921" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24106,7 +24207,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1922> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "asr aanvullende ziektekostenverzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "asr aanvullende ziektekosten",
+        "asr aanvullende ziektekostenverzekeringen n.v.",
         "w1922" ;
     eiopa-Base:hasInsuranceUndertakingID "w1922" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24118,6 +24220,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "univé noord-holland brandverzekeraar n.v.",
+        "univé regio + brand",
         "w1938" ;
     eiopa-Base:hasInsuranceUndertakingID "w1938" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24129,6 +24232,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "w1940",
+        "woningborg ",
         "woningborg n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "w1940" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24139,7 +24243,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1942> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "eno zorgverzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "eno zorg",
+        "eno zorgverzekeraar n.v.",
         "w1942" ;
     eiopa-Base:hasInsuranceUndertakingID "w1942" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24150,7 +24255,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1943> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "eno aanvullende verzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "eno aanvullend",
+        "eno aanvullende verzekeringen n.v.",
         "w1943" ;
     eiopa-Base:hasInsuranceUndertakingID "w1943" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24161,7 +24267,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1954> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "univé stad en land brandverzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "univé stad en land brand",
+        "univé stad en land brandverzekeraar n.v.",
         "w1954" ;
     eiopa-Base:hasInsuranceUndertakingID "w1954" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24172,7 +24279,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1958> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "roeminck insurance n.v.",
+    eiopa-Base:hasIdentifyingName "roeminck insurance",
+        "roeminck insurance n.v.",
         "w1958" ;
     eiopa-Base:hasInsuranceUndertakingID "w1958" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24183,7 +24291,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1961> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "univé oost brandverzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "univé oost brand",
+        "univé oost brandverzekeraar n.v.",
         "w1961" ;
     eiopa-Base:hasInsuranceUndertakingID "w1961" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24194,7 +24303,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1963> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "univé noord-nederland verzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "univé noord-nederland",
+        "univé noord-nederland verzekeraar n.v.",
         "w1963" ;
     eiopa-Base:hasInsuranceUndertakingID "w1963" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24205,7 +24315,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1969> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "univé zuid-nederland verzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "univé rivierenland brand",
+        "univé zuid-nederland verzekeringen n.v.",
         "w1969" ;
     eiopa-Base:hasInsuranceUndertakingID "w1969" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24216,7 +24327,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1972> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "kmu verzekeringen n.v.",
+    eiopa-Base:hasIdentifyingName "kmu",
+        "kmu verzekeringen n.v.",
         "w1972" ;
     eiopa-Base:hasInsuranceUndertakingID "w1972" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24227,7 +24339,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1973> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "univé dichtbij brandverzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "univé dichtbij brand",
+        "univé dichtbij brandverzekeraar n.v.",
         "w1973" ;
     eiopa-Base:hasInsuranceUndertakingID "w1973" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24238,7 +24351,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1974> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "samenwerking glasverzekering n.v.",
+    eiopa-Base:hasIdentifyingName "samenwerking glas",
+        "samenwerking glasverzekering n.v.",
         "w1974" ;
     eiopa-Base:hasInsuranceUndertakingID "w1974" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24250,6 +24364,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "univé het groene hart brandverzekeraar n.v.",
+        "univé zuid-holland brand",
         "w1976" ;
     eiopa-Base:hasInsuranceUndertakingID "w1976" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24260,7 +24375,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1977> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "menzis n.v.",
+    eiopa-Base:hasIdentifyingName "menzis",
+        "menzis n.v.",
         "w1977" ;
     eiopa-Base:hasInsuranceUndertakingID "w1977" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24271,7 +24387,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1978> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "menzis zorgverzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "menzis zorg",
+        "menzis zorgverzekeraar n.v.",
         "w1978" ;
     eiopa-Base:hasInsuranceUndertakingID "w1978" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24282,7 +24399,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1981> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "anderzorg n.v.",
+    eiopa-Base:hasIdentifyingName "anderzorg",
+        "anderzorg n.v.",
         "w1981" ;
     eiopa-Base:hasInsuranceUndertakingID "w1981" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24293,7 +24411,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1983> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "de friesland zorgverzekeraar n.v.",
+    eiopa-Base:hasIdentifyingName "de friesland zorg",
+        "de friesland zorgverzekeraar n.v.",
         "w1983" ;
     eiopa-Base:hasInsuranceUndertakingID "w1983" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24305,6 +24424,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "tvm verzekeringen n.v.",
+        "tvm zakelijk",
         "w1986" ;
     eiopa-Base:hasInsuranceUndertakingID "w1986" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24315,7 +24435,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1988> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "enel insurance n.v.",
+    eiopa-Base:hasIdentifyingName "enel insurance",
+        "enel insurance n.v.",
         "w1988" ;
     eiopa-Base:hasInsuranceUndertakingID "w1988" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
