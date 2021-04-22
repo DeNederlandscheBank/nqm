@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ID=5847
-ID_MODEL = 14126
+ID_MODEL=14126
 DATA_DIR=data/eiopa/1_external
 TEST_TEMPLATES=test_templates
 IN_DIR=data/eiopa/5_model_input
@@ -26,7 +26,13 @@ for f in test_{1..$COUNT_TEST}; do
   echo "Decode the queries for $f"
   python src_eiopa/decode_fairseq_output.py \
     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
-    --out-file $OUT_DIR/encoded-$f.txt \
+    --out-file $OUT_DIR/decoded-$f.txt \
     --summary-file $OUT_DIR/summary-$ID.txt
+
+  echo "Evaluate query performance"
+  python src_eiopa/query_results_evaluation.py \
+    --graph-path $DATA_DIR \
+    --query-file $OUT_DIR/decoded-$f.txt \
+    --out-file $OUT_DIR/queries_and_results-$f.txt
 done
 
