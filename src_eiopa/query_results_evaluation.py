@@ -6,11 +6,10 @@ For every pair, the result is compared and in the end the accuracy is given.
 """
 
 import argparse
+import logging
 
-import pyparsing
-
-from generator import initialize_graph, query_database
 from decode_fairseq_output import save_result
+from generator import initialize_graph, query_database
 
 
 def compare_results(graph, query_pairs):
@@ -22,11 +21,12 @@ def compare_results(graph, query_pairs):
         try:
             result_true = query_database(pair[0], graph)
         except:
-            print("Mistake in ", pair[0])
+            logging.info(f'Error in True Query: {pair[0]}')
             continue
         try:
             result_generated = query_database(pair[1], graph)
         except:
+            logging.info(f'Error in Translated Query: {pair[1]}')
             cnt_false += 1
             continue
         if result_true and result_generated:  # value is not []
@@ -47,7 +47,7 @@ def compare_results(graph, query_pairs):
     else:
         accuracy = 0
 
-    return [accuracy,cnt_correct,cnt_false], queries_results
+    return [accuracy, cnt_correct, cnt_false], queries_results
 
 
 def read_queries(file):
@@ -82,11 +82,14 @@ if __name__ == '__main__':
                         help='file to summarize evaluation results')
     args = parser.parse_args()
 
+    log_file = f'{args.out_file[:-4]}.log'
+    logging.basicConfig(filename=log_file, level=logging.DEBUG)
     g = initialize_graph(args.graph_path)
     queries = read_queries(args.query_file)
     acc, results = compare_results(g, queries)
 
     save_query_results(args.out_file, results)
     if args.sum_file:
-        result_string = f'Accuracy: {acc[0]}, correct: {acc[1]}, false: {acc[2]}'
+        result_string = f'Accuracy: {acc[0]}, correct: {acc[1]}, ' \
+                        f'false: {acc[2]}'
         save_result(result_string, args.query_file, args.sum_file)
