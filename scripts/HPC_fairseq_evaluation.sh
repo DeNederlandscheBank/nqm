@@ -44,8 +44,6 @@ for f in test_{1..$COUNT_TEST}; do
     --scoring bleu \
     --remove-bpe
 
-  mv $OUT_DIR/generate-test.txt $OUT_DIR/generate-$f.txt
-
   echo "Decode the queries for $f"
   python3 src_eiopa/decode_fairseq_output.py \
     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
