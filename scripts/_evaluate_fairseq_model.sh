@@ -2,6 +2,14 @@
 
 ID=5847
 ID_MODEL=14126
+
+if [ -n "$1" ]
+    then ID=$1
+fi
+if [ -n "$2" ]
+    then ID_MODEL=$2
+fi
+
 DATA_DIR=data/eiopa/1_external
 TEST_TEMPLATES=test_templates
 IN_DIR=data/eiopa/5_model_input
@@ -11,15 +19,15 @@ COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 
 
 for f in test_{1..$COUNT_TEST}; do
-#  echo "Generate translations using fairseq-generate for $f"
-#  fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
-#    --gen-subset $f \
-#    --path $MODEL_DIR/checkpoint_best.pt \
-#    --results-path $OUT_DIR \
-#    --beam 5  \
-#    --batch-size 128 \
-#    --scoring bleu \
-#    --remove-bpe
+  echo "Generate translations using fairseq-generate for $f"
+  fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
+    --gen-subset $f \
+    --path $MODEL_DIR/checkpoint_best.pt \
+    --results-path $OUT_DIR \
+    --beam 5  \
+    --batch-size 128 \
+    --scoring bleu \
+    --remove-bpe
 
   echo "Decode the queries for $f"
   python src_eiopa/decode_fairseq_output.py \

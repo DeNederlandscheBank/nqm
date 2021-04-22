@@ -2,14 +2,18 @@
 # Use this script from the root!
 # Similiar to before, the ID variable needs to be corrected to the correct value.
 ID=5847
+
+if [ -n "$1" ]; then
+  ID=$1
+fi
+
 DIRECTORY=data/eiopa/5_model_input
 DATA_DIR=data/eiopa/1_external
 TEST_TEMPLATES=test_templates
-COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
+COUNT_TEST=$(($(ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l)))
 FILE=$DIRECTORY/data_$ID
 OUT_DIR=data/eiopa/5_model_input
 DATA_BIN=$OUT_DIR/fairseq-data-bin-$ID
-
 
 fairseq-preprocess -s nl -t ql \
   --trainpref $FILE-train --validpref $FILE-val \
@@ -30,9 +34,9 @@ for f in test_{1..$COUNT_TEST}; do
     for S in bin idx; do
       echo "Copying $f.nl-ql.$L.$S"
       cp -R $DATA_BIN-$f/test.nl-ql.$L.$S \
-       $DATA_BIN/$f.nl-ql.$L.$S
+        $DATA_BIN/$f.nl-ql.$L.$S
     done
   done
   echo "Deleting folder $DATA_BIN-$f/"
   rm -R $DATA_BIN-$f/
-  done
+done

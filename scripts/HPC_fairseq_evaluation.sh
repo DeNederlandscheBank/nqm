@@ -13,6 +13,13 @@ module load python
 ID=5847
 ID_MODEL=14126
 
+if [ -n "$1" ]
+    then ID=$1
+fi
+if [ -n "$2" ]
+    then ID_MODEL=$2
+fi
+
 WORK_DIR=$HOME/nqm
 SRC_DIR=$HOME/.local/bin # location of installed packages
 DATA_DIR=$WORK_DIR/data/eiopa/1_external
@@ -48,5 +55,12 @@ for f in test_{1..$COUNT_TEST}; do
   python3 src_eiopa/decode_fairseq_output.py \
     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
     --out-file $OUT_DIR/encoded-$f.txt \
+    --summary-file $OUT_DIR/summary-$ID.txt
+
+  echo "Evaluate query performance"
+  python3 src_eiopa/query_results_evaluation.py \
+    --graph-path $DATA_DIR \
+    --query-file $OUT_DIR/decoded-$f.txt \
+    --out-file $OUT_DIR/queries_and_results-$f.txt \
     --summary-file $OUT_DIR/summary-$ID.txt
 done
