@@ -1,2 +1,0 @@
-encoded-test_1.txt:
-Generate test_1 with beam=5: BLEU4 = 84.96, 93.3/88.0/82.3/78.7 (BP=0.995, ratio=0.995, syslen=14420, reflen=14496)
