@@ -5,7 +5,7 @@
  Read in generated fairseq data and output file with true and generated queries
 """
 import argparse
-
+from os import path
 from generator_utils import sparql_decode
 
 
@@ -49,7 +49,12 @@ def write_queries(results, out_file):
 
 
 def save_result(item, file, summary_file):
-    with open(summary_file, 'w', encoding='utf-8') as tgt:
+    if not path.exists(summary_file):
+        with open(summary_file, 'a', encoding='utf-8') as target:
+            target.writelines('SUMMARY OF RESULTS \n')
+        target.close()
+
+    with open(summary_file, 'a', encoding='utf-8') as tgt:
         tgt.writelines(file.split("/")[-1] + ':\n')
         tgt.writelines(item)
         tgt.writelines('\n')
