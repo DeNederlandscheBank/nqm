@@ -7,6 +7,7 @@
 ID=21-04_16-43_5847
 ID_NEW=5847
 
+
 DATA_DIR=data/eiopa/3_processed
 VOC_DIR=data/eiopa/4_vocabularies
 TGT_DIR=data/eiopa/5_model_input

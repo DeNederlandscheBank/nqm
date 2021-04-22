@@ -1,6 +1,7 @@
 #!/bin/bash
 # Use this script from the root!
 # Similiar to before, the ID variable needs to be corrected to the correct value.
+
 ID=5847
 
 if [ -n "$1" ]; then
@@ -40,3 +41,4 @@ for f in test_{1..$COUNT_TEST}; do
   echo "Deleting folder $DATA_BIN-$f/"
   rm -R $DATA_BIN-$f/
 done
+

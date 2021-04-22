@@ -15,6 +15,8 @@ ID=1689
 ID_MODEL=$ID
 TEST_TEMPLATES=test_templates
 
+ID=15031
+
 WORK_DIR=$HOME/nqm
 SRC_DIR=$HOME/.local/bin # location of installed packages
 DATA_DIR=$WORK_DIR/data/eiopa/1_external
@@ -23,7 +25,6 @@ FILE=$IN_DIR/data_$ID # Files used for preprocessing
 MODEL_DIR=$WORK_DIR/models/transformer_iwslt_de_en_$ID_MODEL
 OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
-
 
 pip3 install --quiet --user -r $WORK_DIR/requirements.txt
 pip3 install --quiet --user fairseq
