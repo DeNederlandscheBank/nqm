@@ -10,12 +10,12 @@
 module switch intel gcc
 module load python
 
-ID=1689
-ID_MODEL = 14126
+ID=5847
+ID_MODEL=14126
 
 WORK_DIR=$HOME/nqm
 SRC_DIR=$HOME/.local/bin # location of installed packages
-DATA_DIR=$WORD_DIR/data/eiopa/1_external
+DATA_DIR=$WORK_DIR/data/eiopa/1_external
 TEST_TEMPLATES=test_templates
 IN_DIR=$WORK_DIR/data/eiopa/5_model_input # model input folder
 FILE=$IN_DIR/data_$ID # Files used for preprocessing
@@ -35,7 +35,7 @@ mkdir -p $MODEL_DIR/out_$ID
 
 for f in test_{1..$COUNT_TEST}; do
   echo "Generate translations using fairseq-generate for $f"
-  fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
+  $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
     --gen-subset $f \
     --path $MODEL_DIR/checkpoint_best.pt \
     --results-path $OUT_DIR \
@@ -47,7 +47,7 @@ for f in test_{1..$COUNT_TEST}; do
   mv $OUT_DIR/generate-test.txt $OUT_DIR/generate-$f.txt
 
   echo "Decode the queries for $f"
-  python src_eiopa/decode_fairseq_output.py \
+  python3 src_eiopa/decode_fairseq_output.py \
     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
     --out-file $OUT_DIR/encoded-$f.txt \
     --summary-file $OUT_DIR/summary-$ID.txt

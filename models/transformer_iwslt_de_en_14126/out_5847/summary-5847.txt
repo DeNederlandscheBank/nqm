@@ -1,0 +1,2 @@
+encoded-test_3.txt:
+Generate test_3 with beam=5: BLEU4 = 31.70, 62.5/42.8/23.7/15.9 (BP=1.000, ratio=1.005, syslen=117139, reflen=116531)
