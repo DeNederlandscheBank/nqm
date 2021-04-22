@@ -2,21 +2,28 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=16G
+#SBATCH --mem-per-cpu=8G
 #SBATCH --time=12:00:00
 #SBATCH --job-name=fairseq_transformer
 #SBATCH --output=output-%J.log
 
 module switch intel gcc
 module load python
+# Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
+# must be in 5_model_input folder.
+ID=1689
+ID_MODEL=$ID
+TEST_TEMPLATES=test_templates
 
 WORK_DIR=$HOME/nqm
-SRC_DIR=$HOME/.local/bin
-IN_DIR=$WORK_DIR/data/eiopa/5_model_input
-FILE=$IN_DIR/data_1689
-ID=1689
-MODEL_DIR=$WORK_DIR/models/transformer_iwslt_de_en_$ID
-OUT_DIR=$MODEL_DIR/out_$ID
+SRC_DIR=$HOME/.local/bin # location of installed packages
+DATA_DIR=$WORK_DIR/data/eiopa/1_external
+IN_DIR=$WORK_DIR/data/eiopa/5_model_input # model input folder
+FILE=$IN_DIR/data_$ID # Files used for preprocessing
+MODEL_DIR=$WORK_DIR/models/transformer_iwslt_de_en_$ID_MODEL
+OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
+COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
+
 
 pip3 install --quiet --user -r $WORK_DIR/requirements.txt
 pip3 install --quiet --user fairseq
@@ -28,8 +35,30 @@ mkdir -p $MODEL_DIR/out_$ID
 [[ -d "$IN_DIR/fairseq-data-bin-$ID" ]] \
  && { echo "fairseq-data-bin-$ID already exists"} \
  || { $SRC_DIR/fairseq-preprocess -s nl -t ql --trainpref $FILE-train \
-      --validpref $FILE-val --testpref $FILE-test_1 \
-      --destdir $IN_DIR/fairseq-data-bin-$ID }
+      --validpref $FILE-val \
+      --destdir $IN_DIR/fairseq-data-bin-$ID
+
+      for f in test_{1..$COUNT_TEST}; do
+        # Create multiple files using dictionary from above
+        # this goes into different folders due to fairseq
+        fairseq-preprocess -s nl -t ql \
+          --testpref $FILE-$f \
+          --destdir $DATA_BIN-$f \
+          --cpu --empty-cache-freq 10 \
+          --srcdict $DATA_BIN/dict.nl.txt \
+          --tgtdict $DATA_BIN/dict.ql.txt
+        # collect all test files in one folder and rename them
+        for L in nl ql; do
+          for S in bin idx; do
+            echo "Copying $f.nl-ql.$L.$S"
+            cp -R $DATA_BIN-$f/test.nl-ql.$L.$S \
+             $DATA_BIN/$f.nl-ql.$L.$S
+          done
+        done
+        echo "Deleting folder $DATA_BIN-$f/"
+        rm -R $DATA_BIN-$f/
+      done
+    }
 
 echo "Model training is started"
 $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
@@ -47,19 +76,29 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --eval-bleu-remove-bpe \
   --best-checkpoint-metric bleu --maximize-best-checkpoint-metric \
   --stop-time-hours 11 --cpu  \
-#  --tensorboard-logdir $MODEL_DIR/out_$ID/ \
+  --tensorboard-logdir $MODEL_DIR/out_$ID/ \
 
-echo "Generate translations using fairseq-generate"
-$SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
-  --gen-subset test \
-  --path $MODEL_DIR/checkpoint_best.pt \
-  --results-path $MODEL_DIR/out_$ID \
-  --beam 5  \
-  --batch-size 128 \
-  --scoring bleu \
-  --remove-bpe
+for f in test_{1..$COUNT_TEST}; do
+  echo "Generate translations using fairseq-generate for $f"
+  $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
+    --gen-subset $f \
+    --path $MODEL_DIR/checkpoint_best.pt \
+    --results-path $OUT_DIR \
+    --beam 5  \
+    --batch-size 128 \
+    --scoring bleu \
+    --remove-bpe
 
-echo "Decode the queries"
-python3 src_eiopa/decode_fairseq_output.py \
-  --in-file $MODEL_DIR/out_$ID/generate-test.txt \
-  --out-file $OUT_DIR/translations.txt
+  echo "Decode the queries for $f"
+  python3 src_eiopa/decode_fairseq_output.py \
+    --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
+    --out-file $OUT_DIR/encoded-$f.txt \
+    --summary-file $OUT_DIR/summary-$ID.txt
+
+  echo "Evaluate query performance"
+  python3 src_eiopa/query_results_evaluation.py \
+    --graph-path $DATA_DIR \
+    --query-file $OUT_DIR/decoded-$f.txt \
+    --out-file $OUT_DIR/queries_and_results-$f.txt \
+    --summary-file $OUT_DIR/summary-$ID.txt
+done
