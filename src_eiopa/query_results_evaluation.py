@@ -19,7 +19,11 @@ def compare_results(graph, query_pairs):
     cnt_false = 0
     queries_results = []
     for pair in query_pairs:
-        result_true = query_database(pair[0], graph)
+        try:
+            result_true = query_database(pair[0], graph)
+        except:
+            print("Mistake in ", pair[0])
+            continue
         try:
             result_generated = query_database(pair[1], graph)
         except:
@@ -38,7 +42,10 @@ def compare_results(graph, query_pairs):
             queries_results.append(pair)
         else:
             cnt_false += 1
-    accuracy = cnt_correct / (cnt_correct + cnt_false)
+    if cnt_correct != 0 or cnt_false != 0:
+        accuracy = cnt_correct / (cnt_correct + cnt_false)
+    else:
+        accuracy = 0
 
     return [accuracy,cnt_correct,cnt_false], queries_results
 
@@ -82,4 +89,4 @@ if __name__ == '__main__':
     save_query_results(args.out_file, results)
     if args.sum_file:
         result_string = f'Accuracy: {acc[0]}, correct: {acc[1]}, false: {acc[2]}'
-        save_result(result_string, args.query_file, acc)
+        save_result(result_string, args.query_file, args.sum_file)

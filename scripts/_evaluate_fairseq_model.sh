@@ -31,6 +31,7 @@ for f in test_{1..$COUNT_TEST}; do
   python src_eiopa/query_results_evaluation.py \
     --graph-path $DATA_DIR \
     --query-file $OUT_DIR/decoded-$f.txt \
-    --out-file $OUT_DIR/queries_and_results-$f.txt
+    --out-file $OUT_DIR/queries_and_results-$f.txt \
+    --summary-file $OUT_DIR/summary-$ID.txt
 done
 
