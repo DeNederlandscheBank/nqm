@@ -7,6 +7,8 @@ For every pair, the result is compared and in the end the accuracy is given.
 
 import argparse
 
+import pyparsing
+
 from generator import initialize_graph, query_database
 from decode_fairseq_output import save_result
 
@@ -18,7 +20,11 @@ def compare_results(graph, query_pairs):
     queries_results = []
     for pair in query_pairs:
         result_true = query_database(pair[0], graph)
-        result_generated = query_database(pair[1], graph)
+        try:
+            result_generated = query_database(pair[1], graph)
+        except:
+            cnt_false += 1
+            continue
         if result_true and result_generated:  # value is not []
             result_true = result_true[0]
             result_generated = result_generated[0]
