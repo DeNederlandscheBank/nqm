@@ -4,8 +4,9 @@
 # This script copies the required model files using $ID and places them in the
 # correct directory. The name is adapated using $ID_new. These two variables
 # have to be adapted to the desired values.
-ID=20-04_19-02_15031
-ID_NEW=15031
+ID=21-04_16-43_5847
+ID_NEW=5847
+
 
 DATA_DIR=data/eiopa/3_processed
 VOC_DIR=data/eiopa/4_vocabularies

@@ -1,6 +1,11 @@
 # #!/bin/bash
 
 ID=1689 # find in build script or end of fairseq-data-bin
+
+if [ -n "$1" ]
+    then ID=$1
+fi
+
 IN_DIR=data/eiopa/5_model_input
 MODEL_DIR=models/transformer_iwslt_de_en_$ID
 
