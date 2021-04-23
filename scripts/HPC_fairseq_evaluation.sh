@@ -41,20 +41,20 @@ mkdir -p $MODEL_DIR/out_$ID
  && { echo "fairseq-data-bin-$ID  exists" }
 
 for f in test_{1..$COUNT_TEST}; do
-  echo "Generate translations using fairseq-generate for $f"
-  $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
-    --gen-subset $f \
-    --path $MODEL_DIR/checkpoint_best.pt \
-    --results-path $OUT_DIR \
-    --beam 5  \
-    --batch-size 128 \
-    --scoring bleu \
-    --remove-bpe
+#  echo "Generate translations using fairseq-generate for $f"
+#  $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
+#    --gen-subset $f \
+#    --path $MODEL_DIR/checkpoint_best.pt \
+#    --results-path $OUT_DIR \
+#    --beam 5  \
+#    --batch-size 128 \
+#    --scoring bleu \
+#    --remove-bpe
 
   echo "Decode the queries for $f"
   python3 src_eiopa/decode_fairseq_output.py \
     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
-    --out-file $OUT_DIR/encoded-$f.txt \
+    --out-file $OUT_DIR/decoded-$f.txt \
     --summary-file $OUT_DIR/summary-$ID.txt
 
   echo "Evaluate query performance"
