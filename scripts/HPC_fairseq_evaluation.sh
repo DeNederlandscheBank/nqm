@@ -10,8 +10,8 @@
 module switch intel gcc
 module load python
 
-ID=5847
-ID_MODEL=14126
+ID=14126
+ID_MODEL=$ID
 
 if [ -n "$1" ]
     then ID=$1
