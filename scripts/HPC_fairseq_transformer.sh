@@ -93,7 +93,7 @@ for f in test_{1..$COUNT_TEST}; do
   echo "Decode the queries for $f"
   python3 src_eiopa/decode_fairseq_output.py \
     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
-    --out-file $OUT_DIR/encoded-$f.txt \
+    --out-file $OUT_DIR/decoded-$f.txt \
     --summary-file $OUT_DIR/summary-$ID.txt
 
   echo "Evaluate query performance"
