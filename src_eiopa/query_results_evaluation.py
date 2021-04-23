@@ -7,6 +7,7 @@ For every pair, the result is compared and in the end the accuracy is given.
 
 import argparse
 import logging
+import pyparsing
 
 from decode_fairseq_output import save_result
 from generator import initialize_graph, query_database
@@ -37,6 +38,7 @@ def compare_results(graph, query_pairs):
                     cnt_correct += 1
                 else:
                     cnt_false += 1
+                    logging.debug(f'{pair[0]}, {pair[1]}')
                 pair.append(result_true[index])
                 pair.append(result_generated[index])
             queries_results.append(pair)
@@ -87,9 +89,10 @@ if __name__ == '__main__':
     g = initialize_graph(args.graph_path)
     queries = read_queries(args.query_file)
     acc, results = compare_results(g, queries)
-
+    result_string = f'Accuracy: {acc[0]}, correct: {acc[1]}, ' \
+                    f'false: {acc[2]}'
     save_query_results(args.out_file, results)
     if args.sum_file:
-        result_string = f'Accuracy: {acc[0]}, correct: {acc[1]}, ' \
-                        f'false: {acc[2]}'
         save_result(result_string, args.query_file, args.sum_file)
+    else:
+        print(result_string)
