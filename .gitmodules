@@ -1,3 +1,6 @@
 [submodule "src_eiopa/subword-nmt"]
 	path = src_eiopa/subword-nmt
 	url = https://github.com/rsennrich/subword-nmt
+[submodule "fast_align"]
+	path = fast_align
+	url = https://github.com/clab/fast_align.git
