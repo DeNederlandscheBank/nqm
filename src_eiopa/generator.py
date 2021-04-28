@@ -88,7 +88,7 @@ def build_dataset_triplet(item, template, mt):
             natural_language = ' '.join(mt.tokenize(natural_language))
         if placeholder in query:
             item_ = add_quotation_marks(strip_item(item[cnt]))
-            query_raw = query.replace(placeholder, " ")
+            query_raw = query.replace(placeholder, 'quot_mark_l quot_mark_r')
             query_filled = query.replace(placeholder, item_)
         else:
             query_filled = query
