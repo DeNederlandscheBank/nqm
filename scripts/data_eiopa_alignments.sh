@@ -19,7 +19,7 @@ COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 
 echo "Generate job ID"
 # RANDOM=$(date +%s%N | cut -b10-19)
-ID=$(date +"%d-%m_%H-%M")_$RANDOM-dev
+ID=$(date +"%d-%m_%H-%M")_$RANDOM
 echo "Job ID is set at:"
 echo "$ID"
 
@@ -27,7 +27,7 @@ BPE_CODE=$DICT_DIR/$ID-bpe.codes
 
 echo 'Generating data (train, validation)...'
 python src_eiopa/generator.py \
-  --templates $DATA_DIR/templates_dev.csv \
+  --templates $DATA_DIR/templates.csv \
   --output $INT_DIR --id "$ID" --type train_val \
   --graph-data-path $DATA_DIR --input-language en
 echo 'Splitting data intro train and validation...'
