@@ -2,8 +2,8 @@
 # full pipeline EIOPA that you can run to prepare the data and train the model
 # Use this script from the root!
 
-USE_SUBWORDS=YES
-CREATE_SUBWORD_DICTIONARY=YES
+USE_SUBWORDS=NO
+CREATE_SUBWORD_DICTIONARY=NO
 
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs

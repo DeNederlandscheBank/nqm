@@ -1,5 +1,5 @@
 #!/usr/local_rwth/bin/zsh
-# TODO: fix directories
+
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=8G
