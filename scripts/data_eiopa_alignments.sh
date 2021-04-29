@@ -2,8 +2,8 @@
 # full pipeline EIOPA that you can run to prepare the data and train the model
 # Use this script from the root!
 
-USE_SUBWORDS=NO
-CREATE_SUBWORD_DICTIONARY=NO
+USE_SUBWORDS=YES # use of subword splitting
+CREATE_SUBWORD_DICTIONARY=YES # generate dictionary using subword split sentences
 
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs

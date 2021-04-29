@@ -2,20 +2,20 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=8G
+#SBATCH --mem-per-cpu=7G
 #SBATCH --time=12:00:00
-#SBATCH --job-name=fairseq_transformer
+#SBATCH --job-name=transformer_align
 #SBATCH --output=output-%J.log
 
 module switch intel gcc
 module load python
 
-# NO SUBWORDS, NO TRAINING ON ALIGNMENTS, EXTERNAL NL DICT
+# NO SUBWORDS, TRAINING ON ALIGNMENTS, EXTERNAL NL DICT
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
 ID=5861
-ID_MODEL=$ID
+ID_MODEL=$ID-align
 TEST_TEMPLATES=test_templates
 
 WORK_DIR=$HOME/nqm
@@ -84,27 +84,27 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --stop-time-hours 11 --cpu  \
   --tensorboard-logdir $MODEL_DIR/out_$ID/ \
 
-for f in test_{1..$COUNT_TEST}; do
-  echo "Generate translations using fairseq-generate for $f"
-  $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
-    --gen-subset $f \
-    --path $MODEL_DIR/checkpoint_best.pt \
-    --results-path $OUT_DIR \
-    --beam 5  \
-    --batch-size 128 \
-    --scoring bleu \
-    --remove-bpe --replace-unk --print-alignment
-
-  echo "Decode the queries for $f"
-  python3 src_eiopa/decode_fairseq_output.py \
-    --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
-    --out-file $OUT_DIR/decoded-$f.txt \
-    --summary-file $OUT_DIR/summary-$ID.txt
-
-  echo "Evaluate query performance"
-  python3 src_eiopa/query_results_evaluation.py \
-    --graph-path $DATA_DIR \
-    --query-file $OUT_DIR/decoded-$f.txt \
-    --out-file $OUT_DIR/queries_and_results-$f.txt \
-    --summary-file $OUT_DIR/summary-$ID.txt
-done
+#for f in test_{1..$COUNT_TEST}; do
+#  echo "Generate translations using fairseq-generate for $f"
+#  $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
+#    --gen-subset $f \
+#    --path $MODEL_DIR/checkpoint_best.pt \
+#    --results-path $OUT_DIR \
+#    --beam 5  \
+#    --batch-size 128 \
+#    --scoring bleu \
+#    --remove-bpe --replace-unk --print-alignment
+#
+#  echo "Decode the queries for $f"
+#  python3 src_eiopa/decode_fairseq_output.py \
+#    --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
+#    --out-file $OUT_DIR/decoded-$f.txt \
+#    --summary-file $OUT_DIR/summary-$ID.txt
+#
+#  echo "Evaluate query performance"
+#  python3 src_eiopa/query_results_evaluation.py \
+#    --graph-path $DATA_DIR \
+#    --query-file $OUT_DIR/decoded-$f.txt \
+#    --out-file $OUT_DIR/queries_and_results-$f.txt \
+#    --summary-file $OUT_DIR/summary-$ID.txt
+#done
