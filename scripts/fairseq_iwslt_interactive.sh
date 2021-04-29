@@ -8,4 +8,4 @@ fairseq-interactive \
     --beam 5 --source-lang nl --target-lang ql \
     --print-alignment --replace-unk \
     --tokenizer moses \
-#    --bpe subword_nmt --bpe-codes data/eiopa/4_vocabularies/20-04_10-53_14126-bpe.codes
+    --bpe subword_nmt --bpe-codes data/eiopa/4_vocabularies/20-04_10-53_14126-bpe.codes

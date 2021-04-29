@@ -2,17 +2,20 @@
 # full pipeline EIOPA that you can run to prepare the data and train the model
 # Use this script from the root!
 
+USE_SUBWORDS=YES
+CREATE_SUBWORD_DICTIONARY=YES
+
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs
 mkdir -p ./data/eiopa/3_processed/logs
 mkdir -p ./data/eiopa/4_vocabularies
-# mkdir ../data/nqm/processed
 
 DATA_DIR=data/eiopa/1_external # input data location
 OUT_DIR=data/eiopa/3_processed
 INT_DIR=data/eiopa/2_interim
 DICT_DIR=data/eiopa/4_vocabularies
 TEST_TEMPLATES=test_templates
+COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 
 echo "Generate job ID"
 # RANDOM=$(date +%s%N | cut -b10-19)
@@ -32,32 +35,31 @@ python src_eiopa/splitter.py \
   --inputPath  $INT_DIR/data_"$ID" \
   --outputPath $INT_DIR/data_"$ID" --split 80
 
-#echo 'Generating test data...'
-#python src_eiopa/generator.py \
-#  --templates $DATA_DIR \
-#  --output $INT_DIR --id "$ID" --type test \
-#  --graph-data-path $DATA_DIR --folder $TEST_TEMPLATES \
-#  --input-language en
+echo 'Generating test data...'
+python src_eiopa/generator.py \
+  --templates $DATA_DIR \
+  --output $INT_DIR --id "$ID" --type test \
+  --graph-data-path $DATA_DIR --folder $TEST_TEMPLATES \
+  --input-language en
 
-#echo 'Learning BPE codes using subword_nmt'
-#python src_eiopa/subword-nmt/subword_nmt/learn_joint_bpe_and_vocab.py \
-#  --input $INT_DIR/data_"$ID"-train.nl $INT_DIR/data_"$ID"-train.ql \
-#  --output $BPE_CODE \
-#  --write-vocabulary $DICT_DIR/$ID-vocab.nl $DICT_DIR/$ID-vocab.ql \
-#  --symbols 100
-#
-#COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
-#
-## Apply bpe to all relevant files
-#for L in nl ql; do # both languages
-#    for f in train.$L val.$L test_{1..$COUNT_TEST}.$L; do
-#        echo "apply_bpe.py to ${f}..."
-#        python src_eiopa/subword-nmt/subword_nmt/apply_bpe.py \
-#        --codes "$BPE_CODE" \
-#        --input $INT_DIR/data_"$ID"-$f \
-#        --output $OUT_DIR/data_"$ID"-$f \
-#        --vocabulary $DICT_DIR/$ID-vocab.$L
-#    done
-#done
+echo 'Generate SPARQL dictionary...'
+python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
+  --input $INT_DIR/data_$ID-train_val.ql.raw --output $DICT_DIR/dict-$ID.ql
+
+if [ $USE_SUBWORDS = YES ]
+  then . scripts/subword_processing.sh $DICT_DIR/dict-$ID.ql $CREATE_SUBWORD_DICTIONARY $ID
+else
+  # Copy files from Interim to Processed directly
+  for L in nl ql; do
+    for f in train.$L val.$L test_{1..$COUNT_TEST}.$L; do
+        echo "copying ${f}..."
+        cp -R $INT_DIR/data_"$ID"-$f $OUT_DIR/data_"$ID"-$f
+    done
+  done
+fi
+
+echo 'Learning alignments using script...'
+. scripts/learn_alignments.sh $ID
+
 
 echo 'Done! Thank you for your patience'
