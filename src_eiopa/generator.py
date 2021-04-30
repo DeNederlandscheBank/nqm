@@ -199,9 +199,6 @@ def prepare_generator_query(template, add_type_requirements=True):
     return generator_query
 
 
-def prepare_raw_query(query):
-    query_ = query
-
 
 if __name__ == '__main__':
     """
