@@ -2,17 +2,17 @@
 
 # SPARQL dictionary has to be given as external argument
 
-ID=10578
-
 if [ -n "$3" ]
     then ID=$3
+else
+  ID=10578
+  DATA_DIR=data/eiopa/1_external # input data location
+  OUT_DIR=data/eiopa/3_processed
+  INT_DIR=data/eiopa/2_interim
+  DICT_DIR=data/eiopa/4_vocabularies
+  COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 fi
 
-DATA_DIR=data/eiopa/1_external # input data location
-OUT_DIR=data/eiopa/3_processed
-INT_DIR=data/eiopa/2_interim
-DICT_DIR=data/eiopa/4_vocabularies
-COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 BPE_CODE=$DICT_DIR/bpe-$ID.codes
 
 # Merge nl and ql dictionary to learn joint subwords

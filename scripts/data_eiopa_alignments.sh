@@ -23,8 +23,6 @@ ID=$(date +"%d-%m_%H-%M")_$RANDOM
 echo "Job ID is set at:"
 echo "$ID"
 
-BPE_CODE=$DICT_DIR/$ID-bpe.codes
-
 echo 'Generating data (train, validation)...'
 python src_eiopa/generator.py \
   --templates $DATA_DIR/templates.csv \

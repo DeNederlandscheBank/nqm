@@ -1,13 +1,15 @@
 #!/bin/bash
 
-ID=10578
+
 if [ -n "$1" ]
     then ID=$1
+else
+  ID=10578
+  OUT_DIR=data/eiopa/3_processed
+  DICT_DIR=data/eiopa/4_vocabularies
 fi
 
 ALIGN=fast_align/build/fast_align
-OUT_DIR=data/eiopa/3_processed
-DICT_DIR=data/eiopa/4_vocabularies
 
 NL_TRAIN=$OUT_DIR/data_$ID-train.nl
 QL_TRAIN=$OUT_DIR/data_$ID-train.ql
