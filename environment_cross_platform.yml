@@ -11,3 +11,5 @@ dependencies:
   - numpy==1.19.5
   - sacremoses
   - pip
+  - rdflib
+  - scikit-learn
