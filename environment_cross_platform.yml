@@ -1,0 +1,13 @@
+name: fairseq_local
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.8.8
+  - pytorch
+  - torchaudio
+  - torchvision
+  - numpy==1.19.5
+  - sacremoses
+  - pip
