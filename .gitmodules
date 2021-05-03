@@ -4,3 +4,6 @@
 [submodule "fast_align"]
 	path = fast_align
 	url = https://github.com/clab/fast_align.git
+[submodule "fairseq"]
+	path = fairseq
+	url = https://github.com/jm-glowienke/fairseq.git
