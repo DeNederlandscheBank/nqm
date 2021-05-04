@@ -48,13 +48,15 @@ for f in test_1_dev; do
      # --bpe subword_nmt --bpe-codes $BPE_CODES \
 
 
-  echo "Decode the queries for $f"
+  echo "Decode the queries for $f and evaluate the translation"
   $PYTHON src_eiopa/decode_fairseq_output.py \
-    --interactive \
-    --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
-    --out-file $OUT_DIR/decoded-$f.txt \
-    --out-file-encoded $OUT_DIR/translations-$f.txt \
-    --in-file-reference $IN_DIR/data_$ID-$f.ql
+     --interactive \
+     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
+     --out-file $OUT_DIR/decoded-$f.txt \
+     --out-file-encoded $OUT_DIR/translations-$f.txt \
+     --in-file-reference $IN_DIR/data_$ID-$f.ql \
+     --summary-file $OUT_DIR/summary-$ID.txt \
+     --graph-path data/eiopa/1_external
 
   echo "Evaluate query performance"
   $PYTHON src_eiopa/query_results_evaluation.py \
