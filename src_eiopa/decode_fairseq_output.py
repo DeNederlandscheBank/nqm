@@ -6,8 +6,11 @@
 """
 import argparse
 from os import path
-
+import re
+import sacrebleu
+from string import Template
 from generator_utils import sparql_decode
+from generator import initialize_graph, query_database
 
 
 def read_in_generated_data(in_file):
@@ -56,6 +59,7 @@ def read_in_interactive_output(in_file):
     return results
 
 
+# TODO: add the evaluation functions get_translation_accuracy and name_check
 def write_queries_generated(results, out_file):
     """ In combination with fairseq-generate """
     with open(out_file, 'w', encoding='utf-8') as target:
@@ -74,19 +78,69 @@ def write_encoded_queries_interactive(results, out_file):
     target.close()
 
 
-def write_decoded_queries_interactive(results, reference_file, out_file):
-    """ In combination with fairseq-interactive """
+def write_decoded_queries_interactive(results, reference_file, out_file,
+                                      graph_path):
+    """
+    In combination with fairseq-interactive, also performing evaluation
+    using BLEU, string matching precision and name translation precision
+    as metrics
+    """
     references = []
     with open(reference_file, 'r', encoding='utf-8') as src:
         for line in src.readlines():
             references.append(line.strip('\n'))
     src.close()
+    result = get_bleu_score(references, results) + '; ' + \
+             get_translation_accuracy(references, results) + '; ' + \
+             check_names(references, results, graph_path)
     with open(out_file, 'w', encoding='utf-8') as target:
         for translation, reference in zip(results, references):
             target.writelines(str(sparql_decode(reference)) + ', ')
             target.writelines(str(sparql_decode(translation)))
             target.writelines('\n')
     target.close()
+    return result
+
+
+def get_bleu_score(references, translations):
+    references = [references]
+    bleu = sacrebleu.corpus_bleu(translations, references)
+    return f'SacreBLEU score: {bleu.score:.2f}'
+
+
+def get_translation_accuracy(references, translations):
+    """ Simple string matching check, not case dependent """
+    cnt_correct = 0
+    for reference, translation in zip(references, translations):
+        if reference.lower() == translation.lower():
+            cnt_correct += 1
+    acc = cnt_correct / len(references)
+    return f'String matching precision: {acc:.2f}'
+
+
+def check_names(references, translations, graph_path):
+    g = initialize_graph(graph_path)
+    cnt_correct = 0;
+    cnt_false = 0
+    template = Template(
+        'SELECT ?o WHERE{ ?e eiopa-Base:hasIdentifyingName "$name". ?e eiopa-Base:hasIdentifyingName ?o}')
+    for reference, translation in zip(references, translations):
+        reference = sparql_decode(reference)
+        translation = sparql_decode(translation)
+        name_refs = re.findall(r'"(.*?)"', reference)
+        if name_refs:
+            for name_ref in name_refs:
+                query = template.substitute(name=name_ref.lower())
+                results = query_database(query, g)
+                name_trans = re.findall(r'"(.*?)"', translation)
+                for name in name_trans:
+                    if [name.lower()] in results:
+                        # check whether name found in translation
+                        # is part of the Identifying names
+                        cnt_correct += 1
+                    else:
+                        cnt_false += 1
+    return f'Name match precision: {cnt_correct / (cnt_false + cnt_correct):.2f}'
 
 
 def save_result(item, file, summary_file):
@@ -96,6 +150,7 @@ def save_result(item, file, summary_file):
         target.close()
 
     with open(summary_file, 'a', encoding='utf-8') as tgt:
+        # extract from path which file is evaluated
         tgt.writelines(file.split("/")[-1] + ':\n')
         tgt.writelines(item)
         tgt.writelines('\n')
@@ -119,6 +174,8 @@ if __name__ == "__main__":
                         required=False)
     parser.add_argument('--summary-file', dest='sum_file',
                         help='file to summarize evaluation results')
+    parser.add_argument('--graph-path', dest='graph_path',
+                        help='path to graph data', required=False)
     args = parser.parse_args()
 
     if args.interactive_mode is True:
@@ -127,12 +184,14 @@ if __name__ == "__main__":
                             f'{args.output_file_encoded} is not given'
                             f'as argument')
         results_list = read_in_interactive_output(args.input_file)
-        write_decoded_queries_interactive(results_list, args.reference_file,
-                                          args.output_file_decoded)
+        result = write_decoded_queries_interactive(results_list,
+                                                   args.reference_file,
+                                                   args.output_file_decoded,
+                                                   args.graph_path)
         write_encoded_queries_interactive(results_list,
                                           args.output_file_encoded)
     else:
         results_list, result = read_in_generated_data(args.input_file)
         write_queries_generated(results_list, args.output_file_decoded)
-        if args.sum_file:
-            save_result(result, args.output_file, args.sum_file)
+    if args.sum_file:
+        save_result(result, args.output_file_decoded, args.sum_file)
