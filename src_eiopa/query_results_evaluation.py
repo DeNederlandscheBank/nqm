@@ -7,14 +7,18 @@ For every pair, the result is compared and in the end the accuracy is given.
 
 import argparse
 import logging
-import pyparsing
 
 from decode_fairseq_output import save_result
 from generator import initialize_graph, query_database
 
 
 def compare_results(graph, query_pairs):
-    """ Returns summary statistics for query results """
+    """
+    Returns summary statistics for query results
+    Also returns list of reference, translation and query results. If one
+    of the queries resulted in no answer, the query is not written to
+    the output file.
+    """
     cnt_correct = 0
     cnt_false = 0
     queries_results = []
@@ -22,7 +26,7 @@ def compare_results(graph, query_pairs):
         try:
             result_true = query_database(pair[0], graph)
         except:
-            logging.info(f'Error in True Query: {pair[0]}')
+            logging.info(f'Error in Reference Query: {pair[0]}')
             continue
         try:
             result_generated = query_database(pair[1], graph)
@@ -52,13 +56,16 @@ def compare_results(graph, query_pairs):
     return [accuracy, cnt_correct, cnt_false], queries_results
 
 
-def read_queries(file):
-    """ Return list of true and generated queries """
+def read_queries(file, interactive=False):
+    """ Return list of reference and generated queries """
     query_list = []
     with open(file, 'r') as src:
         for line in src.readlines():
-            _, true, gen, _ = line.split(",")
-            query_list.append([true, gen])
+            if interactive is True:
+                reference, gen = line.strip('\n').split(",")
+            else:
+                _, reference, gen = line.strip('\n').split(",")
+            query_list.append([reference, gen])
     src.close()
     return query_list
 
@@ -74,6 +81,9 @@ def save_query_results(file, result_list):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('--interactive', dest='interactive_mode',
+                        action='store_true',
+                        help='evaluate output from interactive mode')
     parser.add_argument('--query-file', dest='query_file',
                         help='true and generated queries', required=True)
     parser.add_argument('--graph-path', dest='graph_path',
@@ -87,7 +97,7 @@ if __name__ == '__main__':
     log_file = f'{args.out_file[:-4]}.log'
     logging.basicConfig(filename=log_file, level=logging.DEBUG)
     g = initialize_graph(args.graph_path)
-    queries = read_queries(args.query_file)
+    queries = read_queries(args.query_file, args.interactive_mode)
     acc, results = compare_results(g, queries)
     result_string = f'Accuracy: {acc[0]}, correct: {acc[1]}, ' \
                     f'false: {acc[2]}'
