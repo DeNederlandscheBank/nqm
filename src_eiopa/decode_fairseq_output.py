@@ -84,7 +84,7 @@ def write_decoded_queries_interactive(results, reference_file, out_file):
     with open(out_file, 'w', encoding='utf-8') as target:
         for translation, reference in zip(results, references):
             target.writelines(str(sparql_decode(reference)) + ', ')
-            target.writelines(str(sparql_decode(translation)) + ', ')
+            target.writelines(str(sparql_decode(translation)))
             target.writelines('\n')
     target.close()
 
