@@ -28,15 +28,14 @@ OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 DATA_BIN=$IN_DIR/fairseq-data-bin-$ID-dev
 
-pip3 install --quiet --user -r $WORK_DIR/requirements.txt
-pip3 install --quiet --user fairseq
+#pip3 install --quiet --user -r $WORK_DIR/requirements.txt
+#pip3 install --quiet --user fairseq
 
 mkdir -p $MODEL_DIR/out_$ID
 
 [[ -d "$FILE" ]] && echo "$FILE exists"
 
 [[ -d "$DATA_BIN" ]] \
- # shellcheck disable=SC1009
  && { echo "$DATA_BIN already exists"} \
  || { . scripts/build_fairseq_dataset.sh HPC $ID }
 #     $SRC_DIR/fairseq-preprocess -s nl -t ql --trainpref $FILE-train \
