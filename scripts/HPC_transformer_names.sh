@@ -42,8 +42,7 @@ mkdir -p $MODEL_DIR/out_$ID
 echo "Model training is started"
 $SRC_DIR/fairseq-train $DATA_BIN \
   --arch transformer_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
-  --
-label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
+  --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
   --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
   --criterion label_smoothed_cross_entropy --scoring bleu \
   --warmup-updates 4000 --warmup-init-lr '1e-07' \
