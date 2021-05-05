@@ -38,24 +38,25 @@ else
   MODEL_DIR=$WORK_DIR/models/transformer_iwslt_de_en_$ID_MODEL
   OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
   COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
+  DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
 fi
 if [ -n "$4" ]
     then ID_MODEL=$4
 fi
 CHECKPOINT_BEST_BLEU=$(find $MODEL_DIR -name 'checkpoint.best_bleu_*.pt')
 BPE_CODES=$IN_DIR/$ID-bpe.codes
-ALIGN_FILE=$IN_DIR/fairseq-data-bin-$ID/alignment.nl-ql.txt
+ALIGN_FILE=$DATA_BIN/alignment.nl-ql.txt
 
 mkdir -p $MODEL_DIR/out_$ID
 
-[[ -d "$IN_DIR/fairseq-data-bin-$ID" ]] \
- && { echo "fairseq-data-bin-$ID  exists" }
+[[ -d "$DATA_BIN" ]] \
+ && { echo "$DATA_BIN  exists" }
 
 for f in test_{1..$COUNT_TEST}; do
   echo "Generate translations using fairseq-interactive for $f"
   if [ $SUBWORDS = True ]
     then  cat $IN_DIR/data_$ID-$f.nl | \
-          $generate $IN_DIR/fairseq-data-bin-$ID \
+          $generate $DATA_BIN \
             --path $CHECKPOINT_BEST_BLEU \
             --results-path $OUT_DIR --beam 5  \
             --print-alignment --replace-unk $ALIGN_FILE \
@@ -63,7 +64,7 @@ for f in test_{1..$COUNT_TEST}; do
           > $MODEL_DIR/out_$ID/generate-$f.txt
   else
     cat $IN_DIR/data_$ID-$f.nl | \
-          $generate $IN_DIR/fairseq-data-bin-$ID \
+          $generate $DATA_BIN \
             --path $CHECKPOINT_BEST_BLEU \
             --results-path $OUT_DIR --beam 5  \
             --print-alignment --replace-unk $ALIGN_FILE \
