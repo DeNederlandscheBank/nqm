@@ -42,7 +42,7 @@ for f in test_{1..$COUNT_TEST}; do
     --testpref $FILE-$f \
     --destdir $DATA_BIN-$f \
     --cpu --empty-cache-freq 10 \
-    --srcdict $IN_DIR/dict.$ID.en \
+    --srcdict $IN_DIR/dict_$ID.en \
     --tgtdict $IN_DIR/dict_$ID.ql \
   # collect all test files in one folder and rename them
   for L in nl ql; do
