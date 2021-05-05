@@ -23,7 +23,7 @@ for L in nl ql; do
 done
 
 # Copy helper files
-cp -R data/eiopa/1_external/dict.iwslt.en $VOC_DIR/dict_$ID_NEW.nl
+cp -R data/eiopa/1_external/dict.iwslt.en $VOC_DIR/dict_$ID_NEW.en
 echo "copying train_$ID.align ..."
 cp -R $VOC_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
 if [ -f $VOC_DIR/bpe-$ID.codes ]
