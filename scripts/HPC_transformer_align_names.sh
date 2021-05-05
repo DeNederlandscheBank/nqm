@@ -14,7 +14,7 @@ module load python
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
-ID=5861
+ID=25028
 ID_MODEL=$ID-align
 TEST_TEMPLATES=test_templates
 

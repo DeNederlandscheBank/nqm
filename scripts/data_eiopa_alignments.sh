@@ -2,8 +2,8 @@
 # full pipeline EIOPA that you can run to prepare the data and train the model
 # Use this script from the root!
 
-USE_SUBWORDS=YES # use of subword splitting
-CREATE_SUBWORD_DICTIONARY=YES # generate dictionary using subword split sentences
+USE_SUBWORDS=NO # use of subword splitting
+CREATE_SUBWORD_DICTIONARY=NO # generate dictionary using subword split sentences
 
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs
@@ -25,7 +25,7 @@ echo "$ID"
 
 echo 'Generating data (train, validation)...'
 python src_eiopa/generator.py \
-  --templates $DATA_DIR/templates_dev.csv \
+  --templates $DATA_DIR/templates_newnames.csv \
   --output $INT_DIR --id "$ID" --type train_val \
   --graph-data-path $DATA_DIR --input-language en
 echo 'Splitting data intro train and validation...'
@@ -40,9 +40,15 @@ python src_eiopa/generator.py \
   --graph-data-path $DATA_DIR --folder $TEST_TEMPLATES \
   --input-language en
 
-echo 'Generate SPARQL dictionary...'
-python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
-  --input $INT_DIR/data_$ID-train_val.ql.raw --output $DICT_DIR/dict-$ID.ql
+#echo 'Generate SPARQL dictionary...'
+#python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
+#  --input $INT_DIR/data_$ID-train_val.ql.raw --output $DICT_DIR/dict-$ID.ql
+
+echo 'Generate dictionaries with names included..'
+for L in nl ql; do
+  python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
+    --input $INT_DIR/data_$ID-train.$L --output $DICT_DIR/dict-$ID.$L
+done
 
 if [ $USE_SUBWORDS = YES ]
   then . scripts/subword_processing.sh $DICT_DIR/dict-$ID.ql $CREATE_SUBWORD_DICTIONARY $ID

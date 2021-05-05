@@ -4,8 +4,8 @@
 # This script copies the required model files using $ID and places them in the
 # correct directory. The name is adapated using $ID_new. These two variables
 # have to be adapted to the desired values.
-ID=29-04_17-55_31684
-ID_NEW=31684
+ID=05-05_19-53_25028
+ID_NEW=25028
 
 
 DATA_DIR=data/eiopa/3_processed
@@ -23,6 +23,7 @@ for L in nl ql; do
 done
 
 # Copy helper files
+cp -R data/eiopa/1_external/dict.iwslt.en $VOC_DIR/dict_$ID_NEW.nl
 echo "copying train_$ID.align ..."
 cp -R $VOC_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
 if [ -f $VOC_DIR/bpe-$ID.codes ]
