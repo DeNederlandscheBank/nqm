@@ -36,8 +36,8 @@ mkdir -p $MODEL_DIR/out_$ID
 
 [[ -d "$IN_DIR/fairseq-data-bin-$ID" ]] \
  && { echo "fairseq-data-bin-$ID  exists" }
-#..$COUNT_TEST}; do
-for f in test_1_dev; do
+
+for f in test_{1..$COUNT_TEST}; do
   echo "Generate translations using fairseq-interactive for $f"
   cat $IN_DIR/data_$ID-$f.nl | \
   $generate $IN_DIR/fairseq-data-bin-$ID \

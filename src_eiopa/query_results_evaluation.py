@@ -99,7 +99,7 @@ if __name__ == '__main__':
     g = initialize_graph(args.graph_path)
     queries = read_queries(args.query_file, args.interactive_mode)
     acc, results = compare_results(g, queries)
-    result_string = f'Accuracy: {acc[0]}, correct: {acc[1]}, ' \
+    result_string = f'Query Result Accuracy: {acc[0]}, correct: {acc[1]}, ' \
                     f'false: {acc[2]}'
     save_query_results(args.out_file, results)
     if args.sum_file:
