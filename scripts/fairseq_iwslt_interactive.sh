@@ -1,12 +1,21 @@
 #!/bin/bash
 
-DATA_DIR=data/eiopa/5_model_input/fairseq-data-bin-14126
-MODEL_DIR=models/transformer_iwslt_de_en_14126
+# This script should be run from root and can be used to check the translation of a particular sentence.
+
+ID=5861
+ID_MODEL=$ID
+
+MODEL_DIR=models/transformer_iwslt_de_en_$ID_MODEL
+IN_DIR=data/eiopa/5_model_input
+DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
+BPECODES=$IN_DIR/$ID-bpe.codes
+
+CHECKPOINT_BEST_BLEU=$(find $MODEL_DIR -name 'checkpoint.best_bleu_*.pt')
 
 
-fairseq-interactive \
-    --path $MODEL_DIR/checkpoint.best_bleu_81.91.pt $DATA_DIR \
+fairseq-interactive $DATA_BIN \
+    --path $CHECKPOINT_BEST_BLEU  \
     --beam 5 --source-lang nl --target-lang ql \
-    --print-alignment --replace-unk \
     --tokenizer moses \
-    --bpe subword_nmt --bpe-codes data/eiopa/5_model_input/archive/14126-bpe.codes \
+    --print-alignment --replace-unk \
+#    --bpe subword_nmt --bpe-codes $BPECODES \

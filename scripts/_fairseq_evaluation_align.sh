@@ -18,7 +18,6 @@ if [ $1 = HPC ]
           SRC_DIR=$HOME/.local/bin # location of installed packages
           generate=$SRC_DIR/fairseq-interactive
           PYTHON=python3
-          pip3 install --quiet --user -r $WORK_DIR/requirements.txt
 else
     WORK_DIR=.
     generate=fairseq-interactive

@@ -23,8 +23,20 @@ for L in nl ql; do
 done
 
 # Copy helper files
-cp -R $VOC_DIR/bpe-$ID.codes $TGT_DIR/$ID_NEW-bpe.codes
+echo "copying train_$ID.align ..."
 cp -R $VOC_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
-#cp -R $VOC_DIR/dict-$ID.ql $TGT_DIR/dict_$ID_NEW.ql
-cp -R $VOC_DIR/dict-$ID.bpe.ql $TGT_DIR/dict_$ID_NEW.ql
-cp -R $VOC_DIR/dict-$ID.bpe.nl $TGT_DIR/dict_$ID_NEW.nl
+if [ -f $VOC_DIR/bpe-$ID.codes ]
+  then cp -R $VOC_DIR/bpe-$ID.codes $TGT_DIR/$ID_NEW-bpe.codes
+fi
+for L in nl ql; do
+  if [ -f $VOC_DIR/dict-$ID.$L ]
+   then cp -R $VOC_DIR/dict-$ID.$L $TGT_DIR/dict_$ID_NEW.$L
+        echo "copying dict-$ID.$L..."
+  fi
+done
+for L in nl ql; do # if BPE dicts are presented, these ones have to be used, overwrite previous copied dicts
+  if [ -f $VOC_DIR/dict-$ID.bpe.$L ]
+    then cp -R $VOC_DIR/dict-$ID.bpe.$L $TGT_DIR/dict_$ID_NEW.$L
+         echo "copying dict-$ID.bpe.$L..."
+  fi
+done

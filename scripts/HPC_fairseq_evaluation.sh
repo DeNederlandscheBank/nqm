@@ -7,18 +7,13 @@
 #SBATCH --job-name=fairseq_evaluation
 #SBATCH --output=output-%J.log
 
+# not checked whether working
+
 module switch intel gcc
 module load python
 
 ID=14126
 ID_MODEL=$ID
-
-if [ -n "$1" ]
-    then ID=$1
-fi
-if [ -n "$2" ]
-    then ID_MODEL=$2
-fi
 
 WORK_DIR=$HOME/nqm
 SRC_DIR=$HOME/.local/bin # location of installed packages
@@ -30,37 +25,42 @@ MODEL_DIR=$WORK_DIR/models/transformer_iwslt_de_en_$ID_MODEL
 OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 
-pip3 install --quiet --user -r $WORK_DIR/requirements.txt
-pip3 install --quiet --user fairseq
 
-mkdir -p $MODEL_DIR/out_$ID
+. _fairseq_evaluation_align.sh HPC BPE ID
 
-[[ -d "$WORK_DIR" ]] && echo "$WORK_DIR exists"
 
-[[ -d "$IN_DIR/fairseq-data-bin-$ID" ]] \
- && { echo "fairseq-data-bin-$ID  exists" }
-
-for f in test_{1..$COUNT_TEST}; do
-  echo "Generate translations using fairseq-generate for $f"
-  $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
-    --gen-subset $f \
-    --path $MODEL_DIR/checkpoint_best.pt \
-    --results-path $OUT_DIR \
-    --beam 5  \
-    --batch-size 128 \
-    --scoring bleu \
-    --remove-bpe
-
-  echo "Decode the queries for $f"
-  python3 src_eiopa/decode_fairseq_output.py \
-    --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
-    --out-file $OUT_DIR/decoded-$f.txt \
-    --summary-file $OUT_DIR/summary-$ID.txt
-
-  echo "Evaluate query performance"
-  python3 src_eiopa/query_results_evaluation.py \
-    --graph-path $DATA_DIR \
-    --query-file $OUT_DIR/decoded-$f.txt \
-    --out-file $OUT_DIR/queries_and_results-$f.txt \
-    --summary-file $OUT_DIR/summary-$ID.txt
-done
+#
+#pip3 install --quiet --user -r $WORK_DIR/requirements.txt
+#pip3 install --quiet --user fairseq
+#
+#mkdir -p $MODEL_DIR/out_$ID
+#
+#[[ -d "$WORK_DIR" ]] && echo "$WORK_DIR exists"
+#
+#[[ -d "$IN_DIR/fairseq-data-bin-$ID" ]] \
+# && { echo "fairseq-data-bin-$ID  exists" }
+#
+#for f in test_{1..$COUNT_TEST}; do
+#  echo "Generate translations using fairseq-generate for $f"
+#  $SRC_DIR/fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
+#    --gen-subset $f \
+#    --path $MODEL_DIR/checkpoint_best.pt \
+#    --results-path $OUT_DIR \
+#    --beam 5  \
+#    --batch-size 128 \
+#    --scoring bleu \
+#    --remove-bpe
+#
+#  echo "Decode the queries for $f"
+#  python3 src_eiopa/decode_fairseq_output.py \
+#    --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
+#    --out-file $OUT_DIR/decoded-$f.txt \
+#    --summary-file $OUT_DIR/summary-$ID.txt
+#
+#  echo "Evaluate query performance"
+#  python3 src_eiopa/query_results_evaluation.py \
+#    --graph-path $DATA_DIR \
+#    --query-file $OUT_DIR/decoded-$f.txt \
+#    --out-file $OUT_DIR/queries_and_results-$f.txt \
+#    --summary-file $OUT_DIR/summary-$ID.txt
+#done

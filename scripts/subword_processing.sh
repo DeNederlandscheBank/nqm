@@ -24,13 +24,6 @@ python src_eiopa/subword-nmt/subword_nmt/learn_bpe.py \
   --output $BPE_CODE \
   --dict-input
 
-#for L in nl ql; do
-#  python src_eiopa/subword-nmt/subword_nmt/apply_bpe.py \
-#    --input data/eiopa/2_interim/data_27-04_15-02_10578-dev-val.$L \
-#    --output data/eiopa/2_interim/data_27-04_15-02_10578-dev-val.bpe.$L \
-#    --codes data/eiopa/2_interim/dev-bpe.codes
-#done
-
 # Apply bpe to all relevant files
 for L in nl ql; do # both languages
     for f in train.$L val.$L test_{1..$COUNT_TEST}.$L; do
@@ -50,6 +43,14 @@ if [ "$2" = YES ]
           --input $OUT_DIR/data_$ID-train.$L --output $DICT_DIR/dict-$ID.bpe.$L
       done
 fi
+
+
+#for L in nl ql; do
+#  python src_eiopa/subword-nmt/subword_nmt/apply_bpe.py \
+#    --input data/eiopa/2_interim/data_27-04_15-02_10578-dev-val.$L \
+#    --output data/eiopa/2_interim/data_27-04_15-02_10578-dev-val.bpe.$L \
+#    --codes data/eiopa/2_interim/dev-bpe.codes
+#done
 
 #echo 'Learning BPE codes using subword_nmt'
 #python src_eiopa/subword-nmt/subword_nmt/learn_joint_bpe_and_vocab.py \

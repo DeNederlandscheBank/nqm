@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# For given data train files, using fast_align to learn the alignments
+# ID can be given as external argument
 
 if [ -n "$1" ]
     then ID=$1
