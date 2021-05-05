@@ -1,5 +1,15 @@
 #!/usr/local_rwth/bin/zsh
 
+# INSTRUCTIONS:
+# When using this script, two arguments have to be given:
+# -1 whether the script is to be used locally or on the HPC Aachen (argument: HPC)
+# -2 whether subword processing was used for training the model (argument: BPE)
+# As argument 3 and 4, the data ID and model_ID can be given, but not required
+# Example: "source _fairseq_evaluation_align.sh HPC BPE 5861 5861"
+
+# This script will conduct replacement of OOV words in the target hypothesis and requires
+# an alignment dictionary (automatically generated when using data_eiopa_alignments.sh)
+
 ID=5861
 ID_MODEL=$ID
 
@@ -14,8 +24,13 @@ else
     generate=fairseq-interactive
     PYTHON=python3
 fi
-if [ -n "$2" ]
-    then ID=$1
+if [ $2 = BPE ]
+    then SUBWORDS=True
+else
+  SUBWORDS=False
+fi
+if [ -n "$3" ]
+    then ID=$3
 else
   DATA_DIR=$WORK_DIR/data/eiopa/1_external
   TEST_TEMPLATES=test_templates
@@ -25,8 +40,8 @@ else
   OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
   COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 fi
-if [ -n "$3" ]
-    then ID_MODEL=$2
+if [ -n "$4" ]
+    then ID_MODEL=$4
 fi
 CHECKPOINT_BEST_BLEU=$(find $MODEL_DIR -name 'checkpoint.best_bleu_*.pt')
 BPE_CODES=$IN_DIR/$ID-bpe.codes
@@ -39,14 +54,22 @@ mkdir -p $MODEL_DIR/out_$ID
 
 for f in test_{1..$COUNT_TEST}; do
   echo "Generate translations using fairseq-interactive for $f"
-  cat $IN_DIR/data_$ID-$f.nl | \
-  $generate $IN_DIR/fairseq-data-bin-$ID \
-    --path $CHECKPOINT_BEST_BLEU \
-    --results-path $OUT_DIR --beam 5  \
-    --print-alignment --replace-unk $ALIGN_FILE \
-      > $MODEL_DIR/out_$ID/generate-$f.txt
-     # --bpe subword_nmt --bpe-codes $BPE_CODES \
-
+  if [ $SUBWORDS = True ]
+    then  cat $IN_DIR/data_$ID-$f.nl | \
+          $generate $IN_DIR/fairseq-data-bin-$ID \
+            --path $CHECKPOINT_BEST_BLEU \
+            --results-path $OUT_DIR --beam 5  \
+            --print-alignment --replace-unk $ALIGN_FILE \
+            --bpe subword_nmt --bpe-codes $BPE_CODES \
+          > $MODEL_DIR/out_$ID/generate-$f.txt
+  else
+    cat $IN_DIR/data_$ID-$f.nl | \
+          $generate $IN_DIR/fairseq-data-bin-$ID \
+            --path $CHECKPOINT_BEST_BLEU \
+            --results-path $OUT_DIR --beam 5  \
+            --print-alignment --replace-unk $ALIGN_FILE \
+          > $MODEL_DIR/out_$ID/generate-$f.txt
+  fi
 
   echo "Decode the queries for $f and evaluate the translation"
   $PYTHON src_eiopa/decode_fairseq_output.py \
