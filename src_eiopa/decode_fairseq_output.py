@@ -66,7 +66,7 @@ def write_queries_generated(results, out_file):
         for line in results:
             for item in line[:-1]:
                 target.writelines(str(item) + ', ')
-            target.writelines(str(line[:-1]) + '\n')
+            target.writelines(str(line[-1]) + '\n')
     target.close()
 
 
