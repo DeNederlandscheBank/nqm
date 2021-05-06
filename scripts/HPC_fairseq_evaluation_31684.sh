@@ -26,4 +26,4 @@ OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 
 
-. _fairseq_evaluation_align.sh HPC BPE $ID $ID_MODEL
+. scripts/_fairseq_evaluation_align.sh HPC BPE $ID $ID_MODEL
