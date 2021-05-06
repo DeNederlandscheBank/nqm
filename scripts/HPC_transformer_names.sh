@@ -57,4 +57,4 @@ $SRC_DIR/fairseq-train $DATA_BIN \
   --stop-time-hours 12 --cpu  \
   --tensorboard-logdir $MODEL_DIR/out_$ID/
 
-. scripts/_fairseq_evaluation_align.sh HPC NO-BPE $ID
+. scripts/_fairseq_evaluation_align.sh HPC NO-BPE $ID $ID_MODEL

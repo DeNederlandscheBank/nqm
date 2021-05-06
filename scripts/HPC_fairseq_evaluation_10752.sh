@@ -2,9 +2,9 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=8G
-#SBATCH --time=1:30:00
-#SBATCH --job-name=fairseq_evaluation
+#SBATCH --mem-per-cpu=7G
+#SBATCH --time=2:00:00
+#SBATCH --job-name=10752
 #SBATCH --output=output-%J.log
 
 # not checked whether working
@@ -12,7 +12,7 @@
 module switch intel gcc
 module load python
 
-ID=14126
+ID=10752
 ID_MODEL=$ID
 
 WORK_DIR=$HOME/nqm
@@ -26,7 +26,7 @@ OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 
 
-. _fairseq_evaluation_align.sh HPC BPE ID
+. _fairseq_evaluation_align.sh HPC BPE $ID $ID_MODEL
 
 
 #
