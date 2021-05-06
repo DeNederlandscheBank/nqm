@@ -7,3 +7,7 @@ decoded-test_2.txt:
 SacreBLEU score: 19.70; String matching precision: 0.00; Name match precision: 0.00
 decoded-test_2.txt:
 Query Result Accuracy: 0, correct: 0, false: 0
+decoded-test_3.txt:
+SacreBLEU score: 52.08; String matching precision: 0.00; Name match precision: 0.00
+decoded-test_3.txt:
+Query Result Accuracy: 0.0, correct: 0, false: 6440
