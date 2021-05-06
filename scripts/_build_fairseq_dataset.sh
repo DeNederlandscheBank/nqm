@@ -30,7 +30,7 @@ $preprocess -s nl -t ql \
       --trainpref $FILE-train \
       --validpref $FILE-val \
       --destdir $DATA_BIN \
-      --srcdict $IN_DIR/dict_$ID.en \
+      --srcdict $IN_DIR/dict_$ID.nl \
       --tgtdict $IN_DIR/dict_$ID.ql \
       --alignfile $IN_DIR/train_$ID.align \
       --cpu --empty-cache-freq 10
@@ -42,7 +42,7 @@ for f in test_{1..$COUNT_TEST}; do
     --testpref $FILE-$f \
     --destdir $DATA_BIN-$f \
     --cpu --empty-cache-freq 10 \
-    --srcdict $IN_DIR/dict_$ID.en \
+    --srcdict $IN_DIR/dict_$ID.nl \
     --tgtdict $IN_DIR/dict_$ID.ql \
   # collect all test files in one folder and rename them
   for L in nl ql; do

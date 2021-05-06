@@ -55,7 +55,8 @@ mkdir -p $MODEL_DIR/out_$ID
 for f in test_{1..$COUNT_TEST}; do
   echo "Generate translations using fairseq-interactive for $f"
   if [ $SUBWORDS = True ]
-    then  cat $IN_DIR/data_$ID-$f.nl | \
+    # use no subword processed files for generation
+    then  cat $IN_DIR/data_"$ID"-no-BPE-$f.nl | \
           $generate $DATA_BIN \
             --path $CHECKPOINT_BEST_BLEU \
             --results-path $OUT_DIR --beam 5  \
@@ -72,14 +73,26 @@ for f in test_{1..$COUNT_TEST}; do
   fi
 
   echo "Decode the queries for $f and evaluate the translation"
-  $PYTHON src_eiopa/decode_fairseq_output.py \
-     --interactive \
-     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
-     --out-file $OUT_DIR/decoded-$f.txt \
-     --out-file-encoded $OUT_DIR/translations-$f.txt \
-     --in-file-reference $IN_DIR/data_$ID-$f.ql \
-     --summary-file $OUT_DIR/summary-$ID.txt \
-     --graph-path data/eiopa/1_external
+  if [ $SUBWORDS = True ]
+  # us no subword processed queries for comparing translations
+    then $PYTHON src_eiopa/decode_fairseq_output.py \
+           --interactive \
+           --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
+           --out-file $OUT_DIR/decoded-$f.txt \
+           --out-file-encoded $OUT_DIR/translations-$f.txt \
+           --in-file-reference $IN_DIR/data_"$ID"_no_BPE-$f.ql \
+           --summary-file $OUT_DIR/summary-$ID.txt \
+           --graph-path data/eiopa/1_external
+  else
+    $PYTHON src_eiopa/decode_fairseq_output.py \
+      --interactive \
+      --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
+      --out-file $OUT_DIR/decoded-$f.txt \
+      --out-file-encoded $OUT_DIR/translations-$f.txt \
+      --in-file-reference $IN_DIR/data_$ID-$f.ql \
+      --summary-file $OUT_DIR/summary-$ID.txt \
+      --graph-path data/eiopa/1_external
+  fi
 
   echo "Evaluate query performance"
   $PYTHON src_eiopa/query_results_evaluation.py \
