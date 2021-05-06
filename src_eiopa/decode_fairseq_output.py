@@ -8,6 +8,7 @@ import argparse
 from os import path
 import re
 import sacrebleu
+from numpy import median
 from string import Template
 from generator_utils import sparql_decode
 from generator import initialize_graph, query_database
@@ -109,18 +110,26 @@ def get_bleu_score(references, translations):
 
 
 def get_translation_accuracy(references, translations):
-    """ Simple string matching check, not case dependent """
-    cnt_correct = 0
+    """
+    Simple check what percentage of words from translation are
+    contained in the reference
+    """
+    accuracies = []
     for reference, translation in zip(references, translations):
-        if reference.lower() == translation.lower():
-            cnt_correct += 1
-    acc = cnt_correct / len(references)
-    return f'String matching precision: {acc:.2f}'
+        cnt_correct = 0
+        ref_tokens = reference.lower().split(" ")
+        trans_tokens = translation.lower().split(" ")
+        for word in trans_tokens:
+            if word in ref_tokens:
+                cnt_correct += 1
+        accuracies.append(cnt_correct/len(ref_tokens))
+    acc = median(accuracies)
+    return f'Median match of translation string and reference: {acc:.2f}'
 
 
 def check_names(references, translations, graph_path):
     g = initialize_graph(graph_path)
-    cnt_correct = 0;
+    cnt_correct = 0
     cnt_false = 0
     template = Template(
         'SELECT ?o WHERE{ ?e eiopa-Base:hasIdentifyingName "$name". ?e eiopa-Base:hasIdentifyingName ?o}')
