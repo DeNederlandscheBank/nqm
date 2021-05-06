@@ -47,7 +47,7 @@ CHECKPOINT_BEST_BLEU=$(find $MODEL_DIR -name 'checkpoint.best_bleu_*.pt')
 BPE_CODES=$IN_DIR/$ID-bpe.codes
 ALIGN_FILE=$DATA_BIN/alignment.nl-ql.txt
 
-mkdir -p $MODEL_DIR/out_$ID
+mkdir -p $OUT_DIR
 
 [[ -d "$DATA_BIN" ]] \
  && { echo "$DATA_BIN  exists" }
@@ -62,14 +62,14 @@ for f in test_{1..$COUNT_TEST}; do
             --results-path $OUT_DIR --beam 5  \
             --print-alignment --replace-unk $ALIGN_FILE \
             --bpe subword_nmt --bpe-codes $BPE_CODES \
-          > $MODEL_DIR/out_$ID/generate-$f.txt
+          > $OUT_DIR/generate-$f.txt
   else
     cat $IN_DIR/data_$ID-$f.nl | \
           $generate $DATA_BIN \
             --path $CHECKPOINT_BEST_BLEU \
             --results-path $OUT_DIR --beam 5  \
             --print-alignment --replace-unk $ALIGN_FILE \
-          > $MODEL_DIR/out_$ID/generate-$f.txt
+          > $OUT_DIR/generate-$f.txt
   fi
 
   echo "Decode the queries for $f and evaluate the translation"
@@ -80,7 +80,7 @@ for f in test_{1..$COUNT_TEST}; do
            --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
            --out-file $OUT_DIR/decoded-$f.txt \
            --out-file-encoded $OUT_DIR/translations-$f.txt \
-           --in-file-reference $IN_DIR/data_"$ID"_no_BPE-$f.ql \
+           --in-file-reference $IN_DIR/data_"$ID"_no-BPE-$f.ql \
            --summary-file $OUT_DIR/summary-$ID.txt \
            --graph-path data/eiopa/1_external
   else
