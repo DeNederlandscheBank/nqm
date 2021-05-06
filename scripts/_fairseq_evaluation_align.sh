@@ -56,7 +56,7 @@ for f in test_{1..$COUNT_TEST}; do
   echo "Generate translations using fairseq-interactive for $f"
   if [ $SUBWORDS = True ]
     # use no subword processed files for generation
-    then  cat $IN_DIR/data_"$ID"-no-BPE-$f.nl | \
+    then  cat $IN_DIR/data_"$ID"_no-BPE-$f.nl | \
           $generate $DATA_BIN \
             --path $CHECKPOINT_BEST_BLEU \
             --results-path $OUT_DIR --beam 5  \
