@@ -16,38 +16,40 @@ def compare_results(graph, query_pairs):
     """
     Returns summary statistics for query results
     Also returns list of reference, translation and query results. If one
-    of the queries resulted in no answer, the query is not written to
-    the output file.
+    of the queries resulted in no answer, it is counted as false.
     """
     cnt_correct = 0
     cnt_false = 0
     queries_results = []
     for pair in query_pairs:
         try:
-            result_true = query_database(pair[0], graph)
+            results_reference = query_database(pair[0], graph)
         except:
             logging.info(f'Error in Reference Query: {pair[0]}')
             continue
         try:
-            result_generated = query_database(pair[1], graph)
+            results_generated = query_database(pair[1], graph)
         except:
             logging.info(f'Error in Translated Query: {pair[1]}')
             cnt_false += 1
             continue
-        if result_true and result_generated:  # value is not []
-            result_true = result_true[0]
-            result_generated = result_generated[0]
-            for index in range(len(result_true)):
-                if result_true[index] == result_generated[index]:
+        if results_reference and results_generated:  # value is not []
+            results_reference = results_reference[0]
+            results_generated = results_generated[0]
+            for ref_result in results_reference:
+                if ref_result in results_generated:
                     cnt_correct += 1
                 else:
                     cnt_false += 1
                     logging.debug(f'{pair[0]}, {pair[1]}')
-                pair.append(result_true[index])
-                pair.append(result_generated[index])
+                pair.append(ref_result)
+            pair.append(results_generated)
             queries_results.append(pair)
         else:
             cnt_false += 1
+            pair.append(results_reference)
+            pair.append(results_generated)
+            queries_results.append(pair)
     if cnt_correct != 0 or cnt_false != 0:
         accuracy = cnt_correct / (cnt_correct + cnt_false)
     else:
@@ -73,9 +75,9 @@ def read_queries(file, interactive=False):
 def save_query_results(file, result_list):
     with open(file, 'w', encoding='utf-8') as target:
         for line in result_list:
-            for item in line:
+            for item in line[:-1]:
                 target.writelines(str(item) + ', ')
-            target.writelines('\n')
+            target.writelines(str(line[-1]) + '\n')
     target.close()
 
 
