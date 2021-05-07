@@ -122,7 +122,7 @@ def get_translation_accuracy(references, translations):
         for word in trans_tokens:
             if word in ref_tokens:
                 cnt_correct += 1
-        accuracies.append(cnt_correct/len(ref_tokens))
+        accuracies.append(cnt_correct/len(trans_tokens))
     acc = median(accuracies)
     return f'Median match of translation string and reference: {acc:.2f}'
 
