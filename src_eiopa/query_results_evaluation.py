@@ -24,12 +24,12 @@ def compare_results(graph, query_pairs):
     for pair in query_pairs:
         try:
             results_reference = query_database(pair[0], graph)
-        except:
+        except Exception:
             logging.info(f'Error in Reference Query: {pair[0]}')
             continue
         try:
             results_generated = query_database(pair[1], graph)
-        except:
+        except Exception:
             logging.info(f'Error in Translated Query: {pair[1]}')
             cnt_false += 1
             continue

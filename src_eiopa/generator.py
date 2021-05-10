@@ -140,7 +140,7 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
                         queries_raw.write("{}\n".format(
                             dataset_triplet['query_raw']))
 
-            except:
+            except Exception:
                 exception = traceback.format_exc()
                 logging.error('template {} caused exception {}'.format(
                     getattr(template, 'id'), exception))
@@ -197,7 +197,6 @@ def prepare_generator_query(template, add_type_requirements=True):
     variables = getattr(template, 'variables')
 
     return generator_query
-
 
 
 if __name__ == '__main__':
@@ -296,7 +295,7 @@ if __name__ == '__main__':
             templates = read_template_file(template_file)
             generate_dataset(templates, output_dir, file_mode, job_id, type_,
                              moses_tokenizer, graph_database)
-    except:  # (MG): exception occured
+    except Exception:  # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)
     else:  # (MG): no exception happened
