@@ -21,10 +21,10 @@ from tqdm import tqdm
 
 try:
     from generator_utils import strip_item, sparql_encode, \
-    read_template_file, add_quotation_marks
+        read_template_file, add_quotation_marks
 except:
     from nqm.src_eiopa.generator_utils import strip_item, sparql_encode, \
-    read_template_file, add_quotation_marks
+        read_template_file, add_quotation_marks
 
 EXAMPLES_PER_TEMPLATE = 100
 
@@ -69,9 +69,9 @@ def get_name(uri):
         return uri
 
 
-def build_dataset_pair(item, template, mt):
+def build_dataset_triplet(item, template, mt):
     """ Taken from LiberAi
-    Returns dataset_pair with query and natural language question
+    Returns dataset_triplet with query and natural language question
     Currently only able to work with one variable
     Natural language question is tokenized using Moses and joined back to
     1 string with all tokens seperated by ' '.
@@ -88,11 +88,17 @@ def build_dataset_pair(item, template, mt):
             natural_language = ' '.join(mt.tokenize(natural_language))
         if placeholder in query:
             item_ = add_quotation_marks(strip_item(item[cnt]))
-            query = query.replace(placeholder, item_)
-    query = sparql_encode(query)
-    dataset_pair = { 'natural_language': natural_language,
-                     'query': query }
-    return dataset_pair
+            query_raw = query.replace(placeholder, 'quot_mark_l quot_mark_r')
+            query_filled = query.replace(placeholder, item_)
+        else:
+            query_filled = query
+            query_raw = query
+    query_filled = sparql_encode(query_filled)
+    query_raw = sparql_encode(query_raw)
+    dataset_triplet = { 'natural_language': natural_language,
+                     'query': query_filled,
+                     'query_raw': query_raw }
+    return dataset_triplet
 
 
 def generate_dataset(templates, output_dir, file_mode, job_id,
@@ -109,7 +115,9 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
     with io.open(output_dir + '/data_{1}-{0}.nl'.format(type_, job_id),
                  file_mode, encoding="utf-8") as nl_questions, \
             io.open(output_dir + '/data_{1}-{0}.ql'.format(type_, job_id),
-                    file_mode, encoding='utf-8') as queries:
+                    file_mode, encoding='utf-8') as queries, \
+            io.open(output_dir + '/data_{1}-{0}.ql.raw'.format(type_, job_id),
+                    file_mode, encoding='utf-8') as queries_raw:
         for template in tqdm(templates):
             it = it + 1
             try:
@@ -122,14 +130,15 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
                     continue
 
                 for item in results:
-                    dataset_pair = build_dataset_pair(item, template, mt)
+                    dataset_triplet = build_dataset_triplet(item, template, mt)
 
-                    if dataset_pair is not None:
-                        nl_questions.write("{}\n"
-                            .format(
-                            dataset_pair['natural_language']))
+                    if dataset_triplet is not None:
+                        nl_questions.write("{}\n".format(
+                            dataset_triplet['natural_language']))
 
-                        queries.write("{}\n".format(dataset_pair['query']))
+                        queries.write("{}\n".format(dataset_triplet['query']))
+                        queries_raw.write("{}\n".format(
+                            dataset_triplet['query_raw']))
 
             except:
                 exception = traceback.format_exc()
@@ -188,6 +197,7 @@ def prepare_generator_query(template, add_type_requirements=True):
     variables = getattr(template, 'variables')
 
     return generator_query
+
 
 
 if __name__ == '__main__':

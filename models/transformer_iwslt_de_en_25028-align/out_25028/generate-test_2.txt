@@ -1,0 +1,835 @@
+2021-05-07 15:36:41 | INFO | fairseq_cli.interactive | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_25028-align/checkpoint.best_bleu_99.46.pt', 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_25028-align/out_25028'}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_algorithm': 'LocalSGD', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'distributed_num_procs': 0}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 1, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0}, 'optimization': {'_name': None, 'max_epoch': 0, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.25], 'stop_min_lr': -1.0, 'use_bmuf': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints', 'restore_file': 'checkpoint_last.pt', 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-25028/alignment.nl-ql.txt', 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': 'hard', 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 1, 'input': '-'}, 'model': None, 'task': {'_name': 'translation', 'data': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-25028', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': True}, 'optimizer': None, 'lr_scheduler': {'_name': 'fixed', 'force_anneal': None, 'lr_shrink': 0.1, 'warmup_updates': 0, 'lr': [0.25]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None}
+2021-05-07 15:36:41 | INFO | fairseq.tasks.translation | [nl] dictionary: 402 types
+2021-05-07 15:36:41 | INFO | fairseq.tasks.translation | [ql] dictionary: 386 types
+2021-05-07 15:36:41 | INFO | fairseq_cli.interactive | loading model(s) from /home/ph541404/nqm/models/transformer_iwslt_de_en_25028-align/checkpoint.best_bleu_99.46.pt
+2021-05-07 15:36:42 | INFO | fairseq_cli.interactive | NOTE: hypothesis and token scores are output in base 2
+2021-05-07 15:36:42 | INFO | fairseq_cli.interactive | Type the input sentence and press return:
+S-0	Where is oom schadeverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-0	0.498	seconds
+H-0	-0.07635005563497543	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l oom schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-0	-0.07635005563497543	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l oom schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-0	-0.0470 -0.0599 -0.0624 -0.0565 -0.0740 -0.0653 -0.0527 -0.0762 -0.0174 -0.0089 -0.0624 -0.0675 -0.0597 -0.0694 -0.4065 -0.0803 -0.0584 -0.0583 -0.0676
+A-0	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 4-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-1	Where is n.v. noordhollandsche van 1816 <unk> <unk> what is the <unk> number ?
+W-1	0.543	seconds
+H-1	-0.054327525198459625	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot noordhollandsche van 1816 quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-1	-0.054327525198459625	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot noordhollandsche van 1816 quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-1	-0.0425 -0.0528 -0.0549 -0.0554 -0.0708 -0.0587 -0.0540 -0.0685 -0.0124 -0.0553 -0.0101 -0.0070 -0.0086 -0.0671 -0.0572 -0.0584 -0.1513 -0.0708 -0.0564 -0.0607 -0.0679
+A-1	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 2-8 13-9 9-10 12-11 2-12 12-13 13-14 12-15 12-16 12-17 13-18 12-19
+S-2	Where is onderlinge verzekeringsmaatschappij waterland en omstreken u.a. <unk> <unk> what is the <unk> number ?
+W-2	0.576	seconds
+H-2	-0.05842510238289833	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij waterland en omstreken u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-2	-0.05842510238289833	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij waterland en omstreken u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-2	-0.0555 -0.0564 -0.0653 -0.0548 -0.0744 -0.0619 -0.0569 -0.0682 -0.0127 -0.0494 -0.0391 -0.0153 -0.0295 -0.0293 -0.0683 -0.0581 -0.0640 -0.1577 -0.0871 -0.0575 -0.0570 -0.0667
+A-2	14-0 14-1 14-2 14-3 14-4 14-5 14-6 14-7 2-8 1-9 7-10 12-11 2-12 14-13 14-14 12-15 14-16 14-17 14-18 12-19 14-20
+S-3	Where is vvaa schadeverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-3	0.500	seconds
+H-3	-0.06689253449440002	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vvaa schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-3	-0.06689253449440002	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vvaa schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-3	-0.0388 -0.0518 -0.0673 -0.0510 -0.0653 -0.0630 -0.0601 -0.0686 -0.0111 -0.0118 -0.0755 -0.0721 -0.0576 -0.0651 -0.2554 -0.0772 -0.0570 -0.0570 -0.0654
+A-3	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 8-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-4	Where is onderlinge verzekeringmaatschappij som u.a. <unk> <unk> what is the <unk> number ?
+W-4	0.541	seconds
+H-4	-0.05765216425061226	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringmaatschappij som u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-4	-0.05765216425061226	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringmaatschappij som u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-4	-0.0525 -0.0569 -0.0597 -0.0585 -0.0746 -0.0584 -0.0573 -0.0695 -0.0099 -0.0644 -0.0139 -0.0217 -0.0646 -0.0582 -0.0580 -0.1320 -0.0671 -0.0577 -0.0544 -0.0638
+A-4	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 2-8 9-9 5-10 12-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-5	Where is achmea reinsurance company n.v. <unk> <unk> what is the <unk> number ?
+W-5	0.517	seconds
+H-5	-0.06456068903207779	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea reinsurance company n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-5	-0.06456068903207779	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea reinsurance company n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-5	-0.0473 -0.0594 -0.0627 -0.0589 -0.0701 -0.0645 -0.0604 -0.0709 -0.0174 -0.0123 -0.0110 -0.0820 -0.0714 -0.0603 -0.0681 -0.2123 -0.0736 -0.0582 -0.0617 -0.0687
+A-5	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 6-9 0-10 13-11 12-12 10-13 12-14 12-15 12-16 10-17 12-18
+S-6	Where is bnp paribas cardif levensverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-6	0.539	seconds
+H-6	-0.054691847413778305	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bnp paribas cardif levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-6	-0.054691847413778305	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bnp paribas cardif levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-6	-0.0460 -0.0557 -0.0618 -0.0564 -0.0667 -0.0638 -0.0546 -0.0683 -0.0119 -0.0045 -0.0125 -0.0175 -0.0708 -0.0689 -0.0584 -0.0677 -0.1127 -0.0722 -0.0574 -0.0601 -0.0607
+A-6	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 6-8 6-9 13-10 6-11 13-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-7	Where is dela natura- en levensverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-7	0.538	seconds
+H-7	-0.05737019330263138	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dela natura- en levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-7	-0.05737019330263138	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dela natura- en levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-7	-0.0526 -0.0601 -0.0646 -0.0547 -0.0702 -0.0625 -0.0553 -0.0706 -0.0141 -0.0101 -0.0084 -0.0203 -0.0722 -0.0688 -0.0575 -0.0637 -0.1434 -0.0737 -0.0560 -0.0613 -0.0647
+A-7	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 6-8 6-9 14-10 6-11 14-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-8	Where is leidsche verzekering maatschappij n.v. <unk> <unk> what is the <unk> number ?
+W-8	0.547	seconds
+H-8	-0.0620928630232811	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l leidsche verzekering maatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-8	-0.0620928630232811	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l leidsche verzekering maatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-8	-0.0390 -0.0546 -0.0569 -0.0549 -0.0684 -0.0602 -0.0520 -0.0684 -0.0227 -0.0181 -0.0233 -0.0538 -0.0687 -0.0572 -0.0635 -0.2359 -0.0698 -0.0559 -0.0586 -0.0602
+A-8	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 1-9 12-10 5-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-9	Where is iza zorgverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-9	0.510	seconds
+H-9	-0.0672343373298645	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l iza zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-9	-0.0672343373298645	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l iza zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-9	-0.0507 -0.0629 -0.0624 -0.0616 -0.0751 -0.0629 -0.0668 -0.0734 -0.0066 -0.0203 -0.0789 -0.0770 -0.0628 -0.0634 -0.1819 -0.0795 -0.0611 -0.0640 -0.0662
+A-9	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 12-9 12-10 11-11 9-12 11-13 11-14 11-15 9-16 11-17
+S-10	Where is univé oost brandverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-10	0.520	seconds
+H-10	-0.0687396377325058	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé oost brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-10	-0.0687396377325058	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé oost brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-10	-0.0582 -0.0632 -0.0609 -0.0596 -0.0796 -0.0647 -0.0605 -0.0771 -0.0097 -0.0153 -0.0095 -0.0800 -0.0705 -0.0587 -0.0676 -0.2724 -0.0774 -0.0579 -0.0601 -0.0720
+A-10	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 5-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-11	Where is onderlinge verzekeringsmaatschappij de veenhoop u.a. <unk> <unk> what is the <unk> number ?
+W-11	0.641	seconds
+H-11	-0.06482723355293274	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij de veenhoop u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-11	-0.06482723355293274	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij de veenhoop u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-11	-0.0561 -0.0587 -0.0638 -0.0596 -0.0759 -0.0658 -0.0622 -0.0706 -0.0091 -0.0534 -0.0394 -0.0506 -0.0317 -0.0714 -0.0613 -0.0627 -0.1934 -0.0829 -0.0600 -0.0593 -0.0734
+A-11	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 1-9 6-10 6-11 13-12 13-13 11-14 13-15 13-16 13-17 11-18 13-19
+S-12	Where is scildon n.v. <unk> <unk> what is the <unk> number ?
+W-12	0.495	seconds
+H-12	-0.08531080186367035	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l scildon n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-12	-0.08531080186367035	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l scildon n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-12	-0.0414 -0.0555 -0.0674 -0.0552 -0.0650 -0.0564 -0.0547 -0.0682 -0.0065 -0.0667 -0.0700 -0.0574 -0.0569 -0.5503 -0.0830 -0.0564 -0.0606 -0.0640
+A-12	10-0 10-1 10-2 10-3 10-4 10-5 10-6 10-7 3-8 11-9 10-10 11-11 10-12 10-13 10-14 11-15 10-16
+S-13	Where is stad holland zorgverzekeraar onderlinge waarborgmaatschappij u.a. <unk> <unk> what is the <unk> number ?
+W-13	0.597	seconds
+H-13	-0.05782904848456383	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l stad holland zorgverzekeraar onderlinge waarborgmaatschappij u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-13	-0.05782904848456383	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l stad holland zorgverzekeraar onderlinge waarborgmaatschappij u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-13	-0.0518 -0.0578 -0.0664 -0.0570 -0.0729 -0.0680 -0.0675 -0.0735 -0.0341 -0.0246 -0.0300 -0.0141 -0.0030 -0.0271 -0.0765 -0.0609 -0.0696 -0.1459 -0.0791 -0.0608 -0.0646 -0.0671
+A-13	14-0 14-1 14-2 14-3 14-4 14-5 14-6 14-7 5-8 12-9 7-10 5-11 1-12 14-13 14-14 12-15 14-16 14-17 14-18 12-19 14-20
+S-14	Where is ohra ziektekostenverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-14	0.532	seconds
+H-14	-0.06928475946187973	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ohra ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-14	-0.06928475946187973	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ohra ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-14	-0.0525 -0.0581 -0.0661 -0.0583 -0.0709 -0.0678 -0.0570 -0.0733 -0.0111 -0.0094 -0.0775 -0.0716 -0.0638 -0.0659 -0.2382 -0.0814 -0.0614 -0.0631 -0.0689
+A-14	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-15	Where is onderlinge waarborg maatschappij achterhoek u.a. <unk> <unk> what is the <unk> number ?
+W-15	0.569	seconds
+H-15	-0.06666562706232071	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborg maatschappij achterhoek u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-15	-0.06666562706232071	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborg maatschappij achterhoek u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-15	-0.0514 -0.0605 -0.0699 -0.0603 -0.0693 -0.0644 -0.0591 -0.0692 -0.0113 -0.0768 -0.0297 -0.0261 -0.0238 -0.0700 -0.0628 -0.0620 -0.2579 -0.0790 -0.0615 -0.0631 -0.0718
+A-15	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 6-9 8-10 7-11 13-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-16	Where is tvm verzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-16	0.495	seconds
+H-16	-0.06846743077039719	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l tvm verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-16	-0.06846743077039719	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l tvm verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-16	-0.0499 -0.0558 -0.0671 -0.0582 -0.0669 -0.0623 -0.0600 -0.0749 -0.0222 -0.0108 -0.0789 -0.0732 -0.0611 -0.0647 -0.2248 -0.0808 -0.0592 -0.0586 -0.0713
+A-16	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 0-9 12-10 11-11 0-12 11-13 11-14 11-15 0-16 11-17
+S-17	Where is nationale-nederlanden schadeverzekering maatschappij n.v. <unk> <unk> what is the <unk> number ?
+W-17	0.543	seconds
+H-17	-0.05969423055648804	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nationale-nederlanden schadeverzekering maatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-17	-0.05969423055648804	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nationale-nederlanden schadeverzekering maatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-17	-0.0440 -0.0559 -0.0618 -0.0558 -0.0621 -0.0650 -0.0519 -0.0688 -0.0190 -0.0044 -0.0335 -0.0589 -0.0655 -0.0576 -0.0660 -0.1783 -0.0700 -0.0564 -0.0562 -0.0628
+A-17	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 0-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-18	Where is achmea pensioen- en levensverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-18	0.539	seconds
+H-18	-0.060175735503435135	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea pensioen- en levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-18	-0.060175735503435135	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea pensioen- en levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-18	-0.0470 -0.0590 -0.0597 -0.0584 -0.0680 -0.0617 -0.0548 -0.0723 -0.0106 -0.0287 -0.0051 -0.0176 -0.0745 -0.0685 -0.0565 -0.0667 -0.2074 -0.0692 -0.0554 -0.0609 -0.0616
+A-18	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 6-8 2-9 11-10 6-11 14-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-19	Where is assurant europe insurance n.v. <unk> <unk> what is the <unk> number ?
+W-19	0.543	seconds
+H-19	-0.06868581473827362	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l assurant europe insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-19	-0.06868581473827362	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l assurant europe insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-19	-0.0460 -0.0586 -0.0633 -0.0567 -0.0700 -0.0615 -0.0525 -0.0705 -0.0279 -0.0077 -0.0168 -0.0588 -0.0724 -0.0588 -0.0678 -0.3238 -0.0755 -0.0583 -0.0603 -0.0663
+A-19	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 10-9 4-10 13-11 12-12 10-13 12-14 12-15 12-16 10-17 12-18
+S-20	Where is menzis n.v. <unk> <unk> what is the <unk> number ?
+W-20	0.473	seconds
+H-20	-0.07311136275529861	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l menzis n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-20	-0.07311136275529861	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l menzis n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-20	-0.0513 -0.0564 -0.0654 -0.0582 -0.0682 -0.0585 -0.0580 -0.0742 -0.0287 -0.0546 -0.0706 -0.0587 -0.0621 -0.2940 -0.0735 -0.0575 -0.0598 -0.0663
+A-20	10-0 10-1 10-2 10-3 10-4 10-5 10-6 10-7 3-8 11-9 10-10 11-11 10-12 10-13 10-14 11-15 10-16
+S-21	Where is asr levensverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-21	0.524	seconds
+H-21	-0.06305746734142303	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-21	-0.06305746734142303	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-21	-0.0493 -0.0545 -0.0671 -0.0495 -0.0616 -0.0603 -0.0570 -0.0650 -0.0037 -0.0579 -0.0630 -0.0680 -0.0594 -0.0611 -0.1685 -0.0779 -0.0576 -0.0537 -0.0629
+A-21	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 7-9 11-10 11-11 0-12 11-13 11-14 11-15 1-16 11-17
+S-22	Where is dsw ziektekostenverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-22	0.525	seconds
+H-22	-0.06403877586126328	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dsw ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-22	-0.06403877586126328	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dsw ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-22	-0.0488 -0.0630 -0.0623 -0.0556 -0.0743 -0.0609 -0.0603 -0.0732 -0.0176 -0.0081 -0.0770 -0.0708 -0.0595 -0.0637 -0.1595 -0.0783 -0.0580 -0.0623 -0.0638
+A-22	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 11-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-23	Where is n.v. hagelunie <unk> <unk> what is the <unk> number ?
+W-23	0.498	seconds
+H-23	-0.06459911167621613	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot hagelunie quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-23	-0.06459911167621613	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot hagelunie quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-23	-0.0413 -0.0542 -0.0698 -0.0549 -0.0646 -0.0572 -0.0527 -0.0735 -0.0234 -0.0573 -0.0106 -0.0620 -0.0585 -0.0563 -0.2275 -0.0818 -0.0580 -0.0584 -0.0654
+A-23	10-0 10-1 10-2 10-3 10-4 10-5 10-6 10-7 2-8 0-9 7-10 10-11 0-12 10-13 10-14 10-15 0-16 10-17
+S-24	Where is vvaa levensverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-24	0.519	seconds
+H-24	-0.062170837074518204	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vvaa levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-24	-0.062170837074518204	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vvaa levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-24	-0.0424 -0.0581 -0.0585 -0.0552 -0.0672 -0.0652 -0.0559 -0.0702 -0.0158 -0.0136 -0.0709 -0.0715 -0.0592 -0.0656 -0.1639 -0.0720 -0.0572 -0.0582 -0.0606
+A-24	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 3-9 11-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-25	Where is brand new day levensverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-25	0.569	seconds
+H-25	-0.05878870189189911	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brand new day levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-25	-0.05878870189189911	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brand new day levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-25	-0.0504 -0.0610 -0.0593 -0.0574 -0.0666 -0.0638 -0.0563 -0.0690 -0.0393 -0.0067 -0.0110 -0.0164 -0.0730 -0.0745 -0.0577 -0.0677 -0.1493 -0.0714 -0.0563 -0.0616 -0.0659
+A-25	13-0 13-1 13-2 13-3 13-4 6-5 13-6 13-7 6-8 4-9 0-10 13-11 13-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-26	Where is waard schade n.v. <unk> <unk> what is the <unk> number ?
+W-26	0.499	seconds
+H-26	-0.06248391047120094	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l waard schade n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-26	-0.06248391047120094	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l waard schade n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-26	-0.0447 -0.0528 -0.0576 -0.0547 -0.0609 -0.0616 -0.0543 -0.0675 -0.0274 -0.0142 -0.0625 -0.0680 -0.0595 -0.0656 -0.1784 -0.0751 -0.0578 -0.0591 -0.0655
+A-26	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 4-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-27	Where is onderlinge waarborgmaatschappij sazas u.a. <unk> <unk> what is the <unk> number ?
+W-27	0.612	seconds
+H-27	-0.0645453929901123	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij sazas u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-27	-0.0645453929901123	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij sazas u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-27	-0.0550 -0.0588 -0.0658 -0.0580 -0.0745 -0.0705 -0.0618 -0.0695 -0.0107 -0.0051 -0.0530 -0.0301 -0.0691 -0.0623 -0.0678 -0.2168 -0.0737 -0.0616 -0.0629 -0.0640
+A-27	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 2-8 1-9 5-10 12-11 12-12 10-13 12-14 12-15 12-16 1-17 12-18
+S-28	Where is onderlinge verzekering maatschappij donatus u.a. <unk> <unk> what is the <unk> number ?
+W-28	0.602	seconds
+H-28	-0.06124797835946083	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-28	-0.06124797835946083	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-28	-0.0545 -0.0577 -0.0607 -0.0566 -0.0674 -0.0581 -0.0581 -0.0672 -0.0082 -0.1249 -0.0384 -0.0306 -0.0316 -0.0678 -0.0586 -0.0587 -0.1297 -0.0733 -0.0580 -0.0593 -0.0669
+A-28	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 1-9 13-10 6-11 13-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-29	Where is asr aanvullende ziektekostenverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-29	0.527	seconds
+H-29	-0.06611718982458115	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr aanvullende ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-29	-0.06611718982458115	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr aanvullende ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-29	-0.0539 -0.0566 -0.0637 -0.0542 -0.0687 -0.0638 -0.0572 -0.0694 -0.0067 -0.1398 -0.0135 -0.0773 -0.0711 -0.0606 -0.0665 -0.1461 -0.0711 -0.0582 -0.0597 -0.0643
+A-29	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 5-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-30	Where is n.v. schadeverzekering-maatschappij bovemij <unk> <unk> what is the <unk> number ?
+W-30	0.526	seconds
+H-30	-0.06313658505678177	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot schadeverzekering-maatschappij bovemij quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-30	-0.06313658505678177	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot schadeverzekering-maatschappij bovemij quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-30	-0.0401 -0.0509 -0.0583 -0.0574 -0.0661 -0.0538 -0.0519 -0.0720 -0.0076 -0.0550 -0.0235 -0.0053 -0.0643 -0.0567 -0.0556 -0.2968 -0.0755 -0.0568 -0.0529 -0.0621
+A-30	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 2-8 12-9 8-10 8-11 11-12 12-13 11-14 11-15 11-16 12-17 11-18
+S-31	Where is lifetri uitvaartverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-31	0.500	seconds
+H-31	-0.06814870983362198	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lifetri uitvaartverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-31	-0.06814870983362198	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lifetri uitvaartverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-31	-0.0485 -0.0548 -0.0609 -0.0558 -0.0623 -0.0664 -0.0570 -0.0710 -0.0160 -0.0221 -0.0730 -0.0717 -0.0618 -0.0684 -0.2416 -0.0741 -0.0607 -0.0633 -0.0654
+A-31	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 0-9 12-10 11-11 9-12 11-13 11-14 11-15 9-16 11-17
+S-32	Where is assurant europe life insurance n.v. <unk> <unk> what is the <unk> number ?
+W-32	0.575	seconds
+H-32	-0.06756141036748886	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l assurant europe life insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-32	-0.06756141036748886	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l assurant europe life insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-32	-0.0513 -0.0555 -0.0713 -0.0628 -0.0772 -0.0769 -0.0611 -0.0776 -0.0270 -0.0324 -0.0067 -0.0296 -0.0642 -0.0764 -0.0624 -0.0798 -0.2270 -0.0818 -0.0619 -0.0641 -0.0716
+A-32	13-0 13-1 13-2 13-3 13-4 6-5 13-6 13-7 6-8 1-9 10-10 0-11 14-12 13-13 11-14 13-15 13-16 13-17 11-18 13-19
+S-33	Where is achmea schadeverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-33	0.539	seconds
+H-33	-0.07105646282434464	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-33	-0.07105646282434464	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-33	-0.0415 -0.0532 -0.0661 -0.0518 -0.0647 -0.0609 -0.0594 -0.0701 -0.0050 -0.0489 -0.0796 -0.0690 -0.0572 -0.0647 -0.3001 -0.0757 -0.0562 -0.0587 -0.0675
+A-33	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 5-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-34	Where is yarden uitvaartverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-34	0.528	seconds
+H-34	-0.06635365635156631	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l yarden uitvaartverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-34	-0.06635365635156631	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l yarden uitvaartverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-34	-0.0453 -0.0528 -0.0652 -0.0564 -0.0646 -0.0691 -0.0587 -0.0708 -0.0164 -0.0193 -0.0692 -0.0738 -0.0607 -0.0673 -0.2018 -0.0793 -0.0592 -0.0631 -0.0678
+A-34	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 1-9 12-10 11-11 12-12 11-13 11-14 11-15 1-16 11-17
+S-35	Where is vgz zorgverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-35	0.538	seconds
+H-35	-0.07698395848274231	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vgz zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-35	-0.07698395848274231	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vgz zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-35	-0.0511 -0.0593 -0.0586 -0.0574 -0.0704 -0.0606 -0.0635 -0.0750 -0.0092 -0.0220 -0.0680 -0.0730 -0.0586 -0.0634 -0.4109 -0.0775 -0.0582 -0.0604 -0.0655
+A-35	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 0-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-36	Where is n.v. levensverzekering-maatschappij de hoop <unk> <unk> what is the <unk> number ?
+W-36	0.556	seconds
+H-36	-0.057310134172439575	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot levensverzekering-maatschappij de hoop quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-36	-0.057310134172439575	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot levensverzekering-maatschappij de hoop quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-36	-0.0436 -0.0521 -0.0615 -0.0568 -0.0666 -0.0559 -0.0542 -0.0737 -0.0135 -0.0555 -0.0113 -0.0375 -0.0092 -0.0639 -0.0575 -0.0549 -0.1752 -0.0768 -0.0573 -0.0583 -0.0684
+A-36	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 2-8 13-9 1-10 12-11 4-12 12-13 13-14 12-15 12-16 12-17 13-18 12-19
+S-37	Where is onvz aanvullende verzekering n.v. <unk> <unk> what is the <unk> number ?
+W-37	0.538	seconds
+H-37	-0.07340911775827408	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onvz aanvullende verzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-37	-0.07340911775827408	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onvz aanvullende verzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-37	-0.0482 -0.0523 -0.0585 -0.0573 -0.0701 -0.0578 -0.0544 -0.0690 -0.1083 -0.0075 -0.1988 -0.0697 -0.0674 -0.0582 -0.0623 -0.1814 -0.0681 -0.0558 -0.0611 -0.0622
+A-37	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 8-9 1-10 12-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-38	Where is dle natura uitvaartverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-38	0.535	seconds
+H-38	-0.0662248358130455	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dle natura uitvaartverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-38	-0.0662248358130455	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dle natura uitvaartverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-38	-0.0537 -0.0547 -0.0539 -0.0573 -0.0637 -0.0629 -0.0553 -0.0648 -0.0186 -0.0065 -0.0150 -0.0747 -0.0715 -0.0609 -0.0660 -0.2888 -0.0682 -0.0589 -0.0617 -0.0675
+A-38	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 12-9 1-10 13-11 12-12 13-13 5-14 12-15 12-16 13-17 12-18
+S-39	Where is n.v. univé schade <unk> <unk> what is the <unk> number ?
+W-39	0.539	seconds
+H-39	-0.05805113539099693	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot univé schade quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-39	-0.05805113539099693	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot univé schade quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-39	-0.0434 -0.0537 -0.0613 -0.0538 -0.0613 -0.0579 -0.0520 -0.0670 -0.0423 -0.0550 -0.0082 -0.0102 -0.0616 -0.0565 -0.0598 -0.1685 -0.0743 -0.0558 -0.0534 -0.0650
+A-39	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 2-8 2-9 8-10 4-11 11-12 2-13 11-14 11-15 11-16 12-17 11-18
+S-40	Where is abn amro levensverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-40	0.536	seconds
+H-40	-0.06754019856452942	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l abn amro levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-40	-0.06754019856452942	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l abn amro levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-40	-0.0488 -0.0591 -0.0659 -0.0569 -0.0755 -0.0582 -0.0636 -0.0713 -0.0095 -0.0085 -0.0270 -0.0663 -0.0695 -0.0614 -0.0603 -0.2860 -0.0785 -0.0601 -0.0599 -0.0644
+A-40	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 12-9 5-10 12-11 12-12 10-13 12-14 12-15 12-16 10-17 12-18
+S-41	Where is nationale-nederlanden levensverzekering maatschappij n.v. <unk> <unk> what is the <unk> number ?
+W-41	0.541	seconds
+H-41	-0.057246461510658264	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nationale-nederlanden levensverzekering maatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-41	-0.057246461510658264	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nationale-nederlanden levensverzekering maatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-41	-0.0461 -0.0531 -0.0621 -0.0527 -0.0586 -0.0610 -0.0547 -0.0633 -0.0199 -0.0115 -0.0202 -0.0592 -0.0660 -0.0579 -0.0620 -0.1476 -0.0737 -0.0568 -0.0560 -0.0625
+A-41	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 0-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-42	Where is onderlinge verzekering maatschappij zlm u.a. <unk> <unk> what is the <unk> number ?
+W-42	0.583	seconds
+H-42	-0.06580644845962524	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij zlm u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-42	-0.06580644845962524	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij zlm u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-42	-0.0530 -0.0615 -0.0634 -0.0597 -0.0705 -0.0635 -0.0633 -0.0735 -0.0128 -0.1168 -0.0585 -0.0122 -0.0341 -0.0672 -0.0610 -0.0660 -0.1725 -0.0740 -0.0607 -0.0623 -0.0756
+A-42	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 1-9 9-10 6-11 13-12 13-13 14-14 13-15 13-16 13-17 1-18 13-19
+S-43	Where is proteq levensverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-43	0.511	seconds
+H-43	-0.07419105619192123	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l proteq levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-43	-0.07419105619192123	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l proteq levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-43	-0.0503 -0.0596 -0.0622 -0.0518 -0.0675 -0.0633 -0.0538 -0.0753 -0.0131 -0.0184 -0.0670 -0.0651 -0.0601 -0.0657 -0.3893 -0.0713 -0.0584 -0.0564 -0.0609
+A-43	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 4-9 11-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-44	Where is nn non-life insurance n.v. <unk> <unk> what is the <unk> number ?
+W-44	0.536	seconds
+H-44	-0.06894771009683609	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nn non-life insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-44	-0.06894771009683609	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nn non-life insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-44	-0.0479 -0.0625 -0.0567 -0.0597 -0.0723 -0.0570 -0.0569 -0.0768 -0.0301 -0.0112 -0.0145 -0.0790 -0.0737 -0.0574 -0.0632 -0.3071 -0.0718 -0.0566 -0.0601 -0.0643
+A-44	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 1-9 10-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-45	Where is onderlinge brandwaarborg maatschappij noord holland u.a. <unk> <unk> what is the <unk> number ?
+W-45	0.604	seconds
+H-45	-0.06037961691617966	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge brandwaarborg maatschappij noord holland u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-45	-0.06037961691617966	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge brandwaarborg maatschappij noord holland u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-45	-0.0585 -0.0601 -0.0585 -0.0574 -0.0699 -0.0610 -0.0568 -0.0657 -0.0087 -0.1918 -0.0311 -0.0133 -0.0244 -0.0291 -0.0694 -0.0579 -0.0655 -0.0981 -0.0728 -0.0572 -0.0569 -0.0642
+A-45	14-0 14-1 14-2 14-3 14-4 14-5 14-6 14-7 2-8 12-9 14-10 8-11 7-12 14-13 14-14 1-15 14-16 14-17 14-18 1-19 14-20
+S-46	Where is bos fruit aardappelen onderlinge verzekeringen bfao u.a. <unk> <unk> what is the <unk> number ?
+W-46	0.606	seconds
+H-46	-0.05469552427530289	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bos fruit aardappelen onderlinge verzekeringen bfao u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-46	-0.05469552427530289	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bos fruit aardappelen onderlinge verzekeringen bfao u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-46	-0.0531 -0.0560 -0.0578 -0.0591 -0.0698 -0.0641 -0.0650 -0.0760 -0.0313 -0.0184 -0.0106 -0.0166 -0.0407 -0.0085 -0.0305 -0.0653 -0.0605 -0.0606 -0.1675 -0.0683 -0.0602 -0.0548 -0.0632
+A-46	15-0 15-1 15-2 15-3 15-4 15-5 15-6 15-7 5-8 8-9 0-10 5-11 1-12 10-13 15-14 15-15 1-16 15-17 15-18 15-19 1-20 15-21
+S-47	Where is fbto zorgverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-47	0.504	seconds
+H-47	-0.07253008335828781	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l fbto zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-47	-0.07253008335828781	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l fbto zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-47	-0.0518 -0.0590 -0.0597 -0.0551 -0.0719 -0.0567 -0.0631 -0.0738 -0.0086 -0.0105 -0.0888 -0.0741 -0.0579 -0.0586 -0.3313 -0.0755 -0.0568 -0.0616 -0.0633
+A-47	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-48	Where is monuta verzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-48	0.526	seconds
+H-48	-0.06667716801166534	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l monuta verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-48	-0.06667716801166534	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l monuta verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-48	-0.0461 -0.0574 -0.0651 -0.0545 -0.0695 -0.0652 -0.0607 -0.0765 -0.0076 -0.0152 -0.0708 -0.0707 -0.0593 -0.0626 -0.2264 -0.0767 -0.0578 -0.0583 -0.0666
+A-48	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 0-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-49	Where is onderlinge levensverzekering-maatschappij &apos; s-gravenhage u.a. <unk> <unk> what is the <unk> number ?
+W-49	0.600	seconds
+H-49	-0.06100630387663841	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge levensverzekering-maatschappij 's-gravenhage u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-49	-0.06100630387663841	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge levensverzekering-maatschappij 's-gravenhage u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-49	-0.0597 -0.0597 -0.0693 -0.0601 -0.0748 -0.0564 -0.0596 -0.0762 -0.0144 -0.0455 -0.0273 -0.0309 -0.0662 -0.0608 -0.0568 -0.1337 -0.0799 -0.0601 -0.0593 -0.0693
+A-49	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 1-9 2-10 13-11 13-12 14-13 13-14 13-15 13-16 14-17 13-18
+S-50	Where is aegon levensverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-50	0.499	seconds
+H-50	-0.06622587889432907	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegon levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-50	-0.06622587889432907	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegon levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-50	-0.0427 -0.0566 -0.0629 -0.0515 -0.0700 -0.0552 -0.0570 -0.0712 -0.0204 -0.0276 -0.0664 -0.0691 -0.0604 -0.0575 -0.2342 -0.0799 -0.0582 -0.0559 -0.0617
+A-50	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 11-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-51	Where is univé zuid-nederland verzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-51	0.550	seconds
+H-51	-0.06386709213256836	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé zuid-nederland verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-51	-0.06386709213256836	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé zuid-nederland verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-51	-0.0486 -0.0561 -0.0619 -0.0575 -0.0735 -0.0662 -0.0614 -0.0725 -0.0047 -0.0080 -0.0169 -0.0706 -0.0666 -0.0592 -0.0641 -0.2290 -0.0788 -0.0585 -0.0587 -0.0645
+A-51	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 3-9 1-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-52	Where is abn amro captive n.v. <unk> <unk> what is the <unk> number ?
+W-52	0.526	seconds
+H-52	-0.06963382661342621	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l abn amro captive n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-52	-0.06963382661342621	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l abn amro captive n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-52	-0.0520 -0.0605 -0.0625 -0.0608 -0.0831 -0.0678 -0.0653 -0.0772 -0.0289 -0.0182 -0.0078 -0.0730 -0.0759 -0.0628 -0.0673 -0.2593 -0.0760 -0.0609 -0.0641 -0.0693
+A-52	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 12-9 5-10 12-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-53	Where is uvm verzekeringsmaatschappij n.v. <unk> <unk> what is the <unk> number ?
+W-53	0.501	seconds
+H-53	-0.06212262809276581	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uvm verzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-53	-0.06212262809276581	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uvm verzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-53	-0.0439 -0.0599 -0.0591 -0.0539 -0.0669 -0.0667 -0.0547 -0.0656 -0.0191 -0.0185 -0.0727 -0.0711 -0.0590 -0.0672 -0.1389 -0.0808 -0.0571 -0.0568 -0.0685
+A-53	11-0 11-1 11-2 11-3 11-4 4-5 11-6 11-7 4-8 1-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-54	Where is ansvar verzekeringsmaatschappij n.v. <unk> <unk> what is the <unk> number ?
+W-54	0.499	seconds
+H-54	-0.06685718894004822	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ansvar verzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-54	-0.06685718894004822	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ansvar verzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-54	-0.0456 -0.0570 -0.0615 -0.0529 -0.0686 -0.0614 -0.0575 -0.0715 -0.0275 -0.0271 -0.0799 -0.0734 -0.0595 -0.0634 -0.2027 -0.0772 -0.0580 -0.0594 -0.0665
+A-54	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 0-9 12-10 11-11 0-12 11-13 11-14 11-15 0-16 11-17
+S-55	Where is national academic verzekeringsmaatschappij n.v. <unk> <unk> what is the <unk> number ?
+W-55	0.525	seconds
+H-55	-0.0628744438290596	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l national academic verzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-55	-0.0628744438290596	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l national academic verzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-55	-0.0493 -0.0545 -0.0579 -0.0532 -0.0726 -0.0653 -0.0577 -0.0675 -0.0059 -0.0117 -0.0204 -0.0680 -0.0717 -0.0601 -0.0677 -0.2140 -0.0772 -0.0592 -0.0575 -0.0662
+A-55	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 1-9 0-10 13-11 12-12 13-13 5-14 12-15 12-16 13-17 12-18
+S-56	Where is nn re n.v. <unk> <unk> what is the <unk> number ?
+W-56	0.525	seconds
+H-56	-0.06658421456813812	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nn re n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-56	-0.06658421456813812	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nn re n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-56	-0.0486 -0.0621 -0.0633 -0.0579 -0.0739 -0.0616 -0.0540 -0.0749 -0.0468 -0.0102 -0.0824 -0.0720 -0.0596 -0.0632 -0.1677 -0.0812 -0.0579 -0.0596 -0.0683
+A-56	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 1-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-57	Where is univé noord-nederland verzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-57	0.551	seconds
+H-57	-0.056939952075481415	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé noord-nederland verzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-57	-0.056939952075481415	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé noord-nederland verzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-57	-0.0439 -0.0570 -0.0642 -0.0560 -0.0709 -0.0590 -0.0549 -0.0689 -0.0043 -0.0196 -0.0158 -0.0605 -0.0638 -0.0559 -0.0622 -0.1337 -0.0743 -0.0553 -0.0560 -0.0625
+A-57	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 9-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-58	Where is n.v. univé her <unk> <unk> what is the <unk> number ?
+W-58	0.526	seconds
+H-58	-0.06848526746034622	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot univé her quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-58	-0.06848526746034622	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot univé her quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-58	-0.0471 -0.0597 -0.0702 -0.0598 -0.0695 -0.0607 -0.0579 -0.0777 -0.0580 -0.0568 -0.0037 -0.0036 -0.0605 -0.0585 -0.0582 -0.3004 -0.0798 -0.0582 -0.0595 -0.0701
+A-58	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 2-8 12-9 2-10 2-11 11-12 12-13 11-14 11-15 11-16 12-17 11-18
+S-59	Where is onderlinge verzekerings maatschappij rijn en aar u.a. <unk> <unk> what is the <unk> number ?
+W-59	0.601	seconds
+H-59	-0.06511559337377548	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings maatschappij rijn en aar u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-59	-0.06511559337377548	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings maatschappij rijn en aar u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-59	-0.0566 -0.0596 -0.0713 -0.0567 -0.0748 -0.0688 -0.0636 -0.0751 -0.0124 -0.1729 -0.0441 -0.0182 -0.0163 -0.0272 -0.0344 -0.0683 -0.0599 -0.0642 -0.1878 -0.0822 -0.0592 -0.0601 -0.0638
+A-59	15-0 15-1 15-2 15-3 15-4 15-5 15-6 15-7 2-8 1-9 15-10 8-11 13-12 13-13 15-14 15-15 16-16 15-17 15-18 15-19 16-20 15-21
+S-60	Where is n.v. univé zorg <unk> <unk> what is the <unk> number ?
+W-60	0.525	seconds
+H-60	-0.05873275175690651	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot univé zorg quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-60	-0.05873275175690651	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot univé zorg quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-60	-0.0443 -0.0546 -0.0621 -0.0547 -0.0648 -0.0543 -0.0502 -0.0683 -0.0403 -0.0552 -0.0041 -0.0306 -0.0567 -0.0565 -0.0582 -0.1705 -0.0710 -0.0565 -0.0564 -0.0653
+A-60	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 2-8 12-9 8-10 4-11 11-12 12-13 11-14 11-15 11-16 12-17 11-18
+S-61	Where is n.v. verzekeringsbedrijf groot amsterdam <unk> <unk> what is the <unk> number ?
+W-61	0.552	seconds
+H-61	-0.057210661470890045	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot verzekeringsbedrijf groot amsterdam quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-61	-0.057210661470890045	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot verzekeringsbedrijf groot amsterdam quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-61	-0.0473 -0.0579 -0.0594 -0.0607 -0.0683 -0.0608 -0.0582 -0.0752 -0.0308 -0.0562 -0.0041 -0.0113 -0.0070 -0.0630 -0.0586 -0.0605 -0.1576 -0.0802 -0.0581 -0.0567 -0.0695
+A-61	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 2-8 2-9 1-10 12-11 6-12 12-13 13-14 12-15 12-16 12-17 0-18 12-19
+S-62	Where is samenwerking glasverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-62	0.499	seconds
+H-62	-0.06891761720180511	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l samenwerking glasverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-62	-0.06891761720180511	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l samenwerking glasverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-62	-0.0485 -0.0599 -0.0664 -0.0593 -0.0669 -0.0648 -0.0611 -0.0722 -0.0106 -0.0153 -0.0720 -0.0732 -0.0591 -0.0655 -0.2409 -0.0837 -0.0575 -0.0617 -0.0707
+A-62	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 11-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-63	Where is onderlinge verzekerings maatschappij de onderlingen u.a. <unk> <unk> what is the <unk> number ?
+W-63	0.612	seconds
+H-63	-0.06687504798173904	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings maatschappij de onderlingen u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-63	-0.06687504798173904	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings maatschappij de onderlingen u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-63	-0.0569 -0.0591 -0.0667 -0.0603 -0.0732 -0.0709 -0.0664 -0.0728 -0.0089 -0.0785 -0.0383 -0.0830 -0.0582 -0.0407 -0.0697 -0.0627 -0.0633 -0.1676 -0.0812 -0.0617 -0.0632 -0.0679
+A-63	14-0 14-1 14-2 14-3 14-4 14-5 14-6 14-7 2-8 1-9 14-10 7-11 7-12 14-13 14-14 15-15 14-16 14-17 14-18 15-19 14-20
+S-64	Where is ns insurance n.v. <unk> <unk> what is the <unk> number ?
+W-64	0.501	seconds
+H-64	-0.06589677929878235	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ns insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-64	-0.06589677929878235	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ns insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-64	-0.0496 -0.0611 -0.0665 -0.0555 -0.0635 -0.0580 -0.0549 -0.0710 -0.0089 -0.0154 -0.0652 -0.0744 -0.0613 -0.0597 -0.2204 -0.0807 -0.0593 -0.0610 -0.0656
+A-64	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-65	Where is actua schadeverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-65	0.503	seconds
+H-65	-0.06728087365627289	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l actua schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-65	-0.06728087365627289	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l actua schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-65	-0.0426 -0.0583 -0.0656 -0.0597 -0.0754 -0.0646 -0.0566 -0.0773 -0.0189 -0.0070 -0.0664 -0.0704 -0.0600 -0.0686 -0.2286 -0.0788 -0.0588 -0.0573 -0.0634
+A-65	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 7-9 11-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-66	Where is woningborg n.v. <unk> <unk> what is the <unk> number ?
+W-66	0.469	seconds
+H-66	-0.06538432836532593	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l woningborg n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-66	-0.06538432836532593	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l woningborg n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-66	-0.0452 -0.0556 -0.0617 -0.0516 -0.0659 -0.0570 -0.0613 -0.0693 -0.0085 -0.0664 -0.0670 -0.0563 -0.0606 -0.1969 -0.0802 -0.0551 -0.0591 -0.0591
+A-66	10-0 10-1 10-2 10-3 10-4 10-5 10-6 10-7 3-8 11-9 10-10 0-11 10-12 10-13 10-14 0-15 10-16
+S-67	Where is klaverblad levensverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-67	0.490	seconds
+H-67	-0.06647992134094238	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l klaverblad levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-67	-0.06647992134094238	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l klaverblad levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-67	-0.0444 -0.0571 -0.0622 -0.0533 -0.0682 -0.0595 -0.0619 -0.0660 -0.0149 -0.0135 -0.0687 -0.0688 -0.0606 -0.0608 -0.2394 -0.0867 -0.0588 -0.0561 -0.0622
+A-67	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 8-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-68	Where is robein leven n.v. <unk> <unk> what is the <unk> number ?
+W-68	0.515	seconds
+H-68	-0.07133749127388	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l robein leven n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-68	-0.07133749127388	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l robein leven n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-68	-0.0627 -0.0631 -0.0629 -0.0606 -0.0737 -0.0580 -0.0631 -0.0762 -0.0081 -0.0150 -0.0781 -0.0729 -0.0627 -0.0615 -0.2583 -0.0808 -0.0610 -0.0653 -0.0715
+A-68	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 4-9 12-10 11-11 0-12 11-13 11-14 11-15 0-16 11-17
+S-69	Where is onderlinge verzekerings-maatschappij noord nederlandsche p &amp; i club u.a. <unk> <unk> what is the <unk> number ?
+W-69	0.646	seconds
+H-69	-0.0779915601015091	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings-maatschappij noord nederlandsche p&i club u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-69	-0.0779915601015091	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings-maatschappij noord nederlandsche p&i club u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-69	-0.0677 -0.0743 -0.0687 -0.0651 -0.0813 -0.0661 -0.0720 -0.0813 -0.0171 -0.0149 -0.2059 -0.0344 -0.1323 -0.0916 -0.0382 -0.0843 -0.0652 -0.0679 -0.1678 -0.0854 -0.0643 -0.0697 -0.0780
+A-69	17-0 17-1 17-2 17-3 17-4 17-5 17-6 17-7 2-8 14-9 16-10 10-11 10-12 17-13 17-14 17-15 18-16 17-17 17-18 17-19 18-20 17-21
+S-70	Where is abn amro schadeverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-70	0.521	seconds
+H-70	-0.07063763588666916	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l abn amro schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-70	-0.07063763588666916	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l abn amro schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-70	-0.0473 -0.0608 -0.0625 -0.0608 -0.0796 -0.0633 -0.0590 -0.0775 -0.0135 -0.0101 -0.0106 -0.0713 -0.0686 -0.0609 -0.0654 -0.3434 -0.0736 -0.0592 -0.0594 -0.0658
+A-70	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 12-9 5-10 12-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-71	Where is anker insurance company n.v. <unk> <unk> what is the <unk> number ?
+W-71	0.543	seconds
+H-71	-0.06359825283288956	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l anker insurance company n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-71	-0.06359825283288956	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l anker insurance company n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-71	-0.0489 -0.0602 -0.0604 -0.0565 -0.0691 -0.0640 -0.0600 -0.0725 -0.0104 -0.0217 -0.0104 -0.0827 -0.0737 -0.0609 -0.0673 -0.1908 -0.0739 -0.0602 -0.0622 -0.0660
+A-71	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 10-9 1-10 13-11 12-12 13-13 12-14 12-15 12-16 10-17 12-18
+S-72	Where is univé stad en land brandverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-72	0.563	seconds
+H-72	-0.05426653474569321	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé stad en land brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-72	-0.05426653474569321	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé stad en land brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-72	-0.0504 -0.0554 -0.0640 -0.0532 -0.0720 -0.0647 -0.0577 -0.0726 -0.0054 -0.0073 -0.0104 -0.0145 -0.0078 -0.0711 -0.0679 -0.0572 -0.0686 -0.1367 -0.0751 -0.0571 -0.0603 -0.0646
+A-72	14-0 14-1 14-2 14-3 14-4 14-5 14-6 14-7 7-8 6-9 12-10 1-11 14-12 15-13 14-14 15-15 14-16 14-17 14-18 15-19 14-20
+S-73	Where is blue square re n.v. <unk> <unk> what is the <unk> number ?
+W-73	0.519	seconds
+H-73	-0.062084559351205826	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l blue square re n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-73	-0.062084559351205826	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l blue square re n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-73	-0.0542 -0.0593 -0.0620 -0.0569 -0.0699 -0.0703 -0.0537 -0.0741 -0.0215 -0.0062 -0.0091 -0.0735 -0.0726 -0.0606 -0.0682 -0.1644 -0.0784 -0.0589 -0.0592 -0.0686
+A-73	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 3-8 3-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-74	Where is eerste friesche onderlinge paarden verzekeringsmaatschappij u.a. <unk> <unk> what is the <unk> number ?
+W-74	0.574	seconds
+H-74	-0.061058614403009415	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eerste friesche onderlinge paarden verzekeringsmaatschappij u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-74	-0.061058614403009415	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eerste friesche onderlinge paarden verzekeringsmaatschappij u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-74	-0.0517 -0.0563 -0.0638 -0.0605 -0.0827 -0.0690 -0.0647 -0.0744 -0.0270 -0.0201 -0.0210 -0.0243 -0.0190 -0.0190 -0.0712 -0.0624 -0.0678 -0.2186 -0.0786 -0.0617 -0.0562 -0.0733
+A-74	14-0 14-1 14-2 14-3 14-4 14-5 14-6 14-7 4-8 6-9 4-10 1-11 1-12 14-13 14-14 12-15 14-16 14-17 14-18 12-19 14-20
+S-75	Where is uk p &amp; i club n.v. <unk> <unk> what is the <unk> number ?
+W-75	0.543	seconds
+H-75	-0.07513196766376495	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uk p&i club n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-75	-0.07513196766376495	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uk p&i club n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-75	-0.0591 -0.0598 -0.0586 -0.0587 -0.0746 -0.0645 -0.0640 -0.0760 -0.0078 -0.0392 -0.0786 -0.0672 -0.0787 -0.0611 -0.0660 -0.3180 -0.0777 -0.0595 -0.0644 -0.0687
+A-75	14-0 14-1 14-2 14-3 14-4 7-5 14-6 14-7 7-8 11-9 14-10 7-11 14-12 12-13 14-14 14-15 14-16 12-17 14-18
+S-76	Where is onderlinge waarborgmaatschappij voor instellingen in de gezondheidszorg medirisk b.a. <unk> <unk> what is the <unk> number ?
+W-76	0.817	seconds
+H-76	-0.09650859236717224	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij voor instellingen in de gezondheidszorg medirisk b.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-76	-0.09650859236717224	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij voor instellingen in de gezondheidszorg medirisk b.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-76	-0.0550 -0.0645 -0.0855 -0.0612 -0.0734 -0.0753 -0.0747 -0.0754 -0.0045 -0.0026 -0.1090 -0.2417 -0.1211 -0.1565 -0.0584 -0.2145 -0.1779 -0.0788 -0.0641 -0.0707 -0.2458 -0.1022 -0.0623 -0.0652 -0.0723
+A-76	17-0 17-1 17-2 17-3 17-4 17-5 17-6 17-7 2-8 1-9 6-10 6-11 6-12 6-13 1-14 6-15 6-16 17-17 18-18 17-19 17-20 17-21 1-22 17-23
+S-77	Where is uitvaartverzekering twenthe n.v. <unk> <unk> what is the <unk> number ?
+W-77	0.515	seconds
+H-77	-0.06715568155050278	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uitvaartverzekering twenthe n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-77	-0.06715568155050278	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uitvaartverzekering twenthe n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-77	-0.0458 -0.0585 -0.0615 -0.0595 -0.0687 -0.0646 -0.0633 -0.0717 -0.0180 -0.0292 -0.0701 -0.0704 -0.0598 -0.0642 -0.2087 -0.0737 -0.0581 -0.0635 -0.0666
+A-77	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 8-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-78	Where is lemonade insurance n.v. <unk> <unk> what is the <unk> number ?
+W-78	0.493	seconds
+H-78	-0.06823860853910446	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lemonade insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-78	-0.06823860853910446	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lemonade insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-78	-0.0512 -0.0608 -0.0666 -0.0619 -0.0721 -0.0677 -0.0596 -0.0784 -0.0123 -0.0142 -0.0625 -0.0730 -0.0611 -0.0684 -0.2161 -0.0801 -0.0601 -0.0636 -0.0668
+A-78	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 10-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-79	Where is unilever insurances n.v. <unk> <unk> what is the <unk> number ?
+W-79	0.521	seconds
+H-79	-0.0767572894692421	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l unilever insurances n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-79	-0.0767572894692421	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l unilever insurances n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-79	-0.0521 -0.0567 -0.0678 -0.0566 -0.0701 -0.0658 -0.0595 -0.0721 -0.0073 -0.0158 -0.0731 -0.0727 -0.0595 -0.0663 -0.4067 -0.0723 -0.0579 -0.0645 -0.0615
+A-79	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 4-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-80	Where is menzis zorgverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-80	0.498	seconds
+H-80	-0.07229362428188324	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l menzis zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-80	-0.07229362428188324	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l menzis zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-80	-0.0518 -0.0586 -0.0601 -0.0604 -0.0694 -0.0628 -0.0658 -0.0797 -0.0254 -0.0255 -0.0667 -0.0764 -0.0597 -0.0665 -0.2846 -0.0711 -0.0591 -0.0606 -0.0693
+A-80	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 12-9 12-10 11-11 9-12 11-13 11-14 11-15 9-16 11-17
+S-81	Where is akzo nobel assurantie n.v. <unk> <unk> what is the <unk> number ?
+W-81	0.523	seconds
+H-81	-0.06528926640748978	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l akzo nobel assurantie n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-81	-0.06528926640748978	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l akzo nobel assurantie n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-81	-0.0443 -0.0554 -0.0605 -0.0572 -0.0702 -0.0620 -0.0622 -0.0700 -0.0131 -0.0090 -0.0066 -0.0717 -0.0704 -0.0603 -0.0633 -0.2645 -0.0751 -0.0596 -0.0630 -0.0672
+A-81	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 6-9 8-10 12-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-82	Where is n.v. zorgverzekeraar umc <unk> <unk> what is the <unk> number ?
+W-82	0.517	seconds
+H-82	-0.05885285884141922	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot zorgverzekeraar umc quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-82	-0.05885285884141922	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot zorgverzekeraar umc quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-82	-0.0468 -0.0517 -0.0607 -0.0571 -0.0607 -0.0581 -0.0568 -0.0739 -0.0130 -0.0555 -0.0106 -0.0066 -0.0668 -0.0575 -0.0613 -0.1781 -0.0775 -0.0571 -0.0574 -0.0699
+A-82	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 2-8 12-9 8-10 11-11 11-12 12-13 11-14 11-15 11-16 12-17 11-18
+S-83	Where is onderlinge waarborgmaatschappij centrale zorgverzekeraars groep <unk> <unk> what is the <unk> number ?
+W-83	0.541	seconds
+H-83	-0.05892772600054741	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centrale zorgverzekeraars groep quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-83	-0.05892772600054741	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centrale zorgverzekeraars groep quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-83	-0.0566 -0.0617 -0.0652 -0.0562 -0.0706 -0.0704 -0.0637 -0.0741 -0.0097 -0.0044 -0.0595 -0.0156 -0.0107 -0.0703 -0.0586 -0.0626 -0.1684 -0.0742 -0.0579 -0.0609 -0.0661
+A-83	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 1-9 7-10 7-11 1-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-84	Where is eno zorgverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-84	0.491	seconds
+H-84	-0.06778478622436523	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eno zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-84	-0.06778478622436523	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eno zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-84	-0.0461 -0.0565 -0.0587 -0.0544 -0.0683 -0.0602 -0.0668 -0.0719 -0.0114 -0.0203 -0.0702 -0.0733 -0.0606 -0.0618 -0.2498 -0.0719 -0.0597 -0.0644 -0.0614
+A-84	11-0 11-1 11-2 11-3 11-4 4-5 11-6 11-7 4-8 8-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-85	Where is asr schadeverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-85	0.520	seconds
+H-85	-0.06249750033020973	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-85	-0.06249750033020973	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-85	-0.0482 -0.0579 -0.0623 -0.0550 -0.0689 -0.0663 -0.0539 -0.0713 -0.0053 -0.0120 -0.0652 -0.0686 -0.0593 -0.0682 -0.1688 -0.0739 -0.0579 -0.0566 -0.0680
+A-85	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 4-9 12-10 11-11 12-12 11-13 11-14 11-15 1-16 11-17
+S-86	Where is lifetri verzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-86	0.494	seconds
+H-86	-0.06549164652824402	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lifetri verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-86	-0.06549164652824402	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lifetri verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-86	-0.0449 -0.0552 -0.0574 -0.0542 -0.0672 -0.0625 -0.0564 -0.0728 -0.0183 -0.0070 -0.0696 -0.0683 -0.0606 -0.0639 -0.2347 -0.0701 -0.0595 -0.0568 -0.0648
+A-86	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 0-9 11-10 11-11 9-12 11-13 11-14 11-15 9-16 11-17
+S-87	Where is de friesland zorgverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-87	0.524	seconds
+H-87	-0.07260991632938385	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de friesland zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-87	-0.07260991632938385	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de friesland zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-87	-0.0497 -0.0587 -0.0597 -0.0639 -0.0698 -0.0650 -0.0663 -0.0787 -0.0720 -0.0307 -0.0221 -0.0720 -0.0759 -0.0636 -0.0648 -0.2637 -0.0780 -0.0624 -0.0666 -0.0688
+A-87	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 1-9 13-10 13-11 12-12 10-13 12-14 12-15 12-16 10-17 12-18
+S-88	Where is kmu verzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-88	0.519	seconds
+H-88	-0.07034735381603241	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l kmu verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-88	-0.07034735381603241	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l kmu verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-88	-0.0451 -0.0569 -0.0633 -0.0560 -0.0690 -0.0641 -0.0604 -0.0753 -0.0092 -0.0116 -0.0830 -0.0702 -0.0617 -0.0648 -0.2840 -0.0772 -0.0600 -0.0588 -0.0662
+A-88	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 1-9 12-10 11-11 9-12 11-13 11-14 11-15 9-16 11-17
+S-89	Where is waard leven n.v. <unk> <unk> what is the <unk> number ?
+W-89	0.516	seconds
+H-89	-0.0651993528008461	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l waard leven n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-89	-0.0651993528008461	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l waard leven n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-89	-0.0490 -0.0567 -0.0566 -0.0537 -0.0672 -0.0579 -0.0577 -0.0706 -0.0204 -0.0214 -0.0780 -0.0702 -0.0609 -0.0622 -0.1917 -0.0731 -0.0588 -0.0656 -0.0671
+A-89	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 5-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-90	Where is aegon spaarkas n.v. <unk> <unk> what is the <unk> number ?
+W-90	0.498	seconds
+H-90	-0.07489243894815445	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegon spaarkas n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-90	-0.07489243894815445	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegon spaarkas n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-90	-0.0483 -0.0599 -0.0655 -0.0576 -0.0777 -0.0626 -0.0613 -0.0837 -0.0416 -0.0102 -0.0829 -0.0734 -0.0626 -0.0641 -0.2966 -0.0789 -0.0601 -0.0627 -0.0731
+A-90	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 0-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-91	Where is cz zorgverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-91	0.522	seconds
+H-91	-0.065671905875206	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l cz zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-91	-0.065671905875206	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l cz zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-91	-0.0519 -0.0594 -0.0579 -0.0514 -0.0730 -0.0640 -0.0605 -0.0733 -0.0074 -0.0086 -0.0771 -0.0725 -0.0584 -0.0628 -0.2091 -0.0715 -0.0574 -0.0629 -0.0688
+A-91	11-0 11-1 11-2 11-3 11-4 4-5 11-6 11-7 4-8 8-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-92	Where is enel insurance n.v. <unk> <unk> what is the <unk> number ?
+W-92	0.494	seconds
+H-92	-0.07061354070901871	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l enel insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-92	-0.07061354070901871	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l enel insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-92	-0.0443 -0.0554 -0.0538 -0.0534 -0.0631 -0.0608 -0.0530 -0.0698 -0.0220 -0.0100 -0.0721 -0.0675 -0.0559 -0.0627 -0.3563 -0.0673 -0.0553 -0.0569 -0.0620
+A-92	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 0-9 12-10 11-11 0-12 11-13 11-14 11-15 0-16 11-17
+S-93	Where is aegon schadeverzekering n.v. <unk> <unk> what is the <unk> number ?
+W-93	0.495	seconds
+H-93	-0.06619228422641754	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegon schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-93	-0.06619228422641754	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegon schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-93	-0.0423 -0.0586 -0.0594 -0.0563 -0.0732 -0.0611 -0.0529 -0.0753 -0.0145 -0.0124 -0.0688 -0.0686 -0.0579 -0.0629 -0.2405 -0.0747 -0.0560 -0.0558 -0.0665
+A-93	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-94	Where is mercurius schadeverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-94	0.497	seconds
+H-94	-0.06810614466667175	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mercurius schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-94	-0.06810614466667175	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mercurius schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-94	-0.0467 -0.0516 -0.0679 -0.0519 -0.0616 -0.0608 -0.0555 -0.0641 -0.0132 -0.0248 -0.0742 -0.0701 -0.0586 -0.0622 -0.2813 -0.0748 -0.0575 -0.0557 -0.0617
+A-94	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 8-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-95	Where is stichtsche onderlinge brand-herverzekering u.a. <unk> <unk> what is the <unk> number ?
+W-95	0.517	seconds
+H-95	-0.06872661411762238	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l stichtsche onderlinge brand-herverzekering u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-95	-0.06872661411762238	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l stichtsche onderlinge brand-herverzekering u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-95	-0.0522 -0.0535 -0.0617 -0.0582 -0.0731 -0.0560 -0.0567 -0.0686 -0.0505 -0.0115 -0.0460 -0.0229 -0.0674 -0.0593 -0.0604 -0.3172 -0.0766 -0.0583 -0.0597 -0.0646
+A-95	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 3-8 12-9 1-10 12-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-96	Where is srlev n.v. <unk> <unk> what is the <unk> number ?
+W-96	0.506	seconds
+H-96	-0.06895331293344498	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l srlev n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-96	-0.06895331293344498	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l srlev n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-96	-0.0452 -0.0523 -0.0654 -0.0530 -0.0718 -0.0599 -0.0511 -0.0696 -0.0344 -0.0625 -0.0638 -0.0580 -0.0593 -0.2392 -0.0787 -0.0566 -0.0554 -0.0650
+A-96	10-0 10-1 10-2 10-3 10-4 10-5 10-6 10-7 3-8 11-9 10-10 11-11 10-12 10-13 10-14 11-15 10-16
+S-97	Where is onderlinge waarborgmaatschappij centramed b.a. <unk> <unk> what is the <unk> number ?
+W-97	0.601	seconds
+H-97	-0.06182720512151718	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centramed b.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-97	-0.06182720512151718	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centramed b.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-97	-0.0531 -0.0580 -0.0647 -0.0537 -0.0625 -0.0656 -0.0628 -0.0690 -0.0110 -0.0037 -0.0729 -0.0452 -0.0694 -0.0592 -0.0620 -0.1655 -0.0745 -0.0589 -0.0624 -0.0625
+A-97	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 2-8 1-9 9-10 9-11 12-12 13-13 12-14 12-15 12-16 1-17 12-18
+S-98	Where is onderlinge verzekering maatschappij twente u.a. <unk> <unk> what is the <unk> number ?
+W-98	0.545	seconds
+H-98	-0.05827808007597923	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij twente u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-98	-0.05827808007597923	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij twente u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-98	-0.0516 -0.0571 -0.0566 -0.0540 -0.0674 -0.0632 -0.0556 -0.0677 -0.0115 -0.0575 -0.0397 -0.0340 -0.0298 -0.0641 -0.0597 -0.0634 -0.1394 -0.0692 -0.0590 -0.0566 -0.0666
+A-98	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 10-9 8-10 6-11 13-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-99	Where is univé noord-holland brandverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-99	0.548	seconds
+H-99	-0.06427197903394699	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé noord-holland brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-99	-0.06427197903394699	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé noord-holland brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-99	-0.0486 -0.0548 -0.0613 -0.0559 -0.0694 -0.0742 -0.0556 -0.0728 -0.0056 -0.0168 -0.0079 -0.0717 -0.0653 -0.0583 -0.0748 -0.2388 -0.0743 -0.0576 -0.0559 -0.0658
+A-99	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 5-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-100	Where is onderling fonds sliedrecht b.a. <unk> <unk> what is the <unk> number ?
+W-100	0.549	seconds
+H-100	-0.05841989442706108	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderling fonds sliedrecht b.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-100	-0.05841989442706108	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderling fonds sliedrecht b.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-100	-0.0495 -0.0629 -0.0637 -0.0586 -0.0684 -0.0704 -0.0592 -0.0743 -0.0128 -0.0135 -0.0083 -0.0305 -0.0692 -0.0591 -0.0692 -0.1220 -0.0799 -0.0579 -0.0651 -0.0738
+A-100	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 3-8 3-9 3-10 1-11 12-12 13-13 12-14 12-15 12-16 1-17 12-18
+S-101	Where is goudse levensverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-101	0.504	seconds
+H-101	-0.06408673524856567	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l goudse levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-101	-0.06408673524856567	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l goudse levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-101	-0.0493 -0.0548 -0.0588 -0.0536 -0.0616 -0.0653 -0.0529 -0.0711 -0.0169 -0.0163 -0.0738 -0.0638 -0.0578 -0.0677 -0.2096 -0.0720 -0.0564 -0.0587 -0.0573
+A-101	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 4-9 11-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-102	Where is centrale ziektekostenverzekering nzv n.v. <unk> <unk> what is the <unk> number ?
+W-102	0.527	seconds
+H-102	-0.06856857240200043	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l centrale ziektekostenverzekering nzv n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-102	-0.06856857240200043	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l centrale ziektekostenverzekering nzv n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-102	-0.0455 -0.0623 -0.0642 -0.0596 -0.0770 -0.0598 -0.0591 -0.0785 -0.0166 -0.0103 -0.0113 -0.0676 -0.0692 -0.0589 -0.0603 -0.3024 -0.0749 -0.0582 -0.0634 -0.0722
+A-102	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 5-9 1-10 5-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-103	Where is mutual insurance association munis u.a. <unk> <unk> what is the <unk> number ?
+W-103	0.569	seconds
+H-103	-0.05736437812447548	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mutual insurance association munis u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-103	-0.05736437812447548	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mutual insurance association munis u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-103	-0.0478 -0.0560 -0.0643 -0.0582 -0.0732 -0.0695 -0.0625 -0.0721 -0.0080 -0.0153 -0.0156 -0.0103 -0.0229 -0.0690 -0.0585 -0.0714 -0.1671 -0.0778 -0.0581 -0.0609 -0.0662
+A-103	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 6-8 0-9 1-10 4-11 13-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-104	Where is goudse schadeverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-104	0.494	seconds
+H-104	-0.07331454753875732	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l goudse schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-104	-0.07331454753875732	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l goudse schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-104	-0.0493 -0.0487 -0.0703 -0.0514 -0.0596 -0.0624 -0.0575 -0.0724 -0.0179 -0.0193 -0.0763 -0.0659 -0.0593 -0.0661 -0.3542 -0.0802 -0.0589 -0.0593 -0.0639
+A-104	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 12-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-105	Where is algemene friese onderlinge schadeverzekeringsmaatschappij zevenwouden u.a. <unk> <unk> what is the <unk> number ?
+W-105	0.620	seconds
+H-105	-0.059138551354408264	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l algemene friese onderlinge schadeverzekeringsmaatschappij zevenwouden u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-105	-0.059138551354408264	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l algemene friese onderlinge schadeverzekeringsmaatschappij zevenwouden u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-105	-0.0491 -0.0607 -0.0597 -0.0611 -0.0768 -0.0682 -0.0602 -0.0701 -0.0397 -0.0274 -0.0180 -0.0246 -0.0179 -0.0296 -0.0740 -0.0586 -0.0659 -0.1759 -0.0721 -0.0585 -0.0653 -0.0677
+A-105	14-0 14-1 14-2 14-3 14-4 14-5 14-6 14-7 4-8 2-9 14-10 1-11 7-12 14-13 14-14 1-15 14-16 14-17 14-18 1-19 14-20
+S-106	Where is n.v. schadeverzekeringsmaatschappij maas lloyd <unk> <unk> what is the <unk> number ?
+W-106	0.543	seconds
+H-106	-0.0548737533390522	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot schadeverzekeringsmaatschappij maas lloyd quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-106	-0.0548737533390522	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot schadeverzekeringsmaatschappij maas lloyd quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-106	-0.0423 -0.0509 -0.0631 -0.0547 -0.0651 -0.0613 -0.0529 -0.0688 -0.0098 -0.0544 -0.0152 -0.0075 -0.0078 -0.0630 -0.0566 -0.0588 -0.1640 -0.0787 -0.0560 -0.0574 -0.0641
+A-106	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 2-8 2-9 1-10 6-11 2-12 12-13 2-14 12-15 12-16 12-17 2-18 12-19
+S-107	Where is onderlinge waarborgmaatschappij dsw zorgverzekeraar u.a. <unk> <unk> what is the <unk> number ?
+W-107	0.588	seconds
+H-107	-0.06240944191813469	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij dsw zorgverzekeraar u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-107	-0.06240944191813469	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij dsw zorgverzekeraar u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-107	-0.0506 -0.0624 -0.0629 -0.0560 -0.0743 -0.0625 -0.0668 -0.0736 -0.0127 -0.0048 -0.0545 -0.0474 -0.0202 -0.0732 -0.0606 -0.0645 -0.1998 -0.0780 -0.0595 -0.0628 -0.0634
+A-107	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 1-9 6-10 6-11 13-12 13-13 11-14 13-15 13-16 13-17 11-18 13-19
+S-108	Where is anderzorg n.v. <unk> <unk> what is the <unk> number ?
+W-108	0.493	seconds
+H-108	-0.07361027598381042	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l anderzorg n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-108	-0.07361027598381042	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l anderzorg n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-108	-0.0500 -0.0611 -0.0699 -0.0567 -0.0727 -0.0576 -0.0571 -0.0777 -0.0121 -0.0689 -0.0698 -0.0607 -0.0600 -0.2783 -0.0859 -0.0594 -0.0618 -0.0652
+A-108	10-0 10-1 10-2 10-3 10-4 10-5 10-6 10-7 3-8 11-9 10-10 11-11 10-12 10-13 10-14 11-15 10-16
+S-109	Where is asr basis ziektekostenverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-109	0.518	seconds
+H-109	-0.06473054736852646	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr basis ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-109	-0.06473054736852646	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr basis ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-109	-0.0536 -0.0587 -0.0679 -0.0563 -0.0677 -0.0700 -0.0609 -0.0709 -0.0234 -0.0031 -0.0169 -0.0843 -0.0739 -0.0605 -0.0714 -0.1859 -0.0774 -0.0587 -0.0631 -0.0701
+A-109	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 8-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-110	Where is n.v. verzekering maatschappij de burcht <unk> <unk> what is the <unk> number ?
+W-110	0.565	seconds
+H-110	-0.0540248341858387	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot verzekering maatschappij de burcht quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-110	-0.0540248341858387	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot verzekering maatschappij de burcht quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-110	-0.0429 -0.0479 -0.0539 -0.0563 -0.0596 -0.0567 -0.0522 -0.0676 -0.0108 -0.0548 -0.0115 -0.0176 -0.0252 -0.0069 -0.0627 -0.0573 -0.0580 -0.1977 -0.0693 -0.0569 -0.0585 -0.0645
+A-110	13-0 13-1 13-2 13-3 13-4 2-5 13-6 13-7 2-8 14-9 1-10 13-11 13-12 2-13 13-14 14-15 13-16 13-17 13-18 14-19 13-20
+S-111	Where is ovm onderlinge verzekeringen u.a. <unk> <unk> what is the <unk> number ?
+W-111	0.576	seconds
+H-111	-0.0590694285929203	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ovm onderlinge verzekeringen u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-111	-0.0590694285929203	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ovm onderlinge verzekeringen u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-111	-0.0520 -0.0550 -0.0567 -0.0579 -0.0720 -0.0606 -0.0583 -0.0680 -0.0328 -0.0200 -0.0241 -0.0150 -0.0699 -0.0610 -0.0609 -0.1666 -0.0704 -0.0597 -0.0556 -0.0650
+A-111	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 3-8 12-9 1-10 12-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-112	Where is interpolis zorgverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-112	0.507	seconds
+H-112	-0.07272455841302872	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l interpolis zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-112	-0.07272455841302872	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l interpolis zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-112	-0.0513 -0.0532 -0.0673 -0.0567 -0.0699 -0.0594 -0.0627 -0.0758 -0.0129 -0.0131 -0.0774 -0.0752 -0.0632 -0.0610 -0.3061 -0.0828 -0.0617 -0.0621 -0.0700
+A-112	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 12-10 11-11 9-12 11-13 11-14 11-15 9-16 11-17
+S-113	Where is onderlinge steenwijker brandassurantie vereniging u.a. <unk> <unk> what is the <unk> number ?
+W-113	0.548	seconds
+H-113	-0.06669318675994873	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge steenwijker brandassurantie vereniging u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-113	-0.06669318675994873	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge steenwijker brandassurantie vereniging u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-113	-0.0595 -0.0599 -0.0732 -0.0561 -0.0698 -0.0648 -0.0670 -0.0720 -0.0183 -0.0440 -0.0194 -0.0315 -0.0295 -0.0718 -0.0605 -0.0656 -0.2783 -0.0766 -0.0596 -0.0596 -0.0636
+A-113	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 1-9 6-10 6-11 13-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-114	Where is onderlinge waarborgmaatschappij centrale zorgverzekeraars groep <unk> <unk> what is the <unk> number ?
+W-114	0.551	seconds
+H-114	-0.05892772600054741	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centrale zorgverzekeraars groep quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-114	-0.05892772600054741	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centrale zorgverzekeraars groep quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-114	-0.0566 -0.0617 -0.0652 -0.0562 -0.0706 -0.0704 -0.0637 -0.0741 -0.0097 -0.0044 -0.0595 -0.0156 -0.0107 -0.0703 -0.0586 -0.0626 -0.1684 -0.0742 -0.0579 -0.0609 -0.0661
+A-114	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 1-9 7-10 7-11 1-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-115	Where is univé het groene hart brandverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-115	0.579	seconds
+H-115	-0.05874529108405113	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé het groene hart brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-115	-0.05874529108405113	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé het groene hart brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-115	-0.0558 -0.0627 -0.0673 -0.0585 -0.0711 -0.0669 -0.0646 -0.0722 -0.0075 -0.0106 -0.0101 -0.0118 -0.0119 -0.0753 -0.0734 -0.0601 -0.0684 -0.1747 -0.0809 -0.0593 -0.0626 -0.0666
+A-115	14-0 14-1 14-2 14-3 14-4 7-5 14-6 14-7 7-8 1-9 1-10 0-11 14-12 15-13 14-14 12-15 14-16 14-17 14-18 15-19 14-20
+S-116	Where is onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u.a. <unk> <unk> what is the <unk> number ?
+W-116	0.631	seconds
+H-116	-0.05334202200174332	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-116	-0.05334202200174332	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-116	-0.0548 -0.0583 -0.0639 -0.0564 -0.0687 -0.0664 -0.0634 -0.0735 -0.0119 -0.0068 -0.0098 -0.0214 -0.0174 -0.0299 -0.0327 -0.0721 -0.0603 -0.0645 -0.1317 -0.0757 -0.0603 -0.0609 -0.0661
+A-116	15-0 15-1 15-2 15-3 15-4 15-5 15-6 15-7 2-8 1-9 8-10 16-11 16-12 5-13 15-14 15-15 16-16 15-17 15-18 15-19 16-20 15-21
+S-117	Where is roeminck insurance n.v. <unk> <unk> what is the <unk> number ?
+W-117	0.502	seconds
+H-117	-0.06620212644338608	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l roeminck insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-117	-0.06620212644338608	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l roeminck insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-117	-0.0423 -0.0582 -0.0594 -0.0509 -0.0657 -0.0555 -0.0522 -0.0695 -0.0135 -0.0149 -0.0659 -0.0664 -0.0580 -0.0569 -0.2735 -0.0767 -0.0568 -0.0591 -0.0625
+A-117	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-118	Where is eno aanvullende verzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-118	0.531	seconds
+H-118	-0.06589322537183762	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eno aanvullende verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-118	-0.06589322537183762	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eno aanvullende verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-118	-0.0464 -0.0549 -0.0576 -0.0544 -0.0736 -0.0619 -0.0633 -0.0700 -0.0156 -0.0208 -0.0186 -0.0785 -0.0694 -0.0615 -0.0631 -0.2553 -0.0673 -0.0594 -0.0624 -0.0637
+A-118	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 8-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-119	Where is klaverblad schadeverzekeringsmaatschappij n.v. <unk> <unk> what is the <unk> number ?
+W-119	0.511	seconds
+H-119	-0.06889030337333679	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l klaverblad schadeverzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-119	-0.06889030337333679	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l klaverblad schadeverzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-119	-0.0444 -0.0595 -0.0595 -0.0581 -0.0727 -0.0641 -0.0603 -0.0683 -0.0134 -0.0333 -0.0647 -0.0725 -0.0599 -0.0642 -0.2448 -0.0845 -0.0579 -0.0600 -0.0667
+A-119	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 8-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-120	Where is univé dichtbij brandverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-120	0.538	seconds
+H-120	-0.061111051589250565	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé dichtbij brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-120	-0.061111051589250565	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé dichtbij brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-120	-0.0526 -0.0571 -0.0641 -0.0524 -0.0653 -0.0642 -0.0554 -0.0684 -0.0071 -0.0177 -0.0147 -0.0752 -0.0671 -0.0542 -0.0660 -0.1885 -0.0716 -0.0536 -0.0619 -0.0650
+A-120	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 5-9 12-10 13-11 12-12 10-13 12-14 12-15 12-16 10-17 12-18
+S-121	Where is onderling verzekerd u.a. <unk> <unk> what is the <unk> number ?
+W-121	0.539	seconds
+H-121	-0.06636575609445572	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderling verzekerd u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-121	-0.06636575609445572	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderling verzekerd u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-121	-0.0479 -0.0583 -0.0612 -0.0598 -0.0678 -0.0708 -0.0607 -0.0793 -0.0063 -0.0238 -0.0213 -0.0690 -0.0605 -0.0698 -0.2396 -0.0749 -0.0599 -0.0593 -0.0708
+A-121	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 4-9 11-10 11-11 1-12 11-13 11-14 11-15 1-16 11-17
+S-122	Where is bnp paribas cardif schadeverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-122	0.563	seconds
+H-122	-0.0577186718583107	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bnp paribas cardif schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-122	-0.0577186718583107	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bnp paribas cardif schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-122	-0.0437 -0.0497 -0.0675 -0.0527 -0.0647 -0.0618 -0.0583 -0.0675 -0.0144 -0.0117 -0.0231 -0.0189 -0.0727 -0.0708 -0.0570 -0.0653 -0.1523 -0.0772 -0.0572 -0.0585 -0.0670
+A-122	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 6-8 0-9 13-10 10-11 14-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-123	Where is n.v. schadeverzekering metaal en technische bedrijfstakken <unk> <unk> what is the <unk> number ?
+W-123	0.618	seconds
+H-123	-0.05391142889857292	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot schadeverzekering metaal en technische bedrijfstakken quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-123	-0.05391142889857292	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot schadeverzekering metaal en technische bedrijfstakken quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-123	-0.0435 -0.0537 -0.0636 -0.0564 -0.0689 -0.0608 -0.0511 -0.0718 -0.0139 -0.0552 -0.0060 -0.0105 -0.0076 -0.0104 -0.0077 -0.0623 -0.0570 -0.0635 -0.2140 -0.0766 -0.0567 -0.0577 -0.0711
+A-123	14-0 14-1 14-2 14-3 14-4 14-5 14-6 14-7 2-8 12-9 11-10 14-11 15-12 14-13 14-14 14-15 12-16 14-17 14-18 14-19 15-20 14-21
+S-124	Where is zilveren kruis zorgverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-124	0.543	seconds
+H-124	-0.06584188342094421	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l zilveren kruis zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-124	-0.06584188342094421	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l zilveren kruis zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-124	-0.0488 -0.0604 -0.0630 -0.0566 -0.0715 -0.0611 -0.0681 -0.0757 -0.0056 -0.0068 -0.0114 -0.0769 -0.0757 -0.0610 -0.0645 -0.2325 -0.0834 -0.0597 -0.0633 -0.0708
+A-124	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 6-8 9-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-125	Where is oom global care n.v. <unk> <unk> what is the <unk> number ?
+W-125	0.582	seconds
+H-125	-0.06229472905397415	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l oom global care n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-125	-0.06229472905397415	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l oom global care n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-125	-0.0477 -0.0573 -0.0533 -0.0555 -0.0730 -0.0667 -0.0528 -0.0710 -0.0124 -0.0244 -0.0083 -0.0662 -0.0752 -0.0611 -0.0698 -0.1865 -0.0756 -0.0602 -0.0610 -0.0676
+A-125	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 3-9 5-10 13-11 12-12 10-13 5-14 12-15 12-16 10-17 12-18
+S-126	Where is reis- en rechtshulp n.v. <unk> <unk> what is the <unk> number ?
+W-126	0.553	seconds
+H-126	-0.0677335187792778	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l reis- en rechtshulp n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-126	-0.0677335187792778	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l reis- en rechtshulp n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-126	-0.0559 -0.0607 -0.0695 -0.0631 -0.0800 -0.0649 -0.0665 -0.0761 -0.0108 -0.0071 -0.0122 -0.0740 -0.0711 -0.0625 -0.0665 -0.2341 -0.0825 -0.0619 -0.0665 -0.0688
+A-126	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 5-8 13-9 12-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-127	Where is onvz ziektekostenverzekeraar n.v. <unk> <unk> what is the <unk> number ?
+W-127	0.524	seconds
+H-127	-0.069682277739048	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onvz ziektekostenverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-127	-0.069682277739048	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onvz ziektekostenverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-127	-0.0460 -0.0532 -0.0566 -0.0569 -0.0710 -0.0566 -0.0553 -0.0687 -0.0244 -0.0174 -0.0681 -0.0659 -0.0568 -0.0590 -0.3156 -0.0748 -0.0549 -0.0594 -0.0631
+A-127	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 7-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-128	Where is onderlinge hagelverzekering maatschappij agriver b.a. <unk> <unk> what is the <unk> number ?
+W-128	0.571	seconds
+H-128	-0.06477665156126022	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge hagelverzekering maatschappij agriver b.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-128	-0.06477665156126022	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge hagelverzekering maatschappij agriver b.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-128	-0.0592 -0.0639 -0.0631 -0.0608 -0.0661 -0.0610 -0.0644 -0.0674 -0.0094 -0.0771 -0.0359 -0.0412 -0.0383 -0.0677 -0.0581 -0.0604 -0.2060 -0.0763 -0.0570 -0.0598 -0.0673
+A-128	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 1-9 13-10 10-11 10-12 13-13 11-14 13-15 13-16 13-17 11-18 13-19
+S-129	Where is achmea zorgverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-129	0.538	seconds
+H-129	-0.06769382953643799	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-129	-0.06769382953643799	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-129	-0.0465 -0.0563 -0.0615 -0.0525 -0.0680 -0.0605 -0.0632 -0.0702 -0.0085 -0.0485 -0.0769 -0.0717 -0.0582 -0.0626 -0.2202 -0.0727 -0.0568 -0.0624 -0.0689
+A-129	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 5-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-130	Where is vivat schadeverzekeringen n.v. <unk> <unk> what is the <unk> number ?
+W-130	0.514	seconds
+H-130	-0.06424009054899216	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vivat schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-130	-0.06424009054899216	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vivat schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-130	-0.0424 -0.0491 -0.0678 -0.0506 -0.0622 -0.0651 -0.0560 -0.0674 -0.0110 -0.0127 -0.0746 -0.0696 -0.0572 -0.0615 -0.2108 -0.0830 -0.0562 -0.0574 -0.0660
+A-130	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 11-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-131	Where is glasassurantie maatschappij midglas n.v. <unk> <unk> what is the <unk> number ?
+W-131	0.571	seconds
+H-131	-0.0632810965180397	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l glasassurantie maatschappij midglas n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-131	-0.0632810965180397	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l glasassurantie maatschappij midglas n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-131	-0.0418 -0.0570 -0.0587 -0.0535 -0.0668 -0.0648 -0.0635 -0.0683 -0.0117 -0.0400 -0.0198 -0.0742 -0.0678 -0.0612 -0.0655 -0.2017 -0.0696 -0.0596 -0.0578 -0.0624
+A-131	12-0 12-1 12-2 12-3 12-4 5-5 12-6 12-7 5-8 12-9 1-10 13-11 12-12 13-13 12-14 12-15 12-16 13-17 12-18
+S-132	Where is de vereende n.v. <unk> <unk> what is the <unk> number ?
+W-132	0.542	seconds
+H-132	-0.06785658746957779	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de vereende n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-132	-0.06785658746957779	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de vereende n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-132	-0.0455 -0.0532 -0.0665 -0.0590 -0.0682 -0.0620 -0.0594 -0.0696 -0.0220 -0.0524 -0.0707 -0.0715 -0.0622 -0.0623 -0.1953 -0.0835 -0.0606 -0.0619 -0.0635
+A-132	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 5-9 11-10 11-11 9-12 11-13 11-14 11-15 9-16 11-17
+S-133	Where is rabo herverzekeringsmaatschappij n.v. <unk> <unk> what is the <unk> number ?
+W-133	0.517	seconds
+H-133	-0.06756595522165298	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l rabo herverzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-133	-0.06756595522165298	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l rabo herverzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-133	-0.0494 -0.0533 -0.0579 -0.0559 -0.0640 -0.0606 -0.0559 -0.0689 -0.0233 -0.0163 -0.0637 -0.0691 -0.0600 -0.0618 -0.2734 -0.0731 -0.0580 -0.0581 -0.0612
+A-133	11-0 11-1 11-2 11-3 11-4 11-5 11-6 11-7 4-8 4-9 12-10 11-11 12-12 11-13 11-14 11-15 12-16 11-17
+S-134	Where is onderlinge verzekeringsmaatschappij univé samen u.a. <unk> <unk> what is the <unk> number ?
+W-134	0.563	seconds
+H-134	-0.061092548072338104	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij univé samen u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-134	-0.061092548072338104	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij univé samen u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-134	-0.0558 -0.0629 -0.0652 -0.0581 -0.0735 -0.0629 -0.0569 -0.0689 -0.0177 -0.0583 -0.0173 -0.0351 -0.0294 -0.0679 -0.0589 -0.0651 -0.1675 -0.0772 -0.0581 -0.0590 -0.0673
+A-134	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 2-8 6-9 6-10 6-11 13-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-135	Where is das nederlandse rechtsbijstand verzekeringmaatschappij n.v. <unk> <unk> what is the <unk> number ?
+W-135	0.564	seconds
+H-135	-0.0610264353454113	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l das nederlandse rechtsbijstand verzekeringmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-135	-0.0610264353454113	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l das nederlandse rechtsbijstand verzekeringmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-135	-0.0543 -0.0584 -0.0602 -0.0597 -0.0717 -0.0544 -0.0586 -0.0664 -0.0123 -0.0064 -0.0081 -0.0092 -0.0581 -0.0702 -0.0567 -0.0586 -0.2685 -0.0683 -0.0564 -0.0624 -0.0628
+A-135	13-0 13-1 13-2 13-3 13-4 13-5 13-6 13-7 6-8 11-9 1-10 11-11 13-12 13-13 14-14 13-15 13-16 13-17 14-18 13-19
+S-136	Where is e.o.c. onderlinge schepenverzekering u.a. <unk> <unk> what is the <unk> number ?
+W-136	0.593	seconds
+H-136	-0.056935086846351624	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l e.o.c sep_dot onderlinge schepenverzekering u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-136	-0.056935086846351624	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l e.o.c sep_dot onderlinge schepenverzekering u.a. quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-136	-0.0504 -0.0586 -0.0529 -0.0583 -0.0747 -0.0622 -0.0593 -0.0712 -0.0339 -0.0575 -0.0116 -0.0106 -0.0250 -0.0726 -0.0600 -0.0597 -0.1217 -0.0719 -0.0594 -0.0613 -0.0628
+A-136	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 3-8 13-9 3-10 1-11 12-12 12-13 13-14 12-15 12-16 12-17 1-18 12-19
+S-137	Where is n.v. noordhollandsche van 1816 <unk> <unk> what is the <unk> number ?
+W-137	0.566	seconds
+H-137	-0.054327525198459625	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot noordhollandsche van 1816 quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+D-137	-0.054327525198459625	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot noordhollandsche van 1816 quot_mark_r sep_dot var_e eiopa-Base:hasEUCountryWhereEntityOperates var_o sep_dot brack_close
+P-137	-0.0425 -0.0528 -0.0549 -0.0554 -0.0708 -0.0587 -0.0540 -0.0685 -0.0124 -0.0553 -0.0101 -0.0070 -0.0086 -0.0671 -0.0572 -0.0584 -0.1513 -0.0708 -0.0564 -0.0607 -0.0679
+A-137	12-0 12-1 12-2 12-3 12-4 12-5 12-6 12-7 2-8 13-9 9-10 12-11 2-12 12-13 13-14 12-15 12-16 12-17 13-18 12-19
+2021-05-07 15:37:57 | INFO | fairseq_cli.interactive | Total time: 76.063 seconds; translation time: 74.545

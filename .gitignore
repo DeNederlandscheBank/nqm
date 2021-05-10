@@ -93,3 +93,6 @@ fairseq-data-bin-*
 
 # Mypy cache
 .mypy_cache/
+
+# Tensorboard log files
+events.*

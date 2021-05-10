@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 
-ID=14126
+# This script can be used for evaluation without replacement of unk
+
+ID=5861
 ID_MODEL=14126
 
 if [ -n "$1" ]
@@ -16,17 +18,16 @@ IN_DIR=data/eiopa/5_model_input
 MODEL_DIR=models/transformer_iwslt_de_en_$ID_MODEL
 OUT_DIR=$MODEL_DIR/out_$ID
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
-
+DATA_BIN=$IN_DIR/fairseq-data-bin-$ID_MODEL
 
 for f in test_{1..$COUNT_TEST}; do
-  echo "Generate translations using fairseq-generate for $f"
-  fairseq-generate $IN_DIR/fairseq-data-bin-$ID \
+  fairseq-generate $IN_DIR/fairseq-data-bin-$ID_MODEL \
     --gen-subset $f \
     --path $MODEL_DIR/checkpoint_best.pt \
     --results-path $OUT_DIR \
     --beam 5  \
     --batch-size 128 \
-    --scoring bleu \
+    --scoring sacrebleu \
     --remove-bpe
 
   echo "Decode the queries for $f"
@@ -42,4 +43,3 @@ for f in test_{1..$COUNT_TEST}; do
     --out-file $OUT_DIR/queries_and_results-$f.txt \
     --summary-file $OUT_DIR/summary-$ID.txt
 done
-

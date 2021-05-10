@@ -57,13 +57,32 @@ Project Organization
 Start Project
 -------------
 
-Clone the complete repository.
+Clone the repository using the following command:
+```
+git clone --recurse-submodules https://github.com/DeNederlandscheBank/nqm.git
+```
 
 ### Prerequisites
 
- - Python version >= 3.6
+- Python version >= 3.6
+- Numpy version == 1.19.x
 
 ### Create virtual environment
+```
+conda env create -f environment_cross_platform.yml
+conda activate fairseq_local
+pip install subword_nmt
+cd fairseq
+pip install --editable ./
+
+# on MacOS:
+# CFLAGS="-stdlib=libc++" pip install --editable ./
+```
+
+TODO: add instructions for fast_align
+CMakeLists.txt: changed line 4 to 
+`set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++11 -O3 -g -I/usr/local/include")`
+on MacOS
 
 It is advisable to use a virtual environment for this project. One option is
 to use conda:
