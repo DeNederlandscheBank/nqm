@@ -1,835 +1,835 @@
-2021-05-06 18:13:31 | INFO | fairseq_cli.interactive | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_31684/checkpoint.best_bleu_99.62.pt', 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_31684/out_31684'}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_algorithm': 'LocalSGD', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'distributed_num_procs': 0}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 1, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0}, 'optimization': {'_name': None, 'max_epoch': 0, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.25], 'stop_min_lr': -1.0, 'use_bmuf': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints', 'restore_file': 'checkpoint_last.pt', 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-31684/alignment.nl-ql.txt', 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': 'hard', 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 1, 'input': '-'}, 'model': None, 'task': {'_name': 'translation', 'data': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-31684', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': True}, 'optimizer': None, 'lr_scheduler': {'_name': 'fixed', 'force_anneal': None, 'lr_shrink': 0.1, 'warmup_updates': 0, 'lr': [0.25]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': {'_name': 'subword_nmt', 'bpe_codes': '/home/ph541404/nqm/data/eiopa/5_model_input/31684-bpe.codes', 'bpe_separator': '@@'}, 'tokenizer': None}
-2021-05-06 18:13:31 | INFO | fairseq.tasks.translation | [nl] dictionary: 419 types
-2021-05-06 18:13:31 | INFO | fairseq.tasks.translation | [ql] dictionary: 402 types
-2021-05-06 18:13:31 | INFO | fairseq_cli.interactive | loading model(s) from /home/ph541404/nqm/models/transformer_iwslt_de_en_31684/checkpoint.best_bleu_99.62.pt
-2021-05-06 18:13:32 | INFO | fairseq_cli.interactive | NOTE: hypothesis and token scores are output in base 2
-2021-05-06 18:13:32 | INFO | fairseq_cli.interactive | Type the input sentence and press return:
+2021-05-07 15:39:49 | INFO | fairseq_cli.interactive | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_31684/checkpoint.best_bleu_99.62.pt', 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_31684/out_31684'}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_algorithm': 'LocalSGD', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'distributed_num_procs': 0}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 1, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0}, 'optimization': {'_name': None, 'max_epoch': 0, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.25], 'stop_min_lr': -1.0, 'use_bmuf': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints', 'restore_file': 'checkpoint_last.pt', 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-31684/alignment.nl-ql.txt', 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': 'hard', 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 1, 'input': '-'}, 'model': None, 'task': {'_name': 'translation', 'data': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-31684', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': True}, 'optimizer': None, 'lr_scheduler': {'_name': 'fixed', 'force_anneal': None, 'lr_shrink': 0.1, 'warmup_updates': 0, 'lr': [0.25]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': {'_name': 'subword_nmt', 'bpe_codes': '/home/ph541404/nqm/data/eiopa/5_model_input/31684-bpe.codes', 'bpe_separator': '@@'}, 'tokenizer': None}
+2021-05-07 15:39:49 | INFO | fairseq.tasks.translation | [nl] dictionary: 419 types
+2021-05-07 15:39:49 | INFO | fairseq.tasks.translation | [ql] dictionary: 402 types
+2021-05-07 15:39:49 | INFO | fairseq_cli.interactive | loading model(s) from /home/ph541404/nqm/models/transformer_iwslt_de_en_31684/checkpoint.best_bleu_99.62.pt
+2021-05-07 15:39:50 | INFO | fairseq_cli.interactive | NOTE: hypothesis and token scores are output in base 2
+2021-05-07 15:39:50 | INFO | fairseq_cli.interactive | Type the input sentence and press return:
 S-0	W@@ here is nn non-@@ life insurance n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-0	0.670	seconds
+W-0	0.712	seconds
 H-0	-0.06541502475738525	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nn non-@@ life insurance n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-0	-0.06541502475738525	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nn non-life insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-0	-0.0692 -0.0764 -0.1365 -0.0676 -0.0891 -0.0559 -0.0625 -0.0848 -0.0055 -0.0272 -0.0108 -0.0520 -0.0400 -0.0609 -0.0669 -0.0794 -0.1110 -0.0740 -0.0611 -0.0587 -0.0640 -0.0719 -0.0631 -0.0815
 A-0	18-0 18-1 18-2 18-3 18-4 2-5 4-6 16-7 5-8 6-9 5-10 13-11 15-12 18-13 18-14 18-15 19-16 19-17 19-18 17-19 18-20 19-21 19-22
 S-1	W@@ here is on@@ der@@ ling@@ e ste@@ en@@ wi@@ j@@ ker br@@ and@@ as@@ sur@@ anti@@ e ver@@ eni@@ ging u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-1	1.123	seconds
+W-1	1.191	seconds
 H-1	-0.06257554888725281	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ste@@ en@@ wi@@ j@@ ker br@@ and@@ as@@ sur@@ anti@@ e ver@@ eni@@ ging u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-1	-0.06257554888725281	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge steenwijker brandassurantie vereniging u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-1	-0.0893 -0.0869 -0.0559 -0.0644 -0.0954 -0.0661 -0.0768 -0.1109 -0.0108 -0.0314 -0.0328 -0.0844 -0.5008 -0.0217 -0.0437 -0.0159 -0.0522 -0.0108 -0.0212 -0.0064 -0.0261 -0.0154 -0.0432 -0.0260 -0.0296 -0.0182 -0.0126 -0.0349 -0.1017 -0.0742 -0.0674 -0.0469 -0.0608 -0.0689 -0.0737 -0.0752
 A-1	30-0 30-1 30-2 30-3 30-4 30-5 30-6 30-7 3-8 30-9 30-10 30-11 8-12 6-13 3-14 15-15 3-16 1-17 30-18 15-19 17-20 17-21 30-22 27-23 14-24 12-25 12-26 30-27 31-28 19-29 30-30 8-31 30-32 19-33 31-34
 S-2	W@@ here is mer@@ curi@@ us sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-2	0.961	seconds
+W-2	1.021	seconds
 H-2	-0.09081393480300903	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mer@@ curi@@ us sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-2	-0.09081393480300903	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mercurius schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-2	-0.0776 -0.0887 -0.5671 -0.0818 -0.0960 -0.1037 -0.0806 -0.1040 -0.0087 -0.0290 -0.0212 -0.0058 -0.0979 -0.0506 -0.1012 -0.1000 -0.0519 -0.0764 -0.0891 -0.0422 -0.0556 -0.1013 -0.0893 -0.1071 -0.0807 -0.0919 -0.0536 -0.1386 -0.0767 -0.0708 -0.0762
 A-2	25-0 25-1 25-2 25-3 23-4 17-5 13-6 23-7 4-8 4-9 5-10 4-11 23-12 25-13 25-14 13-15 23-16 25-17 22-18 22-19 25-20 13-21 13-22 26-23 13-24 13-25 18-26 25-27 13-28 26-29
 S-3	W@@ here is n@@ .@@ v@@ . uni@@ v@@ é z@@ org <unk> <unk> what is the regi@@ <unk> number ?
-W-3	0.710	seconds
+W-3	0.752	seconds
 H-3	-0.06147734448313713	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot uni@@ v@@ é z@@ org quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-3	-0.06147734448313713	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot univé zorg quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-3	-0.0582 -0.0581 -0.1249 -0.0657 -0.0765 -0.0928 -0.0789 -0.0876 -0.0128 -0.0540 -0.0310 -0.0597 -0.0221 -0.0572 -0.0551 -0.0125 -0.0594 -0.0666 -0.0665 -0.0729 -0.0623 -0.0852 -0.0639 -0.0526 -0.0606
 A-3	19-0 19-1 19-2 19-3 19-4 19-5 20-6 19-7 10-8 19-9 19-10 20-11 10-12 19-13 17-14 1-15 19-16 20-17 20-18 20-19 2-20 19-21 20-22 20-23
 S-4	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j de ve@@ en@@ hoo@@ p u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-4	1.038	seconds
+W-4	1.119	seconds
 H-4	-0.08920595794916153	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j de ve@@ en@@ hoo@@ p u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-4	-0.08920595794916153	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij de veenhoop u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-4	-0.0983 -0.0872 -0.2232 -0.0858 -0.1046 -0.0740 -0.0914 -0.1210 -0.0281 -0.0625 -0.0530 -0.1218 -0.0137 -0.0890 -0.0314 -0.0660 -0.0096 -0.0768 -0.1007 -0.1244 -0.0671 -0.0441 -0.6387 -0.0115 -0.0583 -0.0259 -0.0358 -0.0265 -0.0766 -0.0980 -0.0859 -0.0751 -0.0461 -0.1099 -0.0828 -0.0745 -0.0812
 A-4	31-0 31-1 31-2 31-3 31-4 31-5 32-6 31-7 5-8 31-9 31-10 31-11 4-12 31-13 31-14 31-15 31-16 31-17 31-18 31-19 31-20 31-21 4-22 31-23 31-24 31-25 10-26 4-27 31-28 32-29 32-30 31-31 1-32 31-33 32-34 32-35
 S-5	W@@ here is uni@@ v@@ é o@@ ost br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-5	0.828	seconds
+W-5	0.916	seconds
 H-5	-0.07342727482318878	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uni@@ v@@ é o@@ ost br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-5	-0.07342727482318878	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé oost brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-5	-0.0844 -0.0738 -0.2144 -0.0882 -0.1035 -0.0529 -0.0895 -0.1059 -0.0072 -0.0921 -0.0519 -0.0261 -0.0241 -0.0296 -0.0239 -0.0931 -0.0897 -0.0402 -0.0676 -0.0350 -0.0507 -0.0634 -0.0901 -0.0914 -0.1092 -0.0804 -0.0665 -0.0553 -0.1145 -0.0792 -0.0704 -0.0854
 A-5	26-0 26-1 26-2 26-3 26-4 18-5 27-6 26-7 7-8 27-9 26-10 8-11 26-12 26-13 26-14 27-15 26-16 24-17 26-18 26-19 23-20 26-21 26-22 26-23 27-24 27-25 18-26 14-27 26-28 27-29 27-30
 S-6	W@@ here is sa@@ men@@ wer@@ king gla@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-6	0.929	seconds
+W-6	1.030	seconds
 H-6	-0.06409459561109543	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sa@@ men@@ wer@@ king gla@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-6	-0.06409459561109543	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l samenwerking glasverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-6	-0.0704 -0.0812 -0.0683 -0.0659 -0.0861 -0.1065 -0.0754 -0.1048 -0.0346 -0.0248 -0.0271 -0.0271 -0.0254 -0.0214 -0.0778 -0.0908 -0.0132 -0.0506 -0.0448 -0.0610 -0.0554 -0.0896 -0.1141 -0.0736 -0.0879 -0.0491 -0.0611 -0.0707 -0.0737 -0.0904
 A-6	24-0 24-1 24-2 24-3 24-4 16-5 24-6 24-7 6-8 6-9 17-10 17-11 9-12 19-13 25-14 14-15 19-16 24-17 21-18 24-19 21-20 20-21 25-22 25-23 16-24 17-25 24-26 25-27 24-28
 S-7	W@@ here is n@@ .@@ v@@ . ver@@ ze@@ ker@@ ing@@ s@@ be@@ dri@@ j@@ f gro@@ ot am@@ ster@@ dam <unk> <unk> what is the regi@@ <unk> number ?
-W-7	0.850	seconds
+W-7	0.957	seconds
 H-7	-0.04769660532474518	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot ver@@ ze@@ ker@@ ing@@ s@@ be@@ dri@@ j@@ f gro@@ ot am@@ ster@@ dam quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-7	-0.04769660532474518	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot verzekeringsbedrijf groot amsterdam quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-7	-0.0534 -0.0570 -0.1516 -0.0536 -0.0699 -0.1035 -0.0664 -0.0869 -0.0197 -0.0516 -0.0240 -0.0576 -0.0326 -0.0577 -0.0307 -0.0572 -0.0117 -0.0122 -0.0105 -0.0031 -0.0093 -0.0388 -0.0262 -0.0099 -0.0186 -0.0073 -0.0590 -0.0703 -0.0698 -0.0400 -0.0889 -0.0656 -0.0512 -0.0557
 A-7	28-0 28-1 28-2 28-3 28-4 28-5 28-6 28-7 9-8 28-9 16-10 29-11 10-12 28-13 26-14 15-15 1-16 10-17 11-18 28-19 10-20 15-21 15-22 25-23 13-24 11-25 29-26 29-27 29-28 13-29 28-30 29-31 29-32
 S-8	W@@ here is on@@ der@@ ling@@ e wa@@ ar@@ bor@@ g ma@@ at@@ sch@@ app@@ i@@ j ach@@ ter@@ ho@@ ek u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-8	1.109	seconds
+W-8	1.217	seconds
 H-8	-0.07467031478881836	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e wa@@ ar@@ bor@@ g ma@@ at@@ sch@@ app@@ i@@ j ach@@ ter@@ ho@@ ek u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-8	-0.07467031478881836	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborg maatschappij achterhoek u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-8	-0.0861 -0.1017 -0.0790 -0.0837 -0.1053 -0.0585 -0.0754 -0.1304 -0.0206 -0.0476 -0.0405 -0.0883 -0.1149 -0.0361 -0.0763 -0.0571 -0.0617 -0.1041 -0.0760 -0.1037 -0.0611 -0.0562 -0.1823 -0.0213 -0.0293 -0.0304 -0.0267 -0.0729 -0.1132 -0.0875 -0.0654 -0.0595 -0.0729 -0.0856 -0.0947 -0.0818
 A-8	30-0 30-1 30-2 30-3 30-4 16-5 31-6 16-7 7-8 30-9 30-10 30-11 1-12 31-13 8-14 21-15 30-16 15-17 30-18 27-19 30-20 31-21 7-22 31-23 25-24 22-25 22-26 30-27 31-28 31-29 31-30 1-31 30-32 31-33 31-34
 S-9	W@@ here is on@@ der@@ ling@@ e ha@@ g@@ el@@ ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j ag@@ river b@@ .@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-9	1.045	seconds
+W-9	1.104	seconds
 H-9	-0.07148023694753647	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ha@@ g@@ el@@ ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j ag@@ river b@@ .@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-9	-0.07148023694753647	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge hagelverzekering maatschappij agriver b.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-9	-0.0934 -0.0930 -0.0713 -0.0779 -0.0875 -0.0834 -0.0855 -0.1186 -0.0203 -0.0765 -0.0593 -0.0771 -0.0517 -0.0759 -0.0841 -0.0387 -0.1059 -0.0113 -0.0550 -0.0939 -0.0980 -0.0796 -0.1044 -0.0652 -0.0391 -0.0356 -0.0288 -0.0742 -0.0811 -0.0510 -0.1020 -0.0821 -0.0856 -0.0405 -0.0659 -0.0714 -0.0748 -0.0764
 A-9	32-0 32-1 32-2 32-3 32-4 18-5 15-6 18-7 9-8 32-9 17-10 32-11 7-12 5-13 20-14 33-15 18-16 22-17 18-18 32-19 18-20 18-21 18-22 32-23 18-24 25-25 20-26 24-27 18-28 17-29 18-30 33-31 18-32 21-33 32-34 33-35 33-36
 S-10	W@@ here is monu@@ ta ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-10	1.001	seconds
+W-10	1.071	seconds
 H-10	-0.06682420521974564	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l monu@@ ta ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-10	-0.06682420521974564	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l monuta verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-10	-0.0879 -0.0846 -0.1023 -0.0717 -0.0851 -0.0709 -0.0790 -0.1025 -0.0128 -0.0129 -0.0511 -0.0580 -0.0662 -0.0360 -0.0485 -0.0314 -0.0437 -0.0773 -0.0792 -0.0970 -0.0717 -0.0803 -0.0542 -0.0792 -0.0718 -0.0773 -0.0716
 A-10	21-0 21-1 21-2 21-3 21-4 13-5 22-6 21-7 3-8 1-9 16-10 21-11 16-12 21-13 21-14 18-15 21-16 21-17 21-18 22-19 22-20 13-21 3-22 21-23 22-24 22-25
 S-11	W@@ here is de ver@@ e@@ en@@ de n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-11	0.761	seconds
+W-11	0.824	seconds
 H-11	-0.07597800344228745	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de ver@@ e@@ en@@ de n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-11	-0.07597800344228745	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de vereende n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-11	-0.0860 -0.0642 -0.1487 -0.0682 -0.0885 -0.0686 -0.0780 -0.0937 -0.2674 -0.0095 -0.0198 -0.0411 -0.0426 -0.0207 -0.0468 -0.0864 -0.0809 -0.0946 -0.0733 -0.0731 -0.0435 -0.0940 -0.0752 -0.0639 -0.0708
 A-11	19-0 19-1 19-2 17-3 17-4 19-5 17-6 17-7 7-8 6-9 17-10 3-11 19-12 16-13 19-14 19-15 19-16 20-17 20-18 19-19 6-20 19-21 19-22 20-23
 S-12	W@@ here is gla@@ sa@@ s@@ sur@@ anti@@ e ma@@ at@@ sch@@ app@@ i@@ j mid@@ gl@@ as n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-12	0.930	seconds
+W-12	1.007	seconds
 H-12	-0.06373770534992218	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gla@@ sa@@ s@@ sur@@ anti@@ e ma@@ at@@ sch@@ app@@ i@@ j mid@@ gl@@ as n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-12	-0.06373770534992218	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l glasassurantie maatschappij midglas n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-12	-0.0722 -0.0777 -0.2132 -0.0682 -0.0924 -0.1485 -0.0799 -0.0925 -0.0266 -0.0118 -0.0107 -0.0157 -0.0127 -0.0576 -0.0431 -0.0821 -0.0719 -0.0891 -0.0518 -0.0412 -0.0183 -0.0099 -0.0050 -0.0310 -0.0535 -0.0705 -0.0837 -0.0990 -0.0761 -0.0736 -0.0481 -0.0914 -0.0728 -0.0616 -0.0775
 A-12	29-0 29-1 29-2 29-3 29-4 21-5 29-6 29-7 6-8 6-9 17-10 16-11 16-12 29-13 16-14 29-15 29-16 29-17 29-18 29-19 28-20 17-21 29-22 16-23 29-24 29-25 29-26 21-27 30-28 21-29 17-30 29-31 29-32 29-33
 S-13	W@@ here is de fri@@ es@@ land z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-13	0.810	seconds
+W-13	0.911	seconds
 H-13	-0.09661374986171722	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de fri@@ es@@ land z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-13	-0.09661374986171722	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de friesland zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-13	-0.0771 -0.0607 -1.0722 -0.0684 -0.0809 -0.0755 -0.0764 -0.0825 -0.0519 -0.0234 -0.0475 -0.0591 -0.0126 -0.0160 -0.0821 -0.0770 -0.0447 -0.0439 -0.0247 -0.0365 -0.0576 -0.0761 -0.0834 -0.1074 -0.0729 -0.0639 -0.0545 -0.1575 -0.0701 -0.0632 -0.0753
 A-13	25-0 25-1 25-2 25-3 25-4 17-5 15-6 23-7 5-8 3-9 15-10 15-11 2-12 25-13 26-14 16-15 23-16 23-17 23-18 22-19 25-20 25-21 25-22 26-23 25-24 17-25 2-26 25-27 25-28 26-29
 S-14	W@@ here is brand new day le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-14	0.784	seconds
+W-14	0.912	seconds
 H-14	-0.06882128864526749	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brand new day le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-14	-0.06882128864526749	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brand new day levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-14	-0.0846 -0.0676 -0.1762 -0.0773 -0.0831 -0.0905 -0.0841 -0.0990 -0.0092 -0.0179 -0.0146 -0.0030 -0.0379 -0.0274 -0.0694 -0.0900 -0.0553 -0.0640 -0.0813 -0.0411 -0.0611 -0.0836 -0.0876 -0.1075 -0.0696 -0.0783 -0.0596 -0.1077 -0.0694 -0.0632 -0.0725
 A-14	23-0 25-1 25-2 23-3 23-4 17-5 15-6 23-7 5-8 12-9 3-10 23-11 12-12 23-13 26-14 16-15 23-16 23-17 23-18 20-19 25-20 25-21 15-22 17-23 26-24 17-25 4-26 25-27 26-28 26-29
 S-15	W@@ here is wa@@ ard le@@ ven n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-15	0.608	seconds
+W-15	0.678	seconds
 H-15	-0.08504492044448853	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l wa@@ ard le@@ ven n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-15	-0.08504492044448853	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l waard leven n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-15	-0.0989 -0.0722 -0.4220 -0.0887 -0.0832 -0.0554 -0.0723 -0.1137 -0.0308 -0.0301 -0.0047 -0.0326 -0.0530 -0.0619 -0.0783 -0.0936 -0.1061 -0.0779 -0.0658 -0.0607 -0.1173 -0.0838 -0.0668 -0.0712
 A-15	18-0 18-1 18-2 18-3 18-4 18-5 19-6 18-7 3-8 18-9 5-10 15-11 15-12 18-13 18-14 18-15 19-16 19-17 19-18 5-19 18-20 19-21 19-22
 S-16	W@@ here is centr@@ ale zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ k@@ ering n@@ z@@ v n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-16	1.009	seconds
+W-16	1.128	seconds
 H-16	-0.06591837853193283	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l centr@@ ale zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ k@@ ering n@@ z@@ v n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-16	-0.06591837853193283	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l centrale ziektekostenverzekering nzv n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-16	-0.0541 -0.0691 -0.0709 -0.0602 -0.0736 -0.1680 -0.0746 -0.0877 -0.0051 -0.0241 -0.0202 -0.0950 -0.0460 -0.0394 -0.0383 -0.0720 -0.0816 -0.1024 -0.0192 -0.0599 -0.0423 -0.0951 -0.0121 -0.0470 -0.0905 -0.0848 -0.0929 -0.0934 -0.0724 -0.0873 -0.0441 -0.0732 -0.0692 -0.0650 -0.0764
 A-16	29-0 29-1 29-2 29-3 29-4 21-5 30-6 19-7 9-8 16-9 16-10 16-11 16-12 16-13 16-14 16-15 30-16 20-17 24-18 20-19 26-20 26-21 17-22 26-23 20-24 29-25 19-26 30-27 30-28 21-29 1-30 29-31 30-32 30-33
 S-17	W@@ here is prote@@ q le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-17	0.869	seconds
+W-17	0.907	seconds
 H-17	-0.07967241108417511	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l prote@@ q le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-17	-0.07967241108417511	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l proteq levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-17	-0.1141 -0.0824 -0.1238 -0.0993 -0.0913 -0.0958 -0.0858 -0.1207 -0.0211 -0.0318 -0.0081 -0.0347 -0.0343 -0.1017 -0.1119 -0.0855 -0.0658 -0.1189 -0.0433 -0.0683 -0.0827 -0.0841 -0.1181 -0.0795 -0.0949 -0.0565 -0.0956 -0.0800 -0.0729 -0.0870
 A-17	24-0 24-1 24-2 24-3 24-4 16-5 12-6 24-7 3-8 11-9 6-10 19-11 24-12 25-13 24-14 19-15 24-16 24-17 21-18 24-19 24-20 24-21 25-22 25-23 16-24 3-25 24-26 25-27 25-28
 S-18	W@@ here is on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j sa@@ z@@ as u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-18	1.098	seconds
+W-18	1.144	seconds
 H-18	-0.09695957601070404	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j sa@@ z@@ as u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-18	-0.09695957601070404	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij sazas u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-18	-0.1096 -0.0937 -0.3355 -0.0832 -0.1011 -0.1331 -0.1055 -0.1182 -0.0266 -0.0865 -0.1111 -0.1557 -0.0359 -0.0770 -0.0506 -0.0436 -0.0971 -0.1320 -0.1026 -0.1365 -0.0721 -0.0514 -0.1903 -0.0796 -0.0092 -0.0486 -0.0822 -0.1127 -0.0845 -0.0882 -0.0764 -0.1188 -0.0829 -0.0752 -0.0864
 A-18	29-0 29-1 29-2 29-3 29-4 16-5 29-6 29-7 3-8 29-9 29-10 29-11 3-12 29-13 6-14 29-15 29-16 29-17 29-18 29-19 29-20 29-21 3-22 8-23 29-24 9-25 29-26 30-27 29-28 29-29 16-30 29-31 29-32 29-33
 S-19	W@@ here is life@@ tr@@ i ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-19	0.844	seconds
+W-19	0.871	seconds
 H-19	-0.07457809895277023	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l life@@ tr@@ i ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-19	-0.07457809895277023	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lifetri verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-19	-0.1017 -0.0811 -0.1347 -0.0802 -0.1008 -0.0708 -0.0847 -0.1061 -0.0017 -0.0177 -0.0180 -0.0924 -0.0816 -0.0560 -0.0732 -0.0641 -0.0303 -0.0657 -0.0905 -0.0930 -0.1118 -0.0792 -0.0771 -0.0590 -0.0891 -0.0802 -0.0689 -0.0786
 A-19	22-0 22-1 22-2 22-3 22-4 14-5 23-6 22-7 3-8 22-9 22-10 17-11 22-12 20-13 20-14 22-15 19-16 22-17 20-18 20-19 23-20 23-21 14-22 16-23 22-24 23-25 23-26
 S-20	W@@ here is as@@ sur@@ ant europe life insurance n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-20	0.719	seconds
+W-20	0.731	seconds
 H-20	-0.05975007265806198	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l as@@ sur@@ ant europe life insurance n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-20	-0.05975007265806198	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l assurant europe life insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-20	-0.0692 -0.0738 -0.0928 -0.0650 -0.0765 -0.0702 -0.0621 -0.0763 -0.0482 -0.0149 -0.0266 -0.0111 -0.0071 -0.0821 -0.0372 -0.0437 -0.0539 -0.0787 -0.1022 -0.0722 -0.0704 -0.0558 -0.0578 -0.0680 -0.0615 -0.0761
 A-20	20-0 20-1 20-2 20-3 20-4 12-5 20-6 20-7 5-8 16-9 17-10 7-11 7-12 15-13 17-14 20-15 20-16 20-17 21-18 21-19 12-20 7-21 20-22 21-23 21-24
 S-21	W@@ here is dle natur@@ a u@@ it@@ va@@ art@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-21	0.958	seconds
+W-21	0.981	seconds
 H-21	-0.08442457020282745	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dle natur@@ a u@@ it@@ va@@ art@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-21	-0.08442457020282745	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dle natura uitvaartverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-21	-0.0772 -0.0963 -0.1537 -0.0772 -0.1127 -0.1195 -0.0897 -0.1110 -0.0743 -0.0318 -0.0834 -0.0022 -0.0296 -0.0360 -0.0367 -0.1534 -0.0866 -0.0624 -0.0903 -0.1652 -0.0637 -0.0776 -0.0839 -0.1059 -0.1005 -0.0928 -0.0803 -0.0492 -0.0991 -0.0838 -0.0822 -0.0935
 A-21	26-0 26-1 26-2 26-3 26-4 18-5 14-6 16-7 5-8 8-9 4-10 8-11 1-12 2-13 17-14 27-15 17-16 24-17 17-18 27-19 17-20 17-21 26-22 16-23 27-24 27-25 18-26 3-27 26-28 27-29 27-30
 S-22	W@@ here is ach@@ me@@ a z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-22	0.890	seconds
+W-22	0.924	seconds
 H-22	-0.08471721410751343	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ach@@ me@@ a z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-22	-0.08471721410751343	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-22	-0.0876 -0.0843 -0.1827 -0.0768 -0.0886 -0.0774 -0.0891 -0.1078 -0.1239 -0.0464 -0.1104 -0.0065 -0.0230 -0.1190 -0.1060 -0.0652 -0.0585 -0.1115 -0.0498 -0.0638 -0.0772 -0.0956 -0.1189 -0.0808 -0.0841 -0.0558 -0.1031 -0.0750 -0.0843 -0.0883
 A-22	24-0 24-1 24-2 24-3 24-4 16-5 24-6 24-7 7-8 24-9 24-10 7-11 24-12 24-13 24-14 22-15 22-16 21-17 21-18 24-19 24-20 24-21 25-22 24-23 16-24 3-25 24-26 24-27 24-28
 S-23	W@@ here is n@@ .@@ v@@ . sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering meta@@ al en techn@@ is@@ ch@@ e be@@ dri@@ j@@ f@@ sta@@ k@@ ken <unk> <unk> what is the regi@@ <unk> number ?
-W-23	1.155	seconds
+W-23	1.272	seconds
 H-23	-0.04983047395944595	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering meta@@ al en techn@@ is@@ ch@@ e be@@ dri@@ j@@ f@@ sta@@ k@@ ken quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-23	-0.04983047395944595	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot schadeverzekering metaal en technische bedrijfstakken quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-23	-0.0745 -0.0779 -0.0543 -0.0704 -0.0778 -0.1027 -0.0683 -0.0996 -0.0494 -0.0621 -0.0290 -0.0563 -0.0435 -0.0702 -0.0345 -0.0549 -0.0928 -0.0185 -0.0528 -0.0187 -0.0153 -0.0503 -0.0186 -0.0212 -0.0297 -0.0202 -0.0222 -0.0192 -0.0148 -0.0201 -0.0284 -0.0116 -0.0287 -0.0758 -0.0664 -0.0879 -0.0452 -0.0626 -0.0632 -0.0588 -0.0749
 A-23	35-0 35-1 35-2 35-3 35-4 16-5 16-6 22-7 8-8 35-9 16-10 16-11 17-12 16-13 17-14 36-15 23-16 16-17 23-18 17-19 17-20 23-21 17-22 23-23 17-24 24-25 10-26 17-27 35-28 24-29 17-30 17-31 17-32 36-33 32-34 36-35 24-36 35-37 16-38 36-39
 S-24	W@@ here is ov@@ m on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ en u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-24	0.715	seconds
+W-24	0.784	seconds
 H-24	-0.05607270821928978	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ov@@ m on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ en u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-24	-0.05607270821928978	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ovm onderlinge verzekeringen u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-24	-0.1165 -0.0677 -0.1020 -0.0651 -0.0793 -0.0665 -0.0611 -0.0932 -0.0171 -0.0155 -0.0141 -0.0270 -0.0248 -0.0640 -0.0207 -0.0603 -0.0319 -0.0450 -0.0209 -0.0104 -0.0424 -0.0991 -0.0745 -0.0744 -0.0490 -0.0765 -0.0701 -0.0678 -0.0693
 A-24	23-0 23-1 23-2 23-3 21-4 24-5 13-6 21-7 5-8 9-9 2-10 23-11 23-12 23-13 4-14 21-15 21-16 21-17 21-18 15-19 23-20 24-21 24-22 24-23 4-24 23-25 24-26 24-27
 S-25	W@@ here is wa@@ ard sc@@ ha@@ de n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-25	0.616	seconds
+W-25	0.672	seconds
 H-25	-0.09235209226608276	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l wa@@ ard sc@@ ha@@ de n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-25	-0.09235209226608276	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l waard schade n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-25	-0.0859 -0.0722 -0.5752 -0.0830 -0.0883 -0.0631 -0.0741 -0.1069 -0.0248 -0.0464 -0.0372 -0.0793 -0.0251 -0.0366 -0.0618 -0.0810 -0.0922 -0.1040 -0.0809 -0.0737 -0.0576 -0.1281 -0.0858 -0.0669 -0.0788
 A-25	19-0 19-1 19-2 19-3 19-4 19-5 19-6 19-7 3-8 19-9 17-10 19-11 19-12 16-13 19-14 19-15 19-16 20-17 16-18 19-19 18-20 19-21 16-22 20-23
 S-26	W@@ here is uni@@ v@@ é h@@ et gro@@ ene har@@ t br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-26	0.920	seconds
+W-26	1.000	seconds
 H-26	-0.05430871248245239	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uni@@ v@@ é h@@ et gro@@ ene har@@ t br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-26	-0.05430871248245239	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé het groene hart brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-26	-0.0642 -0.0731 -0.0974 -0.0711 -0.1000 -0.0671 -0.0741 -0.1024 -0.0234 -0.0665 -0.0381 -0.0439 -0.0329 -0.0147 -0.0204 -0.0126 -0.0031 -0.0123 -0.0218 -0.0681 -0.0577 -0.0290 -0.0297 -0.0267 -0.0337 -0.0518 -0.0822 -0.0739 -0.1020 -0.0710 -0.0644 -0.0452 -0.0773 -0.0686 -0.0659 -0.0686
 A-26	30-0 30-1 30-2 30-3 30-4 20-5 31-6 22-7 10-8 22-9 16-10 10-11 16-12 16-13 16-14 4-15 10-16 31-17 30-18 31-19 21-20 30-21 31-22 20-23 20-24 30-25 30-26 16-27 22-28 31-29 20-30 6-31 30-32 31-33 31-34
 S-27	W@@ here is on@@ v@@ z a@@ an@@ vul@@ len@@ de ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-27	0.905	seconds
+W-27	0.929	seconds
 H-27	-0.08166017383337021	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ v@@ z a@@ an@@ vul@@ len@@ de ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-27	-0.08166017383337021	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onvz aanvullende verzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-27	-0.0904 -0.1006 -0.0961 -0.0991 -0.1024 -0.0946 -0.0977 -0.1293 -0.0920 -0.0414 -0.0212 -0.1052 -0.0458 -0.0418 -0.0542 -0.0750 -0.0611 -0.1214 -0.0120 -0.0542 -0.0480 -0.0818 -0.0800 -0.1084 -0.1303 -0.0882 -0.0907 -0.0575 -0.1132 -0.0867 -0.0871 -0.1059
 A-27	26-0 26-1 26-2 26-3 26-4 17-5 26-6 26-7 10-8 26-9 11-10 6-11 11-12 23-13 6-14 26-15 27-16 17-17 24-18 24-19 23-20 26-21 26-22 26-23 27-24 26-25 17-26 1-27 26-28 26-29 26-30
 S-28	W@@ here is n@@ .@@ v@@ . ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j de bur@@ ch@@ t <unk> <unk> what is the regi@@ <unk> number ?
-W-28	0.904	seconds
+W-28	0.931	seconds
 H-28	-0.04888363927602768	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j de bur@@ ch@@ t quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-28	-0.04888363927602768	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot verzekering maatschappij de burcht quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-28	-0.0576 -0.0659 -0.0650 -0.0504 -0.0661 -0.1055 -0.0666 -0.0896 -0.0286 -0.0493 -0.0249 -0.0569 -0.0175 -0.0676 -0.0097 -0.0328 -0.0235 -0.0498 -0.0658 -0.0575 -0.0316 -0.0243 -0.0775 -0.0128 -0.0109 -0.0048 -0.0477 -0.0652 -0.0726 -0.0361 -0.0570 -0.0622 -0.0510 -0.0577
 A-28	28-0 28-1 28-2 28-3 28-4 28-5 28-6 15-7 9-8 28-9 14-10 28-11 1-12 15-13 23-14 15-15 13-16 15-17 26-18 28-19 28-20 28-21 1-22 1-23 25-24 23-25 29-26 28-27 29-28 1-29 28-30 28-31 29-32
 S-29	W@@ here is ak@@ z@@ o nobel as@@ sur@@ anti@@ e n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-29	0.755	seconds
+W-29	0.801	seconds
 H-29	-0.054519716650247574	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ak@@ z@@ o nobel as@@ sur@@ anti@@ e n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-29	-0.054519716650247574	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l akzo nobel assurantie n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-29	-0.0755 -0.0630 -0.1203 -0.0635 -0.0826 -0.0825 -0.0638 -0.0844 -0.0176 -0.0090 -0.0275 -0.0081 -0.0331 -0.0162 -0.0067 -0.0357 -0.0215 -0.0434 -0.0521 -0.0726 -0.0970 -0.0675 -0.0649 -0.0522 -0.0780 -0.0627 -0.0600 -0.0653
 A-29	22-0 22-1 22-2 22-3 22-4 14-5 22-6 22-7 4-8 15-9 22-10 4-11 8-12 18-13 17-14 22-15 19-16 22-17 22-18 22-19 23-20 23-21 14-22 16-23 22-24 23-25 22-26
 S-30	W@@ here is n@@ .@@ v@@ . ha@@ g@@ el@@ uni@@ e <unk> <unk> what is the regi@@ <unk> number ?
-W-30	0.701	seconds
+W-30	0.702	seconds
 H-30	-0.05663599446415901	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot ha@@ g@@ el@@ uni@@ e quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-30	-0.05663599446415901	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot hagelunie quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-30	-0.0593 -0.0661 -0.0787 -0.0643 -0.0723 -0.0823 -0.0713 -0.0870 -0.0194 -0.0454 -0.0243 -0.0604 -0.0679 -0.0399 -0.0517 -0.0106 -0.0298 -0.0615 -0.0692 -0.0733 -0.0425 -0.0639 -0.0637 -0.0512 -0.0599
 A-30	19-0 19-1 19-2 19-3 19-4 5-5 19-6 19-7 9-8 19-9 11-10 19-11 12-12 11-13 19-14 15-15 19-16 20-17 19-18 6-19 1-20 19-21 19-22 19-23
 S-31	W@@ here is as@@ r a@@ an@@ vul@@ len@@ de zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-31	1.017	seconds
+W-31	1.035	seconds
 H-31	-0.20380952954292297	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l as@@ r sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-31	-0.20380952954292297	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-31	-0.0862 -0.0743 -0.0608 -0.0896 -0.0920 -0.0776 -0.0845 -0.0992 -0.0245 -0.0082 -3.1429 -0.1643 -0.0345 -0.0719 -0.0689 -0.7340 -0.0859 -0.0257 -0.0657 -0.0736 -0.0962 -0.1249 -0.0811 -0.0812 -0.0562 -0.0690 -0.0808 -0.0753 -0.0814
 A-31	32-0 32-1 32-2 32-3 30-4 24-5 20-6 32-7 10-8 16-9 1-10 32-11 19-12 33-13 23-14 32-15 23-16 29-17 32-18 32-19 20-20 20-21 32-22 24-23 1-24 32-25 32-26 33-27
 S-32	W@@ here is d@@ as ne@@ der@@ land@@ se re@@ ch@@ ts@@ bi@@ j@@ stand ver@@ ze@@ ker@@ ing@@ ma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-32	1.122	seconds
+W-32	1.162	seconds
 H-32	-0.24179650843143463	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j d@@ sw z@@ org@@ ver@@ ze@@ ker@@ a@@ ar u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-32	-0.24179650843143463	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij dsw zorgverzekeraar u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-32	-0.0874 -0.0675 -0.0839 -0.0596 -0.0779 -0.1811 -0.0827 -0.0850 -4.7788 -0.0358 -0.1101 -0.0883 -0.3201 -0.0346 -0.0273 -0.0141 -0.0507 -0.0619 -0.0564 -0.0537 -0.0335 -0.0236 -0.8330 -1.1937 -0.0687 -0.0173 -0.0556 -0.0540 -0.0311 -0.2338 -0.4657 -0.0193 -0.0354 -0.0846 -0.0675 -0.0819 -0.0352 -0.0454 -0.0615 -0.0576 -0.0584
 A-32	36-0 36-1 36-2 36-3 36-4 27-5 36-6 20-7 8-8 36-9 36-10 36-11 5-12 18-13 17-14 17-15 24-16 36-17 34-18 23-19 36-20 36-21 5-22 17-23 24-24 17-25 36-26 17-27 34-28 36-29 17-30 11-31 36-32 28-33 24-34 28-35 4-36 36-37 36-38 36-39
 S-33	W@@ here is en@@ o z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-33	0.855	seconds
+W-33	0.922	seconds
 H-33	-0.0846305787563324	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l en@@ o z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-33	-0.0846305787563324	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eno zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-33	-0.0902 -0.0644 -0.1613 -0.0743 -0.0906 -0.0680 -0.0768 -0.0997 -0.3828 -0.0457 -0.0026 -0.0160 -0.0951 -0.0766 -0.0560 -0.1085 -0.0362 -0.0425 -0.0582 -0.0752 -0.0904 -0.1118 -0.0755 -0.0714 -0.0597 -0.1019 -0.0710 -0.0687 -0.0832
 A-33	23-0 23-1 23-2 23-3 23-4 15-5 23-6 23-7 5-8 23-9 2-10 24-11 24-12 23-13 23-14 23-15 23-16 20-17 23-18 23-19 23-20 24-21 24-22 15-23 3-24 23-25 24-26 24-27
 S-34	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ ma@@ at@@ sch@@ app@@ i@@ j so@@ m u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-34	0.978	seconds
+W-34	1.002	seconds
 H-34	-0.07060243934392929	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ ma@@ at@@ sch@@ app@@ i@@ j so@@ m u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-34	-0.07060243934392929	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringmaatschappij som u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-34	-0.0968 -0.0744 -0.0911 -0.0719 -0.0860 -0.0880 -0.0769 -0.1151 -0.0130 -0.0461 -0.0363 -0.1267 -0.0350 -0.0605 -0.0343 -0.0365 -0.2538 -0.0718 -0.0742 -0.0913 -0.0701 -0.0320 -0.0834 -0.0054 -0.0166 -0.0515 -0.0876 -0.0746 -0.0757 -0.0429 -0.0728 -0.0714 -0.0708 -0.0662
 A-34	28-0 28-1 28-2 28-3 28-4 28-5 15-6 15-7 3-8 28-9 28-10 28-11 4-12 15-13 26-14 28-15 28-16 15-17 26-18 15-19 28-20 28-21 1-22 29-23 18-24 28-25 29-26 29-27 28-28 1-29 28-30 29-31 29-32
 S-35	W@@ here is life@@ tr@@ i u@@ it@@ va@@ art@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-35	0.856	seconds
+W-35	0.864	seconds
 H-35	-0.08402012288570404	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l life@@ tr@@ i u@@ it@@ va@@ art@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-35	-0.08402012288570404	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lifetri uitvaartverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-35	-0.0922 -0.0944 -0.2736 -0.0781 -0.1144 -0.1221 -0.0910 -0.1119 -0.0433 -0.0446 -0.0256 -0.0071 -0.0192 -0.0341 -0.0235 -0.1027 -0.0849 -0.0680 -0.0930 -0.1295 -0.0531 -0.0779 -0.0836 -0.1095 -0.1048 -0.0876 -0.0816 -0.0579 -0.1319 -0.0835 -0.0766 -0.0876
 A-35	26-0 26-1 26-2 26-3 26-4 27-5 14-6 26-7 8-8 8-9 26-10 7-11 27-12 23-13 17-14 27-15 17-16 24-17 26-18 26-19 23-20 26-21 26-22 14-23 27-24 27-25 18-26 6-27 26-28 27-29 27-30
 S-36	W@@ here is on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j d@@ sw z@@ org@@ ver@@ ze@@ ker@@ a@@ ar u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-36	1.573	seconds
+W-36	1.534	seconds
 H-36	-0.14645366370677948	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j vo@@ or inst@@ el@@ ling@@ en in de ge@@ z@@ on@@ d@@ hei@@ d@@ s@@ z@@ org medi@@ risk b@@ .@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-36	-0.14645366370677948	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij voor instellingen in de gezondheidszorg medirisk b.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-36	-0.1189 -0.0826 -0.0900 -0.0809 -0.0926 -0.0897 -0.0919 -0.1149 -0.0068 -0.0443 -0.0713 -0.1602 -0.0187 -0.0522 -0.0678 -0.0254 -0.0807 -0.1041 -0.0795 -0.0953 -0.0666 -0.0496 -0.1698 -0.0923 -0.7086 -0.2332 -0.0551 -0.2153 -0.0967 -0.4344 -0.0190 -0.0658 -0.5990 -0.1138 -0.2225 -0.1746 -0.9214 -0.0640 -0.2679 -0.0540 -0.3460 -0.1117 -0.2136 -0.0892 -0.1139 -0.0854 -0.0768 -0.0625 -0.0756 -0.0792 -0.0836 -0.0867
 A-36	35-0 35-1 35-2 35-3 35-4 35-5 35-6 35-7 7-8 35-9 35-10 35-11 4-12 35-13 35-14 36-15 35-16 33-17 35-18 35-19 35-20 35-21 9-22 35-23 35-24 35-25 35-26 35-27 30-28 35-29 35-30 16-31 35-32 33-33 33-34 33-35 33-36 16-37 16-38 16-39 33-40 35-41 35-42 35-43 36-44 36-45 17-46 16-47 35-48 36-49 35-50
 S-37	W@@ here is d@@ sw zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-37	0.922	seconds
+W-37	0.918	seconds
 H-37	-0.08845367282629013	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l d@@ sw zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-37	-0.08845367282629013	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dsw ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-37	-0.0775 -0.0670 -0.0587 -0.0580 -0.0807 -0.1613 -0.0915 -0.0819 -0.9327 -0.0094 -0.0120 -0.0308 -0.0112 -0.0283 -0.0253 -0.0349 -0.0762 -0.0712 -0.0629 -0.0387 -0.0735 -0.0358 -0.0639 -0.0919 -0.0830 -0.0897 -0.0693 -0.0918 -0.0415 -0.0617 -0.0649 -0.0753 -0.0664
 A-37	27-0 27-1 27-2 27-3 25-4 19-5 15-6 17-7 5-8 1-9 1-10 1-11 14-12 13-13 25-14 25-15 28-16 18-17 25-18 25-19 25-20 18-21 27-22 27-23 15-24 28-25 28-26 19-27 1-28 27-29 27-30 27-31
 S-38	W@@ here is y@@ ar@@ den u@@ it@@ va@@ art@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-38	0.914	seconds
+W-38	0.890	seconds
 H-38	-0.07020706683397293	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l y@@ ar@@ den u@@ it@@ va@@ art@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-38	-0.07020706683397293	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l yarden uitvaartverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-38	-0.0747 -0.0725 -0.3337 -0.0634 -0.0901 -0.1136 -0.0724 -0.0886 -0.0221 -0.0156 -0.0222 -0.0019 -0.0225 -0.0243 -0.0213 -0.0992 -0.0645 -0.0413 -0.0457 -0.0837 -0.0384 -0.0545 -0.0476 -0.0923 -0.0918 -0.0778 -0.0731 -0.0477 -0.1306 -0.0722 -0.0714 -0.0757
 A-38	26-0 26-1 26-2 26-3 26-4 18-5 26-6 26-7 6-8 8-9 10-10 8-11 26-12 24-13 17-14 25-15 26-16 24-17 24-18 24-19 17-20 26-21 26-22 26-23 27-24 27-25 18-26 1-27 26-28 14-29 26-30
 S-39	W@@ here is al@@ ge@@ men@@ e fri@@ ese on@@ der@@ ling@@ e sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j z@@ even@@ w@@ ou@@ den u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-39	1.299	seconds
+W-39	1.339	seconds
 H-39	-0.07977294921875	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l al@@ ge@@ men@@ e fri@@ ese on@@ der@@ ling@@ e sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j z@@ even@@ w@@ ou@@ den u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-39	-0.07977294921875	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l algemene friese onderlinge schadeverzekeringsmaatschappij zevenwouden u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-39	-0.0605 -0.0658 -0.1172 -0.0604 -0.0759 -0.1517 -0.0657 -0.0804 -0.7631 -0.0099 -0.0083 -0.0351 -0.0125 -0.0464 -0.0279 -0.0353 -0.0337 -0.0760 -0.0839 -0.1093 -0.0308 -0.0676 -0.0642 -0.0271 -0.0253 -0.4015 -0.0548 -0.0715 -0.0825 -0.0329 -0.0431 -0.0781 -0.0775 -0.0076 -0.0791 -0.0302 -0.0073 -0.0312 -0.1010 -0.0659 -0.0788 -0.0432 -0.0627 -0.0606 -0.0599 -0.0661
 A-39	40-0 40-1 40-2 38-3 40-4 40-5 41-6 40-7 9-8 23-9 20-10 24-11 3-12 31-13 24-14 40-15 32-16 40-17 35-18 38-19 41-20 34-21 40-22 38-23 28-24 37-25 38-26 38-27 38-28 40-29 40-30 35-31 32-32 35-33 16-34 36-35 32-36 40-37 41-38 41-39 41-40 34-41 40-42 31-43 41-44
 S-40	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j tw@@ ent@@ e u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-40	0.888	seconds
+W-40	0.965	seconds
 H-40	-0.0656549260020256	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j tw@@ ent@@ e u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-40	-0.0656549260020256	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij twente u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-40	-0.0971 -0.0916 -0.0642 -0.0638 -0.0900 -0.1338 -0.0730 -0.1190 -0.0454 -0.0621 -0.0398 -0.0752 -0.0104 -0.0776 -0.0157 -0.0548 -0.0652 -0.0923 -0.0968 -0.0833 -0.0450 -0.0352 -0.0386 -0.0274 -0.0315 -0.0208 -0.0684 -0.0892 -0.0748 -0.0875 -0.0379 -0.0760 -0.0711 -0.0716 -0.0718
 A-40	29-0 29-1 29-2 29-3 29-4 19-5 19-6 15-7 7-8 29-9 19-10 29-11 4-12 15-13 19-14 15-15 29-16 15-17 19-18 19-19 19-20 30-21 1-22 23-23 29-24 7-25 19-26 30-27 30-28 30-29 17-30 29-31 30-32 30-33
 S-41	W@@ here is v@@ g@@ z z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-41	0.737	seconds
+W-41	0.824	seconds
 H-41	-0.07975953817367554	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l v@@ g@@ z z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-41	-0.07975953817367554	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vgz zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-41	-0.0740 -0.0650 -0.4183 -0.0774 -0.0809 -0.0657 -0.0694 -0.0858 -0.0510 -0.1424 -0.0156 -0.0062 -0.0126 -0.1150 -0.0741 -0.0535 -0.1207 -0.0239 -0.0460 -0.0471 -0.0378 -0.0774 -0.1085 -0.0739 -0.0698 -0.0462 -0.1156 -0.0679 -0.0728 -0.0781
 A-41	24-0 24-1 24-2 24-3 24-4 16-5 24-6 24-7 6-8 14-9 24-10 21-11 24-12 25-13 24-14 24-15 24-16 22-17 21-18 24-19 24-20 24-21 16-22 24-23 16-24 17-25 24-26 24-27 24-28
 S-42	W@@ here is o@@ om global care n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-42	0.774	seconds
+W-42	0.843	seconds
 H-42	-0.07275509089231491	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l o@@ om global care n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-42	-0.07275509089231491	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l oom global care n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-42	-0.1084 -0.0729 -0.1202 -0.0826 -0.0880 -0.0678 -0.0848 -0.0970 -0.0093 -0.0127 -0.0816 -0.0148 -0.0494 -0.0659 -0.0775 -0.0946 -0.0932 -0.0768 -0.0762 -0.0550 -0.0859 -0.0779 -0.0678 -0.0857
 A-42	18-0 18-1 18-2 18-3 18-4 18-5 18-6 18-7 6-8 5-9 13-10 4-11 13-12 18-13 18-14 18-15 19-16 19-17 18-18 17-19 18-20 19-21 18-22
 S-43	W@@ here is vi@@ v@@ at sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-43	0.796	seconds
+W-43	0.881	seconds
 H-43	-0.08323771506547928	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vi@@ v@@ at sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-43	-0.08323771506547928	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vivat schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-43	-0.0710 -0.0877 -0.2351 -0.0912 -0.1049 -0.1091 -0.0896 -0.1174 -0.0127 -0.0539 -0.0272 -0.0113 -0.0690 -0.0489 -0.0906 -0.0893 -0.0551 -0.0671 -0.0826 -0.0495 -0.0625 -0.1047 -0.1064 -0.1293 -0.0826 -0.0897 -0.0591 -0.1371 -0.0824 -0.0813 -0.0821
 A-43	25-0 25-1 25-2 25-3 25-4 17-5 13-6 20-7 1-8 20-9 11-10 23-11 20-12 26-13 26-14 25-15 25-16 26-17 26-18 20-19 25-20 20-21 13-22 26-23 26-24 17-25 1-26 25-27 26-28 26-29
 S-44	W@@ here is on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j cent@@ ra@@ med b@@ .@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-44	1.276	seconds
+W-44	1.350	seconds
 H-44	-0.10766339302062988	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j cent@@ ra@@ med b@@ .@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-44	-0.10766339302062988	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centramed b.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-44	-0.1131 -0.1066 -0.0819 -0.1120 -0.1208 -0.0562 -0.0901 -0.1536 -0.0343 -0.0657 -0.1294 -0.1488 -0.1268 -0.0519 -0.0636 -0.0316 -0.1605 -0.1018 -0.0854 -0.1352 -0.0877 -0.0502 -0.8131 -0.0387 -0.0541 -0.0439 -0.0818 -0.0697 -0.1034 -0.0939 -0.0737 -0.0597 -0.0848 -0.0914 -0.0814 -0.0786
 A-44	30-0 30-1 30-2 30-3 30-4 30-5 30-6 4-7 7-8 30-9 30-10 30-11 4-12 8-13 8-14 12-15 30-16 30-17 30-18 30-19 30-20 30-21 3-22 8-23 30-24 8-25 30-26 30-27 31-28 30-29 30-30 16-31 30-32 30-33 30-34
 S-45	W@@ here is ander@@ z@@ org n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-45	0.703	seconds
+W-45	0.759	seconds
 H-45	-0.06640477478504181	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ander@@ z@@ org n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-45	-0.06640477478504181	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l anderzorg n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-45	-0.0782 -0.0595 -0.0806 -0.0770 -0.0824 -0.0630 -0.0761 -0.0946 -0.0491 -0.0072 -0.0253 -0.0254 -0.0625 -0.0653 -0.0790 -0.1168 -0.0710 -0.0645 -0.0651 -0.0702 -0.0695 -0.0661 -0.0792
 A-45	17-0 17-1 17-2 17-3 17-4 17-5 18-6 17-7 4-8 7-9 17-10 14-11 17-12 17-13 17-14 18-15 18-16 18-17 16-18 17-19 18-20 18-21
 S-46	W@@ here is an@@ ker insurance company n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-46	0.777	seconds
+W-46	0.830	seconds
 H-46	-0.06798611581325531	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l an@@ ker insurance company n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-46	-0.06798611581325531	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l anker insurance company n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-46	-0.1132 -0.0812 -0.0521 -0.0869 -0.0949 -0.0604 -0.0870 -0.1159 -0.0300 -0.0157 -0.0266 -0.0176 -0.0328 -0.0624 -0.0768 -0.0777 -0.1180 -0.0728 -0.0695 -0.0520 -0.0555 -0.0749 -0.0731 -0.0847
 A-46	18-0 18-1 18-2 18-3 18-4 18-5 19-6 18-7 6-8 15-9 18-10 15-11 15-12 18-13 18-14 18-15 19-16 19-17 19-18 16-19 18-20 19-21 19-22
 S-47	W@@ here is f@@ b@@ to z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-47	0.786	seconds
+W-47	0.845	seconds
 H-47	-0.07853800058364868	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l f@@ b@@ to z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-47	-0.07853800058364868	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l fbto zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-47	-0.0937 -0.0735 -0.2539 -0.0839 -0.0832 -0.1101 -0.1031 -0.0953 -0.0050 -0.0308 -0.0161 -0.0188 -0.0179 -0.1206 -0.0953 -0.0747 -0.0317 -0.0977 -0.0439 -0.0610 -0.0799 -0.0860 -0.1156 -0.0740 -0.0990 -0.0572 -0.1235 -0.0724 -0.0658 -0.0725
 A-47	24-0 24-1 24-2 24-3 24-4 16-5 12-6 24-7 5-8 7-9 6-10 5-11 25-12 25-13 24-14 22-15 24-16 24-17 19-18 24-19 24-20 24-21 25-22 25-23 16-24 5-25 24-26 25-27 25-28
 S-48	W@@ here is z@@ il@@ ver@@ en k@@ ru@@ is z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-48	1.053	seconds
+W-48	1.141	seconds
 H-48	-0.06316424906253815	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l z@@ il@@ ver@@ en k@@ ru@@ is z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-48	-0.06316424906253815	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l zilveren kruis zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-48	-0.0980 -0.0676 -0.1458 -0.0652 -0.0769 -0.0926 -0.0726 -0.0892 -0.0683 -0.0206 -0.0475 -0.0514 -0.0088 -0.0339 -0.0291 -0.0074 -0.0221 -0.0843 -0.0894 -0.0403 -0.0349 -0.0390 -0.0546 -0.0482 -0.0520 -0.0778 -0.1047 -0.0656 -0.0856 -0.0627 -0.0991 -0.0622 -0.0709 -0.0794
 A-48	28-0 28-1 28-2 26-3 26-4 20-5 16-6 26-7 10-8 28-9 29-10 25-11 25-12 4-13 15-14 1-15 25-16 29-17 29-18 26-19 28-20 25-21 25-22 28-23 28-24 16-25 29-26 29-27 20-28 4-29 28-30 29-31 29-32
 S-49	W@@ here is on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j vo@@ or inst@@ el@@ ling@@ en in de ge@@ z@@ on@@ d@@ hei@@ d@@ s@@ z@@ org medi@@ risk b@@ .@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-49	1.362	seconds
+W-49	1.524	seconds
 H-49	-0.11708822846412659	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ings ma@@ at@@ sch@@ app@@ i@@ j ri@@ j@@ n en a@@ ar u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-49	-0.11708822846412659	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings maatschappij rijn en aar u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-49	-0.1042 -0.1045 -0.0750 -0.1021 -0.1078 -0.0569 -0.0969 -0.1234 -0.0122 -0.0592 -0.0586 -0.1545 -0.4018 -0.0963 -0.0350 -0.3142 -0.0895 -0.1066 -0.0993 -0.1421 -0.0745 -0.0641 -0.9250 -0.0255 -0.1010 -0.0484 -0.0449 -0.0457 -0.0353 -0.0607 -0.1224 -0.0875 -0.0749 -0.0554 -0.0814 -0.0804 -0.0892 -0.0931
 A-49	46-0 46-1 46-2 46-3 46-4 31-5 22-6 4-7 7-8 46-9 22-10 46-11 4-12 15-13 44-14 46-15 38-16 31-17 44-18 31-19 46-20 31-21 4-22 46-23 36-24 31-25 8-26 33-27 32-28 46-29 47-30 47-31 31-32 18-33 46-34 46-35 46-36
 S-50	W@@ here is ab@@ n am@@ ro le@@ ven@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-50	0.841	seconds
+W-50	0.962	seconds
 H-50	-0.07275799661874771	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ab@@ n am@@ ro le@@ ven@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-50	-0.07275799661874771	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l abn amro levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-50	-0.0753 -0.0740 -0.0941 -0.0762 -0.0829 -0.0893 -0.0852 -0.1150 -0.0346 -0.0299 -0.0430 -0.0558 -0.0089 -0.0359 -0.0365 -0.1196 -0.1301 -0.0197 -0.0604 -0.0661 -0.0887 -0.0876 -0.1065 -0.1120 -0.0759 -0.0821 -0.0494 -0.0898 -0.0736 -0.0742 -0.0833
 A-50	25-0 25-1 25-2 25-3 23-4 17-5 26-6 3-7 6-8 6-9 26-10 12-11 7-12 12-13 22-14 26-15 15-16 20-17 23-18 22-19 22-20 22-21 25-22 26-23 26-24 17-25 18-26 25-27 26-28 26-29
 S-51	W@@ here is v@@ va@@ a sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-51	0.746	seconds
+W-51	0.837	seconds
 H-51	-0.07593396306037903	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l v@@ va@@ a sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-51	-0.07593396306037903	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vvaa schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-51	-0.0690 -0.0766 -0.3408 -0.0750 -0.0900 -0.0901 -0.0732 -0.0941 -0.0190 -0.0080 -0.0195 -0.0241 -0.0804 -0.0247 -0.1134 -0.0799 -0.0520 -0.0399 -0.0802 -0.0432 -0.0576 -0.0546 -0.0869 -0.1087 -0.0841 -0.0731 -0.0392 -0.1141 -0.0802 -0.0780 -0.0843
 A-51	25-0 25-1 25-2 25-3 25-4 17-5 13-6 15-7 5-8 5-9 5-10 23-11 23-12 26-13 26-14 15-15 23-16 23-17 26-18 22-19 25-20 13-21 13-22 26-23 26-24 13-25 1-26 25-27 26-28 26-29
 S-52	W@@ here is national academic ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-52	0.872	seconds
+W-52	0.926	seconds
 H-52	-0.09244003891944885	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l national academic ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-52	-0.09244003891944885	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l national academic verzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-52	-0.0857 -0.0939 -0.1910 -0.0991 -0.1214 -0.1049 -0.1105 -0.1332 -0.0095 -0.0186 -0.0879 -0.1080 -0.0720 -0.0725 -0.0176 -0.0911 -0.1353 -0.1746 -0.0978 -0.0475 -0.0360 -0.0728 -0.1330 -0.1083 -0.1312 -0.0884 -0.0918 -0.0642 -0.1143 -0.0907 -0.0740 -0.0811
 A-52	26-0 26-1 26-2 26-3 26-4 17-5 27-6 26-7 9-8 26-9 26-10 17-11 24-12 26-13 26-14 26-15 26-16 26-17 26-18 26-19 17-20 26-21 17-22 14-23 27-24 27-25 17-26 9-27 26-28 27-29 27-30
 S-53	W@@ here is le@@ mon@@ ade insurance n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-53	0.846	seconds
+W-53	0.881	seconds
 H-53	-0.073063924908638	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l le@@ mon@@ ade insurance n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-53	-0.073063924908638	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lemonade insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-53	-0.1078 -0.0799 -0.0574 -0.0882 -0.0821 -0.0632 -0.0791 -0.1129 -0.0052 -0.0202 -0.0273 -0.0738 -0.0831 -0.0826 -0.1262 -0.0868 -0.1088 -0.0730 -0.0715 -0.0509 -0.0612 -0.0708 -0.0665 -0.0748
 A-53	18-0 18-1 18-2 18-3 18-4 18-5 18-6 18-7 5-8 14-9 16-10 16-11 15-12 18-13 18-14 18-15 19-16 19-17 19-18 4-19 18-20 19-21 19-22
 S-54	W@@ here is u@@ it@@ va@@ art@@ ver@@ ze@@ k@@ ering tw@@ en@@ the n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-54	0.917	seconds
+W-54	0.997	seconds
 H-54	-0.07545487582683563	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l u@@ it@@ va@@ art@@ ver@@ ze@@ k@@ ering tw@@ en@@ the n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-54	-0.07545487582683563	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uitvaartverzekering twenthe n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-54	-0.0694 -0.0897 -0.0971 -0.0609 -0.0977 -0.2137 -0.0817 -0.1086 -0.0034 -0.0291 -0.0927 -0.0497 -0.0721 -0.0904 -0.0419 -0.0886 -0.0172 -0.0532 -0.0273 -0.0533 -0.0704 -0.1003 -0.0910 -0.0972 -0.0827 -0.0944 -0.0459 -0.0873 -0.0789 -0.0709 -0.0823
 A-54	25-0 25-1 25-2 25-3 25-4 16-5 26-6 25-7 5-8 3-9 3-10 18-11 24-12 16-13 25-14 16-15 3-16 3-17 3-18 22-19 16-20 25-21 16-22 26-23 26-24 16-25 3-26 25-27 26-28 26-29
 S-55	W@@ here is n@@ .@@ v@@ . uni@@ v@@ é sc@@ ha@@ de <unk> <unk> what is the regi@@ <unk> number ?
-W-55	0.734	seconds
+W-55	0.819	seconds
 H-55	-0.0662582740187645	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot uni@@ v@@ é sc@@ ha@@ de quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-55	-0.0662582740187645	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot univé schade quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-55	-0.0596 -0.0624 -0.2301 -0.0720 -0.0817 -0.0829 -0.0772 -0.0918 -0.0223 -0.0482 -0.0498 -0.0637 -0.0056 -0.0730 -0.0384 -0.0258 -0.0454 -0.0416 -0.0668 -0.0713 -0.0763 -0.0477 -0.1025 -0.0709 -0.0543 -0.0614
 A-55	20-0 20-1 20-2 20-3 20-4 20-5 21-6 20-7 12-8 20-9 12-10 21-11 12-12 20-13 18-14 1-15 20-16 20-17 21-18 21-19 21-20 2-21 20-22 20-23 21-24
 S-56	W@@ here is n@@ .@@ v@@ . no@@ or@@ d@@ hol@@ land@@ sch@@ e van 18@@ 16 <unk> <unk> what is the regi@@ <unk> number ?
-W-56	0.763	seconds
+W-56	0.815	seconds
 H-56	-0.05524354800581932	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot no@@ or@@ d@@ hol@@ land@@ sch@@ e van 18@@ 16 quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-56	-0.05524354800581932	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot noordhollandsche van 1816 quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-56	-0.0844 -0.0643 -0.1391 -0.0640 -0.0749 -0.0650 -0.0723 -0.0925 -0.0049 -0.0452 -0.0192 -0.0649 -0.1902 -0.0356 -0.0350 -0.0093 -0.0144 -0.0191 -0.0318 -0.0146 -0.0031 -0.0110 -0.0707 -0.0732 -0.0631 -0.0406 -0.0686 -0.0691 -0.0562 -0.0611
 A-56	24-0 24-1 24-2 24-3 24-4 24-5 24-6 22-7 10-8 24-9 13-10 24-11 15-12 24-13 24-14 24-15 17-16 22-17 24-18 1-19 1-20 24-21 25-22 24-23 25-24 17-25 24-26 24-27 24-28
 S-57	W@@ here is s@@ r@@ le@@ v n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-57	0.633	seconds
+W-57	0.678	seconds
 H-57	-0.07408507168292999	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l s@@ r@@ le@@ v n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-57	-0.07408507168292999	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l srlev n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-57	-0.0714 -0.0752 -0.1371 -0.0820 -0.0871 -0.0791 -0.0761 -0.1137 -0.0177 -0.0240 -0.0179 -0.0149 -0.0621 -0.0780 -0.0994 -0.0958 -0.1114 -0.0812 -0.0714 -0.0533 -0.0896 -0.0805 -0.0737 -0.0856
 A-57	18-0 18-1 18-2 18-3 18-4 18-5 19-6 18-7 6-8 13-9 3-10 13-11 15-12 18-13 19-14 19-15 19-16 19-17 19-18 1-19 18-20 19-21 19-22
 S-58	W@@ here is won@@ ing@@ bor@@ g n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-58	0.675	seconds
+W-58	0.725	seconds
 H-58	-0.06870121508836746	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l won@@ ing@@ bor@@ g n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-58	-0.06870121508836746	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l woningborg n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-58	-0.0880 -0.0724 -0.0888 -0.0773 -0.0885 -0.0763 -0.0743 -0.1059 -0.0694 -0.0224 -0.0437 -0.0255 -0.0249 -0.0541 -0.0641 -0.0716 -0.1103 -0.0741 -0.0756 -0.0491 -0.0705 -0.0775 -0.0705 -0.0741
 A-58	18-0 18-1 18-2 18-3 18-4 19-5 19-6 18-7 7-8 4-9 1-10 4-11 19-12 18-13 18-14 18-15 19-16 19-17 19-18 1-19 18-20 19-21 19-22
 S-59	W@@ here is ro@@ be@@ in le@@ ven n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-59	0.597	seconds
+W-59	0.676	seconds
 H-59	-0.06797425448894501	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ro@@ be@@ in le@@ ven n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-59	-0.06797425448894501	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l robein leven n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-59	-0.0772 -0.0668 -0.2039 -0.0785 -0.0819 -0.0655 -0.0688 -0.0979 -0.0649 -0.0278 -0.0216 -0.0071 -0.0210 -0.0434 -0.0570 -0.0643 -0.0718 -0.0957 -0.0753 -0.0640 -0.0480 -0.0956 -0.0757 -0.0626 -0.0629
 A-59	19-0 19-1 19-2 19-3 19-4 20-5 20-6 19-7 6-8 6-9 6-10 6-11 16-12 16-13 19-14 19-15 19-16 20-17 20-18 20-19 6-20 19-21 20-22 20-23
 S-60	W@@ here is k@@ la@@ ver@@ bla@@ d le@@ ven@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-60	0.944	seconds
+W-60	1.062	seconds
 H-60	-0.07166844606399536	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l k@@ la@@ ver@@ bla@@ d le@@ ven@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-60	-0.07166844606399536	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l klaverblad levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-60	-0.0745 -0.0850 -0.0655 -0.0836 -0.0841 -0.1022 -0.0993 -0.1125 -0.0063 -0.0093 -0.0516 -0.0200 -0.0520 -0.0225 -0.0430 -0.0376 -0.0807 -0.1226 -0.0075 -0.0913 -0.0659 -0.1048 -0.0995 -0.1117 -0.1158 -0.0744 -0.0900 -0.0670 -0.0815 -0.0754 -0.0666 -0.0900
 A-60	26-0 24-1 26-2 24-3 24-4 17-5 26-6 24-7 6-8 5-9 23-10 1-11 23-12 23-13 23-14 24-15 23-16 16-17 24-18 17-19 23-20 17-21 26-22 16-23 27-24 26-25 17-26 1-27 26-28 26-29 24-30
 S-61	W@@ here is on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j centr@@ ale z@@ org@@ ver@@ ze@@ ker@@ a@@ ars gro@@ ep <unk> <unk> what is the regi@@ <unk> number ?
-W-61	1.035	seconds
+W-61	1.156	seconds
 H-61	-0.07783820480108261	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j centr@@ ale z@@ org@@ ver@@ ze@@ ker@@ a@@ ars gro@@ ep quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-61	-0.07783820480108261	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centrale zorgverzekeraars groep quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-61	-0.0954 -0.0895 -0.1456 -0.0864 -0.0834 -0.1789 -0.0941 -0.1161 -0.1981 -0.0777 -0.0794 -0.0985 -0.0788 -0.0457 -0.0526 -0.0238 -0.1359 -0.0921 -0.0920 -0.0949 -0.0749 -0.0462 -0.0014 -0.0201 -0.0443 -0.0121 -0.1034 -0.0883 -0.0840 -0.0557 -0.0215 -0.0287 -0.0251 -0.0942 -0.0839 -0.0895 -0.0501 -0.0907 -0.0798 -0.0652 -0.0733
 A-61	35-0 35-1 35-2 35-3 35-4 16-5 36-6 16-7 7-8 35-9 35-10 35-11 10-12 25-13 25-14 25-15 25-16 25-17 25-18 25-19 35-20 35-21 7-22 23-23 16-24 35-25 36-26 15-27 35-28 27-29 7-30 25-31 20-32 21-33 36-34 16-35 1-36 35-37 36-38 21-39
 S-62	W@@ here is ab@@ n am@@ ro cap@@ tive n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-62	0.761	seconds
+W-62	0.805	seconds
 H-62	-0.06677033752202988	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ab@@ n am@@ ro cap@@ tive n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-62	-0.06677033752202988	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l abn amro captive n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-62	-0.0815 -0.0652 -0.1975 -0.0650 -0.0797 -0.0772 -0.0788 -0.1009 -0.0338 -0.0161 -0.0206 -0.0258 -0.0258 -0.0112 -0.0385 -0.0622 -0.0674 -0.0804 -0.0975 -0.0718 -0.0739 -0.0543 -0.0893 -0.0701 -0.0686 -0.0826
 A-62	20-0 20-1 20-2 20-3 20-4 12-5 21-6 20-7 7-8 13-9 20-10 7-11 7-12 13-13 17-14 20-15 20-16 20-17 21-18 17-19 12-20 1-21 20-22 20-23 21-24
 S-63	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j don@@ atus u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-63	1.027	seconds
+W-63	1.058	seconds
 H-63	-0.06961990147829056	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j don@@ atus u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-63	-0.06961990147829056	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-63	-0.1013 -0.1085 -0.0391 -0.0783 -0.1003 -0.0798 -0.0938 -0.1337 -0.0209 -0.0849 -0.0343 -0.0808 -0.0173 -0.0976 -0.0125 -0.0499 -0.0856 -0.0914 -0.0810 -0.1001 -0.0458 -0.0435 -0.0674 -0.0412 -0.0226 -0.0628 -0.0943 -0.0779 -0.0822 -0.0446 -0.0582 -0.0742 -0.0798 -0.0817
 A-63	28-0 28-1 28-2 28-3 28-4 28-5 29-6 15-7 7-8 28-9 6-10 28-11 7-12 15-13 17-14 15-15 28-16 15-17 15-18 15-19 28-20 28-21 5-22 7-23 20-24 28-25 29-26 29-27 29-28 17-29 28-30 29-31 29-32
 S-64	W@@ here is t@@ v@@ m ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-64	0.811	seconds
+W-64	0.859	seconds
 H-64	-0.06768519431352615	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l t@@ v@@ m ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-64	-0.06768519431352615	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l tvm verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-64	-0.1076 -0.0757 -0.1225 -0.0804 -0.0932 -0.0799 -0.0674 -0.1014 -0.0085 -0.0151 -0.0106 -0.0610 -0.0637 -0.0438 -0.0325 -0.0352 -0.0335 -0.0487 -0.0472 -0.0891 -0.1076 -0.0790 -0.0832 -0.0687 -0.0979 -0.0791 -0.0770 -0.0856
 A-64	22-0 22-1 22-2 22-3 22-4 14-5 23-6 22-7 8-8 22-9 3-10 3-11 22-12 22-13 22-14 22-15 19-16 22-17 22-18 19-19 23-20 23-21 14-22 3-23 22-24 23-25 22-26
 S-65	W@@ here is on@@ der@@ ling ver@@ ze@@ ker@@ d u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-65	0.806	seconds
+W-65	0.857	seconds
 H-65	-0.07873948663473129	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling ver@@ ze@@ ker@@ d u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-65	-0.07873948663473129	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderling verzekerd u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-65	-0.0948 -0.0994 -0.0726 -0.1030 -0.1146 -0.0687 -0.1147 -0.1383 -0.0422 -0.0550 -0.0556 -0.0224 -0.0963 -0.0395 -0.0625 -0.0224 -0.0733 -0.1249 -0.0943 -0.0817 -0.0626 -0.0733 -0.0919 -0.0733 -0.0914
 A-65	19-0 19-1 19-2 19-3 17-4 19-5 20-6 4-7 3-8 19-9 4-10 3-11 17-12 17-13 14-14 4-15 19-16 20-17 20-18 19-19 1-20 19-21 19-22 20-23
 S-66	W@@ here is en@@ o a@@ an@@ vul@@ len@@ de ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-66	0.815	seconds
+W-66	0.898	seconds
 H-66	-0.07086078822612762	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l en@@ o a@@ an@@ vul@@ len@@ de ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-66	-0.07086078822612762	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eno aanvullende verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-66	-0.0970 -0.0742 -0.1419 -0.0853 -0.1065 -0.0667 -0.0830 -0.1066 -0.0546 -0.0082 -0.0819 -0.0157 -0.0162 -0.0200 -0.0423 -0.0353 -0.0797 -0.0604 -0.0748 -0.1129 -0.0269 -0.0585 -0.0697 -0.0817 -0.1128 -0.0801 -0.0780 -0.0524 -0.1094 -0.0814 -0.0756 -0.0780
 A-66	26-0 26-1 26-2 24-3 24-4 18-5 14-6 26-7 9-8 26-9 3-10 10-11 24-12 26-13 26-14 1-15 17-16 24-17 26-18 24-19 23-20 26-21 26-22 14-23 27-24 27-25 18-26 3-27 26-28 14-29 27-30
 S-67	W@@ here is rab@@ o her@@ ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-67	0.909	seconds
+W-67	0.980	seconds
 H-67	-0.08163580298423767	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l rab@@ o her@@ ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-67	-0.08163580298423767	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l rabo herverzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-67	-0.0896 -0.0872 -0.1150 -0.0920 -0.1050 -0.1143 -0.0945 -0.1242 -0.0241 -0.0178 -0.0185 -0.0891 -0.1153 -0.0606 -0.0635 -0.0075 -0.0764 -0.1019 -0.1376 -0.0612 -0.0532 -0.0359 -0.1020 -0.1008 -0.1079 -0.1333 -0.0825 -0.0883 -0.0574 -0.0939 -0.0790 -0.0695 -0.0947
 A-67	27-0 27-1 27-2 27-3 27-4 19-5 17-6 27-7 10-8 27-9 3-10 24-11 27-12 25-13 27-14 24-15 25-16 25-17 27-18 27-19 27-20 18-21 27-22 27-23 17-24 19-25 28-26 19-27 4-28 27-29 28-30 27-31
 S-68	W@@ here is c@@ z z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-68	0.819	seconds
+W-68	0.913	seconds
 H-68	-0.07167278230190277	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l c@@ z z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-68	-0.07167278230190277	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l cz zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-68	-0.0880 -0.0707 -0.1655 -0.0669 -0.0847 -0.1117 -0.0871 -0.0866 -0.0316 -0.0114 -0.0080 -0.0183 -0.1137 -0.0811 -0.0775 -0.0233 -0.0689 -0.0404 -0.0497 -0.0440 -0.0824 -0.1128 -0.0678 -0.0932 -0.0630 -0.1161 -0.0661 -0.0742 -0.0740
 A-68	23-0 23-1 23-2 23-3 23-4 15-5 23-6 23-7 5-8 10-9 13-10 23-11 24-12 23-13 23-14 23-15 23-16 11-17 23-18 23-19 23-20 24-21 23-22 15-23 17-24 23-25 23-26 23-27
 S-69	W@@ here is a@@ eg@@ on spa@@ ar@@ k@@ as n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-69	0.838	seconds
+W-69	0.942	seconds
 H-69	-0.05684609338641167	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l a@@ eg@@ on spa@@ ar@@ k@@ as n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-69	-0.05684609338641167	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegon spaarkas n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-69	-0.0735 -0.0671 -0.0943 -0.0666 -0.0797 -0.0708 -0.0679 -0.0973 -0.0362 -0.0093 -0.0220 -0.0226 -0.0160 -0.0068 -0.0460 -0.0284 -0.0480 -0.0529 -0.0739 -0.0977 -0.0657 -0.0707 -0.0640 -0.0598 -0.0671 -0.0615 -0.0691
 A-69	21-0 21-1 21-2 21-3 21-4 13-5 4-6 21-7 5-8 14-9 7-10 0-11 15-12 7-13 21-14 18-15 21-16 21-17 21-18 22-19 22-20 13-21 15-22 21-23 22-24 22-25
 S-70	W@@ here is n@@ .@@ v@@ . no@@ or@@ d@@ hol@@ land@@ sch@@ e van 18@@ 16 <unk> <unk> what is the regi@@ <unk> number ?
-W-70	0.729	seconds
+W-70	0.802	seconds
 H-70	-0.05524354800581932	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot no@@ or@@ d@@ hol@@ land@@ sch@@ e van 18@@ 16 quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-70	-0.05524354800581932	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot noordhollandsche van 1816 quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-70	-0.0844 -0.0643 -0.1391 -0.0640 -0.0749 -0.0650 -0.0723 -0.0925 -0.0049 -0.0452 -0.0192 -0.0649 -0.1902 -0.0356 -0.0350 -0.0093 -0.0144 -0.0191 -0.0318 -0.0146 -0.0031 -0.0110 -0.0707 -0.0732 -0.0631 -0.0406 -0.0686 -0.0691 -0.0562 -0.0611
 A-70	24-0 24-1 24-2 24-3 24-4 24-5 24-6 22-7 10-8 24-9 13-10 24-11 15-12 24-13 24-14 24-15 17-16 22-17 24-18 1-19 1-20 24-21 25-22 24-23 25-24 17-25 24-26 24-27 24-28
 S-71	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j z@@ l@@ m u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-71	0.896	seconds
+W-71	0.953	seconds
 H-71	-0.06492018699645996	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j z@@ l@@ m u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-71	-0.06492018699645996	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij zlm u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-71	-0.0851 -0.0814 -0.0463 -0.0595 -0.0805 -0.1082 -0.0770 -0.1101 -0.0368 -0.0643 -0.0295 -0.0836 -0.0200 -0.0783 -0.0125 -0.0361 -0.0536 -0.0815 -0.0803 -0.0828 -0.0444 -0.0386 -0.2086 -0.0088 -0.0214 -0.0287 -0.0523 -0.0932 -0.0702 -0.0874 -0.0467 -0.0606 -0.0644 -0.0680 -0.0715
 A-71	29-0 29-1 29-2 29-3 29-4 29-5 29-6 15-7 7-8 29-9 29-10 29-11 4-12 15-13 29-14 15-15 29-16 15-17 15-18 15-19 29-20 29-21 17-22 18-23 17-24 19-25 29-26 30-27 30-28 29-29 19-30 29-31 30-32 30-33
 S-72	W@@ here is v@@ va@@ a le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-72	0.918	seconds
+W-72	1.009	seconds
 H-72	-0.07670742273330688	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l v@@ va@@ a le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-72	-0.07670742273330688	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vvaa levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-72	-0.0721 -0.0766 -0.1875 -0.0783 -0.0914 -0.0945 -0.0825 -0.0978 -0.0179 -0.0074 -0.0199 -0.0053 -0.0219 -0.0274 -0.1507 -0.0892 -0.0599 -0.1530 -0.1232 -0.0531 -0.0631 -0.0539 -0.0935 -0.1114 -0.0839 -0.0742 -0.0428 -0.1008 -0.0788 -0.0799 -0.0860
 A-72	25-0 25-1 25-2 25-3 23-4 25-5 13-6 23-7 5-8 2-9 7-10 7-11 21-12 23-13 26-14 23-15 23-16 23-17 26-18 22-19 25-20 25-21 15-22 26-23 26-24 17-25 1-26 25-27 26-28 26-29
 S-73	W@@ here is le@@ i@@ d@@ sch@@ e ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-73	0.895	seconds
+W-73	0.957	seconds
 H-73	-0.07225480675697327	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l le@@ i@@ d@@ sch@@ e ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-73	-0.07225480675697327	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l leidsche verzekering maatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-73	-0.1084 -0.0929 -0.0386 -0.0766 -0.0895 -0.0979 -0.0849 -0.1194 -0.0667 -0.0524 -0.0678 -0.0194 -0.0694 -0.0482 -0.1102 -0.0176 -0.0631 -0.0773 -0.1122 -0.0649 -0.0847 -0.0420 -0.0403 -0.0426 -0.0858 -0.1134 -0.0912 -0.0931 -0.0713 -0.0784 -0.0377 -0.0584 -0.0684 -0.0683 -0.0758
 A-73	29-0 29-1 29-2 29-3 29-4 20-5 16-6 16-7 10-8 8-9 24-10 7-11 29-12 24-13 16-14 24-15 16-16 3-17 16-18 16-19 16-20 29-21 29-22 1-23 29-24 29-25 16-26 21-27 30-28 20-29 1-30 29-31 30-32 30-33
 S-74	W@@ here is b@@ n@@ p par@@ ib@@ as car@@ di@@ f le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-74	0.968	seconds
+W-74	1.037	seconds
 H-74	-0.06363518536090851	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l b@@ n@@ p par@@ ib@@ as car@@ di@@ f le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-74	-0.06363518536090851	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bnp paribas cardif levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-74	-0.0914 -0.0756 -0.1737 -0.0821 -0.0783 -0.1072 -0.0850 -0.1049 -0.0042 -0.0220 -0.0334 -0.0308 -0.0147 -0.0178 -0.0406 -0.0342 -0.0134 -0.0059 -0.0284 -0.0205 -0.0724 -0.0835 -0.0481 -0.0803 -0.0946 -0.0305 -0.0662 -0.0901 -0.0974 -0.1140 -0.0702 -0.0828 -0.0538 -0.1012 -0.0718 -0.0627 -0.0707
 A-74	31-0 31-1 31-2 31-3 29-4 23-5 19-6 31-7 10-8 10-9 17-10 13-11 17-12 17-13 13-14 31-15 18-16 13-17 18-18 31-19 31-20 22-21 29-22 31-23 31-24 19-25 22-26 31-27 19-28 23-29 19-30 23-31 1-32 31-33 19-34 31-35
 S-75	W@@ here is iz@@ a z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-75	0.743	seconds
+W-75	0.798	seconds
 H-75	-0.0810953751206398	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l iz@@ a z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-75	-0.0810953751206398	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l iza zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-75	-0.0837 -0.0738 -0.2698 -0.0835 -0.0909 -0.0631 -0.0853 -0.1071 -0.0173 -0.1079 -0.0061 -0.0145 -0.1166 -0.0983 -0.0727 -0.0392 -0.0365 -0.0450 -0.0660 -0.0935 -0.0995 -0.1244 -0.0868 -0.0699 -0.0502 -0.0981 -0.0806 -0.0743 -0.0972
 A-75	23-0 23-1 23-2 23-3 23-4 15-5 23-6 23-7 4-8 13-9 17-10 20-11 24-12 23-13 23-14 18-15 20-16 20-17 23-18 23-19 23-20 24-21 24-22 15-23 4-24 23-25 24-26 23-27
 S-76	W@@ here is en@@ el insurance n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-76	0.716	seconds
+W-76	0.794	seconds
 H-76	-0.07365322858095169	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l en@@ el insurance n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-76	-0.07365322858095169	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l enel insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-76	-0.1171 -0.0876 -0.0642 -0.0757 -0.1103 -0.0523 -0.0724 -0.1139 -0.0279 -0.1065 -0.0339 -0.0275 -0.0527 -0.0737 -0.0857 -0.0944 -0.0758 -0.0690 -0.0531 -0.0682 -0.0801 -0.0761 -0.0759
 A-76	17-0 17-1 17-2 17-3 17-4 17-5 17-6 17-7 3-8 17-9 17-10 14-11 17-12 17-13 17-14 18-15 18-16 18-17 3-18 17-19 18-20 18-21
 S-77	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j uni@@ v@@ é sa@@ men u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-77	0.915	seconds
+W-77	1.056	seconds
 H-77	-0.07314668595790863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j uni@@ v@@ é sa@@ men u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-77	-0.07314668595790863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij univé samen u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-77	-0.0976 -0.0868 -0.1623 -0.0874 -0.1079 -0.0946 -0.1011 -0.1201 -0.0239 -0.0717 -0.0760 -0.1120 -0.0389 -0.0884 -0.0341 -0.0556 -0.0197 -0.0633 -0.0923 -0.1340 -0.0708 -0.0444 -0.0181 -0.0691 -0.0470 -0.0050 -0.0207 -0.0369 -0.0799 -0.1039 -0.0825 -0.0830 -0.0551 -0.0942 -0.0795 -0.0680 -0.0807
 A-77	31-0 31-1 31-2 31-3 31-4 18-5 15-6 31-7 7-8 31-9 31-10 31-11 7-12 31-13 31-14 31-15 31-16 31-17 31-18 31-19 31-20 31-21 7-22 31-23 16-24 31-25 20-26 15-27 31-28 32-29 31-30 18-31 16-32 31-33 31-34 31-35
 S-78	W@@ here is g@@ ou@@ d@@ se le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-78	0.893	seconds
+W-78	1.020	seconds
 H-78	-0.057260509580373764	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l g@@ ou@@ d@@ se le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-78	-0.057260509580373764	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l goudse levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-78	-0.0736 -0.0702 -0.0788 -0.0668 -0.0711 -0.0748 -0.0700 -0.0855 -0.0447 -0.0055 -0.0282 -0.0284 -0.0059 -0.0300 -0.0245 -0.0786 -0.0914 -0.0427 -0.0483 -0.0500 -0.0441 -0.0509 -0.0743 -0.0728 -0.0983 -0.0621 -0.0757 -0.0413 -0.0614 -0.0567 -0.0624 -0.0633
 A-78	24-0 26-1 26-2 24-3 24-4 18-5 14-6 24-7 6-8 26-9 24-10 24-11 8-12 13-13 24-14 27-15 24-16 24-17 24-18 24-19 23-20 26-21 24-22 24-23 27-24 27-25 18-26 2-27 26-28 27-29 27-30
 S-79	W@@ here is uni@@ v@@ é no@@ or@@ d-@@ ne@@ der@@ land ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-79	0.855	seconds
+W-79	0.967	seconds
 H-79	-0.06597355753183365	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uni@@ v@@ é no@@ or@@ d-@@ ne@@ der@@ land ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-79	-0.06597355753183365	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé noord-nederland verzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-79	-0.0818 -0.0643 -0.3748 -0.0738 -0.0912 -0.0680 -0.0835 -0.1005 -0.0094 -0.0683 -0.0356 -0.0341 -0.0200 -0.0091 -0.0618 -0.0174 -0.0328 -0.0512 -0.0577 -0.0358 -0.0345 -0.0342 -0.0267 -0.0473 -0.0781 -0.0739 -0.0907 -0.0728 -0.0662 -0.0373 -0.1049 -0.0705 -0.0647 -0.0703
 A-79	28-0 28-1 28-2 28-3 28-4 19-5 28-6 28-7 9-8 29-9 14-10 9-11 28-12 14-13 14-14 28-15 29-16 29-17 19-18 26-19 28-20 26-21 25-22 28-23 28-24 28-25 29-26 29-27 19-28 16-29 28-30 28-31 28-32
 S-80	W@@ here is ac@@ tu@@ a sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-80	0.943	seconds
+W-80	1.004	seconds
 H-80	-0.07691337913274765	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ac@@ tu@@ a sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-80	-0.07691337913274765	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l actua schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-80	-0.0670 -0.0902 -0.0707 -0.0807 -0.1012 -0.0809 -0.0792 -0.1091 -0.0623 -0.0227 -0.0790 -0.0067 -0.1277 -0.0502 -0.0990 -0.1371 -0.0172 -0.0498 -0.0574 -0.0870 -0.0958 -0.0964 -0.1129 -0.0831 -0.0809 -0.0430 -0.0740 -0.0793 -0.0738 -0.0928
 A-80	24-0 24-1 24-2 24-3 24-4 16-5 25-6 22-7 4-8 21-9 18-10 4-11 21-12 1-13 25-14 1-15 19-16 21-17 21-18 21-19 21-20 20-21 25-22 21-23 16-24 17-25 24-26 21-27 25-28
 S-81	W@@ here is de@@ la natur@@ a@@ - en le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-81	0.897	seconds
+W-81	0.962	seconds
 H-81	-0.06807111203670502	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de@@ la natur@@ a@@ - en le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-81	-0.06807111203670502	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dela natura- en levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-81	-0.0937 -0.0803 -0.0921 -0.0917 -0.0950 -0.0753 -0.0778 -0.1092 -0.0267 -0.0266 -0.0271 -0.0230 -0.0175 -0.0884 -0.0097 -0.0441 -0.0428 -0.0934 -0.0752 -0.0429 -0.0565 -0.0718 -0.0310 -0.0728 -0.0906 -0.1038 -0.1240 -0.0757 -0.0749 -0.0580 -0.0852 -0.0747 -0.0769 -0.0862
 A-81	28-0 28-1 28-2 28-3 28-4 20-5 28-6 28-7 6-8 1-9 1-10 1-11 26-12 28-13 1-14 29-15 26-16 29-17 28-18 26-19 28-20 28-21 25-22 28-23 28-24 28-25 29-26 29-27 20-28 1-29 28-30 29-31 29-32
 S-82	W@@ here is men@@ z@@ is z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-82	0.761	seconds
+W-82	0.813	seconds
 H-82	-0.08626187592744827	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l men@@ z@@ is z@@ org@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-82	-0.08626187592744827	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l menzis zorgverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-82	-0.0732 -0.0602 -0.7186 -0.0710 -0.0823 -0.0632 -0.0713 -0.0910 -0.0303 -0.0034 -0.0976 -0.0218 -0.0168 -0.0982 -0.0726 -0.0503 -0.0384 -0.0182 -0.0470 -0.0544 -0.0574 -0.0808 -0.1099 -0.0736 -0.0661 -0.0575 -0.1408 -0.0682 -0.0692 -0.0845
 A-82	24-0 24-1 24-2 24-3 24-4 16-5 24-6 24-7 7-8 14-9 24-10 14-11 24-12 25-13 24-14 24-15 24-16 22-17 21-18 24-19 24-20 24-21 21-22 25-23 16-24 17-25 24-26 24-27 25-28
 S-83	W@@ here is n@@ .@@ v@@ . uni@@ v@@ é her <unk> <unk> what is the regi@@ <unk> number ?
-W-83	0.684	seconds
+W-83	0.732	seconds
 H-83	-0.06460610777139664	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot uni@@ v@@ é her quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-83	-0.06460610777139664	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot univé her quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-83	-0.0586 -0.0629 -0.0785 -0.0620 -0.0759 -0.0981 -0.0765 -0.0939 -0.0094 -0.0450 -0.0202 -0.0605 -0.0054 -0.0594 -0.0379 -0.2251 -0.0637 -0.0659 -0.0724 -0.0469 -0.0619 -0.0661 -0.0499 -0.0545
 A-83	18-0 18-1 18-2 18-3 18-4 19-5 19-6 16-7 10-8 18-9 18-10 19-11 10-12 18-13 16-14 1-15 19-16 18-17 19-18 1-19 18-20 18-21 19-22
 S-84	W@@ here is on@@ der@@ ling@@ e le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing-@@ ma@@ at@@ sch@@ app@@ i@@ j &apos; s-@@ gra@@ ven@@ ha@@ ge u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-84	1.191	seconds
+W-84	1.246	seconds
 H-84	-0.07518791407346725	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing-@@ ma@@ at@@ sch@@ app@@ i@@ j '@@ s-@@ gra@@ ven@@ ha@@ ge u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-84	-0.07518791407346725	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge levensverzekering-maatschappij 's-gravenhage u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-84	-0.1181 -0.0937 -0.0573 -0.0922 -0.1022 -0.0894 -0.0869 -0.1334 -0.0672 -0.0848 -0.0721 -0.1250 -0.0021 -0.0199 -0.0694 -0.1253 -0.1252 -0.0750 -0.0175 -0.1332 -0.1329 -0.0708 -0.1135 -0.0831 -0.0594 -0.0136 -0.0290 -0.0218 -0.0156 -0.0441 -0.0227 -0.0391 -0.1025 -0.1167 -0.0846 -0.0785 -0.0515 -0.0789 -0.0766 -0.0744 -0.0835
 A-84	35-0 35-1 35-2 35-3 35-4 35-5 15-6 15-7 3-8 35-9 35-10 35-11 4-12 15-13 19-14 36-15 15-16 33-17 15-18 19-19 18-20 35-21 35-22 35-23 35-24 24-25 36-26 36-27 15-28 19-29 36-30 15-31 35-32 36-33 36-34 15-35 15-36 35-37 36-38 35-39
 S-85	W@@ here is ach@@ me@@ a pen@@ si@@ o@@ en@@ - en le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-85	1.071	seconds
+W-85	1.177	seconds
 H-85	-0.07673227787017822	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ach@@ me@@ a pen@@ si@@ o@@ en@@ - en le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-85	-0.07673227787017822	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea pensioen- en levensverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-85	-0.0995 -0.0952 -0.0811 -0.0904 -0.1075 -0.0694 -0.0880 -0.1305 -0.0115 -0.0253 -0.0603 -0.0498 -0.0345 -0.0177 -0.0328 -0.0348 -0.1467 -0.0123 -0.0257 -0.0422 -0.1196 -0.1085 -0.0619 -0.0751 -0.1655 -0.0505 -0.0690 -0.1097 -0.1177 -0.1241 -0.0856 -0.0843 -0.0583 -0.0830 -0.0823 -0.0900 -0.0989
 A-85	31-0 31-1 31-2 31-3 29-4 23-5 19-6 31-7 6-8 14-9 31-10 1-11 1-12 1-13 1-14 14-15 29-16 1-17 27-18 29-19 32-20 22-21 29-22 29-23 29-24 32-25 31-26 31-27 19-28 32-29 32-30 23-31 3-32 31-33 32-34 32-35
 S-86	W@@ here is a@@ eg@@ on le@@ ven@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-86	0.816	seconds
+W-86	0.923	seconds
 H-86	-0.06754099577665329	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l a@@ eg@@ on le@@ ven@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-86	-0.06754099577665329	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegon levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-86	-0.0797 -0.0758 -0.0817 -0.0887 -0.0888 -0.0689 -0.0735 -0.1101 -0.0174 -0.0136 -0.0369 -0.0370 -0.0259 -0.0334 -0.0915 -0.1170 -0.0135 -0.0400 -0.0511 -0.0721 -0.0734 -0.0958 -0.1154 -0.0760 -0.0742 -0.0612 -0.0831 -0.0766 -0.0717 -0.0820
 A-86	24-0 24-1 24-2 22-3 22-4 16-5 4-6 22-7 5-8 9-9 1-10 7-11 13-12 1-13 25-14 15-15 19-16 22-17 21-18 21-19 21-20 20-21 25-22 25-23 16-24 17-25 24-26 25-27 25-28
 S-87	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ s-@@ ma@@ at@@ sch@@ app@@ i@@ j no@@ or@@ d ne@@ der@@ land@@ sch@@ e p &amp; i club u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-87	1.142	seconds
+W-87	1.290	seconds
 H-87	-0.06857692450284958	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ s-@@ ma@@ at@@ sch@@ app@@ i@@ j no@@ or@@ d ne@@ der@@ land@@ sch@@ e p@@ &@@ i club u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-87	-0.06857692450284958	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings-maatschappij noord nederlandsche p&i club u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-87	-0.0981 -0.0826 -0.0973 -0.0712 -0.0922 -0.0810 -0.0891 -0.1148 -0.4101 -0.0253 -0.1237 -0.0879 -0.0537 -0.0722 -0.0616 -0.0412 -0.0343 -0.0621 -0.0997 -0.0644 -0.0927 -0.1106 -0.0381 -0.0102 -0.0309 -0.0403 -0.0098 -0.0210 -0.0108 -0.0219 -0.0491 -0.0486 -0.0229 -0.0207 -0.0401 -0.0321 -0.0587 -0.0985 -0.0749 -0.0741 -0.0424 -0.0581 -0.0726 -0.0690 -0.0751
 A-87	39-0 39-1 39-2 39-3 39-4 39-5 25-6 22-7 3-8 39-9 39-10 39-11 4-12 39-13 37-14 39-15 1-16 39-17 25-18 25-19 25-20 39-21 39-22 3-23 39-24 39-25 25-26 39-27 22-28 25-29 25-30 4-31 34-32 39-33 39-34 39-35 39-36 40-37 39-38 39-39 38-40 39-41 39-42 39-43
 S-88	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ings ma@@ at@@ sch@@ app@@ i@@ j ri@@ j@@ n en a@@ ar u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-88	1.080	seconds
+W-88	1.161	seconds
 H-88	-0.06548390537500381	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ings ma@@ at@@ sch@@ app@@ i@@ j ri@@ j@@ n en a@@ ar u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-88	-0.06548390537500381	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings maatschappij rijn en aar u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-88	-0.0999 -0.0797 -0.1241 -0.0803 -0.0918 -0.0598 -0.0760 -0.1166 -0.0349 -0.0377 -0.0467 -0.1182 -0.0306 -0.0632 -0.0355 -0.1085 -0.0389 -0.0813 -0.0754 -0.0766 -0.0796 -0.0474 -0.0149 -0.0204 -0.0205 -0.0596 -0.0218 -0.0314 -0.0234 -0.0622 -0.1114 -0.0813 -0.0662 -0.0496 -0.0962 -0.0779 -0.0710 -0.0780
 A-88	32-0 32-1 32-2 32-3 32-4 16-5 33-6 32-7 5-8 32-9 32-10 32-11 4-12 32-13 32-14 6-15 33-16 30-17 30-18 32-19 32-20 32-21 13-22 32-23 32-24 32-25 27-26 30-27 33-28 32-29 20-30 32-31 20-32 16-33 32-34 32-35 32-36
 S-89	W@@ here is on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j z@@ org@@ ver@@ ze@@ ker@@ a@@ ar z@@ org en ze@@ ker@@ hei@@ d u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-89	1.377	seconds
+W-89	1.477	seconds
 H-89	-0.1415071338415146	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j z@@ org@@ ver@@ ze@@ ker@@ a@@ ar z@@ org en ze@@ ker@@ hei@@ d u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-89	-0.1415071338415146	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-89	-0.0969 -0.0840 -0.1281 -0.0894 -0.0951 -0.0854 -0.0944 -0.1160 -0.2281 -0.0804 -0.1080 -0.1909 -0.1440 -0.0894 -0.1056 -0.0451 -0.1751 -0.1882 -0.1068 -0.1617 -0.1256 -0.0930 -2.0555 -0.0311 -0.1085 -0.0822 -0.0598 -0.0804 -0.0668 -0.0128 -0.0746 -0.1550 -0.0509 -0.0540 -0.0886 -0.0407 -0.0646 -0.1065 -0.1260 -0.0853 -0.0814 -0.0974 -0.1008 -0.0823 -0.0809 -0.0921
 A-89	38-0 40-1 40-2 38-3 38-4 40-5 41-6 38-7 7-8 40-9 40-10 40-11 35-12 19-13 38-14 41-15 41-16 38-17 38-18 38-19 38-20 40-21 9-22 41-23 41-24 40-25 38-26 35-27 38-28 16-29 40-30 37-31 40-32 38-33 38-34 40-35 32-36 40-37 41-38 41-39 26-40 29-41 40-42 40-43 40-44
 S-90	W@@ here is k@@ m@@ u ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-90	0.836	seconds
+W-90	0.892	seconds
 H-90	-0.08558657765388489	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l k@@ m@@ u ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-90	-0.08558657765388489	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l kmu verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-90	-0.0929 -0.0829 -0.0732 -0.0716 -0.0874 -0.0909 -0.0866 -0.1080 -0.0028 -0.4459 -0.0263 -0.0581 -0.0703 -0.0770 -0.0860 -0.0615 -0.0307 -0.0595 -0.0661 -0.0923 -0.1080 -0.0698 -0.0863 -0.0598 -0.0833 -0.0716 -0.0724 -0.0751
 A-90	22-0 22-1 22-2 22-3 22-4 14-5 23-6 22-7 8-8 6-9 6-10 17-11 20-12 20-13 20-14 20-15 19-16 22-17 22-18 20-19 23-20 23-21 14-22 1-23 22-24 23-25 23-26
 S-91	W@@ here is u@@ v@@ m ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-91	0.967	seconds
+W-91	1.008	seconds
 H-91	-0.07864776998758316	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l u@@ v@@ m ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-91	-0.07864776998758316	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uvm verzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-91	-0.0839 -0.0853 -0.1672 -0.0859 -0.1118 -0.1337 -0.0911 -0.1212 -0.0076 -0.0489 -0.0235 -0.0749 -0.0789 -0.0552 -0.0448 -0.0118 -0.0648 -0.1005 -0.1143 -0.0741 -0.0425 -0.0420 -0.0689 -0.0693 -0.0841 -0.1069 -0.0861 -0.0909 -0.0567 -0.1157 -0.0848 -0.0780 -0.0902
 A-91	27-0 27-1 27-2 27-3 27-4 27-5 28-6 27-7 10-8 17-9 14-10 24-11 17-12 25-13 27-14 27-15 14-16 14-17 27-18 27-19 27-20 20-21 27-22 27-23 15-24 28-25 28-26 19-27 5-28 27-29 28-30 28-31
 S-92	W@@ here is n@@ .@@ v@@ . z@@ org@@ ver@@ ze@@ ker@@ a@@ ar um@@ c <unk> <unk> what is the regi@@ <unk> number ?
-W-92	0.754	seconds
+W-92	0.784	seconds
 H-92	-0.058058176189661026	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot z@@ org@@ ver@@ ze@@ ker@@ a@@ ar um@@ c quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-92	-0.058058176189661026	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot zorgverzekeraar umc quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-92	-0.0690 -0.0562 -0.1547 -0.0610 -0.0709 -0.0797 -0.0666 -0.0872 -0.0238 -0.0525 -0.0314 -0.0575 -0.0185 -0.0171 -0.0735 -0.0758 -0.0383 -0.0765 -0.0342 -0.0091 -0.0063 -0.0681 -0.0677 -0.0715 -0.0541 -0.0881 -0.0606 -0.0532 -0.0605
 A-92	23-0 23-1 23-2 23-3 23-4 23-5 23-6 23-7 7-8 23-9 6-10 23-11 7-12 24-13 24-14 23-15 23-16 18-17 23-18 1-19 21-20 23-21 23-22 24-23 1-24 23-25 23-26 23-27
 S-93	W@@ here is as@@ r sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-93	0.967	seconds
+W-93	1.089	seconds
 H-93	-0.06677301973104477	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l as@@ r sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-93	-0.06677301973104477	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-93	-0.0831 -0.0764 -0.0540 -0.0797 -0.0756 -0.0760 -0.0675 -0.1005 -0.0489 -0.0169 -0.0065 -0.0845 -0.0333 -0.0834 -0.1021 -0.0192 -0.0518 -0.0322 -0.0657 -0.0802 -0.0923 -0.1086 -0.0779 -0.0797 -0.0491 -0.0624 -0.0756 -0.0679 -0.0855
 A-93	23-0 23-1 23-2 23-3 23-4 15-5 23-6 21-7 10-8 24-9 1-10 18-11 1-12 24-13 24-14 18-15 21-16 24-17 20-18 23-19 23-20 24-21 24-22 15-23 17-24 23-25 24-26 24-27
 S-94	W@@ here is on@@ der@@ ling f@@ on@@ ds sli@@ e@@ dre@@ ch@@ t b@@ .@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-94	0.917	seconds
+W-94	1.038	seconds
 H-94	-0.0876784399151802	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling f@@ on@@ ds sli@@ e@@ dre@@ ch@@ t b@@ .@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-94	-0.0876784399151802	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderling fonds sliedrecht b.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-94	-0.1073 -0.1056 -0.1014 -0.1114 -0.1090 -0.0951 -0.1221 -0.1245 -0.0635 -0.1558 -0.0153 -0.0390 -0.0862 -0.0957 -0.0615 -0.0666 -0.0625 -0.0639 -0.0727 -0.0517 -0.0852 -0.1072 -0.1360 -0.1000 -0.0947 -0.0634 -0.0774 -0.0889 -0.0696 -0.0971
 A-94	24-0 24-1 24-2 24-3 22-4 15-5 15-6 4-7 9-8 24-9 4-10 3-11 2-12 3-13 4-14 4-15 4-16 14-17 14-18 4-19 21-20 14-21 25-22 25-23 15-24 9-25 24-26 25-27 25-28
 S-95	W@@ here is b@@ n@@ p par@@ ib@@ as car@@ di@@ f sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-95	0.931	seconds
+W-95	1.055	seconds
 H-95	-0.06978335231542587	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l b@@ n@@ p par@@ ib@@ as car@@ di@@ f sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-95	-0.06978335231542587	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bnp paribas cardif schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-95	-0.0857 -0.0782 -0.2384 -0.0829 -0.0835 -0.1228 -0.0858 -0.1067 -0.0036 -0.0183 -0.0472 -0.0317 -0.0122 -0.0138 -0.0404 -0.0283 -0.0109 -0.0753 -0.0893 -0.0366 -0.0731 -0.0807 -0.0449 -0.0603 -0.0783 -0.0244 -0.0694 -0.0997 -0.0962 -0.1182 -0.0721 -0.0891 -0.0572 -0.1139 -0.0738 -0.0639 -0.0754
 A-95	31-0 31-1 31-2 31-3 31-4 23-5 19-6 31-7 10-8 10-9 17-10 17-11 17-12 17-13 17-14 3-15 18-16 11-17 31-18 18-19 31-20 19-21 31-22 19-23 31-24 19-25 31-26 19-27 19-28 32-29 32-30 19-31 3-32 31-33 19-34 32-35
 S-96	W@@ here is on@@ der@@ ling@@ e br@@ and@@ wa@@ ar@@ bor@@ g ma@@ at@@ sch@@ app@@ i@@ j no@@ or@@ d hol@@ land u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-96	1.194	seconds
+W-96	1.273	seconds
 H-96	-0.062239617109298706	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e br@@ and@@ wa@@ ar@@ bor@@ g ma@@ at@@ sch@@ app@@ i@@ j no@@ or@@ d hol@@ land u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-96	-0.062239617109298706	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge brandwaarborg maatschappij noord holland u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-96	-0.0973 -0.0870 -0.0582 -0.0768 -0.1005 -0.0522 -0.0829 -0.1215 -0.1260 -0.0246 -0.0375 -0.0771 -0.0163 -0.0237 -0.2176 -0.0186 -0.0359 -0.0706 -0.0357 -0.0708 -0.0579 -0.0656 -0.0574 -0.0376 -0.0121 -0.0149 -0.0154 -0.0710 -0.0270 -0.0174 -0.0452 -0.1049 -0.0804 -0.0616 -0.0452 -0.0520 -0.0788 -0.0774 -0.0749
 A-96	33-0 33-1 33-2 33-3 33-4 18-5 33-6 18-7 5-8 33-9 33-10 33-11 3-12 33-13 1-14 23-15 23-16 31-17 33-18 31-19 31-20 31-21 33-22 33-23 3-24 33-25 33-26 20-27 34-28 25-29 33-30 34-31 30-32 18-33 23-34 33-35 31-36 33-37
 S-97	W@@ here is a@@ eg@@ on sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-97	0.772	seconds
+W-97	0.815	seconds
 H-97	-0.07561356574296951	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l a@@ eg@@ on sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-97	-0.07561356574296951	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegon schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-97	-0.0765 -0.0770 -0.1299 -0.0870 -0.0957 -0.0757 -0.0732 -0.1121 -0.0159 -0.0248 -0.0431 -0.0219 -0.1605 -0.0565 -0.0913 -0.1246 -0.0153 -0.0498 -0.0398 -0.0695 -0.0780 -0.0941 -0.1186 -0.0769 -0.0802 -0.0579 -0.0904 -0.0782 -0.0702 -0.0840
 A-97	24-0 24-1 24-2 24-3 24-4 16-5 4-6 14-7 5-8 18-9 5-10 9-11 19-12 1-13 25-14 14-15 19-16 22-17 21-18 21-19 21-20 20-21 25-22 25-23 16-24 17-25 24-26 25-27 25-28
 S-98	W@@ here is uni@@ v@@ é no@@ or@@ d-@@ hol@@ land br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-98	0.919	seconds
+W-98	0.971	seconds
 H-98	-0.061629317700862885	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uni@@ v@@ é no@@ or@@ d-@@ hol@@ land br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-98	-0.061629317700862885	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé noord-holland brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-98	-0.0843 -0.0652 -0.2475 -0.0735 -0.0929 -0.0521 -0.0815 -0.1013 -0.0133 -0.0737 -0.0431 -0.0158 -0.0151 -0.0141 -0.0565 -0.0163 -0.0112 -0.0176 -0.0617 -0.0646 -0.0447 -0.0527 -0.0342 -0.0266 -0.0594 -0.0801 -0.0763 -0.0939 -0.0762 -0.0598 -0.0425 -0.0940 -0.0755 -0.0664 -0.0736
 A-98	29-0 29-1 29-2 29-3 29-4 21-5 29-6 29-7 9-8 26-9 15-10 11-11 29-12 15-13 15-14 30-15 3-16 29-17 30-18 29-19 29-20 29-21 29-22 26-23 29-24 29-25 29-26 21-27 30-28 21-29 17-30 29-31 30-32 29-33
 S-99	W@@ here is ro@@ e@@ min@@ ck insurance n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-99	0.734	seconds
+W-99	0.836	seconds
 H-99	-0.07544849067926407	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ro@@ e@@ min@@ ck insurance n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-99	-0.07544849067926407	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l roeminck insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-99	-0.1026 -0.0850 -0.0951 -0.0943 -0.0976 -0.0605 -0.0751 -0.1048 -0.1709 -0.0267 -0.0153 -0.0128 -0.0603 -0.0351 -0.0631 -0.0680 -0.0843 -0.1102 -0.0833 -0.0713 -0.0605 -0.0736 -0.0840 -0.0758 -0.0760
 A-99	19-0 19-1 19-2 19-3 19-4 19-5 20-6 19-7 6-8 1-9 18-10 17-11 19-12 16-13 19-14 19-15 19-16 20-17 20-18 20-19 17-20 19-21 20-22 20-23
 S-100	W@@ here is uni@@ v@@ é di@@ ch@@ t@@ bi@@ j br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-100	0.963	seconds
+W-100	0.966	seconds
 H-100	-0.06170723959803581	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uni@@ v@@ é di@@ ch@@ t@@ bi@@ j br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-100	-0.06170723959803581	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé dichtbij brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-100	-0.0801 -0.0662 -0.3405 -0.0665 -0.0908 -0.0783 -0.0778 -0.0922 -0.0248 -0.0406 -0.0574 -0.0071 -0.0187 -0.0189 -0.0085 -0.0111 -0.0084 -0.0190 -0.0725 -0.0591 -0.0351 -0.0256 -0.0228 -0.0354 -0.0537 -0.0700 -0.0825 -0.1028 -0.0701 -0.0656 -0.0548 -0.1048 -0.0676 -0.0596 -0.0707
 A-100	29-0 29-1 29-2 29-3 29-4 21-5 19-6 21-7 9-8 19-9 15-10 11-11 15-12 10-13 20-14 29-15 3-16 29-17 30-18 20-19 29-20 29-21 19-22 19-23 29-24 29-25 29-26 21-27 30-28 21-29 17-30 29-31 30-32 29-33
 S-101	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ings ma@@ at@@ sch@@ app@@ i@@ j de on@@ der@@ ling@@ en u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-101	1.009	seconds
+W-101	1.092	seconds
 H-101	-0.09153222292661667	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ings ma@@ at@@ sch@@ app@@ i@@ j ri@@ j@@ n en a@@ ar u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-101	-0.09153222292661667	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekerings maatschappij rijn en aar u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-101	-0.1159 -0.0911 -0.1167 -0.0885 -0.0984 -0.0623 -0.0844 -0.1234 -0.0203 -0.0425 -0.0453 -0.1275 -0.0097 -0.0783 -0.0297 -0.0688 -0.0659 -0.1009 -0.0852 -0.1140 -0.0655 -0.0520 -0.8290 -0.0339 -0.0506 -0.0452 -0.0768 -0.0286 -0.0129 -0.0562 -0.1060 -0.0882 -0.0746 -0.0504 -0.0965 -0.0825 -0.0787 -0.0818
 A-101	31-0 31-1 31-2 31-3 31-4 31-5 21-6 19-7 7-8 31-9 31-10 31-11 4-12 15-13 29-14 6-15 29-16 29-17 31-18 31-19 31-20 31-21 4-22 31-23 4-24 31-25 4-26 31-27 4-28 31-29 32-30 31-31 21-32 2-33 31-34 31-35 31-36
 S-102	W@@ here is ab@@ n am@@ ro sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-102	1.089	seconds
+W-102	1.148	seconds
 H-102	-0.0781424343585968	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ab@@ n am@@ ro sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-102	-0.0781424343585968	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l abn amro schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-102	-0.0715 -0.0743 -0.1953 -0.0722 -0.0842 -0.0862 -0.0750 -0.1081 -0.0252 -0.0363 -0.0290 -0.0346 -0.0060 -0.1896 -0.0675 -0.1147 -0.1189 -0.0201 -0.0547 -0.0500 -0.0793 -0.0830 -0.0946 -0.1113 -0.0765 -0.0831 -0.0450 -0.1024 -0.0739 -0.0736 -0.0861
 A-102	25-0 25-1 25-2 25-3 25-4 17-5 26-6 3-7 7-8 8-9 22-10 12-11 10-12 22-13 20-14 26-15 15-16 20-17 23-18 22-19 25-20 22-21 15-22 26-23 26-24 17-25 18-26 25-27 22-28 26-29
 S-103	W@@ here is uni@@ v@@ é zu@@ i@@ d-@@ ne@@ der@@ land ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-103	0.928	seconds
+W-103	0.983	seconds
 H-103	-0.06659872084856033	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uni@@ v@@ é zu@@ i@@ d-@@ ne@@ der@@ land ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-103	-0.06659872084856033	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé zuid-nederland verzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-103	-0.0779 -0.0758 -0.1964 -0.0696 -0.0948 -0.1399 -0.1039 -0.0950 -0.0157 -0.0932 -0.0361 -0.0094 -0.0376 -0.0245 -0.0109 -0.0221 -0.0292 -0.0677 -0.0610 -0.0366 -0.0327 -0.0675 -0.0469 -0.0512 -0.0843 -0.0807 -0.0942 -0.0708 -0.0902 -0.0452 -0.0964 -0.0684 -0.0670 -0.0716
 A-103	28-0 28-1 28-2 28-3 28-4 18-5 16-6 26-7 9-8 23-9 15-10 12-11 15-12 28-13 28-14 28-15 29-16 29-17 16-18 26-19 28-20 28-21 29-22 28-23 28-24 16-25 29-26 16-27 20-28 2-29 28-30 16-31 29-32
 S-104	W@@ here is uni@@ v@@ é st@@ ad en land br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-104	1.034	seconds
+W-104	1.100	seconds
 H-104	-0.06998927891254425	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uni@@ v@@ é st@@ ad en land br@@ and@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-104	-0.06998927891254425	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l univé stad en land brandverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-104	-0.0966 -0.0819 -0.2160 -0.0882 -0.1048 -0.0619 -0.0775 -0.1097 -0.0397 -0.0477 -0.0499 -0.0071 -0.0275 -0.0521 -0.0142 -0.0178 -0.0399 -0.0886 -0.0715 -0.0474 -0.0580 -0.0315 -0.0317 -0.0687 -0.0804 -0.0937 -0.1096 -0.0754 -0.0695 -0.0724 -0.1175 -0.0753 -0.0755 -0.0804
 A-104	28-0 28-1 28-2 28-3 28-4 28-5 28-6 28-7 9-8 28-9 26-10 10-11 28-12 28-13 29-14 3-15 28-16 29-17 19-18 28-19 28-20 28-21 18-22 28-23 28-24 28-25 29-26 29-27 20-28 9-29 28-30 29-31 29-32
 S-105	W@@ here is sti@@ ch@@ t@@ sch@@ e on@@ der@@ ling@@ e br@@ and-@@ her@@ ver@@ ze@@ k@@ ering u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-105	0.945	seconds
+W-105	1.043	seconds
 H-105	-0.056746937334537506	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sti@@ ch@@ t@@ sch@@ e on@@ der@@ ling@@ e br@@ and-@@ her@@ ver@@ ze@@ k@@ ering u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-105	-0.056746937334537506	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l stichtsche onderlinge brand-herverzekering u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-105	-0.1112 -0.0829 -0.0502 -0.0704 -0.0940 -0.0891 -0.0727 -0.1078 -0.0423 -0.0100 -0.0236 -0.0265 -0.0354 -0.0301 -0.0378 -0.0337 -0.0553 -0.0115 -0.0270 -0.0181 -0.0630 -0.0998 -0.0098 -0.0469 -0.0232 -0.0616 -0.1124 -0.0693 -0.0816 -0.0560 -0.0623 -0.0664 -0.0648 -0.0826
 A-105	28-0 28-1 28-2 28-3 28-4 24-5 29-6 17-7 8-8 10-9 10-10 11-11 28-12 2-13 28-14 20-15 28-16 10-17 11-18 25-19 29-20 17-21 19-22 20-23 20-24 28-25 29-26 29-27 29-28 5-29 28-30 29-31 29-32
 S-106	W@@ here is ach@@ me@@ a re@@ insurance company n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-106	0.774	seconds
+W-106	0.861	seconds
 H-106	-0.0724467933177948	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ach@@ me@@ a re@@ insurance company n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-106	-0.0724467933177948	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea reinsurance company n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-106	-0.1119 -0.0969 -0.0652 -0.0880 -0.0993 -0.0545 -0.0802 -0.1305 -0.0060 -0.0188 -0.0415 -0.0599 -0.0295 -0.0306 -0.0416 -0.0790 -0.0943 -0.1075 -0.1147 -0.0871 -0.0692 -0.0572 -0.0671 -0.0834 -0.0809 -0.0887
 A-106	20-0 20-1 20-2 20-3 20-4 12-5 20-6 20-7 5-8 17-9 20-10 2-11 15-12 17-13 17-14 20-15 20-16 20-17 21-18 21-19 12-20 3-21 20-22 21-23 21-24
 S-107	W@@ here is sc@@ il@@ don n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-107	0.769	seconds
+W-107	0.857	seconds
 H-107	-0.07625912874937057	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sc@@ il@@ don n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-107	-0.07625912874937057	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l scildon n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-107	-0.1075 -0.0783 -0.1477 -0.0798 -0.0918 -0.0928 -0.0727 -0.1085 -0.0326 -0.0179 -0.0086 -0.0387 -0.0576 -0.0923 -0.0870 -0.1091 -0.0758 -0.0880 -0.0496 -0.0880 -0.0758 -0.0725 -0.0814
 A-107	17-0 17-1 17-2 17-3 17-4 18-5 18-6 15-7 10-8 17-9 12-10 14-11 17-12 17-13 17-14 18-15 18-16 18-17 4-18 17-19 18-20 18-21
 S-108	W@@ here is e.@@ o@@ .@@ c. on@@ der@@ ling@@ e sche@@ pen@@ ver@@ ze@@ k@@ ering u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-108	0.940	seconds
+W-108	1.000	seconds
 H-108	-0.059495262801647186	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l e.@@ o@@ .@@ c sep_dot on@@ der@@ ling@@ e sche@@ pen@@ ver@@ ze@@ k@@ ering u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-108	-0.059495262801647186	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l e.o.c sep_dot onderlinge schepenverzekering u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-108	-0.0945 -0.0823 -0.0356 -0.0667 -0.0909 -0.0807 -0.0678 -0.1109 -0.0342 -0.0123 -0.0400 -0.0173 -0.0720 -0.0416 -0.0756 -0.0540 -0.0778 -0.0146 -0.0186 -0.0449 -0.0917 -0.0067 -0.0342 -0.0290 -0.0555 -0.1020 -0.0775 -0.0924 -0.0503 -0.0568 -0.0695 -0.0788 -0.0866
 A-108	26-0 26-1 26-2 26-3 26-4 26-5 26-6 26-7 12-8 12-9 23-10 17-11 27-12 12-13 23-14 18-15 26-16 13-17 17-18 27-19 17-20 17-21 18-22 17-23 23-24 27-25 27-26 27-27 17-28 26-29 17-30 27-31
 S-109	W@@ here is on@@ v@@ z zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-109	0.881	seconds
+W-109	0.938	seconds
 H-109	-0.07065412402153015	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ v@@ z zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ ker@@ a@@ ar n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-109	-0.07065412402153015	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onvz ziektekostenverzekeraar n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-109	-0.0733 -0.0833 -0.0903 -0.0941 -0.0920 -0.0781 -0.0997 -0.1024 -0.1504 -0.0278 -0.0101 -0.0386 -0.0677 -0.0366 -0.0438 -0.0272 -0.0422 -0.0755 -0.0813 -0.0696 -0.0379 -0.0378 -0.0480 -0.0695 -0.0646 -0.0940 -0.1215 -0.0828 -0.0751 -0.0494 -0.0908 -0.0786 -0.0818 -0.0864
 A-109	28-0 28-1 28-2 28-3 28-4 20-5 28-6 28-7 6-8 28-9 12-10 6-11 14-12 14-13 16-14 28-15 28-16 29-17 19-18 26-19 28-20 28-21 25-22 28-23 28-24 28-25 20-26 28-27 20-28 16-29 28-30 28-31 28-32
 S-110	W@@ here is men@@ z@@ is n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-110	0.728	seconds
+W-110	0.792	seconds
 H-110	-0.06151454895734787	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l men@@ z@@ is n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-110	-0.06151454895734787	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l menzis n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-110	-0.0604 -0.0554 -0.1652 -0.0598 -0.0753 -0.0611 -0.0603 -0.0812 -0.0089 -0.0090 -0.0037 -0.0817 -0.0478 -0.0385 -0.0656 -0.0923 -0.0673 -0.0636 -0.0449 -0.0778 -0.0642 -0.0629 -0.0681
 A-110	17-0 17-1 17-2 15-3 15-4 17-5 15-6 17-7 10-8 11-9 17-10 12-11 17-12 17-13 17-14 18-15 18-16 18-17 16-18 17-19 18-20 18-21
 S-111	W@@ here is on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j centr@@ ale z@@ org@@ ver@@ ze@@ ker@@ a@@ ars gro@@ ep <unk> <unk> what is the regi@@ <unk> number ?
-W-111	1.097	seconds
+W-111	1.189	seconds
 H-111	-0.07783820480108261	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j centr@@ ale z@@ org@@ ver@@ ze@@ ker@@ a@@ ars gro@@ ep quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-111	-0.07783820480108261	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centrale zorgverzekeraars groep quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-111	-0.0954 -0.0895 -0.1456 -0.0864 -0.0834 -0.1789 -0.0941 -0.1161 -0.1981 -0.0777 -0.0794 -0.0985 -0.0788 -0.0457 -0.0526 -0.0238 -0.1359 -0.0921 -0.0920 -0.0949 -0.0749 -0.0462 -0.0014 -0.0201 -0.0443 -0.0121 -0.1034 -0.0883 -0.0840 -0.0557 -0.0215 -0.0287 -0.0251 -0.0942 -0.0839 -0.0895 -0.0501 -0.0907 -0.0798 -0.0652 -0.0733
 A-111	35-0 35-1 35-2 35-3 35-4 16-5 36-6 16-7 7-8 35-9 35-10 35-11 10-12 25-13 25-14 25-15 25-16 25-17 25-18 25-19 35-20 35-21 7-22 23-23 16-24 35-25 36-26 15-27 35-28 27-29 7-30 25-31 20-32 21-33 36-34 16-35 1-36 35-37 36-38 21-39
 S-112	W@@ here is nation@@ al@@ e-@@ ne@@ der@@ land@@ en le@@ ven@@ s@@ ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-112	1.264	seconds
+W-112	1.374	seconds
 H-112	-0.0680868849158287	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nation@@ al@@ e-@@ ne@@ der@@ land@@ en le@@ ven@@ s@@ ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-112	-0.0680868849158287	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nationale-nederlanden levensverzekering maatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-112	-0.0956 -0.0928 -0.0508 -0.0787 -0.0868 -0.1085 -0.0870 -0.1112 -0.0038 -0.0119 -0.0216 -0.0120 -0.0514 -0.0158 -0.0768 -0.0787 -0.0474 -0.0570 -0.0978 -0.0885 -0.0257 -0.0497 -0.0666 -0.0962 -0.0738 -0.0765 -0.0653 -0.0535 -0.0517 -0.0776 -0.0904 -0.1149 -0.1034 -0.0785 -0.0869 -0.0448 -0.0618 -0.0720 -0.0784 -0.0817
 A-112	34-0 34-1 34-2 32-3 32-4 26-5 18-6 18-7 5-8 10-9 35-10 11-11 34-12 35-13 35-14 10-15 15-16 22-17 35-18 21-19 34-20 21-21 22-22 21-23 21-24 21-25 35-26 21-27 31-28 21-29 21-30 21-31 21-32 22-33 26-34 16-35 34-36 22-37 35-38
 S-113	W@@ here is o@@ om sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-113	1.024	seconds
+W-113	1.156	seconds
 H-113	-0.08119455724954605	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l o@@ om sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-113	-0.08119455724954605	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l oom schadeverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-113	-0.1057 -0.0842 -0.0714 -0.0899 -0.0957 -0.0846 -0.0850 -0.1149 -0.0029 -0.0576 -0.0103 -0.0776 -0.0544 -0.1258 -0.1735 -0.0311 -0.0709 -0.0547 -0.0814 -0.1035 -0.1066 -0.1070 -0.0808 -0.0938 -0.0502 -0.0822 -0.0796 -0.0760 -0.1036
 A-113	23-0 23-1 23-2 23-3 23-4 15-5 23-6 21-7 5-8 10-9 18-10 18-11 1-12 24-13 23-14 18-15 21-16 20-17 23-18 21-19 21-20 24-21 24-22 15-23 17-24 23-25 24-26 24-27
 S-114	W@@ here is ans@@ v@@ ar ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-114	0.822	seconds
+W-114	0.957	seconds
 H-114	-0.08146005123853683	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ans@@ v@@ ar ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-114	-0.08146005123853683	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ansvar verzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-114	-0.0773 -0.0706 -0.2630 -0.0775 -0.0836 -0.1271 -0.0917 -0.1074 -0.0192 -0.0772 -0.0153 -0.0757 -0.0765 -0.0589 -0.1203 -0.0125 -0.0622 -0.0787 -0.1021 -0.0801 -0.0463 -0.0326 -0.0776 -0.0817 -0.1034 -0.1184 -0.0795 -0.0781 -0.0503 -0.1124 -0.0766 -0.0653 -0.0890
 A-114	27-0 27-1 27-2 27-3 27-4 19-5 28-6 27-7 10-8 27-9 17-10 24-11 27-12 25-13 27-14 24-15 25-16 25-17 24-18 27-19 24-20 17-21 27-22 27-23 17-24 19-25 28-26 19-27 15-28 27-29 28-30 28-31
 S-115	W@@ here is ns insurance n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-115	0.596	seconds
+W-115	0.688	seconds
 H-115	-0.06862461566925049	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ns insurance n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-115	-0.06862461566925049	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ns insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-115	-0.0849 -0.0704 -0.1468 -0.0750 -0.0850 -0.0463 -0.0602 -0.1012 -0.0078 -0.0158 -0.0275 -0.0529 -0.0757 -0.0773 -0.1051 -0.0739 -0.0575 -0.0505 -0.0737 -0.0791 -0.0622 -0.0808
 A-115	16-0 16-1 16-2 16-3 16-4 16-5 17-6 16-7 3-8 3-9 13-10 16-11 16-12 16-13 17-14 17-15 17-16 16-17 16-18 17-19 17-20
 S-116	W@@ here is inter@@ pol@@ is z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-116	0.735	seconds
+W-116	0.836	seconds
 H-116	-0.07904288172721863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l inter@@ pol@@ is z@@ org@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-116	-0.07904288172721863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l interpolis zorgverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-116	-0.0842 -0.0761 -0.3207 -0.0648 -0.0801 -0.1130 -0.0769 -0.0972 -0.0352 -0.0181 -0.0243 -0.0158 -0.0388 -0.1262 -0.1032 -0.0689 -0.0346 -0.0677 -0.0498 -0.0653 -0.0779 -0.0863 -0.0966 -0.0721 -0.0868 -0.0564 -0.1176 -0.0675 -0.0718 -0.0772
 A-116	24-0 24-1 24-2 22-3 22-4 16-5 22-6 22-7 7-8 4-9 11-10 1-11 25-12 25-13 22-14 22-15 22-16 22-17 19-18 24-19 22-20 22-21 25-22 25-23 16-24 4-25 24-26 25-27 25-28
 S-117	W@@ here is g@@ ou@@ d@@ se sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-117	0.815	seconds
+W-117	0.892	seconds
 H-117	-0.05840891972184181	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l g@@ ou@@ d@@ se sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-117	-0.05840891972184181	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l goudse schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-117	-0.0690 -0.0706 -0.1820 -0.0652 -0.0713 -0.0713 -0.0646 -0.0824 -0.0412 -0.0055 -0.0263 -0.0210 -0.0046 -0.0557 -0.0232 -0.0703 -0.0819 -0.0330 -0.0317 -0.0304 -0.0373 -0.0495 -0.0681 -0.0682 -0.0990 -0.0666 -0.0761 -0.0385 -0.0741 -0.0609 -0.0635 -0.0660
 A-117	26-0 26-1 26-2 24-3 24-4 18-5 14-6 24-7 6-8 26-9 24-10 24-11 24-12 24-13 13-14 24-15 14-16 24-17 24-18 24-19 14-20 26-21 14-22 14-23 27-24 27-25 18-26 2-27 26-28 14-29 27-30
 S-118	W@@ here is as@@ sur@@ ant europe insurance n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-118	0.657	seconds
+W-118	0.715	seconds
 H-118	-0.08782072365283966	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l as@@ sur@@ ant europe insurance n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-118	-0.08782072365283966	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l assurant europe insurance n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-118	-0.0923 -0.0762 -0.0639 -0.0801 -0.0781 -0.0459 -0.0652 -0.0956 -0.0237 -0.0069 -0.0157 -0.0078 -0.7607 -0.0328 -0.0482 -0.0562 -0.0768 -0.1049 -0.0745 -0.0619 -0.0588 -0.0531 -0.0748 -0.0662 -0.0753
 A-118	19-0 19-1 19-2 19-3 19-4 19-5 19-6 19-7 5-8 15-9 0-10 3-11 19-12 16-13 19-14 19-15 19-16 20-17 20-18 20-19 1-20 19-21 20-22 20-23
 S-119	W@@ here is ach@@ me@@ a sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-119	0.790	seconds
+W-119	0.870	seconds
 H-119	-0.08982086181640625	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ach@@ me@@ a sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-119	-0.08982086181640625	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l achmea schadeverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-119	-0.0835 -0.0976 -0.3670 -0.0861 -0.0973 -0.0664 -0.0804 -0.1220 -0.0068 -0.0258 -0.0509 -0.0053 -0.0909 -0.0307 -0.1163 -0.1108 -0.0740 -0.0876 -0.1155 -0.0497 -0.0739 -0.1156 -0.1023 -0.1219 -0.0894 -0.0806 -0.0537 -0.1232 -0.0851 -0.0863 -0.0875
 A-119	25-0 25-1 25-2 25-3 25-4 17-5 13-6 23-7 5-8 25-9 13-10 5-11 20-12 1-13 25-14 13-15 23-16 23-17 22-18 22-19 25-20 13-21 13-22 26-23 26-24 17-25 3-26 25-27 26-28 26-29
 S-120	W@@ here is as@@ r basis zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-120	0.873	seconds
+W-120	0.963	seconds
 H-120	-0.07240229099988937	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l as@@ r basis zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-120	-0.07240229099988937	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr basis ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-120	-0.0689 -0.0720 -0.0669 -0.0702 -0.0769 -0.1077 -0.0799 -0.0884 -0.0495 -0.0132 -0.3744 -0.0195 -0.0794 -0.0243 -0.0485 -0.0292 -0.0456 -0.0785 -0.0672 -0.0373 -0.0340 -0.0757 -0.0305 -0.0522 -0.0741 -0.0843 -0.1103 -0.0747 -0.0817 -0.0545 -0.0685 -0.0717 -0.0742 -0.0778
 A-120	28-0 28-1 28-2 28-3 28-4 20-5 16-6 28-7 10-8 15-9 5-10 1-11 14-12 15-13 15-14 26-15 14-16 29-17 19-18 26-19 15-20 28-21 29-22 28-23 28-24 16-25 29-26 29-27 20-28 1-29 28-30 29-31 29-32
 S-121	W@@ here is e@@ er@@ ste fri@@ es@@ ch@@ e on@@ der@@ ling@@ e pa@@ ar@@ den ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-121	1.172	seconds
+W-121	1.288	seconds
 H-121	-0.0642724484205246	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l e@@ er@@ ste fri@@ es@@ ch@@ e on@@ der@@ ling@@ e pa@@ ar@@ den ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-121	-0.0642724484205246	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eerste friesche onderlinge paarden verzekeringsmaatschappij u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-121	-0.0908 -0.0677 -0.2166 -0.0616 -0.0877 -0.1551 -0.0780 -0.0866 -0.0059 -0.0275 -0.0502 -0.0186 -0.0339 -0.0477 -0.0458 -0.0775 -0.0603 -0.0629 -0.0828 -0.0125 -0.0171 -0.0393 -0.0247 -0.0701 -0.0625 -0.0459 -0.0239 -0.0679 -0.0978 -0.0944 -0.0602 -0.0417 -0.0343 -0.0492 -0.1047 -0.0732 -0.0769 -0.0606 -0.0839 -0.0695 -0.0579 -0.0739
 A-121	36-0 36-1 36-2 36-3 36-4 26-5 22-6 22-7 7-8 35-9 2-10 2-11 27-12 24-13 25-14 25-15 36-16 24-17 25-18 36-19 20-20 32-21 35-22 25-23 34-24 22-25 33-26 25-27 25-28 25-29 36-30 36-31 21-32 36-33 20-34 37-35 22-36 35-37 36-38 27-39 37-40
 S-122	W@@ here is n@@ .@@ v@@ . sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j ma@@ as l@@ loy@@ d <unk> <unk> what is the regi@@ <unk> number ?
-W-122	0.994	seconds
+W-122	1.105	seconds
 H-122	-0.06714542955160141	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j ma@@ as l@@ loy@@ d quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-122	-0.06714542955160141	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot schadeverzekeringsmaatschappij maas lloyd quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-122	-0.0701 -0.0679 -0.1696 -0.0717 -0.0872 -0.1180 -0.0759 -0.0969 -0.0556 -0.0643 -0.0407 -0.0616 -0.0942 -0.1057 -0.0392 -0.0628 -0.0758 -0.0251 -0.1287 -0.0441 -0.0738 -0.0846 -0.0859 -0.0559 -0.0363 -0.0247 -0.0088 -0.0241 -0.0214 -0.0424 -0.0704 -0.0707 -0.0788 -0.0486 -0.0851 -0.0676 -0.0538 -0.0635
 A-122	32-0 32-1 32-2 32-3 32-4 32-5 32-6 32-7 1-8 32-9 17-10 32-11 14-12 32-13 32-14 32-15 32-16 32-17 32-18 32-19 32-20 32-21 32-22 32-23 32-24 32-25 32-26 32-27 32-28 32-29 33-30 32-31 32-32 21-33 32-34 32-35 32-36
 S-123	W@@ here is st@@ ad hol@@ land z@@ org@@ ver@@ ze@@ ker@@ a@@ ar on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-123	1.123	seconds
+W-123	1.340	seconds
 H-123	-0.07257277518510818	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l st@@ ad hol@@ land z@@ org@@ ver@@ ze@@ ker@@ a@@ ar on@@ der@@ ling@@ e wa@@ ar@@ b@@ org@@ ma@@ at@@ sch@@ app@@ i@@ j u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-123	-0.07257277518510818	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l stad holland zorgverzekeraar onderlinge waarborgmaatschappij u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-123	-0.1000 -0.0782 -0.1745 -0.0789 -0.0901 -0.0663 -0.0758 -0.1091 -0.0405 -0.0248 -0.0163 -0.0535 -0.0141 -0.0202 -0.1217 -0.0720 -0.0709 -0.0270 -0.0396 -0.0653 -0.0583 -0.0771 -0.1309 -0.0281 -0.0413 -0.1056 -0.0220 -0.0807 -0.1030 -0.1056 -0.1091 -0.0744 -0.0566 -0.0459 -0.0713 -0.1189 -0.0761 -0.0689 -0.0757 -0.0984 -0.0757 -0.0744 -0.0838
 A-123	37-0 37-1 37-2 37-3 37-4 37-5 38-6 37-7 7-8 37-9 29-10 19-11 19-12 29-13 38-14 37-15 37-16 19-17 26-18 37-19 37-20 37-21 37-22 37-23 19-24 19-25 29-26 29-27 26-28 37-29 26-30 37-31 37-32 7-33 37-34 38-35 38-36 26-37 6-38 37-39 38-40 38-41
 S-124	W@@ here is nation@@ al@@ e-@@ ne@@ der@@ land@@ en sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-124	1.048	seconds
+W-124	1.296	seconds
 H-124	-0.06389404088258743	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nation@@ al@@ e-@@ ne@@ der@@ land@@ en sc@@ ha@@ de@@ ver@@ ze@@ k@@ ering ma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-124	-0.06389404088258743	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nationale-nederlanden schadeverzekering maatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-124	-0.0879 -0.0901 -0.0782 -0.0726 -0.0843 -0.1097 -0.0803 -0.1042 -0.0040 -0.0120 -0.0232 -0.0092 -0.0343 -0.0142 -0.0523 -0.0193 -0.0827 -0.0424 -0.0870 -0.0801 -0.0258 -0.0450 -0.0610 -0.0984 -0.0759 -0.0779 -0.0620 -0.0467 -0.0350 -0.0681 -0.0885 -0.1044 -0.1001 -0.0776 -0.0852 -0.0428 -0.0640 -0.0715 -0.0768 -0.0810
 A-124	34-0 34-1 34-2 34-3 34-4 26-5 18-6 18-7 10-8 9-9 3-10 9-11 34-12 35-13 35-14 5-15 21-16 21-17 35-18 15-19 34-20 21-21 19-22 21-23 21-24 21-25 34-26 21-27 15-28 21-29 21-30 21-31 35-32 22-33 26-34 4-35 34-36 22-37 35-38
 S-125	W@@ here is uni@@ le@@ ver insur@@ ances n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-125	0.776	seconds
+W-125	0.911	seconds
 H-125	-0.06844859570264816	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uni@@ le@@ ver insur@@ ances n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-125	-0.06844859570264816	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l unilever insurances n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-125	-0.0849 -0.0738 -0.0875 -0.0737 -0.0826 -0.1076 -0.0935 -0.1074 -0.0089 -0.0027 -0.0147 -0.0197 -0.0387 -0.0584 -0.0626 -0.1323 -0.0944 -0.0972 -0.0718 -0.0772 -0.0486 -0.0723 -0.0699 -0.0613 -0.0695
 A-125	19-0 19-1 19-2 19-3 19-4 19-5 20-6 19-7 5-8 5-9 14-10 5-11 19-12 20-13 19-14 19-15 19-16 20-17 20-18 19-19 2-20 19-21 19-22 19-23
 S-126	W@@ here is n@@ .@@ v@@ . le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing-@@ ma@@ at@@ sch@@ app@@ i@@ j de hoo@@ p <unk> <unk> what is the regi@@ <unk> number ?
-W-126	1.033	seconds
+W-126	1.201	seconds
 H-126	-0.05457884445786476	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot le@@ ven@@ s@@ ver@@ ze@@ ker@@ ing-@@ ma@@ at@@ sch@@ app@@ i@@ j de hoo@@ p quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-126	-0.05457884445786476	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot levensverzekering-maatschappij de hoop quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-126	-0.0759 -0.0615 -0.0807 -0.0725 -0.0756 -0.0616 -0.0647 -0.0977 -0.0268 -0.0620 -0.0339 -0.0622 -0.0061 -0.0259 -0.0255 -0.0572 -0.0750 -0.0318 -0.0134 -0.0504 -0.0786 -0.0502 -0.0701 -0.0392 -0.0351 -0.0893 -0.0219 -0.0206 -0.0748 -0.0712 -0.0598 -0.0388 -0.0724 -0.0658 -0.0564 -0.0598
 A-126	30-0 30-1 30-2 30-3 30-4 30-5 15-6 30-7 2-8 30-9 17-10 31-11 2-12 17-13 30-14 31-15 30-16 28-17 30-18 30-19 30-20 30-21 30-22 30-23 30-24 30-25 30-26 31-27 31-28 31-29 15-30 2-31 30-32 31-33 30-34
 S-127	W@@ here is nn re n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-127	0.669	seconds
+W-127	0.783	seconds
 H-127	-0.07309304922819138	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nn re n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-127	-0.07309304922819138	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nn re n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-127	-0.0748 -0.0676 -0.2284 -0.0680 -0.0926 -0.0690 -0.0714 -0.0887 -0.0082 -0.0124 -0.0368 -0.0500 -0.0583 -0.0777 -0.1103 -0.0746 -0.0630 -0.0533 -0.0825 -0.0766 -0.0664 -0.0773
 A-127	16-0 16-1 16-2 16-3 16-4 16-5 16-6 16-7 9-8 12-9 13-10 16-11 16-12 16-13 17-14 16-15 16-16 15-17 16-18 16-19 16-20
 S-128	W@@ here is blue square re n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-128	0.714	seconds
+W-128	0.816	seconds
 H-128	-0.0710560530424118	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l blue square re n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-128	-0.0710560530424118	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l blue square re n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-128	-0.0814 -0.0691 -0.2020 -0.0698 -0.0921 -0.0700 -0.0743 -0.0962 -0.0215 -0.0269 -0.0058 -0.0345 -0.0441 -0.0619 -0.0762 -0.0993 -0.0778 -0.0688 -0.0544 -0.0858 -0.0806 -0.0702 -0.0716
 A-128	17-0 17-1 17-2 17-3 17-4 17-5 17-6 17-7 5-8 3-9 3-10 14-11 17-12 17-13 17-14 18-15 17-16 17-17 16-18 17-19 17-20 17-21
 S-129	W@@ here is bo@@ s fruit a@@ ar@@ d@@ app@@ el@@ en on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ en b@@ fa@@ o u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-129	1.101	seconds
+W-129	1.217	seconds
 H-129	-0.057996172457933426	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bo@@ s fruit a@@ ar@@ d@@ app@@ el@@ en on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ en b@@ fa@@ o u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-129	-0.057996172457933426	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bos fruit aardappelen onderlinge verzekeringen bfao u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-129	-0.1159 -0.0786 -0.0539 -0.0882 -0.0884 -0.0701 -0.0790 -0.1054 -0.0069 -0.0270 -0.0180 -0.0142 -0.0098 -0.0488 -0.0264 -0.0375 -0.0561 -0.0722 -0.0497 -0.0873 -0.0756 -0.0382 -0.0734 -0.0431 -0.0906 -0.0528 -0.0246 -0.0151 -0.0124 -0.0433 -0.0718 -0.1170 -0.0721 -0.0763 -0.0497 -0.0594 -0.0695 -0.0685 -0.0750
 A-129	33-0 33-1 33-2 31-3 31-4 18-5 34-6 13-7 7-8 34-9 32-10 7-11 32-12 31-13 15-14 33-15 30-16 7-17 33-18 33-19 33-20 34-21 31-22 31-23 31-24 31-25 7-26 34-27 33-28 7-29 33-30 34-31 30-32 20-33 1-34 33-35 30-36 34-37
 S-130	W@@ here is n@@ .@@ v@@ . sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing-@@ ma@@ at@@ sch@@ app@@ i@@ j bo@@ ve@@ mi@@ j <unk> <unk> what is the regi@@ <unk> number ?
-W-130	1.044	seconds
+W-130	1.204	seconds
 H-130	-0.06263426691293716	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n@@ .@@ v sep_dot sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing-@@ ma@@ at@@ sch@@ app@@ i@@ j bo@@ ve@@ mi@@ j quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-130	-0.06263426691293716	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l n.v sep_dot schadeverzekering-maatschappij bovemij quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-130	-0.0810 -0.0752 -0.0940 -0.0830 -0.0922 -0.0726 -0.0652 -0.1130 -0.0171 -0.0693 -0.0332 -0.0664 -0.0169 -0.0740 -0.0427 -0.0889 -0.1005 -0.0399 -0.0233 -0.0446 -0.1165 -0.0674 -0.0954 -0.0544 -0.0482 -0.0193 -0.0111 -0.0295 -0.0393 -0.0744 -0.0758 -0.0668 -0.0457 -0.0794 -0.0700 -0.0634 -0.0680
 A-130	31-0 31-1 31-2 31-3 31-4 19-5 15-6 15-7 8-8 31-9 17-10 32-11 20-12 14-13 21-14 32-15 18-16 29-17 21-18 31-19 18-20 29-21 31-22 31-23 31-24 21-25 14-26 31-27 31-28 32-29 32-30 32-31 13-32 31-33 32-34 31-35
 S-131	W@@ here is on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j water@@ land en om@@ stre@@ ken u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-131	0.961	seconds
+W-131	1.124	seconds
 H-131	-0.06156834959983826	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l on@@ der@@ ling@@ e ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j water@@ land en om@@ stre@@ ken u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-131	-0.06156834959983826	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij waterland en omstreken u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-131	-0.0831 -0.0967 -0.1076 -0.0794 -0.0966 -0.0690 -0.0833 -0.1146 -0.0304 -0.0465 -0.0532 -0.0906 -0.0122 -0.0650 -0.0358 -0.0290 -0.0707 -0.0584 -0.0837 -0.1045 -0.0656 -0.0441 -0.0281 -0.0233 -0.0268 -0.0073 -0.0149 -0.0165 -0.0344 -0.0556 -0.1037 -0.0788 -0.0749 -0.0466 -0.0829 -0.0752 -0.0758 -0.0745
 A-131	32-0 32-1 32-2 32-3 32-4 21-5 21-6 32-7 7-8 32-9 32-10 32-11 7-12 32-13 30-14 32-15 32-16 30-17 32-18 30-19 32-20 32-21 1-22 21-23 32-24 32-25 10-26 10-27 32-28 32-29 33-30 32-31 19-32 18-33 32-34 32-35 33-36
 S-132	W@@ here is o@@ h@@ ra zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-132	1.166	seconds
+W-132	1.343	seconds
 H-132	-0.06568172574043274	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l o@@ h@@ ra zi@@ e@@ k@@ te@@ kos@@ ten@@ ver@@ ze@@ ker@@ ing@@ en n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-132	-0.06568172574043274	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ohra ziektekostenverzekeringen n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-132	-0.0867 -0.0741 -0.0542 -0.0825 -0.0945 -0.0970 -0.0901 -0.0999 -0.0221 -0.0409 -0.0279 -0.0085 -0.0334 -0.0221 -0.0265 -0.0218 -0.0332 -0.0796 -0.0842 -0.0497 -0.0598 -0.1209 -0.0439 -0.0567 -0.0816 -0.0933 -0.1056 -0.0783 -0.0906 -0.0539 -0.0747 -0.0743 -0.0839 -0.0866
 A-132	28-0 28-1 28-2 28-3 28-4 18-5 16-6 28-7 6-8 6-9 28-10 10-11 14-12 14-13 15-14 28-15 28-16 29-17 18-18 15-19 28-20 25-21 25-22 28-23 28-24 16-25 29-26 29-27 20-28 4-29 28-30 29-31 28-32
 S-133	W@@ here is mu@@ tual insurance association mun@@ is u.@@ a. <unk> <unk> what is the regi@@ <unk> number ?
-W-133	0.593	seconds
+W-133	0.664	seconds
 H-133	-0.05405566841363907	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mu@@ tual insurance association mun@@ is u.@@ a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-133	-0.05405566841363907	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mutual insurance association munis u.a. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-133	-0.0764 -0.0679 -0.0686 -0.0733 -0.0895 -0.0526 -0.0588 -0.1031 -0.0321 -0.0160 -0.0180 -0.0081 -0.0171 -0.0044 -0.0077 -0.0274 -0.1061 -0.0718 -0.0710 -0.0570 -0.0632 -0.0722 -0.0644 -0.0706
 A-133	18-0 18-1 18-2 18-3 18-4 18-5 18-6 18-7 7-8 4-9 13-10 10-11 4-12 3-13 10-14 18-15 19-16 15-17 19-18 17-19 18-20 15-21 19-22
 S-134	W@@ here is as@@ r le@@ ven@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-134	0.811	seconds
+W-134	0.884	seconds
 H-134	-0.07045261561870575	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l as@@ r le@@ ven@@ s@@ ver@@ ze@@ k@@ ering n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-134	-0.07045261561870575	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l asr levensverzekering n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-134	-0.0926 -0.0826 -0.0423 -0.0902 -0.0813 -0.0732 -0.0758 -0.1109 -0.0500 -0.0255 -0.0024 -0.0247 -0.0243 -0.1001 -0.1064 -0.0223 -0.0582 -0.0488 -0.0819 -0.0978 -0.1081 -0.1167 -0.0796 -0.0820 -0.0604 -0.0625 -0.0767 -0.0763 -0.0896
 A-134	23-0 23-1 23-2 23-3 23-4 15-5 23-6 23-7 10-8 24-9 6-10 18-11 18-12 24-13 23-14 18-15 21-16 20-17 23-18 23-19 23-20 24-21 24-22 15-23 1-24 23-25 24-26 24-27
 S-135	W@@ here is k@@ la@@ ver@@ bla@@ d sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-135	0.992	seconds
+W-135	1.087	seconds
 H-135	-0.08674433082342148	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l k@@ la@@ ver@@ bla@@ d sc@@ ha@@ de@@ ver@@ ze@@ ker@@ ing@@ sma@@ at@@ sch@@ app@@ i@@ j n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-135	-0.08674433082342148	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l klaverblad schadeverzekeringsmaatschappij n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-135	-0.0822 -0.0875 -0.1084 -0.0852 -0.0912 -0.1090 -0.1003 -0.1106 -0.0083 -0.0174 -0.0599 -0.0219 -0.0433 -0.1166 -0.2383 -0.0759 -0.0831 -0.0984 -0.1286 -0.0625 -0.1071 -0.0937 -0.1123 -0.1146 -0.0867 -0.0663 -0.0436 -0.0819 -0.0899 -0.0992 -0.1174 -0.0796 -0.0899 -0.0684 -0.0886 -0.0805 -0.0664 -0.0815
 A-135	32-0 32-1 32-2 32-3 30-4 24-5 16-6 16-7 6-8 27-9 32-10 27-11 29-12 29-13 19-14 19-15 32-16 19-17 30-18 19-19 32-20 19-21 30-22 30-23 32-24 32-25 29-26 32-27 32-28 19-29 19-30 32-31 24-32 16-33 32-34 32-35 32-36
 S-136	W@@ here is re@@ is@@ - en re@@ ch@@ t@@ sh@@ ul@@ p n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-136	0.965	seconds
+W-136	1.061	seconds
 H-136	-0.06425543874502182	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l re@@ is@@ - en re@@ ch@@ t@@ sh@@ ul@@ p n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-136	-0.06425543874502182	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l reis- en rechtshulp n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-136	-0.1123 -0.0897 -0.1132 -0.0878 -0.0943 -0.0805 -0.0716 -0.1124 -0.0120 -0.0169 -0.0171 -0.0647 -0.0080 -0.0234 -0.0241 -0.0243 -0.0206 -0.0293 -0.0279 -0.0742 -0.0811 -0.1041 -0.1088 -0.0786 -0.0763 -0.0612 -0.0833 -0.0735 -0.0775 -0.0791
 A-136	24-0 24-1 24-2 24-3 24-4 16-5 24-6 24-7 11-8 24-9 9-10 24-11 9-12 24-13 2-14 24-15 24-16 23-17 21-18 24-19 24-20 20-21 25-22 25-23 16-24 17-25 24-26 25-27 24-28
 S-137	W@@ here is u@@ k p &amp; i club n@@ .@@ v@@ . <unk> <unk> what is the regi@@ <unk> number ?
-W-137	0.752	seconds
+W-137	0.829	seconds
 H-137	-0.08168049156665802	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l u@@ k p@@ &@@ i club n@@ .@@ v@@ . quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-137	-0.08168049156665802	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uk p&i club n.v. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-137	-0.0875 -0.0898 -0.1040 -0.0835 -0.1190 -0.1412 -0.1007 -0.1167 -0.0018 -0.0353 -0.0472 -0.0695 -0.0351 -0.0988 -0.0263 -0.0754 -0.1168 -0.0898 -0.1185 -0.0814 -0.0888 -0.0650 -0.0847 -0.0818 -0.0733 -0.0919
 A-137	20-0 20-1 20-2 20-3 20-4 20-5 21-6 20-7 7-8 3-9 3-10 15-11 17-12 14-13 17-14 20-15 20-16 20-17 21-18 21-19 20-20 3-21 20-22 17-23 21-24
-2021-05-06 18:15:37 | INFO | fairseq_cli.interactive | Total time: 126.005 seconds; translation time: 124.420
+2021-05-07 15:42:06 | INFO | fairseq_cli.interactive | Total time: 136.911 seconds; translation time: 135.183

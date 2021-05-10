@@ -1,835 +1,835 @@
-2021-05-06 18:13:13 | INFO | fairseq_cli.interactive | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_10752-align/checkpoint.best_bleu_74.11.pt', 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_10752-align/out_10752'}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_algorithm': 'LocalSGD', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'distributed_num_procs': 0}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 1, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0}, 'optimization': {'_name': None, 'max_epoch': 0, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.25], 'stop_min_lr': -1.0, 'use_bmuf': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints', 'restore_file': 'checkpoint_last.pt', 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-10752/alignment.nl-ql.txt', 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': 'hard', 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 1, 'input': '-'}, 'model': None, 'task': {'_name': 'translation', 'data': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-10752', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': True}, 'optimizer': None, 'lr_scheduler': {'_name': 'fixed', 'force_anneal': None, 'lr_shrink': 0.1, 'warmup_updates': 0, 'lr': [0.25]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': {'_name': 'subword_nmt', 'bpe_codes': '/home/ph541404/nqm/data/eiopa/5_model_input/10752-bpe.codes', 'bpe_separator': '@@'}, 'tokenizer': None}
-2021-05-06 18:13:13 | INFO | fairseq.tasks.translation | [nl] dictionary: 53331 types
-2021-05-06 18:13:13 | INFO | fairseq.tasks.translation | [ql] dictionary: 28 types
-2021-05-06 18:13:13 | INFO | fairseq_cli.interactive | loading model(s) from /home/ph541404/nqm/models/transformer_iwslt_de_en_10752-align/checkpoint.best_bleu_74.11.pt
-2021-05-06 18:13:15 | INFO | fairseq_cli.interactive | NOTE: hypothesis and token scores are output in base 2
-2021-05-06 18:13:15 | INFO | fairseq_cli.interactive | Type the input sentence and press return:
+2021-05-07 15:39:17 | INFO | fairseq_cli.interactive | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_10752-align/checkpoint.best_bleu_74.11.pt', 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': '/home/ph541404/nqm/models/transformer_iwslt_de_en_10752-align/out_10752'}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_algorithm': 'LocalSGD', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'distributed_num_procs': 0}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 1, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0}, 'optimization': {'_name': None, 'max_epoch': 0, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.25], 'stop_min_lr': -1.0, 'use_bmuf': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints', 'restore_file': 'checkpoint_last.pt', 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-10752/alignment.nl-ql.txt', 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': 'hard', 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 1, 'input': '-'}, 'model': None, 'task': {'_name': 'translation', 'data': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-10752', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': True}, 'optimizer': None, 'lr_scheduler': {'_name': 'fixed', 'force_anneal': None, 'lr_shrink': 0.1, 'warmup_updates': 0, 'lr': [0.25]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': {'_name': 'subword_nmt', 'bpe_codes': '/home/ph541404/nqm/data/eiopa/5_model_input/10752-bpe.codes', 'bpe_separator': '@@'}, 'tokenizer': None}
+2021-05-07 15:39:17 | INFO | fairseq.tasks.translation | [nl] dictionary: 53331 types
+2021-05-07 15:39:17 | INFO | fairseq.tasks.translation | [ql] dictionary: 28 types
+2021-05-07 15:39:17 | INFO | fairseq_cli.interactive | loading model(s) from /home/ph541404/nqm/models/transformer_iwslt_de_en_10752-align/checkpoint.best_bleu_74.11.pt
+2021-05-07 15:39:19 | INFO | fairseq_cli.interactive | NOTE: hypothesis and token scores are output in base 2
+2021-05-07 15:39:19 | INFO | fairseq_cli.interactive | Type the input sentence and press return:
 S-0	<unk> here is <unk> <unk> ant europe insurance <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-0	0.804	seconds
+W-0	0.869	seconds
 H-0	-0.1484345644712448	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-0	-0.1484345644712448	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-0	-0.0395 -0.0565 -0.0714 -0.0530 -0.0607 -0.0448 -0.0534 -0.0752 -0.0662 -0.0684 -0.0700 -0.0726 -0.0748 -0.0776 -0.0834 -0.0961 -0.2060 -0.2374 -0.1727 -0.1769 -0.2359 -0.4400 -1.4640 -0.0586 -0.0561 -0.0586 -0.0711 -0.0578 -0.0810 -0.0734
 A-0	5-0 13-1 0-2 19-3 1-4 3-5 6-6 19-7 20-8 20-9 20-10 20-11 20-12 11-13 11-14 11-15 11-16 11-17 11-18 11-19 11-20 11-21 11-22 1-23 3-24 1-25 3-26 1-27 16-28
 S-1	<unk> here is <unk> <unk> ant europe life insurance <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-1	0.824	seconds
+W-1	0.872	seconds
 H-1	-0.14714324474334717	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-1	-0.14714324474334717	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-1	-0.0390 -0.0568 -0.0713 -0.0526 -0.0607 -0.0446 -0.0535 -0.0751 -0.0659 -0.0680 -0.0695 -0.0721 -0.0742 -0.0769 -0.0825 -0.0942 -0.1910 -0.2183 -0.1614 -0.1653 -0.2174 -0.4048 -1.5451 -0.0584 -0.0561 -0.0585 -0.0701 -0.0576 -0.0808 -0.0727
 A-1	5-0 14-1 0-2 20-3 1-4 3-5 6-6 20-7 21-8 21-9 21-10 21-11 21-12 12-13 12-14 12-15 12-16 12-17 12-18 12-19 12-20 12-21 12-22 1-23 3-24 1-25 3-26 1-27 17-28
 S-2	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> e <unk> <unk> <unk> <unk> a. located and what is the <unk> <unk> number ?
-W-2	0.967	seconds
+W-2	1.024	seconds
 H-2	-0.1516251116991043	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-2	-0.1516251116991043	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-2	-0.0337 -0.0578 -0.0694 -0.0487 -0.0601 -0.0441 -0.0530 -0.0749 -0.0639 -0.0656 -0.0674 -0.0699 -0.0711 -0.0727 -0.0759 -0.0818 -0.1070 -0.1129 -0.1001 -0.1021 -0.1152 -0.1725 -0.3649 -2.1923 -0.0511 -0.0570 -0.0560 -0.0633 -0.0505 -0.0791 -0.0664
 A-2	6-0 1-1 0-2 31-3 1-4 1-5 1-6 30-7 31-8 31-9 31-10 31-11 31-12 31-13 31-14 31-15 22-16 22-17 22-18 22-19 22-20 22-21 22-22 31-23 1-24 1-25 1-26 30-27 1-28 30-29
 S-3	<unk> here is <unk> <unk> insurance association <unk> is <unk> a. located and what is the <unk> <unk> number ?
-W-3	0.805	seconds
+W-3	0.855	seconds
 H-3	-0.1516457051038742	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-3	-0.1516457051038742	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-3	-0.0397 -0.0554 -0.0708 -0.0529 -0.0602 -0.0463 -0.0529 -0.0749 -0.0666 -0.0688 -0.0703 -0.0730 -0.0753 -0.0785 -0.0849 -0.0994 -0.2353 -0.2743 -0.1954 -0.2008 -0.2729 -0.5077 -1.3320 -0.0602 -0.0558 -0.0585 -0.0726 -0.0595 -0.0804 -0.0741
 A-3	6-0 0-1 0-2 0-3 1-4 3-5 1-6 18-7 19-8 19-9 19-10 19-11 19-12 19-13 19-14 10-15 10-16 10-17 10-18 10-19 10-20 10-21 10-22 1-23 0-24 6-25 3-26 1-27 18-28
 S-4	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> n en <unk> ar <unk> a. located and what is the <unk> <unk> number ?
-W-4	0.974	seconds
+W-4	1.041	seconds
 H-4	-0.1527549773454666	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-4	-0.1527549773454666	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-4	-0.0332 -0.0576 -0.0683 -0.0479 -0.0595 -0.0441 -0.0527 -0.0741 -0.0635 -0.0651 -0.0668 -0.0691 -0.0703 -0.0719 -0.0751 -0.0807 -0.1026 -0.1076 -0.0968 -0.0987 -0.1100 -0.1592 -0.3359 -2.3052 -0.0513 -0.0569 -0.0552 -0.0618 -0.0507 -0.0784 -0.0654
 A-4	22-0 22-1 0-2 33-3 1-4 1-5 1-6 32-7 33-8 33-9 33-10 33-11 33-12 33-13 33-14 33-15 33-16 33-17 33-18 33-19 33-20 33-21 33-22 33-23 1-24 1-25 1-26 32-27 1-28 29-29
 S-5	<unk> here is <unk> <unk> ade insurance <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-5	0.806	seconds
+W-5	0.861	seconds
 H-5	-0.15106327831745148	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-5	-0.15106327831745148	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-5	-0.0401 -0.0561 -0.0716 -0.0536 -0.0609 -0.0453 -0.0532 -0.0754 -0.0668 -0.0690 -0.0707 -0.0734 -0.0756 -0.0786 -0.0848 -0.0988 -0.2293 -0.2666 -0.1903 -0.1952 -0.2643 -0.4925 -1.3601 -0.0587 -0.0561 -0.0588 -0.0724 -0.0581 -0.0812 -0.0744
 A-5	19-0 12-1 0-2 18-3 1-4 3-5 5-6 18-7 19-8 19-9 19-10 19-11 19-12 10-13 10-14 10-15 10-16 10-17 10-18 10-19 10-20 10-21 10-22 1-23 3-24 1-25 3-26 1-27 18-28
 S-6	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> the <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-6	0.910	seconds
+W-6	1.004	seconds
 H-6	-0.1499822437763214	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-6	-0.1499822437763214	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-6	-0.0355 -0.0577 -0.0716 -0.0505 -0.0609 -0.0444 -0.0536 -0.0758 -0.0648 -0.0666 -0.0687 -0.0713 -0.0726 -0.0744 -0.0782 -0.0855 -0.1262 -0.1363 -0.1140 -0.1163 -0.1380 -0.2306 -0.4776 -1.8421 -0.0526 -0.0572 -0.0576 -0.0676 -0.0520 -0.0802 -0.0689
 A-6	26-0 19-1 0-2 26-3 1-4 1-5 1-6 25-7 13-8 13-9 13-10 13-11 13-12 13-13 13-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 17-23 1-24 1-25 1-26 3-27 1-28 22-29
 S-7	<unk> here is <unk> <unk> ling <unk> <unk> ds <unk> <unk> <unk> <unk> t <unk> <unk> a. located and what is the <unk> <unk> number ?
-W-7	0.868	seconds
+W-7	0.988	seconds
 H-7	-0.14769594371318817	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ling ling ds ds ds ds ling ling ling ling ling ling ling ling quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-7	-0.14769594371318817	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ling ling ds ds ds ds ling ling ling ling ling ling ling ling quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-7	-0.0360 -0.0574 -0.0714 -0.0506 -0.0607 -0.0446 -0.0536 -0.0756 -0.0649 -0.0667 -0.0686 -0.0712 -0.0727 -0.0747 -0.0790 -0.0872 -0.1376 -0.1503 -0.1221 -0.1247 -0.1518 -0.2640 -2.0059 -0.0547 -0.0571 -0.0575 -0.0668 -0.0537 -0.0798 -0.0700
 A-7	25-0 18-1 0-2 8-3 1-4 1-5 1-6 8-7 5-8 5-9 8-10 8-11 8-12 8-13 5-14 5-15 5-16 5-17 5-18 5-19 5-20 5-21 5-22 1-23 1-24 1-25 24-26 1-27 21-28
 S-8	<unk> here is <unk> <unk> insurance company <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-8	0.779	seconds
+W-8	0.875	seconds
 H-8	-0.15065604448318481	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close company sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-8	-0.15065604448318481	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close company sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-8	-0.0399 -0.0561 -0.0715 -0.0535 -0.0608 -0.0452 -0.0532 -0.0753 -0.0667 -0.0688 -0.0705 -0.0733 -0.0755 -0.0784 -0.0845 -0.0984 -0.2263 -0.2629 -0.1881 -0.1929 -0.2607 -0.4861 -1.3720 -0.0586 -0.0560 -0.0588 -0.0722 -0.0580 -0.0811 -0.0743
 A-8	19-0 12-1 0-2 18-3 1-4 3-5 1-6 18-7 19-8 19-9 19-10 19-11 19-12 6-13 10-14 10-15 10-16 10-17 10-18 10-19 10-20 10-21 10-22 1-23 3-24 1-25 3-26 1-27 18-28
 S-9	<unk> here is <unk> insurance <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-9	0.780	seconds
+W-9	0.839	seconds
 H-9	-0.1589483767747879	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-9	-0.1589483767747879	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-9	-0.0410 -0.0548 -0.0707 -0.0543 -0.0607 -0.0465 -0.0524 -0.0752 -0.0676 -0.0700 -0.0718 -0.0748 -0.0771 -0.0805 -0.0875 -0.1049 -0.2849 -0.3366 -0.2343 -0.2412 -0.3325 -0.6101 -1.1749 -0.0592 -0.0558 -0.0590 -0.0744 -0.0587 -0.0811 -0.0761
 A-9	17-0 10-1 0-2 15-3 1-4 3-5 1-6 16-7 17-8 17-9 17-10 17-11 17-12 8-13 8-14 8-15 8-16 8-17 8-18 8-19 8-20 8-21 8-22 1-23 3-24 1-25 3-26 1-27 16-28
 S-10	<unk> here is <unk> <unk> org <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-10	0.817	seconds
+W-10	0.856	seconds
 H-10	-0.15235595405101776	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-10	-0.15235595405101776	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-10	-0.0399 -0.0559 -0.0726 -0.0542 -0.0616 -0.0461 -0.0532 -0.0765 -0.0672 -0.0696 -0.0717 -0.0747 -0.0767 -0.0795 -0.0855 -0.0999 -0.2371 -0.2764 -0.1962 -0.2013 -0.2741 -0.5111 -1.3287 -0.0571 -0.0568 -0.0594 -0.0739 -0.0565 -0.0818 -0.0756
 A-10	5-0 16-1 0-2 15-3 1-4 3-5 1-6 17-7 18-8 18-9 18-10 18-11 18-12 9-13 9-14 9-15 9-16 9-17 9-18 9-19 9-20 9-21 9-22 1-23 3-24 1-25 3-26 1-27 17-28
 S-11	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> ale <unk> <unk> <unk> <unk> <unk> <unk> ars <unk> ep located and what is the <unk> <unk> number ?
-W-11	0.980	seconds
+W-11	1.054	seconds
 H-11	-0.15384797751903534	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-11	-0.15384797751903534	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-11	-0.0329 -0.0577 -0.0685 -0.0478 -0.0597 -0.0442 -0.0526 -0.0742 -0.0636 -0.0652 -0.0671 -0.0695 -0.0706 -0.0720 -0.0750 -0.0803 -0.1005 -0.1051 -0.0954 -0.0972 -0.1076 -0.1528 -0.3209 -2.3715 -0.0502 -0.0571 -0.0551 -0.0615 -0.0496 -0.0783 -0.0654
 A-11	6-0 29-1 0-2 8-3 1-4 1-5 1-6 0-7 16-8 16-9 16-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 16-23 1-24 1-25 1-26 2-27 1-28 35-29
 S-12	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> d <unk> <unk> <unk> <unk> e p &amp; i club <unk> a. located and what is the <unk> <unk> number ?
-W-12	0.993	seconds
+W-12	1.096	seconds
 H-12	-0.15301211178302765	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o brack_close brack_close var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-12	-0.15301211178302765	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o brack_close brack_close var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-12	-0.0333 -0.0578 -0.0680 -0.0478 -0.0594 -0.0439 -0.0527 -0.0737 -0.0634 -0.0649 -0.0666 -0.0689 -0.0701 -0.0717 -0.0748 -0.0803 -0.1018 -0.1066 -0.0962 -0.0981 -0.1090 -0.1569 -0.3303 -2.3287 -0.0513 -0.0567 -0.0551 -0.0613 -0.0507 -0.0783 -0.0651
 A-12	6-0 33-1 0-2 40-3 1-4 27-5 1-6 39-7 40-8 40-9 40-10 40-11 40-12 40-13 40-14 40-15 31-16 31-17 40-18 40-19 31-20 31-21 31-22 31-23 1-24 27-25 1-26 39-27 1-28 36-29
 S-13	<unk> here is <unk> <unk> u <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-13	0.947	seconds
+W-13	0.965	seconds
 H-13	-0.14695824682712555	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-13	-0.14695824682712555	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-13	-0.0368 -0.0576 -0.0720 -0.0512 -0.0607 -0.0447 -0.0538 -0.0756 -0.0652 -0.0671 -0.0689 -0.0715 -0.0731 -0.0752 -0.0797 -0.0883 -0.1448 -0.1594 -0.1273 -0.1300 -0.1604 -0.2847 -1.9172 -0.0555 -0.0573 -0.0577 -0.0678 -0.0544 -0.0800 -0.0707
 A-13	23-0 16-1 0-2 22-3 1-4 1-5 1-6 22-7 14-8 14-9 14-10 14-11 14-12 14-13 14-14 14-15 14-16 14-17 14-18 14-19 14-20 14-21 14-22 1-23 1-24 1-25 22-26 1-27 22-28
 S-14	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-14	0.980	seconds
+W-14	1.035	seconds
 H-14	-0.15329085290431976	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-14	-0.15329085290431976	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-14	-0.0332 -0.0577 -0.0685 -0.0480 -0.0596 -0.0441 -0.0526 -0.0742 -0.0636 -0.0652 -0.0670 -0.0694 -0.0706 -0.0720 -0.0751 -0.0805 -0.1016 -0.1064 -0.0961 -0.0980 -0.1088 -0.1561 -0.3287 -2.3366 -0.0505 -0.0570 -0.0552 -0.0617 -0.0499 -0.0784 -0.0654
 A-14	35-0 28-1 0-2 35-3 1-4 1-5 1-6 0-7 35-8 35-9 35-10 35-11 35-12 26-13 26-14 26-15 26-16 26-17 26-18 26-19 26-20 26-21 26-22 26-23 1-24 34-25 1-26 22-27 1-28 31-29
 S-15	<unk> here is <unk> <unk> on <unk> <unk> <unk> as <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-15	0.861	seconds
+W-15	0.963	seconds
 H-15	-0.14641506969928741	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-15	-0.14641506969928741	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-15	-0.0375 -0.0575 -0.0724 -0.0521 -0.0613 -0.0448 -0.0539 -0.0760 -0.0656 -0.0676 -0.0696 -0.0722 -0.0739 -0.0761 -0.0807 -0.0901 -0.1573 -0.1752 -0.1364 -0.1394 -0.1758 -0.3195 -1.7907 -0.0555 -0.0572 -0.0583 -0.0691 -0.0545 -0.0807 -0.0718
 A-15	22-0 15-1 3-2 9-3 1-4 1-5 1-6 21-7 22-8 22-9 22-10 22-11 22-12 13-13 13-14 13-15 13-16 13-17 13-18 13-19 13-20 13-21 13-22 1-23 1-24 1-25 3-26 1-27 18-28
 S-16	<unk> here is <unk> <unk> <unk> king <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-16	0.867	seconds
+W-16	0.968	seconds
 H-16	-0.14904582500457764	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-16	-0.14904582500457764	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-16	-0.0358 -0.0576 -0.0720 -0.0509 -0.0611 -0.0445 -0.0538 -0.0761 -0.0650 -0.0669 -0.0691 -0.0718 -0.0731 -0.0749 -0.0787 -0.0864 -0.1313 -0.1426 -0.1177 -0.1201 -0.1440 -0.2454 -2.0957 -0.0530 -0.0576 -0.0576 -0.0667 -0.0520 -0.0800 -0.0700
 A-16	25-0 18-1 0-2 6-3 1-4 1-5 1-6 0-7 25-8 25-9 25-10 25-11 25-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 6-24 1-25 3-26 1-27 21-28
 S-17	<unk> here is <unk> <unk> a <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-17	0.907	seconds
+W-17	1.006	seconds
 H-17	-0.14978262782096863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-17	-0.14978262782096863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-17	-0.0354 -0.0576 -0.0711 -0.0500 -0.0605 -0.0443 -0.0535 -0.0754 -0.0645 -0.0663 -0.0682 -0.0707 -0.0721 -0.0740 -0.0778 -0.0852 -0.1249 -0.1347 -0.1130 -0.1153 -0.1364 -0.2267 -0.4706 -1.8594 -0.0533 -0.0570 -0.0572 -0.0670 -0.0527 -0.0798 -0.0685
 A-17	26-0 19-1 0-2 26-3 1-4 1-5 1-6 25-7 26-8 26-9 26-10 26-11 26-12 17-13 17-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 17-23 1-24 1-25 1-26 25-27 1-28 22-29
 S-18	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-18	0.817	seconds
+W-18	0.855	seconds
 H-18	-0.14800997078418732	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-18	-0.14800997078418732	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-18	-0.0391 -0.0568 -0.0728 -0.0535 -0.0614 -0.0452 -0.0537 -0.0762 -0.0664 -0.0687 -0.0707 -0.0735 -0.0754 -0.0779 -0.0832 -0.0952 -0.1978 -0.2270 -0.1663 -0.1702 -0.2257 -0.4218 -1.5064 -0.0566 -0.0569 -0.0589 -0.0720 -0.0558 -0.0814 -0.0740
 A-18	19-0 12-1 0-2 18-3 1-4 3-5 1-6 18-7 19-8 19-9 19-10 19-11 19-12 10-13 10-14 10-15 10-16 10-17 10-18 10-19 10-20 10-21 10-22 1-23 1-24 1-25 3-26 1-27 15-28
 S-19	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> land <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-19	0.996	seconds
+W-19	1.007	seconds
 H-19	-0.15032322704792023	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-19	-0.15032322704792023	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-19	-0.0344 -0.0578 -0.0702 -0.0494 -0.0604 -0.0441 -0.0532 -0.0752 -0.0641 -0.0659 -0.0678 -0.0703 -0.0716 -0.0732 -0.0767 -0.0832 -0.1140 -0.1215 -0.1052 -0.1073 -0.1234 -0.1940 -0.4087 -2.0401 -0.0518 -0.0569 -0.0567 -0.0649 -0.0512 -0.0795 -0.0673
 A-19	16-0 16-1 0-2 29-3 1-4 1-5 1-6 28-7 20-8 20-9 20-10 20-11 20-12 20-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 29-29
 S-20	<unk> here is <unk> <unk> den <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-20	0.990	seconds
+W-20	1.003	seconds
 H-20	-0.14977094531059265	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-20	-0.14977094531059265	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-20	-0.0350 -0.0577 -0.0705 -0.0496 -0.0602 -0.0442 -0.0534 -0.0750 -0.0643 -0.0660 -0.0678 -0.0702 -0.0716 -0.0735 -0.0772 -0.0842 -0.1196 -0.1283 -0.1092 -0.1114 -0.1301 -0.2111 -0.4418 -1.9385 -0.0531 -0.0569 -0.0568 -0.0659 -0.0525 -0.0794 -0.0678
 A-20	5-0 20-1 0-2 27-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 26-27 1-28 27-29
 S-21	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> org located and what is the <unk> <unk> number ?
-W-21	0.951	seconds
+W-21	0.962	seconds
 H-21	-0.14695900678634644	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-21	-0.14695900678634644	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-21	-0.0383 -0.0572 -0.0733 -0.0532 -0.0618 -0.0453 -0.0539 -0.0768 -0.0662 -0.0685 -0.0707 -0.0735 -0.0753 -0.0775 -0.0824 -0.0931 -0.1796 -0.2036 -0.1527 -0.1563 -0.2033 -0.3780 -1.6159 -0.0553 -0.0573 -0.0589 -0.0714 -0.0544 -0.0814 -0.0737
 A-21	20-0 13-1 0-2 17-3 1-4 3-5 1-6 19-7 11-8 11-9 20-10 20-11 11-12 11-13 11-14 11-15 6-16 6-17 6-18 6-19 6-20 6-21 6-22 1-23 1-24 1-25 3-26 1-27 16-28
 S-22	<unk> here is <unk> <unk> on <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-22	0.957	seconds
+W-22	0.977	seconds
 H-22	-0.14883944392204285	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-22	-0.14883944392204285	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-22	-0.0359 -0.0576 -0.0720 -0.0509 -0.0612 -0.0446 -0.0537 -0.0761 -0.0650 -0.0669 -0.0692 -0.0718 -0.0731 -0.0749 -0.0788 -0.0866 -0.1323 -0.1438 -0.1184 -0.1208 -0.1453 -0.2484 -2.0806 -0.0530 -0.0576 -0.0576 -0.0668 -0.0519 -0.0801 -0.0701
 A-22	25-0 18-1 0-2 25-3 1-4 1-5 1-6 0-7 25-8 25-9 25-10 25-11 25-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 3-26 1-27 21-28
 S-23	<unk> here is <unk> sw <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-23	0.984	seconds
+W-23	1.041	seconds
 H-23	-0.1499665230512619	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-23	-0.1499665230512619	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-23	-0.0347 -0.0577 -0.0700 -0.0492 -0.0601 -0.0441 -0.0532 -0.0748 -0.0641 -0.0658 -0.0675 -0.0699 -0.0713 -0.0731 -0.0767 -0.0834 -0.1158 -0.1236 -0.1064 -0.1086 -0.1256 -0.1996 -0.4199 -2.0038 -0.0528 -0.0568 -0.0566 -0.0650 -0.0522 -0.0792 -0.0673
 A-23	28-0 21-1 0-2 28-3 1-4 1-5 1-6 27-7 19-8 28-9 28-10 28-11 19-12 19-13 19-14 19-15 19-16 19-17 19-18 19-19 19-20 19-21 19-22 19-23 1-24 1-25 1-26 27-27 1-28 28-29
 S-24	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> <unk> den <unk> a. located and what is the <unk> <unk> number ?
-W-24	0.975	seconds
+W-24	1.073	seconds
 H-24	-0.15468022227287292	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-24	-0.15468022227287292	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-24	-0.0329 -0.0579 -0.0679 -0.0476 -0.0595 -0.0441 -0.0526 -0.0739 -0.0635 -0.0650 -0.0668 -0.0692 -0.0702 -0.0717 -0.0746 -0.0798 -0.0987 -0.1030 -0.0940 -0.0958 -0.1055 -0.1474 -0.3079 -2.4302 -0.0502 -0.0570 -0.0549 -0.0607 -0.0495 -0.0782 -0.0650
 A-24	41-0 34-1 3-2 41-3 1-4 1-5 1-6 0-7 41-8 41-9 41-10 41-11 41-12 41-13 41-14 41-15 32-16 32-17 32-18 32-19 32-20 32-21 32-22 32-23 1-24 1-25 1-26 25-27 1-28 37-29
 S-25	<unk> here is brand new day <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-25	0.924	seconds
+W-25	1.013	seconds
 H-25	-0.1497458517551422	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-25	-0.1497458517551422	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-25	-0.0353 -0.0575 -0.0709 -0.0500 -0.0605 -0.0443 -0.0534 -0.0753 -0.0645 -0.0663 -0.0681 -0.0707 -0.0721 -0.0740 -0.0778 -0.0852 -0.1254 -0.1354 -0.1134 -0.1157 -0.1371 -0.2284 -0.4734 -1.8521 -0.0533 -0.0568 -0.0572 -0.0669 -0.0527 -0.0797 -0.0685
 A-25	4-0 4-1 0-2 26-3 1-4 1-5 4-6 25-7 26-8 26-9 26-10 26-11 26-12 26-13 17-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 17-23 1-24 1-25 1-26 25-27 1-28 22-29
 S-26	<unk> here is <unk> <unk> <unk> <unk> d <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-26	0.994	seconds
+W-26	1.039	seconds
 H-26	-0.1524423509836197	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-26	-0.1524423509836197	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-26	-0.0335 -0.0578 -0.0694 -0.0487 -0.0602 -0.0440 -0.0529 -0.0749 -0.0639 -0.0656 -0.0676 -0.0702 -0.0712 -0.0727 -0.0757 -0.0814 -0.1047 -0.1101 -0.0984 -0.1004 -0.1124 -0.1651 -0.3487 -2.2556 -0.0501 -0.0571 -0.0559 -0.0629 -0.0494 -0.0791 -0.0662
 A-26	7-0 1-1 0-2 33-3 1-4 1-5 1-6 32-7 33-8 33-9 33-10 33-11 33-12 33-13 33-14 24-15 24-16 24-17 24-18 24-19 24-20 24-21 24-22 24-23 1-24 1-25 1-26 32-27 1-28 29-29
 S-27	<unk> here is <unk> o <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-27	0.959	seconds
+W-27	0.989	seconds
 H-27	-0.14754314720630646	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-27	-0.14754314720630646	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-27	-0.0364 -0.0575 -0.0721 -0.0513 -0.0612 -0.0445 -0.0538 -0.0761 -0.0652 -0.0671 -0.0693 -0.0719 -0.0734 -0.0753 -0.0794 -0.0877 -0.1404 -0.1539 -0.1242 -0.1268 -0.1551 -0.2721 -1.9713 -0.0537 -0.0573 -0.0579 -0.0676 -0.0527 -0.0803 -0.0706
 A-27	24-0 11-1 0-2 24-3 1-4 1-5 1-6 23-7 15-8 15-9 15-10 15-11 15-12 15-13 15-14 15-15 15-16 15-17 15-18 15-19 15-20 15-21 15-22 1-23 1-24 1-25 3-26 1-27 20-28
 S-28	<unk> here is <unk> q <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-28	0.966	seconds
+W-28	0.974	seconds
 H-28	-0.1489655077457428	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-28	-0.1489655077457428	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-28	-0.0359 -0.0576 -0.0716 -0.0505 -0.0606 -0.0445 -0.0537 -0.0755 -0.0648 -0.0666 -0.0685 -0.0711 -0.0725 -0.0745 -0.0785 -0.0862 -0.1307 -0.1418 -0.1171 -0.1195 -0.1433 -0.2436 -2.1030 -0.0540 -0.0574 -0.0573 -0.0663 -0.0530 -0.0796 -0.0696
 A-28	4-0 18-1 0-2 25-3 1-4 1-5 1-6 24-7 16-8 16-9 25-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 24-26 1-27 21-28
 S-29	<unk> here is <unk> <unk> z <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-29	0.999	seconds
+W-29	1.014	seconds
 H-29	-0.150322824716568	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-29	-0.150322824716568	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-29	-0.0345 -0.0578 -0.0703 -0.0495 -0.0605 -0.0441 -0.0532 -0.0753 -0.0642 -0.0660 -0.0679 -0.0704 -0.0717 -0.0733 -0.0768 -0.0833 -0.1143 -0.1218 -0.1054 -0.1075 -0.1238 -0.1949 -0.4105 -2.0344 -0.0517 -0.0570 -0.0567 -0.0650 -0.0511 -0.0796 -0.0674
 A-29	16-0 16-1 0-2 29-3 1-4 1-5 1-6 28-7 20-8 20-9 20-10 20-11 20-12 20-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 28-29
 S-30	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-30	0.950	seconds
+W-30	0.969	seconds
 H-30	-0.14657770097255707	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-30	-0.14657770097255707	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-30	-0.0384 -0.0573 -0.0726 -0.0528 -0.0613 -0.0448 -0.0539 -0.0761 -0.0660 -0.0681 -0.0700 -0.0727 -0.0745 -0.0769 -0.0819 -0.0925 -0.1759 -0.1988 -0.1499 -0.1534 -0.1985 -0.3679 -1.6417 -0.0562 -0.0569 -0.0586 -0.0704 -0.0553 -0.0810 -0.0728
 A-30	20-0 13-1 3-2 19-3 1-4 3-5 1-6 19-7 20-8 20-9 20-10 20-11 20-12 20-13 11-14 11-15 11-16 11-17 11-18 11-19 11-20 11-21 11-22 1-23 1-24 1-25 3-26 1-27 16-28
 S-31	<unk> here is <unk> <unk> a <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-31	0.948	seconds
+W-31	0.986	seconds
 H-31	-0.14894309639930725	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-31	-0.14894309639930725	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-31	-0.0359 -0.0576 -0.0715 -0.0505 -0.0607 -0.0445 -0.0537 -0.0756 -0.0648 -0.0666 -0.0685 -0.0711 -0.0726 -0.0745 -0.0785 -0.0862 -0.1307 -0.1419 -0.1172 -0.1196 -0.1434 -0.2438 -2.1021 -0.0540 -0.0574 -0.0573 -0.0662 -0.0529 -0.0796 -0.0695
 A-31	25-0 18-1 0-2 25-3 1-4 1-5 1-6 24-7 16-8 16-9 25-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 24-26 1-27 21-28
 S-32	<unk> here is <unk> n <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-32	0.919	seconds
+W-32	1.026	seconds
 H-32	-0.14999701082706451	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-32	-0.14999701082706451	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-32	-0.0354 -0.0576 -0.0716 -0.0505 -0.0610 -0.0444 -0.0536 -0.0759 -0.0648 -0.0666 -0.0688 -0.0714 -0.0727 -0.0744 -0.0782 -0.0856 -0.1263 -0.1364 -0.1141 -0.1164 -0.1381 -0.2308 -0.4779 -1.8418 -0.0525 -0.0572 -0.0576 -0.0676 -0.0519 -0.0803 -0.0690
 A-32	26-0 19-1 0-2 26-3 1-4 4-5 1-6 25-7 26-8 26-9 26-10 26-11 26-12 17-13 17-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 17-23 1-24 1-25 1-26 25-27 1-28 22-29
 S-33	<unk> here is <unk> <unk> <unk> se <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-33	0.924	seconds
+W-33	1.029	seconds
 H-33	-0.14973287284374237	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-33	-0.14973287284374237	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-33	-0.0350 -0.0577 -0.0704 -0.0495 -0.0603 -0.0442 -0.0533 -0.0750 -0.0642 -0.0660 -0.0677 -0.0702 -0.0716 -0.0735 -0.0772 -0.0842 -0.1199 -0.1287 -0.1094 -0.1117 -0.1305 -0.2120 -0.4435 -1.9337 -0.0532 -0.0568 -0.0569 -0.0658 -0.0525 -0.0795 -0.0677
 A-33	27-0 20-1 0-2 27-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 26-27 1-28 27-29
 S-34	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-34	0.988	seconds
+W-34	1.063	seconds
 H-34	-0.15329085290431976	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-34	-0.15329085290431976	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-34	-0.0332 -0.0577 -0.0685 -0.0480 -0.0596 -0.0441 -0.0526 -0.0742 -0.0636 -0.0652 -0.0670 -0.0694 -0.0706 -0.0720 -0.0751 -0.0805 -0.1016 -0.1064 -0.0961 -0.0980 -0.1088 -0.1561 -0.3287 -2.3366 -0.0505 -0.0570 -0.0552 -0.0617 -0.0499 -0.0784 -0.0654
 A-34	35-0 28-1 0-2 35-3 1-4 1-5 1-6 0-7 35-8 35-9 35-10 35-11 35-12 26-13 26-14 26-15 26-16 26-17 26-18 26-19 26-20 26-21 26-22 26-23 1-24 34-25 1-26 22-27 1-28 31-29
 S-35	<unk> here is <unk> <unk> <unk> g <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-35	0.844	seconds
+W-35	0.879	seconds
 H-35	-0.14861200749874115	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-35	-0.14861200749874115	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-35	-0.0392 -0.0567 -0.0728 -0.0536 -0.0614 -0.0454 -0.0536 -0.0762 -0.0665 -0.0688 -0.0708 -0.0736 -0.0755 -0.0781 -0.0836 -0.0961 -0.2044 -0.2354 -0.1713 -0.1754 -0.2339 -0.4374 -1.4717 -0.0569 -0.0569 -0.0589 -0.0723 -0.0561 -0.0814 -0.0742
 A-35	19-0 12-1 0-2 18-3 1-4 3-5 6-6 18-7 19-8 19-9 19-10 19-11 19-12 10-13 10-14 10-15 10-16 10-17 10-18 10-19 10-20 10-21 10-22 1-23 3-24 1-25 3-26 1-27 18-28
 S-36	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> c located and what is the <unk> <unk> number ?
-W-36	0.959	seconds
+W-36	0.992	seconds
 H-36	-0.147660493850708	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-36	-0.147660493850708	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-36	-0.0364 -0.0574 -0.0729 -0.0518 -0.0617 -0.0449 -0.0539 -0.0768 -0.0655 -0.0676 -0.0701 -0.0729 -0.0742 -0.0759 -0.0799 -0.0882 -0.1415 -0.1553 -0.1250 -0.1276 -0.1565 -0.2756 -1.9573 -0.0525 -0.0578 -0.0583 -0.0685 -0.0515 -0.0807 -0.0715
 A-36	24-0 13-1 3-2 15-3 1-4 1-5 1-6 0-7 15-8 15-9 24-10 24-11 15-12 15-13 15-14 15-15 6-16 6-17 15-18 15-19 6-20 6-21 6-22 1-23 1-24 1-25 3-26 1-27 20-28
 S-37	<unk> here is <unk> <unk> ar <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-37	0.994	seconds
+W-37	1.027	seconds
 H-37	-0.15026314556598663	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-37	-0.15026314556598663	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-37	-0.0345 -0.0577 -0.0704 -0.0496 -0.0607 -0.0441 -0.0531 -0.0754 -0.0642 -0.0660 -0.0681 -0.0707 -0.0719 -0.0735 -0.0769 -0.0835 -0.1152 -0.1229 -0.1061 -0.1082 -0.1248 -0.1976 -0.4157 -2.0187 -0.0513 -0.0570 -0.0569 -0.0652 -0.0507 -0.0797 -0.0676
 A-37	5-0 5-1 0-2 14-3 1-4 1-5 1-6 27-7 28-8 28-9 28-10 28-11 28-12 28-13 19-14 19-15 19-16 19-17 19-18 19-19 19-20 19-21 19-22 19-23 1-24 1-25 1-26 27-27 1-28 28-29
 S-38	<unk> here is <unk> om global care <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-38	0.843	seconds
+W-38	0.868	seconds
 H-38	-0.1495102494955063	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l global global global global global global sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-38	-0.1495102494955063	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l global global global global global global sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-38	-0.0393 -0.0562 -0.0720 -0.0534 -0.0611 -0.0455 -0.0533 -0.0758 -0.0665 -0.0688 -0.0707 -0.0736 -0.0756 -0.0783 -0.0841 -0.0973 -0.2151 -0.2488 -0.1796 -0.1840 -0.2473 -0.4619 -1.4198 -0.0575 -0.0565 -0.0589 -0.0723 -0.0568 -0.0812 -0.0743
 A-38	6-0 17-1 0-2 16-3 1-4 3-5 1-6 18-7 5-8 5-9 5-10 5-11 5-12 5-13 10-14 10-15 10-16 10-17 10-18 10-19 10-20 10-21 10-22 1-23 3-24 1-25 3-26 1-27 18-28
 S-39	<unk> here is <unk> ale <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> v <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-39	0.992	seconds
+W-39	1.021	seconds
 H-39	-0.15059663355350494	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-39	-0.15059663355350494	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-39	-0.0342 -0.0578 -0.0699 -0.0492 -0.0604 -0.0440 -0.0531 -0.0751 -0.0641 -0.0658 -0.0677 -0.0703 -0.0715 -0.0731 -0.0765 -0.0829 -0.1121 -0.1191 -0.1039 -0.1059 -0.1212 -0.1880 -0.3968 -2.0792 -0.0516 -0.0569 -0.0565 -0.0644 -0.0510 -0.0795 -0.0670
 A-39	4-0 1-1 0-2 30-3 1-4 1-5 4-6 29-7 21-8 21-9 21-10 21-11 21-12 21-13 21-14 21-15 21-16 21-17 21-18 21-19 21-20 21-21 21-22 21-23 1-24 1-25 1-26 29-27 1-28 29-29
 S-40	<unk> here is <unk> <unk> i <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-40	0.928	seconds
+W-40	1.060	seconds
 H-40	-0.1497468501329422	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-40	-0.1497468501329422	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-40	-0.0351 -0.0577 -0.0706 -0.0497 -0.0603 -0.0443 -0.0534 -0.0751 -0.0643 -0.0661 -0.0678 -0.0703 -0.0717 -0.0736 -0.0773 -0.0844 -0.1209 -0.1299 -0.1101 -0.1124 -0.1317 -0.2151 -0.4492 -1.9178 -0.0532 -0.0569 -0.0569 -0.0662 -0.0525 -0.0795 -0.0680
 A-40	27-0 20-1 0-2 27-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 26-27 1-28 27-29
 S-41	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> e <unk> <unk> <unk> e <unk> <unk> den <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> a. located and what is the <unk> <unk> number ?
-W-41	0.958	seconds
+W-41	1.069	seconds
 H-41	-0.15388689935207367	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-41	-0.15388689935207367	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-41	-0.0329 -0.0577 -0.0679 -0.0476 -0.0594 -0.0441 -0.0525 -0.0739 -0.0634 -0.0649 -0.0667 -0.0691 -0.0702 -0.0717 -0.0747 -0.0800 -0.1000 -0.1045 -0.0950 -0.0968 -0.1070 -0.1514 -0.3176 -2.3851 -0.0507 -0.0569 -0.0550 -0.0609 -0.0500 -0.0781 -0.0650
 A-41	26-0 30-1 3-2 37-3 1-4 1-5 1-6 0-7 26-8 28-9 28-10 28-11 28-12 28-13 28-14 28-15 28-16 28-17 28-18 28-19 28-20 28-21 28-22 28-23 1-24 1-25 1-26 26-27 1-28 33-29
 S-42	<unk> here is <unk> <unk> in <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-42	0.888	seconds
+W-42	0.998	seconds
 H-42	-0.1467829942703247	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-42	-0.1467829942703247	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-42	-0.0385 -0.0572 -0.0723 -0.0529 -0.0613 -0.0448 -0.0538 -0.0761 -0.0660 -0.0682 -0.0701 -0.0728 -0.0747 -0.0771 -0.0822 -0.0931 -0.1804 -0.2047 -0.1534 -0.1570 -0.2042 -0.3793 -1.6111 -0.0565 -0.0569 -0.0587 -0.0705 -0.0556 -0.0812 -0.0730
 A-42	20-0 13-1 3-2 19-3 1-4 3-5 1-6 19-7 20-8 20-9 20-10 20-11 20-12 20-13 11-14 11-15 11-16 11-17 11-18 11-19 11-20 11-21 11-22 1-23 1-24 1-25 3-26 1-27 16-28
 S-43	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> a. located and what is the <unk> <unk> number ?
-W-43	0.938	seconds
+W-43	1.051	seconds
 H-43	-0.15079987049102783	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-43	-0.15079987049102783	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-43	-0.0340 -0.0578 -0.0698 -0.0490 -0.0603 -0.0442 -0.0531 -0.0750 -0.0640 -0.0657 -0.0676 -0.0701 -0.0713 -0.0729 -0.0763 -0.0826 -0.1106 -0.1173 -0.1027 -0.1048 -0.1195 -0.1837 -0.3883 -2.1081 -0.0516 -0.0570 -0.0563 -0.0642 -0.0510 -0.0791 -0.0670
 A-43	6-0 22-1 0-2 29-3 1-4 1-5 1-6 28-7 29-8 29-9 29-10 29-11 29-12 29-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 29-29
 S-44	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> al en <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> ken located and what is the <unk> <unk> number ?
-W-44	1.022	seconds
+W-44	1.081	seconds
 H-44	-0.15145981311798096	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-44	-0.15145981311798096	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-44	-0.0328 -0.0565 -0.0688 -0.0483 -0.0597 -0.0451 -0.0514 -0.0748 -0.0637 -0.0655 -0.0679 -0.0707 -0.0716 -0.0729 -0.0758 -0.0818 -0.1066 -0.1124 -0.1000 -0.1021 -0.1151 -0.1723 -0.3645 -2.1967 -0.0490 -0.0571 -0.0557 -0.0630 -0.0485 -0.0780 -0.0670
 A-44	2-0 36-1 3-2 36-3 2-4 1-5 1-6 15-7 15-8 15-9 15-10 15-11 15-12 15-13 15-14 15-15 15-16 15-17 15-18 15-19 15-20 15-21 15-22 15-23 2-24 35-25 1-26 2-27 2-28 35-29
 S-45	<unk> here is <unk> m <unk> <unk> <unk> e <unk> <unk> <unk> <unk> en <unk> a. located and what is the <unk> <unk> number ?
-W-45	0.968	seconds
+W-45	1.016	seconds
 H-45	-0.14723537862300873	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-45	-0.14723537862300873	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-45	-0.0364 -0.0574 -0.0713 -0.0506 -0.0604 -0.0448 -0.0537 -0.0753 -0.0649 -0.0667 -0.0684 -0.0709 -0.0726 -0.0747 -0.0791 -0.0876 -0.1405 -0.1540 -0.1242 -0.1269 -0.1553 -0.2725 -1.9665 -0.0560 -0.0571 -0.0575 -0.0670 -0.0549 -0.0796 -0.0701
 A-45	24-0 17-1 0-2 0-3 1-4 1-5 1-6 23-7 15-8 15-9 15-10 15-11 15-12 15-13 15-14 15-15 15-16 15-17 15-18 15-19 15-20 15-21 15-22 1-23 1-24 1-25 23-26 1-27 20-28
 S-46	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> org en <unk> <unk> <unk> d <unk> a. located and what is the <unk> <unk> number ?
-W-46	1.039	seconds
+W-46	1.096	seconds
 H-46	-0.15480661392211914	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-46	-0.15480661392211914	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-46	-0.0329 -0.0579 -0.0673 -0.0472 -0.0591 -0.0441 -0.0526 -0.0734 -0.0634 -0.0648 -0.0664 -0.0687 -0.0698 -0.0714 -0.0744 -0.0796 -0.0981 -0.1023 -0.0936 -0.0953 -0.1048 -0.1457 -0.3041 -2.4466 -0.0510 -0.0569 -0.0546 -0.0602 -0.0503 -0.0779 -0.0647
 A-46	41-0 23-1 0-2 0-3 1-4 1-5 1-6 40-7 41-8 41-9 41-10 41-11 41-12 41-13 41-14 41-15 32-16 32-17 32-18 32-19 32-20 32-21 32-22 32-23 1-24 1-25 1-26 40-27 1-28 37-29
 S-47	<unk> here is <unk> <unk> a <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-47	0.961	seconds
+W-47	1.005	seconds
 H-47	-0.14909330010414124	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-47	-0.14909330010414124	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-47	-0.0358 -0.0576 -0.0719 -0.0508 -0.0611 -0.0445 -0.0537 -0.0761 -0.0650 -0.0669 -0.0691 -0.0718 -0.0731 -0.0748 -0.0787 -0.0864 -0.1310 -0.1422 -0.1174 -0.1198 -0.1437 -0.2445 -2.1004 -0.0529 -0.0575 -0.0576 -0.0666 -0.0519 -0.0800 -0.0699
 A-47	25-0 18-1 0-2 25-3 1-4 1-5 1-6 0-7 25-8 25-9 25-10 25-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 3-26 1-27 21-28
 S-48	<unk> here is de <unk> <unk> land <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-48	0.984	seconds
+W-48	1.036	seconds
 H-48	-0.1498521864414215	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-48	-0.1498521864414215	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-48	-0.0353 -0.0573 -0.0711 -0.0503 -0.0608 -0.0443 -0.0534 -0.0757 -0.0646 -0.0665 -0.0686 -0.0712 -0.0725 -0.0743 -0.0781 -0.0855 -0.1268 -0.1371 -0.1144 -0.1168 -0.1387 -0.2323 -2.1666 -0.0527 -0.0573 -0.0573 -0.0655 -0.0517 -0.0796 -0.0691
 A-48	26-0 13-1 0-2 26-3 1-4 1-5 1-6 25-7 26-8 26-9 26-10 26-11 26-12 17-13 17-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 1-23 1-24 1-25 3-26 1-27 22-28
 S-49	<unk> here is <unk> s fruit <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> e <unk> <unk> <unk> <unk> en <unk> <unk> o <unk> a. located and what is the <unk> <unk> number ?
-W-49	0.970	seconds
+W-49	1.052	seconds
 H-49	-0.15205168724060059	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-49	-0.15205168724060059	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-49	-0.0333 -0.0574 -0.0675 -0.0474 -0.0590 -0.0439 -0.0525 -0.0734 -0.0633 -0.0647 -0.0662 -0.0684 -0.0698 -0.0715 -0.0749 -0.0806 -0.1034 -0.1086 -0.0974 -0.0993 -0.1110 -0.1621 -0.3425 -2.2753 -0.0527 -0.0564 -0.0550 -0.0612 -0.0520 -0.0779 -0.0649
 A-49	4-0 1-1 0-2 34-3 1-4 1-5 1-6 33-7 34-8 34-9 34-10 34-11 34-12 34-13 25-14 25-15 25-16 25-17 25-18 25-19 25-20 25-21 25-22 25-23 1-24 33-25 1-26 33-27 1-28 30-29
 S-50	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> as <unk> a. located and what is the <unk> <unk> number ?
-W-50	0.974	seconds
+W-50	1.012	seconds
 H-50	-0.15121954679489136	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-50	-0.15121954679489136	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-50	-0.0338 -0.0578 -0.0697 -0.0489 -0.0603 -0.0442 -0.0530 -0.0750 -0.0640 -0.0657 -0.0676 -0.0701 -0.0713 -0.0728 -0.0761 -0.0822 -0.1088 -0.1150 -0.1014 -0.1034 -0.1172 -0.1779 -0.3764 -2.1504 -0.0513 -0.0570 -0.0562 -0.0638 -0.0507 -0.0791 -0.0668
 A-50	6-0 19-1 0-2 30-3 1-4 1-5 1-6 29-7 30-8 30-9 30-10 30-11 30-12 30-13 30-14 21-15 21-16 21-17 21-18 21-19 21-20 21-21 21-22 21-23 1-24 1-25 1-26 29-27 1-28 29-29
 S-51	<unk> here is <unk> <unk> ra <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-51	0.998	seconds
+W-51	1.005	seconds
 H-51	-0.15032750368118286	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-51	-0.15032750368118286	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-51	-0.0344 -0.0578 -0.0697 -0.0490 -0.0600 -0.0441 -0.0532 -0.0748 -0.0640 -0.0657 -0.0674 -0.0698 -0.0711 -0.0729 -0.0764 -0.0829 -0.1127 -0.1198 -0.1042 -0.1063 -0.1219 -0.1900 -0.4012 -2.0633 -0.0525 -0.0568 -0.0563 -0.0644 -0.0518 -0.0790 -0.0669
 A-51	25-0 5-1 0-2 5-3 1-4 1-5 1-6 28-7 20-8 20-9 20-10 20-11 20-12 20-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 29-29
 S-52	<unk> here is <unk> <unk> - en <unk> <unk> <unk> <unk> <unk> p <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-52	1.020	seconds
+W-52	0.974	seconds
 H-52	-0.1487090289592743	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-52	-0.1487090289592743	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-52	-0.0358 -0.0575 -0.0715 -0.0505 -0.0607 -0.0445 -0.0536 -0.0756 -0.0648 -0.0667 -0.0686 -0.0712 -0.0727 -0.0746 -0.0786 -0.0864 -0.1319 -0.1433 -0.1181 -0.1205 -0.1448 -0.2473 -2.0848 -0.0539 -0.0573 -0.0574 -0.0664 -0.0528 -0.0797 -0.0697
 A-52	25-0 18-1 0-2 25-3 1-4 1-5 1-6 24-7 16-8 16-9 25-10 25-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 24-26 1-27 21-28
 S-53	<unk> here is <unk> <unk> to <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-53	1.015	seconds
+W-53	0.973	seconds
 H-53	-0.14889495074748993	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-53	-0.14889495074748993	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-53	-0.0359 -0.0576 -0.0715 -0.0505 -0.0607 -0.0445 -0.0537 -0.0755 -0.0648 -0.0666 -0.0685 -0.0711 -0.0725 -0.0744 -0.0785 -0.0862 -0.1310 -0.1421 -0.1174 -0.1198 -0.1436 -0.2445 -2.0988 -0.0541 -0.0574 -0.0573 -0.0663 -0.0530 -0.0796 -0.0696
 A-53	25-0 18-1 0-2 25-3 1-4 1-5 1-6 24-7 16-8 16-9 25-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 24-26 1-27 21-28
 S-54	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> her located and what is the <unk> <unk> number ?
-W-54	0.905	seconds
+W-54	0.856	seconds
 H-54	-0.1502676010131836	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-54	-0.1502676010131836	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-54	-0.0388 -0.0560 -0.0738 -0.0545 -0.0624 -0.0465 -0.0533 -0.0778 -0.0672 -0.0699 -0.0726 -0.0758 -0.0774 -0.0796 -0.0849 -0.0979 -0.2172 -0.2515 -0.1810 -0.1854 -0.2504 -0.4699 -1.4073 -0.0540 -0.0575 -0.0597 -0.0743 -0.0532 -0.0818 -0.0763
 A-54	19-0 12-1 0-2 16-3 10-4 3-5 1-6 18-7 10-8 10-9 10-10 10-11 10-12 10-13 10-14 10-15 10-16 10-17 10-18 10-19 10-20 10-21 10-22 10-23 1-24 10-25 3-26 10-27 18-28
 S-55	<unk> here is de <unk> <unk> <unk> de <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-55	1.004	seconds
+W-55	0.962	seconds
 H-55	-0.1469593644142151	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-55	-0.1469593644142151	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-55	-0.0385 -0.0568 -0.0723 -0.0529 -0.0613 -0.0449 -0.0536 -0.0761 -0.0660 -0.0682 -0.0702 -0.0729 -0.0748 -0.0772 -0.0824 -0.0937 -0.1854 -0.2111 -0.1571 -0.1608 -0.2106 -0.3921 -1.5778 -0.0563 -0.0567 -0.0586 -0.0708 -0.0555 -0.0810 -0.0732
 A-55	3-0 13-1 0-2 19-3 1-4 4-5 1-6 19-7 20-8 20-9 20-10 20-11 20-12 20-13 11-14 11-15 11-16 11-17 11-18 11-19 11-20 11-21 11-22 1-23 1-24 1-25 3-26 1-27 16-28
 S-56	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j &apos; <unk> <unk> <unk> <unk> ge <unk> a. located and what is the <unk> <unk> number ?
-W-56	1.014	seconds
+W-56	1.027	seconds
 H-56	-0.15325748920440674	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-56	-0.15325748920440674	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-56	-0.0330 -0.0576 -0.0678 -0.0476 -0.0593 -0.0441 -0.0526 -0.0738 -0.0634 -0.0649 -0.0666 -0.0689 -0.0701 -0.0717 -0.0748 -0.0803 -0.1012 -0.1059 -0.0958 -0.0977 -0.1084 -0.1551 -0.3261 -2.3466 -0.0513 -0.0568 -0.0550 -0.0611 -0.0507 -0.0780 -0.0649
 A-56	19-0 29-1 0-2 12-3 1-4 1-5 1-6 35-7 36-8 36-9 36-10 27-11 27-12 27-13 27-14 27-15 27-16 27-17 27-18 27-19 27-20 27-21 20-22 20-23 1-24 1-25 1-26 35-27 1-28 35-29
 S-57	<unk> here is <unk> a <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-57	0.909	seconds
+W-57	0.967	seconds
 H-57	-0.14766015112400055	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-57	-0.14766015112400055	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-57	-0.0364 -0.0575 -0.0722 -0.0513 -0.0612 -0.0445 -0.0538 -0.0761 -0.0652 -0.0671 -0.0693 -0.0720 -0.0734 -0.0753 -0.0794 -0.0877 -0.1396 -0.1529 -0.1236 -0.1262 -0.1541 -0.2697 -1.9813 -0.0537 -0.0574 -0.0579 -0.0676 -0.0526 -0.0803 -0.0706
 A-57	24-0 11-1 0-2 24-3 1-4 1-5 1-6 23-7 15-8 15-9 15-10 15-11 15-12 15-13 15-14 15-15 15-16 15-17 15-18 15-19 15-20 15-21 15-22 1-23 1-24 1-25 3-26 1-27 20-28
 S-58	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> e <unk> a. located and what is the <unk> <unk> number ?
-W-58	0.926	seconds
+W-58	1.019	seconds
 H-58	-0.1513281613588333	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-58	-0.1513281613588333	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-58	-0.0338 -0.0578 -0.0696 -0.0489 -0.0603 -0.0442 -0.0530 -0.0750 -0.0640 -0.0657 -0.0676 -0.0701 -0.0713 -0.0729 -0.0761 -0.0822 -0.1084 -0.1146 -0.1011 -0.1032 -0.1168 -0.1768 -0.3739 -2.1595 -0.0511 -0.0571 -0.0562 -0.0637 -0.0505 -0.0792 -0.0668
 A-58	6-0 1-1 0-2 30-3 1-4 1-5 1-6 29-7 30-8 30-9 30-10 30-11 30-12 30-13 30-14 21-15 21-16 21-17 21-18 21-19 21-20 21-21 21-22 21-23 1-24 1-25 1-26 29-27 1-28 29-29
 S-59	<unk> here is <unk> <unk> at <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-59	0.927	seconds
+W-59	1.010	seconds
 H-59	-0.14978830516338348	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-59	-0.14978830516338348	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-59	-0.0354 -0.0576 -0.0711 -0.0500 -0.0605 -0.0444 -0.0535 -0.0754 -0.0645 -0.0663 -0.0682 -0.0707 -0.0721 -0.0740 -0.0778 -0.0851 -0.1244 -0.1341 -0.1126 -0.1150 -0.1358 -0.2252 -0.4679 -1.8666 -0.0533 -0.0570 -0.0572 -0.0670 -0.0526 -0.0798 -0.0685
 A-59	5-0 5-1 0-2 5-3 1-4 1-5 5-6 5-7 26-8 26-9 26-10 26-11 26-12 17-13 17-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 17-23 1-24 1-25 5-26 25-27 1-28 22-29
 S-60	<unk> here is <unk> <unk> us <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-60	0.940	seconds
+W-60	0.996	seconds
 H-60	-0.14981196820735931	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-60	-0.14981196820735931	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-60	-0.0354 -0.0577 -0.0710 -0.0501 -0.0606 -0.0443 -0.0535 -0.0754 -0.0646 -0.0664 -0.0682 -0.0707 -0.0722 -0.0740 -0.0779 -0.0852 -0.1250 -0.1348 -0.1131 -0.1154 -0.1365 -0.2269 -0.4709 -1.8589 -0.0533 -0.0570 -0.0573 -0.0670 -0.0527 -0.0799 -0.0685
 A-60	26-0 19-1 0-2 26-3 1-4 1-5 1-6 25-7 26-8 26-9 26-10 26-11 26-12 17-13 17-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 17-23 1-24 1-25 1-26 25-27 1-28 22-29
 S-61	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> med <unk> <unk> a. located and what is the <unk> <unk> number ?
-W-61	0.977	seconds
+W-61	1.014	seconds
 H-61	-0.15154311060905457	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-61	-0.15154311060905457	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-61	-0.0337 -0.0577 -0.0695 -0.0487 -0.0602 -0.0441 -0.0530 -0.0749 -0.0639 -0.0656 -0.0675 -0.0700 -0.0711 -0.0727 -0.0759 -0.0818 -0.1072 -0.1131 -0.1003 -0.1023 -0.1154 -0.1732 -0.3665 -2.1862 -0.0511 -0.0570 -0.0560 -0.0634 -0.0505 -0.0790 -0.0665
 A-61	6-0 1-1 0-2 31-3 1-4 1-5 1-6 30-7 31-8 31-9 31-10 31-11 31-12 31-13 31-14 31-15 31-16 31-17 31-18 31-19 31-20 22-21 31-22 31-23 1-24 1-25 1-26 30-27 1-28 30-29
 S-62	<unk> here is <unk> as <unk> <unk> <unk> se <unk> <unk> <unk> <unk> <unk> stand <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-62	0.978	seconds
+W-62	1.033	seconds
 H-62	-0.15438395738601685	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r brack_open sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-62	-0.15438395738601685	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r brack_open sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-62	-0.0327 -0.0577 -0.0680 -0.0478 -0.0599 -0.0439 -0.0524 -0.0742 -0.0636 -0.0652 -0.0672 -0.0697 -0.0707 -0.0720 -0.0749 -0.0802 -0.0996 -0.1040 -0.0947 -0.0965 -0.1065 -0.1496 -0.3131 -2.4071 -0.0495 -0.0569 -0.0550 -0.0608 -0.0489 -0.0785 -0.0652
 A-62	37-0 20-1 0-2 0-3 1-4 1-5 1-6 0-7 24-8 24-9 24-10 24-11 24-12 24-13 24-14 31-15 28-16 28-17 28-18 28-19 28-20 28-21 28-22 28-23 1-24 1-25 1-26 24-27 1-28 36-29
 S-63	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> as <unk> <unk> d located and what is the <unk> <unk> number ?
-W-63	0.971	seconds
+W-63	1.033	seconds
 H-63	-0.15221260488033295	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-63	-0.15221260488033295	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-63	-0.0336 -0.0577 -0.0700 -0.0490 -0.0605 -0.0441 -0.0529 -0.0753 -0.0641 -0.0658 -0.0681 -0.0708 -0.0717 -0.0731 -0.0760 -0.0818 -0.1060 -0.1116 -0.0994 -0.1014 -0.1138 -0.1688 -0.3568 -2.2248 -0.0496 -0.0572 -0.0561 -0.0635 -0.0490 -0.0794 -0.0667
 A-63	33-0 1-1 0-2 33-3 1-4 1-5 1-6 32-7 33-8 33-9 33-10 33-11 33-12 33-13 6-14 6-15 6-16 6-17 6-18 6-19 6-20 6-21 6-22 6-23 1-24 1-25 1-26 32-27 1-28 29-29
 S-64	<unk> here is <unk> <unk> <unk> se <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-64	0.946	seconds
+W-64	0.999	seconds
 H-64	-0.14973287284374237	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-64	-0.14973287284374237	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-64	-0.0350 -0.0577 -0.0704 -0.0495 -0.0603 -0.0442 -0.0533 -0.0750 -0.0642 -0.0660 -0.0677 -0.0702 -0.0716 -0.0735 -0.0772 -0.0842 -0.1199 -0.1287 -0.1094 -0.1117 -0.1305 -0.2120 -0.4435 -1.9337 -0.0532 -0.0568 -0.0569 -0.0658 -0.0525 -0.0795 -0.0677
 A-64	27-0 20-1 0-2 27-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 26-27 1-28 27-29
 S-65	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> j located and what is the <unk> <unk> number ?
-W-65	0.948	seconds
+W-65	1.014	seconds
 H-65	-0.15319618582725525	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-65	-0.15319618582725525	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-65	-0.0332 -0.0577 -0.0701 -0.0491 -0.0607 -0.0442 -0.0528 -0.0758 -0.0643 -0.0661 -0.0687 -0.0715 -0.0723 -0.0734 -0.0761 -0.0816 -0.1038 -0.1089 -0.0980 -0.0999 -0.1113 -0.1618 -0.3415 -2.2869 -0.0483 -0.0575 -0.0560 -0.0633 -0.0477 -0.0795 -0.0670
 A-65	32-0 1-1 0-2 32-3 1-4 1-5 1-6 8-7 32-8 32-9 32-10 32-11 32-12 32-13 6-14 6-15 6-16 6-17 6-18 6-19 6-20 6-21 6-22 6-23 1-24 1-25 1-26 23-27 1-28 28-29
 S-66	<unk> here is <unk> <unk> <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> j <unk> <unk> as <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-66	0.898	seconds
+W-66	1.002	seconds
 H-66	-0.15083906054496765	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-66	-0.15083906054496765	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-66	-0.0343 -0.0579 -0.0704 -0.0495 -0.0607 -0.0442 -0.0533 -0.0754 -0.0643 -0.0660 -0.0681 -0.0707 -0.0718 -0.0734 -0.0766 -0.0830 -0.1118 -0.1187 -0.1036 -0.1057 -0.1208 -0.1870 -0.3948 -2.0871 -0.0510 -0.0572 -0.0566 -0.0648 -0.0504 -0.0797 -0.0674
 A-66	30-0 1-1 0-2 30-3 1-4 1-5 1-6 29-7 14-8 14-9 14-10 14-11 14-12 14-13 14-14 21-15 21-16 21-17 21-18 21-19 21-20 21-21 21-22 21-23 1-24 1-25 1-26 29-27 1-28 29-29
 S-67	<unk> here is <unk> z <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-67	0.869	seconds
+W-67	1.010	seconds
 H-67	-0.14788971841335297	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-67	-0.14788971841335297	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-67	-0.0363 -0.0577 -0.0718 -0.0508 -0.0607 -0.0446 -0.0538 -0.0756 -0.0650 -0.0669 -0.0688 -0.0713 -0.0728 -0.0748 -0.0790 -0.0872 -0.1369 -0.1495 -0.1216 -0.1241 -0.1508 -0.2618 -2.0146 -0.0547 -0.0574 -0.0575 -0.0670 -0.0536 -0.0798 -0.0701
 A-67	4-0 17-1 0-2 24-3 1-4 1-5 1-6 23-7 15-8 15-9 15-10 15-11 15-12 15-13 15-14 15-15 15-16 15-17 15-18 15-19 15-20 15-21 15-22 1-23 1-24 1-25 23-26 1-27 20-28
 S-68	<unk> here is <unk> <unk> a <unk> insurance company <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-68	0.779	seconds
+W-68	0.870	seconds
 H-68	-0.14686410129070282	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-68	-0.14686410129070282	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-68	-0.0389 -0.0570 -0.0715 -0.0525 -0.0607 -0.0446 -0.0537 -0.0751 -0.0658 -0.0679 -0.0695 -0.0721 -0.0741 -0.0768 -0.0822 -0.0937 -0.1867 -0.2128 -0.1581 -0.1619 -0.2120 -0.3944 -1.5706 -0.0582 -0.0562 -0.0583 -0.0701 -0.0573 -0.0807 -0.0726
 A-68	21-0 14-1 0-2 20-3 1-4 3-5 1-6 20-7 21-8 21-9 21-10 21-11 21-12 12-13 12-14 12-15 12-16 12-17 12-18 12-19 12-20 12-21 12-22 1-23 8-24 1-25 3-26 1-27 17-28
 S-69	<unk> here is <unk> <unk> <unk> c. <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> a. located and what is the <unk> <unk> number ?
-W-69	0.946	seconds
+W-69	1.014	seconds
 H-69	-0.14986468851566315	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-69	-0.14986468851566315	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-69	-0.0348 -0.0575 -0.0705 -0.0497 -0.0605 -0.0444 -0.0533 -0.0753 -0.0643 -0.0661 -0.0680 -0.0706 -0.0719 -0.0737 -0.0773 -0.0843 -0.1198 -0.1285 -0.1094 -0.1116 -0.1303 -0.2116 -0.4425 -1.9379 -0.0525 -0.0569 -0.0571 -0.0660 -0.0519 -0.0797 -0.0680
 A-69	6-0 20-1 0-2 12-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 26-27 1-28 23-29
 S-70	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> f <unk> <unk> <unk> <unk> dam located and what is the <unk> <unk> number ?
-W-70	0.953	seconds
+W-70	1.015	seconds
 H-70	-0.15063486993312836	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-70	-0.15063486993312836	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-70	-0.0343 -0.0576 -0.0712 -0.0501 -0.0611 -0.0443 -0.0532 -0.0762 -0.0646 -0.0665 -0.0690 -0.0718 -0.0727 -0.0741 -0.0773 -0.0838 -0.1147 -0.1222 -0.1058 -0.1079 -0.1241 -0.1957 -0.4121 -2.0317 -0.0498 -0.0573 -0.0572 -0.0659 -0.0492 -0.0800 -0.0684
 A-70	25-0 20-1 3-2 13-3 1-4 1-5 1-6 20-7 6-8 6-9 6-10 6-11 6-12 6-13 6-14 6-15 6-16 6-17 6-18 6-19 6-20 6-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 28-29
 S-71	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> land <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-71	0.950	seconds
+W-71	1.015	seconds
 H-71	-0.15032413601875305	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-71	-0.15032413601875305	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-71	-0.0344 -0.0578 -0.0698 -0.0490 -0.0600 -0.0441 -0.0532 -0.0747 -0.0640 -0.0657 -0.0673 -0.0697 -0.0711 -0.0729 -0.0764 -0.0828 -0.1126 -0.1198 -0.1042 -0.1062 -0.1219 -0.1900 -0.4011 -2.0636 -0.0525 -0.0568 -0.0563 -0.0644 -0.0519 -0.0790 -0.0669
 A-71	25-0 22-1 0-2 29-3 1-4 1-5 1-6 28-7 20-8 20-9 20-10 20-11 20-12 20-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 29-29
 S-72	<unk> here is <unk> o <unk> <unk> <unk> <unk> de <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-72	0.945	seconds
+W-72	1.014	seconds
 H-72	-0.14966505765914917	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-72	-0.14966505765914917	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-72	-0.0351 -0.0576 -0.0705 -0.0497 -0.0603 -0.0442 -0.0533 -0.0751 -0.0643 -0.0660 -0.0678 -0.0703 -0.0717 -0.0736 -0.0773 -0.0845 -0.1217 -0.1308 -0.1107 -0.1129 -0.1326 -0.2173 -0.4533 -1.9060 -0.0532 -0.0567 -0.0569 -0.0662 -0.0526 -0.0795 -0.0680
 A-72	27-0 20-1 0-2 27-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 26-27 1-28 27-29
 S-73	<unk> here is blue square re <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-73	0.784	seconds
+W-73	0.832	seconds
 H-73	-0.15439797937870026	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-73	-0.15439797937870026	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-73	-0.0400 -0.0553 -0.0716 -0.0541 -0.0613 -0.0463 -0.0528 -0.0761 -0.0673 -0.0697 -0.0717 -0.0748 -0.0769 -0.0799 -0.0862 -0.1017 -0.2530 -0.2965 -0.2090 -0.2147 -0.2942 -0.5456 -1.2710 -0.0579 -0.0564 -0.0595 -0.0739 -0.0573 -0.0815 -0.0756
 A-73	4-0 16-1 0-2 15-3 1-4 0-5 5-6 17-7 18-8 18-9 18-10 18-11 18-12 18-13 9-14 9-15 9-16 9-17 9-18 9-19 9-20 9-21 9-22 1-23 0-24 1-25 0-26 1-27 17-28
 S-74	<unk> here is <unk> n <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-74	0.885	seconds
+W-74	0.975	seconds
 H-74	-0.14632532000541687	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-74	-0.14632532000541687	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-74	-0.0380 -0.0575 -0.0724 -0.0524 -0.0613 -0.0446 -0.0539 -0.0760 -0.0657 -0.0678 -0.0697 -0.0724 -0.0742 -0.0764 -0.0813 -0.0913 -0.1662 -0.1865 -0.1428 -0.1461 -0.1866 -0.3428 -1.7145 -0.0560 -0.0570 -0.0585 -0.0696 -0.0550 -0.0809 -0.0722
 A-74	21-0 14-1 3-2 20-3 1-4 4-5 1-6 20-7 21-8 21-9 21-10 21-11 21-12 12-13 12-14 12-15 12-16 12-17 12-18 12-19 12-20 12-21 12-22 1-23 4-24 1-25 3-26 1-27 17-28
 S-75	<unk> here is <unk> <unk> m <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-75	0.901	seconds
+W-75	1.020	seconds
 H-75	-0.15003708004951477	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-75	-0.15003708004951477	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-75	-0.0348 -0.0577 -0.0708 -0.0499 -0.0607 -0.0443 -0.0533 -0.0755 -0.0644 -0.0662 -0.0682 -0.0708 -0.0721 -0.0737 -0.0773 -0.0841 -0.1183 -0.1266 -0.1083 -0.1104 -0.1285 -0.2069 -0.4337 -1.9639 -0.0518 -0.0571 -0.0570 -0.0659 -0.0512 -0.0797 -0.0681
 A-75	28-0 21-1 0-2 14-3 1-4 1-5 1-6 0-7 28-8 28-9 28-10 28-11 28-12 28-13 19-14 19-15 19-16 19-17 19-18 19-19 19-20 19-21 19-22 19-23 1-24 1-25 1-26 27-27 1-28 28-29
 S-76	<unk> here is <unk> <unk> <unk> ck insurance <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-76	0.766	seconds
+W-76	0.858	seconds
 H-76	-0.14808909595012665	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-76	-0.14808909595012665	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-76	-0.0395 -0.0567 -0.0716 -0.0530 -0.0608 -0.0448 -0.0535 -0.0752 -0.0662 -0.0683 -0.0699 -0.0726 -0.0747 -0.0775 -0.0832 -0.0956 -0.2021 -0.2324 -0.1697 -0.1737 -0.2309 -0.4309 -1.4841 -0.0584 -0.0562 -0.0585 -0.0710 -0.0576 -0.0809 -0.0733
 A-76	20-0 13-1 0-2 19-3 1-4 3-5 1-6 19-7 20-8 20-9 20-10 20-11 20-12 20-13 11-14 11-15 11-16 11-17 11-18 11-19 11-20 11-21 11-22 1-23 3-24 1-25 3-26 1-27 16-28
 S-77	<unk> here is <unk> <unk> on <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-77	0.903	seconds
+W-77	0.971	seconds
 H-77	-0.14883944392204285	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-77	-0.14883944392204285	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-77	-0.0359 -0.0576 -0.0720 -0.0509 -0.0612 -0.0446 -0.0537 -0.0761 -0.0650 -0.0669 -0.0692 -0.0718 -0.0731 -0.0749 -0.0788 -0.0866 -0.1323 -0.1438 -0.1184 -0.1208 -0.1453 -0.2484 -2.0806 -0.0530 -0.0576 -0.0576 -0.0668 -0.0519 -0.0801 -0.0701
 A-77	25-0 18-1 0-2 25-3 1-4 1-5 1-6 0-7 25-8 25-9 25-10 25-11 25-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 3-26 1-27 21-28
 S-78	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> land en <unk> <unk> ken <unk> a. located and what is the <unk> <unk> number ?
-W-78	0.975	seconds
+W-78	1.030	seconds
 H-78	-0.1529722362756729	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-78	-0.1529722362756729	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-78	-0.0332 -0.0576 -0.0681 -0.0477 -0.0594 -0.0441 -0.0526 -0.0740 -0.0635 -0.0650 -0.0667 -0.0690 -0.0702 -0.0718 -0.0750 -0.0805 -0.1020 -0.1068 -0.0963 -0.0982 -0.1093 -0.1573 -0.3316 -2.3232 -0.0513 -0.0569 -0.0552 -0.0615 -0.0507 -0.0783 -0.0653
 A-78	33-0 1-1 0-2 33-3 1-4 1-5 1-6 32-7 33-8 33-9 33-10 33-11 33-12 33-13 33-14 33-15 33-16 33-17 33-18 33-19 33-20 24-21 33-22 33-23 1-24 1-25 1-26 32-27 1-28 29-29
 S-79	<unk> here is <unk> r basis <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-79	0.952	seconds
+W-79	1.025	seconds
 H-79	-0.15019024908542633	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-79	-0.15019024908542633	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-79	-0.0344 -0.0577 -0.0694 -0.0489 -0.0600 -0.0440 -0.0530 -0.0747 -0.0639 -0.0656 -0.0673 -0.0697 -0.0711 -0.0729 -0.0764 -0.0829 -0.1133 -0.1206 -0.1047 -0.1068 -0.1227 -0.1919 -0.4048 -2.0516 -0.0525 -0.0567 -0.0563 -0.0642 -0.0519 -0.0791 -0.0669
 A-79	29-0 22-1 0-2 29-3 1-4 1-5 1-6 28-7 20-8 20-9 20-10 20-11 20-12 20-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 28-29
 S-80	<unk> here is <unk> <unk> p <unk> <unk> as <unk> <unk> f <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-80	0.973	seconds
+W-80	1.036	seconds
 H-80	-0.15176799893379211	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-80	-0.15176799893379211	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-80	-0.0336 -0.0577 -0.0689 -0.0484 -0.0598 -0.0439 -0.0528 -0.0745 -0.0637 -0.0653 -0.0671 -0.0696 -0.0708 -0.0724 -0.0756 -0.0815 -0.1059 -0.1116 -0.0993 -0.1013 -0.1139 -0.1692 -0.3578 -2.2181 -0.0513 -0.0568 -0.0558 -0.0627 -0.0507 -0.0788 -0.0660
 A-80	5-0 1-1 0-2 32-3 1-4 1-5 1-6 31-7 32-8 32-9 32-10 32-11 32-12 32-13 23-14 23-15 23-16 23-17 23-18 23-19 23-20 23-21 23-22 23-23 1-24 1-25 1-26 31-27 1-28 28-29
 S-81	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> e located and what is the <unk> <unk> number ?
-W-81	0.913	seconds
+W-81	0.975	seconds
 H-81	-0.14672939479351044	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-81	-0.14672939479351044	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-81	-0.0381 -0.0573 -0.0733 -0.0531 -0.0618 -0.0452 -0.0540 -0.0768 -0.0661 -0.0684 -0.0707 -0.0735 -0.0752 -0.0773 -0.0821 -0.0924 -0.1735 -0.1959 -0.1483 -0.1517 -0.1958 -0.3626 -1.6580 -0.0548 -0.0574 -0.0589 -0.0711 -0.0539 -0.0814 -0.0734
 A-81	20-0 13-1 0-2 19-3 1-4 3-5 1-6 19-7 20-8 20-9 20-10 20-11 20-12 20-13 20-14 20-15 6-16 6-17 6-18 6-19 6-20 6-21 6-22 1-23 1-24 1-25 3-26 1-27 16-28
 S-82	<unk> here is <unk> r <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-82	0.923	seconds
+W-82	0.960	seconds
 H-82	-0.14788389205932617	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-82	-0.14788389205932617	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-82	-0.0363 -0.0576 -0.0722 -0.0512 -0.0612 -0.0446 -0.0538 -0.0762 -0.0652 -0.0671 -0.0693 -0.0720 -0.0734 -0.0752 -0.0793 -0.0875 -0.1382 -0.1511 -0.1226 -0.1251 -0.1524 -0.2655 -1.9998 -0.0536 -0.0575 -0.0579 -0.0675 -0.0526 -0.0803 -0.0705
 A-82	24-0 17-1 0-2 24-3 1-4 1-5 1-6 0-7 15-8 15-9 24-10 15-11 15-12 15-13 15-14 15-15 15-16 15-17 15-18 15-19 15-20 15-21 15-22 1-23 1-24 1-25 3-26 1-27 20-28
 S-83	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> m <unk> a. located and what is the <unk> <unk> number ?
-W-83	0.909	seconds
+W-83	1.000	seconds
 H-83	-0.15070345997810364	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-83	-0.15070345997810364	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-83	-0.0341 -0.0578 -0.0697 -0.0490 -0.0603 -0.0442 -0.0531 -0.0750 -0.0640 -0.0657 -0.0675 -0.0700 -0.0713 -0.0730 -0.0763 -0.0826 -0.1111 -0.1179 -0.1031 -0.1051 -0.1200 -0.1851 -0.3911 -2.0981 -0.0518 -0.0570 -0.0563 -0.0642 -0.0512 -0.0792 -0.0670
 A-83	6-0 0-1 0-2 30-3 1-4 1-5 1-6 29-7 30-8 30-9 30-10 30-11 30-12 30-13 30-14 21-15 21-16 21-17 21-18 21-19 21-20 21-21 21-22 21-23 1-24 1-25 1-26 29-27 1-28 29-29
 S-84	<unk> here is <unk> la <unk> <unk> - en <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-84	0.898	seconds
+W-84	0.996	seconds
 H-84	-0.15010719001293182	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-84	-0.15010719001293182	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-84	-0.0344 -0.0577 -0.0695 -0.0488 -0.0598 -0.0441 -0.0530 -0.0745 -0.0639 -0.0656 -0.0672 -0.0696 -0.0710 -0.0728 -0.0764 -0.0830 -0.1135 -0.1209 -0.1048 -0.1069 -0.1230 -0.1928 -0.4067 -2.0451 -0.0529 -0.0567 -0.0562 -0.0643 -0.0523 -0.0789 -0.0669
 A-84	29-0 22-1 0-2 29-3 1-4 4-5 1-6 28-7 20-8 20-9 20-10 20-11 20-12 20-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 28-29
 S-85	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> g <unk> <unk> <unk> <unk> <unk> j <unk> <unk> d <unk> land <unk> a. located and what is the <unk> <unk> number ?
-W-85	0.951	seconds
+W-85	1.041	seconds
 H-85	-0.15272760391235352	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-85	-0.15272760391235352	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-85	-0.0332 -0.0576 -0.0683 -0.0479 -0.0596 -0.0441 -0.0526 -0.0740 -0.0635 -0.0650 -0.0668 -0.0691 -0.0703 -0.0719 -0.0750 -0.0806 -0.1026 -0.1076 -0.0968 -0.0988 -0.1101 -0.1595 -0.3362 -2.3042 -0.0512 -0.0569 -0.0553 -0.0617 -0.0506 -0.0783 -0.0653
 A-85	34-0 1-1 0-2 34-3 1-4 1-5 1-6 33-7 34-8 34-9 34-10 34-11 34-12 34-13 25-14 25-15 25-16 25-17 25-18 25-19 25-20 25-21 25-22 25-23 1-24 1-25 1-26 33-27 1-28 30-29
 S-86	<unk> here is <unk> <unk> <unk> <unk> d <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-86	0.950	seconds
+W-86	1.009	seconds
 H-86	-0.14993916451931	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-86	-0.14993916451931	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-86	-0.0350 -0.0577 -0.0710 -0.0500 -0.0607 -0.0443 -0.0534 -0.0755 -0.0645 -0.0663 -0.0683 -0.0709 -0.0722 -0.0739 -0.0775 -0.0845 -0.1205 -0.1293 -0.1098 -0.1121 -0.1311 -0.2134 -0.4461 -1.9277 -0.0522 -0.0571 -0.0572 -0.0664 -0.0515 -0.0799 -0.0682
 A-86	7-0 20-1 0-2 15-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 26-27 1-28 27-29
 S-87	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-87	0.951	seconds
+W-87	1.001	seconds
 H-87	-0.14992733299732208	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-87	-0.14992733299732208	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-87	-0.0350 -0.0577 -0.0710 -0.0500 -0.0607 -0.0442 -0.0534 -0.0755 -0.0645 -0.0663 -0.0683 -0.0709 -0.0721 -0.0738 -0.0775 -0.0844 -0.1202 -0.1290 -0.1097 -0.1119 -0.1308 -0.2128 -0.4449 -1.9309 -0.0521 -0.0571 -0.0572 -0.0664 -0.0515 -0.0799 -0.0681
 A-87	27-0 14-1 0-2 15-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 26-27 1-28 27-29
 S-88	<unk> here is <unk> <unk> o nobel <unk> <unk> <unk> e <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-88	0.918	seconds
+W-88	0.968	seconds
 H-88	-0.1466945856809616	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-88	-0.1466945856809616	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-88	-0.0370 -0.0575 -0.0723 -0.0518 -0.0613 -0.0446 -0.0539 -0.0761 -0.0654 -0.0674 -0.0695 -0.0721 -0.0737 -0.0758 -0.0802 -0.0892 -0.1506 -0.1667 -0.1315 -0.1344 -0.1675 -0.3009 -1.8571 -0.0547 -0.0572 -0.0582 -0.0685 -0.0537 -0.0806 -0.0714
 A-88	6-0 16-1 0-2 23-3 1-4 1-5 1-6 0-7 14-8 14-9 14-10 14-11 14-12 14-13 14-14 14-15 14-16 14-17 14-18 14-19 14-20 14-21 14-22 1-23 1-24 1-25 3-26 1-27 22-28
 S-89	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> or <unk> <unk> <unk> en in de <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> org <unk> risk <unk> <unk> a. located and what is the <unk> <unk> number ?
-W-89	1.005	seconds
+W-89	1.054	seconds
 H-89	-0.15744096040725708	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-89	-0.15744096040725708	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-89	-0.0320 -0.0575 -0.0655 -0.0462 -0.0589 -0.0439 -0.0517 -0.0728 -0.0628 -0.0642 -0.0659 -0.0681 -0.0692 -0.0706 -0.0735 -0.0783 -0.0937 -0.0971 -0.0903 -0.0919 -0.0997 -0.1327 -0.2700 -0.3633 -2.4075 -0.0497 -0.0566 -0.0547 -0.0589 -0.0495 -0.0782 -0.0632
 A-89	41-0 18-1 0-2 0-3 1-4 35-5 35-6 46-7 33-8 33-9 33-10 33-11 33-12 33-13 33-14 33-15 33-16 33-17 33-18 33-19 33-20 33-21 33-22 33-23 33-24 1-25 35-26 1-27 46-28 1-29 43-30
 S-90	<unk> here is <unk> <unk> <unk> en <unk> <unk> is <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-90	0.941	seconds
+W-90	1.005	seconds
 H-90	-0.15006251633167267	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-90	-0.15006251633167267	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-90	-0.0345 -0.0577 -0.0698 -0.0490 -0.0599 -0.0441 -0.0532 -0.0747 -0.0640 -0.0657 -0.0673 -0.0697 -0.0711 -0.0729 -0.0765 -0.0831 -0.1142 -0.1217 -0.1053 -0.1074 -0.1238 -0.1949 -0.4109 -2.0315 -0.0529 -0.0567 -0.0563 -0.0646 -0.0523 -0.0790 -0.0670
 A-90	25-0 22-1 0-2 29-3 1-4 1-5 1-6 28-7 20-8 20-9 20-10 20-11 20-12 20-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 29-29
 S-91	<unk> here is <unk> <unk> a <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-91	0.896	seconds
+W-91	1.004	seconds
 H-91	-0.1497618556022644	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-91	-0.1497618556022644	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-91	-0.0350 -0.0577 -0.0705 -0.0496 -0.0603 -0.0442 -0.0534 -0.0751 -0.0643 -0.0660 -0.0678 -0.0703 -0.0717 -0.0735 -0.0772 -0.0843 -0.1200 -0.1288 -0.1095 -0.1117 -0.1306 -0.2123 -0.4441 -1.9322 -0.0531 -0.0569 -0.0569 -0.0660 -0.0524 -0.0795 -0.0678
 A-91	27-0 20-1 0-2 27-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 26-27 1-28 27-29
 S-92	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> sw <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> a. located and what is the <unk> <unk> number ?
-W-92	0.927	seconds
+W-92	1.007	seconds
 H-92	-0.15337339043617249	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-92	-0.15337339043617249	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-92	-0.0330 -0.0575 -0.0677 -0.0475 -0.0593 -0.0440 -0.0525 -0.0737 -0.0633 -0.0648 -0.0665 -0.0688 -0.0700 -0.0716 -0.0747 -0.0801 -0.1007 -0.1054 -0.0954 -0.0973 -0.1079 -0.1539 -0.3233 -2.3587 -0.0510 -0.0567 -0.0549 -0.0610 -0.0504 -0.0779 -0.0648
 A-92	25-0 25-1 0-2 11-3 1-4 1-5 1-6 35-7 36-8 36-9 36-10 27-11 27-12 27-13 27-14 27-15 27-16 27-17 27-18 27-19 27-20 27-21 27-22 27-23 1-24 1-25 1-26 35-27 1-28 35-29
 S-93	<unk> here is <unk> o <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-93	0.907	seconds
+W-93	1.011	seconds
 H-93	-0.15019281208515167	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-93	-0.15019281208515167	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-93	-0.0346 -0.0578 -0.0706 -0.0497 -0.0607 -0.0442 -0.0532 -0.0755 -0.0643 -0.0661 -0.0681 -0.0707 -0.0719 -0.0736 -0.0770 -0.0837 -0.1161 -0.1240 -0.1067 -0.1088 -0.1259 -0.2003 -0.4210 -2.0023 -0.0515 -0.0570 -0.0569 -0.0655 -0.0509 -0.0797 -0.0678
 A-93	28-0 21-1 0-2 14-3 1-4 1-5 1-6 27-7 28-8 28-9 28-10 28-11 28-12 28-13 19-14 19-15 19-16 19-17 19-18 19-19 19-20 19-21 19-22 19-23 1-24 1-25 1-26 27-27 1-28 28-29
 S-94	<unk> here is <unk> r <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-94	0.923	seconds
+W-94	0.958	seconds
 H-94	-0.14788389205932617	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-94	-0.14788389205932617	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-94	-0.0363 -0.0576 -0.0722 -0.0512 -0.0612 -0.0446 -0.0538 -0.0762 -0.0652 -0.0671 -0.0693 -0.0720 -0.0734 -0.0752 -0.0793 -0.0875 -0.1382 -0.1511 -0.1226 -0.1251 -0.1524 -0.2655 -1.9998 -0.0536 -0.0575 -0.0579 -0.0675 -0.0526 -0.0803 -0.0705
 A-94	24-0 17-1 0-2 24-3 1-4 1-5 1-6 0-7 15-8 15-9 24-10 15-11 15-12 15-13 15-14 15-15 15-16 15-17 15-18 15-19 15-20 15-21 15-22 1-23 1-24 1-25 3-26 1-27 20-28
 S-95	<unk> here is <unk> <unk> z <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-95	0.924	seconds
+W-95	0.993	seconds
 H-95	-0.14881356060504913	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-95	-0.14881356060504913	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-95	-0.0359 -0.0575 -0.0719 -0.0509 -0.0611 -0.0445 -0.0537 -0.0760 -0.0650 -0.0669 -0.0690 -0.0717 -0.0730 -0.0748 -0.0788 -0.0865 -0.1323 -0.1437 -0.1183 -0.1207 -0.1452 -0.2482 -2.0818 -0.0531 -0.0575 -0.0576 -0.0667 -0.0520 -0.0800 -0.0700
 A-95	25-0 12-1 0-2 25-3 1-4 1-5 1-6 0-7 16-8 16-9 25-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 3-26 1-27 21-28
 S-96	<unk> here is <unk> n <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-96	0.955	seconds
+W-96	1.002	seconds
 H-96	-0.14999701082706451	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-96	-0.14999701082706451	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-96	-0.0354 -0.0576 -0.0716 -0.0505 -0.0610 -0.0444 -0.0536 -0.0759 -0.0648 -0.0666 -0.0688 -0.0714 -0.0727 -0.0744 -0.0782 -0.0856 -0.1263 -0.1364 -0.1141 -0.1164 -0.1381 -0.2308 -0.4779 -1.8418 -0.0525 -0.0572 -0.0576 -0.0676 -0.0519 -0.0803 -0.0690
 A-96	26-0 19-1 0-2 26-3 1-4 4-5 1-6 25-7 26-8 26-9 26-10 26-11 26-12 17-13 17-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 17-23 1-24 1-25 1-26 25-27 1-28 22-29
 S-97	<unk> here is <unk> <unk> ling <unk> <unk> <unk> d <unk> a. located and what is the <unk> <unk> number ?
-W-97	0.823	seconds
+W-97	0.852	seconds
 H-97	-0.14712372422218323	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-97	-0.14712372422218323	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-97	-0.0385 -0.0567 -0.0718 -0.0524 -0.0606 -0.0456 -0.0536 -0.0755 -0.0660 -0.0681 -0.0697 -0.0723 -0.0743 -0.0770 -0.0825 -0.0941 -0.1894 -0.2163 -0.1603 -0.1642 -0.2159 -0.4026 -1.5511 -0.0584 -0.0566 -0.0584 -0.0709 -0.0576 -0.0804 -0.0729
 A-97	9-0 0-1 0-2 0-3 1-4 3-5 1-6 19-7 20-8 20-9 20-10 20-11 20-12 20-13 11-14 11-15 11-16 11-17 11-18 11-19 11-20 11-21 11-22 1-23 1-24 1-25 3-26 1-27 16-28
 S-98	<unk> here is <unk> <unk> i <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-98	0.935	seconds
+W-98	0.964	seconds
 H-98	-0.14695510268211365	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-98	-0.14695510268211365	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-98	-0.0369 -0.0576 -0.0719 -0.0512 -0.0607 -0.0447 -0.0538 -0.0756 -0.0652 -0.0671 -0.0689 -0.0715 -0.0731 -0.0752 -0.0797 -0.0883 -0.1449 -0.1595 -0.1274 -0.1301 -0.1606 -0.2850 -1.9162 -0.0556 -0.0573 -0.0577 -0.0678 -0.0545 -0.0800 -0.0707
 A-98	23-0 16-1 0-2 22-3 1-4 1-5 1-6 22-7 14-8 14-9 14-10 14-11 14-12 14-13 14-14 14-15 14-16 14-17 14-18 14-19 14-20 14-21 14-22 1-23 1-24 1-25 22-26 1-27 22-28
 S-99	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j de <unk> <unk> t located and what is the <unk> <unk> number ?
-W-99	0.922	seconds
+W-99	0.989	seconds
 H-99	-0.15058384835720062	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-99	-0.15058384835720062	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-99	-0.0343 -0.0576 -0.0713 -0.0500 -0.0611 -0.0444 -0.0532 -0.0761 -0.0645 -0.0664 -0.0689 -0.0716 -0.0726 -0.0740 -0.0772 -0.0838 -0.1148 -0.1224 -0.1059 -0.1080 -0.1243 -0.1962 -0.4133 -2.0280 -0.0500 -0.0573 -0.0570 -0.0660 -0.0494 -0.0799 -0.0684
 A-99	29-0 22-1 0-2 29-3 1-4 1-5 1-6 8-7 29-8 29-9 29-10 29-11 29-12 29-13 6-14 6-15 6-16 6-17 6-18 6-19 6-20 6-21 6-22 6-23 1-24 1-25 1-26 28-27 1-28 29-29
 S-100	<unk> here is <unk> <unk> a <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-100	0.895	seconds
+W-100	0.988	seconds
 H-100	-0.14978262782096863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-100	-0.14978262782096863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-100	-0.0354 -0.0576 -0.0711 -0.0500 -0.0605 -0.0443 -0.0535 -0.0754 -0.0645 -0.0663 -0.0682 -0.0707 -0.0721 -0.0740 -0.0778 -0.0852 -0.1249 -0.1347 -0.1130 -0.1153 -0.1364 -0.2267 -0.4706 -1.8594 -0.0533 -0.0570 -0.0572 -0.0670 -0.0527 -0.0798 -0.0685
 A-100	26-0 19-1 0-2 26-3 1-4 1-5 1-6 25-7 26-8 26-9 26-10 26-11 26-12 17-13 17-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 17-23 1-24 1-25 1-26 25-27 1-28 22-29
 S-101	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> g <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> <unk> <unk> a. located and what is the <unk> <unk> number ?
-W-101	0.917	seconds
+W-101	1.045	seconds
 H-101	-0.15138474106788635	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-101	-0.15138474106788635	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-101	-0.0337 -0.0577 -0.0696 -0.0488 -0.0602 -0.0441 -0.0530 -0.0749 -0.0639 -0.0656 -0.0675 -0.0700 -0.0711 -0.0727 -0.0760 -0.0820 -0.1079 -0.1140 -0.1008 -0.1028 -0.1163 -0.1754 -0.3711 -2.1693 -0.0512 -0.0570 -0.0561 -0.0636 -0.0506 -0.0791 -0.0666
 A-101	6-0 1-1 0-2 31-3 1-4 1-5 1-6 30-7 31-8 31-9 31-10 31-11 31-12 31-13 31-14 31-15 31-16 31-17 31-18 31-19 22-20 22-21 31-22 31-23 1-24 1-25 1-26 30-27 1-28 30-29
 S-102	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> ale <unk> <unk> <unk> <unk> <unk> <unk> ars <unk> ep located and what is the <unk> <unk> number ?
-W-102	0.975	seconds
+W-102	1.037	seconds
 H-102	-0.15384797751903534	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-102	-0.15384797751903534	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-102	-0.0329 -0.0577 -0.0685 -0.0478 -0.0597 -0.0442 -0.0526 -0.0742 -0.0636 -0.0652 -0.0671 -0.0695 -0.0706 -0.0720 -0.0750 -0.0803 -0.1005 -0.1051 -0.0954 -0.0972 -0.1076 -0.1528 -0.3209 -2.3715 -0.0502 -0.0571 -0.0551 -0.0615 -0.0496 -0.0783 -0.0654
 A-102	6-0 29-1 0-2 8-3 1-4 1-5 1-6 0-7 16-8 16-9 16-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 16-23 1-24 1-25 1-26 2-27 1-28 35-29
 S-103	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-103	0.954	seconds
+W-103	1.013	seconds
 H-103	-0.15083199739456177	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-103	-0.15083199739456177	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-103	-0.0342 -0.0578 -0.0703 -0.0494 -0.0605 -0.0441 -0.0532 -0.0754 -0.0642 -0.0660 -0.0680 -0.0706 -0.0717 -0.0733 -0.0766 -0.0829 -0.1115 -0.1184 -0.1034 -0.1055 -0.1205 -0.1862 -0.3933 -2.0920 -0.0510 -0.0571 -0.0566 -0.0647 -0.0505 -0.0796 -0.0673
 A-103	17-0 17-1 0-2 30-3 1-4 1-5 1-6 29-7 10-8 10-9 10-10 10-11 10-12 10-13 21-14 21-15 21-16 21-17 21-18 21-19 21-20 21-21 21-22 21-23 1-24 1-25 1-26 10-27 1-28 29-29
 S-104	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> <unk> e van <unk> 16 located and what is the <unk> <unk> number ?
-W-104	0.924	seconds
+W-104	0.992	seconds
 H-104	-0.14839258790016174	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-104	-0.14839258790016174	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-104	-0.0359 -0.0573 -0.0733 -0.0521 -0.0622 -0.0450 -0.0538 -0.0776 -0.0657 -0.0680 -0.0709 -0.0739 -0.0749 -0.0764 -0.0800 -0.0880 -0.1378 -0.1506 -0.1224 -0.1250 -0.1520 -0.2648 -2.0056 -0.0507 -0.0581 -0.0585 -0.0686 -0.0497 -0.0809 -0.0720
 A-104	25-0 18-1 3-2 16-3 1-4 14-5 1-6 0-7 16-8 16-9 16-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 6-21 6-22 1-23 14-24 1-25 3-26 1-27 21-28
 S-105	<unk> here is <unk> ad <unk> land <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> a. located and what is the <unk> <unk> number ?
-W-105	0.983	seconds
+W-105	1.059	seconds
 H-105	-0.15394920110702515	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-105	-0.15394920110702515	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-105	-0.0328 -0.0576 -0.0674 -0.0474 -0.0593 -0.0439 -0.0523 -0.0737 -0.0633 -0.0648 -0.0665 -0.0688 -0.0700 -0.0715 -0.0745 -0.0799 -0.0996 -0.1041 -0.0946 -0.0965 -0.1066 -0.1503 -0.3148 -2.3968 -0.0508 -0.0567 -0.0548 -0.0605 -0.0502 -0.0780 -0.0647
 A-105	6-0 13-1 3-2 38-3 1-4 1-5 1-6 37-7 38-8 38-9 38-10 38-11 29-12 29-13 29-14 29-15 29-16 29-17 29-18 29-19 29-20 29-21 29-22 29-23 1-24 27-25 1-26 27-27 1-28 34-29
 S-106	<unk> here is <unk> <unk> <unk> <unk> et <unk> <unk> <unk> t <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-106	0.968	seconds
+W-106	1.032	seconds
 H-106	-0.1509445756673813	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-106	-0.1509445756673813	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-106	-0.0341 -0.0578 -0.0701 -0.0492 -0.0604 -0.0440 -0.0532 -0.0753 -0.0641 -0.0659 -0.0679 -0.0704 -0.0716 -0.0731 -0.0764 -0.0827 -0.1107 -0.1174 -0.1028 -0.1049 -0.1195 -0.1836 -0.3878 -2.1106 -0.0511 -0.0570 -0.0565 -0.0644 -0.0505 -0.0795 -0.0670
 A-106	18-0 18-1 0-2 31-3 1-4 1-5 1-6 30-7 31-8 31-9 31-10 31-11 31-12 31-13 22-14 22-15 22-16 22-17 22-18 22-19 22-20 22-21 22-22 22-23 1-24 1-25 1-26 30-27 1-28 30-29
 S-107	<unk> here is <unk> <unk> life insurance <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-107	0.790	seconds
+W-107	0.868	seconds
 H-107	-0.15082600712776184	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-107	-0.15082600712776184	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-107	-0.0400 -0.0561 -0.0716 -0.0535 -0.0608 -0.0453 -0.0532 -0.0754 -0.0667 -0.0689 -0.0706 -0.0734 -0.0755 -0.0785 -0.0846 -0.0986 -0.2274 -0.2643 -0.1889 -0.1938 -0.2622 -0.4887 -1.3674 -0.0586 -0.0561 -0.0588 -0.0724 -0.0580 -0.0811 -0.0744
 A-107	5-0 5-1 0-2 18-3 1-4 3-5 1-6 18-7 19-8 19-9 19-10 19-11 19-12 19-13 10-14 10-15 10-16 10-17 10-18 10-19 10-20 10-21 10-22 1-23 3-24 1-25 3-26 1-27 18-28
 S-108	<unk> here is <unk> el insurance <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-108	0.743	seconds
+W-108	0.825	seconds
 H-108	-0.1551763415336609	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName brack_close el el sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-108	-0.1551763415336609	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l eiopa-Base:hasIdentifyingName eiopa-Base:hasIdentifyingName brack_close el el sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-108	-0.0405 -0.0552 -0.0710 -0.0539 -0.0607 -0.0459 -0.0527 -0.0752 -0.0672 -0.0695 -0.0712 -0.0741 -0.0764 -0.0796 -0.0863 -0.1023 -0.2603 -0.3056 -0.2146 -0.2207 -0.3025 -0.5597 -1.2478 -0.0591 -0.0558 -0.0589 -0.0735 -0.0585 -0.0811 -0.0753
 A-108	18-0 11-1 0-2 16-3 1-4 3-5 1-6 17-7 14-8 14-9 18-10 4-11 4-12 9-13 9-14 9-15 9-16 9-17 9-18 9-19 9-20 9-21 9-22 1-23 3-24 1-25 3-26 1-27 17-28
 S-109	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j de <unk> <unk> <unk> en <unk> a. located and what is the <unk> <unk> number ?
-W-109	0.921	seconds
+W-109	1.039	seconds
 H-109	-0.15273861587047577	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-109	-0.15273861587047577	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-109	-0.0332 -0.0577 -0.0686 -0.0480 -0.0597 -0.0441 -0.0528 -0.0743 -0.0636 -0.0652 -0.0670 -0.0694 -0.0706 -0.0721 -0.0752 -0.0808 -0.1030 -0.1080 -0.0971 -0.0991 -0.1104 -0.1602 -0.3382 -2.2961 -0.0511 -0.0570 -0.0553 -0.0621 -0.0504 -0.0785 -0.0657
 A-109	6-0 1-1 0-2 32-3 1-4 1-5 1-6 31-7 32-8 32-9 32-10 32-11 32-12 32-13 32-14 32-15 32-16 32-17 32-18 32-19 32-20 32-21 32-22 32-23 1-24 1-25 1-26 31-27 1-28 28-29
 S-110	<unk> here is <unk> re <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-110	0.759	seconds
+W-110	0.836	seconds
 H-110	-0.15644115209579468	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-110	-0.15644115209579468	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-110	-0.0404 -0.0552 -0.0720 -0.0546 -0.0614 -0.0468 -0.0528 -0.0762 -0.0676 -0.0701 -0.0721 -0.0752 -0.0774 -0.0804 -0.0869 -0.1031 -0.2665 -0.3137 -0.2195 -0.2256 -0.3104 -0.5741 -1.2274 -0.0578 -0.0566 -0.0595 -0.0749 -0.0572 -0.0816 -0.0763
 A-110	4-0 10-1 0-2 15-3 1-4 3-5 4-6 16-7 17-8 17-9 17-10 17-11 17-12 17-13 8-14 8-15 8-16 8-17 8-18 8-19 8-20 8-21 8-22 1-23 3-24 1-25 3-26 1-27 16-28
 S-111	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> river <unk> <unk> a. located and what is the <unk> <unk> number ?
-W-111	0.982	seconds
+W-111	1.030	seconds
 H-111	-0.15268753468990326	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-111	-0.15268753468990326	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-111	-0.0333 -0.0577 -0.0687 -0.0482 -0.0598 -0.0441 -0.0527 -0.0744 -0.0636 -0.0653 -0.0671 -0.0695 -0.0707 -0.0722 -0.0753 -0.0809 -0.1033 -0.1084 -0.0973 -0.0993 -0.1108 -0.1611 -0.3399 -2.2899 -0.0508 -0.0570 -0.0555 -0.0622 -0.0501 -0.0786 -0.0657
 A-111	19-0 1-1 0-2 33-3 1-4 1-5 1-6 32-7 33-8 33-9 33-10 33-11 33-12 33-13 33-14 33-15 33-16 33-17 33-18 33-19 33-20 33-21 33-22 33-23 1-24 1-25 1-26 32-27 1-28 29-29
 S-112	<unk> here is <unk> r <unk> <unk> <unk> <unk> de <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-112	0.986	seconds
+W-112	1.033	seconds
 H-112	-0.1521783471107483	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-112	-0.1521783471107483	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-112	-0.0335 -0.0576 -0.0684 -0.0480 -0.0595 -0.0439 -0.0528 -0.0741 -0.0635 -0.0651 -0.0668 -0.0692 -0.0704 -0.0720 -0.0753 -0.0810 -0.1042 -0.1095 -0.0980 -0.0999 -0.1118 -0.1639 -0.3463 -2.2622 -0.0515 -0.0568 -0.0554 -0.0620 -0.0509 -0.0785 -0.0655
 A-112	33-0 1-1 0-2 33-3 1-4 1-5 1-6 32-7 33-8 33-9 33-10 33-11 33-12 33-13 33-14 24-15 24-16 24-17 24-18 24-19 24-20 24-21 24-22 24-23 1-24 1-25 1-26 32-27 1-28 29-29
 S-113	<unk> here is <unk> <unk> <unk> <unk> e <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> a. located and what is the <unk> <unk> number ?
-W-113	0.975	seconds
+W-113	1.003	seconds
 H-113	-0.1505974382162094	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-113	-0.1505974382162094	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-113	-0.0341 -0.0578 -0.0698 -0.0490 -0.0602 -0.0442 -0.0531 -0.0750 -0.0640 -0.0657 -0.0675 -0.0700 -0.0713 -0.0730 -0.0764 -0.0827 -0.1116 -0.1185 -0.1035 -0.1055 -0.1206 -0.1867 -0.3944 -2.0870 -0.0519 -0.0569 -0.0564 -0.0643 -0.0513 -0.0792 -0.0670
 A-113	7-0 22-1 3-2 29-3 1-4 1-5 1-6 28-7 29-8 29-9 29-10 29-11 29-12 20-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 29-29
 S-114	<unk> here is <unk> <unk> a <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-114	0.974	seconds
+W-114	0.997	seconds
 H-114	-0.14978262782096863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-114	-0.14978262782096863	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-114	-0.0354 -0.0576 -0.0711 -0.0500 -0.0605 -0.0443 -0.0535 -0.0754 -0.0645 -0.0663 -0.0682 -0.0707 -0.0721 -0.0740 -0.0778 -0.0852 -0.1249 -0.1347 -0.1130 -0.1153 -0.1364 -0.2267 -0.4706 -1.8594 -0.0533 -0.0570 -0.0572 -0.0670 -0.0527 -0.0798 -0.0685
 A-114	26-0 19-1 0-2 26-3 1-4 1-5 1-6 25-7 26-8 26-9 26-10 26-11 26-12 17-13 17-14 17-15 17-16 17-17 17-18 17-19 17-20 17-21 17-22 17-23 1-24 1-25 1-26 25-27 1-28 22-29
 S-115	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> de located and what is the <unk> <unk> number ?
-W-115	0.982	seconds
+W-115	0.967	seconds
 H-115	-0.14648251235485077	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close located located located located located located sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-115	-0.14648251235485077	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close located located located located located located sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-115	-0.0375 -0.0574 -0.0731 -0.0526 -0.0616 -0.0450 -0.0541 -0.0767 -0.0658 -0.0680 -0.0703 -0.0731 -0.0746 -0.0767 -0.0813 -0.0908 -0.1616 -0.1807 -0.1395 -0.1426 -0.1811 -0.3315 -1.7510 -0.0545 -0.0575 -0.0585 -0.0702 -0.0535 -0.0810 -0.0726
 A-115	21-0 14-1 0-2 20-3 1-4 3-5 1-6 20-7 21-8 21-9 21-10 21-11 21-12 21-13 21-14 13-15 13-16 13-17 13-18 13-19 13-20 6-21 6-22 1-23 1-24 1-25 3-26 1-27 17-28
 S-116	<unk> here is <unk> <unk> <unk> <unk> de <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-116	0.915	seconds
+W-116	0.968	seconds
 H-116	-0.14673705399036407	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-116	-0.14673705399036407	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-116	-0.0385 -0.0571 -0.0725 -0.0529 -0.0613 -0.0449 -0.0538 -0.0761 -0.0660 -0.0682 -0.0701 -0.0728 -0.0747 -0.0771 -0.0821 -0.0930 -0.1804 -0.2046 -0.1533 -0.1569 -0.2042 -0.3794 -1.6107 -0.0563 -0.0568 -0.0586 -0.0707 -0.0554 -0.0810 -0.0730
 A-116	7-0 13-1 3-2 19-3 1-4 3-5 1-6 19-7 20-8 20-9 20-10 20-11 20-12 11-13 11-14 11-15 11-16 11-17 11-18 11-19 11-20 11-21 11-22 1-23 1-24 1-25 3-26 1-27 16-28
 S-117	<unk> here is <unk> <unk> is <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-117	0.960	seconds
+W-117	0.978	seconds
 H-117	-0.14872677624225616	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-117	-0.14872677624225616	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-117	-0.0359 -0.0575 -0.0719 -0.0509 -0.0611 -0.0445 -0.0537 -0.0760 -0.0650 -0.0669 -0.0690 -0.0717 -0.0730 -0.0748 -0.0788 -0.0865 -0.1325 -0.1441 -0.1185 -0.1209 -0.1455 -0.2491 -2.0772 -0.0530 -0.0574 -0.0576 -0.0668 -0.0520 -0.0800 -0.0700
 A-117	25-0 12-1 0-2 25-3 1-4 1-5 1-6 24-7 16-8 16-9 16-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 3-26 1-27 21-28
 S-118	<unk> here is <unk> <unk> a <unk> <unk> <unk> <unk> - en <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-118	1.010	seconds
+W-118	1.034	seconds
 H-118	-0.1512456238269806	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-118	-0.1512456238269806	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-118	-0.0339 -0.0577 -0.0688 -0.0483 -0.0595 -0.0439 -0.0529 -0.0742 -0.0637 -0.0653 -0.0669 -0.0692 -0.0705 -0.0723 -0.0756 -0.0817 -0.1073 -0.1132 -0.1003 -0.1023 -0.1155 -0.1734 -0.3672 -2.1812 -0.0523 -0.0567 -0.0557 -0.0628 -0.0516 -0.0787 -0.0659
 A-118	32-0 1-1 0-2 32-3 1-4 1-5 1-6 31-7 32-8 32-9 32-10 32-11 32-12 32-13 32-14 32-15 23-16 23-17 23-18 23-19 23-20 23-21 23-22 23-23 1-24 1-25 1-26 31-27 1-28 28-29
 S-119	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> <unk> men <unk> a. located and what is the <unk> <unk> number ?
-W-119	1.003	seconds
+W-119	1.027	seconds
 H-119	-0.15205521881580353	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-119	-0.15205521881580353	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-119	-0.0335 -0.0577 -0.0691 -0.0485 -0.0600 -0.0441 -0.0529 -0.0747 -0.0638 -0.0654 -0.0673 -0.0698 -0.0709 -0.0725 -0.0756 -0.0814 -0.1053 -0.1109 -0.0989 -0.1009 -0.1132 -0.1674 -0.3539 -2.2342 -0.0509 -0.0570 -0.0558 -0.0628 -0.0503 -0.0789 -0.0661
 A-119	6-0 1-1 0-2 32-3 1-4 1-5 1-6 31-7 32-8 32-9 32-10 32-11 32-12 32-13 32-14 32-15 32-16 32-17 32-18 32-19 32-20 32-21 32-22 32-23 1-24 1-25 1-26 31-27 1-28 28-29
 S-120	<unk> here is <unk> om <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-120	0.910	seconds
+W-120	0.967	seconds
 H-120	-0.14794300496578217	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-120	-0.14794300496578217	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-120	-0.0363 -0.0576 -0.0722 -0.0512 -0.0612 -0.0446 -0.0538 -0.0762 -0.0652 -0.0671 -0.0693 -0.0720 -0.0734 -0.0752 -0.0793 -0.0874 -0.1378 -0.1505 -0.1222 -0.1248 -0.1518 -0.2643 -2.0052 -0.0536 -0.0575 -0.0578 -0.0674 -0.0525 -0.0803 -0.0705
 A-120	24-0 17-1 0-2 24-3 1-4 1-5 1-6 0-7 15-8 15-9 24-10 15-11 15-12 15-13 15-14 15-15 15-16 15-17 15-18 15-19 15-20 15-21 15-22 1-23 1-24 1-25 3-26 1-27 20-28
 S-121	<unk> here is <unk> k p &amp; i club <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-121	0.905	seconds
+W-121	0.968	seconds
 H-121	-0.14657358825206757	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-121	-0.14657358825206757	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-121	-0.0383 -0.0568 -0.0716 -0.0523 -0.0609 -0.0449 -0.0535 -0.0755 -0.0657 -0.0679 -0.0696 -0.0722 -0.0742 -0.0767 -0.0820 -0.0930 -0.1809 -0.2053 -0.1539 -0.1575 -0.2051 -0.3807 -1.6070 -0.0573 -0.0564 -0.0584 -0.0700 -0.0565 -0.0806 -0.0724
 A-121	5-0 14-1 3-2 20-3 1-4 6-5 1-6 20-7 21-8 21-9 21-10 21-11 21-12 21-13 12-14 12-15 12-16 12-17 12-18 12-19 12-20 12-21 12-22 1-23 6-24 1-25 3-26 1-27 17-28
 S-122	<unk> here is <unk> <unk> m <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-122	0.914	seconds
+W-122	0.967	seconds
 H-122	-0.14680330455303192	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-122	-0.14680330455303192	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-122	-0.0370 -0.0576 -0.0719 -0.0512 -0.0607 -0.0447 -0.0538 -0.0756 -0.0652 -0.0671 -0.0689 -0.0715 -0.0731 -0.0753 -0.0798 -0.0885 -0.1465 -0.1615 -0.1285 -0.1313 -0.1625 -0.2895 -1.8980 -0.0558 -0.0572 -0.0578 -0.0679 -0.0547 -0.0800 -0.0707
 A-122	23-0 16-1 0-2 22-3 1-4 1-5 1-6 22-7 14-8 14-9 14-10 14-11 14-12 14-13 14-14 14-15 14-16 14-17 14-18 14-19 14-20 14-21 14-22 1-23 1-24 1-25 22-26 1-27 19-28
 S-123	<unk> here is national academic <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-123	0.980	seconds
+W-123	1.000	seconds
 H-123	-0.14997246861457825	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-123	-0.14997246861457825	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-123	-0.0349 -0.0576 -0.0709 -0.0500 -0.0608 -0.0443 -0.0533 -0.0756 -0.0645 -0.0663 -0.0683 -0.0710 -0.0722 -0.0739 -0.0775 -0.0844 -0.1199 -0.1286 -0.1095 -0.1117 -0.1304 -0.2118 -0.4429 -1.9374 -0.0519 -0.0571 -0.0572 -0.0662 -0.0513 -0.0799 -0.0683
 A-123	3-0 20-1 0-2 13-3 1-4 1-5 1-6 26-7 14-8 14-9 14-10 14-11 14-12 14-13 14-14 14-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 14-27 1-28 27-29
 S-124	<unk> here is <unk> <unk> is <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-124	0.921	seconds
+W-124	0.989	seconds
 H-124	-0.14890414476394653	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-124	-0.14890414476394653	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-124	-0.0359 -0.0576 -0.0715 -0.0505 -0.0606 -0.0445 -0.0537 -0.0755 -0.0648 -0.0666 -0.0685 -0.0711 -0.0725 -0.0744 -0.0785 -0.0862 -0.1309 -0.1420 -0.1173 -0.1197 -0.1435 -0.2442 -2.1000 -0.0540 -0.0574 -0.0573 -0.0663 -0.0529 -0.0796 -0.0696
 A-124	25-0 18-1 0-2 25-3 1-4 1-5 1-6 24-7 16-8 16-9 16-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 16-21 16-22 1-23 1-24 1-25 24-26 1-27 21-28
 S-125	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j de <unk> <unk> <unk> p <unk> a. located and what is the <unk> <unk> number ?
-W-125	0.986	seconds
+W-125	1.035	seconds
 H-125	-0.1519552320241928	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-125	-0.1519552320241928	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-125	-0.0335 -0.0577 -0.0693 -0.0485 -0.0601 -0.0441 -0.0529 -0.0748 -0.0638 -0.0654 -0.0674 -0.0699 -0.0710 -0.0725 -0.0756 -0.0815 -0.1056 -0.1112 -0.0991 -0.1011 -0.1135 -0.1683 -0.3560 -2.2262 -0.0508 -0.0570 -0.0558 -0.0630 -0.0501 -0.0789 -0.0663
 A-125	6-0 1-1 0-2 32-3 1-4 1-5 1-6 31-7 32-8 32-9 32-10 32-11 32-12 32-13 32-14 32-15 32-16 32-17 32-18 32-19 32-20 32-21 32-22 32-23 1-24 1-25 1-26 31-27 1-28 28-29
 S-126	<unk> here is <unk> <unk> p <unk> <unk> as <unk> <unk> f <unk> <unk> <unk> <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-126	0.986	seconds
+W-126	1.030	seconds
 H-126	-0.15176799893379211	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-126	-0.15176799893379211	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-126	-0.0336 -0.0577 -0.0689 -0.0484 -0.0598 -0.0439 -0.0528 -0.0745 -0.0637 -0.0653 -0.0671 -0.0696 -0.0708 -0.0724 -0.0756 -0.0815 -0.1059 -0.1116 -0.0993 -0.1013 -0.1139 -0.1692 -0.3578 -2.2181 -0.0513 -0.0568 -0.0558 -0.0627 -0.0507 -0.0788 -0.0660
 A-126	5-0 1-1 0-2 32-3 1-4 1-5 1-6 31-7 32-8 32-9 32-10 32-11 32-12 32-13 23-14 23-15 23-16 23-17 23-18 23-19 23-20 23-21 23-22 23-23 1-24 1-25 1-26 31-27 1-28 28-29
 S-127	<unk> here is <unk> <unk> <unk> <unk> ad en land <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-127	0.963	seconds
+W-127	0.999	seconds
 H-127	-0.15002897381782532	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-127	-0.15002897381782532	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-127	-0.0345 -0.0577 -0.0699 -0.0492 -0.0601 -0.0442 -0.0531 -0.0748 -0.0640 -0.0657 -0.0675 -0.0699 -0.0713 -0.0731 -0.0767 -0.0833 -0.1152 -0.1229 -0.1060 -0.1082 -0.1249 -0.1978 -0.4162 -2.0155 -0.0526 -0.0568 -0.0565 -0.0648 -0.0520 -0.0792 -0.0671
 A-127	16-0 16-1 0-2 29-3 1-4 1-5 1-6 28-7 20-8 20-9 20-10 20-11 20-12 20-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 29-29
 S-128	<unk> here is <unk> <unk> don <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-128	0.774	seconds
+W-128	0.847	seconds
 H-128	-0.15245099365711212	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-128	-0.15245099365711212	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-128	-0.0399 -0.0558 -0.0725 -0.0541 -0.0614 -0.0461 -0.0531 -0.0763 -0.0671 -0.0695 -0.0716 -0.0745 -0.0766 -0.0794 -0.0854 -0.1000 -0.2384 -0.2781 -0.1973 -0.2024 -0.2758 -0.5141 -1.3233 -0.0573 -0.0567 -0.0592 -0.0739 -0.0567 -0.0815 -0.0755
 A-128	5-0 16-1 0-2 15-3 1-4 3-5 1-6 17-7 18-8 18-9 18-10 18-11 18-12 9-13 9-14 9-15 9-16 9-17 9-18 9-19 9-20 9-21 9-22 1-23 3-24 1-25 3-26 1-27 17-28
 S-129	<unk> here is <unk> <unk> <unk> v <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-129	0.765	seconds
+W-129	0.901	seconds
 H-129	-0.14852425456047058	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-129	-0.14852425456047058	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-129	-0.0392 -0.0566 -0.0727 -0.0535 -0.0614 -0.0453 -0.0536 -0.0762 -0.0665 -0.0688 -0.0707 -0.0736 -0.0755 -0.0781 -0.0836 -0.0960 -0.2039 -0.2347 -0.1710 -0.1750 -0.2332 -0.4360 -1.4744 -0.0569 -0.0568 -0.0590 -0.0721 -0.0561 -0.0814 -0.0741
 A-129	19-0 12-1 0-2 18-3 1-4 3-5 1-6 18-7 19-8 19-9 19-10 19-11 19-12 19-13 10-14 10-15 10-16 10-17 10-18 10-19 10-20 10-21 10-22 1-23 1-24 1-25 3-26 1-27 18-28
 S-130	<unk> here is <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> m <unk> a. located and what is the <unk> <unk> number ?
-W-130	0.900	seconds
+W-130	1.020	seconds
 H-130	-0.15022292733192444	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-130	-0.15022292733192444	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close var_o var_o var_o var_o var_o var_o var_o var_o var_o quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-130	-0.0343 -0.0577 -0.0699 -0.0492 -0.0603 -0.0442 -0.0531 -0.0750 -0.0641 -0.0658 -0.0676 -0.0701 -0.0714 -0.0731 -0.0766 -0.0832 -0.1142 -0.1216 -0.1053 -0.1074 -0.1237 -0.1946 -0.4101 -2.0354 -0.0523 -0.0569 -0.0565 -0.0648 -0.0516 -0.0793 -0.0673
 A-130	6-0 22-1 0-2 12-3 1-4 1-5 1-6 28-7 29-8 29-9 29-10 29-11 29-12 29-13 20-14 20-15 20-16 20-17 20-18 20-19 20-20 20-21 20-22 20-23 1-24 1-25 1-26 28-27 1-28 29-29
 S-131	<unk> here is <unk> <unk> <unk> <unk> <unk> <unk> <unk> land <unk> <unk> <unk> <unk> <unk> <unk> ar <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-131	0.943	seconds
+W-131	1.032	seconds
 H-131	-0.1506938338279724	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-131	-0.1506938338279724	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-131	-0.0342 -0.0578 -0.0701 -0.0492 -0.0604 -0.0441 -0.0532 -0.0752 -0.0641 -0.0658 -0.0678 -0.0703 -0.0715 -0.0731 -0.0765 -0.0828 -0.1117 -0.1186 -0.1036 -0.1056 -0.1207 -0.1869 -0.3945 -2.0871 -0.0514 -0.0570 -0.0565 -0.0645 -0.0508 -0.0794 -0.0670
 A-131	17-0 17-1 0-2 30-3 1-4 1-5 1-6 29-7 21-8 21-9 21-10 21-11 21-12 21-13 21-14 21-15 21-16 21-17 21-18 21-19 21-20 21-21 21-22 21-23 1-24 1-25 1-26 29-27 1-28 29-29
 S-132	<unk> here is <unk> <unk> is <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-132	0.808	seconds
+W-132	0.873	seconds
 H-132	-0.15170679986476898	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close eiopa-Base:hasIdentifyingName brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-132	-0.15170679986476898	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close eiopa-Base:hasIdentifyingName brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-132	-0.0398 -0.0559 -0.0726 -0.0541 -0.0614 -0.0460 -0.0532 -0.0763 -0.0670 -0.0694 -0.0715 -0.0744 -0.0764 -0.0792 -0.0851 -0.0993 -0.2327 -0.2709 -0.1928 -0.1978 -0.2688 -0.5015 -1.3451 -0.0572 -0.0567 -0.0592 -0.0737 -0.0565 -0.0815 -0.0753
 A-132	18-0 16-1 0-2 15-3 1-4 3-5 1-6 17-7 18-8 14-9 18-10 18-11 18-12 9-13 9-14 9-15 9-16 9-17 9-18 9-19 9-20 9-21 9-22 1-23 3-24 1-25 3-26 1-27 17-28
 S-133	<unk> here is <unk> <unk> z <unk> <unk> <unk> <unk> de <unk> <unk> <unk> <unk> <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-133	0.949	seconds
+W-133	1.024	seconds
 H-133	-0.1498815268278122	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-133	-0.1498815268278122	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-133	-0.0350 -0.0576 -0.0711 -0.0501 -0.0607 -0.0443 -0.0534 -0.0756 -0.0645 -0.0663 -0.0683 -0.0709 -0.0722 -0.0740 -0.0776 -0.0847 -0.1216 -0.1308 -0.1107 -0.1130 -0.1325 -0.2171 -0.4529 -1.9086 -0.0522 -0.0570 -0.0572 -0.0666 -0.0516 -0.0799 -0.0683
 A-133	27-0 20-1 0-2 14-3 1-4 1-5 1-6 26-7 27-8 27-9 27-10 27-11 27-12 18-13 18-14 18-15 18-16 18-17 18-18 18-19 18-20 18-21 18-22 18-23 1-24 1-25 1-26 10-27 1-28 27-29
 S-134	<unk> here is <unk> ta <unk> <unk> <unk> <unk> en <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-134	0.916	seconds
+W-134	0.990	seconds
 H-134	-0.14627322554588318	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-134	-0.14627322554588318	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-134	-0.0373 -0.0573 -0.0714 -0.0514 -0.0607 -0.0446 -0.0536 -0.0755 -0.0653 -0.0672 -0.0690 -0.0715 -0.0733 -0.0756 -0.0803 -0.0897 -0.1545 -0.1716 -0.1344 -0.1374 -0.1724 -0.3117 -1.8165 -0.0564 -0.0569 -0.0580 -0.0680 -0.0554 -0.0802 -0.0710
 A-134	22-0 15-1 0-2 21-3 1-4 1-5 1-6 21-7 22-8 22-9 22-10 22-11 22-12 13-13 13-14 13-15 13-16 13-17 13-18 13-19 13-20 13-21 13-22 1-23 1-24 1-25 21-26 1-27 18-28
 S-135	<unk> here is <unk> <unk> <unk> <unk> e <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j <unk> <unk> <unk> . located and what is the <unk> <unk> number ?
-W-135	0.956	seconds
+W-135	1.029	seconds
 H-135	-0.151214137673378	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-135	-0.151214137673378	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-135	-0.0340 -0.0579 -0.0704 -0.0494 -0.0607 -0.0442 -0.0532 -0.0755 -0.0643 -0.0660 -0.0682 -0.0708 -0.0719 -0.0733 -0.0765 -0.0827 -0.1101 -0.1166 -0.1024 -0.1044 -0.1187 -0.1816 -0.3837 -2.1256 -0.0505 -0.0572 -0.0565 -0.0645 -0.0498 -0.0797 -0.0673
 A-135	7-0 1-1 0-2 30-3 1-4 1-5 1-6 29-7 30-8 30-9 30-10 30-11 30-12 21-13 21-14 21-15 21-16 21-17 21-18 21-19 21-20 21-21 21-22 21-23 1-24 1-25 1-26 29-27 1-28 29-29
 S-136	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> <unk> e van <unk> 16 located and what is the <unk> <unk> number ?
-W-136	0.927	seconds
+W-136	0.995	seconds
 H-136	-0.14839258790016174	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-136	-0.14839258790016174	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r quot_mark_r sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-136	-0.0359 -0.0573 -0.0733 -0.0521 -0.0622 -0.0450 -0.0538 -0.0776 -0.0657 -0.0680 -0.0709 -0.0739 -0.0749 -0.0764 -0.0800 -0.0880 -0.1378 -0.1506 -0.1224 -0.1250 -0.1520 -0.2648 -2.0056 -0.0507 -0.0581 -0.0585 -0.0686 -0.0497 -0.0809 -0.0720
 A-136	25-0 18-1 3-2 16-3 1-4 14-5 1-6 0-7 16-8 16-9 16-10 16-11 16-12 16-13 16-14 16-15 16-16 16-17 16-18 16-19 16-20 6-21 6-22 1-23 14-24 1-25 3-26 1-27 21-28
 S-137	<unk> here is <unk> <unk> <unk> . <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> j de <unk> p located and what is the <unk> <unk> number ?
-W-137	0.917	seconds
+W-137	1.043	seconds
 H-137	-0.15161632001399994	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 D-137	-0.15161632001399994	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brack_close brack_close brack_close brack_close brack_close brack_close sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot sep_dot quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
 P-137	-0.0337 -0.0577 -0.0708 -0.0495 -0.0609 -0.0442 -0.0531 -0.0760 -0.0644 -0.0662 -0.0687 -0.0715 -0.0724 -0.0736 -0.0766 -0.0826 -0.1089 -0.1151 -0.1016 -0.1036 -0.1172 -0.1777 -0.3759 -2.1544 -0.0492 -0.0574 -0.0565 -0.0647 -0.0486 -0.0798 -0.0677
 A-137	31-0 1-1 0-2 31-3 1-4 1-5 1-6 0-7 31-8 31-9 31-10 31-11 31-12 31-13 6-14 6-15 6-16 6-17 6-18 6-19 6-20 6-21 6-22 6-23 1-24 1-25 1-26 30-27 1-28 30-29
-2021-05-06 18:15:23 | INFO | fairseq_cli.interactive | Total time: 130.061 seconds; translation time: 127.939
+2021-05-07 15:41:36 | INFO | fairseq_cli.interactive | Total time: 138.633 seconds; translation time: 136.290
