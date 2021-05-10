@@ -79,6 +79,11 @@ pip install --editable ./
 # CFLAGS="-stdlib=libc++" pip install --editable ./
 ```
 
+TODO: add instructions for fast_align
+CMakeLists.txt: changed line 4 to 
+`set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++11 -O3 -g -I/usr/local/include")`
+on MacOS
+
 It is advisable to use a virtual environment for this project. One option is
 to use conda:
 
