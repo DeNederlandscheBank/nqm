@@ -1,4 +1,4 @@
-1689: old templates
+1689: old templates using gleif:LegalName
 
 14126: new templates, BPE 100 symbols
 
@@ -9,3 +9,5 @@
 10752: using subwords, iwslt dict
 
 31684: subwords and subword dictionary
+
+25028 no subwords, dictonary made on train set, names known
