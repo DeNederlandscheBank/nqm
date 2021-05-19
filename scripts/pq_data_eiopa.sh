@@ -104,29 +104,11 @@ echo "Preprocess using pointer-generator preprocess.py..."
       --target-out $OUT_DIR/data_"$ID"-$f.ql
   done
 
-#echo 'Generate SPARQL dictionary...'
-#python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
-#  --input $INT_DIR/data_$ID-train_val.ql.raw --output $DICT_DIR/dict-$ID.ql
+echo "Copy shared dict to nl and ql dict for building fairseq dataset..."
+  cat $DICT_DIR/dict."$ID".shared > $DICT_DIR/dict-"$ID".nl
+  cat $DICT_DIR/dict."$ID".shared > $DICT_DIR/dict-"$ID".ql
 
-#echo 'Generate dictionaries with names included..'
-#for L in nl ql; do
-#  python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
-#    --input $INT_DIR/data_$ID-train.$L --output $DICT_DIR/dict-$ID.$L
-#done
-
-#if [ $USE_SUBWORDS = YES ]; then
-#  . scripts/subword_processing.sh $DICT_DIR/dict-$ID.ql $CREATE_SUBWORD_DICTIONARY $ID
-#else
-#  # Copy files from Interim to Processed directly
-#  for L in nl ql; do
-#    for f in train.$L val.$L test_{1..$COUNT_TEST}.$L; do
-#      echo "copying ${f}..."
-#      cp -R $INT_DIR/data_"$ID"-$f $OUT_DIR/data_"$ID"-$f
-#    done
-#  done
-#fi
-
-#echo 'Learning alignments using script...'
-#. scripts/learn_alignments.sh $ID
+echo 'Learning alignments using script...'
+. scripts/learn_alignments.sh $ID
 
 echo 'Done! Thank you for your patience'

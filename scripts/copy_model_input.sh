@@ -4,8 +4,8 @@
 # This script copies the required model files using $ID and places them in the
 # correct directory. The name is adapated using $ID_new. These two variables
 # have to be adapted to the desired values.
-ID=05-05_19-36_31684
-ID_NEW=31684
+ID=19-05_11-52_15998
+ID_NEW=15998
 BPE=NO
 
 
