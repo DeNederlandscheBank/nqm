@@ -4,7 +4,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=7G
 #SBATCH --time=15:00:00
-#SBATCH --job-name=pg_transformer
+#SBATCH --job-name=pg_15285_transformer
 #SBATCH --output=output-%J.log
 
 module switch intel gcc
@@ -14,7 +14,7 @@ module load python
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
-ID=5861
+ID=15285
 ID_MODEL=$ID
 TEST_TEMPLATES=test_templates
 

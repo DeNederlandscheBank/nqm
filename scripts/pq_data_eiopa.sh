@@ -3,7 +3,7 @@
 # TO BE USED FOR THE POINTER-GENERATOR MODEL
 # Use this script from the root!
 
-USE_KNOWN_AND_UNKNOWN_NAMES=YES # if NO, all names are treated as unknown
+USE_KNOWN_AND_UNKNOWN_NAMES=NO # if NO, all names are treated as unknown
 
 VOCAB_SIZE=15000
 POSITION_MARKERS=100

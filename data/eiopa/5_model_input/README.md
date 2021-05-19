@@ -8,3 +8,5 @@ __Data Overview:__
 - 10752: using subwords, iwslt dict 
 - 31684: subwords and subword dictionary
 - 25028 no subwords, dictonary made on train set, names known
+- 16631: known and unknown names, no subwords, pointer-generator model, 15k vocab, 100 position markers
+- 15285: only unknown names, no subwords, pointer-generator model, 15k vocab, 100 position markers
