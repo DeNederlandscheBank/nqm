@@ -63,6 +63,6 @@ $SRC_DIR/fairseq-train $DATA_BIN \
       --eval-bleu-detok space \
       --eval-bleu-remove-bpe \
       --best-checkpoint-metric bleu --maximize-best-checkpoint-metric \
-    --stop-time-hourse 12 --cpu
+    --stop-time-hours 12 --cpu
 
 . scripts/_fairseq_evaluation_pg.sh HPC NO-BPE $ID $ID_MODEL
