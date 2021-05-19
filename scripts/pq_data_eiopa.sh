@@ -3,7 +3,7 @@
 # TO BE USED FOR THE POINTER-GENERATOR MODEL
 # Use this script from the root!
 
-USE_KNOWN_AND_UNKNOWN_NAMES=NO # if NO, all names are treated as unknown
+USE_KNOWN_AND_UNKNOWN_NAMES=YES # if NO, all names are treated as unknown
 
 VOCAB_SIZE=15000
 POSITION_MARKERS=100
@@ -96,7 +96,7 @@ python src_eiopa/generator.py \
 
 echo "Preprocess using pointer-generator preprocess.py..."
   for f in train val test_{1..$COUNT_TEST}; do
-    python fairseq/examples/pointer_generator/preprocess.py \
+    python src_eiopa/pg_preprocess.py \
       --source $INT_DIR/data_"$ID"-$f.nl \
       --target $INT_DIR/data_"$ID"-$f.ql \
       --vocab $DICT_DIR/dict."$ID".shared \
