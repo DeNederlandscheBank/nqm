@@ -40,7 +40,8 @@ if __name__ == '__main__':
         bpe='subword_nmt',
         bpe_codes=model_data_dir + '/bpe.codes',
         tokenizer='moses',
-        eval_bleu=False
+        eval_bleu=False,
+        remove_unk = 'models/bot/alignment.nl-ql.txt'
     )
 
     g = initialize_graph('data/eiopa/1_external')
