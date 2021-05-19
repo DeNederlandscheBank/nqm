@@ -181,6 +181,9 @@ if __name__ == "__main__":
                         help='generated translations', required=True)
     parser.add_argument('--in-file-reference', dest='reference_file',
                         help='reference translations', required=False)
+    parser.add_argument('--in-file-source', dest='source_file',
+                        help='source file with questions without unk',
+                        required=False)
     parser.add_argument('--out-file', dest='output_file_decoded',
                         help='file directory to write output', required=True)
     parser.add_argument('--out-file-encoded', dest='output_file_encoded',
@@ -199,7 +202,7 @@ if __name__ == "__main__":
                             f'as argument')
         results_list = read_in_interactive_output(args.input_file)
         if args.pg_mode is True:
-            results_list = replace_oovs(results_list, args.reference_file)
+            results_list = replace_oovs(results_list, args.source_file)
         result = write_decoded_queries_interactive(results_list,
                                                    args.reference_file,
                                                    args.output_file_decoded,
@@ -208,6 +211,10 @@ if __name__ == "__main__":
                                           args.output_file_encoded)
     else:
         results_list, result = read_in_generated_data(args.input_file)
+        if args.pg_mode is True:
+            results_list = replace_oovs(results_list, args.source_file)
         write_queries_generated(results_list, args.output_file_decoded)
     if args.sum_file:
         save_result(result, args.output_file_decoded, args.sum_file)
+    else:
+        print(result)

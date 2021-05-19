@@ -12,6 +12,7 @@ LICENSE file in the root directory of this source tree.
 """
 
 import re
+import argparse
 import sys
 
 class OOVIndexError(IndexError):
@@ -28,7 +29,7 @@ class OOVIndexError(IndexError):
         self.target_seq = target_seq
 
 
-def replace_oovs(source_in, target_file_in):
+def replace_oovs(target_in, source_file_in):
     """
     Replaces <unk-N> tokens in the target text with the corresponding word in
     the source text.
@@ -36,10 +37,10 @@ def replace_oovs(source_in, target_file_in):
     """
     oov_re = re.compile("^<unk-([0-9]+)>$")
 
-    target_in = []
-    with open(target_file_in, 'r', encoding='utf-8') as src:
+    source_in = []
+    with open(source_file_in, 'r', encoding='utf-8') as src:
         for line in src.readlines():
-            target_in.append(line.strip('\n'))
+            source_in.append(line.strip('\n'))
     src.close()
 
     target_out = []
@@ -58,7 +59,7 @@ def replace_oovs(source_in, target_file_in):
                 else:
                     token_out = token
                 target_seq_out.append(token_out)
-            target_out.append(target_seq_out)
+            target_out.append(" ".join(target_seq_out))
     except OOVIndexError as e:
         print(e, file=sys.stderr)
         print("Source sequence:", e.source_seq.strip(), file=sys.stderr)
