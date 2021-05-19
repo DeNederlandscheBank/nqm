@@ -57,7 +57,7 @@ $SRC_DIR/fairseq-train $DATA_BIN \
     --truncate-source --layernorm-embedding --share-all-embeddings \
     --encoder-normalize-before --decoder-normalize-before \
     --required-batch-size-multiple 1 --skip-invalid-size-inputs-valid-test \
-    --alignment-layer -2 --alignment-heads 1 --source-position-markers 1000 \
+    --alignment-layer -2 --alignment-heads 1 --source-position-markers 100 \
     --eval-bleu \
       --eval-bleu-args '{"beam": 5, "max_len_a": 1.2, "max_len_b": 10}' \
       --eval-bleu-detok space \
