@@ -29,7 +29,7 @@ class OOVIndexError(IndexError):
         self.target_seq = target_seq
 
 
-def replace_oovs(target_in, source_file_in):
+def replace_oovs(target_in, source_file_in, interactive = False):
     """
     Replaces <unk-N> tokens in the target text with the corresponding word in
     the source text.
@@ -37,11 +37,17 @@ def replace_oovs(target_in, source_file_in):
     """
     oov_re = re.compile("^<unk-([0-9]+)>$")
 
-    source_in = []
-    with open(source_file_in, 'r', encoding='utf-8') as src:
-        for line in src.readlines():
-            source_in.append(line.strip('\n'))
-    src.close()
+    if interactive is False:
+        source_in = []
+        with open(source_file_in, 'r', encoding='utf-8') as src:
+            for line in src.readlines():
+                source_in.append(line.strip('\n'))
+        src.close()
+    else:
+        # in interactive mode, variables below are given as string
+        # should be in list format
+        source_in = [source_file_in]
+        target_in = [target_in]
 
     target_out = []
     try:
