@@ -2,8 +2,8 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=7G
-#SBATCH --time=15:00:00
+#SBATCH --mem-per-cpu=14G
+#SBATCH --time=24:00:00
 #SBATCH --job-name=pg_16631_transformer
 #SBATCH --output=output-%J.log
 
