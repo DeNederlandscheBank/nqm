@@ -62,7 +62,7 @@ for f in test_{1..$COUNT_TEST}; do
     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
     --out-file $OUT_DIR/decoded-$f.txt \
     --out-file-encoded $OUT_DIR/translations-$f.txt \
-    --in-file-reference $IN_DIR/data_$ID-$f.ql \
+    --in-file-reference $IN_DIR/data_"$ID"_OOV-$f.ql \
     --summary-file $OUT_DIR/summary-$ID.txt \
     --graph-path data/eiopa/1_external \
     --in-file-source $IN_DIR/data_"$ID"_OOV-$f.nl
