@@ -78,6 +78,7 @@ REPLACEMENTS = [
     ['owl:', 'owl_'],
     ['yago:', 'yago_'],
     ['skos:', 'skos_'],
+    ['n.v.', 'n_v'],
     [' ( ', '  par_open  '],
     [' ) ', '  par_close  '],
     ['(', ' attr_open '],
