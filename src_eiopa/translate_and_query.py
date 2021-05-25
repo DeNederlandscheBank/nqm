@@ -61,11 +61,13 @@ if __name__ == '__main__':
         model_data_dir,
         checkpoint_file='bot_pg.pt',
         data_name_or_path=model_data_dir,
-        # bpe='subword_nmt',
-        # bpe_codes=model_data_dir + '/bpe.codes',
-        # tokenizer='moses',
-        eval_bleu=False
+        bpe='subword_nmt',
+        bpe_codes=model_data_dir + '/bpe.codes',
+        tokenizer='moses',
+        eval_bleu=False,
+        remove_unk = 'models/bot/alignment.nl-ql.txt'
     )
+    
     moses_tokenizer = MosesTokenizer(lang='en')
     # g = initialize_graph('data/eiopa/1_external')
     # print(translate_and_query('Where is aegon?', bot_model, g))
