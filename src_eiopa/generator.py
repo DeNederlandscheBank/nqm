@@ -91,6 +91,8 @@ def build_dataset_quadruple(item, template, mt):
             natural_language = ' '.join(mt.tokenize(natural_language_filled))
             natural_language_raw = ' '.join(
                 mt.tokenize(natural_language_not_filled))
+        else:
+            natural_language_raw = natural_language
         if placeholder in query:
             item_ = add_quotation_marks(strip_item(item[cnt]))
             query_raw = query.replace(placeholder, 'quot_mark_l quot_mark_r')
@@ -121,11 +123,7 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
     with io.open(output_dir + '/data_{1}-{0}.nl'.format(type_, job_id),
                  file_mode, encoding="utf-8") as nl_questions, \
             io.open(output_dir + '/data_{1}-{0}.ql'.format(type_, job_id),
-                    file_mode, encoding='utf-8') as queries, \
-            io.open(output_dir + '/data_{1}-{0}.ql.raw'.format(type_, job_id),
-                    file_mode, encoding='utf-8') as queries_raw, \
-            io.open(output_dir + '/data_{1}-{0}.nl.raw'.format(type_, job_id),
-                    file_mode, encoding='utf-8') as nl_questions_raw:
+                    file_mode, encoding='utf-8') as queries:
         for template in tqdm(templates):
             it = it + 1
             try:
@@ -146,11 +144,21 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
                             dataset_quadruple['natural_language']))
 
                         queries.write("{}\n".format(dataset_quadruple['query']))
-                        if not type_.startswith('test'):
-                            queries_raw.write("{}\n".format(
-                                dataset_quadruple['query_raw']))
-                            nl_questions_raw.write("{}\n".format(
-                                dataset_quadruple['natural_language_raw']))
+                        if 'test' not in type_:
+                            with io.open(output_dir +
+                                         '/data_{1}-{0}.ql.raw'.format(type_,
+                                                                       job_id),
+                                         file_mode, encoding='utf-8') \
+                                    as queries_raw, \
+                                    io.open(output_dir +
+                                            '/data_{1}-{0}.nl.raw'.format(type_,
+                                                                          job_id),
+                                            file_mode, encoding='utf-8') \
+                                            as nl_questions_raw:
+                                queries_raw.write("{}\n".format(
+                                    dataset_quadruple['query_raw']))
+                                nl_questions_raw.write("{}\n".format(
+                                    dataset_quadruple['natural_language_raw']))
 
             except Exception:
                 exception = traceback.format_exc()
