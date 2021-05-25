@@ -157,7 +157,7 @@ def read_template_file(file):
     line_number = 1
     with open(file) as f:
         for line in f:
-            values = line[:-1].split(';')
+            values = line.strip("\n").split(';')
             target_classes = [values[0] or None, values[1] or None,
                               values[2] or None]
             # (MG): "or None" keeps length of list flexible
