@@ -14,6 +14,7 @@ import logging
 import os
 import sys
 import traceback
+import random
 
 from rdflib import term, Graph
 from sacremoses import MosesTokenizer
@@ -26,7 +27,7 @@ except ImportError:
     from nqm.src_eiopa.generator_utils import strip_item, sparql_encode, \
         read_template_file, add_quotation_marks
 
-EXAMPLES_PER_TEMPLATE = 100
+EXAMPLES_PER_TEMPLATE = 1
 
 
 def initialize_graph(graph_data_path):
@@ -130,7 +131,7 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
                 # get list of results for generator_query
                 results = get_results_of_generator_query(cache, template,
                                                          graph_database)
-                if results is None:
+                if results is None or len(results) == 0:
                     logging.debug("no data for {}".format(template.question))
                     not_instanced_templates.update([template.question])
                     continue
@@ -180,7 +181,7 @@ def get_results_of_generator_query(cache, template, graph_database):
     :param graph_database:
     """
     generator_query = template.generator_query
-    results = None
+    return_results = None
 
     # print("Get_results: Generator_query: ",generator_query)
     def attempt_one(template):
@@ -199,11 +200,17 @@ def get_results_of_generator_query(cache, template, graph_database):
         logging.debug('{}. attempt generator_query: {}'.format(attempt,
                                                                generator_query))
         results = query_database(generator_query, graph_database)
-        # print("Get_results: Results:\n ",results)
-        if len(results) >= EXAMPLES_PER_TEMPLATE:
+        random.shuffle(results)
+        logging.debug('{} matches for {}'.format(
+            len(results), getattr(template, 'id')))
+
+        if len(results) <= EXAMPLES_PER_TEMPLATE:
+            return_results = results
+        else:
             cache[generator_query] = results
+            return_results = results[0:EXAMPLES_PER_TEMPLATE]
             break
-    return results
+    return return_results
 
 
 def prepare_generator_query(template, add_type_requirements=True):
