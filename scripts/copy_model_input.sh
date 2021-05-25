@@ -4,8 +4,8 @@
 # This script copies the required model files using $ID and places them in the
 # correct directory. The name is adapated using $ID_new. These two variables
 # have to be adapted to the desired values.
-ID=05-05_19-36_31684
-ID_NEW=31684
+ID=19-05_18-58_16631
+ID_NEW=16631
 BPE=NO
 
 
@@ -52,3 +52,9 @@ if [ $BPE = YES ]
         done
       done
 fi
+for L in nl ql; do
+  for f in test_{1..$COUNT_TEST}.$L; do
+    cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_OOV-$f
+    echo "Copying OOV-$f"
+  done
+done

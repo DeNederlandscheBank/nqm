@@ -1,0 +1,27 @@
+SUMMARY OF RESULTS 
+Old evaluation:
+    decoded-test_1.txt:
+    SacreBLEU score: 86.19; Median match of translation string and reference: 1.00; Name match precision: 0.47
+    decoded-test_1.txt:
+    Query Result Accuracy: 0.24, correct: 164, false: 526
+    decoded-test_2.txt:
+    SacreBLEU score: 46.76; Median match of translation string and reference: 0.90; Name match precision: 0.17
+    decoded-test_2.txt:
+    Query Result Accuracy: 0.12, correct: 19, false: 138
+    decoded-test_3.txt:
+    SacreBLEU score: 61.25; Median match of translation string and reference: 0.57; Name match precision: 0.01
+    decoded-test_3.txt:
+    Query Result Accuracy: 0.01, correct: 5, false: 746
+New evaluation, more trained model:
+    decoded-test_1.txt:
+    SacreBLEU score: 91.84; Median match of translation string and reference: 1.00; Name match precision: 0.64
+    decoded-test_1.txt:
+    Query Result Accuracy: 0.43, correct: 297, false: 393
+    decoded-test_2.txt:
+    SacreBLEU score: 46.82; Median match of translation string and reference: 0.95; Name match precision: 0.29
+    decoded-test_2.txt:
+    Query Result Accuracy: 0.22, correct: 40, false: 138
+    decoded-test_3.txt:
+    SacreBLEU score: 84.88; Median match of translation string and reference: 0.69; Name match precision: 0.94
+    decoded-test_3.txt:
+    Query Result Accuracy: 0.93, correct: 698, false: 53

@@ -2,7 +2,7 @@
 # Use this script from the root!
 # Similiar to before, the ID variable needs to be corrected to the correct value.
 
-ID=5861
+ID=883
 
 
 if [ $1 = HPC ]
@@ -23,7 +23,7 @@ else
   MODEL_DIR=$WORK_DIR/models/transformer_iwslt_de_en_$ID_MODEL
   OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
   COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
-  DATA_BIN=$IN_DIR/fairseq-data-bin-$ID-dev
+  DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
 fi
 
 $preprocess -s nl -t ql \

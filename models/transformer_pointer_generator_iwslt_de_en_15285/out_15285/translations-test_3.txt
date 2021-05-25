@@ -1,0 +1,751 @@
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5074 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5121 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1099 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5370nl quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5591 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5147 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5401 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6907 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1115 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1109 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1157 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5546 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1318 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5562 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5185 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4039 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5470 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5180 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5346 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5012 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5438 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1091 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5316 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4129 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1110 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1119 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5170 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5838 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5498 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1054 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1089 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5096nl quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5095 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6973 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4126 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5557 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5559 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5357 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1148 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5085 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1151 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5377 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5583 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5125 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6971 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5798 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3157 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot var_x eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID quot_mark_l
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1177 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5096it quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4044 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5405 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4121 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5365 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5451 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5036 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5348 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1056 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5078 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5862 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3156 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5508 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4043 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6925 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1123 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5165it quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5319 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5014 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5312 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5787 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4028 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5472 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5393 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4143 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1020 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5096uk quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5154 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1023 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5004 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5324 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4144 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5024 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5790 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5476 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5156 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4115 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5552 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1005 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5228 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1309 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6941 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5501 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5370fr quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5633 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1310 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1085 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5590 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1194 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5055 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5222 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5479 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6982 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1114 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4001 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1147 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1113 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5016 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6960 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4045 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4095 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5581 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1082 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5184 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5809 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5210 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4037 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 507 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1153 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5463 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1108 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5017 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5207 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4134 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5856 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5496 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6930 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4018 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5153 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5165fr quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5165sk quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5404 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1028 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5539 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5011 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1047 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5515 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5399 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5586 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4051 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5792 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5362 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5178 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5159 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5038 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5211 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1138 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5773 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5556 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5221 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5468 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6984 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5165be quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5099 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5858 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1342 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5771 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1141 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1343 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5402 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5464 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5042 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5632 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1007 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5097 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5803 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5339 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1128 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4011 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6988 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4118 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5455 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4106 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6949 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5521 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5058 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5805 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1055 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1131 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5375 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5094 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5096ie quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6811 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1107 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5043 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 506 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5013 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5098 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5419 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1006 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5412 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1180 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5169 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5461 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5057 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4109 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1083 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5459 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1025 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6809 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5801 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3008 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4145 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5342 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1015 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4010 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6807 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3034 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1011 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5484 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5129 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5567 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5400 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1344 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5187it quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5441 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6921 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1033 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5800 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3154 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5414 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5370 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6964 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6918 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4004 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5051 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5818 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5370be quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5340 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5671 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6992 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5370at quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4131 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5096no quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5525 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3092 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5585 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1104 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 523 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5187 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1335 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4119 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1167 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1112 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5807 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1150 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5194 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4139 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1062 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4112 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4117 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5227 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5544 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5310 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5035 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1345 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1330 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4116 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6998 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5187uk quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1158 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5137 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1081 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5172 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5786 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5317 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1160 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6946 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5686 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4053 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4125 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1022 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5229 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5834 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5070 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3068 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5754 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4141 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot var_x eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1152 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5799 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1001 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4122 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1018 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5146 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6985 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3158 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6994 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5093 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5165 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5198 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1134 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5199 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5344 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5334 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4034 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5165es quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5008 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1184 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4108 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5829 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6812 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4147 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5162 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5485 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1162 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6958 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5781 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5018 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5044 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5232 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3151 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1048 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5082 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5032 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5528 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5505 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1017 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5499 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5178uk quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5015 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5813 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5165nl quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1035 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5135 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5547 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5783 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5212 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6986 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5372 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5374 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1312 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1137 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5025 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1092 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6970 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1140 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5080 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6993 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1013 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5068 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1093 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4135 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3106 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5534 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5446 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1103 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5549 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5033 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5366 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5356 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 501 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1136 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 3028 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1021 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4002 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5343 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5178se quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5573 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5426 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5096 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4142 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5448 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5513 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5780 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5522 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5859 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5491 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1337 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5061 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5126 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5086 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5326 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1164 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1149 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6978 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1139 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5007 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 6908 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5338 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 4146 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 1132 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5469 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5530 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5328 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot 5155 quot_mark_r sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l pb versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l rhion versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l volkswohl-bund lebensversicherung a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l allianz global global &amp; quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l neue leben unfallversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherung versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l itzehoer versicherung / brandgilde 1691 versicherungsverein quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l deutsche rückversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasEUCountryWhereEntityOperates var_a sep_dot var_x eiopa-Base:hasInsuranceUndertakingID quot_mark_l life ag eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mecklenburgische lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l skandia lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l inter allgemeine versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aioi nissay dowa insurance aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ergo direkt versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l inter versicherungsverein ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l süddeutsche krankenversicherung a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l fahrlehrerversicherung verein auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mercedes-benz versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gartenbau-versicherung vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lehrer-feuerkasse lehrer-feuerkasse quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l allgemeine v versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sv sparkassenversicherung lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l badischer gemeinde-versicherungs-verband quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l augenoptiker ausgleichskasse vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l direkte leben versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l interrisk lebensversicherungs-ag insurance insurance quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lucura versicherungs ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l badische rechtsschutzversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l adac versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l landeslebenshilfe v.v.a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l süddeutsche lebensversicherung a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hdi global global se quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l provinzial rheinland versicherung ag versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l devk rückversicherungs- und beteiligungs-aktiengesellschaft devk quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ergo krankenversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l häger versicherungsverein auf gegenseitigkeiten quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l schneverdinger versicherungsverein a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l feuer- und einbruchschadenkasse bbbank in karlsruhe quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l deutsche lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hdi versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ergo vorsorge lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hdi haftpflichtverband deutschen industrie versicherungsverein gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l pvag polizeiversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l iduna allgemeine versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l generali deutschland ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l rheinland versicherungs aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sterbekasse notgemeinschaft zeche quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l öffentliche lebensversicherung braunschweig quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l concordia oeco lebensversicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dkv deutsche krankenversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l alte leipziger versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l envivas krankenversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gvo gegenseitigkeit versicherung oldenburg vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l iduna unfallversicherung unfallversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sv sparkassenversicherung gebäudeversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vereinigte tierversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l öffentliche lebensversicherung berlin brandenburg aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l janitos versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vhv allgemeine versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l iduna sterbekasse vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherung aktiengesellschaft aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hallesche krankenversicherung auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l kieler rückversicherungsverein auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l direkte leben versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l msig insurance europe europe ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bayerische hausbesitzer-versicherungs-gesellschaft auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l neuendorfer brand-bau-gilde quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l allianz versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ovag - ostdeutsche versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l e e e krankenversicherungsverein krankenversicherungsverein gegenseitigkeit gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ergo versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l isselhorster versicherung v.a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherer raum raum kirchen krankenversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l axa lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l volkswagen versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l debeka lebensversicherungsverein auf gegenseitigkeit koblenz rhein quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l constantia versicherungen a.g quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bayerischer versicherungsverband versicherungsaktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hansemerkur krankenversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l feuersozietät berlin brandenburg versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l targo versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l wwk allgemeine versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l deutsche assistance versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vigo krankenversicherung vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherung aktiengesellschaft aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l württembergische lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l newline europe europe versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l protektor lebensversicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hannover rück se se quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hansemerkur allgemeine versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l basler sachversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherer raum raum kirchen lebensversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lebensversicherung v a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l würzburger versicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l pb lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l verti versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l andsafe aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l württembergische gemeinde-versicherung auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l huk-coburg-holding huk-coburg-holding quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hansemerkur lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l continentale krankenversicherung a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nürnberger lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dialog lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nordhemmer versicherungsverein auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l + versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l universa krankenversicherung a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l axa krankenversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l adler versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l provinzial rheinland lebensversicherung ag versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l astradirect versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l advocard rechtsschutzversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dialog versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l münchener verein krankenversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ostfriesische landschaftliche brandkasse quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sparkassen-versicherung sachsen lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l universa allgemeine versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gothaer lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ostangler brandgilde quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l neodigital versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bayerische beamtenkrankenkasse aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l pensions-sicherungs-verein versicherungsverein auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hansemerkur reiseversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vöv rückversicherung kör quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hansemerkur krankenversicherung auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_x eiopa-Base:hasInsuranceUndertakingID var_a sep_dot eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID eiopa-Base:hasInsuranceUndertakingID
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lbn versicherungsverein a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l basler lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gebäudeversicherungsgilde für föhr quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l beamten- feuer- und einbruchskasse quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lebensversicherung a.g. a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l axa versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l kravag-sach versicherung deutschen kraftverkehrs versicherungsverein gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l stuttgarter versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l liga krankenversicherung katholischer priester vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l baden-badener versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l landesschadenhilfe versicherung vag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hdi global global se quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l allcura versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l euro-aviation versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l markel insurance insurance se quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l deutscher herold herold aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l saarland feuerversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ostbeverner versicherungsverein auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mailo versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherungsverband deutscher eisenbahnen versicherungsverein auf quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l freudenberg rückversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vrk versicherungsverein auf gegenseitigkeit raum quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gothaer allgemeine versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l münchener verein lebensversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l darag deutsche versicherungs- und rückversicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lebensversicherung v aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l entis lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lvm landwirtschaftlicher versicherungsverein münster quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vhv vereinigte hannoversche versicherung a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherungskammer bayern versicherungsanstalt öffentlichen rechts quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l delvag versicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l alte leipziger lebensversicherung auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l extremus versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l deurag deutsche rechtsschutz-versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l condor allgemeine versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l itzehoer lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l landeskrankenhilfe v.v.a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hdi global global ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l concordia krankenversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l arag allgemeine versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l st. martinus priesterverein diözese rottenburg-stuttgart -kranken- quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l allianz allianz quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l huk-coburg-allgemeine versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l kravag-allgemeine versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l neue rechtsschutz- versicherungsgesellschaft aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l huk-coburg-lebensversicherung huk-coburg-lebensversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nürnberger beamten lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l huk-coburg haftpflicht-unterstützungs-kasse kraftfahrender beamter a.g. coburg quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l reiseversicherung aktiengesellschaft aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l talanx aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lebensversicherung aktiengesellschaft aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bayerische landesbrandversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l oldenburgische landesbrandkasse quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lehrer-feuerversicherungsverein für schleswig-holstein quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherer raum raum kirchen sachversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vereinigte hagelversicherung vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l allianz lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mecklenburgische versicherungs-gesellschaft auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l deutsche ärzteversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l volkswagen autoversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vpv allgemeine versicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l interlloyd versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lvm krankenversicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l provinzial nordwest lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uelzener uelzener allgemeine versicherungs-gesellschaft a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l devk deutsche eisenbahn versicherung a.g. betriebliche sozialeinrichtung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l metro re ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l auxilia rechtsschutz-versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l kölnvorsorge - sterbeversicherung vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l inter krankenversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l generali deutschland versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bayern-versicherung lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l alte oldenburger krankenversicherung 1927 versicherungsverein gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l aegidius rückversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l basf sterbekasse vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l barmenia lebensversicherung a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l volkswohl-bund sachversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dfv deutsche familienversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l trias versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l landschaftliche brandkasse hannover quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dortmunder lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l insurance insurance insurance quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l allianz direct versicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l münchener rückversicherungs-gesellschaft aktiengesellschaft in münchen quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hdi lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l arag arag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l rheinisch-westfälische sterbekasse lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l münchener verein allgemeine versicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sv sparkassenversicherung holding aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l general general reinsurance quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l generali deutschland krankenversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l direktversicherung aktiengesellschaft aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l huk-coburg-rechtsschutzversicherung huk-coburg-rechtsschutzversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l continentale sachversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l minerva versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hochrhein internationale rückversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l devk krankenversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l wgv-versicherung wgv-versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hinterbliebenenkasse heilberufe heilberufe hdh quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gvv direktversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l stuttgarter lebensversicherung a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gemeinnützige haftpflicht-versicherungsanstalt darmstadt quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l continentale lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gothaer krankenversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l direkt delta lebensversicherung aktiengesellschaft münchen quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lvm lebensversicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l roland rechtsschutz-versicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l saarland lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l insurance insurance ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l württembergische krankenversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lebensversicherung 1871 von auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l arag krankenversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l huk-coburg-krankenversicherung huk-coburg-krankenversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l general insurance europe europe ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l harsewinkeler versicherung vag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bayerische beamten versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l agila haustierversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l öffentliche lebensversicherung sachsen-anhalt quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l inter lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l krankenversicherung v aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l revium rückversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l heidelberger lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l + direktversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l provinzial lebensversicherung hannover quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bd24 berlin direkt versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l okv-ostdeutsche kommunalversicherung auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l barmenia allgemeine versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vpv lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l risicom rückversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nürnberger beamten allgemeine versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l freie arzt- und medizinkasse angehörigen berufsfeuerwehr quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nürnberger krankenversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lebensversicherungs-aktiengesellschaft lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l barmenia versicherungen a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dmb rechtsschutz-versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nexible versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l erste kieler beerdigungskasse quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hanse-marine-versicherung hanse-marine-versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mecklenburgische krankenversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l öffentliche lebensversicherungsanstalt oldenburg quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l frankfurter lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l real garant versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l generali deutschland lebensversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hansemerkur speziale krankenversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l rheinland lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bgv-versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l provinzial holding aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l notgemeinschaft grabe am vag wesel quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gothaer finanzholding aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l westfälische provinzial versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l öffentliche feuerversicherung sachsen-anhalt quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l neue bayerische beamten lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ambra versicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l devk deutsche eisenbahn versicherung und huk-versicherungsverein a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l medien-versicherung a.g. karlsruhe vorm. gegr 1899 quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l allianz private private krankenversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l shb allgemeine versicherung vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ergo lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l krankenversicherung aktiengesellschaft aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l devk rechtsschutz-versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l viridium rückversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l barmenia krankenversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l wertgarantie aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l grundeigentümer-versicherung versicherungsverein auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mylife lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l wüstenrot &amp; württembergische quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l sparkassen-versicherung sachsen allgemeine versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l schutzverein deutscher rheder v.a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l haftpflichtgemeinschaft deutscher nahverkehrs- und versorgungsunternehmen vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lippische landesbrandversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l fürsorgekasse sep_dot fürsorgekasse quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l iduna lebensversicherung lebensversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l waldenburger versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l feuerkasse versicherungs-aktiengesellschaft versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l roland schutzbrief-versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l garanta versicherungs- aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l athora lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l pallas versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nv-versicherungen vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l örag rechtsschutzversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l frankfurt münchener lebensversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l adac autoversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l cg car-garantie versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l württembergische versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l coya coya quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l provinzial rheinland holding ein unternehmen sparkassen quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gothaer versicherungsbank vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l haftpflichtkasse vvag vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hannoversche lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l helvetia schweizerische lebensversicherungs- aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l süddeutsche allgemeine versicherung a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l universa lebensversicherung g g g quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherungskammer bayern konzern-rückversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lebensversicherung aktiengesellschaft aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l kravag-logistic versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l incura incura quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bayerische beamten lebensversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ammerländer versicherung versicherungsverein quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vereinigte postversicherung vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l provinzial krankenversicherung hannover quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l avk allgemeine versicherungskasse vvag-todesfallversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherungs-aktiengesellschaft versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l provinzial nord brandkasse aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l wwk lebensversicherung auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l debeka allgemeine versicherung aktiengesellschaft koblenz rhein quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gav versicherungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gemeinnützige haftpflichtversicherungsanstalt kassel quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ergo reiseversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l öffentliche sachversicherung braunschweig quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l devk allgemeine lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l höchster sterbekasse vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l condor lebensversicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l iduna krankenversicherung krankenversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l deutsche allgemeine allgemeine aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l versicherung versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l nürnberger allgemeine versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l alte oldenburger krankenversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l helvetia versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l devk allgemeine versicherungs-aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l interrisk versicherungs-ag insurance insurance quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l dolleruper freie brandgilde versicherungsverein gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l deutscher reisepreis-sicherungsverein vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l schleswiger versicherungsverein auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lebensversicherung lebensversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mannheimer versicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l hübener versicherungs ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l huk24 huk24 quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l bergische brandversicherung allgemeine feuerversicherung v.a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l neue leben lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l wgv-lebensversicherung wgv-lebensversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l diehl assekuranz rückversicherungs- und vermittlungs-ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l proxalto lebensversicherung aktiengesellschaft quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l glasschutzkasse a.g. von 1923 zu quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l e + rückversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l concordia versicherungs-gesellschaft auf gegenseitigkeit quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l ottonova krankenversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l targo lebensversicherung ag ag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l gvv-kommunalversicherung gvv-kommunalversicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l vereinigte schiffs-versicherung v.a.g. quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l docura vvag quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l axa easy versicherung quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close

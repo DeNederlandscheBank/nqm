@@ -1,0 +1,836 @@
+2021-05-20 12:47:45 | INFO | fairseq_cli.interactive | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': '/home/ph541404/nqm/models/transformer_pointer_generator_iwslt_de_en_15285/checkpoint.best_bleu_93.62.pt', 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': '/home/ph541404/nqm/models/transformer_pointer_generator_iwslt_de_en_15285/out_15285'}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_algorithm': 'LocalSGD', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'distributed_num_procs': 0}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': True, 'max_tokens': None, 'batch_size': 1, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0}, 'optimization': {'_name': None, 'max_epoch': 0, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.25], 'stop_min_lr': -1.0, 'use_bmuf': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints', 'restore_file': 'checkpoint_last.pt', 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': 'hard', 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 1, 'input': '-'}, 'model': None, 'task': {'_name': 'translation', 'data': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-15285', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': True}, 'optimizer': None, 'lr_scheduler': {'_name': 'fixed', 'force_anneal': None, 'lr_shrink': 0.1, 'warmup_updates': 0, 'lr': [0.25]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None}
+2021-05-20 12:47:46 | INFO | fairseq.tasks.translation | [nl] dictionary: 15100 types
+2021-05-20 12:47:46 | INFO | fairseq.tasks.translation | [ql] dictionary: 15100 types
+2021-05-20 12:47:46 | INFO | fairseq_cli.interactive | loading model(s) from /home/ph541404/nqm/models/transformer_pointer_generator_iwslt_de_en_15285/checkpoint.best_bleu_93.62.pt
+2021-05-20 12:47:47 | INFO | fairseq.models.transformer_pg | dictionary indices from 15000 to 15099 will be mapped to 3
+2021-05-20 12:47:47 | INFO | fairseq_cli.interactive | NOTE: hypothesis and token scores are output in base 2
+2021-05-20 12:47:47 | INFO | fairseq_cli.interactive | Type the input sentence and press return:
+S-0	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-0	0.616	seconds
+H-0	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-0	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-0	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-0	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-1	where is <unk-2> basis <unk-4> <unk-5> located and what is the registration number ?
+W-1	0.808	seconds
+H-1	-0.695709228515625	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> basis basis <unk-5> located located registration registration registration registration registration is var_a sep_dot brack_close
+D-1	-0.695709228515625	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> basis basis <unk-5> located located registration registration registration registration registration is var_a sep_dot brack_close
+P-1	-0.0621 -0.0394 -0.2231 -0.0390 -0.0251 -0.0618 -0.0296 -0.0233 -0.1201 -0.1153 -0.9945 -0.6377 -0.6098 -1.1950 -2.0768 -1.0666 -1.0393 -1.0580 -1.4007 -3.3842 -2.2493 -0.0873 -0.0934 -0.0658
+A-1	9-0 12-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 3-10 5-11 6-12 6-13 6-14 11-15 11-16 11-17 11-18 11-19 11-20 7-21 11-22
+S-2	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-2	0.637	seconds
+H-2	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-2	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-2	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-2	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-3	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-3	0.580	seconds
+H-3	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-3	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-3	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-3	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-4	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-4	0.596	seconds
+H-4	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-4	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-4	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-4	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-5	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-5	0.588	seconds
+H-5	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-5	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-5	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-5	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-6	where is de <unk-3> <unk-4> located and what is the registration number ?
+W-6	0.611	seconds
+H-6	-0.26090165972709656	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de <unk-3> <unk-4> located and quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-6	-0.26090165972709656	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de <unk-3> <unk-4> located and quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-6	-0.0608 -0.0429 -0.0889 -0.0344 -0.0248 -0.0723 -0.0307 -0.0213 -0.1726 -0.3346 -0.1722 -0.8504 -1.7341 -1.5459 -0.0534 -0.0381 -0.0739 -0.0272 -0.0409 -0.0146 -0.0449
+A-6	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 5-12 10-13 10-14 4-15 10-16 0-17 6-18 11-19
+S-7	where is de <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-7	0.666	seconds
+H-7	-0.23382550477981567	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-7	-0.23382550477981567	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-7	-0.0669 -0.0392 -0.2279 -0.0400 -0.0258 -0.0674 -0.0306 -0.0238 -0.2617 -0.4438 -0.1211 -1.2690 -1.6048 -0.0550 -0.0272 -0.2166 -0.0393 -0.0465 -0.0153 -0.0545
+A-7	12-0 12-1 0-2 0-3 3-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 7-13 5-14 11-15 0-16 7-17 12-18
+S-8	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-8	0.659	seconds
+H-8	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-8	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-8	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-8	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-9	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-9	0.586	seconds
+H-9	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-9	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-9	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-9	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-10	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-10	0.599	seconds
+H-10	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-10	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-10	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-10	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-11	where is <unk-2> <unk-3> van <unk-5> located and what is the registration number ?
+W-11	0.625	seconds
+H-11	-0.21060501039028168	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> van <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-11	-0.21060501039028168	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> van <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-11	-0.0617 -0.0387 -0.1646 -0.0357 -0.0246 -0.0698 -0.0274 -0.0200 -0.2716 -0.1881 -0.1682 -0.6742 -2.1291 -0.0578 -0.0272 -0.1080 -0.0348 -0.0417 -0.0155 -0.0536
+A-11	9-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 6-12 7-13 5-14 11-15 0-16 4-17 12-18
+S-12	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-12	0.589	seconds
+H-12	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-12	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-12	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-12	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-13	where is <unk-2> <unk-3> <unk-4> <unk-5> holland <unk-7> located and what is the registration number ?
+W-13	0.641	seconds
+H-13	-0.30060875415802	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> holland <unk-7> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-13	-0.30060875415802	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> holland <unk-7> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-13	-0.0781 -0.0362 -0.5485 -0.0537 -0.0281 -0.0729 -0.0303 -0.0307 -0.4334 -1.1159 -0.1753 -0.2559 -0.5933 -1.9846 -0.4214 -0.0499 -0.0491 -0.4736 -0.0569 -0.0561 -0.0151 -0.0543
+A-13	14-0 14-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 6-11 7-12 8-13 8-14 7-15 7-16 11-17 15-18 8-19 14-20
+S-14	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-14	0.597	seconds
+H-14	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-14	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-14	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-14	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-15	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-15	0.587	seconds
+H-15	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-15	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-15	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-15	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-16	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-16	0.627	seconds
+H-16	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-16	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-16	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-16	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-17	where is <unk-2> <unk-3> company <unk-5> located and what is the registration number ?
+W-17	0.651	seconds
+H-17	-0.21883657574653625	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> company company <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-17	-0.21883657574653625	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> company company <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-17	-0.0549 -0.0361 -0.1956 -0.0367 -0.0233 -0.0730 -0.0264 -0.0202 -0.3154 -0.1875 -0.1381 -1.4118 -0.8046 -0.9371 -0.0586 -0.0312 -0.1002 -0.0390 -0.0453 -0.0154 -0.0454
+A-17	9-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 5-12 6-13 7-14 5-15 11-16 0-17 7-18 12-19
+S-18	where is lemonade insurance <unk-4> located and what is the registration number ?
+W-18	0.628	seconds
+H-18	-0.1809459775686264	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lemonade insurance insurance <unk-4> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-18	-0.1809459775686264	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lemonade insurance insurance <unk-4> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-18	-0.0498 -0.0429 -0.0936 -0.0315 -0.0249 -0.0612 -0.0311 -0.0201 -0.1137 -0.0715 -1.1867 -0.6471 -0.9550 -0.0653 -0.0221 -0.0683 -0.0344 -0.0413 -0.0172 -0.0413
+A-18	11-0 11-1 0-2 0-3 2-4 4-5 2-6 2-7 2-8 3-9 4-10 4-11 10-12 10-13 4-14 10-15 0-16 6-17 10-18
+S-19	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-19	0.604	seconds
+H-19	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-19	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-19	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-19	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-20	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-20	0.674	seconds
+H-20	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-20	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-20	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-20	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-21	where is <unk-2> <unk-3> <unk-4> <unk-5> en <unk-7> <unk-8> located and what is the registration number ?
+W-21	0.679	seconds
+H-21	-0.3352850675582886	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> en <unk-7> <unk-8> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-21	-0.3352850675582886	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> en <unk-7> <unk-8> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-21	-0.0919 -0.0358 -0.6652 -0.0626 -0.0298 -0.0792 -0.0307 -0.0366 -0.5304 -0.7166 -0.2961 -0.4789 -1.0394 -1.4821 -0.8759 -0.0486 -0.0514 -0.6124 -0.0670 -0.0673 -0.0179 -0.0604
+A-21	15-0 15-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 6-11 7-12 8-13 8-14 8-15 8-16 12-17 0-18 6-19 13-20
+S-22	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-22	0.587	seconds
+H-22	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-22	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-22	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-22	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-23	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-23	0.602	seconds
+H-23	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-23	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-23	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-23	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-24	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-24	0.639	seconds
+H-24	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-24	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-24	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-24	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-25	where is <unk-2> fruit <unk-4> <unk-5> <unk-6> <unk-7> <unk-8> located and what is the registration number ?
+W-25	0.635	seconds
+H-25	-0.3266344666481018	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> fruit <unk-4> <unk-5> <unk-7> <unk-8> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-25	-0.3266344666481018	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> fruit <unk-4> <unk-5> <unk-7> <unk-8> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-25	-0.1036 -0.0369 -0.7621 -0.0660 -0.0312 -0.0807 -0.0326 -0.0375 -0.2113 -0.2927 -0.5642 -0.7630 -1.0003 -1.4236 -0.5483 -0.0496 -0.0502 -0.9046 -0.0718 -0.0710 -0.0182 -0.0666
+A-25	15-0 16-1 0-2 0-3 2-4 4-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 8-13 9-14 8-15 8-16 12-17 0-18 9-19 13-20
+S-26	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-26	0.613	seconds
+H-26	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-26	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-26	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-26	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-27	where is <unk-2> <unk-3> <unk-4> <unk-5> en <unk-7> <unk-8> located and what is the registration number ?
+W-27	0.650	seconds
+H-27	-0.3352850675582886	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> en <unk-7> <unk-8> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-27	-0.3352850675582886	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> en <unk-7> <unk-8> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-27	-0.0919 -0.0358 -0.6652 -0.0626 -0.0298 -0.0792 -0.0307 -0.0366 -0.5304 -0.7166 -0.2961 -0.4789 -1.0394 -1.4821 -0.8759 -0.0486 -0.0514 -0.6124 -0.0670 -0.0673 -0.0179 -0.0604
+A-27	15-0 15-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 6-11 7-12 8-13 8-14 8-15 8-16 12-17 0-18 6-19 13-20
+S-28	where is <unk-2> <unk-3> <unk-4> en <unk-6> <unk-7> located and what is the registration number ?
+W-28	0.635	seconds
+H-28	-0.31038638949394226	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> en <unk-6> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-28	-0.31038638949394226	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> en <unk-6> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-28	-0.0788 -0.0346 -0.5538 -0.0539 -0.0273 -0.0801 -0.0288 -0.0298 -0.5262 -0.7534 -0.1007 -0.3178 -1.0785 -1.9414 -0.4586 -0.0510 -0.0497 -0.4736 -0.0611 -0.0575 -0.0154 -0.0564
+A-28	14-0 14-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 5-11 6-12 8-13 8-14 7-15 7-16 11-17 15-18 8-19 14-20
+S-29	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-29	0.596	seconds
+H-29	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-29	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-29	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-29	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-30	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-30	0.659	seconds
+H-30	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-30	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-30	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-30	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-31	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-31	0.604	seconds
+H-31	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-31	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-31	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-31	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-32	where is <unk-2> <unk-3> captive <unk-5> located and what is the registration number ?
+W-32	0.600	seconds
+H-32	-0.23469066619873047	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> captive <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-32	-0.23469066619873047	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> captive <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-32	-0.0582 -0.0358 -0.1880 -0.0381 -0.0235 -0.0747 -0.0264 -0.0198 -0.3152 -0.1916 -0.1123 -1.1835 -2.0544 -0.0609 -0.0288 -0.1380 -0.0346 -0.0471 -0.0164 -0.0463
+A-32	9-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 6-12 7-13 5-14 11-15 0-16 7-17 12-18
+S-33	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-33	0.591	seconds
+H-33	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-33	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-33	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-33	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-34	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-34	0.628	seconds
+H-34	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-34	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-34	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-34	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-35	where is <unk-2> <unk-3> located and what is the registration number ?
+W-35	0.616	seconds
+H-35	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-35	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-35	-0.0598 -0.0457 -0.0414 -0.0312 -0.0229 -0.1012 -0.0302 -0.0182 -0.1800 -0.2837 -0.9086 -1.0987 -0.8073 -0.5408 -0.0584 -0.0961 -0.0464 -0.0222 -0.0411 -0.0140 -0.0584
+A-35	9-0 10-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 4-11 9-12 9-13 9-14 9-15 9-16 0-17 9-18 9-19
+S-36	where is <unk-2> <unk-3> <unk-4> amsterdam located and what is the registration number ?
+W-36	0.629	seconds
+H-36	-0.22191062569618225	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> amsterdam quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-36	-0.22191062569618225	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> amsterdam quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-36	-0.0583 -0.0402 -0.1473 -0.0375 -0.0248 -0.0700 -0.0291 -0.0228 -0.1652 -0.1828 -0.1855 -1.1490 -1.9795 -0.0550 -0.0262 -0.1239 -0.0325 -0.0435 -0.0158 -0.0495
+A-36	9-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 6-12 7-13 4-14 11-15 0-16 5-17 12-18
+S-37	where is national academic <unk-4> <unk-5> located and what is the registration number ?
+W-37	6.506	seconds
+H-37	-0.9621674418449402	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l national academic academic <unk-4> located located and located located registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration is var_a sep_dot brack_close
+D-37	-0.9621674418449402	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l national academic academic <unk-4> located located and located located registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration is var_a sep_dot brack_close
+P-37	-0.0573 -0.0377 -0.2026 -0.0346 -0.0230 -0.0669 -0.0316 -0.0212 -0.1455 -0.1178 -0.7347 -0.7882 -0.6304 -0.9038 -1.6283 -1.8487 -1.7911 -1.9216 -0.7408 -1.0356 -1.3241 -1.2806 -1.0309 -0.8510 -0.7990 -0.8338 -0.8176 -0.6891 -0.5714 -0.5169 -0.4981 -0.5009 -0.5301 -0.5753 -0.6107 -0.6233 -0.6248 -0.6362 -0.6474 -0.6296 -0.5995 -0.5930 -0.6054 -0.6405 -0.7191 -0.8270 -0.8857 -0.8549 -0.8102 -0.7912 -0.7883 -0.7664 -0.6916 -0.5947 -0.5405 -0.5485 -0.6247 -0.7944 -1.0029 -1.0743 -0.9571 -0.7986 -0.6985 -0.6513 -0.6486 -0.6760 -0.7152 -0.7458 -0.7537 -0.7470 -0.7355 -0.7315 -0.7465 -0.7759 -0.8311 -0.9111 -0.9961 -1.0460 -1.0379 -0.9990 -0.9597 -0.9197 -0.8849 -0.8641 -0.8661 -0.8921 -0.9383 -0.9986 -1.0798 -1.1926 -1.3788 -1.6662 -2.0080 -2.2341 -2.1772 -1.8668 -1.5047 -1.2545 -1.1615 -1.1695 -1.2123 -1.2134 -1.1517 -1.0531 -0.9895 -0.9994 -1.0902 -1.2272 -1.3207 -1.3120 -1.2254 -1.1205 -1.0430 -1.0219 -1.0511 -1.1147 -1.1647 -1.1495 -1.0582 -0.9297 -0.8160 -0.7541 -0.7298 -0.7317 -0.7542 -0.7720 -0.7711 -0.7712 -0.7992 -0.8454 -0.8803 -0.8713 -0.8301 -0.8026 -0.8157 -0.8696 -0.9578 -1.0594 -1.1551 -1.2458 -1.3376 -1.4155 -1.3936 -1.2403 -1.0451 -0.9044 -0.8513 -0.9249 -1.1402 -1.3825 -1.3748 -1.1150 -0.8731 -0.7679 -0.7874 -0.9110 -1.0515 -1.0826 -1.0001 -0.9200 -0.9371 -1.0999 -1.3682 -1.5335 -1.4616 -1.3017 -1.2306 -1.2947 -1.4404 -1.4986 -1.3773 -1.1708 -1.0367 -1.0749 -1.3440 -3.5252 -2.1314 -0.5882 -2.0074 -0.2435
+A-37	9-0 12-1 0-2 0-3 2-4 4-5 2-6 2-7 2-8 3-9 3-10 4-11 6-12 6-13 6-14 6-15 7-16 11-17 11-18 11-19 11-20 11-21 11-22 11-23 11-24 11-25 11-26 11-27 11-28 11-29 11-30 11-31 11-32 11-33 11-34 11-35 11-36 11-37 11-38 11-39 11-40 11-41 11-42 11-43 11-44 11-45 11-46 11-47 11-48 11-49 11-50 11-51 11-52 11-53 11-54 11-55 11-56 11-57 11-58 11-59 11-60 11-61 11-62 11-63 11-64 11-65 11-66 11-67 11-68 11-69 11-70 11-71 11-72 11-73 11-74 11-75 11-76 11-77 11-78 11-79 11-80 11-81 11-82 11-83 11-84 11-85 11-86 11-87 11-88 11-89 11-90 11-91 11-92 11-93 11-94 11-95 11-96 11-97 11-98 11-99 11-100 11-101 11-102 11-103 11-104 11-105 11-106 11-107 11-108 11-109 11-110 11-111 11-112 11-113 11-114 11-115 11-116 11-117 11-118 11-119 11-120 11-121 11-122 11-123 11-124 11-125 11-126 11-127 11-128 11-129 11-130 11-131 11-132 11-133 11-134 11-135 11-136 11-137 11-138 11-139 11-140 11-141 11-142 11-143 11-144 11-145 11-146 11-147 11-148 11-149 11-150 11-151 11-152 11-153 11-154 11-155 11-156 11-157 11-158 11-159 11-160 11-161 11-162 11-163 11-164 11-165 11-166 11-167 11-168 11-169 11-170 11-171 11-172 11-173 11-174 11-175 11-176 7-177 11-178
+S-38	where is <unk-2> insurance <unk-4> located and what is the registration number ?
+W-38	0.611	seconds
+H-38	-0.23826245963573456	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> insurance <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-38	-0.23826245963573456	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> insurance <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-38	-0.0576 -0.0430 -0.0932 -0.0332 -0.0239 -0.0615 -0.0287 -0.0212 -0.1267 -0.1380 -0.5379 -0.9521 -1.1812 -1.4003 -0.0651 -0.0390 -0.0703 -0.0259 -0.0456 -0.0153 -0.0439
+A-38	11-0 11-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-39	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-39	0.588	seconds
+H-39	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-39	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-39	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-39	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-40	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-40	0.599	seconds
+H-40	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-40	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-40	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-40	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-41	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-41	0.622	seconds
+H-41	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-41	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-41	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-41	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-42	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-42	0.596	seconds
+H-42	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-42	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-42	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-42	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-43	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-43	0.568	seconds
+H-43	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-43	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-43	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-43	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-44	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-44	0.578	seconds
+H-44	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-44	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-44	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-44	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-45	where is <unk-2> insurance company <unk-5> located and what is the registration number ?
+W-45	0.603	seconds
+H-45	-0.21736091375350952	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> insurance company company <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-45	-0.21736091375350952	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> insurance company company <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-45	-0.0509 -0.0384 -0.2044 -0.0336 -0.0239 -0.0578 -0.0270 -0.0213 -0.1264 -0.1172 -0.4508 -1.3239 -0.6997 -1.0575 -0.0657 -0.0268 -0.0908 -0.0401 -0.0474 -0.0180 -0.0429
+A-45	9-0 12-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 4-10 5-11 5-12 11-13 7-14 5-15 11-16 0-17 7-18 12-19
+S-46	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-46	0.616	seconds
+H-46	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-46	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-46	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-46	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-47	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-47	0.653	seconds
+H-47	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-47	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-47	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-47	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-48	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-48	0.652	seconds
+H-48	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-48	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-48	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-48	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-49	where is <unk-2> en <unk-4> <unk-5> located and what is the registration number ?
+W-49	0.598	seconds
+H-49	-0.26334261894226074	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> en <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-49	-0.26334261894226074	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> en <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-49	-0.0629 -0.0400 -0.2060 -0.0393 -0.0250 -0.0660 -0.0287 -0.0243 -0.1173 -0.1585 -0.9567 -1.2284 -1.8806 -0.0623 -0.0280 -0.1884 -0.0360 -0.0478 -0.0168 -0.0537
+A-49	9-0 12-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 4-10 5-11 6-12 7-13 5-14 11-15 0-16 7-17 12-18
+S-50	where is mutual insurance association <unk-5> <unk-6> located and what is the registration number ?
+W-50	0.696	seconds
+H-50	-0.6529155969619751	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mutual insurance association association <unk-5> located located located located located and sep_dot brack_close
+D-50	-0.6529155969619751	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mutual insurance association association <unk-5> located located located located located and sep_dot brack_close
+P-50	-0.0568 -0.0388 -0.4788 -0.0371 -0.0265 -0.0549 -0.0314 -0.0234 -0.1184 -0.2620 -0.5132 -1.0325 -1.1258 -0.6747 -0.9234 -1.1462 -1.3711 -1.7236 -1.8363 -2.2800 -0.4758 -0.1336
+A-50	10-0 13-1 0-2 0-3 2-4 5-5 2-6 2-7 2-8 3-9 4-10 4-11 5-12 7-13 7-14 7-15 7-16 7-17 8-18 8-19 12-20
+S-51	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-51	0.590	seconds
+H-51	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-51	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-51	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-51	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-52	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-52	0.627	seconds
+H-52	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-52	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-52	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-52	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-53	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-53	0.647	seconds
+H-53	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-53	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-53	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-53	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-54	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-54	0.578	seconds
+H-54	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-54	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-54	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-54	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-55	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-55	0.633	seconds
+H-55	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-55	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-55	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-55	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-56	where is brand new day <unk-5> <unk-6> located and what is the registration number ?
+W-56	6.508	seconds
+H-56	-0.3126271665096283	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brand new day <unk-5> located <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-56	-0.3126271665096283	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brand new day <unk-5> located <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-56	-0.0571 -0.0368 -0.2902 -0.0393 -0.0282 -0.0608 -0.0320 -0.0238 -0.4527 -0.3514 -0.4398 -1.2023 -0.6318 -2.1577 -0.5716 -0.0500 -0.0380 -0.2417 -0.0608 -0.0527 -0.0182 -0.0411
+A-56	10-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 4-11 7-12 7-13 7-14 8-15 6-16 11-17 0-18 8-19 13-20
+S-57	where is <unk-2> <unk-3> <unk-4> <unk-5> p &amp; i club <unk-10> located and what is the registration number ?
+W-57	0.675	seconds
+H-57	-0.3325934410095215	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> club <unk-10> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-57	-0.3325934410095215	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> club <unk-10> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-57	-0.0681 -0.0382 -0.3857 -0.0592 -0.0330 -0.0747 -0.0331 -0.0430 -0.4221 -1.0824 -0.3360 -1.4094 -0.8005 -1.0339 -0.8556 -0.0490 -0.0509 -0.3550 -0.0531 -0.0624 -0.0198 -0.0520
+A-57	14-0 15-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 9-12 10-13 9-14 9-15 10-16 11-17 0-18 9-19 14-20
+S-58	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-58	0.620	seconds
+H-58	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-58	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-58	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-58	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-59	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-59	0.599	seconds
+H-59	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-59	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-59	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-59	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-60	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-60	0.600	seconds
+H-60	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-60	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-60	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-60	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-61	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-61	0.642	seconds
+H-61	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-61	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-61	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-61	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-62	where is <unk-2> nobel <unk-4> <unk-5> located and what is the registration number ?
+W-62	0.600	seconds
+H-62	-0.24790263175964355	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> nobel <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-62	-0.24790263175964355	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> nobel <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-62	-0.0590 -0.0382 -0.1903 -0.0387 -0.0245 -0.0689 -0.0288 -0.0220 -0.1139 -0.1194 -0.7359 -1.5934 -1.5326 -0.0631 -0.0287 -0.1531 -0.0356 -0.0467 -0.0161 -0.0492
+A-62	9-0 12-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 7-13 5-14 11-15 0-16 7-17 12-18
+S-63	where is uk p &amp; i club <unk-7> located and what is the registration number ?
+W-63	0.607	seconds
+H-63	-0.28095316886901855	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uk <unk> club club <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-63	-0.28095316886901855	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uk <unk> club club <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-63	-0.0561 -0.0415 -0.2234 -0.0403 -0.0348 -0.0667 -0.0366 -0.0313 -0.1994 -1.9535 -0.1784 -0.9191 -0.6773 -0.9129 -0.0585 -0.0263 -0.2712 -0.0495 -0.0484 -0.0237 -0.0512
+A-63	11-0 14-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 2-9 6-10 6-11 7-12 8-13 9-14 7-15 13-16 0-17 9-18 13-19
+S-64	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-64	0.590	seconds
+H-64	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-64	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-64	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-64	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-65	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-65	0.604	seconds
+H-65	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-65	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-65	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-65	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-66	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-66	0.627	seconds
+H-66	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-66	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-66	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-66	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-67	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-67	0.601	seconds
+H-67	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-67	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-67	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-67	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-68	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-68	0.586	seconds
+H-68	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-68	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-68	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-68	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-69	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-69	0.580	seconds
+H-69	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-69	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-69	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-69	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-70	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-70	0.637	seconds
+H-70	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-70	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-70	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-70	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-71	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-71	0.593	seconds
+H-71	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-71	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-71	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-71	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-72	where is <unk-2> <unk-3> <unk-4> en <unk-6> <unk-7> located and what is the registration number ?
+W-72	0.628	seconds
+H-72	-0.31038638949394226	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> en <unk-6> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-72	-0.31038638949394226	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> en <unk-6> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-72	-0.0788 -0.0346 -0.5538 -0.0539 -0.0273 -0.0801 -0.0288 -0.0298 -0.5262 -0.7534 -0.1007 -0.3178 -1.0785 -1.9414 -0.4586 -0.0510 -0.0497 -0.4736 -0.0611 -0.0575 -0.0154 -0.0564
+A-72	14-0 14-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 5-11 6-12 8-13 8-14 7-15 7-16 11-17 15-18 8-19 14-20
+S-73	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-73	0.598	seconds
+H-73	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-73	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-73	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-73	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-74	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-74	0.607	seconds
+H-74	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-74	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-74	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-74	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-75	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-75	0.603	seconds
+H-75	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-75	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-75	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-75	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-76	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-76	0.628	seconds
+H-76	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-76	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-76	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-76	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-77	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-77	0.607	seconds
+H-77	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-77	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-77	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-77	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-78	where is <unk-2> <unk-3> de <unk-5> <unk-6> located and what is the registration number ?
+W-78	0.657	seconds
+H-78	-0.2705341577529907	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> de de de <unk-5> <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-78	-0.2705341577529907	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> de de de <unk-5> <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-78	-0.0702 -0.0352 -0.4688 -0.0456 -0.0261 -0.0722 -0.0285 -0.0264 -0.4418 -0.3016 -0.0804 -0.7965 -0.3778 -1.6346 -0.9946 -0.0469 -0.0414 -0.2634 -0.0643 -0.0631 -0.0171 -0.0554
+A-78	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 4-11 5-12 7-13 7-14 7-15 6-16 12-17 0-18 8-19 13-20
+S-79	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-79	0.610	seconds
+H-79	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-79	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-79	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-79	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-80	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-80	0.648	seconds
+H-80	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-80	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-80	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-80	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-81	where is <unk-2> <unk-3> located and what is the registration number ?
+W-81	0.592	seconds
+H-81	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-81	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-81	-0.0598 -0.0457 -0.0414 -0.0312 -0.0229 -0.1012 -0.0302 -0.0182 -0.1800 -0.2837 -0.9086 -1.0987 -0.8073 -0.5408 -0.0584 -0.0961 -0.0464 -0.0222 -0.0411 -0.0140 -0.0584
+A-81	9-0 10-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 4-11 9-12 9-13 9-14 9-15 9-16 0-17 9-18 9-19
+S-82	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-82	0.603	seconds
+H-82	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-82	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-82	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-82	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-83	where is <unk-2> <unk-3> located and what is the registration number ?
+W-83	0.596	seconds
+H-83	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-83	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-83	-0.0598 -0.0457 -0.0414 -0.0312 -0.0229 -0.1012 -0.0302 -0.0182 -0.1800 -0.2837 -0.9086 -1.0987 -0.8073 -0.5408 -0.0584 -0.0961 -0.0464 -0.0222 -0.0411 -0.0140 -0.0584
+A-83	9-0 10-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 4-11 9-12 9-13 9-14 9-15 9-16 0-17 9-18 9-19
+S-84	where is <unk-2> insurance <unk-4> located and what is the registration number ?
+W-84	0.605	seconds
+H-84	-0.23826245963573456	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> insurance <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-84	-0.23826245963573456	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> insurance <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-84	-0.0576 -0.0430 -0.0932 -0.0332 -0.0239 -0.0615 -0.0287 -0.0212 -0.1267 -0.1380 -0.5379 -0.9521 -1.1812 -1.4003 -0.0651 -0.0390 -0.0703 -0.0259 -0.0456 -0.0153 -0.0439
+A-84	11-0 11-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-85	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-85	0.635	seconds
+H-85	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-85	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-85	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-85	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-86	where is <unk-2> <unk-3> <unk-4> <unk-5> in de <unk-8> <unk-9> <unk-10> located and what is the registration number ?
+W-86	0.793	seconds
+H-86	-0.6340469121932983	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> in in in in de <unk-8> <unk-9> <unk-10> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-86	-0.6340469121932983	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> in in in in de <unk-8> <unk-9> <unk-10> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-86	-0.0950 -0.0350 -0.5930 -0.0690 -0.0293 -0.0847 -0.0309 -0.0362 -0.6280 -0.4130 -0.5746 -0.6028 -1.0880 -1.3877 -1.6765 -1.2416 -1.5971 -2.2378 -1.9805 -1.5597 -0.0480 -0.3420 -0.3498 -0.0689 -0.1535 -0.0398 -0.1569
+A-86	14-0 15-1 0-2 2-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 6-11 6-12 7-13 7-14 7-15 8-16 9-17 10-18 10-19 10-20 10-21 12-22 17-23 7-24 12-25
+S-87	where is <unk-2> <unk-3> de hoop located and what is the registration number ?
+W-87	0.625	seconds
+H-87	-0.21092623472213745	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> de de hoop quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-87	-0.21092623472213745	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> de de hoop quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-87	-0.0512 -0.0410 -0.1108 -0.0339 -0.0241 -0.0719 -0.0297 -0.0212 -0.1826 -0.2845 -0.1618 -1.1243 -0.8228 -1.1631 -0.0518 -0.0322 -0.0807 -0.0289 -0.0416 -0.0154 -0.0559
+A-87	9-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 4-11 5-12 11-13 7-14 5-15 11-16 0-17 7-18 11-19
+S-88	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-88	0.625	seconds
+H-88	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-88	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-88	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-88	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-89	where is <unk-2> <unk-3> located and what is the registration number ?
+W-89	0.596	seconds
+H-89	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-89	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-89	-0.0598 -0.0457 -0.0414 -0.0312 -0.0229 -0.1012 -0.0302 -0.0182 -0.1800 -0.2837 -0.9086 -1.0987 -0.8073 -0.5408 -0.0584 -0.0961 -0.0464 -0.0222 -0.0411 -0.0140 -0.0584
+A-89	9-0 10-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 4-11 9-12 9-13 9-14 9-15 9-16 0-17 9-18 9-19
+S-90	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-90	0.609	seconds
+H-90	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-90	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-90	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-90	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-91	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-91	0.626	seconds
+H-91	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-91	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-91	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-91	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-92	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-92	0.655	seconds
+H-92	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-92	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-92	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-92	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-93	where is <unk-2> global care <unk-5> located and what is the registration number ?
+W-93	0.609	seconds
+H-93	-0.22636429965496063	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> global global care <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-93	-0.22636429965496063	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> global global care <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-93	-0.0526 -0.0411 -0.1709 -0.0336 -0.0242 -0.0676 -0.0299 -0.0207 -0.1364 -0.2122 -1.0472 -0.8070 -1.0935 -0.6933 -0.0611 -0.0299 -0.0917 -0.0344 -0.0443 -0.0157 -0.0463
+A-93	9-0 12-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 4-10 4-11 5-12 11-13 7-14 5-15 11-16 0-17 7-18 12-19
+S-94	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-94	0.641	seconds
+H-94	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-94	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-94	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-94	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-95	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-95	0.601	seconds
+H-95	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-95	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-95	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-95	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-96	where is <unk-2> <unk-3> insurance <unk-5> located and what is the registration number ?
+W-96	0.633	seconds
+H-96	-0.191237673163414	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> insurance <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-96	-0.191237673163414	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> insurance <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-96	-0.0571 -0.0369 -0.2157 -0.0372 -0.0237 -0.0642 -0.0265 -0.0202 -0.2449 -0.2638 -0.0909 -0.6041 -1.7598 -0.0644 -0.0255 -0.1466 -0.0365 -0.0462 -0.0160 -0.0443
+A-96	9-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 6-12 7-13 5-14 11-15 0-16 4-17 12-18
+S-97	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-97	0.581	seconds
+H-97	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-97	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-97	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-97	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-98	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-98	0.600	seconds
+H-98	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-98	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-98	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-98	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-99	where is <unk-2> <unk-3> her located and what is the registration number ?
+W-99	0.596	seconds
+H-99	-0.27764537930488586	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> her located and quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-99	-0.27764537930488586	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> her located and quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-99	-0.0528 -0.0420 -0.0832 -0.0317 -0.0233 -0.0788 -0.0290 -0.0190 -0.1823 -0.2687 -0.2572 -1.2379 -2.1255 -1.1094 -0.0538 -0.0448 -0.0554 -0.0278 -0.0381 -0.0142 -0.0556
+A-99	8-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 5-12 10-13 10-14 10-15 10-16 0-17 6-18 10-19
+S-100	where is <unk-2> <unk-3> van <unk-5> located and what is the registration number ?
+W-100	0.646	seconds
+H-100	-0.21060501039028168	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> van <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-100	-0.21060501039028168	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> van <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-100	-0.0617 -0.0387 -0.1646 -0.0357 -0.0246 -0.0698 -0.0274 -0.0200 -0.2716 -0.1881 -0.1682 -0.6742 -2.1291 -0.0578 -0.0272 -0.1080 -0.0348 -0.0417 -0.0155 -0.0536
+A-100	9-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 6-12 7-13 5-14 11-15 0-16 4-17 12-18
+S-101	where is <unk-2> <unk-3> located and what is the registration number ?
+W-101	0.601	seconds
+H-101	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-101	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-101	-0.0598 -0.0457 -0.0414 -0.0312 -0.0229 -0.1012 -0.0302 -0.0182 -0.1800 -0.2837 -0.9086 -1.0987 -0.8073 -0.5408 -0.0584 -0.0961 -0.0464 -0.0222 -0.0411 -0.0140 -0.0584
+A-101	9-0 10-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 4-11 9-12 9-13 9-14 9-15 9-16 0-17 9-18 9-19
+S-102	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> located and what is the registration number ?
+W-102	0.654	seconds
+H-102	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-102	-0.3904932737350464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> located located quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-102	-0.0831 -0.0362 -0.4566 -0.0513 -0.0264 -0.0774 -0.0298 -0.0278 -0.4314 -0.9506 -0.0974 -0.8498 -0.8027 -1.2242 -2.7561 -0.0489 -0.0526 -0.4096 -0.0528 -0.0598 -0.0157 -0.0506
+A-102	13-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 7-15 6-16 11-17 14-18 8-19 13-20
+S-103	where is <unk-2> holland <unk-4> <unk-5> <unk-6> <unk-7> located and what is the registration number ?
+W-103	0.632	seconds
+H-103	-0.28337767720222473	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> holland <unk-4> <unk-5> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-103	-0.28337767720222473	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> holland <unk-4> <unk-5> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-103	-0.0902 -0.0372 -0.6199 -0.0559 -0.0291 -0.0718 -0.0313 -0.0313 -0.1795 -0.2309 -0.4128 -0.4448 -1.0955 -1.6716 -0.0530 -0.0358 -0.6496 -0.0585 -0.0708 -0.0186 -0.0628
+A-103	14-0 15-1 0-2 0-3 2-4 4-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 8-13 7-14 7-15 11-16 0-17 7-18 14-19
+S-104	where is <unk-2> <unk-3> en <unk-5> <unk-6> located and what is the registration number ?
+W-104	0.640	seconds
+H-104	-0.2807784974575043	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> en <unk-5> <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-104	-0.2807784974575043	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> en <unk-5> <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-104	-0.0669 -0.0354 -0.3773 -0.0447 -0.0255 -0.0756 -0.0271 -0.0252 -0.4916 -0.2637 -0.1147 -0.8391 -2.0340 -0.9080 -0.0600 -0.0340 -0.2998 -0.0478 -0.0554 -0.0163 -0.0543
+A-104	10-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 6-15 12-16 14-17 8-18 13-19
+S-105	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-105	0.653	seconds
+H-105	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-105	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-105	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-105	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-106	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-106	0.607	seconds
+H-106	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-106	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-106	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-106	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-107	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-107	0.629	seconds
+H-107	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-107	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-107	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-107	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-108	where is <unk-2> <unk-3> en land <unk-6> <unk-7> located and what is the registration number ?
+W-108	0.655	seconds
+H-108	-0.31679487228393555	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> en land <unk-6> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-108	-0.31679487228393555	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> en land <unk-6> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-108	-0.0653 -0.0341 -0.4236 -0.0464 -0.0261 -0.0763 -0.0273 -0.0264 -0.6147 -0.7057 -0.1417 -0.6599 -1.1193 -1.5954 -0.8440 -0.0570 -0.0478 -0.2633 -0.0557 -0.0654 -0.0185 -0.0556
+A-108	11-0 14-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 6-12 8-13 8-14 7-15 7-16 11-17 14-18 9-19 14-20
+S-109	where is <unk-2> <unk-3> en <unk-5> <unk-6> located and what is the registration number ?
+W-109	0.620	seconds
+H-109	-0.2807784974575043	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> en <unk-5> <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-109	-0.2807784974575043	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> en <unk-5> <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-109	-0.0669 -0.0354 -0.3773 -0.0447 -0.0255 -0.0756 -0.0271 -0.0252 -0.4916 -0.2637 -0.1147 -0.8391 -2.0340 -0.9080 -0.0600 -0.0340 -0.2998 -0.0478 -0.0554 -0.0163 -0.0543
+A-109	10-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 7-12 7-13 7-14 6-15 12-16 14-17 8-18 13-19
+S-110	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-110	0.600	seconds
+H-110	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-110	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-110	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-110	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-111	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-111	0.607	seconds
+H-111	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-111	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-111	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-111	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-112	where is <unk-2> <unk-3> located and what is the registration number ?
+W-112	0.636	seconds
+H-112	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-112	-0.21457529067993164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> located located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-112	-0.0598 -0.0457 -0.0414 -0.0312 -0.0229 -0.1012 -0.0302 -0.0182 -0.1800 -0.2837 -0.9086 -1.0987 -0.8073 -0.5408 -0.0584 -0.0961 -0.0464 -0.0222 -0.0411 -0.0140 -0.0584
+A-112	9-0 10-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 4-11 9-12 9-13 9-14 9-15 9-16 0-17 9-18 9-19
+S-113	where is <unk-2> europe insurance <unk-5> located and what is the registration number ?
+W-113	2.940	seconds
+H-113	-0.23203134536743164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> europe europe insurance <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-113	-0.23203134536743164	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> europe europe insurance <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-113	-0.0526 -0.0398 -0.1547 -0.0349 -0.0250 -0.0569 -0.0276 -0.0216 -0.1279 -0.1884 -1.0157 -0.1801 -1.8486 -0.7590 -0.0675 -0.0301 -0.0935 -0.0323 -0.0537 -0.0190 -0.0438
+A-113	9-0 12-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 3-10 4-11 6-12 11-13 7-14 5-15 11-16 0-17 7-18 12-19
+S-114	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-114	0.576	seconds
+H-114	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-114	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-114	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-114	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-115	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-115	0.607	seconds
+H-115	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-115	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-115	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-115	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-116	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-116	0.605	seconds
+H-116	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-116	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-116	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-116	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-117	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-117	0.627	seconds
+H-117	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-117	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-117	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-117	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-118	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-118	0.615	seconds
+H-118	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-118	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-118	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-118	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-119	where is <unk-2> <unk-3> <unk-4> de <unk-6> <unk-7> located and what is the registration number ?
+W-119	0.655	seconds
+H-119	-0.32302746176719666	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> de <unk-6> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-119	-0.32302746176719666	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> de <unk-6> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-119	-0.0833 -0.0349 -0.6356 -0.0551 -0.0280 -0.0776 -0.0299 -0.0310 -0.5011 -0.8838 -0.3518 -0.4037 -0.7573 -1.9555 -0.4846 -0.0494 -0.0479 -0.5008 -0.0634 -0.0575 -0.0149 -0.0595
+A-119	14-0 14-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 5-11 6-12 8-13 8-14 7-15 7-16 11-17 15-18 8-19 14-20
+S-120	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> <unk-7> located and what is the registration number ?
+W-120	0.607	seconds
+H-120	-0.3180121183395386	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> <unk-5> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-120	-0.3180121183395386	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> <unk-5> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-120	-0.1011 -0.0362 -0.6375 -0.0611 -0.0287 -0.0808 -0.0309 -0.0328 -0.5318 -0.7083 -0.1859 -0.9429 -1.1390 -1.2056 -0.0545 -0.0390 -0.6525 -0.0607 -0.0670 -0.0170 -0.0648
+A-120	14-0 15-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 5-11 7-12 8-13 7-14 7-15 11-16 0-17 7-18 14-19
+S-121	where is <unk-2> <unk-3> &apos; <unk-5> <unk-6> located and what is the registration number ?
+W-121	0.625	seconds
+H-121	-0.23569411039352417	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-5> <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-121	-0.23569411039352417	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-5> <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-121	-0.0483 -0.0310 -0.3270 -0.0411 -0.0227 -0.0746 -0.0267 -0.0237 -0.4504 -0.1623 -0.0800 -1.1379 -1.7840 -0.0657 -0.0303 -0.2401 -0.0460 -0.0503 -0.0161 -0.0558
+A-121	10-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 5-10 6-11 7-12 7-13 6-14 12-15 0-16 7-17 13-18
+S-122	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> <unk-7> located and what is the registration number ?
+W-122	0.613	seconds
+H-122	-0.3180121183395386	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> <unk-5> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-122	-0.3180121183395386	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> <unk-5> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-122	-0.1011 -0.0362 -0.6375 -0.0611 -0.0287 -0.0808 -0.0309 -0.0328 -0.5318 -0.7083 -0.1859 -0.9429 -1.1390 -1.2056 -0.0545 -0.0390 -0.6525 -0.0607 -0.0670 -0.0170 -0.0648
+A-122	14-0 15-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 5-11 7-12 8-13 7-14 7-15 11-16 0-17 7-18 14-19
+S-123	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-123	0.610	seconds
+H-123	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-123	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-123	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-123	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-124	where is <unk-2> europe life insurance <unk-6> located and what is the registration number ?
+W-124	0.587	seconds
+H-124	-0.24201273918151855	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> europe life insurance <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-124	-0.24201273918151855	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> europe life insurance <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-124	-0.0458 -0.0342 -0.5500 -0.0338 -0.0243 -0.0579 -0.0272 -0.0212 -0.1422 -0.6758 -0.6413 -0.1972 -0.4776 -1.6346 -0.0608 -0.0275 -0.2441 -0.0678 -0.0548 -0.0195 -0.0446
+A-124	10-0 13-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 4-10 5-11 6-12 7-13 8-14 6-15 12-16 0-17 8-18 13-19
+S-125	where is blue square <unk-4> <unk-5> located and what is the registration number ?
+W-125	3.114	seconds
+H-125	-0.8790158033370972	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l blue square square <unk-4> located located and located and registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration is var_a sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-125	-0.8790158033370972	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l blue square square <unk-4> located located and located and registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration registration is var_a sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-125	-0.0605 -0.0429 -0.1422 -0.0378 -0.0269 -0.0617 -0.0301 -0.0226 -0.1147 -0.0945 -0.8510 -0.7912 -0.6742 -1.0232 -1.4959 -1.9011 -1.6431 -1.9275 -0.7560 -1.0637 -1.3639 -1.3268 -1.0748 -0.9106 -0.8793 -0.9444 -0.9292 -0.7512 -0.5920 -0.5250 -0.5053 -0.5149 -0.5523 -0.6066 -0.6401 -0.6509 -0.6548 -0.6776 -0.7052 -0.6978 -0.6651 -0.6497 -0.6594 -0.6952 -0.7810 -0.8949 -0.9684 -0.9590 -0.9305 -0.9292 -0.9389 -0.9143 -0.8128 -0.6854 -0.6102 -0.6178 -0.7206 -0.9448 -1.2110 -1.3063 -1.1524 -0.9351 -0.7883 -0.7238 -0.7247 -0.7695 -0.8315 -0.8758 -0.8829 -0.8631 -0.8418 -0.8351 -0.8526 -0.8863 -0.9514 -1.0474 -1.1514 -1.2274 -1.2410 -1.1998 -1.1558 -1.0988 -1.0418 -1.0096 -1.0148 -1.0491 -1.1092 -1.1783 -1.2709 -1.4083 -1.6397 -3.8758 -2.1604 -0.3299 -2.3506 -0.4084 -0.1096 -0.4599 -1.1483 -0.1426
+A-125	9-0 12-1 0-2 0-3 2-4 4-5 2-6 2-7 2-8 3-9 3-10 4-11 6-12 6-13 6-14 7-15 7-16 11-17 11-18 11-19 11-20 11-21 11-22 11-23 11-24 11-25 11-26 11-27 11-28 11-29 11-30 11-31 11-32 11-33 11-34 11-35 11-36 11-37 11-38 11-39 11-40 11-41 11-42 11-43 11-44 11-45 11-46 11-47 11-48 11-49 11-50 11-51 11-52 11-53 11-54 11-55 11-56 11-57 11-58 11-59 11-60 11-61 11-62 11-63 11-64 11-65 11-66 11-67 11-68 11-69 11-70 11-71 11-72 11-73 11-74 11-75 11-76 11-77 11-78 11-79 11-80 11-81 11-82 11-83 11-84 11-85 11-86 11-87 11-88 11-89 11-90 11-91 11-92 7-93 11-94 11-95 12-96 7-97 11-98
+S-126	where is <unk-2> insurance <unk-4> located and what is the registration number ?
+W-126	0.573	seconds
+H-126	-0.23826245963573456	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> insurance <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-126	-0.23826245963573456	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> insurance <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-126	-0.0576 -0.0430 -0.0932 -0.0332 -0.0239 -0.0615 -0.0287 -0.0212 -0.1267 -0.1380 -0.5379 -0.9521 -1.1812 -1.4003 -0.0651 -0.0390 -0.0703 -0.0259 -0.0456 -0.0153 -0.0439
+A-126	11-0 11-1 0-2 0-3 2-4 2-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-127	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-127	0.590	seconds
+H-127	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-127	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-127	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-127	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-128	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-128	0.593	seconds
+H-128	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-128	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-128	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-128	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-129	where is <unk-2> <unk-3> <unk-4> located and what is the registration number ?
+W-129	0.609	seconds
+H-129	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-129	-0.2142200469970703	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> located registration quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-129	-0.0631 -0.0410 -0.1072 -0.0363 -0.0235 -0.0708 -0.0285 -0.0212 -0.1756 -0.1936 -0.1607 -0.8751 -1.3682 -1.0112 -0.0578 -0.0458 -0.0876 -0.0293 -0.0428 -0.0139 -0.0454
+A-129	11-0 11-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 10-12 10-13 10-14 10-15 10-16 0-17 6-18 11-19
+S-130	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-130	0.594	seconds
+H-130	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-130	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-130	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-130	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-131	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-131	0.619	seconds
+H-131	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-131	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-131	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-131	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-132	where is <unk-2> <unk-3> <unk-4> <unk-5> <unk-6> <unk-7> located and what is the registration number ?
+W-132	0.576	seconds
+H-132	-0.3180121183395386	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> <unk-5> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-132	-0.3180121183395386	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-4> <unk-4> <unk-5> <unk-7> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-132	-0.1011 -0.0362 -0.6375 -0.0611 -0.0287 -0.0808 -0.0309 -0.0328 -0.5318 -0.7083 -0.1859 -0.9429 -1.1390 -1.2056 -0.0545 -0.0390 -0.6525 -0.0607 -0.0670 -0.0170 -0.0648
+A-132	14-0 15-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 4-9 4-10 5-11 7-12 8-13 7-14 7-15 11-16 0-17 7-18 14-19
+S-133	where is <unk-2> <unk-3> <unk-4> de <unk-6> located and what is the registration number ?
+W-133	0.600	seconds
+H-133	-0.2028460055589676	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> de <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-133	-0.2028460055589676	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> de <unk-6> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-133	-0.0677 -0.0354 -0.4207 -0.0459 -0.0261 -0.0738 -0.0292 -0.0267 -0.3606 -0.5759 -0.1737 -0.3864 -0.3862 -1.0856 -0.0519 -0.0333 -0.3108 -0.0497 -0.0513 -0.0150 -0.0538
+A-133	10-0 13-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 5-11 6-12 7-13 7-14 6-15 12-16 0-17 7-18 13-19
+S-134	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-134	0.612	seconds
+H-134	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-134	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-134	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-134	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-135	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-135	0.611	seconds
+H-135	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-135	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-135	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-135	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-136	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-136	0.608	seconds
+H-136	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-136	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-136	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-136	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+S-137	where is <unk-2> <unk-3> <unk-4> <unk-5> located and what is the registration number ?
+W-137	0.601	seconds
+H-137	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+D-137	-0.2483445405960083	SELECT DISTINCT var_a WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-2> <unk-3> <unk-4> <unk-5> quot_mark_r sep_dot var_e eiopa-Base:hasInsuranceUndertakingID var_a sep_dot brack_close
+P-137	-0.0692 -0.0377 -0.2461 -0.0427 -0.0248 -0.0717 -0.0289 -0.0240 -0.2837 -0.2889 -0.1052 -1.8527 -1.4193 -0.0594 -0.0296 -0.2287 -0.0399 -0.0465 -0.0150 -0.0528
+A-137	12-0 12-1 0-2 0-3 2-4 3-5 2-6 2-7 2-8 3-9 4-10 6-11 6-12 6-13 5-14 11-15 0-16 7-17 12-18
+2021-05-20 12:49:30 | INFO | fairseq_cli.interactive | Total time: 104.303 seconds; translation time: 101.920

@@ -12,6 +12,7 @@ from numpy import median
 from string import Template
 from generator_utils import sparql_decode
 from generator import initialize_graph, query_database
+from pg_postprocess import replace_oovs, OOVIndexError
 
 
 def read_in_generated_data(in_file):
@@ -172,10 +173,17 @@ if __name__ == "__main__":
     parser.add_argument('--interactive', dest='interactive_mode',
                         action='store_true',
                         help='decode output from interactive mode')
+    parser.add_argument('--pointer-generator', dest='pg_mode',
+                        action='store_true',
+                        help='to use postprocess function for replacing unk-x'
+                             'when using pointer-generator model')
     parser.add_argument('--in-file', dest='input_file',
                         help='generated translations', required=True)
     parser.add_argument('--in-file-reference', dest='reference_file',
                         help='reference translations', required=False)
+    parser.add_argument('--in-file-source', dest='source_file',
+                        help='source file with questions without unk',
+                        required=False)
     parser.add_argument('--out-file', dest='output_file_decoded',
                         help='file directory to write output', required=True)
     parser.add_argument('--out-file-encoded', dest='output_file_encoded',
@@ -193,6 +201,8 @@ if __name__ == "__main__":
                             f'{args.output_file_encoded} is not given'
                             f'as argument')
         results_list = read_in_interactive_output(args.input_file)
+        if args.pg_mode is True:
+            results_list = replace_oovs(results_list, args.source_file)
         result = write_decoded_queries_interactive(results_list,
                                                    args.reference_file,
                                                    args.output_file_decoded,
@@ -201,6 +211,10 @@ if __name__ == "__main__":
                                           args.output_file_encoded)
     else:
         results_list, result = read_in_generated_data(args.input_file)
+        if args.pg_mode is True:
+            results_list = replace_oovs(results_list, args.source_file)
         write_queries_generated(results_list, args.output_file_decoded)
     if args.sum_file:
         save_result(result, args.output_file_decoded, args.sum_file)
+    else:
+        print(result)
