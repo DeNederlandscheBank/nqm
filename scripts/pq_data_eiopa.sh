@@ -32,14 +32,14 @@ cat $DATA_DIR/dict.iwslt.en |
 
 echo 'Generating data (train, validation) for NL insurers...'
 python src_eiopa/generator.py \
-  --templates $DATA_DIR/templates_newnames.csv \
+  --templates $DATA_DIR/templates.csv \
   --output $INT_DIR --id "$ID" --type train_val_nl \
   --graph-data-path $DATA_DIR --input-language en
 
 if [ $USE_KNOWN_AND_UNKNOWN_NAMES = "YES" ]; then
   echo 'Generating data (train, validation) for DE insurers...'
   python src_eiopa/generator.py \
-    --templates $DATA_DIR/templates_newnames_de.csv \
+    --templates $DATA_DIR/templates_DE.csv \
     --output $INT_DIR --id "$ID" --type train_val_de \
     --graph-data-path $DATA_DIR --input-language en
 

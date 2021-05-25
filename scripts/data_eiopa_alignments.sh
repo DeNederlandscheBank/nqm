@@ -25,7 +25,7 @@ echo "$ID"
 
 echo 'Generating data (train, validation)...'
 python src_eiopa/generator.py \
-  --templates $DATA_DIR/templates_newnames.csv \
+  --templates $DATA_DIR/templates.csv \
   --output $INT_DIR --id "$ID" --type train_val \
   --graph-data-path $DATA_DIR --input-language en
 echo 'Splitting data intro train and validation...'
