@@ -47,7 +47,7 @@ mkdir -p $OUT_DIR
 [[ -d "$DATA_BIN" ]] \
  && { echo "$DATA_BIN  exists" }
 
-for f in test_{1..$COUNT_TEST}; do
+for f in val test_{1..$COUNT_TEST}; do
   echo "Generate translations using fairseq-interactive for $f"
   cat $IN_DIR/data_$ID-$f.nl | \
         $generate $DATA_BIN \

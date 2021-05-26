@@ -4,9 +4,10 @@
 # This script copies the required model files using $ID and places them in the
 # correct directory. The name is adapated using $ID_new. These two variables
 # have to be adapted to the desired values.
-ID=19-05_18-58_16631
-ID_NEW=16631
+ID=26-05_11-25_5724
+ID_NEW=5724
 BPE=NO
+OOV=YES
 
 
 DATA_DIR=data/eiopa/3_processed
@@ -46,15 +47,16 @@ done
 if [ $BPE = YES ]
     then
       for L in nl ql; do
-        for f in test_{1..$COUNT_TEST}.$L; do
+        for f in val.$L test_{1..$COUNT_TEST}.$L; do
           cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_no-BPE-$f
           echo "copying no-BPE-$f..."
         done
       done
 fi
-for L in nl ql; do
-  for f in test_{1..$COUNT_TEST}.$L; do
-    cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_OOV-$f
-    echo "Copying OOV-$f"
+if [ $OOV = YES ]; then
+  for L in nl ql; do
+    for f in val.$L test_{1..$COUNT_TEST}.$L; do
+      cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_OOV-$f
+      echo "Copying OOV-$f"
+    done
   done
-done

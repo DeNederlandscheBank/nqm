@@ -20,7 +20,7 @@ OUT_DIR=$MODEL_DIR/out_$ID
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 DATA_BIN=$IN_DIR/fairseq-data-bin-$ID_MODEL
 
-for f in test_{1..$COUNT_TEST}; do
+for f in val test_{1..$COUNT_TEST}; do
   fairseq-generate $IN_DIR/fairseq-data-bin-$ID_MODEL \
     --gen-subset $f \
     --path $MODEL_DIR/checkpoint_best.pt \
