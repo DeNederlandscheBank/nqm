@@ -50,7 +50,7 @@ $SRC_DIR/fairseq-train $DATA_BIN \
     --lr-scheduler inverse_sqrt --weight-decay 0.01 --lr 0.001  \
     --criterion label_smoothed_cross_entropy --scoring bleu \
     --warmup-updates 4000 --warmup-init-lr '1e-07' \
-    --max-epoch 1 --save-interval 30 --valid-subset valid \
+    --max-epoch 1 --save-interval 1 --valid-subset valid \
     --save-dir $MODEL_DIR \
     --batch-size 256 --keep-best-checkpoints 1 --patience 20 \
     --task translation \

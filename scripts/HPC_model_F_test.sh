@@ -46,7 +46,7 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
   --criterion label_smoothed_cross_entropy_with_alignment --scoring bleu \
   --warmup-updates 4000 --warmup-init-lr '1e-07' \
-  --max-epoch 1 --save-interval 30 --valid-subset valid \
+  --max-epoch 1 --save-interval 1 --valid-subset valid \
   --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR \
   --batch-size 256 --keep-best-checkpoints 1 --patience 20 \
   --eval-bleu \
