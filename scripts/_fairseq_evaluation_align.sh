@@ -53,7 +53,7 @@ mkdir -p $OUT_DIR
 [[ -d "$DATA_BIN" ]] \
  && { echo "$DATA_BIN  exists" }
 
-for f in val test_{1..$COUNT_TEST}; do
+for f in test_{1..$COUNT_TEST}; do
   echo "Generate translations using fairseq-interactive for $f"
   if [ $SUBWORDS = True ]
     # use no subword processed files for generation
