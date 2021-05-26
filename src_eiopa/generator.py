@@ -12,9 +12,9 @@ import importlib
 import io
 import logging
 import os
+import random
 import sys
 import traceback
-import random
 
 from rdflib import term, Graph
 from sacremoses import MosesTokenizer
@@ -26,8 +26,6 @@ try:
 except ImportError:
     from nqm.src_eiopa.generator_utils import strip_item, sparql_encode, \
         read_template_file, add_quotation_marks
-
-EXAMPLES_PER_TEMPLATE = 125
 
 
 def initialize_graph(graph_data_path):
@@ -111,13 +109,15 @@ def build_dataset_quadruple(item, template, mt):
 
 
 def generate_dataset(templates, output_dir, file_mode, job_id,
-                     type_, mt, graph_database):
+                     type_, mt, graph_database, examples_per_template):
     """
         This function will generate dataset from the given templates and
         store it to the output directory.
+        :param examples_per_template:
         :param graph_database:
     """
     logging.info(f"Building files of type: {type_}")
+    logging.info(f"Using {examples_per_template} examples per template!")
     cache = dict()
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -131,7 +131,8 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
             try:
                 # get list of results for generator_query
                 results = get_results_of_generator_query(cache, template,
-                                                         graph_database)
+                                                         graph_database,
+                                                         examples_per_template)
                 if results is None or len(results) == 0:
                     logging.debug("no data for {}".format(template.question))
                     not_instanced_templates.update([template.question])
@@ -156,7 +157,7 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
                                             '/data_{1}-{0}.nl.raw'.format(type_,
                                                                           job_id),
                                             'a', encoding='utf-8') \
-                                    as nl_questions_raw:
+                                            as nl_questions_raw:
                                 queries_raw.write("{}\n".format(
                                     dataset_quadruple['query_raw']))
                                 nl_questions_raw.write("{}\n".format(
@@ -173,12 +174,14 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
                 raise Exception()
 
 
-def get_results_of_generator_query(cache, template, graph_database):
+def get_results_of_generator_query(cache, template, graph_database,
+                                   examples_per_template):
     """
     Return list of items to fill placeholder in template query by
     using the generator_query.
     Only returns results if sufficient amount of items was found, otherwise
     returns "None". The threshold is defined by EXAMPLES_PER_TEMPLATE
+    :param examples_per_template:
     :param graph_database:
     """
     generator_query = template.generator_query
@@ -205,10 +208,10 @@ def get_results_of_generator_query(cache, template, graph_database):
         logging.debug('{} matches for {}'.format(
             len(results), getattr(template, 'id')))
 
-        if len(results) <= EXAMPLES_PER_TEMPLATE:
+        if len(results) <= examples_per_template:
             return_results = results
         else:
-            return_results = results[0:EXAMPLES_PER_TEMPLATE]
+            return_results = results[0:examples_per_template]
             cache[generator_query] = return_results
             break
     return return_results
@@ -261,6 +264,10 @@ if __name__ == '__main__':
         '--input-language', dest='input_lang',
         required=True, help="input language as abbreviation"
     )
+    requiredNamed.add_argument(
+        '--examples-per-template', dest='examples_per_template',
+        required=True, help='how many examples per template should be used'
+    )
 
     args = parser.parse_args()
 
@@ -268,6 +275,7 @@ if __name__ == '__main__':
     output_dir = args.output
     job_id = args.id
     type_ = args.type
+    examples_per_template = int(args.examples_per_template)
     use_resources_dump = False  # args.continue_generation # (MG): Value is TRUE
     # when continuing on existing dump
     use_folder = args.use_folder
@@ -318,11 +326,13 @@ if __name__ == '__main__':
                 templates = read_template_file(os.path.join(
                     template_file, use_folder, file))
                 generate_dataset(templates, output_dir, file_mode, job_id,
-                                 file_type, moses_tokenizer, graph_database)
+                                 file_type, moses_tokenizer, graph_database,
+                                 examples_per_template)
         else:
             templates = read_template_file(template_file)
             generate_dataset(templates, output_dir, file_mode, job_id, type_,
-                             moses_tokenizer, graph_database)
+                             moses_tokenizer, graph_database,
+                             examples_per_template)
     except Exception:  # (MG): exception occured
         print('exception occured, look for error in log file')
         # save_cache(resource_dump_file, used_resources)

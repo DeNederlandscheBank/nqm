@@ -7,6 +7,11 @@ USE_KNOWN_AND_UNKNOWN_NAMES=YES # if NO, all names are treated as unknown
 
 VOCAB_SIZE=15000
 POSITION_MARKERS=100
+EXAMPLES_PER_TEMPLATE=130
+
+if [ $USE_KNOWN_AND_UNKNOWN_NAMES = YES]; then
+  export EXAMPLES_PER_TEMPLATE=$(($EXAMPLES_PER_TEMPLATE/2))
+fi
 
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs
@@ -34,14 +39,16 @@ echo 'Generating data (train, validation) for NL insurers...'
 python src_eiopa/generator.py \
   --templates $DATA_DIR/templates.csv \
   --output $INT_DIR --id "$ID" --type train_val_nl \
-  --graph-data-path $DATA_DIR --input-language en
+  --graph-data-path $DATA_DIR --input-language en \
+  --examples-per-template $EXAMPLES_PER_TEMPLATE
 
 if [ $USE_KNOWN_AND_UNKNOWN_NAMES = "YES" ]; then
   echo 'Generating data (train, validation) for DE insurers...'
   python src_eiopa/generator.py \
     --templates $DATA_DIR/templates_DE.csv \
     --output $INT_DIR --id "$ID" --type train_val_de \
-    --graph-data-path $DATA_DIR --input-language en
+    --graph-data-path $DATA_DIR --input-language en \
+    --examples-per-template $EXAMPLES_PER_TEMPLATE
 
   echo "Concatenate files with NL and DE insurance names..."
   for L in nl ql; do
@@ -93,7 +100,7 @@ python src_eiopa/generator.py \
   --templates $DATA_DIR \
   --output $INT_DIR --id "$ID" --type test \
   --graph-data-path $DATA_DIR --folder $TEST_TEMPLATES \
-  --input-language en
+  --input-language en --examples-per-template $EXAMPLES_PER_TEMPLATE
 
 echo "Preprocess using pointer-generator preprocess.py..."
   for f in train val test_{1..$COUNT_TEST}; do

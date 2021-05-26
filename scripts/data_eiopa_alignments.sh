@@ -5,6 +5,8 @@
 USE_SUBWORDS=NO # use of subword splitting
 CREATE_SUBWORD_DICTIONARY=NO # generate dictionary using subword split sentences
 
+EXAMPLES_PER_TEMPLATE=130
+
 echo "Making directories..."
 mkdir -p ./data/eiopa/2_interim/logs
 mkdir -p ./data/eiopa/3_processed/logs
@@ -27,7 +29,8 @@ echo 'Generating data (train, validation)...'
 python src_eiopa/generator.py \
   --templates $DATA_DIR/templates.csv \
   --output $INT_DIR --id "$ID" --type train_val \
-  --graph-data-path $DATA_DIR --input-language en
+  --graph-data-path $DATA_DIR --input-language en\
+  --examples-per-template $EXAMPLES_PER_TEMPLATE
 echo 'Splitting data intro train and validation...'
 python src_eiopa/splitter.py \
   --inputPath  $INT_DIR/data_"$ID" \
@@ -38,7 +41,8 @@ python src_eiopa/generator.py \
   --templates $DATA_DIR \
   --output $INT_DIR --id "$ID" --type test \
   --graph-data-path $DATA_DIR --folder $TEST_TEMPLATES \
-  --input-language en
+  --input-language en \
+  --examples-per-template $EXAMPLES_PER_TEMPLATE
 
 #echo 'Generate SPARQL dictionary...'
 #python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
