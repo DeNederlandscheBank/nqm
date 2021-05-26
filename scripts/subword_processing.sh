@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# SPARQL dictionary has to be given as external argument
+# SPARQL and natural language dictionary has to be given as external argument
 
 if [ -n "$3" ]
     then ID=$3
@@ -16,7 +16,7 @@ fi
 BPE_CODE=$DICT_DIR/bpe-$ID.codes
 
 # Merge nl and ql dictionary to learn joint subwords
-cat $DATA_DIR/dict.iwslt.en $1 > $DICT_DIR/dict-$ID.shared
+cat $1 $2 > $DICT_DIR/dict-$ID.shared
 
 echo 'Learning BPE codes using subword_nmt'
 python src_eiopa/subword-nmt/subword_nmt/learn_bpe.py \
@@ -31,18 +31,16 @@ for L in nl ql; do # both languages
         python src_eiopa/subword-nmt/subword_nmt/apply_bpe.py \
         --codes "$BPE_CODE" \
         --input $INT_DIR/data_"$ID"-$f \
-        --output $OUT_DIR/data_"$ID"-$f \
-#        --vocabulary $DICT_DIR/$ID-vocab.$L
+        --output $OUT_DIR/data_"$ID"-$f
     done
 done
 
-if [ "$2" = YES ]
-    then echo 'Generate new dictionaries using train...'
-      for L in nl ql; do
-        python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
-          --input $OUT_DIR/data_$ID-train.$L --output $DICT_DIR/dict-$ID.bpe.$L
-      done
-fi
+echo 'Generate new dictionaries using train...'
+  for L in nl ql; do
+    python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
+      --input $OUT_DIR/data_$ID-train.$L --output $DICT_DIR/dict-$ID.bpe.$L
+  done
+
 
 
 #for L in nl ql; do
