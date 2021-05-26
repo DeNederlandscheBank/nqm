@@ -27,7 +27,7 @@ except ImportError:
     from nqm.src_eiopa.generator_utils import strip_item, sparql_encode, \
         read_template_file, add_quotation_marks
 
-EXAMPLES_PER_TEMPLATE = 1
+EXAMPLES_PER_TEMPLATE = 125
 
 
 def initialize_graph(graph_data_path):
@@ -117,6 +117,7 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
         store it to the output directory.
         :param graph_database:
     """
+    logging.info(f"Building files of type: {type_}")
     cache = dict()
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -149,13 +150,13 @@ def generate_dataset(templates, output_dir, file_mode, job_id,
                             with io.open(output_dir +
                                          '/data_{1}-{0}.ql.raw'.format(type_,
                                                                        job_id),
-                                         file_mode, encoding='utf-8') \
+                                         'a', encoding='utf-8') \
                                     as queries_raw, \
                                     io.open(output_dir +
                                             '/data_{1}-{0}.nl.raw'.format(type_,
                                                                           job_id),
-                                            file_mode, encoding='utf-8') \
-                                            as nl_questions_raw:
+                                            'a', encoding='utf-8') \
+                                    as nl_questions_raw:
                                 queries_raw.write("{}\n".format(
                                     dataset_quadruple['query_raw']))
                                 nl_questions_raw.write("{}\n".format(
@@ -195,7 +196,7 @@ def get_results_of_generator_query(cache, template, graph_database):
         generator_query = prepare_query(template)
 
         if generator_query in cache:
-            results = cache[generator_query]
+            return_results = cache[generator_query]
             break
         logging.debug('{}. attempt generator_query: {}'.format(attempt,
                                                                generator_query))
@@ -207,8 +208,8 @@ def get_results_of_generator_query(cache, template, graph_database):
         if len(results) <= EXAMPLES_PER_TEMPLATE:
             return_results = results
         else:
-            cache[generator_query] = results
             return_results = results[0:EXAMPLES_PER_TEMPLATE]
+            cache[generator_query] = return_results
             break
     return return_results
 
