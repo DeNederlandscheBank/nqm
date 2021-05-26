@@ -29,7 +29,7 @@ else
   TEST_TEMPLATES=test_templates
   IN_DIR=$WORK_DIR/data/eiopa/5_model_input # model input folder
   FILE=$IN_DIR/data_$ID # Files used for preprocessing
-  MODEL_DIR=$WORK_DIR/models/transformer_pointer_generator_iwslt_de_en_$ID_MODEL
+  MODEL_DIR=$WORK_DIR/models/$ID_MODEL
   OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
   COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
   DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
