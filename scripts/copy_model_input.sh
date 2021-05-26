@@ -60,3 +60,4 @@ if [ $OOV = YES ]; then
       echo "Copying OOV-$f"
     done
   done
+fi
