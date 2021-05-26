@@ -2,8 +2,8 @@
 # full pipeline EIOPA that you can run to prepare the data and train the model
 # Use this script from the root!
 
-USE_SUBWORDS=YES # use of subword splitting
-USE_KNOWN_AND_UNKNOWN_NAMES=YES
+USE_SUBWORDS=NO # use of subword splitting
+USE_KNOWN_AND_UNKNOWN_NAMES=NO
 EXAMPLES_PER_TEMPLATE=130
 VOCAB_SIZE=15000
 
