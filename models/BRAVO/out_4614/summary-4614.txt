@@ -1,0 +1,13 @@
+SUMMARY OF RESULTS 
+decoded-test_1.txt:
+SacreBLEU score: 94.23; Median match of translation string and reference: 1.00; Name match precision: 0.87
+decoded-test_1.txt:
+Query Result Accuracy: 0.89, correct: 1037, false: 133
+decoded-test_2.txt:
+SacreBLEU score: 72.39; Median match of translation string and reference: 0.96; Name match precision: 0.78
+decoded-test_2.txt:
+Query Result Accuracy: 0.00, correct: 0, false: 242
+decoded-test_3.txt:
+SacreBLEU score: 90.01; Median match of translation string and reference: 0.85; Name match precision: 0.00
+decoded-test_3.txt:
+Query Result Accuracy: 0.10, correct: 113, false: 1057
