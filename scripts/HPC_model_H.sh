@@ -2,7 +2,7 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=7G
+#SBATCH --mem-per-cpu=18G
 #SBATCH --time=15:00:00
 #SBATCH --job-name=HOTEL
 #SBATCH --output=output-%J.log
