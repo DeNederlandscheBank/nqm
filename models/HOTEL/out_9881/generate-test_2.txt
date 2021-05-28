@@ -1,0 +1,788 @@
+2021-05-27 21:03:38 | INFO | fairseq_cli.interactive | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': '/home/ph541404/nqm/models/HOTEL/checkpoint.best_bleu_84.04.pt', 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': '/home/ph541404/nqm/models/HOTEL/out_9881'}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_algorithm': 'LocalSGD', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'distributed_num_procs': 0}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': True, 'max_tokens': None, 'batch_size': 1, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0}, 'optimization': {'_name': None, 'max_epoch': 0, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.25], 'stop_min_lr': -1.0, 'use_bmuf': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints', 'restore_file': 'checkpoint_last.pt', 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': 'hard', 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 1, 'input': '-'}, 'model': None, 'task': {'_name': 'translation', 'data': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-9881', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': True}, 'optimizer': None, 'lr_scheduler': {'_name': 'fixed', 'force_anneal': None, 'lr_shrink': 0.1, 'warmup_updates': 0, 'lr': [0.25]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None}
+2021-05-27 21:03:38 | INFO | fairseq.tasks.translation | [nl] dictionary: 15100 types
+2021-05-27 21:03:38 | INFO | fairseq.tasks.translation | [ql] dictionary: 15100 types
+2021-05-27 21:03:38 | INFO | fairseq_cli.interactive | loading model(s) from /home/ph541404/nqm/models/HOTEL/checkpoint.best_bleu_84.04.pt
+2021-05-27 21:03:39 | INFO | fairseq.models.transformer_pg | dictionary indices from 15000 to 15099 will be mapped to 3
+2021-05-27 21:03:40 | INFO | fairseq_cli.interactive | NOTE: hypothesis and token scores are output in base 2
+2021-05-27 21:03:40 | INFO | fairseq_cli.interactive | Type the input sentence and press return:
+S-0	country and registration number of <unk-5> <unk-6> <unk-7> en <unk-9> <unk-10> ?
+W-0	0.911	seconds
+H-0	-0.24702325463294983	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> en <unk-9> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-0	-0.24702325463294983	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> en <unk-9> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-0	-0.0415 -0.0304 -0.2280 -0.0221 -0.0407 -0.0334 -0.0318 -0.0318 -0.1116 -0.5290 -1.5083 -0.6729 -1.3855 -1.0694 -0.0454 -0.0556 -0.0451 -0.0689 -0.0279 -0.0972 -0.0323 -0.1489 -0.0100 -0.4101 -0.1185 -0.0549 -0.0206 -0.0449
+A-0	10-0 10-1 10-2 6-3 10-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 8-13 8-14 8-15 10-16 8-17 11-18 8-19 11-20 11-21 11-22 0-23 10-24 10-25 11-26
+S-1	country and registration number of <unk-5> <unk-6> de <unk-8> <unk-9> ?
+W-1	0.897	seconds
+H-1	-0.1789422333240509	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> de <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-1	-0.1789422333240509	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> de <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-1	-0.0433 -0.0318 -0.2509 -0.0217 -0.0438 -0.0322 -0.0310 -0.0315 -0.1131 -0.6250 -0.6538 -1.1897 -0.8167 -0.0326 -0.0657 -0.0437 -0.0794 -0.0277 -0.0793 -0.0273 -0.1318 -0.0105 -0.3662 -0.0230 -0.1390 -0.1219 -0.0938 -0.0196 -0.0435
+A-1	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 7-10 8-11 9-12 9-13 7-14 9-15 4-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 9-25 9-26 10-27
+S-2	country and registration number of <unk-5> insurance <unk-7> ?
+W-2	0.854	seconds
+H-2	-0.10307420790195465	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-2	-0.10307420790195465	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-2	-0.0409 -0.0366 -0.2418 -0.0209 -0.0450 -0.0315 -0.0263 -0.0309 -0.0901 -0.1838 -1.1062 -0.0323 -0.0684 -0.0296 -0.0550 -0.0284 -0.0695 -0.0283 -0.1069 -0.0122 -0.0430 -0.0178 -0.1878 -0.1174 -0.0740 -0.0220 -0.0366
+A-2	8-0 8-1 7-2 6-3 7-4 6-5 1-6 5-7 5-8 6-9 6-10 6-11 6-12 6-13 4-14 8-15 6-16 8-17 8-18 8-19 6-20 8-21 2-22 8-23 6-24 8-25
+S-3	country and registration number of <unk-5> <unk-6> ?
+W-3	0.835	seconds
+H-3	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-3	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-3	-0.0404 -0.0385 -0.1620 -0.0199 -0.0442 -0.0381 -0.0264 -0.0297 -0.0871 -0.9230 -0.0346 -0.0639 -0.0283 -0.0507 -0.0310 -0.0489 -0.0283 -0.0765 -0.0205 -0.0382 -0.0160 -0.1091 -0.1013 -0.0659 -0.0222 -0.0416
+A-3	7-0 7-1 6-2 4-3 6-4 4-5 1-6 1-7 5-8 6-9 6-10 6-11 6-12 4-13 7-14 6-15 0-16 7-17 7-18 4-19 7-20 2-21 7-22 4-23 7-24
+S-4	country and registration number of de <unk-6> <unk-7> ?
+W-4	0.857	seconds
+H-4	-0.1235465407371521	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-4	-0.1235465407371521	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-4	-0.0429 -0.0369 -0.2089 -0.0205 -0.0472 -0.0334 -0.0287 -0.0323 -0.1015 -0.7935 -1.0887 -0.0334 -0.0706 -0.0312 -0.0664 -0.0303 -0.0739 -0.0287 -0.1011 -0.0138 -0.0461 -0.0174 -0.1284 -0.1149 -0.0798 -0.0214 -0.0438
+A-4	8-0 8-1 7-2 4-3 7-4 7-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 8-17 8-18 8-19 4-20 8-21 2-22 8-23 8-24 8-25
+S-5	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-5	0.857	seconds
+H-5	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-5	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-5	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-5	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-6	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> in de <unk-11> <unk-12> <unk-13> ?
+W-6	0.941	seconds
+H-6	-0.4167942404747009	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> in <unk-11> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-6	-0.4167942404747009	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> in <unk-11> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-6	-0.0370 -0.0273 -0.2262 -0.0238 -0.0358 -0.0407 -0.0315 -0.0347 -0.0907 -0.5787 -1.2937 -2.0691 -1.7786 -2.3175 -1.5348 -0.8539 -0.0527 -0.0449 -0.1084 -0.0285 -0.1299 -0.0395 -0.1818 -0.0110 -0.2947 -0.1055 -0.0550 -0.0222 -0.0392
+A-6	9-0 11-1 11-2 7-3 11-4 6-5 5-6 5-7 5-8 6-9 6-10 8-11 9-12 11-13 9-14 9-15 9-16 9-17 9-18 14-19 9-20 14-21 14-22 14-23 14-24 12-25 9-26 14-27
+S-7	country and registration number of <unk-5> <unk-6> insurance <unk-8> ?
+W-7	0.942	seconds
+H-7	-0.11053315550088882	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-7	-0.11053315550088882	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-7	-0.0427 -0.0343 -0.2480 -0.0215 -0.0446 -0.0311 -0.0286 -0.0312 -0.1034 -0.8417 -0.2335 -0.4599 -0.0288 -0.0688 -0.0370 -0.0627 -0.0279 -0.0763 -0.0264 -0.1173 -0.0112 -0.0652 -0.0191 -0.1708 -0.1213 -0.0812 -0.0205 -0.0400
+A-7	9-0 9-1 8-2 7-3 8-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 8-14 4-15 9-16 7-17 9-18 9-19 9-20 4-21 9-22 2-23 8-24 7-25 9-26
+S-8	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-8	1.019	seconds
+H-8	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-8	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-8	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-8	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-9	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-9	1.092	seconds
+H-9	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-9	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-9	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-9	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-10	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-10	1.207	seconds
+H-10	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-10	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-10	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-10	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-11	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-11	0.856	seconds
+H-11	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-11	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-11	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-11	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-12	country and registration number of <unk-5> <unk-6> company <unk-8> ?
+W-12	0.889	seconds
+H-12	-0.11073186993598938	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> company <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-12	-0.11073186993598938	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> company <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-12	-0.0427 -0.0352 -0.1558 -0.0218 -0.0436 -0.0315 -0.0289 -0.0313 -0.1016 -0.4062 -0.6329 -0.5900 -0.0289 -0.0667 -0.0352 -0.0394 -0.0269 -0.0753 -0.0232 -0.1620 -0.0141 -0.0735 -0.0240 -0.1712 -0.0975 -0.0819 -0.0196 -0.0395
+A-12	7-0 7-1 7-2 7-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 7-14 7-15 9-16 7-17 9-18 9-19 9-20 4-21 9-22 2-23 7-24 7-25 9-26
+S-13	country and registration number of <unk-5> <unk-6> en land <unk-9> <unk-10> ?
+W-13	0.882	seconds
+H-13	-0.24984009563922882	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> en land <unk-9> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-13	-0.24984009563922882	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> en land <unk-9> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-13	-0.0420 -0.0305 -0.2047 -0.0219 -0.0400 -0.0349 -0.0293 -0.0318 -0.1026 -0.5087 -0.7673 -0.8041 -2.4140 -0.9355 -0.0394 -0.0554 -0.0508 -0.0644 -0.0252 -0.1639 -0.0334 -0.1659 -0.0100 -0.1955 -0.1070 -0.0569 -0.0206 -0.0397
+A-13	10-0 10-1 10-2 6-3 10-4 6-5 1-6 5-7 5-8 6-9 7-10 8-11 8-12 7-13 8-14 7-15 10-16 7-17 11-18 8-19 11-20 11-21 11-22 0-23 10-24 10-25 11-26
+S-14	country and registration number of <unk-5> insurance <unk-7> ?
+W-14	0.843	seconds
+H-14	-0.10307420790195465	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-14	-0.10307420790195465	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-14	-0.0409 -0.0366 -0.2418 -0.0209 -0.0450 -0.0315 -0.0263 -0.0309 -0.0901 -0.1838 -1.1062 -0.0323 -0.0684 -0.0296 -0.0550 -0.0284 -0.0695 -0.0283 -0.1069 -0.0122 -0.0430 -0.0178 -0.1878 -0.1174 -0.0740 -0.0220 -0.0366
+A-14	8-0 8-1 7-2 6-3 7-4 6-5 1-6 5-7 5-8 6-9 6-10 6-11 6-12 6-13 4-14 8-15 6-16 8-17 8-18 8-19 6-20 8-21 2-22 8-23 6-24 8-25
+S-15	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-15	0.836	seconds
+H-15	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-15	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-15	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-15	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-16	country and registration number of mutual insurance association <unk-8> <unk-9> ?
+W-16	0.868	seconds
+H-16	-0.2350667268037796	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mutual insurance association insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-16	-0.2350667268037796	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l mutual insurance association insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-16	-0.0430 -0.0349 -0.3550 -0.0249 -0.0454 -0.0313 -0.0312 -0.0415 -0.1007 -0.2426 -0.7254 -1.7706 -0.7495 -0.0728 -0.0694 -0.0519 -0.0726 -0.0289 -1.4322 -0.0421 -0.0367 -0.0315 -0.0521 -0.1425 -0.0594 -0.0236 -0.0347
+A-16	10-0 10-1 9-2 7-3 9-4 7-5 5-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 7-14 7-15 5-16 10-17 9-18 10-19 6-20 10-21 2-22 9-23 9-24 10-25
+S-17	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-17	0.843	seconds
+H-17	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-17	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-17	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-17	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-18	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-18	0.842	seconds
+H-18	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-18	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-18	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-18	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-19	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-19	0.840	seconds
+H-19	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-19	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-19	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-19	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-20	country and registration number of <unk-5> <unk-6> ?
+W-20	0.806	seconds
+H-20	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-20	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-20	-0.0404 -0.0385 -0.1620 -0.0199 -0.0442 -0.0381 -0.0264 -0.0297 -0.0871 -0.9230 -0.0346 -0.0639 -0.0283 -0.0507 -0.0310 -0.0489 -0.0283 -0.0765 -0.0205 -0.0382 -0.0160 -0.1091 -0.1013 -0.0659 -0.0222 -0.0416
+A-20	7-0 7-1 6-2 4-3 6-4 4-5 1-6 1-7 5-8 6-9 6-10 6-11 6-12 4-13 7-14 6-15 0-16 7-17 7-18 4-19 7-20 2-21 7-22 4-23 7-24
+S-21	country and registration number of lemonade insurance <unk-7> ?
+W-21	0.841	seconds
+H-21	-0.11978690326213837	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lemonade insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-21	-0.11978690326213837	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l lemonade insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-21	-0.0412 -0.0373 -0.2308 -0.0213 -0.0437 -0.0311 -0.0274 -0.0351 -0.0785 -0.2338 -1.3718 -0.0317 -0.0681 -0.0263 -0.0455 -0.0304 -0.0905 -0.0296 -0.1469 -0.0107 -0.0564 -0.0189 -0.2954 -0.1030 -0.0733 -0.0244 -0.0312
+A-21	8-0 8-1 8-2 4-3 8-4 6-5 2-6 5-7 5-8 6-9 6-10 6-11 6-12 6-13 5-14 8-15 6-16 8-17 8-18 8-19 6-20 8-21 8-22 8-23 6-24 8-25
+S-22	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-22	0.837	seconds
+H-22	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-22	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-22	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-22	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-23	country and registration number of <unk-5> <unk-6> her ?
+W-23	0.870	seconds
+H-23	-0.1169351190328598	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-23	-0.1169351190328598	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-23	-0.0426 -0.0363 -0.1874 -0.0209 -0.0463 -0.0332 -0.0280 -0.0322 -0.1014 -0.8541 -0.9421 -0.0289 -0.0710 -0.0312 -0.0515 -0.0306 -0.0628 -0.0263 -0.0842 -0.0171 -0.0409 -0.0170 -0.1156 -0.1117 -0.0766 -0.0207 -0.0466
+A-23	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 8-17 8-18 8-19 7-20 8-21 0-22 7-23 7-24 8-25
+S-24	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-24	0.841	seconds
+H-24	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-24	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-24	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-24	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-25	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-25	0.903	seconds
+H-25	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-25	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-25	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-25	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-26	country and registration number of national academic <unk-7> <unk-8> ?
+W-26	0.900	seconds
+H-26	-0.1527993232011795	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l national academic academic <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-26	-0.1527993232011795	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l national academic academic <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-26	-0.0443 -0.0371 -0.2123 -0.0245 -0.0485 -0.0350 -0.0330 -0.0375 -0.1111 -0.2826 -0.6941 -1.3000 -0.1091 -0.0744 -0.0380 -0.0433 -0.0301 -0.1971 -0.0312 -0.1405 -0.0094 -0.2669 -0.0167 -0.2119 -0.1054 -0.0846 -0.0236 -0.0365
+A-26	9-0 9-1 8-2 8-3 8-4 6-5 5-6 5-7 5-8 6-9 6-10 7-11 8-12 8-13 8-14 6-15 9-16 8-17 9-18 9-19 9-20 5-21 9-22 2-23 8-24 8-25 9-26
+S-27	country and registration number of blue square <unk-7> <unk-8> ?
+W-27	0.897	seconds
+H-27	-0.17123021185398102	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l blue square square square <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-27	-0.17123021185398102	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l blue square square square <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-27	-0.0447 -0.0371 -0.2295 -0.0244 -0.0469 -0.0330 -0.0313 -0.0353 -0.1140 -0.1556 -0.4955 -0.9437 -1.7397 -0.0268 -0.0614 -0.0548 -0.0690 -0.0258 -0.0745 -0.0305 -0.0382 -0.0208 -0.0606 -0.1069 -0.0649 -0.0212 -0.0370
+A-27	9-0 9-1 8-2 8-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 6-11 6-12 8-13 8-14 8-15 5-16 9-17 9-18 9-19 6-20 9-21 2-22 8-23 8-24 9-25
+S-28	country and registration number of <unk-5> <unk-6> ?
+W-28	0.808	seconds
+H-28	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-28	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-28	-0.0404 -0.0385 -0.1620 -0.0199 -0.0442 -0.0381 -0.0264 -0.0297 -0.0871 -0.9230 -0.0346 -0.0639 -0.0283 -0.0507 -0.0310 -0.0489 -0.0283 -0.0765 -0.0205 -0.0382 -0.0160 -0.1091 -0.1013 -0.0659 -0.0222 -0.0416
+A-28	7-0 7-1 6-2 4-3 6-4 4-5 1-6 1-7 5-8 6-9 6-10 6-11 6-12 4-13 7-14 6-15 0-16 7-17 7-18 4-19 7-20 2-21 7-22 4-23 7-24
+S-29	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-29	0.882	seconds
+H-29	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-29	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-29	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-29	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-30	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-30	0.874	seconds
+H-30	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-30	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-30	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-30	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-31	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-31	0.871	seconds
+H-31	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-31	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-31	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-31	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-32	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-32	0.840	seconds
+H-32	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-32	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-32	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-32	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-33	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> <unk-10> ?
+W-33	0.912	seconds
+H-33	-0.26146867871284485	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-33	-0.26146867871284485	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-33	-0.0418 -0.0302 -0.2642 -0.0221 -0.0410 -0.0333 -0.0327 -0.0320 -0.1137 -0.5412 -1.0749 -1.6808 -1.9677 -0.5999 -0.0685 -0.0385 -0.0834 -0.0295 -0.0596 -0.0235 -0.1204 -0.0111 -0.1868 -0.0255 -0.1778 -0.1260 -0.0915 -0.0197 -0.0452
+A-33	10-0 10-1 10-2 6-3 10-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 10-13 8-14 10-15 11-16 11-17 10-18 11-19 11-20 11-21 0-22 11-23 2-24 10-25 10-26 11-27
+S-34	country and registration number of <unk-5> <unk-6> ?
+W-34	0.803	seconds
+H-34	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-34	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-34	-0.0404 -0.0385 -0.1620 -0.0199 -0.0442 -0.0381 -0.0264 -0.0297 -0.0871 -0.9230 -0.0346 -0.0639 -0.0283 -0.0507 -0.0310 -0.0489 -0.0283 -0.0765 -0.0205 -0.0382 -0.0160 -0.1091 -0.1013 -0.0659 -0.0222 -0.0416
+A-34	7-0 7-1 6-2 4-3 6-4 4-5 1-6 1-7 5-8 6-9 6-10 6-11 6-12 4-13 7-14 6-15 0-16 7-17 7-18 4-19 7-20 2-21 7-22 4-23 7-24
+S-35	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-35	0.840	seconds
+H-35	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-35	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-35	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-35	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-36	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-36	0.876	seconds
+H-36	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-36	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-36	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-36	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-37	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-37	0.866	seconds
+H-37	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-37	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-37	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-37	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-38	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-38	0.835	seconds
+H-38	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-38	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-38	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-38	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-39	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-39	0.839	seconds
+H-39	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-39	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-39	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-39	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-40	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-40	0.854	seconds
+H-40	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-40	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-40	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-40	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-41	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-41	0.896	seconds
+H-41	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-41	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-41	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-41	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-42	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-42	0.919	seconds
+H-42	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-42	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-42	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-42	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-43	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> <unk-10> ?
+W-43	0.931	seconds
+H-43	-0.26146867871284485	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-43	-0.26146867871284485	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-43	-0.0418 -0.0302 -0.2642 -0.0221 -0.0410 -0.0333 -0.0327 -0.0320 -0.1137 -0.5412 -1.0749 -1.6808 -1.9677 -0.5999 -0.0685 -0.0385 -0.0834 -0.0295 -0.0596 -0.0235 -0.1204 -0.0111 -0.1868 -0.0255 -0.1778 -0.1260 -0.0915 -0.0197 -0.0452
+A-43	10-0 10-1 10-2 6-3 10-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 10-13 8-14 10-15 11-16 11-17 10-18 11-19 11-20 11-21 0-22 11-23 2-24 10-25 10-26 11-27
+S-44	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-44	0.859	seconds
+H-44	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-44	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-44	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-44	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-45	country and registration number of <unk-5> <unk-6> ?
+W-45	0.896	seconds
+H-45	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-45	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-45	-0.0404 -0.0385 -0.1620 -0.0199 -0.0442 -0.0381 -0.0264 -0.0297 -0.0871 -0.9230 -0.0346 -0.0639 -0.0283 -0.0507 -0.0310 -0.0489 -0.0283 -0.0765 -0.0205 -0.0382 -0.0160 -0.1091 -0.1013 -0.0659 -0.0222 -0.0416
+A-45	7-0 7-1 6-2 4-3 6-4 4-5 1-6 1-7 5-8 6-9 6-10 6-11 6-12 4-13 7-14 6-15 0-16 7-17 7-18 4-19 7-20 2-21 7-22 4-23 7-24
+S-46	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-46	1.076	seconds
+H-46	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-46	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-46	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-46	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-47	country and registration number of de <unk-6> <unk-7> <unk-8> ?
+W-47	1.187	seconds
+H-47	-0.15827183425426483	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-47	-0.15827183425426483	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l de <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-47	-0.0447 -0.0342 -0.2397 -0.0217 -0.0475 -0.0318 -0.0312 -0.0325 -0.1114 -0.5680 -1.3145 -0.9881 -0.0288 -0.0697 -0.0368 -0.0753 -0.0297 -0.0771 -0.0273 -0.1134 -0.0121 -0.0737 -0.0193 -0.1233 -0.1254 -0.0871 -0.0199 -0.0474
+A-47	9-0 9-1 8-2 7-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-48	country and registration number of <unk-5> nobel <unk-7> <unk-8> ?
+W-48	0.870	seconds
+H-48	-0.14820128679275513	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> nobel nobel <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-48	-0.14820128679275513	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> nobel nobel <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-48	-0.0456 -0.0351 -0.2036 -0.0235 -0.0463 -0.0313 -0.0305 -0.0326 -0.1128 -0.1279 -0.6466 -1.5633 -0.1749 -0.0719 -0.0339 -0.0520 -0.0282 -0.1246 -0.0294 -0.1247 -0.0098 -0.1502 -0.0182 -0.1748 -0.1079 -0.0895 -0.0212 -0.0394
+A-48	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 7-11 8-12 6-13 8-14 6-15 9-16 8-17 9-18 9-19 9-20 3-21 9-22 2-23 8-24 8-25 9-26
+S-49	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-49	0.899	seconds
+H-49	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-49	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-49	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-49	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-50	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-50	0.886	seconds
+H-50	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-50	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-50	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-50	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-51	country and registration number of <unk-5> <unk-6> <unk-7> de <unk-9> <unk-10> ?
+W-51	0.938	seconds
+H-51	-0.2578670084476471	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> de <unk-10> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-51	-0.2578670084476471	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> de <unk-10> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-51	-0.0416 -0.0302 -0.2610 -0.0219 -0.0416 -0.0330 -0.0317 -0.0319 -0.1106 -0.5578 -1.3692 -0.9923 -1.2852 -0.9889 -0.0463 -0.0584 -0.0477 -0.0864 -0.0284 -0.0952 -0.0332 -0.1534 -0.0100 -0.6141 -0.1260 -0.0569 -0.0201 -0.0472
+A-51	10-0 10-1 10-2 6-3 10-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 10-12 8-13 10-14 8-15 10-16 11-17 11-18 10-19 11-20 11-21 11-22 0-23 10-24 10-25 11-26
+S-52	country and registration number of <unk-5> <unk-6> de hoop ?
+W-52	0.868	seconds
+H-52	-0.13178162276744843	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> de hoop quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-52	-0.13178162276744843	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> de hoop quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-52	-0.0427 -0.0348 -0.2854 -0.0209 -0.0454 -0.0330 -0.0286 -0.0334 -0.1083 -1.0245 -0.5729 -0.3052 -0.0796 -0.0721 -0.0403 -0.0686 -0.0271 -0.1276 -0.0298 -0.1361 -0.0088 -0.0985 -0.0184 -0.1832 -0.1198 -0.0855 -0.0219 -0.0374
+A-52	9-0 9-1 8-2 7-3 8-4 6-5 1-6 5-7 5-8 6-9 7-10 8-11 8-12 7-13 8-14 7-15 9-16 7-17 9-18 9-19 9-20 7-21 9-22 2-23 8-24 8-25 9-26
+S-53	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-53	0.835	seconds
+H-53	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-53	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-53	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-53	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-54	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-54	0.869	seconds
+H-54	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-54	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-54	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-54	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-55	country and registration number of <unk-5> <unk-6> captive <unk-8> ?
+W-55	0.877	seconds
+H-55	-0.11214032024145126	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> captive <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-55	-0.11214032024145126	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> captive <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-55	-0.0438 -0.0341 -0.1963 -0.0213 -0.0439 -0.0332 -0.0293 -0.0300 -0.1045 -0.5520 -0.6500 -0.4032 -0.0314 -0.0693 -0.0363 -0.0673 -0.0268 -0.0782 -0.0253 -0.1165 -0.0114 -0.0978 -0.0211 -0.1550 -0.1101 -0.0911 -0.0198 -0.0409
+A-55	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 7-14 4-15 9-16 7-17 9-18 9-19 9-20 4-21 9-22 2-23 8-24 7-25 9-26
+S-56	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-56	0.836	seconds
+H-56	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-56	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-56	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-56	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-57	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-57	0.894	seconds
+H-57	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-57	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-57	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-57	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-58	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-58	0.866	seconds
+H-58	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-58	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-58	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-58	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-59	country and registration number of <unk-5> <unk-6> en <unk-8> <unk-9> ?
+W-59	0.899	seconds
+H-59	-0.17813529074192047	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> en <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-59	-0.17813529074192047	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> en <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-59	-0.0432 -0.0318 -0.2179 -0.0221 -0.0427 -0.0334 -0.0307 -0.0311 -0.1120 -0.4884 -0.6345 -1.2481 -0.7772 -0.0335 -0.0621 -0.0412 -0.0609 -0.0268 -0.0781 -0.0260 -0.1276 -0.0103 -0.5561 -0.0228 -0.1396 -0.1144 -0.0921 -0.0200 -0.0413
+A-59	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 7-10 8-11 7-12 7-13 7-14 9-15 7-16 10-17 7-18 10-19 10-20 10-21 0-22 10-23 2-24 9-25 9-26 10-27
+S-60	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> holland <unk-10> ?
+W-60	0.878	seconds
+H-60	-0.2735229432582855	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> holland <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-60	-0.2735229432582855	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> holland <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-60	-0.0399 -0.0299 -0.2746 -0.0221 -0.0410 -0.0324 -0.0323 -0.0328 -0.1130 -0.5164 -1.3358 -2.2343 -1.3572 -0.3399 -0.0607 -0.0545 -0.0450 -0.0678 -0.0279 -0.0958 -0.0335 -0.1516 -0.0096 -0.4627 -0.1298 -0.0521 -0.0203 -0.0460
+A-60	10-0 10-1 10-2 6-3 10-4 6-5 1-6 5-7 5-8 6-9 6-10 9-11 9-12 9-13 9-14 9-15 10-16 11-17 11-18 9-19 11-20 11-21 11-22 0-23 10-24 10-25 11-26
+S-61	country and registration number of <unk-5> europe life insurance <unk-9> ?
+W-61	0.875	seconds
+H-61	-0.16407397389411926	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> europe europe life insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-61	-0.16407397389411926	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> europe europe life insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-61	-0.0421 -0.0335 -0.2944 -0.0227 -0.0441 -0.0307 -0.0280 -0.0329 -0.0976 -0.2835 -0.9703 -1.2566 -0.6085 -0.1049 -0.0183 -0.0541 -0.0638 -0.0777 -0.0248 -0.1026 -0.0225 -0.0328 -0.0237 -0.0759 -0.1211 -0.0719 -0.0195 -0.0356
+A-61	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 7-11 8-12 8-13 8-14 8-15 9-16 4-17 10-18 10-19 10-20 6-21 10-22 0-23 9-24 8-25 10-26
+S-62	country and registration number of <unk-5> europe insurance <unk-8> ?
+W-62	0.866	seconds
+H-62	-0.14609941840171814	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> europe insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-62	-0.14609941840171814	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> europe insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-62	-0.0428 -0.0350 -0.2486 -0.0223 -0.0441 -0.0307 -0.0277 -0.0322 -0.0955 -0.2404 -1.6497 -0.5228 -0.0284 -0.0681 -0.0347 -0.0570 -0.0263 -0.1113 -0.0285 -0.1337 -0.0094 -0.1133 -0.0198 -0.2129 -0.1161 -0.0829 -0.0215 -0.0349
+A-62	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 7-11 7-12 7-13 8-14 6-15 9-16 7-17 9-18 9-19 9-20 3-21 9-22 2-23 8-24 7-25 9-26
+S-63	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> p &amp; i club <unk-13> ?
+W-63	0.941	seconds
+H-63	-0.27602046728134155	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-7> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-63	-0.27602046728134155	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-7> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-63	-0.0337 -0.0261 -0.2346 -0.0240 -0.0363 -0.0350 -0.0268 -0.0359 -0.0881 -0.7278 -0.8067 -1.9509 -2.0646 -0.8036 -0.0767 -0.0413 -0.0970 -0.0298 -0.0613 -0.0182 -0.1471 -0.0120 -0.0916 -0.0307 -0.2512 -0.1090 -0.0792 -0.0247 -0.0406
+A-63	12-0 11-1 13-2 6-3 12-4 6-5 1-6 5-7 5-8 6-9 6-10 12-11 12-12 12-13 12-14 12-15 9-16 10-17 12-18 10-19 11-20 10-21 10-22 14-23 14-24 11-25 12-26 11-27
+S-64	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-64	0.870	seconds
+H-64	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-64	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-64	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-64	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-65	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-65	0.879	seconds
+H-65	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-65	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-65	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-65	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-66	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-66	0.835	seconds
+H-66	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-66	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-66	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-66	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-67	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-67	0.867	seconds
+H-67	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-67	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-67	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-67	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-68	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-68	0.865	seconds
+H-68	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-68	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-68	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-68	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-69	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-69	0.835	seconds
+H-69	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-69	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-69	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-69	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-70	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-70	0.840	seconds
+H-70	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-70	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-70	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-70	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-71	country and registration number of <unk-5> insurance company <unk-8> ?
+W-71	0.874	seconds
+H-71	-0.11473946273326874	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-71	-0.11473946273326874	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-71	-0.0412 -0.0358 -0.2055 -0.0218 -0.0426 -0.0294 -0.0263 -0.0316 -0.0852 -0.0959 -1.3704 -0.2098 -0.0737 -0.0274 -0.0348 -0.0289 -0.0583 -0.0216 -0.1588 -0.0175 -0.0381 -0.0211 -0.1910 -0.1080 -0.0700 -0.0214 -0.0317
+A-71	7-0 7-1 7-2 7-3 7-4 7-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 7-14 9-15 7-16 9-17 9-18 9-19 6-20 9-21 9-22 7-23 7-24 9-25
+S-72	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-72	0.848	seconds
+H-72	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-72	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-72	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-72	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-73	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-73	0.870	seconds
+H-73	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-73	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-73	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-73	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-74	country and registration number of <unk-5> basis <unk-7> <unk-8> ?
+W-74	0.866	seconds
+H-74	-0.1477736532688141	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> basis basis <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-74	-0.1477736532688141	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> basis basis <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-74	-0.0459 -0.0346 -0.2313 -0.0228 -0.0470 -0.0314 -0.0310 -0.0317 -0.1125 -0.1084 -0.5528 -1.6359 -0.2406 -0.0725 -0.0338 -0.0560 -0.0274 -0.0913 -0.0284 -0.1212 -0.0095 -0.1206 -0.0176 -0.1735 -0.1151 -0.0861 -0.0210 -0.0377
+A-74	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 6-11 8-12 8-13 8-14 6-15 9-16 6-17 0-18 9-19 9-20 3-21 9-22 2-23 8-24 8-25 9-26
+S-75	country and registration number of <unk-5> <unk-6> &apos; <unk-8> <unk-9> ?
+W-75	0.866	seconds
+H-75	-0.13567866384983063	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-75	-0.13567866384983063	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-75	-0.0419 -0.0329 -0.2712 -0.0210 -0.0407 -0.0314 -0.0272 -0.0295 -0.1058 -0.6342 -0.8756 -0.5975 -0.0302 -0.0669 -0.0330 -0.1729 -0.0285 -0.0666 -0.0274 -0.1100 -0.0107 -0.0702 -0.0228 -0.1589 -0.1313 -0.0927 -0.0200 -0.0480
+A-75	10-0 7-1 7-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 9-11 9-12 9-13 9-14 7-15 7-16 9-17 10-18 10-19 10-20 7-21 10-22 2-23 7-24 7-25 10-26
+S-76	country and registration number of <unk-5> <unk-6> en <unk-8> <unk-9> ?
+W-76	0.910	seconds
+H-76	-0.17813529074192047	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> en <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-76	-0.17813529074192047	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> en <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-76	-0.0432 -0.0318 -0.2179 -0.0221 -0.0427 -0.0334 -0.0307 -0.0311 -0.1120 -0.4884 -0.6345 -1.2481 -0.7772 -0.0335 -0.0621 -0.0412 -0.0609 -0.0268 -0.0781 -0.0260 -0.1276 -0.0103 -0.5561 -0.0228 -0.1396 -0.1144 -0.0921 -0.0200 -0.0413
+A-76	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 7-10 8-11 7-12 7-13 7-14 9-15 7-16 10-17 7-18 10-19 10-20 10-21 0-22 10-23 2-24 9-25 9-26 10-27
+S-77	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-77	0.856	seconds
+H-77	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-77	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-77	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-77	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-78	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-78	0.861	seconds
+H-78	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-78	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-78	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-78	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-79	country and registration number of <unk-5> insurance <unk-7> ?
+W-79	0.861	seconds
+H-79	-0.10307420790195465	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-79	-0.10307420790195465	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> insurance <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-79	-0.0409 -0.0366 -0.2418 -0.0209 -0.0450 -0.0315 -0.0263 -0.0309 -0.0901 -0.1838 -1.1062 -0.0323 -0.0684 -0.0296 -0.0550 -0.0284 -0.0695 -0.0283 -0.1069 -0.0122 -0.0430 -0.0178 -0.1878 -0.1174 -0.0740 -0.0220 -0.0366
+A-79	8-0 8-1 7-2 6-3 7-4 6-5 1-6 5-7 5-8 6-9 6-10 6-11 6-12 6-13 4-14 8-15 6-16 8-17 8-18 8-19 6-20 8-21 2-22 8-23 6-24 8-25
+S-80	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-80	0.888	seconds
+H-80	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-80	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-80	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-80	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-81	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-81	0.927	seconds
+H-81	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-81	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-81	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-81	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-82	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> en <unk-10> <unk-11> ?
+W-82	1.115	seconds
+H-82	-0.31384173035621643	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> en <unk-10> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-82	-0.31384173035621643	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> en <unk-10> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-82	-0.0400 -0.0294 -0.2394 -0.0224 -0.0387 -0.0351 -0.0325 -0.0328 -0.1062 -0.5410 -1.3261 -1.2141 -1.8068 -1.5362 -0.5260 -0.0585 -0.0424 -0.0803 -0.0281 -0.0760 -0.0279 -0.1549 -0.0101 -0.5499 -0.1163 -0.0539 -0.0209 -0.0418
+A-82	11-0 11-1 11-2 6-3 10-4 6-5 5-6 5-7 5-8 6-9 6-10 9-11 10-12 9-13 9-14 9-15 11-16 9-17 12-18 9-19 12-20 12-21 12-22 0-23 11-24 11-25 12-26
+S-83	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> <unk-10> ?
+W-83	1.189	seconds
+H-83	-0.26146867871284485	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-83	-0.26146867871284485	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-83	-0.0418 -0.0302 -0.2642 -0.0221 -0.0410 -0.0333 -0.0327 -0.0320 -0.1137 -0.5412 -1.0749 -1.6808 -1.9677 -0.5999 -0.0685 -0.0385 -0.0834 -0.0295 -0.0596 -0.0235 -0.1204 -0.0111 -0.1868 -0.0255 -0.1778 -0.1260 -0.0915 -0.0197 -0.0452
+A-83	10-0 10-1 10-2 6-3 10-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 10-13 8-14 10-15 11-16 11-17 10-18 11-19 11-20 11-21 0-22 11-23 2-24 10-25 10-26 11-27
+S-84	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-84	1.038	seconds
+H-84	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-84	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-84	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-84	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-85	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-85	0.902	seconds
+H-85	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-85	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-85	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-85	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-86	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-86	0.843	seconds
+H-86	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-86	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-86	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-86	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-87	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-87	0.868	seconds
+H-87	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-87	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-87	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-87	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-88	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-88	0.859	seconds
+H-88	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-88	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-88	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-88	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-89	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-89	0.861	seconds
+H-89	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-89	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-89	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-89	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-90	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-90	0.835	seconds
+H-90	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-90	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-90	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-90	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-91	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-91	0.842	seconds
+H-91	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-91	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-91	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-91	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-92	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-92	0.904	seconds
+H-92	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-92	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-92	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-92	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-93	country and registration number of uk p &amp; i club <unk-10> ?
+W-93	0.878	seconds
+H-93	-0.23911337554454803	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uk <unk> club <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-93	-0.23911337554454803	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l uk <unk> club <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-93	-0.0412 -0.0375 -0.4509 -0.0303 -0.0507 -0.0270 -0.0373 -0.0536 -0.1035 -2.6691 -0.4609 -1.2959 -0.1681 -0.0859 -0.0339 -0.1240 -0.0347 -0.0895 -0.0360 -0.1953 -0.0095 -0.1415 -0.0243 -0.1778 -0.1599 -0.0826 -0.0311 -0.0428
+A-93	8-0 8-1 10-2 9-3 9-4 9-5 5-6 5-7 5-8 5-9 9-10 9-11 9-12 9-13 9-14 9-15 11-16 9-17 11-18 11-19 11-20 9-21 11-22 11-23 8-24 9-25 11-26
+S-94	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-94	0.837	seconds
+H-94	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-94	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-94	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-94	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-95	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-95	0.876	seconds
+H-95	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-95	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-95	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-95	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-96	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-96	0.873	seconds
+H-96	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-96	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-96	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-96	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-97	country and registration number of <unk-5> holland <unk-7> <unk-8> <unk-9> <unk-10> ?
+W-97	0.901	seconds
+H-97	-0.28977733850479126	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> holland holland <unk-7> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-97	-0.28977733850479126	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> holland holland <unk-7> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-97	-0.0413 -0.0299 -0.3091 -0.0222 -0.0402 -0.0318 -0.0326 -0.0326 -0.1101 -0.4289 -0.7297 -1.8126 -1.9667 -1.3268 -0.1440 -0.0556 -0.0428 -0.0730 -0.0278 -0.1240 -0.0367 -0.1632 -0.0092 -0.2661 -0.1389 -0.0545 -0.0203 -0.0434
+A-97	10-0 10-1 10-2 6-3 10-4 6-5 5-6 5-7 5-8 6-9 6-10 6-11 8-12 10-13 10-14 9-15 10-16 11-17 11-18 10-19 11-20 11-21 11-22 0-23 10-24 10-25 11-26
+S-98	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-98	0.839	seconds
+H-98	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-98	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-98	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-98	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-99	country and registration number of <unk-5> en <unk-7> <unk-8> ?
+W-99	0.878	seconds
+H-99	-0.16389642655849457	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> en <unk-7> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-99	-0.16389642655849457	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> en <unk-7> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-99	-0.0440 -0.0335 -0.2204 -0.0223 -0.0444 -0.0343 -0.0292 -0.0312 -0.1075 -0.4826 -1.0820 -1.4816 -0.0329 -0.0665 -0.0343 -0.0523 -0.0263 -0.0776 -0.0256 -0.1127 -0.0110 -0.0993 -0.0207 -0.1483 -0.1187 -0.0879 -0.0203 -0.0416
+A-99	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 7-10 6-11 6-12 6-13 8-14 6-15 9-16 6-17 9-18 9-19 9-20 4-21 9-22 2-23 8-24 8-25 9-26
+S-100	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-100	0.871	seconds
+H-100	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-100	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-100	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-100	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-101	country and registration number of <unk-5> <unk-6> van <unk-8> ?
+W-101	0.867	seconds
+H-101	-0.13590045273303986	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> van <unk-8> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-101	-0.13590045273303986	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> van <unk-8> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-101	-0.0438 -0.0339 -0.1927 -0.0229 -0.0456 -0.0317 -0.0298 -0.0328 -0.1101 -0.5347 -0.4697 -1.3044 -0.0363 -0.0724 -0.0359 -0.0506 -0.0287 -0.0802 -0.0265 -0.1054 -0.0113 -0.0738 -0.0180 -0.1569 -0.1085 -0.0866 -0.0205 -0.0416
+A-101	9-0 9-1 8-2 7-3 8-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 7-14 7-15 9-16 7-17 9-18 9-19 9-20 7-21 9-22 2-23 8-24 7-25 9-26
+S-102	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-102	0.897	seconds
+H-102	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-102	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-102	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-102	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-103	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-103	0.896	seconds
+H-103	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-103	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-103	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-103	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-104	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-104	0.839	seconds
+H-104	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-104	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-104	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-104	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-105	country and registration number of <unk-5> <unk-6> <unk-7> en <unk-9> <unk-10> ?
+W-105	0.911	seconds
+H-105	-0.24702325463294983	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> en <unk-9> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-105	-0.24702325463294983	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> en <unk-9> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-105	-0.0415 -0.0304 -0.2280 -0.0221 -0.0407 -0.0334 -0.0318 -0.0318 -0.1116 -0.5290 -1.5083 -0.6729 -1.3855 -1.0694 -0.0454 -0.0556 -0.0451 -0.0689 -0.0279 -0.0972 -0.0323 -0.1489 -0.0100 -0.4101 -0.1185 -0.0549 -0.0206 -0.0449
+A-105	10-0 10-1 10-2 6-3 10-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 8-13 8-14 8-15 10-16 8-17 11-18 8-19 11-20 11-21 11-22 0-23 10-24 10-25 11-26
+S-106	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-106	0.837	seconds
+H-106	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-106	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-106	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-106	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-107	country and registration number of <unk-5> <unk-6> <unk-7> amsterdam ?
+W-107	0.868	seconds
+H-107	-0.14637722074985504	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-107	-0.14637722074985504	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-107	-0.0427 -0.0345 -0.2177 -0.0216 -0.0458 -0.0313 -0.0300 -0.0324 -0.1138 -0.7941 -1.1413 -0.6717 -0.0264 -0.0707 -0.0367 -0.0658 -0.0299 -0.0688 -0.0257 -0.1046 -0.0134 -0.0593 -0.0201 -0.1297 -0.1190 -0.0845 -0.0207 -0.0463
+A-107	8-0 8-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 7-10 8-11 8-12 8-13 8-14 8-15 9-16 8-17 9-18 9-19 9-20 8-21 9-22 2-23 8-24 8-25 9-26
+S-108	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-108	0.869	seconds
+H-108	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-108	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-108	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-108	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-109	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> <unk-9> ?
+W-109	0.903	seconds
+H-109	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-109	-0.19173012673854828	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk-8> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-109	-0.0434 -0.0314 -0.2435 -0.0222 -0.0433 -0.0323 -0.0320 -0.0315 -0.1189 -0.5468 -1.0432 -1.4966 -0.6820 -0.0319 -0.0639 -0.0412 -0.0811 -0.0293 -0.0635 -0.0265 -0.1160 -0.0113 -0.2630 -0.0243 -0.1522 -0.1274 -0.0932 -0.0195 -0.0489
+A-109	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 9-13 9-14 9-15 10-16 10-17 9-18 10-19 10-20 10-21 0-22 10-23 2-24 10-25 9-26 10-27
+S-110	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-110	0.839	seconds
+H-110	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-110	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-110	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-110	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-111	country and registration number of <unk-5> <unk-6> ?
+W-111	0.802	seconds
+H-111	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-111	-0.08409100025892258	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-111	-0.0404 -0.0385 -0.1620 -0.0199 -0.0442 -0.0381 -0.0264 -0.0297 -0.0871 -0.9230 -0.0346 -0.0639 -0.0283 -0.0507 -0.0310 -0.0489 -0.0283 -0.0765 -0.0205 -0.0382 -0.0160 -0.1091 -0.1013 -0.0659 -0.0222 -0.0416
+A-111	7-0 7-1 6-2 4-3 6-4 4-5 1-6 1-7 5-8 6-9 6-10 6-11 6-12 4-13 7-14 6-15 0-16 7-17 7-18 4-19 7-20 2-21 7-22 4-23 7-24
+S-112	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-112	0.835	seconds
+H-112	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-112	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-112	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-112	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-113	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-113	0.859	seconds
+H-113	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-113	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-113	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-113	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-114	country and registration number of <unk-5> <unk-6> van <unk-8> ?
+W-114	0.891	seconds
+H-114	-0.13590045273303986	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> van <unk-8> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-114	-0.13590045273303986	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> van <unk-8> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-114	-0.0438 -0.0339 -0.1927 -0.0229 -0.0456 -0.0317 -0.0298 -0.0328 -0.1101 -0.5347 -0.4697 -1.3044 -0.0363 -0.0724 -0.0359 -0.0506 -0.0287 -0.0802 -0.0265 -0.1054 -0.0113 -0.0738 -0.0180 -0.1569 -0.1085 -0.0866 -0.0205 -0.0416
+A-114	9-0 9-1 8-2 7-3 8-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 7-14 7-15 9-16 7-17 9-18 9-19 9-20 7-21 9-22 2-23 8-24 7-25 9-26
+S-115	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-115	0.860	seconds
+H-115	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-115	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-115	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-115	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-116	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-116	0.861	seconds
+H-116	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-116	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-116	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-116	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-117	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-117	0.897	seconds
+H-117	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-117	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-117	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-117	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-118	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-118	0.874	seconds
+H-118	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-118	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-118	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-118	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-119	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-119	1.082	seconds
+H-119	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-119	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-119	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-119	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-120	country and registration number of <unk-5> fruit <unk-7> <unk-8> <unk-9> <unk-10> <unk-11> ?
+W-120	1.185	seconds
+H-120	-0.31166020035743713	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> fruit <unk-7> <unk-7> <unk-9> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-120	-0.31166020035743713	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> fruit <unk-7> <unk-7> <unk-9> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-120	-0.0405 -0.0291 -0.2636 -0.0223 -0.0390 -0.0332 -0.0322 -0.0322 -0.1027 -0.1567 -1.5492 -1.6643 -2.0197 -1.2265 -0.2720 -0.0613 -0.0403 -0.0919 -0.0280 -0.0700 -0.0308 -0.1583 -0.0095 -0.5119 -0.1204 -0.0555 -0.0204 -0.0453
+A-120	11-0 11-1 11-2 6-3 10-4 6-5 5-6 5-7 5-8 6-9 6-10 7-11 9-12 10-13 10-14 9-15 11-16 12-17 12-18 11-19 12-20 12-21 12-22 0-23 11-24 11-25 12-26
+S-121	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-121	0.932	seconds
+H-121	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-121	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-121	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-121	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-122	country and registration number of <unk-5> <unk-6> <unk-7> de <unk-9> ?
+W-122	0.908	seconds
+H-122	-0.18203413486480713	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> de <unk-9> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-122	-0.18203413486480713	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> de <unk-9> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-122	-0.0428 -0.0317 -0.2423 -0.0218 -0.0438 -0.0321 -0.0311 -0.0318 -0.1148 -0.5945 -1.5107 -0.8117 -0.4641 -0.0436 -0.0657 -0.0443 -0.0774 -0.0278 -0.0816 -0.0274 -0.1306 -0.0105 -0.3596 -0.0229 -0.1400 -0.1192 -0.0925 -0.0195 -0.0432
+A-122	9-0 9-1 9-2 6-3 9-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 9-12 8-13 8-14 9-15 4-16 10-17 8-18 10-19 10-20 10-21 0-22 10-23 2-24 9-25 9-26 10-27
+S-123	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-123	0.839	seconds
+H-123	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-123	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-123	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-123	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-124	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-124	0.842	seconds
+H-124	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-124	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-124	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-124	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-125	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-125	0.867	seconds
+H-125	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-125	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-125	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-125	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-126	country and registration number of brand new day <unk-8> <unk-9> ?
+W-126	1.129	seconds
+H-126	-0.6255283355712891	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brand new day new day day day day day day day day <unk-8> <unk> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a sep_dot brack_close
+D-126	-0.6255283355712891	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l brand new day new day day day day day day day day <unk-8> <unk> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a sep_dot brack_close
+P-126	-0.0444 -0.0367 -0.2445 -0.0255 -0.0478 -0.0283 -0.0360 -0.0406 -0.1156 -0.7377 -0.7831 -1.1496 -0.6448 -1.1722 -1.1848 -1.1843 -1.1701 -1.1759 -1.2594 -1.4491 -2.0994 -1.7184 -0.8767 -0.8829 -0.0427 -0.1304 -0.1756 -0.0380 -0.1492 -0.0111 -0.0550 -1.4781 -0.2023 -1.4588 -0.0444
+A-126	10-0 10-1 9-2 7-3 9-4 6-5 5-6 5-7 5-8 6-9 7-10 6-11 7-12 7-13 7-14 7-15 7-16 7-17 7-18 7-19 7-20 7-21 7-22 7-23 7-24 10-25 10-26 10-27 10-28 10-29 7-30 10-31 10-32 10-33
+S-127	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-127	0.841	seconds
+H-127	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-127	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-127	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-127	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+S-128	country and registration number of <unk-5> <unk-6> <unk-7> <unk-8> ?
+W-128	0.869	seconds
+H-128	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-128	-0.15331482887268066	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-6> <unk> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-128	-0.0444 -0.0334 -0.2177 -0.0222 -0.0457 -0.0327 -0.0308 -0.0313 -0.1184 -0.6561 -1.2790 -0.8547 -0.0327 -0.0686 -0.0363 -0.0669 -0.0294 -0.0621 -0.0254 -0.0989 -0.0141 -0.0598 -0.0205 -0.1360 -0.1217 -0.0849 -0.0197 -0.0494
+A-128	9-0 9-1 8-2 6-3 8-4 6-5 1-6 5-7 5-8 6-9 6-10 8-11 8-12 8-13 8-14 4-15 9-16 8-17 9-18 9-19 9-20 4-21 9-22 2-23 9-24 8-25 9-26
+S-129	country and registration number of <unk-5> <unk-6> <unk-7> ?
+W-129	0.836	seconds
+H-129	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+D-129	-0.12368710339069366	SELECT DISTINCT var_o WHERE brack_open var_e eiopa-Base:hasIdentifyingName quot_mark_l <unk-5> <unk-6> <unk-7> quot_mark_r sep_dot var_e gleif-Base:identifies var_s sep_dot var_s gleif-L1:hasHeadquartersAddress var_a sep_dot var_a gleif-base:hasCountry var_o sep_dot brack_close
+P-129	-0.0433 -0.0364 -0.1879 -0.0214 -0.0469 -0.0337 -0.0288 -0.0308 -0.1090 -0.8732 -1.0878 -0.0359 -0.0688 -0.0316 -0.0571 -0.0300 -0.0590 -0.0264 -0.0837 -0.0183 -0.0392 -0.0176 -0.1179 -0.1118 -0.0758 -0.0208 -0.0464
+A-129	8-0 8-1 7-2 4-3 7-4 6-5 1-6 5-7 5-8 6-9 7-10 7-11 7-12 7-13 4-14 8-15 7-16 0-17 8-18 8-19 4-20 8-21 2-22 8-23 7-24 8-25
+2021-05-27 21:05:36 | INFO | fairseq_cli.interactive | Total time: 117.419 seconds; translation time: 115.725
