@@ -25,12 +25,12 @@ def compare_results(graph, query_pairs):
         try:
             results_reference = query_database(pair[0], graph)
         except Exception:
-            logging.info(f'Error in Reference Query: {pair[0]}')
+            logging.error(f'Error in Reference Query; {pair[0]}')
             continue
         try:
             results_generated = query_database(pair[1], graph)
         except Exception:
-            logging.info(f'Error in Translated Query: {pair[1]}')
+            logging.error(f'Error in Translated Query; {pair[1]}')
             cnt_false += 1
             continue
         if results_reference and results_generated:  # value is not []
@@ -41,7 +41,8 @@ def compare_results(graph, query_pairs):
                     cnt_correct += 1
                 else:
                     cnt_false += 1
-                    logging.debug(f'{pair[0]}, {pair[1]}')
+                    logging.info(
+                        f'Result Mismatch!; {pair[0]}; {pair[1]}; {results_reference}; {results_generated}')
                 pair.append(ref_result)
             pair.append(results_generated)
             queries_results.append(pair)
@@ -50,6 +51,8 @@ def compare_results(graph, query_pairs):
             pair.append(results_reference)
             pair.append(results_generated)
             queries_results.append(pair)
+            logging.info('Empty results!;' + \
+                         f'{pair[0]}; {pair[1]}; {results_reference}; {results_generated}')
     if cnt_correct != 0 or cnt_false != 0:
         accuracy = cnt_correct / (cnt_correct + cnt_false)
     else:
@@ -97,7 +100,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     log_file = f'{args.out_file[:-4]}.log'
-    logging.basicConfig(filename=log_file, level=logging.DEBUG)
+    logging.basicConfig(filename=log_file,
+                        format='%(levelname)s - %(message)s',
+                        level=logging.DEBUG)
     g = initialize_graph(args.graph_path)
     queries = read_queries(args.query_file, args.interactive_mode)
     acc, results = compare_results(g, queries)
