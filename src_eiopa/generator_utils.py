@@ -55,7 +55,7 @@ def save_cache(file, cache):
 def strip_item(s):
     # s = re.sub(r'\([^)]*\)', '', s) # removes everything inside brackets
     # s = re.sub(r'"', '', s)
-    s = re.sub(r'[()\[\],"\']', '', s) # removes all types of brackets and quotes
+    s = re.sub(r'[()\[\],"]', '', s) # removes all types of brackets and quotes
     # if "," in s:
     #     s = s[:s.index(",")]
     return s.strip().lower()
