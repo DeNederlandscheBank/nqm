@@ -734,7 +734,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:FR ;
     eiopa-Base:hasIdentifyingName "323562678",
-        "assurances mutuelle de france - (a.m.)" ;
+        "assurances mutuelle de france - a.m." ;
     eiopa-Base:hasInsuranceUndertakingID "323562678" ;
     eiopa-Base:hasNCA "ACPR" ;
     eiopa-Base:hasOperationStartDate "15/03/1950 01:00:00" ;
@@ -1262,7 +1262,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:FR ;
     eiopa-Base:hasIdentifyingName "338075062",
-        "hsbc assurances vie (france)" ;
+        "hsbc assurances vie france" ;
     eiopa-Base:hasInsuranceUndertakingID "338075062" ;
     eiopa-Base:hasNCA "ACPR" ;
     eiopa-Base:hasOperationStartDate "23/07/1986 02:00:00" ;
@@ -2904,7 +2904,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:FR ;
     eiopa-Base:hasIdentifyingName "409196755",
-        "societe anonyme de consolidation des retraites de l'assurance (s.a.c.r.a.)" ;
+        "societe anonyme de consolidation des retraites de l'assurance s.a.c.r.a." ;
     eiopa-Base:hasInsuranceUndertakingID "409196755" ;
     eiopa-Base:hasNCA "ACPR" ;
     eiopa-Base:hasOperationStartDate "27/12/1996 01:00:00" ;
@@ -4955,7 +4955,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:FR ;
     eiopa-Base:hasIdentifyingName "775369887",
-        "mutuale, la mutuelle familiale" ;
+        "mutuale la mutuelle familiale" ;
     eiopa-Base:hasInsuranceUndertakingID "775369887" ;
     eiopa-Base:hasNCA "ACPR" ;
     eiopa-Base:hasOperationStartDate "06/02/2003 01:00:00" ;
@@ -6663,7 +6663,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:FR ;
     eiopa-Base:hasIdentifyingName "784338527",
-        "caisse ass.mut.credit agricole (camca)" ;
+        "caisse ass.mut.credit agricole camca" ;
     eiopa-Base:hasInsuranceUndertakingID "784338527" ;
     eiopa-Base:hasNCA "ACPR" ;
     eiopa-Base:hasOperationStartDate "31/08/1946 02:00:00" ;
@@ -7411,7 +7411,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:FR ;
     eiopa-Base:hasIdentifyingName "852597384",
-        "assured guaranty (europe) sa" ;
+        "assured guaranty europe sa" ;
     eiopa-Base:hasInsuranceUndertakingID "852597384" ;
     eiopa-Base:hasNCA "ACPR" ;
     eiopa-Base:hasOperationStartDate "02/01/2020 01:00:00" ;
@@ -7510,7 +7510,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SI ;
     eiopa-Base:hasIdentifyingName "1430521",
-        "vzajemna zdravstvena zavarovalnica, d.v.z." ;
+        "vzajemna zdravstvena zavarovalnica d.v.z." ;
     eiopa-Base:hasInsuranceUndertakingID "1430521" ;
     eiopa-Base:hasNCA "Agencija za Zavarovalni Nadzor (AZN)" ;
     eiopa-Base:hasOperationStartDate "28/10/1999 02:00:00" ;
@@ -7521,7 +7521,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SI ;
     eiopa-Base:hasIdentifyingName "1834665",
-        "nlb vita, življenjska zavarovalnica d.d. ljubljana" ;
+        "nlb vita življenjska zavarovalnica d.d. ljubljana" ;
     eiopa-Base:hasInsuranceUndertakingID "1834665" ;
     eiopa-Base:hasNCA "Agencija za Zavarovalni Nadzor (AZN)" ;
     eiopa-Base:hasOperationStartDate "04/06/2003 02:00:00" ;
@@ -7543,7 +7543,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SI ;
     eiopa-Base:hasIdentifyingName "2295431",
-        "prva osebna zavarovalnica, d.d. (prva, personal insurance company plc)" ;
+        "prva osebna zavarovalnica d.d. prva personal insurance company plc" ;
     eiopa-Base:hasInsuranceUndertakingID "2295431" ;
     eiopa-Base:hasNCA "Agencija za Zavarovalni Nadzor (AZN)" ;
     eiopa-Base:hasOperationStartDate "05/07/2007 02:00:00" ;
@@ -7554,7 +7554,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SI ;
     eiopa-Base:hasIdentifyingName "5063345",
-        "zavarovalnica triglav, d.d." ;
+        "zavarovalnica triglav d.d." ;
     eiopa-Base:hasInsuranceUndertakingID "5063345" ;
     eiopa-Base:hasNCA "Agencija za Zavarovalni Nadzor (AZN)" ;
     eiopa-Base:hasOperationStartDate "12/12/1990 01:00:00" ;
@@ -7568,7 +7568,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SI ;
     eiopa-Base:hasIdentifyingName "5063400",
-        "zavarovalnica sava, zavarovalna družba, d.d." ;
+        "zavarovalnica sava zavarovalna družba d.d." ;
     eiopa-Base:hasInsuranceUndertakingID "5063400" ;
     eiopa-Base:hasNCA "Agencija za Zavarovalni Nadzor (AZN)" ;
     eiopa-Base:hasOperationStartDate "27/11/1990 01:00:00" ;
@@ -7579,7 +7579,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SI ;
     eiopa-Base:hasIdentifyingName "5063825",
-        "pozavarovalnica sava, d.d." ;
+        "pozavarovalnica sava d.d." ;
     eiopa-Base:hasInsuranceUndertakingID "5063825" ;
     eiopa-Base:hasNCA "Agencija za Zavarovalni Nadzor (AZN)" ;
     eiopa-Base:hasOperationStartDate "10/12/1990 01:00:00" ;
@@ -7623,7 +7623,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SI ;
     eiopa-Base:hasIdentifyingName "5848091",
-        "triglav, zdravstvena zavarovalnica, d.d." ;
+        "triglav zdravstvena zavarovalnica d.d." ;
     eiopa-Base:hasInsuranceUndertakingID "5848091" ;
     eiopa-Base:hasNCA "Agencija za Zavarovalni Nadzor (AZN)" ;
     eiopa-Base:hasOperationStartDate "03/03/1994 01:00:00" ;
@@ -7634,7 +7634,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SI ;
     eiopa-Base:hasIdentifyingName "6031226",
-        "modra zavarovalnica, d.d." ;
+        "modra zavarovalnica d.d." ;
     eiopa-Base:hasInsuranceUndertakingID "6031226" ;
     eiopa-Base:hasNCA "Agencija za Zavarovalni Nadzor (AZN)" ;
     eiopa-Base:hasOperationStartDate "03/10/2011 02:00:00" ;
@@ -7883,7 +7883,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:AT ;
     eiopa-Base:hasIdentifyingName "150",
-        "österreichische beamtenversicherung, versicherungsverein auf gegenseitigkeit" ;
+        "österreichische beamtenversicherung versicherungsverein auf gegenseitigkeit" ;
     eiopa-Base:hasInsuranceUndertakingID "150" ;
     eiopa-Base:hasNCA "Austrian Financial Market Authority" ;
     eiopa-Base:hasOperationStartDate "14/02/1940 01:00:00" ;
@@ -8152,7 +8152,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1011",
-        "fidelidade - companhia de seguros, s.a." ;
+        "fidelidade - companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1011" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -8163,7 +8163,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1020",
-        "mútua dos pescadores - mútua de seguros, crl" ;
+        "mútua dos pescadores - mútua de seguros crl" ;
     eiopa-Base:hasInsuranceUndertakingID "1020" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "27/07/1942 02:00:00" ;
@@ -8196,7 +8196,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1025",
-        "lusitânia-vida - companhia de seguros, s.a." ;
+        "lusitânia-vida - companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1025" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1987 01:00:00" ;
@@ -8218,7 +8218,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1028",
-        "companhia de seguros allianz portugal, s.a." ;
+        "companhia de seguros allianz portugal s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1028" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1907 01:00:00" ;
@@ -8262,7 +8262,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1091",
-        "companhia portuguesa de resseguros, s.a." ;
+        "companhia portuguesa de resseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1091" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1982 01:00:00" ;
@@ -8273,7 +8273,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1093",
-        "bpi vida e pensões - companhia de seguros, s.a." ;
+        "bpi vida e pensões - companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1093" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1987 01:00:00" ;
@@ -8284,7 +8284,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1096",
-        "victoria seguros de vida, sa" ;
+        "victoria seguros de vida sa" ;
     eiopa-Base:hasInsuranceUndertakingID "1096" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1993 01:00:00" ;
@@ -8295,7 +8295,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1097",
-        "una seguros, s.a." ;
+        "una seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1097" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1992 01:00:00" ;
@@ -8306,7 +8306,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1098",
-        "una seguros de vida, s.a." ;
+        "una seguros de vida s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1098" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1992 01:00:00" ;
@@ -8317,7 +8317,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1109",
-        "gamalife - companhia de seguros de vida, s.a." ;
+        "gamalife - companhia de seguros de vida s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1109" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1993 01:00:00" ;
@@ -8328,7 +8328,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1122",
-        "crédito agrícola seguros - companhia de seguros de ramos reais, s.a." ;
+        "crédito agrícola seguros - companhia de seguros de ramos reais s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1122" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1995 01:00:00" ;
@@ -8339,7 +8339,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1127",
-        "fidelidade assistência - companhia de seguros, s.a." ;
+        "fidelidade assistência - companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1127" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1995 01:00:00" ;
@@ -8350,7 +8350,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1129",
-        "ageas portugal - companhia de seguros, s.a." ;
+        "ageas portugal - companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1129" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1995 01:00:00" ;
@@ -8361,7 +8361,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1131",
-        "médis - companhia portuguesa de seguros de saúde, s.a." ;
+        "médis - companhia portuguesa de seguros de saúde s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1131" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1995 01:00:00" ;
@@ -8372,7 +8372,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1132",
-        "zurich - companhia de seguros vida, s.a." ;
+        "zurich - companhia de seguros vida s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1132" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1996 01:00:00" ;
@@ -8383,7 +8383,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1133",
-        "caravela - companhia de seguros, s. a." ;
+        "caravela - companhia de seguros s. a." ;
     eiopa-Base:hasInsuranceUndertakingID "1133" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1996 01:00:00" ;
@@ -8394,7 +8394,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1134",
-        "gnb - companhia de seguros, s.a." ;
+        "gnb - companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1134" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1996 01:00:00" ;
@@ -8405,7 +8405,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1142",
-        "via directa - companhia de seguros, s.a." ;
+        "via directa - companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1142" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "01/01/1997 01:00:00" ;
@@ -8449,7 +8449,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1160",
-        "victoria seguros, sa" ;
+        "victoria seguros sa" ;
     eiopa-Base:hasInsuranceUndertakingID "1160" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "29/10/2002 01:00:00" ;
@@ -8460,7 +8460,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1167",
-        "popular seguros - companhia de seguros, s.a." ;
+        "popular seguros - companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1167" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "30/08/2006 02:00:00" ;
@@ -8471,7 +8471,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1172",
-        "multicare - seguros de saúde, s.a." ;
+        "multicare - seguros de saúde s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1172" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "14/09/2007 02:00:00" ;
@@ -8493,7 +8493,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1191",
-        "aegon santander portugal vida - companhia de seguros de vida, s.a." ;
+        "aegon santander portugal vida - companhia de seguros de vida s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1191" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "18/12/2014 01:00:00" ;
@@ -8504,7 +8504,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1192",
-        "aegon santander portugal não vida - companhia de seguros, s.a." ;
+        "aegon santander portugal não vida - companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1192" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "18/12/2014 01:00:00" ;
@@ -8526,7 +8526,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1196",
-        "abarca - companhia de seguros, sa" ;
+        "abarca - companhia de seguros sa" ;
     eiopa-Base:hasInsuranceUndertakingID "1196" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "18/04/2016 02:00:00" ;
@@ -8537,7 +8537,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1197",
-        "generali seguros, s.a." ;
+        "generali seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1197" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "30/12/2016 01:00:00" ;
@@ -8548,7 +8548,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PT ;
     eiopa-Base:hasIdentifyingName "1206",
-        "planicare-companhia de seguros, s.a." ;
+        "planicare-companhia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "1206" ;
     eiopa-Base:hasNCA "Autoridade de Supervisão de Seguros e Fundos de Pensões" ;
     eiopa-Base:hasOperationStartDate "23/10/2019 02:00:00" ;
@@ -10145,7 +10145,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "4106",
-        "st. martinus priesterverein der diözese rottenburg-stuttgart -kranken- und sterbekasse (ksk)" ;
+        "st. martinus priesterverein der diözese rottenburg-stuttgart -kranken- und sterbekasse ksk" ;
     eiopa-Base:hasInsuranceUndertakingID "4106" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -10288,7 +10288,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "4129",
-        "augenoptiker ausgleichskasse vvag (aka)" ;
+        "augenoptiker ausgleichskasse vvag aka" ;
     eiopa-Base:hasInsuranceUndertakingID "4129" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "23/12/1993 01:00:00" ;
@@ -10486,7 +10486,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5013",
-        "lehrer-feuerversicherungsverein für schleswig-holstein, hamburg und mecklenburg-vorpommern" ;
+        "lehrer-feuerversicherungsverein für schleswig-holstein hamburg und mecklenburg-vorpommern" ;
     eiopa-Base:hasInsuranceUndertakingID "5013" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -10497,7 +10497,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5014",
-        "neuendorfer brand-bau-gilde (vvag)" ;
+        "neuendorfer brand-bau-gilde vvag" ;
     eiopa-Base:hasInsuranceUndertakingID "5014" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -10530,7 +10530,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5017",
-        "ostangler brandgilde, versicherungsverein auf gegenseitigkeit (vvag)" ;
+        "ostangler brandgilde versicherungsverein auf gegenseitigkeit vvag" ;
     eiopa-Base:hasInsuranceUndertakingID "5017" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -10651,7 +10651,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5044",
-        "haftpflichtgemeinschaft deutscher nahverkehrs- und versorgungsunternehmen allgemein (hdna) vvag" ;
+        "haftpflichtgemeinschaft deutscher nahverkehrs- und versorgungsunternehmen allgemein hdna vvag" ;
     eiopa-Base:hasInsuranceUndertakingID "5044" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "14/07/1995 02:00:00" ;
@@ -10731,7 +10731,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5068",
-        "ammerländer versicherung versicherungsverein a. g. (vvag)" ;
+        "ammerländer versicherung versicherungsverein a. g. vvag" ;
     eiopa-Base:hasInsuranceUndertakingID "5068" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "30/06/1998 02:00:00" ;
@@ -11579,7 +11579,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5316",
-        "badischer gemeinde-versicherungs-verband (bgv)" ;
+        "badischer gemeinde-versicherungs-verband bgv" ;
     eiopa-Base:hasInsuranceUndertakingID "5316" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -11739,7 +11739,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5348",
-        "vereinigte tierversicherung, gesellschaft auf gegenseitigkeit" ;
+        "vereinigte tierversicherung gesellschaft auf gegenseitigkeit" ;
     eiopa-Base:hasInsuranceUndertakingID "5348" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -12028,7 +12028,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5404",
-        "lbn versicherungsverein a.g. (vvag)" ;
+        "lbn versicherungsverein a.g. vvag" ;
     eiopa-Base:hasInsuranceUndertakingID "5404" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -12266,7 +12266,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5469",
-        "gvv-kommunalversicherung, versicherungsverein auf gegenseitigkeit" ;
+        "gvv-kommunalversicherung versicherungsverein auf gegenseitigkeit" ;
     eiopa-Base:hasInsuranceUndertakingID "5469" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -12541,7 +12541,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5539",
-        "gebäudeversicherungsgilde für föhr, amrum und halligen" ;
+        "gebäudeversicherungsgilde für föhr amrum und halligen" ;
     eiopa-Base:hasInsuranceUndertakingID "5539" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -12625,7 +12625,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DE ;
     eiopa-Base:hasIdentifyingName "5556",
-        "ostbeverner versicherungsverein auf gegenseitigkeit (vvag)" ;
+        "ostbeverner versicherungsverein auf gegenseitigkeit vvag" ;
     eiopa-Base:hasInsuranceUndertakingID "5556" ;
     eiopa-Base:hasNCA "Bafin" ;
     eiopa-Base:hasOperationStartDate "01/01/1988 01:00:00" ;
@@ -13953,7 +13953,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "04257111",
-        "pillow pojišťovna, a.s." ;
+        "pillow pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "04257111" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "21/07/2015 02:00:00" ;
@@ -13964,7 +13964,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "07880014",
-        "simplea pojišťovna, a.s." ;
+        "simplea pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "07880014" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "08/02/2019 01:00:00" ;
@@ -13975,7 +13975,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "25073958",
-        "direct pojišťovna, a.s." ;
+        "direct pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "25073958" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "03/09/1996 02:00:00" ;
@@ -13986,7 +13986,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "25080954",
-        "bnp paribas cardif pojišťovna, a.s." ;
+        "bnp paribas cardif pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "25080954" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "11/10/1996 02:00:00" ;
@@ -14008,7 +14008,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "25710966",
-        "vitalitas pojišťovna, a.s." ;
+        "vitalitas pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "25710966" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "17/11/1998 01:00:00" ;
@@ -14019,7 +14019,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "27116913",
-        "pojišťovna vzp, a.s." ;
+        "pojišťovna vzp a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "27116913" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "16/01/2004 01:00:00" ;
@@ -14030,7 +14030,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "27245322",
-        "credendo - short-term eu risks úvěrová pojišťovna, a.s." ;
+        "credendo - short-term eu risks úvěrová pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "27245322" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "24/06/2005 02:00:00" ;
@@ -14052,7 +14052,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "28445589",
-        "vig re zajišťovna, a.s." ;
+        "vig re zajišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "28445589" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "18/08/2008 02:00:00" ;
@@ -14080,7 +14080,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "45279314",
-        "exportní garanční a pojišťovací společnost, a.s." ;
+        "exportní garanční a pojišťovací společnost a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "45279314" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "01/06/1992 02:00:00" ;
@@ -14091,7 +14091,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "45534306",
-        "čsob pojišťovna, a. s., člen holdingu čsob" ;
+        "čsob pojišťovna a. s. člen holdingu čsob" ;
     eiopa-Base:hasInsuranceUndertakingID "45534306" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "17/04/1992 02:00:00" ;
@@ -14102,7 +14102,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "46973451",
-        "hasičská vzájemná pojišťovna, a.s." ;
+        "hasičská vzájemná pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "46973451" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "11/11/1992 01:00:00" ;
@@ -14113,7 +14113,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "47115971",
-        "allianz pojišťovna, a.s." ;
+        "allianz pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "47115971" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "23/12/1992 01:00:00" ;
@@ -14124,7 +14124,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "47116617",
-        "kooperativa pojišťovna, a.s., vienna insurance group" ;
+        "kooperativa pojišťovna a.s. vienna insurance group" ;
     eiopa-Base:hasInsuranceUndertakingID "47116617" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "01/03/1993 01:00:00" ;
@@ -14138,7 +14138,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "49240196",
-        "erv evropská pojišťovna, a. s." ;
+        "erv evropská pojišťovna a. s." ;
     eiopa-Base:hasInsuranceUndertakingID "49240196" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "23/04/1993 02:00:00" ;
@@ -14149,7 +14149,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "49240480",
-        "uniqa pojišťovna, a.s." ;
+        "uniqa pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "49240480" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "28/05/1993 02:00:00" ;
@@ -14171,7 +14171,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "60192402",
-        "halali, všeobecná pojišťovna,a.s." ;
+        "halali všeobecná pojišťovnaa.s." ;
     eiopa-Base:hasInsuranceUndertakingID "60192402" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "11/11/1993 01:00:00" ;
@@ -14193,7 +14193,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "61328464",
-        "maxima pojišťovna, a.s." ;
+        "maxima pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "61328464" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "01/07/1994 02:00:00" ;
@@ -14204,7 +14204,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "61858714",
-        "ergo pojišťovna, a.s." ;
+        "ergo pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "61858714" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "22/09/1994 02:00:00" ;
@@ -14237,7 +14237,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "63998017",
-        "komerční pojišťovna, a.s." ;
+        "komerční pojišťovna a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "63998017" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "01/09/1995 02:00:00" ;
@@ -14248,7 +14248,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CZ ;
     eiopa-Base:hasIdentifyingName "63998530",
-        "česká podnikatelská pojišťovna, a.s., vienna insurance group" ;
+        "česká podnikatelská pojišťovna a.s. vienna insurance group" ;
     eiopa-Base:hasInsuranceUndertakingID "63998530" ;
     eiopa-Base:hasNCA "CNB" ;
     eiopa-Base:hasOperationStartDate "06/11/1995 01:00:00" ;
@@ -14367,7 +14367,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c134806",
-        "nautilus indemnity (europe) designated activity company" ;
+        "nautilus indemnity europe designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c134806" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "27/04/2015 02:00:00" ;
@@ -14389,7 +14389,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c136600",
-        "classic brand (europe) designated activity company" ;
+        "classic brand europe designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c136600" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "01/07/2015 02:00:00" ;
@@ -14564,7 +14564,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c166404",
-        "everest insurance (ireland), designated activity company" ;
+        "everest insurance ireland designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c166404" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "15/11/2017 01:00:00" ;
@@ -14857,7 +14857,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c29567",
-        "quinn insurance ltd (under administration)" ;
+        "quinn insurance ltd under administration" ;
     eiopa-Base:hasInsuranceUndertakingID "c29567" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "01/01/1996 01:00:00" ;
@@ -15075,7 +15075,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c33569",
-        "lifeguard insurance (dublin) designated activity company" ;
+        "lifeguard insurance dublin designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c33569" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "28/05/1996 02:00:00" ;
@@ -15097,7 +15097,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c33571",
-        "philip morris international insurance (ireland) designated activity company" ;
+        "philip morris international insurance ireland designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c33571" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "29/12/1995 01:00:00" ;
@@ -15556,7 +15556,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Central-Bank-of-Ireland-C33650> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
-    eiopa-Base:hasIdentifyingName "allied world assurance company (europe) designated activity company",
+    eiopa-Base:hasIdentifyingName "allied world assurance company europe designated activity company",
         "c33650" ;
     eiopa-Base:hasInsuranceUndertakingID "c33650" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
@@ -15637,7 +15637,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c33667",
-        "coromin insurance (ireland) designated activity company" ;
+        "coromin insurance ireland designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c33667" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "04/09/2003 02:00:00" ;
@@ -15659,7 +15659,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c33675",
-        "societe d'assurances generales appliquees (saga) designated activity company" ;
+        "societe d'assurances generales appliquees saga designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c33675" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "23/12/2003 01:00:00" ;
@@ -15871,7 +15871,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c37940",
-        "hannover re (ireland) designated activity company" ;
+        "hannover re ireland designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c37940" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "20/07/2007 02:00:00" ;
@@ -15992,7 +15992,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c38017",
-        "tyre reinsurance (ireland) designated activity company" ;
+        "tyre reinsurance ireland designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c38017" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "20/07/2007 02:00:00" ;
@@ -16025,7 +16025,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c38627",
-        "scottish re (dublin) designated acivity company" ;
+        "scottish re dublin designated acivity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c38627" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "20/07/2007 02:00:00" ;
@@ -16354,7 +16354,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c46547",
-        "canada life international assurance (ireland) designated activity company" ;
+        "canada life international assurance ireland designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c46547" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "30/07/2007 02:00:00" ;
@@ -16526,7 +16526,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c53854",
-        "everest reinsurance company (ireland), designated activity company" ;
+        "everest reinsurance company ireland designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c53854" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "26/06/2009 02:00:00" ;
@@ -16537,7 +16537,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c55917",
-        "hdi reinsurance (ireland) se" ;
+        "hdi reinsurance ireland se" ;
     eiopa-Base:hasInsuranceUndertakingID "c55917" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "21/12/2012 01:00:00" ;
@@ -16559,7 +16559,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c66354",
-        "greenlight reinsurance ireland, designated activity company" ;
+        "greenlight reinsurance ireland designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c66354" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "09/09/2010 02:00:00" ;
@@ -16735,7 +16735,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c787",
-        "comhlucht na heireann um arachas cuideachta phoiblí theoranta (new ireland assurance company plc)" ;
+        "comhlucht na heireann um arachas cuideachta phoiblí theoranta new ireland assurance company plc" ;
     eiopa-Base:hasInsuranceUndertakingID "c787" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "14/03/1984 01:00:00" ;
@@ -16821,7 +16821,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Central-Bank-of-Ireland-C90125> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
-    eiopa-Base:hasIdentifyingName "arch insurance (eu) designated activity company",
+    eiopa-Base:hasIdentifyingName "arch insurance eu designated activity company",
         "c90125" ;
     eiopa-Base:hasInsuranceUndertakingID "c90125" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
@@ -16855,7 +16855,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IE ;
     eiopa-Base:hasIdentifyingName "c95755",
-        "fil life insurance (ireland) designated activity company" ;
+        "fil life insurance ireland designated activity company" ;
     eiopa-Base:hasInsuranceUndertakingID "c95755" ;
     eiopa-Base:hasNCA "Central Bank of Ireland" ;
     eiopa-Base:hasOperationStartDate "19/06/2013 02:00:00" ;
@@ -17214,7 +17214,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "acnain",
-        "cna insurance company (europe) s.a." ;
+        "cna insurance company europe s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "acnain" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "17/07/2018 02:00:00" ;
@@ -17831,7 +17831,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "asesin",
-        "ses insurance international (luxembourg) s.a." ;
+        "ses insurance international luxembourg s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "asesin" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "31/07/2012 02:00:00" ;
@@ -17842,7 +17842,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "asiisa",
-        "si insurance (europe), sa" ;
+        "si insurance europe sa" ;
     eiopa-Base:hasInsuranceUndertakingID "asiisa" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "27/03/2018 02:00:00" ;
@@ -17874,7 +17874,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "asmpia",
-        "the shipowners' mutual protection and indemnity association (luxembourg)" ;
+        "the shipowners' mutual protection and indemnity association luxembourg" ;
     eiopa-Base:hasInsuranceUndertakingID "asmpia" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "02/02/1977 01:00:00" ;
@@ -17959,7 +17959,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "astadh",
-        "stadhold insurances (luxembourg) s.a." ;
+        "stadhold insurances luxembourg s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "astadh" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "19/12/2016 01:00:00" ;
@@ -17970,7 +17970,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "aswiss",
-        "swiss life (luxembourg)" ;
+        "swiss life luxembourg" ;
     eiopa-Base:hasInsuranceUndertakingID "aswiss" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "02/05/1985 02:00:00" ;
@@ -17981,7 +17981,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "aswlip",
-        "swiss life products (luxembourg) s.a." ;
+        "swiss life products luxembourg s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "aswlip" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "08/04/2008 02:00:00" ;
@@ -18086,7 +18086,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "aweste",
-        "the west of england ship owners mutual insurance association (luxembourg)" ;
+        "the west of england ship owners mutual insurance association luxembourg" ;
     eiopa-Base:hasInsuranceUndertakingID "aweste" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "20/02/1970 01:00:00" ;
@@ -18553,7 +18553,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-RCARGO> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
-    eiopa-Base:hasIdentifyingName "cargolux re, s.a.",
+    eiopa-Base:hasIdentifyingName "cargolux re s.a.",
         "rcargo" ;
     eiopa-Base:hasInsuranceUndertakingID "rcargo" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
@@ -19070,7 +19070,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-RGIFRE> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
-    eiopa-Base:hasIdentifyingName "gif re, s.a.",
+    eiopa-Base:hasIdentifyingName "gif re s.a.",
         "rgifre" ;
     eiopa-Base:hasInsuranceUndertakingID "rgifre" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
@@ -19235,7 +19235,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-RINOXR> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
-    eiopa-Base:hasIdentifyingName "inox re, s.a.",
+    eiopa-Base:hasIdentifyingName "inox re s.a.",
         "rinoxr" ;
     eiopa-Base:hasInsuranceUndertakingID "rinoxr" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
@@ -19479,7 +19479,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-RMONCE> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
-    eiopa-Base:hasIdentifyingName "monceau euro risk, société anonyme de réassurance",
+    eiopa-Base:hasIdentifyingName "monceau euro risk société anonyme de réassurance",
         "rmonce" ;
     eiopa-Base:hasInsuranceUndertakingID "rmonce" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
@@ -19821,7 +19821,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "rsecos",
-        "united re (europe)" ;
+        "united re europe" ;
     eiopa-Base:hasInsuranceUndertakingID "rsecos" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "21/12/1990 01:00:00" ;
@@ -19832,7 +19832,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "rsesir",
-        "ses insurance international re (luxembourg) s.a." ;
+        "ses insurance international re luxembourg s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "rsesir" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "31/07/2012 02:00:00" ;
@@ -19854,7 +19854,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "rsidob",
-        "sidobre ré, s.a." ;
+        "sidobre ré s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "rsidob" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "01/01/2013 01:00:00" ;
@@ -19898,7 +19898,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "rsomal",
-        "somalre, société de réassurance tarkett" ;
+        "somalre société de réassurance tarkett" ;
     eiopa-Base:hasInsuranceUndertakingID "rsomal" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "31/12/1987 01:00:00" ;
@@ -19909,7 +19909,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "rsonae",
-        "sonae re, s.a." ;
+        "sonae re s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "rsonae" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "16/12/1999 01:00:00" ;
@@ -19997,7 +19997,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "rstadr",
-        "stadhold reinsurances (luxembourg) s.a." ;
+        "stadhold reinsurances luxembourg s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "rstadr" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "20/12/2019 01:00:00" ;
@@ -20063,7 +20063,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "rswatc",
-        "the swatch group re (luxembourg) s.a." ;
+        "the swatch group re luxembourg s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "rswatc" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "30/06/2005 02:00:00" ;
@@ -20184,7 +20184,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "rtirsa",
-        "tirsa, société anonyme de réassurance" ;
+        "tirsa société anonyme de réassurance" ;
     eiopa-Base:hasInsuranceUndertakingID "rtirsa" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "17/07/1995 02:00:00" ;
@@ -20289,7 +20289,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LU ;
     eiopa-Base:hasIdentifyingName "ryoler",
-        "yole, société luxembourgeoise de réassurances" ;
+        "yole société luxembourgeoise de réassurances" ;
     eiopa-Base:hasInsuranceUndertakingID "ryoler" ;
     eiopa-Base:hasNCA "Commissariat aux Assurances" ;
     eiopa-Base:hasOperationStartDate "20/01/1994 01:00:00" ;
@@ -20421,7 +20421,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:HR ;
     eiopa-Base:hasIdentifyingName "5713",
-        "hrvatsko kreditno osiguranje, dioničko društvo za osiguranje" ;
+        "hrvatsko kreditno osiguranje dioničko društvo za osiguranje" ;
     eiopa-Base:hasInsuranceUndertakingID "5713" ;
     eiopa-Base:hasNCA "Croatian Financial Services Supervisory Agency" ;
     eiopa-Base:hasOperationStartDate "10/06/2008 02:00:00" ;
@@ -20443,7 +20443,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:HR ;
     eiopa-Base:hasIdentifyingName "716",
-        "agram life osiguranje, dioničko društvo" ;
+        "agram life osiguranje dioničko društvo" ;
     eiopa-Base:hasInsuranceUndertakingID "716" ;
     eiopa-Base:hasNCA "Croatian Financial Services Supervisory Agency" ;
     eiopa-Base:hasOperationStartDate "20/09/2001 02:00:00" ;
@@ -20507,7 +20507,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0012",
-        "eterna aseguradora, s.a. compañía de seguros y reaseguros" ;
+        "eterna aseguradora s.a. compañía de seguros y reaseguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0012" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "07/05/1953 02:00:00" ;
@@ -20540,7 +20540,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0031",
-        "caja de seguros reunidos, compañía de seguros y reaseguros, s.a." ;
+        "caja de seguros reunidos compañía de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0031" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "21/08/1942 02:00:00" ;
@@ -20595,7 +20595,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0058",
-        "mapfre españa compañia de seguros y reaseguros, s.a" ;
+        "mapfre españa compañia de seguros y reaseguros s.a" ;
     eiopa-Base:hasInsuranceUndertakingID "c0058" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "05/11/1965 01:00:00" ;
@@ -20606,7 +20606,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0069",
-        "españa, s.a. compañía nacional de seguros" ;
+        "españa s.a. compañía nacional de seguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0069" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "08/03/1928 01:00:00" ;
@@ -20628,7 +20628,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0075",
-        "la fe previsora compañia de seguros, s.a." ;
+        "la fe previsora compañia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0075" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "09/11/1924 01:00:00" ;
@@ -20639,7 +20639,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0089",
-        "ges seguros y reaseguros, s.a." ;
+        "ges seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0089" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "29/09/1928 02:00:00" ;
@@ -20694,7 +20694,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0124",
-        "segurcaixa adeslas, sociedad anonima de seguros y reaseguros" ;
+        "segurcaixa adeslas sociedad anonima de seguros y reaseguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0124" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "03/03/1943 01:00:00" ;
@@ -20738,7 +20738,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0155",
-        "preventiva, compañía de seguros y reaseguros s.a." ;
+        "preventiva compañía de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0155" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "24/10/1945 02:00:00" ;
@@ -20771,7 +20771,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0174",
-        "santa lucía sa, compañía de seguros y reaseguros" ;
+        "santa lucía sa compañía de seguros y reaseguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0174" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "13/07/1923 02:00:00" ;
@@ -20859,7 +20859,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0275",
-        "nortehispana de seguros y reaseguros, s.a." ;
+        "nortehispana de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0275" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "23/03/1966 01:00:00" ;
@@ -20891,7 +20891,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0311> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "almudena compañía de seguros y reaseguros, s.a.",
+    eiopa-Base:hasIdentifyingName "almudena compañía de seguros y reaseguros s.a.",
         "c0311" ;
     eiopa-Base:hasInsuranceUndertakingID "c0311" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -20903,7 +20903,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0315",
-        "hercules salud seguros, s.a." ;
+        "hercules salud seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0315" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "08/07/1957 02:00:00" ;
@@ -20925,7 +20925,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0323",
-        "policlinico centro medico de seguros,sa" ;
+        "policlinico centro medico de segurossa" ;
     eiopa-Base:hasInsuranceUndertakingID "c0323" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "10/01/1957 01:00:00" ;
@@ -20935,7 +20935,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0325> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "asistencia clinica universitaria de navarra, s.a de seguros y reaseguros",
+    eiopa-Base:hasIdentifyingName "asistencia clinica universitaria de navarra s.a de seguros y reaseguros",
         "c0325" ;
     eiopa-Base:hasInsuranceUndertakingID "c0325" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -20958,7 +20958,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0355",
-        "expertia, seguros de decesos, s.a." ;
+        "expertia seguros de decesos s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0355" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "23/07/1956 02:00:00" ;
@@ -20980,7 +20980,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0384",
-        "igualatorio medico quirurgico colegial, s.a. de seguros" ;
+        "igualatorio medico quirurgico colegial s.a. de seguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0384" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "21/11/1959 01:00:00" ;
@@ -20991,7 +20991,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0391",
-        "igualatorio medico quirurgico y de especialidades de asturias, s.a. de seguros" ;
+        "igualatorio medico quirurgico y de especialidades de asturias s.a. de seguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0391" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "13/01/1958 01:00:00" ;
@@ -21013,7 +21013,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0396",
-        "d.a.s. defensa del automovilista y de siniestros-internacional, sociedad anonima de seguros y reaseguros" ;
+        "d.a.s. defensa del automovilista y de siniestros-internacional sociedad anonima de seguros y reaseguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0396" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "13/10/1958 02:00:00" ;
@@ -21023,7 +21023,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0416> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "asistencia sanitaria colegial, s.a. de seguros",
+    eiopa-Base:hasIdentifyingName "asistencia sanitaria colegial s.a. de seguros",
         "c0416" ;
     eiopa-Base:hasInsuranceUndertakingID "c0416" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21034,7 +21034,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0437> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "agrupacion sanitaria, seguros sa",
+    eiopa-Base:hasIdentifyingName "agrupacion sanitaria seguros sa",
         "c0437" ;
     eiopa-Base:hasInsuranceUndertakingID "c0437" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21056,7 +21056,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0461> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "asisa, asistencia sanitaria interprovincial de seguros, s.a.",
+    eiopa-Base:hasIdentifyingName "asisa asistencia sanitaria interprovincial de seguros s.a.",
         "c0461" ;
     eiopa-Base:hasInsuranceUndertakingID "c0461" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21079,7 +21079,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0467",
-        "liberty seguros, compañía de seguros y reaseguros, s.a." ;
+        "liberty seguros compañía de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0467" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "20/04/1964 02:00:00" ;
@@ -21155,7 +21155,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0557> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "bansabadell vida, sociedad anonima de seguros y reaseguros",
+    eiopa-Base:hasIdentifyingName "bansabadell vida sociedad anonima de seguros y reaseguros",
         "c0557" ;
     eiopa-Base:hasInsuranceUndertakingID "c0557" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21167,7 +21167,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0559",
-        "cnp partners de seguros y reaseguros, s.a." ;
+        "cnp partners de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0559" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "13/09/1978 02:00:00" ;
@@ -21178,7 +21178,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0571",
-        "solunion seguros, compañia internacional de seguros y reaseguros, s.a." ;
+        "solunion seguros compañia internacional de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0571" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "02/11/1982 01:00:00" ;
@@ -21221,7 +21221,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0610> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "bankinter seguros de vida, s.a. de seguros y reaseguros",
+    eiopa-Base:hasIdentifyingName "bankinter seguros de vida s.a. de seguros y reaseguros",
         "c0610" ;
     eiopa-Base:hasInsuranceUndertakingID "c0610" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21244,7 +21244,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0613",
-        "reale seguros generales, s.a." ;
+        "reale seguros generales s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0613" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "20/11/1987 01:00:00" ;
@@ -21277,7 +21277,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0627",
-        "sos seguros y reaseguros, s.a." ;
+        "sos seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0627" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "13/05/1988 02:00:00" ;
@@ -21287,7 +21287,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0628> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "abanca vida y pensiones de seguros y reaseguros, s. a.",
+    eiopa-Base:hasIdentifyingName "abanca vida y pensiones de seguros y reaseguros s. a.",
         "c0628" ;
     eiopa-Base:hasInsuranceUndertakingID "c0628" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21343,7 +21343,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0668",
-        "europ assistance españa, s.a de seguros y reaseguros" ;
+        "europ assistance españa s.a de seguros y reaseguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0668" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "20/04/1989 02:00:00" ;
@@ -21375,7 +21375,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0682> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "amic seguros generales, sa",
+    eiopa-Base:hasIdentifyingName "amic seguros generales sa",
         "c0682" ;
     eiopa-Base:hasInsuranceUndertakingID "c0682" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21397,7 +21397,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0688> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "allianz popular vida, compañia de seguros y reaseguros, s.a.",
+    eiopa-Base:hasIdentifyingName "allianz popular vida compañia de seguros y reaseguros s.a.",
         "c0688" ;
     eiopa-Base:hasInsuranceUndertakingID "c0688" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21420,7 +21420,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0694",
-        "santalucía vida y pensiones, s. a., compañía de seguros y reaseguros" ;
+        "santalucía vida y pensiones s. a. compañía de seguros y reaseguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0694" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "29/06/1990 02:00:00" ;
@@ -21442,7 +21442,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0697",
-        "seguros el corte inglés vida, pensiones y reaseguros sa" ;
+        "seguros el corte inglés vida pensiones y reaseguros sa" ;
     eiopa-Base:hasInsuranceUndertakingID "c0697" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "19/10/1990 02:00:00" ;
@@ -21464,7 +21464,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0708",
-        "gacm seguros generales compañia de seguros y reaseguros, s.a." ;
+        "gacm seguros generales compañia de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0708" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "31/07/1991 02:00:00" ;
@@ -21496,7 +21496,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0715> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "asefa, s.a. seguros y reaseguros",
+    eiopa-Base:hasIdentifyingName "asefa s.a. seguros y reaseguros",
         "c0715" ;
     eiopa-Base:hasInsuranceUndertakingID "c0715" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21607,7 +21607,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0756",
-        "liberbank vida y pensiones, seguros y reaseguros sa" ;
+        "liberbank vida y pensiones seguros y reaseguros sa" ;
     eiopa-Base:hasInsuranceUndertakingID "c0756" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "19/07/2004 02:00:00" ;
@@ -21639,7 +21639,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0767> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "bansabadell seguros generales, sociedad anonima de seguros y reaseguros",
+    eiopa-Base:hasIdentifyingName "bansabadell seguros generales sociedad anonima de seguros y reaseguros",
         "c0767" ;
     eiopa-Base:hasInsuranceUndertakingID "c0767" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21651,7 +21651,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0769",
-        "cajamurcia vida y pensiones de seguros y reaseguros, s.a." ;
+        "cajamurcia vida y pensiones de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0769" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "21/11/2007 01:00:00" ;
@@ -21662,7 +21662,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0770",
-        "caja granada vida, compañía de seguros y reaseguros s.a." ;
+        "caja granada vida compañía de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0770" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "21/11/2007 01:00:00" ;
@@ -21684,7 +21684,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0775",
-        "sahna-e servicios integrales de salud, sociedad anonima de seguros y reaseguros" ;
+        "sahna-e servicios integrales de salud sociedad anonima de seguros y reaseguros" ;
     eiopa-Base:hasInsuranceUndertakingID "c0775" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "03/07/2008 02:00:00" ;
@@ -21695,7 +21695,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0777",
-        "caixa enginyers vida-caja ingenieros vida, compañia de seguros y reaseguros, s.a." ;
+        "caixa enginyers vida-caja ingenieros vida compañia de seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0777" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "17/09/2008 02:00:00" ;
@@ -21739,7 +21739,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0785",
-        "verti aseguradora, compañia de seguros y reaseguros, sa." ;
+        "verti aseguradora compañia de seguros y reaseguros sa." ;
     eiopa-Base:hasInsuranceUndertakingID "c0785" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "13/12/2010 01:00:00" ;
@@ -21749,7 +21749,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0789> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "aegon españa, sociedad anonima de seguros y reaseguros",
+    eiopa-Base:hasIdentifyingName "aegon españa sociedad anonima de seguros y reaseguros",
         "c0789" ;
     eiopa-Base:hasInsuranceUndertakingID "c0789" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21771,7 +21771,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0791> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "bankinter seguros generales, s.a. de seguros y reaseguros",
+    eiopa-Base:hasIdentifyingName "bankinter seguros generales s.a. de seguros y reaseguros",
         "c0791" ;
     eiopa-Base:hasInsuranceUndertakingID "c0791" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21805,7 +21805,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0795",
-        "santander vida seguros y reaseguros, s.a." ;
+        "santander vida seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0795" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "11/04/2013 02:00:00" ;
@@ -21816,7 +21816,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0796",
-        "santander generales seguros y reaseguros, s.a." ;
+        "santander generales seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0796" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "11/04/2013 02:00:00" ;
@@ -21859,7 +21859,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0803> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "ama vida, seguros y reaseguros, s.a.",
+    eiopa-Base:hasIdentifyingName "ama vida seguros y reaseguros s.a.",
         "c0803" ;
     eiopa-Base:hasInsuranceUndertakingID "c0803" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -21871,7 +21871,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0804",
-        "hello insurance group, compañia de seguros, s.a." ;
+        "hello insurance group compañia de seguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0804" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "18/02/2019 01:00:00" ;
@@ -21893,7 +21893,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "c0806",
-        "santander mapfre seguros y reaseguros, s.a." ;
+        "santander mapfre seguros y reaseguros s.a." ;
     eiopa-Base:hasInsuranceUndertakingID "c0806" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "13/11/2019 01:00:00" ;
@@ -21903,7 +21903,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-C0807> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "bbva seguros generales, compañía de seguros y reaseguros, s.a.",
+    eiopa-Base:hasIdentifyingName "bbva seguros generales compañía de seguros y reaseguros s.a.",
         "c0807" ;
     eiopa-Base:hasInsuranceUndertakingID "c0807" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22006,7 +22006,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "m0140",
-        "mutualidad de levante, entidad seguros prima fija." ;
+        "mutualidad de levante entidad seguros prima fija." ;
     eiopa-Base:hasInsuranceUndertakingID "m0140" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "23/07/1941 02:00:00" ;
@@ -22083,7 +22083,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "m0216",
-        "mutua tinerfeña, mutua de seguros y reaseguros a prima fija" ;
+        "mutua tinerfeña mutua de seguros y reaseguros a prima fija" ;
     eiopa-Base:hasInsuranceUndertakingID "m0216" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "16/02/1944 01:00:00" ;
@@ -22149,7 +22149,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "m0368",
-        "musaat, mutua de seguros a prima fija" ;
+        "musaat mutua de seguros a prima fija" ;
     eiopa-Base:hasInsuranceUndertakingID "m0368" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "11/10/1983 02:00:00" ;
@@ -22193,7 +22193,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "m0374",
-        "sociedad de seguros mutuos contra incendios de edificios rurales de alava, mutua a prima fija" ;
+        "sociedad de seguros mutuos contra incendios de edificios rurales de alava mutua a prima fija" ;
     eiopa-Base:hasInsuranceUndertakingID "m0374" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "31/01/1990 01:00:00" ;
@@ -22204,7 +22204,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "m0377",
-        "previsión sanitaria nacional, psn, mutua de seguros y reaseguros a prima fija" ;
+        "previsión sanitaria nacional psn mutua de seguros y reaseguros a prima fija" ;
     eiopa-Base:hasInsuranceUndertakingID "m0377" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "01/02/1995 01:00:00" ;
@@ -22226,7 +22226,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "m0379",
-        "mgc insurance, mutua de seguros y reaseguros a prima fija" ;
+        "mgc insurance mutua de seguros y reaseguros a prima fija" ;
     eiopa-Base:hasInsuranceUndertakingID "m0379" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "08/01/2010 01:00:00" ;
@@ -22292,7 +22292,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "p0081",
-        "previsión mutua de aparejadores y arquitectos técnicos, m.p.s." ;
+        "previsión mutua de aparejadores y arquitectos técnicos m.p.s." ;
     eiopa-Base:hasInsuranceUndertakingID "p0081" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "31/01/1985 01:00:00" ;
@@ -22314,7 +22314,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "p0155",
-        "sociedad filantropica del comercio, industria y banca de madrid mutualidad de previsión social a prima fija" ;
+        "sociedad filantropica del comercio industria y banca de madrid mutualidad de previsión social a prima fija" ;
     eiopa-Base:hasInsuranceUndertakingID "p0155" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "31/01/1985 01:00:00" ;
@@ -22335,7 +22335,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-P0179> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "mutua aragonesa, el volante aragones, m.p.s.",
+    eiopa-Base:hasIdentifyingName "mutua aragonesa el volante aragones m.p.s.",
         "p0179" ;
     eiopa-Base:hasInsuranceUndertakingID "p0179" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22346,7 +22346,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-P0226> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "mutualidad de empleados del banco santander, mutualidad de previsión social a prima fija",
+    eiopa-Base:hasIdentifyingName "mutualidad de empleados del banco santander mutualidad de previsión social a prima fija",
         "p0226" ;
     eiopa-Base:hasInsuranceUndertakingID "p0226" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22445,7 +22445,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-P1875> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "mutualidad de empleados del banco de españa, mutualidad de prevision social de seguros",
+    eiopa-Base:hasIdentifyingName "mutualidad de empleados del banco de españa mutualidad de prevision social de seguros",
         "p1875" ;
     eiopa-Base:hasInsuranceUndertakingID "p1875" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22534,7 +22534,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "p2714",
-        "prevision vida y seguros, mutualidad de prevision social" ;
+        "prevision vida y seguros mutualidad de prevision social" ;
     eiopa-Base:hasInsuranceUndertakingID "p2714" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "31/01/1985 01:00:00" ;
@@ -22610,7 +22610,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-P3138> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "mutualidad de previsión social de asisa, dr.atilano cerezo",
+    eiopa-Base:hasIdentifyingName "mutualidad de previsión social de asisa dr.atilano cerezo",
         "p3138" ;
     eiopa-Base:hasInsuranceUndertakingID "p3138" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22665,7 +22665,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-P3152> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "mutualidad de prevision social a prima fija del colegio oficial de ingenieros tecnicos de minas y grados en minas y energia de castilla y leon (norte) y cantabria mutua de prevision social",
+    eiopa-Base:hasIdentifyingName "mutualidad de prevision social a prima fija del colegio oficial de ingenieros tecnicos de minas y grados en minas y energia de castilla y leon norte y cantabria mutua de prevision social",
         "p3152" ;
     eiopa-Base:hasInsuranceUndertakingID "p3152" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22687,7 +22687,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-P3157> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "mutual medica, m.p.s. a prima fija",
+    eiopa-Base:hasIdentifyingName "mutual medica m.p.s. a prima fija",
         "p3157" ;
     eiopa-Base:hasInsuranceUndertakingID "p3157" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22732,7 +22732,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
     eiopa-Base:hasIdentifyingName "p3162",
-        "previsora general, mutualidad de prevision social" ;
+        "previsora general mutualidad de prevision social" ;
     eiopa-Base:hasInsuranceUndertakingID "p3162" ;
     eiopa-Base:hasNCA "DGSFP" ;
     eiopa-Base:hasOperationStartDate "05/06/2009 02:00:00" ;
@@ -22742,7 +22742,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-P3163> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "mutual de conductors, mutualidad de prevision social",
+    eiopa-Base:hasIdentifyingName "mutual de conductors mutualidad de prevision social",
         "p3163" ;
     eiopa-Base:hasInsuranceUndertakingID "p3163" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22753,7 +22753,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-P3164> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "mutua nacional de ingenieros técnicos de previsión social a prima fija, mutualidad de previsión social",
+    eiopa-Base:hasIdentifyingName "mutua nacional de ingenieros técnicos de previsión social a prima fija mutualidad de previsión social",
         "p3164" ;
     eiopa-Base:hasInsuranceUndertakingID "p3164" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22764,7 +22764,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-R0011> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "nacional de reaseguros, s.a.",
+    eiopa-Base:hasIdentifyingName "nacional de reaseguros s.a.",
         "r0011" ;
     eiopa-Base:hasInsuranceUndertakingID "r0011" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22775,7 +22775,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-R0019> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "mapfre re compañía de reaseguros, s.a.",
+    eiopa-Base:hasIdentifyingName "mapfre re compañía de reaseguros s.a.",
         "r0019" ;
     eiopa-Base:hasInsuranceUndertakingID "r0019" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22797,7 +22797,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-DGSFP-R1000> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:ES ;
-    eiopa-Base:hasIdentifyingName "gco reaseguros, s.a.",
+    eiopa-Base:hasIdentifyingName "gco reaseguros s.a.",
         "r1000" ;
     eiopa-Base:hasInsuranceUndertakingID "r1000" ;
     eiopa-Base:hasNCA "DGSFP" ;
@@ -22810,7 +22810,7 @@
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "h0073",
         "nn re",
-        "nn re (netherlands) n.v." ;
+        "nn re netherlands n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "h0073" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "01/09/2008 02:00:00" ;
@@ -22834,7 +22834,7 @@
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "de hoop",
         "h0088",
-        "n.v. levensverzekering-maatschappij \"de hoop\"" ;
+        "n.v. levensverzekering-maatschappij de hoop" ;
     eiopa-Base:hasInsuranceUndertakingID "h0088" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "01/09/2008 02:00:00" ;
@@ -22929,7 +22929,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0025",
-        "onderling fonds \"sliedrecht\" b.a." ;
+        "onderling fonds sliedrecht b.a." ;
     eiopa-Base:hasInsuranceUndertakingID "l0025" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "02/06/1903 02:00:00" ;
@@ -22941,7 +22941,7 @@
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "gravenhage",
         "l0029",
-        "onderlinge levensverzekering-maatschappij \"'s-gravenhage\" u.a." ;
+        "onderlinge levensverzekering-maatschappij 's-gravenhage u.a." ;
     eiopa-Base:hasInsuranceUndertakingID "l0029" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
     eiopa-Base:hasOperationStartDate "01/01/1901 01:00:00" ;
@@ -23012,7 +23012,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0116",
-        "robein leven ",
+        "robein leven",
         "robein leven n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0116" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23144,7 +23144,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0215",
-        "n.v. noordhollandsche van 1816, levensverzekeringsmaatschappij",
+        "n.v. noordhollandsche van 1816 levensverzekeringsmaatschappij",
         "noordhollandsche van 1816 leven" ;
     eiopa-Base:hasInsuranceUndertakingID "l0215" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23156,7 +23156,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "l0216",
-        "srlev ",
+        "srlev",
         "srlev n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "l0216" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23306,8 +23306,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0064> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "groot amsterdam (vga)",
-        "n.v. verzekeringsbedrijf groot amsterdam (vga)",
+    eiopa-Base:hasIdentifyingName "groot amsterdam vga",
+        "n.v. verzekeringsbedrijf groot amsterdam vga",
         "w0064" ;
     eiopa-Base:hasInsuranceUndertakingID "w0064" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23342,7 +23342,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0087> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "n.v. noordhollandsche van 1816, schadeverzekeringsmaatschappij",
+    eiopa-Base:hasIdentifyingName "n.v. noordhollandsche van 1816 schadeverzekeringsmaatschappij",
         "noordhollandsche van 1816 schade",
         "w0087" ;
     eiopa-Base:hasInsuranceUndertakingID "w0087" ;
@@ -23390,7 +23390,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0132> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "asr schade ",
+    eiopa-Base:hasIdentifyingName "asr schade",
         "asr schadeverzekering n.v.",
         "w0132" ;
     eiopa-Base:hasInsuranceUndertakingID "w0132" ;
@@ -23402,7 +23402,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0143> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "unilever insurances ",
+    eiopa-Base:hasIdentifyingName "unilever insurances",
         "unilever insurances n.v.",
         "w0143" ;
     eiopa-Base:hasInsuranceUndertakingID "w0143" ;
@@ -23450,7 +23450,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0174> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "algemene friese onderlinge schadeverzekeringsmaatschappij \"zevenwouden\" u.a.",
+    eiopa-Base:hasIdentifyingName "algemene friese onderlinge schadeverzekeringsmaatschappij zevenwouden u.a.",
         "w0174",
         "zevenwouden" ;
     eiopa-Base:hasInsuranceUndertakingID "w0174" ;
@@ -23473,7 +23473,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W0192> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge verzekerings maatschappij \"de onderlingen\" u.a.",
+    eiopa-Base:hasIdentifyingName "onderlinge verzekerings maatschappij de onderlingen u.a.",
         "w0192" ;
     eiopa-Base:hasInsuranceUndertakingID "w0192" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23565,7 +23565,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "noord-nederlandsche p&i club",
-        "onderlinge verzekerings-maatschappij \"noord nederlandsche p&i club\" u.a.",
+        "onderlinge verzekerings-maatschappij noord nederlandsche p&i club u.a.",
         "w0389" ;
     eiopa-Base:hasInsuranceUndertakingID "w0389" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23646,7 +23646,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1219> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "abn amro schade ",
+    eiopa-Base:hasIdentifyingName "abn amro schade",
         "abn amro schadeverzekering n.v.",
         "w1219" ;
     eiopa-Base:hasInsuranceUndertakingID "w1219" ;
@@ -23682,7 +23682,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "cz groep aanvullende",
-        "onderlinge waarborgmaatschappij centrale zorgverzekeraars groep, aanvullende verzekering zorgverzekeraar u.a.",
+        "onderlinge waarborgmaatschappij centrale zorgverzekeraars groep aanvullende verzekering zorgverzekeraar u.a.",
         "w1423" ;
     eiopa-Base:hasInsuranceUndertakingID "w1423" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23706,7 +23706,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "munis",
-        "mutual insurance association \"munis\" (onderlinge verzekeringsmaatschappij \"munis\") u.a.",
+        "mutual insurance association munis onderlinge verzekeringsmaatschappij munis u.a.",
         "w1497" ;
     eiopa-Base:hasInsuranceUndertakingID "w1497" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23717,7 +23717,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1576> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "dsw ziektekosten ",
+    eiopa-Base:hasIdentifyingName "dsw ziektekosten",
         "dsw ziektekostenverzekeringen n.v.",
         "w1576" ;
     eiopa-Base:hasInsuranceUndertakingID "w1576" ;
@@ -23729,7 +23729,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1589> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "reis en rechtshulp ",
+    eiopa-Base:hasIdentifyingName "reis en rechtshulp",
         "reis- en rechtshulp n.v.",
         "w1589" ;
     eiopa-Base:hasInsuranceUndertakingID "w1589" ;
@@ -23754,7 +23754,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "de burcht",
-        "n.v. verzekering maatschappij \"de burcht\"",
+        "n.v. verzekering maatschappij de burcht",
         "w1642" ;
     eiopa-Base:hasInsuranceUndertakingID "w1642" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23777,7 +23777,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1680> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "ing insurance services ",
+    eiopa-Base:hasIdentifyingName "ing insurance services",
         "nn non-life insurance n.v.",
         "w1680" ;
     eiopa-Base:hasInsuranceUndertakingID "w1680" ;
@@ -23801,7 +23801,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1702> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "actua schade ",
+    eiopa-Base:hasIdentifyingName "actua schade",
         "actua schadeverzekering n.v.",
         "w1702" ;
     eiopa-Base:hasInsuranceUndertakingID "w1702" ;
@@ -23825,7 +23825,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1709> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "akzo nobel assurantie ",
+    eiopa-Base:hasIdentifyingName "akzo nobel assurantie",
         "akzo nobel assurantie n.v.",
         "w1709" ;
     eiopa-Base:hasInsuranceUndertakingID "w1709" ;
@@ -23849,7 +23849,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1711> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge verzekeringsmaatschappij \"waterland en omstreken u.a.\"",
+    eiopa-Base:hasIdentifyingName "onderlinge verzekeringsmaatschappij waterland en omstreken u.a.",
         "w1711" ;
     eiopa-Base:hasInsuranceUndertakingID "w1711" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23872,7 +23872,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1743> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "oom global care ",
+    eiopa-Base:hasIdentifyingName "oom global care",
         "oom global care n.v.",
         "w1743" ;
     eiopa-Base:hasInsuranceUndertakingID "w1743" ;
@@ -23884,7 +23884,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1749> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "oom schade ",
+    eiopa-Base:hasIdentifyingName "oom schade",
         "oom schadeverzekering n.v.",
         "w1749" ;
     eiopa-Base:hasInsuranceUndertakingID "w1749" ;
@@ -23909,7 +23909,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "w1767",
-        "waard schade ",
+        "waard schade",
         "waard schade n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "w1767" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -23944,7 +23944,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1805> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "ns insurance ",
+    eiopa-Base:hasIdentifyingName "ns insurance",
         "ns insurance n.v.",
         "w1805" ;
     eiopa-Base:hasInsuranceUndertakingID "w1805" ;
@@ -23956,7 +23956,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1806> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "onderlinge verzekeringmaatschappij \"som\" u.a.",
+    eiopa-Base:hasIdentifyingName "onderlinge verzekeringmaatschappij som u.a.",
         "som",
         "w1806" ;
     eiopa-Base:hasInsuranceUndertakingID "w1806" ;
@@ -24111,8 +24111,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-De-Nederlandsche-Bank-W1906> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
-    eiopa-Base:hasIdentifyingName "cz groep, zorg",
-        "onderlinge waarborgmaatschappij centrale zorgverzekeraars groep, zorgverzekeraar u.a.",
+    eiopa-Base:hasIdentifyingName "cz groep zorg",
+        "onderlinge waarborgmaatschappij centrale zorgverzekeraars groep zorgverzekeraar u.a.",
         "w1906" ;
     eiopa-Base:hasInsuranceUndertakingID "w1906" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -24232,7 +24232,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NL ;
     eiopa-Base:hasIdentifyingName "w1940",
-        "woningborg ",
+        "woningborg",
         "woningborg n.v." ;
     eiopa-Base:hasInsuranceUndertakingID "w1940" ;
     eiopa-Base:hasNCA "De Nederlandsche Bank" ;
@@ -25169,7 +25169,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LI ;
     eiopa-Base:hasIdentifyingName "fl-0002.121.006-0",
-        "swiss life (liechtenstein) ag" ;
+        "swiss life liechtenstein ag" ;
     eiopa-Base:hasInsuranceUndertakingID "fl-0002.121.006-0" ;
     eiopa-Base:hasNCA "FMA Financial Market Authority" ;
     eiopa-Base:hasOperationStartDate "30/11/2004 01:00:00" ;
@@ -25237,7 +25237,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-FMA-Financial-Market-Authority-FL-0002.242.586-4> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LI ;
-    eiopa-Base:hasIdentifyingName "baloise life (liechtenstein) ag",
+    eiopa-Base:hasIdentifyingName "baloise life liechtenstein ag",
         "fl-0002.242.586-4" ;
     eiopa-Base:hasInsuranceUndertakingID "fl-0002.242.586-4" ;
     eiopa-Base:hasNCA "FMA Financial Market Authority" ;
@@ -25546,7 +25546,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
     eiopa-Base:hasIdentifyingName "040638060",
-        "zad \"allianz bulgaria\"" ;
+        "zad allianz bulgaria" ;
     eiopa-Base:hasInsuranceUndertakingID "040638060" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "16/07/1998 02:00:00" ;
@@ -25600,8 +25600,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-121518328> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
-    eiopa-Base:hasIdentifyingName "\"дзи - животозастраховане\" еад",
-        "121518328" ;
+    eiopa-Base:hasIdentifyingName "121518328",
+        "дзи - животозастраховане еад" ;
     eiopa-Base:hasInsuranceUndertakingID "121518328" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "13/05/1998 02:00:00" ;
@@ -25611,8 +25611,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-121718407> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
-    eiopa-Base:hasIdentifyingName "\"дзи - общо застраховане\" еад",
-        "121718407" ;
+    eiopa-Base:hasIdentifyingName "121718407",
+        "дзи - общо застраховане еад" ;
     eiopa-Base:hasInsuranceUndertakingID "121718407" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "13/05/1998 02:00:00" ;
@@ -25644,8 +25644,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-130427863> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
-    eiopa-Base:hasIdentifyingName "\"застрахователно дружество еиг ре\" еад",
-        "130427863" ;
+    eiopa-Base:hasIdentifyingName "130427863",
+        "застрахователно дружество еиг ре еад" ;
     eiopa-Base:hasInsuranceUndertakingID "130427863" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "20/11/2000 01:00:00" ;
@@ -25711,7 +25711,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
     eiopa-Base:hasIdentifyingName "175412887",
-        "застрахователно еднолично акционерно дружество \"цкб живот\" еад" ;
+        "застрахователно еднолично акционерно дружество цкб живот еад" ;
     eiopa-Base:hasInsuranceUndertakingID "175412887" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "31/10/2007 01:00:00" ;
@@ -25733,7 +25733,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
     eiopa-Base:hasIdentifyingName "200140730",
-        "insurance company \"ozok ins\" ad" ;
+        "insurance company ozok ins ad" ;
     eiopa-Base:hasInsuranceUndertakingID "200140730" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "07/08/2013 02:00:00" ;
@@ -25777,7 +25777,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
     eiopa-Base:hasIdentifyingName "203066057",
-        "insurance company \"asset insurance\" ad" ;
+        "insurance company asset insurance ad" ;
     eiopa-Base:hasInsuranceUndertakingID "203066057" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "16/04/2014 02:00:00" ;
@@ -25810,7 +25810,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
     eiopa-Base:hasIdentifyingName "831040933",
-        "zad \"energy\"" ;
+        "zad energy" ;
     eiopa-Base:hasInsuranceUndertakingID "831040933" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "16/07/1998 02:00:00" ;
@@ -25821,7 +25821,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
     eiopa-Base:hasIdentifyingName "831211284",
-        "зеад \"булстрад живот виена иншурънс груп\"" ;
+        "зеад булстрад живот виена иншурънс груп" ;
     eiopa-Base:hasInsuranceUndertakingID "831211284" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "15/06/1998 02:00:00" ;
@@ -25843,7 +25843,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
     eiopa-Base:hasIdentifyingName "831830482",
-        "зд \"бул инс\"" ;
+        "зд бул инс" ;
     eiopa-Base:hasInsuranceUndertakingID "831830482" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "16/07/1998 02:00:00" ;
@@ -25864,8 +25864,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Financial-and-Capital-Market-Commission-049> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LV ;
-    eiopa-Base:hasIdentifyingName "\"baltijas apdrošināšanas nams\" apdrošināšanas akciju sabiedrība",
-        "049" ;
+    eiopa-Base:hasIdentifyingName "049",
+        "baltijas apdrošināšanas nams apdrošināšanas akciju sabiedrība" ;
     eiopa-Base:hasInsuranceUndertakingID "049" ;
     eiopa-Base:hasNCA "Financial and Capital Market Commission" ;
     eiopa-Base:hasOperationStartDate "21/07/2000 02:00:00" ;
@@ -25876,7 +25876,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LV ;
     eiopa-Base:hasIdentifyingName "050",
-        "balcia insurance, se" ;
+        "balcia insurance se" ;
     eiopa-Base:hasInsuranceUndertakingID "050" ;
     eiopa-Base:hasNCA "Financial and Capital Market Commission" ;
     eiopa-Base:hasOperationStartDate "17/12/1993 01:00:00" ;
@@ -25890,7 +25890,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LV ;
     eiopa-Base:hasIdentifyingName "065",
-        "seb life and pension baltic, se" ;
+        "seb life and pension baltic se" ;
     eiopa-Base:hasInsuranceUndertakingID "065" ;
     eiopa-Base:hasNCA "Financial and Capital Market Commission" ;
     eiopa-Base:hasOperationStartDate "28/10/1998 01:00:00" ;
@@ -25900,8 +25900,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Financial-and-Capital-Market-Commission-288> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LV ;
-    eiopa-Base:hasIdentifyingName "\"cbl life\" apdrošināšanas akciju sabiedrība",
-        "288" ;
+    eiopa-Base:hasIdentifyingName "288",
+        "cbl life apdrošināšanas akciju sabiedrība" ;
     eiopa-Base:hasInsuranceUndertakingID "288" ;
     eiopa-Base:hasNCA "Financial and Capital Market Commission" ;
     eiopa-Base:hasOperationStartDate "08/06/2007 02:00:00" ;
@@ -25912,7 +25912,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LV ;
     eiopa-Base:hasIdentifyingName "536",
-        "bta baltic insurance company, aas" ;
+        "bta baltic insurance company aas" ;
     eiopa-Base:hasInsuranceUndertakingID "536" ;
     eiopa-Base:hasNCA "Financial and Capital Market Commission" ;
     eiopa-Base:hasOperationStartDate "01/07/2015 02:00:00" ;
@@ -25929,7 +25929,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LV ;
     eiopa-Base:hasIdentifyingName "65",
-        "seb life and pension baltic, se" ;
+        "seb life and pension baltic se" ;
     eiopa-Base:hasInsuranceUndertakingID "65" ;
     eiopa-Base:hasNCA "Financial and Capital Market Commission" ;
     eiopa-Base:hasOperationStartDate "28/10/1998 01:00:00" ;
@@ -25951,7 +25951,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21002",
-        "alecta pensionsförsäkring, ömsesidigt" ;
+        "alecta pensionsförsäkring ömsesidigt" ;
     eiopa-Base:hasInsuranceUndertakingID "21002" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "26/04/1929 02:00:00" ;
@@ -25995,7 +25995,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21011",
-        "bliwa livförsäkring, ömsesidigt" ;
+        "bliwa livförsäkring ömsesidigt" ;
     eiopa-Base:hasInsuranceUndertakingID "21011" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "17/02/1911 01:00:00" ;
@@ -26017,7 +26017,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21016",
-        "kpa livförsäkring ab (publ)" ;
+        "kpa livförsäkring ab publ" ;
     eiopa-Base:hasInsuranceUndertakingID "21016" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "21/12/1962 01:00:00" ;
@@ -26050,7 +26050,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21034",
-        "gamla livförsäkringsaktiebolaget seb trygg liv (publ)" ;
+        "gamla livförsäkringsaktiebolaget seb trygg liv publ" ;
     eiopa-Base:hasInsuranceUndertakingID "21034" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "16/01/1997 01:00:00" ;
@@ -26061,7 +26061,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21035",
-        "kpa pensionsförsäkring ab (publ)" ;
+        "kpa pensionsförsäkring ab publ" ;
     eiopa-Base:hasInsuranceUndertakingID "21035" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "25/09/1997 02:00:00" ;
@@ -26083,7 +26083,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21038",
-        "länsförsäkringar liv försäkringsaktiebolag (publ)" ;
+        "länsförsäkringar liv försäkringsaktiebolag publ" ;
     eiopa-Base:hasInsuranceUndertakingID "21038" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "08/10/1998 02:00:00" ;
@@ -26226,7 +26226,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21104",
-        "länsförsäkringar fondliv försäkringsaktiebolag (publ)" ;
+        "länsförsäkringar fondliv försäkringsaktiebolag publ" ;
     eiopa-Base:hasInsuranceUndertakingID "21104" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "15/11/1990 01:00:00" ;
@@ -26248,7 +26248,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21108",
-        "spp pension & försäkring ab (publ)" ;
+        "spp pension & försäkring ab publ" ;
     eiopa-Base:hasInsuranceUndertakingID "21108" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "16/11/1995 01:00:00" ;
@@ -26259,7 +26259,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21109",
-        "folksam fondförsäkringsaktiebolag (publ)" ;
+        "folksam fondförsäkringsaktiebolag publ" ;
     eiopa-Base:hasInsuranceUndertakingID "21109" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "19/10/1995 02:00:00" ;
@@ -26270,7 +26270,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "21111",
-        "folksam lo fondförsäkringsaktiebolag (publ)" ;
+        "folksam lo fondförsäkringsaktiebolag publ" ;
     eiopa-Base:hasInsuranceUndertakingID "21111" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "01/10/1998 02:00:00" ;
@@ -26347,7 +26347,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22003",
-        "if skadeförsäkring ab (publ)" ;
+        "if skadeförsäkring ab publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22003" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "31/08/1989 02:00:00" ;
@@ -26380,7 +26380,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22024",
-        "länsförsäkringar sak försäkringsaktiebolag (publ)" ;
+        "länsförsäkringar sak försäkringsaktiebolag publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22024" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "17/07/1936 02:00:00" ;
@@ -26391,7 +26391,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22026",
-        "försäkringsbolaget pri pensionsgaranti, ömsesidigt" ;
+        "försäkringsbolaget pri pensionsgaranti ömsesidigt" ;
     eiopa-Base:hasInsuranceUndertakingID "22026" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "02/12/1960 01:00:00" ;
@@ -26446,7 +26446,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22040",
-        "försäkringsaktiebolaget agria (publ)" ;
+        "försäkringsaktiebolaget agria publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22040" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "16/10/1987 02:00:00" ;
@@ -26482,7 +26482,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22054",
-        "ncc försäkringsaktiebolag (publ)" ;
+        "ncc försäkringsaktiebolag publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22054" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "26/10/1989 02:00:00" ;
@@ -26493,7 +26493,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22061",
-        "sirius international försäkringsaktiebolag (publ)" ;
+        "sirius international försäkringsaktiebolag publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22061" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "19/10/1989 02:00:00" ;
@@ -26504,7 +26504,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22062",
-        "försäkringsaktiebolaget skandia (publ)" ;
+        "försäkringsaktiebolaget skandia publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22062" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "12/01/1855 01:00:00" ;
@@ -26537,7 +26537,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22071",
-        "sveland djurförsäkringar, ömsesidigt" ;
+        "sveland djurförsäkringar ömsesidigt" ;
     eiopa-Base:hasInsuranceUndertakingID "22071" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "17/02/1911 01:00:00" ;
@@ -26581,7 +26581,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22085",
-        "sabo försäkrings ab (publ)" ;
+        "sabo försäkrings ab publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22085" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "10/09/1992 02:00:00" ;
@@ -26669,7 +26669,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22096",
-        "erika försäkringsaktiebolag (publ)" ;
+        "erika försäkringsaktiebolag publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22096" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "11/05/1995 02:00:00" ;
@@ -26735,7 +26735,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22108",
-        "accept försäkringsaktiebolag (publ)" ;
+        "accept försäkringsaktiebolag publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22108" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "18/09/1997 02:00:00" ;
@@ -26878,7 +26878,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22134",
-        "medicover försäkrings ab (publ)" ;
+        "medicover försäkrings ab publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22134" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "21/11/2006 01:00:00" ;
@@ -26900,7 +26900,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22138",
-        "ericsson insurance (försäkring) ab" ;
+        "ericsson insurance försäkring ab" ;
     eiopa-Base:hasInsuranceUndertakingID "22138" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "22/08/2007 02:00:00" ;
@@ -26933,7 +26933,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22143",
-        "förenade småkommuners försäkrings (fsf) aktiebolag" ;
+        "förenade småkommuners försäkrings fsf aktiebolag" ;
     eiopa-Base:hasInsuranceUndertakingID "22143" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "20/12/2007 01:00:00" ;
@@ -27043,7 +27043,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22158",
-        "livförsäkringsbolaget skandia, ömsesidigt" ;
+        "livförsäkringsbolaget skandia ömsesidigt" ;
     eiopa-Base:hasInsuranceUndertakingID "22158" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "28/06/2013 02:00:00" ;
@@ -27065,7 +27065,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "22160",
-        "kyrkans försäkring ab (publ)" ;
+        "kyrkans försäkring ab publ" ;
     eiopa-Base:hasInsuranceUndertakingID "22160" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "29/01/2014 01:00:00" ;
@@ -27406,7 +27406,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SE ;
     eiopa-Base:hasIdentifyingName "23051",
-        "dina försäkringar mitt, ömsesidigt" ;
+        "dina försäkringar mitt ömsesidigt" ;
     eiopa-Base:hasInsuranceUndertakingID "23051" ;
     eiopa-Base:hasNCA "Finansinspektionen" ;
     eiopa-Base:hasOperationStartDate "13/03/1953 01:00:00" ;
@@ -27808,7 +27808,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NO ;
     eiopa-Base:hasIdentifyingName "913861825",
-        "gard marine & energy insurance (europe) as" ;
+        "gard marine & energy insurance europe as" ;
     eiopa-Base:hasInsuranceUndertakingID "913861825" ;
     eiopa-Base:hasNCA "Finanstilsynet  The Financial Supervisory Authority of Norway" ;
     eiopa-Base:hasOperationStartDate "01/01/2015 01:00:00" ;
@@ -27907,7 +27907,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:NO ;
     eiopa-Base:hasIdentifyingName "938419531",
-        "assuranceforeningen skuld (gjensidig)" ;
+        "assuranceforeningen skuld gjensidig" ;
     eiopa-Base:hasInsuranceUndertakingID "938419531" ;
     eiopa-Base:hasNCA "Finanstilsynet  The Financial Supervisory Authority of Norway" ;
     eiopa-Base:hasOperationStartDate "01/01/2006 01:00:00" ;
@@ -28788,7 +28788,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "51706",
-        "sygeforsikringen \"danmark\", gs" ;
+        "sygeforsikringen danmark gs" ;
     eiopa-Base:hasInsuranceUndertakingID "51706" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "01/01/1973 01:00:00" ;
@@ -28810,7 +28810,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "51778",
-        "købstædernes forsikring, gensidig" ;
+        "købstædernes forsikring gensidig" ;
     eiopa-Base:hasInsuranceUndertakingID "51778" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "02/01/1900 01:00:00" ;
@@ -28904,7 +28904,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "53065",
-        "borealis insurance a/s (captive insurance company)" ;
+        "borealis insurance a/s captive insurance company" ;
     eiopa-Base:hasInsuranceUndertakingID "53065" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "06/06/1996 02:00:00" ;
@@ -28932,7 +28932,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "53072",
-        "forsikringsselskabet danica, skadeforsikringsaktieselskab af 1999" ;
+        "forsikringsselskabet danica skadeforsikringsaktieselskab af 1999" ;
     eiopa-Base:hasInsuranceUndertakingID "53072" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "19/11/1999 01:00:00" ;
@@ -29194,7 +29194,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "62965",
-        "pfa pension, forsikringsaktieselskab." ;
+        "pfa pension forsikringsaktieselskab." ;
     eiopa-Base:hasInsuranceUndertakingID "62965" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "16/10/1999 02:00:00" ;
@@ -29216,7 +29216,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "62973",
-        "danica pension, livsforsikringsaktieselskab" ;
+        "danica pension livsforsikringsaktieselskab" ;
     eiopa-Base:hasInsuranceUndertakingID "62973" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "14/06/1990 02:00:00" ;
@@ -29227,7 +29227,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "62983",
-        "velliv, pension & livsforsikring a/s" ;
+        "velliv pension & livsforsikring a/s" ;
     eiopa-Base:hasInsuranceUndertakingID "62983" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "22/02/1991 01:00:00" ;
@@ -29271,7 +29271,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "63000",
-        "lærernes pension, forsikringsaktieselskab" ;
+        "lærernes pension forsikringsaktieselskab" ;
     eiopa-Base:hasInsuranceUndertakingID "63000" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "06/07/1993 02:00:00" ;
@@ -29403,7 +29403,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "70807",
-        "p+, pensionskassen for akademikere" ;
+        "p+ pensionskassen for akademikere" ;
     eiopa-Base:hasInsuranceUndertakingID "70807" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "31/12/1988 01:00:00" ;
@@ -29458,7 +29458,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
     eiopa-Base:hasIdentifyingName "71044",
-        "pensionskassen for socialrådgivere , socialpædagoger og kontorpersonale" ;
+        "pensionskassen for socialrådgivere  socialpædagoger og kontorpersonale" ;
     eiopa-Base:hasInsuranceUndertakingID "71044" ;
     eiopa-Base:hasNCA "Finanstilsynet" ;
     eiopa-Base:hasOperationStartDate "21/03/1983 01:00:00" ;
@@ -29832,7 +29832,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "101001",
-        "red sands life assurance company (europe) limited" ;
+        "red sands life assurance company europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "101001" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "16/01/2009 01:00:00" ;
@@ -29978,7 +29978,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "1862",
-        "argus insurance company (europe) limited" ;
+        "argus insurance company europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "1862" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "25/02/1988 01:00:00" ;
@@ -30066,7 +30066,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "83887",
-        "white rock insurance (gibraltar) pcc limited" ;
+        "white rock insurance gibraltar pcc limited" ;
     eiopa-Base:hasInsuranceUndertakingID "83887" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "25/04/2002 02:00:00" ;
@@ -30088,7 +30088,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "85455",
-        "admiral insurance (gibraltar) limited" ;
+        "admiral insurance gibraltar limited" ;
     eiopa-Base:hasInsuranceUndertakingID "85455" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "30/10/2002 01:00:00" ;
@@ -30165,7 +30165,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "87598",
-        "red sands insurance company (europe) limited" ;
+        "red sands insurance company europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "87598" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "23/01/2004 01:00:00" ;
@@ -30198,7 +30198,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "89400",
-        "casualty & general insurance company (europe) limited" ;
+        "casualty & general insurance company europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "89400" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "18/12/2003 01:00:00" ;
@@ -30297,7 +30297,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "95523",
-        "arriva insurance company (gibraltar) limited" ;
+        "arriva insurance company gibraltar limited" ;
     eiopa-Base:hasInsuranceUndertakingID "95523" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "13/12/2005 01:00:00" ;
@@ -30330,7 +30330,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "97647",
-        "tate & lyle insurance (gibraltar) limited" ;
+        "tate & lyle insurance gibraltar limited" ;
     eiopa-Base:hasInsuranceUndertakingID "97647" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "01/03/2007 01:00:00" ;
@@ -30363,7 +30363,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "99532",
-        "brit reinsurance (bermuda) limited" ;
+        "brit reinsurance bermuda limited" ;
     eiopa-Base:hasInsuranceUndertakingID "99532" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "07/12/2007 01:00:00" ;
@@ -30374,7 +30374,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "99707",
-        "douglas insurance (gibraltar) limited" ;
+        "douglas insurance gibraltar limited" ;
     eiopa-Base:hasInsuranceUndertakingID "99707" ;
     eiopa-Base:hasNCA "Gibraltar Financial Services Commission" ;
     eiopa-Base:hasOperationStartDate "14/12/2007 01:00:00" ;
@@ -30407,7 +30407,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
     eiopa-Base:hasIdentifyingName "100004",
-        "compagnia italiana di previdenza, assicurazioni e riassicurazioni s.p.a. o brevemente italiana assicurazioni s.p.a." ;
+        "compagnia italiana di previdenza assicurazioni e riassicurazioni s.p.a. o brevemente italiana assicurazioni s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100004" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "29/04/1923 02:00:00" ;
@@ -30487,7 +30487,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
     eiopa-Base:hasIdentifyingName "100019",
-        "assicurazioni rischi agricoli vmg 1857 s.p.a. - per brevita' \"ara 1857 s.p.a.\"" ;
+        "assicurazioni rischi agricoli vmg 1857 s.p.a. - per brevita' ara 1857 s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100019" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "12/03/1927 01:00:00" ;
@@ -30721,7 +30721,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
     eiopa-Base:hasIdentifyingName "100054",
-        "abc assicura societa' per azioni brevemente chiamata \"abc assicura s.p.a.\"" ;
+        "abc assicura societa' per azioni brevemente chiamata abc assicura s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100054" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "08/03/1982 01:00:00" ;
@@ -30908,7 +30908,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
     eiopa-Base:hasIdentifyingName "100092",
-        "assimoco vita spa compagnia di assicurazione sulla vita (piu' bre vemente assimoco vita spa" ;
+        "assimoco vita spa compagnia di assicurazione sulla vita piu' bre vemente assimoco vita spa" ;
     eiopa-Base:hasInsuranceUndertakingID "100092" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "23/10/1990 02:00:00" ;
@@ -30984,8 +30984,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-IVASS-100111> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
-    eiopa-Base:hasIdentifyingName "\"global assistance - compagnia di assicurazioni e riassicurazioni s.p.a.\" o piu' brevemente \"global assistance s.p.a.\"",
-        "100111" ;
+    eiopa-Base:hasIdentifyingName "100111",
+        "global assistance - compagnia di assicurazioni e riassicurazioni s.p.a. o piu' brevemente global assistance s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100111" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "02/08/1993 02:00:00" ;
@@ -31205,7 +31205,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
     eiopa-Base:hasIdentifyingName "100142",
-        "helvetia vita compagnia italo-svizzera di assicurazioni sulla vita s.p.a. e in forma abbreviata \"helvetia vita s.p.a.\"" ;
+        "helvetia vita compagnia italo-svizzera di assicurazioni sulla vita s.p.a. e in forma abbreviata helvetia vita s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100142" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "04/12/2001 01:00:00" ;
@@ -31216,7 +31216,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
     eiopa-Base:hasIdentifyingName "100143",
-        "bcc vita s.p.a. - compagnia di assicurazioni vita ed in forma ab breviata \"bcc vita s.p.a.\"" ;
+        "bcc vita s.p.a. - compagnia di assicurazioni vita ed in forma ab breviata bcc vita s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100143" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "29/05/2002 02:00:00" ;
@@ -31227,7 +31227,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
     eiopa-Base:hasIdentifyingName "100147",
-        "berica vita societa' per azioni in forma abbreviata \"berica vita s.p.a.\"" ;
+        "berica vita societa' per azioni in forma abbreviata berica vita s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100147" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "02/04/2004 02:00:00" ;
@@ -31260,7 +31260,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
     eiopa-Base:hasIdentifyingName "100152",
-        "allianz societa' per azioni in forma abbreviata \"allianz s.p.a.\"" ;
+        "allianz societa' per azioni in forma abbreviata allianz s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100152" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "21/12/2005 01:00:00" ;
@@ -31282,8 +31282,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-IVASS-100158> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
-    eiopa-Base:hasIdentifyingName "\"cf assicurazioni s.p.a. - compagnia di assicurazione per il credito e la famiglia\" abbreviabile in \"cf assicurazioni s.p.a.\"",
-        "100158" ;
+    eiopa-Base:hasIdentifyingName "100158",
+        "cf assicurazioni s.p.a. - compagnia di assicurazione per il credito e la famiglia abbreviabile in cf assicurazioni s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100158" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "03/08/2007 02:00:00" ;
@@ -31349,7 +31349,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IT ;
     eiopa-Base:hasIdentifyingName "100167",
-        "elba compagnia di assicurazioni e riassicurazioni s.p.a. e, in forma abbreviata, elba assicurazioni s.p.a." ;
+        "elba compagnia di assicurazioni e riassicurazioni s.p.a. e in forma abbreviata elba assicurazioni s.p.a." ;
     eiopa-Base:hasInsuranceUndertakingID "100167" ;
     eiopa-Base:hasNCA "IVASS" ;
     eiopa-Base:hasOperationStartDate "03/06/2008 02:00:00" ;
@@ -31545,7 +31545,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CY ;
     eiopa-Base:hasIdentifyingName "141",
-        "trust international insurance and reinsurance company b.s.c. (closed) trust re" ;
+        "trust international insurance and reinsurance company b.s.c. closed trust re" ;
     eiopa-Base:hasInsuranceUndertakingID "141" ;
     eiopa-Base:hasNCA "Insurance Companies Control Service" ;
     eiopa-Base:hasOperationStartDate "09/05/1996 02:00:00" ;
@@ -31589,7 +31589,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CY ;
     eiopa-Base:hasIdentifyingName "170",
-        "εθνικη γενικων ασφαλειων (κυπρου) λιμιτεδ" ;
+        "εθνικη γενικων ασφαλειων κυπρου λιμιτεδ" ;
     eiopa-Base:hasInsuranceUndertakingID "170" ;
     eiopa-Base:hasNCA "Insurance Companies Control Service" ;
     eiopa-Base:hasOperationStartDate "20/12/2000 01:00:00" ;
@@ -31600,7 +31600,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CY ;
     eiopa-Base:hasIdentifyingName "171",
-        "ethniki insurance (cyprus) ltd" ;
+        "ethniki insurance cyprus ltd" ;
     eiopa-Base:hasInsuranceUndertakingID "171" ;
     eiopa-Base:hasNCA "Insurance Companies Control Service" ;
     eiopa-Base:hasOperationStartDate "20/12/2000 01:00:00" ;
@@ -31633,7 +31633,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CY ;
     eiopa-Base:hasIdentifyingName "175",
-        "υδρογειος ασφαλιστικη εταιρεια (κυπρου) λιμιτεδ" ;
+        "υδρογειος ασφαλιστικη εταιρεια κυπρου λιμιτεδ" ;
     eiopa-Base:hasInsuranceUndertakingID "175" ;
     eiopa-Base:hasNCA "Insurance Companies Control Service" ;
     eiopa-Base:hasOperationStartDate "12/03/2003 01:00:00" ;
@@ -31666,7 +31666,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CY ;
     eiopa-Base:hasIdentifyingName "181",
-        "steamship mutual underwriting association (europe) limited" ;
+        "steamship mutual underwriting association europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "181" ;
     eiopa-Base:hasNCA "Insurance Companies Control Service" ;
     eiopa-Base:hasOperationStartDate "25/10/2019 02:00:00" ;
@@ -31677,7 +31677,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CY ;
     eiopa-Base:hasIdentifyingName "182",
-        "the united kingdom freight demurrage and defence insurance (europe) limited" ;
+        "the united kingdom freight demurrage and defence insurance europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "182" ;
     eiopa-Base:hasNCA "Insurance Companies Control Service" ;
     eiopa-Base:hasOperationStartDate "19/06/2020 02:00:00" ;
@@ -31721,7 +31721,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CY ;
     eiopa-Base:hasIdentifyingName "45",
-        "steamship mutual underwriting association (europe) limited" ;
+        "steamship mutual underwriting association europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "45" ;
     eiopa-Base:hasNCA "Insurance Companies Control Service" ;
     eiopa-Base:hasOperationStartDate "25/10/2019 02:00:00" ;
@@ -31798,7 +31798,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CY ;
     eiopa-Base:hasIdentifyingName "78",
-        "ασφαλιστικη εταιρεια η \"κεντρικη\" λιμιτεδ" ;
+        "ασφαλιστικη εταιρεια η κεντρικη λιμιτεδ" ;
     eiopa-Base:hasInsuranceUndertakingID "78" ;
     eiopa-Base:hasNCA "Insurance Companies Control Service" ;
     eiopa-Base:hasOperationStartDate "07/05/1985 02:00:00" ;
@@ -31831,7 +31831,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LT ;
     eiopa-Base:hasIdentifyingName "110051834",
-        "akcinė bendrovė \"lietuvos draudimas\"" ;
+        "akcinė bendrovė lietuvos draudimas" ;
     eiopa-Base:hasInsuranceUndertakingID "110051834" ;
     eiopa-Base:hasNCA "Lietuvos bankas" ;
     eiopa-Base:hasOperationStartDate "18/03/1991 01:00:00" ;
@@ -31842,7 +31842,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LT ;
     eiopa-Base:hasIdentifyingName "110057869",
-        "akcine draudimo bendrove \"gjensidige\"" ;
+        "akcine draudimo bendrove gjensidige" ;
     eiopa-Base:hasInsuranceUndertakingID "110057869" ;
     eiopa-Base:hasNCA "Lietuvos bankas" ;
     eiopa-Base:hasOperationStartDate "30/07/1993 02:00:00" ;
@@ -31864,7 +31864,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LT ;
     eiopa-Base:hasIdentifyingName "110081788",
-        "gyvybės draudimo uab \"sb draudimas\"" ;
+        "gyvybės draudimo uab sb draudimas" ;
     eiopa-Base:hasInsuranceUndertakingID "110081788" ;
     eiopa-Base:hasNCA "Lietuvos bankas" ;
     eiopa-Base:hasOperationStartDate "17/08/2000 02:00:00" ;
@@ -31875,7 +31875,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LT ;
     eiopa-Base:hasIdentifyingName "110082737",
-        "uab \"pzu lietuva gyvybes draudimas\"" ;
+        "uab pzu lietuva gyvybes draudimas" ;
     eiopa-Base:hasInsuranceUndertakingID "110082737" ;
     eiopa-Base:hasNCA "Lietuvos bankas" ;
     eiopa-Base:hasOperationStartDate "10/04/2001 02:00:00" ;
@@ -31897,7 +31897,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LT ;
     eiopa-Base:hasIdentifyingName "111744827",
-        "uždaroji akcinė gyvybės draudimo ir pensijų bendrovė \"aviva lietuva\"" ;
+        "uždaroji akcinė gyvybės draudimo ir pensijų bendrovė aviva lietuva" ;
     eiopa-Base:hasInsuranceUndertakingID "111744827" ;
     eiopa-Base:hasNCA "Lietuvos bankas" ;
     eiopa-Base:hasOperationStartDate "31/07/2001 02:00:00" ;
@@ -31907,8 +31907,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Lietuvos-bankas-304080146> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LT ;
-    eiopa-Base:hasIdentifyingName "\"compensa vienna insurance group\", akcinė draudimo bendrovė",
-        "304080146" ;
+    eiopa-Base:hasIdentifyingName "304080146",
+        "compensa vienna insurance group akcinė draudimo bendrovė" ;
     eiopa-Base:hasInsuranceUndertakingID "304080146" ;
     eiopa-Base:hasNCA "Lietuvos bankas" ;
     eiopa-Base:hasOperationStartDate "30/07/2015 02:00:00" ;
@@ -31930,7 +31930,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:MT ;
     eiopa-Base:hasIdentifyingName "c 18814",
-        "hsbc life assurance (malta) ltd" ;
+        "hsbc life assurance malta ltd" ;
     eiopa-Base:hasInsuranceUndertakingID "c 18814" ;
     eiopa-Base:hasNCA "Malta Financial Services Authority (MFSA)" ;
     eiopa-Base:hasOperationStartDate "26/01/1996 01:00:00" ;
@@ -32140,7 +32140,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Malta-Financial-Services-Authority-MFSA-C40522> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:MT ;
-    eiopa-Base:hasIdentifyingName "arnold clark insurance (malta) limited",
+    eiopa-Base:hasIdentifyingName "arnold clark insurance malta limited",
         "c 40522" ;
     eiopa-Base:hasInsuranceUndertakingID "c 40522" ;
     eiopa-Base:hasNCA "Malta Financial Services Authority (MFSA)" ;
@@ -32207,7 +32207,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:MT ;
     eiopa-Base:hasIdentifyingName "c 45413",
-        "white rock insurance (europe) pcc limited" ;
+        "white rock insurance europe pcc limited" ;
     eiopa-Base:hasInsuranceUndertakingID "c 45413" ;
     eiopa-Base:hasNCA "Malta Financial Services Authority (MFSA)" ;
     eiopa-Base:hasOperationStartDate "24/10/2008 02:00:00" ;
@@ -32339,7 +32339,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:MT ;
     eiopa-Base:hasIdentifyingName "c 53199",
-        "oney life (pcc) limited" ;
+        "oney life pcc limited" ;
     eiopa-Base:hasInsuranceUndertakingID "c 53199" ;
     eiopa-Base:hasNCA "Malta Financial Services Authority (MFSA)" ;
     eiopa-Base:hasOperationStartDate "23/06/2011 02:00:00" ;
@@ -32350,7 +32350,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:MT ;
     eiopa-Base:hasIdentifyingName "c 53202",
-        "oney insurance (pcc) limited" ;
+        "oney insurance pcc limited" ;
     eiopa-Base:hasInsuranceUndertakingID "c 53202" ;
     eiopa-Base:hasNCA "Malta Financial Services Authority (MFSA)" ;
     eiopa-Base:hasOperationStartDate "23/06/2011 02:00:00" ;
@@ -32415,7 +32415,7 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Malta-Financial-Services-Authority-MFSA-C59505> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:MT ;
-    eiopa-Base:hasIdentifyingName "accredited insurance (europe) limited",
+    eiopa-Base:hasIdentifyingName "accredited insurance europe limited",
         "c 59505" ;
     eiopa-Base:hasInsuranceUndertakingID "c 59505" ;
     eiopa-Base:hasNCA "Malta Financial Services Authority (MFSA)" ;
@@ -32449,7 +32449,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:MT ;
     eiopa-Base:hasIdentifyingName "c 63569",
-        "white rock insurance (netherlands) pcc limited" ;
+        "white rock insurance netherlands pcc limited" ;
     eiopa-Base:hasInsuranceUndertakingID "c 63569" ;
     eiopa-Base:hasNCA "Malta Financial Services Authority (MFSA)" ;
     eiopa-Base:hasOperationStartDate "21/01/2014 01:00:00" ;
@@ -32504,7 +32504,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:MT ;
     eiopa-Base:hasIdentifyingName "c 69991",
-        "standard re (malta) limited" ;
+        "standard re malta limited" ;
     eiopa-Base:hasInsuranceUndertakingID "c 69991" ;
     eiopa-Base:hasNCA "Malta Financial Services Authority (MFSA)" ;
     eiopa-Base:hasOperationStartDate "27/04/2015 02:00:00" ;
@@ -32559,7 +32559,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:MT ;
     eiopa-Base:hasIdentifyingName "c 78902",
-        "r&q insurance (europe) limited" ;
+        "r&q insurance europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "c 78902" ;
     eiopa-Base:hasNCA "Malta Financial Services Authority (MFSA)" ;
     eiopa-Base:hasOperationStartDate "30/12/2016 01:00:00" ;
@@ -33109,7 +33109,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BE ;
     eiopa-Base:hasIdentifyingName "345",
-        "fédérale assurance, caisse commune d'assurance contre les accidents du travail" ;
+        "fédérale assurance caisse commune d'assurance contre les accidents du travail" ;
     eiopa-Base:hasInsuranceUndertakingID "345" ;
     eiopa-Base:hasNCA "NBB" ;
     eiopa-Base:hasOperationStartDate "09/07/1975 02:00:00" ;
@@ -33120,7 +33120,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BE ;
     eiopa-Base:hasIdentifyingName "346",
-        "fédérale assurance, association d'assurances mutuelles sur la vie" ;
+        "fédérale assurance association d'assurances mutuelles sur la vie" ;
     eiopa-Base:hasInsuranceUndertakingID "346" ;
     eiopa-Base:hasNCA "NBB" ;
     eiopa-Base:hasOperationStartDate "31/12/1993 01:00:00" ;
@@ -33241,7 +33241,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BE ;
     eiopa-Base:hasIdentifyingName "687",
-        "d.a.s. société anonyme belge d'assurances de protection juridique - d.a.s. belgische rechtsbijstandsverzekringsmaatschappij, naamloze vennootschap" ;
+        "d.a.s. société anonyme belge d'assurances de protection juridique - d.a.s. belgische rechtsbijstandsverzekringsmaatschappij naamloze vennootschap" ;
     eiopa-Base:hasInsuranceUndertakingID "687" ;
     eiopa-Base:hasNCA "NBB" ;
     eiopa-Base:hasOperationStartDate "31/12/1993 01:00:00" ;
@@ -33285,7 +33285,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BE ;
     eiopa-Base:hasIdentifyingName "805",
-        "securex - vereniging voor onderlinge verzekering, allerlei risiko's - securex - association d'assurance mutuelle, risques divers" ;
+        "securex - vereniging voor onderlinge verzekering allerlei risiko's - securex - association d'assurance mutuelle risques divers" ;
     eiopa-Base:hasInsuranceUndertakingID "805" ;
     eiopa-Base:hasNCA "NBB" ;
     eiopa-Base:hasOperationStartDate "31/12/1993 01:00:00" ;
@@ -33329,7 +33329,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BE ;
     eiopa-Base:hasIdentifyingName "87",
-        "federale assurance, société coopérative d'assurance contre les accidents, l'incendie, la responsabilité civile et les risques divers" ;
+        "federale assurance société coopérative d'assurance contre les accidents l'incendie la responsabilité civile et les risques divers" ;
     eiopa-Base:hasInsuranceUndertakingID "87" ;
     eiopa-Base:hasNCA "NBB" ;
     eiopa-Base:hasOperationStartDate "09/07/1975 02:00:00" ;
@@ -33461,7 +33461,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "00151700",
-        "allianz - slovenská poisťovňa, a.s." ;
+        "allianz - slovenská poisťovňa a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "00151700" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "29/10/1991 01:00:00" ;
@@ -33472,7 +33472,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "00585441",
-        "kooperativa poisťovňa, a.s. vienna insurance group" ;
+        "kooperativa poisťovňa a.s. vienna insurance group" ;
     eiopa-Base:hasInsuranceUndertakingID "00585441" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "20/03/1991 01:00:00" ;
@@ -33483,7 +33483,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "00653501",
-        "uniqa poisťovňa, a.s." ;
+        "uniqa poisťovňa a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "00653501" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "30/04/1991 02:00:00" ;
@@ -33494,7 +33494,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "31322051",
-        "union poisťovňa, a. s." ;
+        "union poisťovňa a. s." ;
     eiopa-Base:hasInsuranceUndertakingID "31322051" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "24/09/1992 02:00:00" ;
@@ -33505,7 +33505,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "31325416",
-        "čsob poisťovňa, a.s." ;
+        "čsob poisťovňa a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "31325416" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "12/05/1992 02:00:00" ;
@@ -33516,7 +33516,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "31383408",
-        "wüstenrot poisťovňa, a.s." ;
+        "wüstenrot poisťovňa a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "31383408" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "09/07/1998 02:00:00" ;
@@ -33527,7 +33527,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "31405410",
-        "poštová poisťovňa, a.s." ;
+        "poštová poisťovňa a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "31405410" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "25/06/1996 02:00:00" ;
@@ -33538,7 +33538,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "31595545",
-        "komunálna poisťovňa, a.s. vienna insurance group" ;
+        "komunálna poisťovňa a.s. vienna insurance group" ;
     eiopa-Base:hasInsuranceUndertakingID "31595545" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "13/10/1993 02:00:00" ;
@@ -33549,7 +33549,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "35691999",
-        "nn životná poisťovňa, a.s." ;
+        "nn životná poisťovňa a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "35691999" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "29/03/1996 01:00:00" ;
@@ -33560,7 +33560,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "35709332",
-        "generali poisťovňa, a. s." ;
+        "generali poisťovňa a. s." ;
     eiopa-Base:hasInsuranceUndertakingID "35709332" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "22/01/1997 01:00:00" ;
@@ -33571,7 +33571,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "36534978",
-        "bnp paribas cardif poisťovňa, a.s." ;
+        "bnp paribas cardif poisťovňa a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "36534978" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "08/03/2000 01:00:00" ;
@@ -33582,7 +33582,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:SK ;
     eiopa-Base:hasIdentifyingName "47251301",
-        "novis insurance company, novis versicherungsgesellschaft, novis compagnia di assicurazioni, novis poisťovňa a.s." ;
+        "novis insurance company novis versicherungsgesellschaft novis compagnia di assicurazioni novis poisťovňa a.s." ;
     eiopa-Base:hasInsuranceUndertakingID "47251301" ;
     eiopa-Base:hasNCA "NBS" ;
     eiopa-Base:hasOperationStartDate "07/10/2013 02:00:00" ;
@@ -33780,7 +33780,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PL ;
     eiopa-Base:hasIdentifyingName "23",
-        "towarzystwo ubezpieczeń wzajemnych \"tuw\"" ;
+        "towarzystwo ubezpieczeń wzajemnych tuw" ;
     eiopa-Base:hasInsuranceUndertakingID "23" ;
     eiopa-Base:hasNCA "PFSA" ;
     eiopa-Base:hasOperationStartDate "16/03/1992 01:00:00" ;
@@ -33846,7 +33846,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PL ;
     eiopa-Base:hasIdentifyingName "30",
-        "towarzystwo ubezpieczeń wzajemnych \"cuprum\"" ;
+        "towarzystwo ubezpieczeń wzajemnych cuprum" ;
     eiopa-Base:hasInsuranceUndertakingID "30" ;
     eiopa-Base:hasNCA "PFSA" ;
     eiopa-Base:hasOperationStartDate "09/12/1994 01:00:00" ;
@@ -33890,7 +33890,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PL ;
     eiopa-Base:hasIdentifyingName "42",
-        "towarzystwo ubezpieczeń wzajemnych \"rejent-life\"" ;
+        "towarzystwo ubezpieczeń wzajemnych rejent-life" ;
     eiopa-Base:hasInsuranceUndertakingID "42" ;
     eiopa-Base:hasNCA "PFSA" ;
     eiopa-Base:hasOperationStartDate "19/10/1995 02:00:00" ;
@@ -34011,7 +34011,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:PL ;
     eiopa-Base:hasIdentifyingName "57",
-        "towarzystwo ubezpieczeń na życie \"cardif polska\" spółka akcyjna" ;
+        "towarzystwo ubezpieczeń na życie cardif polska spółka akcyjna" ;
     eiopa-Base:hasInsuranceUndertakingID "57" ;
     eiopa-Base:hasNCA "PFSA" ;
     eiopa-Base:hasOperationStartDate "01/05/1998 02:00:00" ;
@@ -34539,7 +34539,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "110340",
-        "equitable life assurance society,(the)" ;
+        "equitable life assurance societythe" ;
     eiopa-Base:hasInsuranceUndertakingID "110340" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -34702,7 +34702,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "110481",
-        "sun life assurance company of canada (u.k.) limited" ;
+        "sun life assurance company of canada u.k. limited" ;
     eiopa-Base:hasInsuranceUndertakingID "110481" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -34733,7 +34733,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "110863",
-        "uia (insurance) limited" ;
+        "uia insurance limited" ;
     eiopa-Base:hasInsuranceUndertakingID "110863" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -34832,7 +34832,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "117647",
-        "ba (gi) limited" ;
+        "ba gi limited" ;
     eiopa-Base:hasInsuranceUndertakingID "117647" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -34854,7 +34854,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "117664",
-        "national farmers union mutual insurance society limited(the)" ;
+        "national farmers union mutual insurance society limitedthe" ;
     eiopa-Base:hasInsuranceUndertakingID "117664" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -34876,7 +34876,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "117668",
-        "pa (gi) limited" ;
+        "pa gi limited" ;
     eiopa-Base:hasInsuranceUndertakingID "117668" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -34887,7 +34887,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "117672",
-        "royal london mutual insurance society,limited(the)" ;
+        "royal london mutual insurance societylimitedthe" ;
     eiopa-Base:hasInsuranceUndertakingID "117672" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -34927,7 +34927,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "133435",
-        "hsbc life (uk) limited" ;
+        "hsbc life uk limited" ;
     eiopa-Base:hasInsuranceUndertakingID "133435" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35376,7 +35376,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202047",
-        "britannia steam ship insurance association limited(the)" ;
+        "britannia steam ship insurance association limitedthe" ;
     eiopa-Base:hasInsuranceUndertakingID "202047" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35420,7 +35420,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202061",
-        "bai (run-off) ltd" ;
+        "bai run-off ltd" ;
     eiopa-Base:hasInsuranceUndertakingID "202061" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35492,7 +35492,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202099",
-        "cornish mutual assurance company,limited" ;
+        "cornish mutual assurance companylimited" ;
     eiopa-Base:hasInsuranceUndertakingID "202099" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35558,7 +35558,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202127",
-        "wausau insurance company (u.k.) limited" ;
+        "wausau insurance company u.k. limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202127" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35622,7 +35622,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202166",
-        "gwent hospitals workmen's and contributory fund(the)" ;
+        "gwent hospitals workmen's and contributory fundthe" ;
     eiopa-Base:hasInsuranceUndertakingID "202166" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35677,7 +35677,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202188",
-        "r&q reinsurance company (uk) limited" ;
+        "r&q reinsurance company uk limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202188" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35702,7 +35702,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202199",
-        "kyoei fire & marine insurance co. (u.k.) limited" ;
+        "kyoei fire & marine insurance co. u.k. limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202199" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35713,7 +35713,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202202",
-        "legal and general assurance (pensions management) limited" ;
+        "legal and general assurance pensions management limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202202" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35821,7 +35821,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202290",
-        "palatine insurance company limited(the)" ;
+        "palatine insurance company limitedthe" ;
     eiopa-Base:hasInsuranceUndertakingID "202290" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35922,7 +35922,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202327",
-        "salvation army general insurance corporation limited(the)" ;
+        "salvation army general insurance corporation limitedthe" ;
     eiopa-Base:hasInsuranceUndertakingID "202327" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -35933,7 +35933,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202329",
-        "reliance national insurance company (europe) limited" ;
+        "reliance national insurance company europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202329" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36025,7 +36025,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202560",
-        "the united kingdom mutual steam ship assurance association (europe) limited" ;
+        "the united kingdom mutual steam ship assurance association europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202560" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36073,7 +36073,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202571",
-        "swiss re specialty insurance (uk) limited" ;
+        "swiss re specialty insurance uk limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202571" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36117,7 +36117,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202589",
-        "the united kingdom mutual steam ship assurance association (london) limited" ;
+        "the united kingdom mutual steam ship assurance association london limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202589" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36172,7 +36172,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202619",
-        "world marine & general insurance p l c(the)" ;
+        "world marine & general insurance p l cthe" ;
     eiopa-Base:hasInsuranceUndertakingID "202619" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36297,7 +36297,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202637",
-        "heddington insurance (u.k.) limited" ;
+        "heddington insurance u.k. limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202637" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36372,7 +36372,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202690",
-        "china taiping insurance (uk) co ltd" ;
+        "china taiping insurance uk co ltd" ;
     eiopa-Base:hasInsuranceUndertakingID "202690" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36410,7 +36410,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202701",
-        "wren insurance association limited(the)" ;
+        "wren insurance association limitedthe" ;
     eiopa-Base:hasInsuranceUndertakingID "202701" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36534,7 +36534,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202748",
-        "equine and livestock insurance company limited (the)" ;
+        "equine and livestock insurance company limited the" ;
     eiopa-Base:hasInsuranceUndertakingID "202748" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36545,7 +36545,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202751",
-        "mitsui sumitomo insurance company (europe), limited" ;
+        "mitsui sumitomo insurance company europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202751" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36808,7 +36808,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202823",
-        "riverstone insurance (uk) limited" ;
+        "riverstone insurance uk limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202823" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36819,7 +36819,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202824",
-        "north of england protecting and indemnity association limited(the)" ;
+        "north of england protecting and indemnity association limitedthe" ;
     eiopa-Base:hasInsuranceUndertakingID "202824" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -36955,7 +36955,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202874",
-        "great american international insurance (uk) limited" ;
+        "great american international insurance uk limited" ;
     eiopa-Base:hasInsuranceUndertakingID "202874" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -37021,7 +37021,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "202896",
-        "assured guaranty (europe) plc" ;
+        "assured guaranty europe plc" ;
     eiopa-Base:hasInsuranceUndertakingID "202896" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -37204,7 +37204,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "203024",
-        "pool reinsurance (nuclear) limited" ;
+        "pool reinsurance nuclear limited" ;
     eiopa-Base:hasInsuranceUndertakingID "203024" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "01/12/2001 01:00:00" ;
@@ -37536,7 +37536,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "229887",
-        "arch insurance (uk) limited" ;
+        "arch insurance uk limited" ;
     eiopa-Base:hasInsuranceUndertakingID "229887" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "28/05/2004 02:00:00" ;
@@ -37692,7 +37692,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "450965",
-        "lancashire insurance company (uk) limited" ;
+        "lancashire insurance company uk limited" ;
     eiopa-Base:hasInsuranceUndertakingID "450965" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "30/08/2006 02:00:00" ;
@@ -37808,7 +37808,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "519580",
-        "international general insurance company (uk) limited" ;
+        "international general insurance company uk limited" ;
     eiopa-Base:hasInsuranceUndertakingID "519580" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "02/03/2011 01:00:00" ;
@@ -37885,7 +37885,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "676783",
-        "starr international (europe) limited" ;
+        "starr international europe limited" ;
     eiopa-Base:hasInsuranceUndertakingID "676783" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "18/03/2016 01:00:00" ;
@@ -37965,7 +37965,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:UK ;
     eiopa-Base:hasIdentifyingName "795784",
-        "aioi nissay dowa insurance co., ltd." ;
+        "aioi nissay dowa insurance co. ltd." ;
     eiopa-Base:hasInsuranceUndertakingID "795784" ;
     eiopa-Base:hasNCA "Prudential Regulation Authority" ;
     eiopa-Base:hasOperationStartDate "13/11/2018 01:00:00" ;
@@ -47571,7 +47571,7 @@
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:CY ;
     eiopa-Base:hasIdentifyingName "108",
-        "trust international insurance company (cyprus) limited" ;
+        "trust international insurance company cyprus limited" ;
     eiopa-Base:hasInsuranceUndertakingID "108" ;
     eiopa-Base:hasNCA "Insurance Companies Control Service" ;
     eiopa-Base:hasOperationStartDate "06/02/1992 01:00:00" ;
@@ -48301,8 +48301,8 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-000694286> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
-    eiopa-Base:hasIdentifyingName "\"зад \"булстрад виена иншурънс груп\"\" ад",
-        "000694286" ;
+    eiopa-Base:hasIdentifyingName "000694286",
+        "зад булстрад виена иншурънс груп ад" ;
     eiopa-Base:hasInsuranceUndertakingID "000694286" ;
     eiopa-Base:hasNCA "FSC" ;
     eiopa-Base:hasOperationStartDate "16/07/1998 02:00:00" ;
