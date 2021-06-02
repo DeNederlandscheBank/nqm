@@ -13,3 +13,5 @@ dependencies:
   - pip
   - rdflib
   - scikit-learn
+  - pandas
+  - openpyxl
