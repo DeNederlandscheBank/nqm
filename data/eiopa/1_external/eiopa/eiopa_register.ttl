@@ -25132,17 +25132,6 @@
 <https://rdf.eiopa.europe.eu/L1-data/IURI-FMA-Financial-Market-Authority-FL-0002.057.024-5AT> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     gleif-Base:identifies <https://rdf.gleif.org/L1/L-529900EH687P3XBINW58> .
 
-<https://rdf.eiopa.europe.eu/L1-data/IURI-FMA-Financial-Market-Authority-FL-0002.084.258-3> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
-    eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
-    eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LI ;
-    eiopa-Base:hasIdentifyingName "capco ag",
-        "fl-0002.084.258-3" ;
-    eiopa-Base:hasInsuranceUndertakingID "fl-0002.084.258-3" ;
-    eiopa-Base:hasNCA "FMA Financial Market Authority" ;
-    eiopa-Base:hasOperationStartDate "16/12/2003 01:00:00" ;
-    eiopa-Base:hasRegistrationStartDate "16/12/2003 01:00:00" ;
-    gleif-Base:identifies <https://rdf.gleif.org/L1/L-391200DMQ5G6XZPQGL41> .
-
 <https://rdf.eiopa.europe.eu/L1-data/IURI-FMA-Financial-Market-Authority-FL-0002.085.146-4> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:LI ;
@@ -25508,6 +25497,17 @@
     eiopa-Base:hasOperationStartDate "26/05/2010 02:00:00" ;
     eiopa-Base:hasRegistrationStartDate "26/05/2010 02:00:00" ;
     gleif-Base:identifies <https://rdf.gleif.org/L1/L-549300WW5DJH942O0269> .
+
+<https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-000694286> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
+    eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
+    eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
+    eiopa-Base:hasIdentifyingName "000694286",
+        "зад булстрад виена иншурънс груп ад" ;
+    eiopa-Base:hasInsuranceUndertakingID "000694286" ;
+    eiopa-Base:hasNCA "FSC" ;
+    eiopa-Base:hasOperationStartDate "16/07/1998 02:00:00" ;
+    eiopa-Base:hasRegistrationStartDate "16/07/1998 02:00:00" ;
+    gleif-Base:identifies <https://rdf.gleif.org/L1/L-549300X77HR0ZWZGRM25> .
 
 <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-030269049> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
@@ -29663,17 +29663,6 @@
     eiopa-Base:hasRegistrationStartDate "26/10/2005 02:00:00" ;
     gleif-Base:identifies <https://rdf.gleif.org/L1/L-213800U5XIKJPVVTMN82> .
 
-<https://rdf.eiopa.europe.eu/L1-data/IURI-Finanstilsynet-96015> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
-    eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
-    eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:DK ;
-    eiopa-Base:hasIdentifyingName "96015",
-        "transre london limited" ;
-    eiopa-Base:hasInsuranceUndertakingID "96015" ;
-    eiopa-Base:hasNCA "Finanstilsynet" ;
-    eiopa-Base:hasOperationStartDate "27/01/2015 01:00:00" ;
-    eiopa-Base:hasRegistrationStartDate "27/01/2015 01:00:00" ;
-    gleif-Base:identifies <https://rdf.gleif.org/L1/L-213800AX82TXYUZAAM21> .
-
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Fjármálaeftirlitið-465466> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
     eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IS ;
@@ -29750,17 +29739,6 @@
     eiopa-Base:hasOperationStartDate "NaN"^^xsd:double ;
     eiopa-Base:hasRegistrationStartDate "11/09/1990 02:00:00" ;
     gleif-Base:identifies <https://rdf.gleif.org/L1/L-213800W97UG3RRU4L816> .
-
-<https://rdf.eiopa.europe.eu/L1-data/IURI-Fjármálaeftirlitið-520107> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
-    eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
-    eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:IS ;
-    eiopa-Base:hasIdentifyingName "520107",
-        "sjóvá-almennar tryggingar hf." ;
-    eiopa-Base:hasInsuranceUndertakingID "520107" ;
-    eiopa-Base:hasNCA "Fjármálaeftirlitið" ;
-    eiopa-Base:hasOperationStartDate "NaN"^^xsd:double ;
-    eiopa-Base:hasRegistrationStartDate "26/11/2003 01:00:00" ;
-    gleif-Base:identifies <https://rdf.gleif.org/L1/L-213800R3IXBON2LBEI63> .
 
 <https://rdf.eiopa.europe.eu/L1-data/IURI-Fjármálaeftirlitið-520684> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
     eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
@@ -38723,6 +38701,9 @@
 <https://rdf.gleif.org/L1/L-213800AT5F7TFGX4UI14> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-709360> .
 
+<https://rdf.gleif.org/L1/L-213800AX82TXYUZAAM21> owl:a eiopa-Base:InsuranceUndertaking ;
+    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-600544> .
+
 <https://rdf.gleif.org/L1/L-213800B4ZY949VJYD671> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Malta-Financial-Services-Authority-MFSA-C36548> .
 
@@ -39439,6 +39420,9 @@
 
 <https://rdf.gleif.org/L1/L-213800R32HUH4PBHTC39> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-202112> .
+
+<https://rdf.gleif.org/L1/L-213800R3IXBON2LBEI63> owl:a eiopa-Base:InsuranceUndertaking ;
+    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Fjármálaeftirlitið-480228> .
 
 <https://rdf.gleif.org/L1/L-213800R3LMO27B55P466> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Malta-Financial-Services-Authority-MFSA-C63569> .
@@ -40475,6 +40459,9 @@
 <https://rdf.gleif.org/L1/L-259400KLVP0JONUXXV45> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-PFSA-37> .
 
+<https://rdf.gleif.org/L1/L-259400L7A6OTQVPR5142> owl:a eiopa-Base:InsuranceUndertaking ;
+    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-PFSA-1220> .
+
 <https://rdf.gleif.org/L1/L-259400LNAAVVBAGSC732> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Lietuvos-bankas-110082737> .
 
@@ -40774,6 +40761,9 @@
 
 <https://rdf.gleif.org/L1/L-391200DAQ0KWQY0KZU80> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FMA-Financial-Market-Authority-FL-0002.027.093-3> .
+
+<https://rdf.gleif.org/L1/L-391200DMQ5G6XZPQGL41> owl:a eiopa-Base:InsuranceUndertaking ;
+    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FMA-Financial-Market-Authority-FL-0002.363.565-5> .
 
 <https://rdf.gleif.org/L1/L-391200DNAWFZ3D1MIB56> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Bafin-3028> .
@@ -42899,6 +42889,9 @@
 <https://rdf.gleif.org/L1/L-549300M18U9108KZBG29> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-139626> .
 
+<https://rdf.gleif.org/L1/L-549300M2O3C4LK0E0S28> owl:a eiopa-Base:InsuranceUndertaking ;
+    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-121769212> .
+
 <https://rdf.gleif.org/L1/L-549300M46A841BTWC767> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-202896> .
 
@@ -43111,6 +43104,9 @@
 
 <https://rdf.gleif.org/L1/L-549300RKCUGFCM2U8M57> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-131272330> .
+
+<https://rdf.gleif.org/L1/L-549300RLAVC923B23203> owl:a eiopa-Base:InsuranceUndertaking ;
+    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-831211284> .
 
 <https://rdf.gleif.org/L1/L-549300RLBB7L1SYSG775> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-The-Central-Bank-of-Hungary-10456017> .
@@ -43369,6 +43365,9 @@
 
 <https://rdf.gleif.org/L1/L-549300YDQZLZIDF76855> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Finanstilsynet--The-Financial-Supervisory-Authority-of-Norway-979459408> .
+
+<https://rdf.gleif.org/L1/L-549300YJ8EYSOGWKSN48> owl:a eiopa-Base:InsuranceUndertaking ;
+    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-121076907> .
 
 <https://rdf.gleif.org/L1/L-549300YMGG64QJP8PQ10> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Finanstilsynet--The-Financial-Supervisory-Authority-of-Norway-915651321> .
@@ -47599,10 +47598,6 @@
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Gibraltar-Financial-Services-Commission-113705>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Malta-Financial-Services-Authority-MFSA-C91171> .
 
-<https://rdf.gleif.org/L1/L-213800AX82TXYUZAAM21> owl:a eiopa-Base:InsuranceUndertaking ;
-    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Finanstilsynet-96015>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-600544> .
-
 <https://rdf.gleif.org/L1/L-213800E3AFSOM267P438> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Finanstilsynet-53099>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Finanstilsynet-53099DE> .
@@ -47630,10 +47625,6 @@
 <https://rdf.gleif.org/L1/L-213800QUKWO9N6CT2J31> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-219824>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-219824ES> .
-
-<https://rdf.gleif.org/L1/L-213800R3IXBON2LBEI63> owl:a eiopa-Base:InsuranceUndertaking ;
-    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Fjármálaeftirlitið-480228>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-Fjármálaeftirlitið-520107> .
 
 <https://rdf.gleif.org/L1/L-213800S5I8AHISIGZE12> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-APEL>,
@@ -47675,10 +47666,6 @@
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-ASMSIE>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-ASMSIEUK> .
 
-<https://rdf.gleif.org/L1/L-259400L7A6OTQVPR5142> owl:a eiopa-Base:InsuranceUndertaking ;
-    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-000694286>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-PFSA-1220> .
-
 <https://rdf.gleif.org/L1/L-31570010000000044812> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-CNB-28195604>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-CNB-36857521> .
@@ -47694,10 +47681,6 @@
 <https://rdf.gleif.org/L1/L-315700QDZXPVQVWE0S19> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Autoritatea--de-Supraveghere-Financiară-ASF-0016IT>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Autoritatea--de-Supraveghere-Financiară-ASF-0016RO> .
-
-<https://rdf.gleif.org/L1/L-391200DMQ5G6XZPQGL41> owl:a eiopa-Base:InsuranceUndertaking ;
-    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FMA-Financial-Market-Authority-FL-0002.084.258-3>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-FMA-Financial-Market-Authority-FL-0002.363.565-5> .
 
 <https://rdf.gleif.org/L1/L-391200GWEMT1F0BUHB43> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Bafin-5057>,
@@ -47871,10 +47854,6 @@
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-ABALNV>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-ABALNVDE> .
 
-<https://rdf.gleif.org/L1/L-549300M2O3C4LK0E0S28> owl:a eiopa-Base:InsuranceUndertaking ;
-    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-000694286>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-121769212> .
-
 <https://rdf.gleif.org/L1/L-549300NKKEOXL1K82T73> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Finansinspektionen-22062>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Finansinspektionen-27111> .
@@ -47883,17 +47862,9 @@
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-AFRIDA>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Commissariat-aux-Assurances-AFRIDADE> .
 
-<https://rdf.gleif.org/L1/L-549300RLAVC923B23203> owl:a eiopa-Base:InsuranceUndertaking ;
-    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-000694286>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-831211284> .
-
 <https://rdf.gleif.org/L1/L-549300RLIK8ZJSRA1W02> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Finansinspektionen-22152>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Finansinspektionen-27162> .
-
-<https://rdf.gleif.org/L1/L-549300YJ8EYSOGWKSN48> owl:a eiopa-Base:InsuranceUndertaking ;
-    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-000694286>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-121076907> .
 
 <https://rdf.gleif.org/L1/L-549300ZT0RVWCG8T4L55> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-181655>,
@@ -48093,6 +48064,11 @@
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Finansinspektionen-27133>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Finansinspektionen-27136> .
 
+<https://rdf.gleif.org/L1/L-923M5RA2I1X3IO5NGM14> owl:a eiopa-Base:InsuranceUndertaking ;
+    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-439567>,
+        <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-439567DE>,
+        <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-439567IE> .
+
 <https://rdf.gleif.org/L1/L-969500G544G7SX1R1Z44> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-ACPR-732028154>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-ACPR-732028154BE>,
@@ -48217,12 +48193,6 @@
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Central-Bank-of-Ireland-C33643NL>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Central-Bank-of-Ireland-C33643UK> .
 
-<https://rdf.gleif.org/L1/L-923M5RA2I1X3IO5NGM14> owl:a eiopa-Base:InsuranceUndertaking ;
-    eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-000694286>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-439567>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-439567DE>,
-        <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-439567IE> .
-
 <https://rdf.gleif.org/L1/L-IHNZN3GVPQJ4BFKMDO95> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-185896>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-185896BE>,
@@ -48297,22 +48267,6 @@
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-139793DK>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-139793FR>,
         <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-139793PL> .
-
-<https://rdf.eiopa.europe.eu/L1-data/IURI-FSC-000694286> owl:a eiopa-Base:InsuranceUndertakingRegisterIdentifier ;
-    eiopa-Base:hasCrossBorderStatus "Domestic undertaking" ;
-    eiopa-Base:hasEUCountryWhereEntityOperates CountryCodes:BG ;
-    eiopa-Base:hasIdentifyingName "000694286",
-        "зад булстрад виена иншурънс груп ад" ;
-    eiopa-Base:hasInsuranceUndertakingID "000694286" ;
-    eiopa-Base:hasNCA "FSC" ;
-    eiopa-Base:hasOperationStartDate "16/07/1998 02:00:00" ;
-    eiopa-Base:hasRegistrationStartDate "16/07/1998 02:00:00" ;
-    gleif-Base:identifies <https://rdf.gleif.org/L1/L-259400L7A6OTQVPR5142>,
-        <https://rdf.gleif.org/L1/L-549300M2O3C4LK0E0S28>,
-        <https://rdf.gleif.org/L1/L-549300RLAVC923B23203>,
-        <https://rdf.gleif.org/L1/L-549300X77HR0ZWZGRM25>,
-        <https://rdf.gleif.org/L1/L-549300YJ8EYSOGWKSN48>,
-        <https://rdf.gleif.org/L1/L-923M5RA2I1X3IO5NGM14> .
 
 <https://rdf.gleif.org/L1/L-213800GLG1B1FI4VN881> owl:a eiopa-Base:InsuranceUndertaking ;
     eiopa-Base:hasRegisterIdentifier <https://rdf.eiopa.europe.eu/L1-data/IURI-Prudential-Regulation-Authority-229887>,

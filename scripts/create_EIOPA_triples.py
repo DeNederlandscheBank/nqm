@@ -32,21 +32,6 @@ def write_eiopa_graph():
 
     # Initialize graph with namespace bindings
     g = Graph()
-    # g.bind('owl', OWL)
-
-    # # Namespaces used in GLEIF data
-    # g.bind('gleif-ELF',       URIRef('https://www.gleif.org/ontology/EntityLegalForm/'))
-    # g.bind('gleif-ELF-data',  URIRef('https://rdf.gleif.org/EntityLegalForm/'))
-    # g.bind('gleif-RA',        URIRef('https://www.gleif.org/ontology/RegistrationAuthority/'))
-    # g.bind('gleif-RA-data',   URIRef('https://rdf.gleif.org/RegistrationAuthority/'))
-    # g.bind('CountryCodes',    URIRef('https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes-Adjunct/'))
-    # g.bind('SubdivisionCodes',URIRef('https://www.omg.org/spec/LCC/Countries/ISO3166-2-SubdivisionCodes-Adjunct/'))
-    #
-    # # Provisional EIOPA namespaces (they do not exist yet)
-    # g.bind('eiopa-Base',      URIRef("https://eiopa.europe.eu/ontology/Base/"))
-    # g.bind('eiopa-NCA',       URIRef("https://eiopa.europe.eu/ontology/NCA/"))
-    # g.bind('eiopa-NCA-data',  URIRef("https://rdf.eiopa.europe.eu/NCA/"))
-    # g.bind('eiopa-data',      URIRef("https://rdf.eiopa.europe.eu/data/"))
 
     # Read GLEIF and EIOPA data
     with open(join(GLEIF_DATA_PATH, 'gleif-L1-extract.ttl'), "rb") as fp:
@@ -80,7 +65,6 @@ def write_eiopa_graph():
             if not names.empty:
                 short_name = names['Verkorte naam'].values[0].lower()
 
-
             # find subject with specific LEI
             query = '''
                 SELECT ?s ?legalname 
@@ -97,7 +81,7 @@ def write_eiopa_graph():
                                                               "").lower()
             else:
                 print("lei not found: " + row['LEI'])
-                # QUESTION: add continue? or move it to end of for loop
+                continue    # skip to next LEI code
 
             # specify that subject is an insurance undertaking
             pred = OWL.a
@@ -124,7 +108,6 @@ def write_eiopa_graph():
             if row["Cross border status"] == 'Domestic undertaking':
                 eiopa.add((obj, eiopa_base.hasCrossBorderStatus,
                            Literal(row["Cross border status"])))
-                # QUESTION: remove indent?
                 eiopa.add((obj, eiopa_base.hasEUCountryWhereEntityOperates,
                            URIRef(
                                'https://www.omg.org/spec/LCC/Countries/'
