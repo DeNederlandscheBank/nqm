@@ -61,7 +61,7 @@ for f in test_{1..$COUNT_TEST}; do
           $generate $DATA_BIN \
             --path $CHECKPOINT_BEST_BLEU \
             --results-path $OUT_DIR --beam 5  \
-            --print-alignment --replace-unk $ALIGN_FILE \
+            --print-alignment --replace-unk \
             --bpe subword_nmt --bpe-codes $BPE_CODES \
           > $OUT_DIR/generate-$f.txt
   else
@@ -69,7 +69,7 @@ for f in test_{1..$COUNT_TEST}; do
           $generate $DATA_BIN \
             --path $CHECKPOINT_BEST_BLEU \
             --results-path $OUT_DIR --beam 5  \
-            --print-alignment --replace-unk $ALIGN_FILE \
+            --print-alignment --replace-unk  \
           > $OUT_DIR/generate-$f.txt
   fi
 
