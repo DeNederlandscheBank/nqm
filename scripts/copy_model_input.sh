@@ -4,10 +4,11 @@
 # This script copies the required model files using $ID and places them in the
 # correct directory. The name is adapated using $ID_new. These two variables
 # have to be adapted to the desired values.
-ID=26-05_17-43_11468
-ID_NEW=11468
-BPE=NO
+ID=08-06_11-25_30101
+ID_NEW=30101
+BPE=YES
 OOV=NO
+XLMR=YES
 
 
 DATA_DIR=data/eiopa/3_processed
@@ -26,7 +27,14 @@ for L in nl ql; do
 done
 
 # Copy helper files
-cp -R data/eiopa/1_external/dict.iwslt.en $VOC_DIR/dict_$ID_NEW.nl
+if [ $XLMR = YES ]; then
+  # copy XLMR input dictionary as .nl dictionary
+  cp -R data/eiopa/1_external/dict.xlmr.txt $VOC_DIR/dict-$ID.nl
+else
+  # copy iwslt external dictionary, is this really necessary? This is likely a mistake and
+#  and overwrites the present correct dictionary
+#  cp -R data/eiopa/1_external/dict.iwslt.en $VOC_DIR/dict_$ID_NEW.nl
+fi
 echo "copying train_$ID_NEW.align ..."
 cp -R $VOC_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
 if [ -f $VOC_DIR/bpe-$ID.codes ]
@@ -44,14 +52,13 @@ for L in nl ql; do # if BPE dicts are presented, these ones have to be used, ove
          echo "copying dict-$ID_NEW.bpe.$L..."
   fi
 done
-if [ $BPE = YES ]
-    then
-      for L in nl ql; do
-        for f in val.$L test_{1..$COUNT_TEST}.$L; do
-          cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_no-BPE-$f
-          echo "copying no-BPE-$f..."
-        done
-      done
+if [ $BPE = YES ]; then
+  for L in nl ql; do
+    for f in test_{1..$COUNT_TEST}.$L; do
+      cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_no-BPE-$f
+      echo "copying no-BPE-$f..."
+    done
+  done
 fi
 if [ $OOV = YES ]; then
   for L in nl ql; do

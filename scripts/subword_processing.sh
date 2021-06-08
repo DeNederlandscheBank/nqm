@@ -5,7 +5,7 @@
 if [ -n "$3" ]
     then ID=$3
 else
-  ID=10578
+  ID=27-05_14-58_10578
   DATA_DIR=data/eiopa/1_external # input data location
   OUT_DIR=data/eiopa/3_processed
   INT_DIR=data/eiopa/2_interim
