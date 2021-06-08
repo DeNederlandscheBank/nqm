@@ -2,7 +2,7 @@
 # full pipeline EIOPA that you can run to prepare the data and train the model for the XLMR model
 # Use this script from the root!
 
-USE_SUBWORDS=NO # use of subword splitting
+USE_SENTENCEPIECE=YES # use of subword splitting, in this script using sentencepiece package
 USE_KNOWN_AND_UNKNOWN_NAMES=NO
 EXAMPLES_PER_TEMPLATE=130
 VOCAB_SIZE=15000
@@ -103,8 +103,25 @@ python src_eiopa/generator.py \
   --input-language en \
   --examples-per-template $EXAMPLES_PER_TEMPLATE
 
-if [ $USE_SUBWORDS = YES ]
-  then . scripts/subword_processing.sh $DICT_DIR/dict-$ID.nl $DICT_DIR/dict-"$ID".ql "$ID"
+if [ $USE_SENTENCEPIECE = YES ]; then
+  for L in nl ql; do
+    for f in train.$L val.$L test_{1..$COUNT_TEST}.$L; do
+        echo "sentencepiece pre-process ${f}..."
+        python src_eiopa/sentencepiece_processing.py \
+          --preprocess-file \
+          --in-file $INT_DIR/data_"$ID"-$f \
+          --out-file $OUT_DIR/data_"$ID"-$f \
+          --model $DATA_DIR/sentencepiece.bpe.xlmr.model
+    done
+  done
+  echo "Get .ql dictionary"
+  python src_eiopa/sentencepiece_processing.py \
+          --preprocess-file \
+          --in-file $INT_DIR/data_"$ID"-train_val.ql \
+          --out-file $INT_DIR/data_"$ID"-train_val.ql.bpe \
+          --model $DATA_DIR/sentencepiece.bpe.xlmr.model
+  python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
+    --input $INT_DIR/data_"$ID"-train_val.ql.bpe --output $DICT_DIR/dict-$ID.ql
 else
   # Copy files from Interim to Processed directly
   for L in nl ql; do
