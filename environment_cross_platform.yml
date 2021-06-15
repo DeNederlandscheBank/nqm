@@ -5,13 +5,15 @@ channels:
   - pytorch
 dependencies:
   - python=3.8.8
-  - pytorch
-  - torchaudio
-  - torchvision
-  - numpy==1.19.5
+  - rdflib
+  - openpyxl
+  - scikit-learn
   - sacremoses
   - pip
-  - rdflib
-  - scikit-learn
+  - torchaudio
+  - torchvision
+  - pytorch
   - pandas
-  - openpyxl
+  - numpy==1.19.5
+  - sentencepiece
+  - tensorboardx
