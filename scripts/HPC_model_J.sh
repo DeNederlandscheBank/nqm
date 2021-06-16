@@ -53,7 +53,7 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --lr-scheduler polynomial_decay --lr 3e-05 --warmup-updates 2500 --total-num-update 40000 \
   --dropout 0.3 --attention-dropout 0.1 --weight-decay 0.0 \
   --max-tokens 1024 --update-freq 2 \
-  --max_epoch 1 \
+  --max-epoch 1 \
   --save-interval 1 --save-interval-updates 5000 --keep-interval-updates 10 --no-epoch-checkpoints \
   --seed 222 --log-format simple --log-interval 2 \
   --restore-file $PRETRAIN \
