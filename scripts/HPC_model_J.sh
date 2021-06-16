@@ -2,7 +2,7 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=16G
+#SBATCH --mem-per-cpu=32G
 #SBATCH --time=70:00:00
 #SBATCH --job-name=JULIETT
 #SBATCH --output=output-%J.log
@@ -53,6 +53,7 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --lr-scheduler polynomial_decay --lr 3e-05 --warmup-updates 2500 --total-num-update 40000 \
   --dropout 0.3 --attention-dropout 0.1 --weight-decay 0.0 \
   --max-tokens 1024 --update-freq 2 \
+  --max_epoch 1 \
   --save-interval 1 --save-interval-updates 5000 --keep-interval-updates 10 --no-epoch-checkpoints \
   --seed 222 --log-format simple --log-interval 2 \
   --restore-file $PRETRAIN \
