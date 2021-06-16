@@ -81,6 +81,7 @@ REPLACEMENTS = [
     ['skos:', 'skos_'],
     ['n.v.', 'n_v'],
     ['u.a.', 'u_a'],
+    ['b.v.', 'b_v'],
     [' ( ', '  par_open  '],
     [' ) ', '  par_close  '],
     ['(', ' attr_open '],
