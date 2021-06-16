@@ -7,3 +7,6 @@
 [submodule "fairseq"]
 	path = fairseq
 	url = https://github.com/jm-glowienke/fairseq.git
+[submodule "sentencepiece"]
+	path = sentencepiece
+	url = https://github.com/google/sentencepiece
