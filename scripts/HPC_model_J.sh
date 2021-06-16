@@ -43,7 +43,7 @@ mkdir -p $MODEL_DIR/out_$ID
  || { . scripts/_build_fairseq_dataset_mBART.sh HPC $ID }
 
 echo "Model training is started"
-fairseq-train $IN_DIR/fairseq-data-bin-$ID \
+$SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --encoder-normalize-before --decoder-normalize-before \
   --arch mbart_large --layernorm-embedding \
   --task translation_from_pretrained_bart \
