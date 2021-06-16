@@ -9,10 +9,10 @@ if [ -n "$1" ] && [ -n "$2" ]; then
   ID=$1
   ID_NEW=$2
 else
-  ID=26-05_17-43_11468
-  ID_NEW=11468
+  ID=16-06_14-50_7633
+  ID_NEW=7633
 fi
-BPE=NO
+BPE=YES
 OOV=NO
 XLMR=YES
 
@@ -35,7 +35,7 @@ done
 # Copy helper files
 if [ $XLMR = YES ]; then
   # copy XLMR input dictionary as .nl dictionary
-  cp -R data/eiopa/1_external/dict.xlmr.txt $DICT_DIR/dict-$ID.nl
+  cp -R data/eiopa/1_external/dict.mBART.txt $DICT_DIR/dict-$ID.nl
 else
   # copy iwslt external dictionary, is this really necessary? This is likely a mistake and
 #  and overwrites the present correct dictionary
