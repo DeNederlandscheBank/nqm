@@ -2,6 +2,7 @@
 # full pipeline EIOPA that you can run to prepare the data and train the model for the XLMR model
 # Use this script from the root!
 
+COPY=YES # set this variable to YES, if the generated files should be directly copied to the model_input folder
 USE_SENTENCEPIECE=YES # use of subword splitting, in this script using sentencepiece package
 USE_KNOWN_AND_UNKNOWN_NAMES=NO
 EXAMPLES_PER_TEMPLATE=130
@@ -25,8 +26,8 @@ TEST_TEMPLATES=test_templates
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 
 echo "Generate job ID"
-# RANDOM=$(date +%s%N | cut -b10-19)
-ID=$(date +"%d-%m_%H-%M")_$RANDOM
+ID_SHORT=$RANDOM
+ID=$(date +"%d-%m_%H-%M")_"$ID_SHORT"
 echo "Job ID is set at:"
 echo "$ID"
 
@@ -135,5 +136,9 @@ fi
 echo 'Learning alignments using script...'
 . scripts/learn_alignments.sh $ID
 
+if [ "$COPY" = YES ]; then
+  echo 'Copy files to model_input'
+  . scripts/copy_model_input.sh "$ID" $ID_SHORT
+fi
 
 echo 'Done! Thank you for your patience'
