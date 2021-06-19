@@ -105,7 +105,7 @@ python src_eiopa/generator.py \
   --examples-per-template $EXAMPLES_PER_TEMPLATE
 
 if [ $USE_SUBWORDS = YES ]
-  then . scripts/subword_processing.sh $DICT_DIR/dict-$ID.nl $DICT_DIR/dict-"$ID".ql "$ID"
+  then . src_eiopa/subword_processing.sh $DICT_DIR/dict-$ID.nl $DICT_DIR/dict-"$ID".ql "$ID"
 else
   # Copy files from Interim to Processed directly
   for L in nl ql; do
@@ -117,7 +117,7 @@ else
 fi
 
 echo 'Learning alignments using script...'
-. scripts/learn_alignments.sh $ID
+. src_eiopa/learn_alignments.sh $ID
 
 if [ "$COPY" = YES ]; then
   echo 'Copy files to model_input'
