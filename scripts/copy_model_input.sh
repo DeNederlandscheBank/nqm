@@ -9,11 +9,12 @@ if [ -n "$1" ] && [ -n "$2" ]; then
   ID=$1
   ID_NEW=$2
 else
-  ID=26-05_17-43_11468
-  ID_NEW=11468
+  ID=16-06_14-50_7633
+  ID_NEW=7633
 fi
-BPE=NO
+BPE=YES
 OOV=NO
+XLMR=YES
 
 
 OUT_DIR=data/eiopa/3_processed
@@ -32,7 +33,14 @@ for L in nl ql; do
 done
 
 # Copy helper files
-cp -R data/eiopa/1_external/dict.iwslt.en $DICT_DIR/dict_$ID_NEW.nl
+if [ $XLMR = YES ]; then
+  # copy XLMR input dictionary as .nl dictionary
+  cp -R data/eiopa/1_external/dict.mBART.txt $DICT_DIR/dict-$ID.nl
+else
+  # copy iwslt external dictionary, is this really necessary? This is likely a mistake and
+#  and overwrites the present correct dictionary
+#  cp -R data/eiopa/1_external/dict.iwslt.en $DICT_DIR/dict_$ID_NEW.nl
+fi
 echo "copying train_$ID_NEW.align ..."
 cp -R $DICT_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
 if [ -f $DICT_DIR/bpe-$ID.codes ]
@@ -50,14 +58,13 @@ for L in nl ql; do # if BPE dicts are presented, these ones have to be used, ove
          echo "copying dict-$ID_NEW.bpe.$L..."
   fi
 done
-if [ $BPE = YES ]
-    then
-      for L in nl ql; do
-        for f in val.$L test_{1..$COUNT_TEST}.$L; do
-          cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_no-BPE-$f
-          echo "copying no-BPE-$f..."
-        done
-      done
+if [ $BPE = YES ]; then
+  for L in nl ql; do
+    for f in test_{1..$COUNT_TEST}.$L; do
+      cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_no-BPE-$f
+      echo "copying no-BPE-$f..."
+    done
+  done
 fi
 if [ $OOV = YES ]; then
   for L in nl ql; do
