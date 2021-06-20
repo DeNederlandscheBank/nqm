@@ -148,12 +148,12 @@ def check_variable_placeholder_match(question, query, generator_query):
     variable in the generator_query """
     tmp = True
     for variable in extract_variables(generator_query):
-        if f"<{variable.upper}>" not in query:
+        if f"<{str.upper(variable)}>" not in query:
             logging.error(f'Question {question}: There is no placeholder for '
                           f'variable {variable} in the query. Skipping '
                           f'this template!')
             tmp = False
-        if f"<{variable.upper}>" not in question:
+        if f"<{str.upper(variable)}>" not in question:
             logging.error(f'Question {question}: There is no placeholder for '
                           f'variable {variable} in the question. Skipping '
                           f'this template!')
