@@ -65,7 +65,7 @@ if [ $USE_KNOWN_AND_UNKNOWN_NAMES = "YES" ]; then
     head -n "$((VOCAB_SIZE - 4))" | # display first n elements of file
     awk '{ print $2 " " $1 }' > $DICT_DIR/dict-"$ID".nl
 
-  python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
+  python subword-nmt/subword_nmt/get_vocab.py \
     --input $INT_DIR/data_"$ID"-train_val_nl.ql --output $DICT_DIR/dict-$ID.ql
 else
   # rename the train_val files
@@ -86,7 +86,7 @@ else
     head -n "$((VOCAB_SIZE - 4))" | # display first n elements of file
     awk '{ print $2 " " $1 }' > $DICT_DIR/dict-"$ID".nl
 
-  python src_eiopa/subword-nmt/subword_nmt/get_vocab.py \
+  python subword-nmt/subword_nmt/get_vocab.py \
     --input $INT_DIR/data_"$ID"-train_val_nl.ql.raw --output $DICT_DIR/dict-$ID.ql
 fi
 rm $INT_DIR/dict.pg.interim
