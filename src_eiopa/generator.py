@@ -297,4 +297,4 @@ if __name__ == '__main__':
     except Exception:  # (MG): exception occurred
         print('exception occurred, look for error(s) in log file')
     else:  # (MG): no exception happened
-        print("Success for generator! \nCheck log file for possible warnings!")
+        print("Success for generator! Check log file for possible warnings!")

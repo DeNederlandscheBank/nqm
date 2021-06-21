@@ -14,21 +14,10 @@ under the MIT license.
 import logging
 import re
 
-
 REPLACEMENTS = [
-    ['dbo:', 'http://dbpedia.org/ontology/', 'dbo_'],
-    ['dbp:', 'http://dbpedia.org/property/', 'dbp_'],
-    ['dbc:', 'http://dbpedia.org/resource/Category:', 'dbc_'],
-    ['dbr:', 'res:', 'http://dbpedia.org/resource/', 'dbr_'],
-    ['dct:', 'dct_'],
-    ['geo:', 'geo_'],
-    ['georss:', 'georss_'],
-    ['rdf:', 'rdf_'],
-    ['rdfs:', 'rdfs_'],
-    ['foaf:', 'foaf_'],
-    ['owl:', 'owl_'],
-    ['yago:', 'yago_'],
-    ['skos:', 'skos_'],
+    ['eiopa-Base:', 'eiopa_base_'],
+    ['gleif-L1:', 'gleif_l1_'],
+    ['gleif-Base:', 'gleif_base_'],
     ['n.v.', 'n_v'],
     ['u.a.', 'u_a'],
     ['b.v.', 'b_v'],
