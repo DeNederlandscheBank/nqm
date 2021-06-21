@@ -1,34 +1,18 @@
 #!/usr/bin/env python
 """
 
-Neural SPARQL Machines - Generator utils.
+Utilities, mainly for generator module
 
-Adapted to new dataset by Jan-Marc Glowienke
+Jan-Marc Glowienke, Intern at De Nederlandsche Bank 2021
 
-'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al.,
-    SEMANTiCS 2017
+This module is based on the following paper
+'SPARQL as a Foreign Language' by Tommaso Soru et al., SEMANTiCS 2017
 https://arxiv.org/abs/1708.07624
-
-Version 1.0.0
-
-Docstrings and comments added by Jan-Marc Glowienke (MG)
-
+and the accompanying github repo (https://github.com/LiberAI/NSpM/), licensed
+under the MIT license.
 """
 import logging
 import re
-
-
-def strip_item(s):
-    # s = re.sub(r'\([^)]*\)', '', s) # removes everything inside brackets
-    # s = re.sub(r'"', '', s)
-    s = re.sub(r'[()\[\],"]', '', s)  # removes all types of brackets and quotes
-    # if "," in s:
-    #     s = s[:s.index(",")]
-    return s.strip().lower()
-
-
-def add_quotation_marks(s):
-    return '"' + s + '"'
 
 
 REPLACEMENTS = [
@@ -68,12 +52,37 @@ REPLACEMENTS = [
 ]
 
 
+# (MG): save templates as annotation object
+class Annotation:
+    def __init__(self, question, query, generator_query, id_number=None):
+        self.question = question
+        self.query = query
+        self.generator_query = generator_query
+        self.id = id_number
+        self.variables = extract_variables(generator_query)
+
+
+def strip_item(s):
+    """
+    removes all types of brackets and quotation marks from string object
+    used to strip name objects
+    """
+    s = re.sub(r'[()\[\],"]', '', s)  # removes all types of brackets and quotes
+    return s.strip().lower()
+
+
+def add_quotation_marks(s):
+    return '"' + s + '"'
+
+
 def sparql_encode(sparql):
+    """ encode sparql query using the replacements """
     encoded_sparql = do_replacements(sparql)
     return encoded_sparql
 
 
 def sparql_decode(encoded_sparql):
+    """ decode encoded sparql query by reversing the replacements """
     decoded_sparql = reverse_replacements(encoded_sparql)
     return decoded_sparql
 
@@ -85,12 +94,14 @@ def do_replacements(sparql):
     """
     for r in REPLACEMENTS:
         encoding = r[-1]
+        # several options for original are present
         for original in r[:-1]:
             sparql = sparql.replace(original, encoding)
     return sparql
 
 
 def reverse_replacements(sparql):
+    """ Perform reverse replacements """
     for r in REPLACEMENTS:
         original = r[0]
         encoding = r[-1]
@@ -113,22 +124,14 @@ def read_template_file(file):
             id_number = values[3] if (len(values) >= 4 and values[3]) \
                 else line_number
             line_number += 1
+            # only save template if variables in generator_query present
+            # and there is match to the placeholders
             if check_variable_placeholder_match(question, query,
                                                 generator_query) is True:
                 annotation = Annotation(question, query, generator_query,
                                         id_number)
                 annotations.append(annotation)
     return annotations
-
-
-# (MG): save templates as annotation object
-class Annotation:
-    def __init__(self, question, query, generator_query, id_number=None):
-        self.question = question
-        self.query = query
-        self.generator_query = generator_query
-        self.id = id_number
-        self.variables = extract_variables(generator_query)
 
 
 def extract_variables(query):
@@ -144,19 +147,27 @@ def extract_variables(query):
 
 def check_variable_placeholder_match(question, query, generator_query):
     """
-    Check whether placeholders in query and question have a corresponding
-    variable in the generator_query
+    Check whether placeholders in query and question and
+    variables in the generator_query match
     """
     tmp = True
-    for variable in extract_variables(generator_query):
-        if f"<{str.upper(variable)}>" not in query:
-            logging.error(f'Question {question}: There is no placeholder for '
-                          f'variable {variable} in the query. Skipping '
-                          f'this template!')
-            tmp = False
-        if f"<{str.upper(variable)}>" not in question:
-            logging.error(f'Question {question}: There is no placeholder for '
-                          f'variable {variable} in the question. Skipping '
-                          f'this template!')
-            tmp = False
+    variables = extract_variables(generator_query)
+
+    if not variables:
+        # variables is an empty list, because no variable in generator_query
+        tmp = False
+        logging.warning(f'Question {question}: No variables were found in the'
+                        f' generator_query for this question')
+    else:
+        for variable in variables:
+            if f"<{str.upper(variable)}>" not in query:
+                logging.warning(f'Question {question}: There is no placeholder '
+                                f'for variable {variable} in the query. '
+                                f'Skipping this template!')
+                tmp = False
+            if f"<{str.upper(variable)}>" not in question:
+                logging.warning(f'Question {question}: There is no placeholder '
+                                f'for variable {variable} in the question. '
+                                f'Skipping this template!')
+                tmp = False
     return tmp
