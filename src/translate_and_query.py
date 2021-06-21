@@ -7,11 +7,11 @@ query.
 import re
 
 try:
-    from src_eiopa.generator import query_database
-    from src_eiopa.generator_utils import sparql_decode
-    from src_eiopa.pg_preprocess import replace_oov_input, \
+    from src.generator import query_database
+    from src.generator_utils import sparql_decode
+    from src.pg_preprocess import replace_oov_input, \
         remove_counts_vocabulary
-    from src_eiopa.pg_postprocess import replace_oovs
+    from src.pg_postprocess import replace_oovs
     from sacremoses import MosesTokenizer
 except ImportError:
     from nqm.src_eiopa.generator import query_database

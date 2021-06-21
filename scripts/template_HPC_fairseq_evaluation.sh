@@ -52,13 +52,13 @@ COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
 #    --remove-bpe
 #
 #  echo "Decode the queries for $f"
-#  python3 src_eiopa/decode_fairseq_output.py \
+#  python3 src/decode_fairseq_output.py \
 #    --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
 #    --out-file $OUT_DIR/decoded-$f.txt \
 #    --summary-file $OUT_DIR/summary-$ID.txt
 #
 #  echo "Evaluate query performance"
-#  python3 src_eiopa/query_results_evaluation.py \
+#  python3 src/query_results_evaluation.py \
 #    --graph-path $DATA_DIR \
 #    --query-file $OUT_DIR/decoded-$f.txt \
 #    --out-file $OUT_DIR/queries_and_results-$f.txt \

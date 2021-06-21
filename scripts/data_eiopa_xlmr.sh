@@ -40,7 +40,7 @@ python src_eiopa/generator.py \
 
 #if [ $USE_KNOWN_AND_UNKNOWN_NAMES = "YES" ]; then
 #  echo 'Generating data (train, validation) for DE insurers...'
-#  python src_eiopa/generator.py \
+#  python src/generator.py \
 #    --templates $DATA_DIR/templates_DE.csv \
 #    --output $INT_DIR --id "$ID" --type train_val_de \
 #    --graph-data-path $DATA_DIR --input-language en \
