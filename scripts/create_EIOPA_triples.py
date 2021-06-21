@@ -16,7 +16,7 @@ from os.path import join, isfile
 import pandas as pd
 from rdflib import URIRef, term, Graph, Literal, Namespace
 from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
-from src_eiopa.generator_utils import strip_item
+from src.generator_utils import strip_item
 
 EIOPA_DATA_PATH = join("data", "eiopa", '1_external', 'eiopa')
 GLEIF_DATA_PATH = join("data", "eiopa", "1_external", 'gleif')

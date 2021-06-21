@@ -36,7 +36,7 @@ cat $DATA_DIR/dict.iwslt.en |
     awk '{ print $2 " " $1 }' >$DATA_DIR/dict.iwslt.reversed.en
 
 echo 'Generating data (train, validation) for NL insurers...'
-python src_eiopa/generator.py \
+python src/generator.py \
   --templates $DATA_DIR/templates.csv \
   --output $INT_DIR --id "$ID" --type train_val_nl \
   --graph-data-path $DATA_DIR --input-language en \
@@ -44,7 +44,7 @@ python src_eiopa/generator.py \
 
 if [ $USE_KNOWN_AND_UNKNOWN_NAMES = "YES" ]; then
   echo 'Generating data (train, validation) for DE insurers...'
-  python src_eiopa/generator.py \
+  python src/generator.py \
     --templates $DATA_DIR/templates_DE.csv \
     --output $INT_DIR --id "$ID" --type train_val_de \
     --graph-data-path $DATA_DIR --input-language en \
@@ -91,12 +91,12 @@ fi
 rm $INT_DIR/dict.pg.interim
 
 echo 'Splitting data intro train and validation...'
-python src_eiopa/splitter.py \
+python src/splitter.py \
   --inputPath $INT_DIR/data_"$ID" \
   --outputPath $INT_DIR/data_"$ID" --split 80
 
 echo 'Generating test data...'
-python src_eiopa/generator.py \
+python src/generator.py \
   --templates $DATA_DIR \
   --output $INT_DIR --id "$ID" --type test \
   --graph-data-path $DATA_DIR --folder $TEST_TEMPLATES \
@@ -104,7 +104,7 @@ python src_eiopa/generator.py \
 
 echo "Preprocess using pointer-generator preprocess.py..."
   for f in train val test_{1..$COUNT_TEST}; do
-    python src_eiopa/pg_preprocess.py \
+    python src/pg_preprocess.py \
       --source $INT_DIR/data_"$ID"-$f.nl \
       --target $INT_DIR/data_"$ID"-$f.ql \
       --vocab $DICT_DIR/dict."$ID".shared \
@@ -117,7 +117,7 @@ echo "Copy shared dict to nl and ql dict for building fairseq dataset..."
   cat $DICT_DIR/dict."$ID".shared > $DICT_DIR/dict-"$ID".ql
 
 echo 'Learning alignments using script...'
-. src_eiopa/learn_alignments.sh $ID
+. src/learn_alignments.sh $ID
 
 if [ "$COPY" = YES ]; then
   echo 'Copy files to model_input'
