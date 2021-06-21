@@ -1,18 +1,24 @@
 #!/usr/bin/env python
 """
- NQM - Jan-Marc Glowienke
+Read in generated fairseq data and output file with true and generated queries
+Also the quality of the queries is evaluated using several metrics. This is
+output to a summary file.
 
- Read in generated fairseq data and output file with true and generated queries
+Use the interactive modus! The generated one, has not been tested.
+
+Jan-Marc Glowienke, Intern at De Nederlandsche Bank 2021
 """
 import argparse
-from os import path
 import re
+from os import path
+from string import Template
 import sacrebleu
 from numpy import median
-from string import Template
-from generator_utils import sparql_decode
+
 from generator import initialize_graph, query_database
-from pg_postprocess import replace_oovs, OOVIndexError
+from generator_utils import sparql_decode
+from pg_postprocess import replace_oovs
+from query_results_evaluation import save_query_results
 
 
 def read_in_generated_data(in_file):
@@ -25,11 +31,12 @@ def read_in_generated_data(in_file):
                 head, sentence = line.split('\t')
                 # only take index number and sentence,
                 # delete \n from end of sentence
-                tmp = [int(head.split('-')[1]), sparql_decode(sentence[:-1])]
+                tmp = [int(head.split('-')[1]),
+                       sparql_decode(sentence.strip('\n'))]
             elif line.startswith('D') is True:
                 head, score, sentence = line.split('\t')
                 if int(head.split('-')[1]) == tmp[0]:
-                    tmp.append(sparql_decode(sentence[:-1]))
+                    tmp.append(sparql_decode(sentence.strip('\n')))
                     results.append(tmp)
                     del tmp
                 else:
@@ -38,9 +45,9 @@ def read_in_generated_data(in_file):
                         "sentences! \n Please check that for every "
                         "true sentence (T) there is an translation "
                         "available (D) in the generated file! Error "
-                        "ocurred for translation {}".format(head))
+                        "occurred for translation {}".format(head))
             elif line.startswith('Generate') is True:
-                result = line[:-1]
+                result = line.strip('\n')
                 print('Result:', result)
     f.close()
     return results, result
@@ -61,15 +68,15 @@ def read_in_interactive_output(in_file):
     return results
 
 
-# TODO: add the evaluation functions get_translation_accuracy and name_check
-def write_queries_generated(results, out_file):
+def write_queries_generated(results, out_file, graph_path):
     """ In combination with fairseq-generate """
-    with open(out_file, 'w', encoding='utf-8') as target:
-        for line in results:
-            for item in line[:-1]:
-                target.writelines(str(item) + ', ')
-            target.writelines(str(line[-1]) + '\n')
-    target.close()
+    references = [item[0] for item in results]
+    translations = [item[1] for item in results]
+    result = get_bleu_score(references, translations) + '; ' + \
+        get_translation_accuracy(references, translations) + '; ' + \
+        check_names(references, translations, graph_path)
+    save_query_results(out_file, results)
+    return result
 
 
 def write_encoded_queries_interactive(results, out_file):
@@ -83,9 +90,9 @@ def write_encoded_queries_interactive(results, out_file):
 def write_decoded_queries_interactive(results, reference_file, out_file,
                                       graph_path):
     """
-    In combination with fairseq-interactive, also performing evaluation
-    using BLEU, string matching precision and name translation precision
-    as metrics
+    In combination with fairseq-interactive
+    Also performing evaluation using BLEU, string matching precision and name
+    translation precision as metrics
     """
     references = []
     with open(reference_file, 'r', encoding='utf-8') as src:
@@ -93,8 +100,8 @@ def write_decoded_queries_interactive(results, reference_file, out_file,
             references.append(line.strip('\n'))
     src.close()
     result = get_bleu_score(references, results) + '; ' + \
-             get_translation_accuracy(references, results) + '; ' + \
-             check_names(references, results, graph_path)
+        get_translation_accuracy(references, results) + '; ' + \
+        check_names(references, results, graph_path)
     with open(out_file, 'w', encoding='utf-8') as target:
         for translation, reference in zip(results, references):
             target.writelines(str(sparql_decode(reference)) + ', ')
@@ -105,7 +112,8 @@ def write_decoded_queries_interactive(results, reference_file, out_file,
 
 
 def get_bleu_score(references, translations):
-    references = [references]
+    """ Calculate BLEU score of translations using sacrebleu package """
+    references = [references]  # corpus_bleu expects list of lists
     bleu = sacrebleu.corpus_bleu(translations, references)
     return f'SacreBLEU score: {bleu.score:.2f}'
 
@@ -123,24 +131,35 @@ def get_translation_accuracy(references, translations):
         for word in trans_tokens:
             if word in ref_tokens:
                 cnt_correct += 1
-        accuracies.append(cnt_correct/len(trans_tokens))
+        # create list of accuracies for every translation
+        accuracies.append(cnt_correct / len(trans_tokens))
     acc = median(accuracies)
-    return f'Median match of translation string and reference: {acc:.2f}'
+    return f'Median match of translation string and reference: {acc:.4f}'
 
 
 def check_names(references, translations, graph_path):
+    """
+    Returns accuracy of entity match between reference and translation
+    We don't look at the direct match, but rather query the database for
+    all identifying names of the entity found in the database. Due to the setup
+    of the model, it can happen that the model translates an insurance ID for
+    a name, which would give the same result and is not per se wrong
+    """
     g = initialize_graph(graph_path)
     cnt_correct = 0
     cnt_false = 0
     template = Template(
         'SELECT ?o WHERE{ ?e eiopa-Base:hasIdentifyingName "$name". ?e eiopa-Base:hasIdentifyingName ?o}')
     for reference, translation in zip(references, translations):
+        # get decoded queries, simplifies search for entity objects
         reference = sparql_decode(reference)
         translation = sparql_decode(translation)
+        # find entity objects by searching for object between quotation marks
         name_refs = re.findall(r'"(.*?)"', reference)
         if name_refs:
             for name_ref in name_refs:
                 query = template.substitute(name=name_ref.lower())
+                # get all identifying names for name found in reference
                 results = query_database(query, g)
                 name_trans = re.findall(r'"(.*?)"', translation)
                 for name in name_trans:
@@ -150,10 +169,12 @@ def check_names(references, translations, graph_path):
                         cnt_correct += 1
                     else:
                         cnt_false += 1
-    return f'Name match precision: {cnt_correct / (cnt_false + cnt_correct):.2f}'
+    return f'Name match precision: ' \
+           f'{cnt_correct / (cnt_false + cnt_correct):.4f}'
 
 
-def save_result(item, file, summary_file):
+def save_result(item: str, file, summary_file):
+    """ Save result to file, append if file already exists """
     if not path.exists(summary_file):
         with open(summary_file, 'w', encoding='utf-8') as target:
             target.writelines('SUMMARY OF RESULTS \n')
@@ -167,8 +188,7 @@ def save_result(item, file, summary_file):
     tgt.close()
 
 
-if __name__ == "__main__":
-
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--interactive', dest='interactive_mode',
                         action='store_true',
@@ -195,6 +215,7 @@ if __name__ == "__main__":
                         help='path to graph data', required=False)
     args = parser.parse_args()
 
+    # output was generated using fairseq-interactive
     if args.interactive_mode is True:
         if args.reference_file is None or args.output_file_encoded is None:
             raise Exception(f'Either file {args.reference_file} or'
@@ -212,9 +233,15 @@ if __name__ == "__main__":
     else:
         results_list, result = read_in_generated_data(args.input_file)
         if args.pg_mode is True:
+            # this is likely broken
             results_list = replace_oovs(results_list, args.source_file)
-        write_queries_generated(results_list, args.output_file_decoded)
+        result = write_queries_generated(results_list, args.output_file_decoded,
+                                         args.graph_path)
     if args.sum_file:
         save_result(result, args.output_file_decoded, args.sum_file)
     else:
         print(result)
+
+
+if __name__ == "__main__":
+    main()
