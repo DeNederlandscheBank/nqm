@@ -3,6 +3,8 @@
 This file reads in the output from decode_fairseq_output.py. This is a list
 containing the true query and the generated query.
 For every pair, the result is compared and in the end the accuracy is given.
+
+Jan-Marc Glowienke, Intern at De Nederlandsche Bank 2021
 """
 
 import argparse
@@ -15,8 +17,8 @@ from generator import initialize_graph, query_database
 def compare_results(graph, query_pairs):
     """
     Returns summary statistics for query results
-    Also returns list of reference, translation and query results. If one
-    of the queries resulted in no answer, it is counted as false.
+    Also returns list of reference, translation and query results.
+    If a query resulted in no answer, it is counted as false.
     """
     cnt_correct = 0
     cnt_false = 0
@@ -33,26 +35,36 @@ def compare_results(graph, query_pairs):
             logging.error(f'Error in Translated Query; {pair[1]}')
             cnt_false += 1
             continue
-        if results_reference and results_generated:  # value is not []
+        if results_reference and results_generated:
+            # value is not [], hence some result was found
+
+            # the results are list of list, but we only have on result, hence
+            # extracting first element of list
             results_reference = results_reference[0]
             results_generated = results_generated[0]
             for ref_result in results_reference:
+                # check for each reference_result, whether present in results
+                # of translation
                 if ref_result in results_generated:
                     cnt_correct += 1
                 else:
                     cnt_false += 1
                     logging.info(
-                        f'Result Mismatch!; {pair[0]}; {pair[1]}; {results_reference}; {results_generated}')
-                pair.append(ref_result)
+                        f'Result Mismatch!; {pair[0]}; {pair[1]}; '
+                        f'{results_reference}; {results_generated}')
+            pair.append(results_reference)
             pair.append(results_generated)
             queries_results.append(pair)
         else:
+            # if either the translation or reference returns an empty list
+            # it is counted as false
             cnt_false += 1
             pair.append(results_reference)
             pair.append(results_generated)
             queries_results.append(pair)
-            logging.info('Empty results!;' + \
-                         f'{pair[0]}; {pair[1]}; {results_reference}; {results_generated}')
+            logging.info('Empty results!;' +
+                         f'{pair[0]}; {pair[1]}; {results_reference};'
+                         f' {results_generated}')
     if cnt_correct != 0 or cnt_false != 0:
         accuracy = cnt_correct / (cnt_correct + cnt_false)
     else:
@@ -69,6 +81,8 @@ def read_queries(file, interactive=False):
             if interactive is True:
                 reference, gen = line.strip('\n').split(",")
             else:
+                # output files by fairseq-generate contain an ID code as
+                # first element, which can be omitted
                 _, reference, gen = line.strip('\n').split(",")
             query_list.append([reference, gen])
     src.close()
@@ -106,8 +120,8 @@ if __name__ == '__main__':
     g = initialize_graph(args.graph_path)
     queries = read_queries(args.query_file, args.interactive_mode)
     acc, results = compare_results(g, queries)
-    result_string = f'Query Result Accuracy: {acc[0]:.2f}, correct: {acc[1]}, ' \
-                    f'false: {acc[2]}'
+    result_string = f'Query Result Accuracy: {acc[0]:.4f}, ' \
+                    f'correct: {acc[1]}, false: {acc[2]}'
     save_query_results(args.out_file, results)
     if args.sum_file:
         save_result(result_string, args.query_file, args.sum_file)
