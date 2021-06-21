@@ -107,7 +107,6 @@ def read_template_file(file):
     with open(file) as f:
         for line in f:
             values = line.strip("\n").split(';')
-            # (MG): "or None" keeps length of list flexible
             question = values[0]
             query = values[1]
             generator_query = values[2]
@@ -144,8 +143,10 @@ def extract_variables(query):
 
 
 def check_variable_placeholder_match(question, query, generator_query):
-    """ Check whether placeholders in query and question have a corresponding
-    variable in the generator_query """
+    """
+    Check whether placeholders in query and question have a corresponding
+    variable in the generator_query
+    """
     tmp = True
     for variable in extract_variables(generator_query):
         if f"<{str.upper(variable)}>" not in query:
