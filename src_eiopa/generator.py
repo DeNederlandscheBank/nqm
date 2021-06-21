@@ -5,6 +5,8 @@ Generator module for EIOPA and GLEIF register data
 
 Jan-Marc Glowienke
 
+Use a new unique ID everytime the script is run!
+
 """
 import argparse
 import collections
@@ -85,6 +87,9 @@ def build_dataset_quadruple(items, template, mt):
     # the generator_query
     for cnt, variable in enumerate(template.variables):
         placeholder = "<{}>".format(str.upper(variable))
+        # We ensure that placeholder is present in question and query
+        # when reading in the templates, so actually if statement is not
+        # necessary, but keep it to prevent bugs occurring.
         if placeholder in natural_language:
             item_nl = strip_item(items[cnt])
             natural_language_filled = natural_language.replace(placeholder,
@@ -94,18 +99,10 @@ def build_dataset_quadruple(items, template, mt):
             natural_language = ' '.join(mt.tokenize(natural_language_filled))
             natural_language_raw = ' '.join(
                 mt.tokenize(natural_language_not_filled))
-        else:
-            logging.debug(f"variable {variable} of generator_query"
-                          f" not present in {template.question}")
-            continue
         if placeholder in query:
             item = add_quotation_marks(strip_item(items[cnt]))
             query_raw = query.replace(placeholder, 'quot_mark_l quot_mark_r')
             query = query.replace(placeholder, item)
-        else:
-            logging.debug(f"variable {variable} of generator_query"
-                          f" not present in {template.query}")
-            continue
     query = sparql_encode(query)
     query_raw = sparql_encode(query_raw)
     dataset_quadruple = {'natural_language': natural_language.lower(),
@@ -119,7 +116,7 @@ def generate_dataset(template_collection, out_dir, job_code,
                      file_type_, mt, database, number_examples):
     """
         This function will generate dataset from the given templates and
-        store it to the output directory.
+        write it to the output directory.
     """
     logging.info(f"Building files of type: {file_type_}")
     logging.info(f"Using {number_examples} examples per template!")
@@ -178,8 +175,7 @@ def get_results_of_generator_query(cache, template, database, examples_limit):
     """
     Return list of items to fill placeholder in template query by
     using the generator_query.
-    Only returns results if sufficient amount of items was found, otherwise
-    returns "None". The threshold is defined by EXAMPLES_PER_TEMPLATE
+    The number of items returned is capped by EXAMPLES_PER_TEMPLATE
     """
     generator_query = template.generator_query
 
@@ -212,7 +208,9 @@ if __name__ == '__main__':
         '--output', dest='output', metavar='outputDirectory',
         help='dataset directory', required=True)
     required_named.add_argument(
-        '--id', dest='id', metavar='identifier', help='job identifier',
+        '--id', dest='id', metavar='identifier',
+        help='job identifier, which should be new and unique everytime the '
+             'script is run, due to append mode',
         required=True)
     required_named.add_argument(
         '--type', dest='type', metavar='filetype', required=True,
@@ -271,5 +269,5 @@ if __name__ == '__main__':
     except Exception:  # (MG): exception occurred
         print('exception occurred, look for error in log file')
     else:  # (MG): no exception happened
-        print("Success for generator!")
+        print("Success for generator! \nCheck log file for possible problems!")
 
