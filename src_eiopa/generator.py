@@ -135,8 +135,7 @@ def generate_dataset(template_collection, out_dir, job_code,
                                                      database,
                                                      number_examples)
             if results is None or len(results) == 0:
-                logging.debug("no data for {}".format(template.question))
-                not_instanced_templates.update([template.question])
+                logging.info("no data for {}".format(template.question))
                 continue
 
             for item in results:
@@ -248,8 +247,6 @@ if __name__ == '__main__':
         level=logging.DEBUG)
     importlib.reload(sys)
 
-    # (MG): initiate file for collection of templates
-    not_instanced_templates = collections.Counter()
     graph_database = initialize_graph(args.graph_data_path)
     moses_tokenizer = MosesTokenizer(lang=args.input_lang)
 
