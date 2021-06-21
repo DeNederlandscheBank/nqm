@@ -76,7 +76,7 @@ for f in test_{1..$COUNT_TEST}; do
   echo "Decode the queries for $f and evaluate the translation"
   if [ $SUBWORDS = True ]
   # us no subword processed queries for comparing translations
-    then $PYTHON src_eiopa/decode_fairseq_output.py \
+    then $PYTHON src/decode_fairseq_output.py \
            --interactive \
            --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
            --out-file $OUT_DIR/decoded-$f.txt \
@@ -85,7 +85,7 @@ for f in test_{1..$COUNT_TEST}; do
            --summary-file $OUT_DIR/summary-$ID.txt \
            --graph-path data/eiopa/1_external
   else
-    $PYTHON src_eiopa/decode_fairseq_output.py \
+    $PYTHON src/decode_fairseq_output.py \
       --interactive \
       --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
       --out-file $OUT_DIR/decoded-$f.txt \
@@ -96,7 +96,7 @@ for f in test_{1..$COUNT_TEST}; do
   fi
 
   echo "Evaluate query performance"
-  $PYTHON src_eiopa/query_results_evaluation.py \
+  $PYTHON src/query_results_evaluation.py \
     --interactive \
     --graph-path $DATA_DIR \
     --query-file $OUT_DIR/decoded-$f.txt \

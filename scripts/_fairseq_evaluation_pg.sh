@@ -58,7 +58,7 @@ for f in test_{1..$COUNT_TEST}; do
         > $OUT_DIR/generate-$f.txt
 
   echo "Decode the queries for $f and evaluate the translation"
-  $PYTHON src_eiopa/decode_fairseq_output.py \
+  $PYTHON src/decode_fairseq_output.py \
     --interactive --pointer-generator \
     --in-file $MODEL_DIR/out_$ID/generate-$f.txt \
     --out-file $OUT_DIR/decoded-$f.txt \
@@ -69,7 +69,7 @@ for f in test_{1..$COUNT_TEST}; do
     --in-file-source $IN_DIR/data_"$ID"_OOV-$f.nl
 
   echo "Evaluate query performance"
-  $PYTHON src_eiopa/query_results_evaluation.py \
+  $PYTHON src/query_results_evaluation.py \
     --interactive \
     --graph-path $DATA_DIR \
     --query-file $OUT_DIR/decoded-$f.txt \

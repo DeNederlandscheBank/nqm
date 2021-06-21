@@ -411,8 +411,8 @@ Generate translations using fairseq-generate
 Decode the queries
 ('Result:', 'Generate test with beam=5: BLEU4 = 84.96, 93.3/88.0/82.3/78.7 (BP=0.995, ratio=0.995, syslen=14420, reflen=14496)')
 Traceback (most recent call last):
-  File "src_eiopa/evaluation/decode_fairseq_output.py", line 59, in <module>
+  File "src/evaluation/decode_fairseq_output.py", line 59, in <module>
     write_queries(read_in_generated_data(args.input_file), args.output_file)
-  File "src_eiopa/evaluation/decode_fairseq_output.py", line 42, in write_queries
+  File "src/evaluation/decode_fairseq_output.py", line 42, in write_queries
     with open(out_file, 'w', encoding='utf-8') as target:
 TypeError: 'encoding' is an invalid keyword argument for this function
