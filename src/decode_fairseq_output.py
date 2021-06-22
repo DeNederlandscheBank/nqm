@@ -169,7 +169,7 @@ def check_names(references, translations, graph_path):
                         cnt_correct += 1
                     else:
                         cnt_false += 1
-    return f'Name match precision: ' \
+    return f'Name match accuracy: ' \
            f'{cnt_correct / (cnt_false + cnt_correct):.4f}'
 
 

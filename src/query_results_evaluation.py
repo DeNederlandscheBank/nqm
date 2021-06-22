@@ -32,9 +32,12 @@ def compare_results(graph, query_pairs):
         try:
             results_generated = query_database(pair[1], graph)
         except Exception:
-            logging.error(f'Error in Translated Query; {pair[1]}')
+            logging.info(f'Error in Translated Query; {pair[1]}')
             cnt_false += 1
             continue
+        pair.append(results_reference)
+        pair.append(results_generated)
+        queries_results.append(pair)
         if results_reference and results_generated:
             # value is not [], hence some result was found
 
@@ -52,19 +55,20 @@ def compare_results(graph, query_pairs):
                     logging.info(
                         f'Result Mismatch!; {pair[0]}; {pair[1]}; '
                         f'{results_reference}; {results_generated}')
-            pair.append(results_reference)
-            pair.append(results_generated)
-            queries_results.append(pair)
         else:
-            # if either the translation or reference returns an empty list
-            # it is counted as false
-            cnt_false += 1
-            pair.append(results_reference)
-            pair.append(results_generated)
-            queries_results.append(pair)
-            logging.info('Empty results!;' +
-                         f'{pair[0]}; {pair[1]}; {results_reference};'
-                         f' {results_generated}')
+            if not results_reference:
+                # reference returns an empty list, skip, not counted as wrong
+                logging.warning('Empty results for reference!;' +
+                                f'{pair[0]}; {pair[1]}; {results_reference};'
+                                f' {results_generated}')
+                continue
+            if not results_generated:
+                # if the translation returns an empty list
+                # it is counted as false
+                cnt_false += 1
+                logging.info('Empty results for translation!;' +
+                             f'{pair[0]}; {pair[1]}; {results_reference};'
+                             f' {results_generated}')
     if cnt_correct != 0 or cnt_false != 0:
         accuracy = cnt_correct / (cnt_correct + cnt_false)
     else:
