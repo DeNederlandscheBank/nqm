@@ -134,7 +134,7 @@ else
 fi
 
 echo 'Learning alignments using script...'
-. scripts/learn_alignments.sh $ID
+. src/learn_alignments.sh $ID
 
 if [ "$COPY" = YES ]; then
   echo 'Copy files to model_input'
