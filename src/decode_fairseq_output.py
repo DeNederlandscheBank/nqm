@@ -12,13 +12,14 @@ import argparse
 import re
 from os import path
 from string import Template
+
+import editdistance
 import sacrebleu
-from numpy import median
+from numpy import median, mean
 
 from generator import initialize_graph, query_database
 from generator_utils import sparql_decode
 from pg_postprocess import replace_oovs
-from query_results_evaluation import save_query_results
 
 
 def read_in_generated_data(in_file):
@@ -72,10 +73,15 @@ def write_queries_generated(results, out_file, graph_path):
     """ In combination with fairseq-generate """
     references = [item[0] for item in results]
     translations = [item[1] for item in results]
-    result = get_bleu_score(references, translations) + '; ' + \
-        get_translation_accuracy(references, translations) + '; ' + \
-        check_names(references, translations, graph_path)
-    save_query_results(out_file, results)
+    result = get_bleu_score(references, results) + '; ' + \
+        check_names(references, results, graph_path) + '; ' + \
+        string_similarity(references, results)
+    with open(out_file, 'w', encoding='utf-8') as target:
+        for line in translations:
+            for item in line[:-1]:
+                target.writelines(str(item) + ', ')
+            target.writelines(str(line[-1]) + '\n')
+    target.close()
     return result
 
 
@@ -100,8 +106,8 @@ def write_decoded_queries_interactive(results, reference_file, out_file,
             references.append(line.strip('\n'))
     src.close()
     result = get_bleu_score(references, results) + '; ' + \
-        get_translation_accuracy(references, results) + '; ' + \
-        check_names(references, results, graph_path)
+        check_names(references, results, graph_path) + '; ' + \
+        string_similarity(references, results)
     with open(out_file, 'w', encoding='utf-8') as target:
         for translation, reference in zip(results, references):
             target.writelines(str(sparql_decode(reference)) + ', ')
@@ -135,6 +141,25 @@ def get_translation_accuracy(references, translations):
         accuracies.append(cnt_correct / len(trans_tokens))
     acc = median(accuracies)
     return f'Median match of translation string and reference: {acc:.4f}'
+
+
+def string_similarity(references, translations):
+    """"
+    Calculate the string similarity between reference and translation compare
+    "Does BLEU Score work for Code Migration" (Tran et al. 2019)
+    Reference and translation should be in encoded format for easier
+    tokenization
+    """
+    similarities = []
+    for reference, translation in zip(references, translations):
+        # calculate Levenshtein Distance using editdistance
+        dist = editdistance.eval(reference.split(), translation.split())
+        # string similarity score according to Tran et al. (2019)
+        similarity = 1 - (dist / max(len(reference), len(translation)))
+        similarities.append(similarity)
+
+    score = mean(similarities)
+    return f'Mean String Similarity Score: {score:.6f}'
 
 
 def check_names(references, translations, graph_path):

@@ -17,3 +17,4 @@ dependencies:
   - numpy==1.19.5
   - sentencepiece
   - tensorboardx
+  - editdistance

@@ -11,6 +11,7 @@ dependencies:
   - chardet=4.0.0
   - click=8.0.1
   - cryptography=3.4.7
+  - editdistance=0.5.3
   - et_xmlfile=1.0.1
   - freetype=2.10.4
   - future=0.18.2

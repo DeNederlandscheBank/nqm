@@ -12,3 +12,4 @@ tensorboardX
 sentencepiece
 pandas
 openpyxl
+editdistance
