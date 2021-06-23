@@ -8,7 +8,7 @@
 # Example: "source _fairseq_evaluation_align.sh HPC BPE 5861 5861"
 
 # This script will conduct replacement of OOV words in the target hypothesis and requires
-# an alignment dictionary (automatically generated when using data_eiopa_alignments.sh)
+# an alignment dictionary (automatically generated when using data_eiopa_subwords.sh)
 
 ID=5861
 ID_MODEL=$ID

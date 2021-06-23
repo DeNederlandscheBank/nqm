@@ -121,7 +121,7 @@ echo 'Learning alignments using script...'
 
 if [ "$COPY" = YES ]; then
   echo 'Copy files to model_input'
-  . scripts/copy_model_input.sh "$ID" $ID_SHORT
+  . scripts/copy_model_input.sh "$ID" $ID_SHORT NO YES NO
 fi
 
 echo 'Done! Thank you for your patience'

@@ -1,28 +1,36 @@
 #!/bin/zsh
 
-# Use this script from the root!
 # This script copies the required model files using $ID and places them in the
-# correct directory. The name is adapted using $ID_new. These two variables
-# have to be adapted to the desired values.
+# correct directory. The name is adapted using $ID_new.
+
+# Use this script from the root using the following structur:
+# bash scripts/copy_model_input.sh ID ID_NEW BPE OOV XLMR
+# Explanation of parameters:
+#   ID: long form of ID used in data generation scripts
+#   ID_new: shorter form of ID, used for model_input
+#   BPE: set to YES, if some sort of subword processing was used, otherwise NO
+#   OOV: set to YES, if Out-Of-Vocabulary words were replaced in the generation process
+#   XLMR: set to YES, if generating data for a XLMR model
 
 if [ -n "$1" ] && [ -n "$2" ]; then
   ID=$1
   ID_NEW=$2
+  BPE=$3
+  OOV=$4
+  XLMR=$5
 else
   ID=16-06_14-50_7633
   ID_NEW=7633
+  BPE=YES
+  OOV=NO
+  XLMR=YES
 fi
-BPE=YES
-OOV=NO
-XLMR=YES
-
 
 OUT_DIR=data/eiopa/3_processed
 DICT_DIR=data/eiopa/4_vocabularies
 INT_DIR=data/eiopa/2_interim
 TGT_DIR=data/eiopa/5_model_input
 COUNT_TEST=$((`ls -l data/eiopa/1_external/test_templates/*.csv | wc -l`))
-
 
 # Copy language pairs to correct folder
 for L in nl ql; do
@@ -35,8 +43,8 @@ done
 # Copy helper files
 if [ $XLMR = YES ]; then
   # copy XLMR input dictionary as .nl dictionary
-  cp -R data/eiopa/1_external/dict.mBART.txt $DICT_DIR/dict-$ID.nl
-else
+  cp -R data/eiopa/1_external/dict.xlmr.txt $DICT_DIR/dict-$ID.nl
+else :
   # copy iwslt external dictionary, is this really necessary? This is likely a mistake and
 #  and overwrites the present correct dictionary
 #  cp -R data/eiopa/1_external/dict.iwslt.en $DICT_DIR/dict_$ID_NEW.nl
@@ -58,7 +66,7 @@ for L in nl ql; do # if BPE dicts are presented, these ones have to be used, ove
          echo "copying dict-$ID_NEW.bpe.$L..."
   fi
 done
-if [ $BPE = YES ]; then
+if [ $BPE = YES ]; then # copy non-BPE processed files for evaluation
   for L in nl ql; do
     for f in test_{1..$COUNT_TEST}.$L; do
       cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_no-BPE-$f
