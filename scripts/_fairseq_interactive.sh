@@ -20,6 +20,6 @@ fairseq-interactive $DATA_BIN \
     --tokenizer moses \
     --print-alignment --replace-unk \
     --bpe sentencepiece \
-    --task translation_from_pretrained_xlm
+    --task translation_from_pretrained_xlm \
     --sentencepiece-model data/eiopa/1_external/sentencepiece.bpe.xlmr.model \
     --model-overrides "{'pretrained_xlm_checkpoint':'interactive'}"

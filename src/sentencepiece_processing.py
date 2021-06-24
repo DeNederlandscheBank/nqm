@@ -25,6 +25,13 @@ def preprocess_file(input_file, output_file, model):
     write_file(items_processed, output_file)
 
 
+def train_model(input_file, model_name, vocab_size):
+    """ Train a new sentencepiece model """
+    spm.SentencePieceTrainer.train(
+        f'--input={input_file} --model_prefix={model_name}'
+        f' --model_type=bpe --vocab_size=500')
+
+
 def read_file(file_directory):
     """ """
     text = []
@@ -50,13 +57,21 @@ if __name__ == "__main__":
                         required=True)
     parser.add_argument('--out-file', dest='output_file',
                         help='directory for output file',
-                        required=True)
+                        required=False)
     parser.add_argument('--preprocess-file', dest='preprocess_file',
                         help='use this flag when file should be preprocessed',
+                        required=False, action='store_true')
+    parser.add_argument('--train_model', dest='train',
+                        help='use this flag when a new model should be trained',
                         required=False, action='store_true')
     parser.add_argument('--model', dest='model_file',
                         help='model for sentencepiece processing')
     args = parser.parse_args()
 
     if args.preprocess_file is True:
+        assert isinstance(args.out_file, object), "When preprocessing define " \
+                                                  "'--out-file "
         preprocess_file(args.input_file, args.output_file, args.model_file)
+
+    if args.train is True:
+        train_model(args.input_file, args.model_file, 10)
