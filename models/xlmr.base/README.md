@@ -4,11 +4,11 @@ fine-tuning the XLMR model.
 ### How to download XLMR.base
 Replace `{root}` by the path to the root or just the folder of your local copy 
 of the git repository.
-```
+``` shell
 cd {root}/models/xlmr.base
 wget https://dl.fbaipublicfiles.com/fairseq/models/xlmr.base.tar.gz
 # unpack the archive
-tar -xzvf xlmr.base.tar.gz 
+tar -xzvf xlmr.base.tar.gz  
 
 # move model file out of nested folder
 mv xlmr.base/model.pt model.pt 

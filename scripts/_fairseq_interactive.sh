@@ -13,7 +13,7 @@ DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
 
 CHECKPOINT_BEST_BLEU=$(find $MODEL_DIR -name 'checkpoint.best_bleu_*.pt')
 
-
+# XLMR model
 fairseq-interactive $DATA_BIN \
     --path $CHECKPOINT_BEST_BLEU  \
     --beam 5 --source-lang nl --target-lang ql \
@@ -21,4 +21,5 @@ fairseq-interactive $DATA_BIN \
     --print-alignment --replace-unk \
     --bpe sentencepiece \
     --task translation_from_pretrained_xlm
-#    --bpe-codes 'data/eiopa/1_external/sentencepiece.bpe.xlmr.model'
+    --sentencepiece-model data/eiopa/1_external/sentencepiece.bpe.xlmr.model \
+    --model-overrides "{'pretrained_xlm_checkpoint':'interactive'}"
