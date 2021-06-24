@@ -21,16 +21,17 @@ if [ -n "$1" ] && [ -n "$2" ]; then
 else
   ID=16-06_14-50_7633
   ID_NEW=7633
-  BPE=YES
+  BPE=NO
   OOV=NO
-  XLMR=YES
+  XLMR=NO
 fi
 
 OUT_DIR=data/eiopa/3_processed
 DICT_DIR=data/eiopa/4_vocabularies
 INT_DIR=data/eiopa/2_interim
 TGT_DIR=data/eiopa/5_model_input
-COUNT_TEST=$((`ls -l data/eiopa/1_external/test_templates/*.csv | wc -l`))
+COUNT_TEST=$((`ls -l $OUT_DIR/*"$ID"-test*.nl | wc -l`))
+
 
 # Copy language pairs to correct folder
 for L in nl ql; do

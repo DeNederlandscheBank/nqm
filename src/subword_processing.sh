@@ -6,11 +6,10 @@ if [ -n "$3" ]
     then ID=$3
 else
   ID=27-05_14-58_10578
-  DATA_DIR=data/eiopa/1_external # input data location
   OUT_DIR=data/eiopa/3_processed
   INT_DIR=data/eiopa/2_interim
   DICT_DIR=data/eiopa/4_vocabularies
-  COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
+  COUNT_TEST=$((`ls -l $INT_DIR/*"$ID"-test*.nl | wc -l`))
 fi
 
 BPE_CODE=$DICT_DIR/bpe-$ID.codes
