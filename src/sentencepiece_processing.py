@@ -61,7 +61,7 @@ if __name__ == "__main__":
     parser.add_argument('--preprocess-file', dest='preprocess_file',
                         help='use this flag when file should be preprocessed',
                         required=False, action='store_true')
-    parser.add_argument('--train_model', dest='train',
+    parser.add_argument('--train-model', dest='train',
                         help='use this flag when a new model should be trained',
                         required=False, action='store_true')
     parser.add_argument('--model', dest='model_file',
@@ -69,8 +69,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.preprocess_file is True:
-        assert isinstance(args.out_file, object), "When preprocessing define " \
-                                                  "'--out-file "
+        assert isinstance(args.out_file, object)
         preprocess_file(args.input_file, args.output_file, args.model_file)
 
     if args.train is True:
