@@ -214,7 +214,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--folder', dest='use_folder',
         metavar='template_folder',
-        help='use folder for templates')
+        help='use folder or multiple comma seperated folder for test templates')
     required_named = parser.add_argument_group('required named arguments')
     # --templates should be a directory when 'folder' option is used.
     required_named.add_argument(
@@ -275,19 +275,20 @@ if __name__ == '__main__':
                               f'with test templates!\n\t'
                               f'You gave {template_file} as value.')
                 raise Exception
-            # get all files in the folder and filter on .csv files
-            files = os.listdir(os.path.join(template_file, use_folder))
-            files = list(filter(lambda f: f.endswith('.csv'), files))
-            for file in files:
-                # get numbering, which should be at 5th last position
-                # could be any identifier or symbol
-                file_type = type_ + "_" + file[-5]
-                print("Generating file: {}".format(file_type))
-                templates = read_template_file(os.path.join(
-                    template_file, use_folder, file))
-                generate_dataset(templates, output_dir, job_id,
-                                 file_type, moses_tokenizer, graph_database,
-                                 examples_per_template)
+            for folder in use_folder.split(","):
+                # get all files in the folder and filter on .csv files
+                files = os.listdir(os.path.join(template_file, folder))
+                files = list(filter(lambda f: f.endswith('.csv'), files))
+                for file in files:
+                    # get numbering, which should be at 5th last position
+                    # could be any identifier or symbol
+                    file_type = type_ + "_" + file[-5]
+                    print("Generating file: {}".format(file_type))
+                    templates = read_template_file(os.path.join(
+                        template_file, folder, file))
+                    generate_dataset(templates, output_dir, job_id,
+                                     file_type, moses_tokenizer, graph_database,
+                                     examples_per_template)
         else:
             # standard use with one file as input via --templates
             templates = read_template_file(template_file)
