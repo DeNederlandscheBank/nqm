@@ -4,6 +4,7 @@
 
 COPY=YES # set this variable to YES, if the generated files should be directly copied to the model_input folder
 USE_SENTENCEPIECE=YES # use of subword splitting, in this script using sentencepiece package
+BILINGUAL=YES
 USE_KNOWN_AND_UNKNOWN_NAMES=NO
 EXAMPLES_PER_TEMPLATE=130
 VOCAB_SIZE=15000
@@ -24,6 +25,10 @@ INT_DIR=data/eiopa/2_interim
 DICT_DIR=data/eiopa/4_vocabularies
 TEST_TEMPLATES=test_templates
 COUNT_TEST=$((`ls -l $DATA_DIR/$TEST_TEMPLATES/*.csv | wc -l` ))
+if [ $BILINGUAL = "YES" ]; then
+  COUNT_TEST=$((2*COUNT_TEST))
+  TEST_TEMPLATES=$TEST_TEMPLATES,"$TEST_TEMPLATES"_dutch
+fi
 
 echo "Generate job ID"
 ID_SHORT=$RANDOM
@@ -38,6 +43,17 @@ python src/generator.py \
   --graph-data-path $DATA_DIR --input-language en\
   --examples-per-template $EXAMPLES_PER_TEMPLATE
 
+if [ $BILINGUAL = "YES" ]; then
+  echo 'Generating dutch data (train, validation)...'
+  # since we use append mode in the generator for writing files, we
+  # can directly append the dutch templates on the train_val set
+  python src/generator.py \
+    --templates $DATA_DIR/templates_dutch.csv \
+    --output $INT_DIR --id "$ID" --type train_val_nl \
+    --graph-data-path $DATA_DIR --input-language nl\
+    --examples-per-template $EXAMPLES_PER_TEMPLATE
+fi
+
 #if [ $USE_KNOWN_AND_UNKNOWN_NAMES = "YES" ]; then
 #  echo 'Generating data (train, validation) for DE insurers...'
 #  python src/generator.py \
@@ -45,6 +61,15 @@ python src/generator.py \
 #    --output $INT_DIR --id "$ID" --type train_val_de \
 #    --graph-data-path $DATA_DIR --input-language en \
 #    --examples-per-template $EXAMPLES_PER_TEMPLATE
+#
+#    if [ $BILINGUAL = "YES" ]; then
+#  echo 'Generating dutch data (train, validation) for DE insurers...'
+#  python src/generator.py \
+#    --templates $DATA_DIR/templates_dutch_DE.csv \
+#    --output $INT_DIR --id "$ID" --type train_val_de \
+#    --graph-data-path $DATA_DIR --input-language nl\
+#    --examples-per-template $EXAMPLES_PER_TEMPLATE
+#  fi
 #
 #  echo "Concatenate files with NL and DE insurance names..."
 #  for L in nl ql; do
