@@ -14,7 +14,7 @@ module load python
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
-ID=30101
+ID=1073
 ID_MODEL=INDIA
 TEST_TEMPLATES=test_templates
 
@@ -46,11 +46,11 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --encoder-learned-pos --decoder-learned-pos --max-source-positions 512 \
   --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
   --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
-  --criterion label_smoothed_cross_entropy --scoring bleu \
+  --criterion label_smoothed_cross_entropy --scoring sacrebleu \
   --warmup-updates 4000 --warmup-init-lr '1e-07' \
   --max-epoch 200 --save-interval 20 --valid-subset valid \
   --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR \
-  --batch-size 256 --keep-best-checkpoints 1 --patience 10 \
+  --batch-size 256 --keep-best-checkpoints 1 --patience 30 \
   --eval-bleu \
   --eval-bleu-args '{"beam": 5, "max_len_a": 1.2, "max_len_b": 10}' \
   --eval-bleu-detok space \
