@@ -48,7 +48,7 @@ $SRC_DIR/fairseq-train $DATA_BIN \
     --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
     --attention-dropout 0.1 --clip-norm 0.1  --update-freq 4 \
     --lr-scheduler inverse_sqrt --weight-decay 0.01 --lr 0.001  \
-    --criterion label_smoothed_cross_entropy --scoring bleu \
+    --criterion label_smoothed_cross_entropy --scoring sacrebleu \
     --warmup-updates 4000 --warmup-init-lr '1e-07' \
     --max-epoch 200 --save-interval 30 --valid-subset valid \
     --save-dir $MODEL_DIR \
