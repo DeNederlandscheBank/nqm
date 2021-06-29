@@ -10,11 +10,11 @@
 module switch intel gcc
 module load python
 
-# SUBWORDS, NO TRAINING ON ALIGNMENTS
+# Names known and unknown in train set, NO TRAINING ON ALIGNMENTS
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
-ID=4614
+ID=17356
 ID_MODEL=BRAVO
 TEST_TEMPLATES=test_templates
 
@@ -22,7 +22,7 @@ WORK_DIR=$HOME/nqm
 SRC_DIR=$HOME/.local/bin # location of installed packages
 DATA_DIR=$WORK_DIR/data/eiopa/1_external
 IN_DIR=$WORK_DIR/data/eiopa/5_model_input # model input folder
-FILE=$IN_DIR/data_$ID # Files used for preprocessing
+FILE=$IN_DIR/data_"$ID"/data_$ID # Files used for preprocessing
 MODEL_DIR=$WORK_DIR/models/$ID_MODEL
 OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
 COUNT_TEST=$((`ls -l $IN_DIR/*"$ID"-test*.nl | wc -l`))
@@ -57,4 +57,4 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --stop-time-hours 12 --cpu  \
   --tensorboard-logdir $MODEL_DIR/out_$ID/ \
 
-. scripts/_fairseq_evaluation_align.sh HPC BPE $ID $ID_MODEL
+. scripts/_fairseq_evaluation_subwords.sh HPC No-BPE $ID $ID_MODEL
