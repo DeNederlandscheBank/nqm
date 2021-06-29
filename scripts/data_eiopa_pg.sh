@@ -86,7 +86,7 @@ if [ $USE_KNOWN_AND_UNKNOWN_NAMES = "YES" ]; then
     sort |
     uniq -c > $INT_DIR/dict.pg.interim # counts how many duplicate lines there are, returns count before line
 
-    cat $INT_DIR/dict.pg.interim $DATA_DIR/dict.iwslt.reversed.en |
+    cat $INT_DIR/dict.pg.interim | # $DATA_DIR/dict.iwslt.reversed.en |
     sort -k2 |
     uniq -f 1 | # filter out double elements
     sort -k1,1 -b -n -r -k2 | # sort based on first column, numeric values reversed
@@ -105,7 +105,7 @@ else
     sort |
     uniq -c > $INT_DIR/dict.pg.interim # counts how many duplicate lines there are, returns count before line
 
-    cat $INT_DIR/dict.pg.interim $DATA_DIR/dict.iwslt.reversed.en |
+    cat $INT_DIR/dict.pg.interim | #$DATA_DIR/dict.iwslt.reversed.en |
     sort -k2 |
     uniq -f 1 | # filter out double elements
     sort -k1,1 -b -n -r -k2 | # sort based on first column, numeric values reversed

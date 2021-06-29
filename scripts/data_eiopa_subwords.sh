@@ -5,7 +5,7 @@
 COPY=YES # set this variable to YES, if the generated files should be directly copied to the model_input folder
 USE_SUBWORDS=YES # use of subword splitting
 USE_KNOWN_AND_UNKNOWN_NAMES=YES
-BILINGUAL=YES # need 2 version of test templates
+BILINGUAL=NO # need 2 version of test templates
 EXAMPLES_PER_TEMPLATE=130
 VOCAB_SIZE=15000
 
@@ -76,14 +76,14 @@ if [ $USE_KNOWN_AND_UNKNOWN_NAMES = "YES" ]; then
     cat $INT_DIR/data_"$ID"-train_val_nl.$L $INT_DIR/data_"$ID"-train_val_de.$L > $INT_DIR/data_"$ID"-train_val.$L
   done
 
-  echo "Create dictionaries and add position markers for OOV words..."
+  echo "Create dictionaries"
   # shellcheck disable=SC2002
   cat $INT_DIR/data_"$ID"-train_val_nl.nl  |
     tr -s '[:space:]' '\n' | # turns every space into a \n, so every word into new line; several spaces into single one
     sort |
     uniq -c > $INT_DIR/dict.pg.interim # counts how many duplicate lines there are, returns count before line
 
-    cat $INT_DIR/dict.pg.interim $DATA_DIR/dict.iwslt.reversed.en |
+    cat $INT_DIR/dict.pg.interim | # $DATA_DIR/dict.iwslt.reversed.en |
     sort -k2 |
     uniq -f 1 | # filter out double elements
     sort -k1,1 -b -n -r -k2 | # sort based on first column, numeric values reversed
@@ -104,7 +104,7 @@ else
     sort |
     uniq -c > $INT_DIR/dict.pg.interim # counts how many duplicate lines there are, returns count before line
 
-    cat $INT_DIR/dict.pg.interim $DATA_DIR/dict.iwslt.reversed.en |
+    cat $INT_DIR/dict.pg.interim | # $DATA_DIR/dict.iwslt.reversed.en |
     sort -k2 |
     uniq -f 1 | # filter out double elements
     sort -k1,1 -b -n -r -k2 | # sort based on first column, numeric values reversed
