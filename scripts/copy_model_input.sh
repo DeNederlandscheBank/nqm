@@ -51,7 +51,9 @@ else :
 #  cp -R data/eiopa/1_external/dict.iwslt.en $DICT_DIR/dict_$ID_NEW.nl
 fi
 echo "copying train_$ID_NEW.align ..."
-cp -R $DICT_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
+if [ -f $DICT_DIR/train_$ID.align ]; then
+  cp -R $DICT_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
+fi
 if [ -f $DICT_DIR/bpe-$ID.codes ]
   then cp -R $DICT_DIR/bpe-$ID.codes $TGT_DIR/$ID_NEW-bpe.codes
 fi

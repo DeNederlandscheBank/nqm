@@ -32,7 +32,6 @@ $preprocess -s nl -t ql \
       --destdir $DATA_BIN \
       --srcdict $IN_DIR/dict_$ID.nl \
       --tgtdict $IN_DIR/dict_$ID.ql \
-      --alignfile $IN_DIR/train_$ID.align \
       --cpu --empty-cache-freq 10
 
 for f in test_{1..$COUNT_TEST}; do
