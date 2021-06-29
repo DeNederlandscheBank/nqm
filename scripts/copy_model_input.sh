@@ -29,9 +29,10 @@ fi
 OUT_DIR=data/eiopa/3_processed
 DICT_DIR=data/eiopa/4_vocabularies
 INT_DIR=data/eiopa/2_interim
-TGT_DIR=data/eiopa/5_model_input
+TGT_DIR=data/eiopa/5_model_input/data_"$ID_NEW"
 COUNT_TEST=$((`ls -l $OUT_DIR/*"$ID"-test*.nl | wc -l`))
 
+mkdir -p $TGT_DIR
 
 # Copy language pairs to correct folder
 for L in nl ql; do
@@ -50,8 +51,8 @@ else :
 #  and overwrites the present correct dictionary
 #  cp -R data/eiopa/1_external/dict.iwslt.en $DICT_DIR/dict_$ID_NEW.nl
 fi
-echo "copying train_$ID_NEW.align ..."
 if [ -f $DICT_DIR/train_$ID.align ]; then
+  echo "copying train_$ID_NEW.align ..."
   cp -R $DICT_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
 fi
 if [ -f $DICT_DIR/bpe-$ID.codes ]
