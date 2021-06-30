@@ -19,18 +19,20 @@ if [ -n "$1" ] && [ -n "$2" ]; then
   OOV=$4
   XLMR=$5
 else
-  ID=16-06_14-50_7633
-  ID_NEW=7633
-  BPE=YES
-  OOV=NO
-  XLMR=YES
+  ID=30-06_09-45_714
+  ID_NEW=714
+  BPE=NO
+  OOV=YES
+  XLMR=NO
 fi
 
 OUT_DIR=data/eiopa/3_processed
 DICT_DIR=data/eiopa/4_vocabularies
 INT_DIR=data/eiopa/2_interim
-TGT_DIR=data/eiopa/5_model_input
-COUNT_TEST=$((`ls -l data/eiopa/1_external/test_templates/*.csv | wc -l`))
+TGT_DIR=data/eiopa/5_model_input/data_"$ID_NEW"
+COUNT_TEST=$((`ls -l $OUT_DIR/*"$ID"-test*.nl | wc -l`))
+
+mkdir -p $TGT_DIR
 
 # Copy language pairs to correct folder
 for L in nl ql; do
@@ -49,8 +51,10 @@ else :
 #  and overwrites the present correct dictionary
 #  cp -R data/eiopa/1_external/dict.iwslt.en $DICT_DIR/dict_$ID_NEW.nl
 fi
-echo "copying train_$ID_NEW.align ..."
-cp -R $DICT_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
+if [ -f $DICT_DIR/train_$ID.align ]; then
+  echo "copying train_$ID_NEW.align ..."
+  cp -R $DICT_DIR/train_$ID.align $TGT_DIR/train_$ID_NEW.align
+fi
 if [ -f $DICT_DIR/bpe-$ID.codes ]
   then cp -R $DICT_DIR/bpe-$ID.codes $TGT_DIR/$ID_NEW-bpe.codes
 fi
@@ -76,7 +80,7 @@ if [ $BPE = YES ]; then # copy non-BPE processed files for evaluation
 fi
 if [ $OOV = YES ]; then
   for L in nl ql; do
-    for f in val.$L test_{1..$COUNT_TEST}.$L; do
+    for f in test_{1..$COUNT_TEST}.$L; do
       cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_OOV-$f
       echo "Copying OOV-$f"
     done
