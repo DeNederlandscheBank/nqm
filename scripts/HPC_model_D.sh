@@ -55,6 +55,6 @@ $SRC_DIR/fairseq-train $DATA_BIN \
   --eval-bleu-remove-bpe \
   --best-checkpoint-metric bleu --maximize-best-checkpoint-metric \
   --stop-time-hours 12 --cpu  \
-  --tensorboard-logdir $MODEL_DIR/out_$ID/ \
+  --tensorboard-logdir $MODEL_DIR/out_$ID/
 
 . scripts/_fairseq_evaluation_align.sh HPC No-BPE $ID $ID_MODEL
