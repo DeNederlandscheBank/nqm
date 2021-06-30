@@ -17,7 +17,7 @@ import re
 REPLACEMENTS = [
     ['eiopa-Base:', 'eiopa_base_'],
     ['gleif-L1:', 'gleif_l1_'],
-    ['gleif-Base:', 'gleif_base_'],
+    ['gleif-base:', 'gleif_base_'],
     ['n.v.', 'n_v'],
     ['u.a.', 'u_a'],
     ['b.v.', 'b_v'],
