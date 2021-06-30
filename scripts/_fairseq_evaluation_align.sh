@@ -33,7 +33,6 @@ if [ -n "$3" ]
 else
   DATA_DIR=$WORK_DIR/data/eiopa/1_external
   TEST_TEMPLATES=test_templates
-  IN_DIR=$WORK_DIR/data/eiopa/5_model_input # model input folder
   FILE=$IN_DIR/data_$ID/data_$ID # Files used for preprocessing
   MODEL_DIR=$WORK_DIR/models/$ID_MODEL
   OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
@@ -47,6 +46,7 @@ CHECKPOINT_BEST_BLEU=$(find $MODEL_DIR -name 'checkpoint.best_bleu_*.pt')
 BPE_CODES=$IN_DIR/$ID-bpe.codes
 ALIGN_FILE=$DATA_BIN/alignment.nl-ql.txt
 DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
+IN_DIR=$WORK_DIR/data/eiopa/5_model_input/data_$ID # model input folder adapted to subfolder
 
 mkdir -p $OUT_DIR
 

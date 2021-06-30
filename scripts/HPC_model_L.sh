@@ -4,7 +4,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=16G
 #SBATCH --time=70:00:00
-#SBATCH --job-name=INDIA
+#SBATCH --job-name=LIMA
 #SBATCH --output=output-%J.log
 
 module switch intel gcc
@@ -15,7 +15,7 @@ module load python
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
 ID=1073
-ID_MODEL=INDIA
+ID_MODEL=LIMA
 TEST_TEMPLATES=test_templates
 
 WORK_DIR=$HOME/nqm
