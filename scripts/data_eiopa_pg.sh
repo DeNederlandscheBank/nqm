@@ -3,9 +3,9 @@
 # TO BE USED FOR THE POINTER-GENERATOR MODEL
 # Use this script from the root!
 
-COPY=NO # set this variable to YES, if the generated files should be directly copied to the model_input folder
-USE_KNOWN_AND_UNKNOWN_NAMES=NO # if NO, all names are treated as unknown
-BILINGUAL=YES
+COPY=YES # set this variable to YES, if the generated files should be directly copied to the model_input folder
+USE_KNOWN_AND_UNKNOWN_NAMES=YES # if NO, all names are treated as unknown
+BILINGUAL=NO
 VOCAB_SIZE=15000
 POSITION_MARKERS=100
 EXAMPLES_PER_TEMPLATE=130

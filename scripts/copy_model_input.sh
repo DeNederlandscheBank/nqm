@@ -19,10 +19,10 @@ if [ -n "$1" ] && [ -n "$2" ]; then
   OOV=$4
   XLMR=$5
 else
-  ID=16-06_14-50_7633
-  ID_NEW=7633
+  ID=30-06_09-45_714
+  ID_NEW=714
   BPE=NO
-  OOV=NO
+  OOV=YES
   XLMR=NO
 fi
 
@@ -80,7 +80,7 @@ if [ $BPE = YES ]; then # copy non-BPE processed files for evaluation
 fi
 if [ $OOV = YES ]; then
   for L in nl ql; do
-    for f in val.$L test_{1..$COUNT_TEST}.$L; do
+    for f in test_{1..$COUNT_TEST}.$L; do
       cp -R $INT_DIR/data_"$ID"-$f $TGT_DIR/data_"$ID_NEW"_OOV-$f
       echo "Copying OOV-$f"
     done

@@ -3,7 +3,7 @@
 # Use this script from the root!
 
 COPY=YES # set this variable to YES, if the generated files should be directly copied to the model_input folder
-USE_SUBWORDS=NO # use of subword splitting
+USE_SUBWORDS=YES # use of subword splitting
 USE_KNOWN_AND_UNKNOWN_NAMES=YES
 BILINGUAL=NO # need 2 version of test templates
 EXAMPLES_PER_TEMPLATE=130
