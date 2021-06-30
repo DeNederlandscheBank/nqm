@@ -6,6 +6,7 @@ COPY=YES # set this variable to YES, if the generated files should be directly c
 USE_SUBWORDS=YES # use of subword splitting
 USE_KNOWN_AND_UNKNOWN_NAMES=YES
 BILINGUAL=NO # need 2 version of test templates
+PG=YES
 EXAMPLES_PER_TEMPLATE=130
 VOCAB_SIZE=15000
 
@@ -139,6 +140,17 @@ else
         cp -R $INT_DIR/data_"$ID"-$f $OUT_DIR/data_"$ID"-$f
     done
   done
+fi
+
+if [ $PG = "YES" ]; then
+  cat $DICT_DIR/dict-"$ID".bpe.nl $DICT_DIR/dict-"$ID".bpe.ql |
+   awk '{ print $2 " " $1 }' |
+   sort -k2 | uniq -f1 |
+   awk '{ print $2 " "  $1 }' \
+    > $DICT_DIR/dict.shared
+  cp -R $DICT_DIR/dict.shared $DICT_DIR/dict-"$ID".bpe.nl
+  cp -R $DICT_DIR/dict.shared $DICT_DIR/dict-"$ID".bpe.ql
+  rm $DICT/dict.shared
 fi
 
 #echo 'Learning alignments using script...'

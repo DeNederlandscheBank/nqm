@@ -1,678 +1,678 @@
-&
-&amp;
-&apos;
-&apos;s
-'s-gravenhage
-+
-+@@
--
--@@
-.
-.@@
-0
-00@@
-01@@
-04
-0@@
-1
-16
-1816
-19
-1@@
-2
-21@@
-25
-27
-29
-2@@
-3
-31
-3@@
-4
-49
-4@@
-5
-52
-58
-5@@
-6
-6@@
-7
-74
-77
-7@@
-8
-80
-81
-83
-86
-87
-88
-89
-8@@
-9
-92
-93
-9@@
-?
-DISTINCT
-SELECT
-WHERE
-a
-a.
-a@@
-aanvullende
-aar
-aar@@
-aardappelen
-abn
-academic
-achmea
-achterhoek
-actua
-ad@@
-address
-aegon
-agriver
-ak@@
-akzo
-al
-algemene
-am@@
-amro
-amsterdam
-an@@
-anderzorg
-anker
-ansvar
-ar@@
-art
-art@@
-as
-as@@
-asr
-association
-assurant
-assurantie
-at@@
-b
-b.a.
-b@@
-bas@@
-basis
-be@@
-bedrijfstakken
-bfao
-bl@@
-blue
-bn
-bnp
-border
-bos
-bovemij
-bra@@
-brack_close
-brack_open
-bran@@
-brand
-brand-@@
-brand-herverzekering
-brand@@
-brandassurantie
-brandverzekeraar
-brandwaarborg
-burcht
-c
-c@@
-captive
-cardif
-care
-centrale
-centramed
-ch@@
-cht@@
-city
-club
-company
-country
-cross
-ct@@
-cz
-d
-d@@
-das
-date
-day
-de
-de@@
-dela
-der
-di@@
-dichtbij
-did
-dle
-do@@
-does
-donatus
-dsw
-e
-e.o.c
-e.o.c.
-e@@
-eerste
-ei@@
-eiopa_base_hasCrossBorderStatus
-eiopa_base_hasEUCountryWhereEntityOperates
-eiopa_base_hasIdentifyingName
-eiopa_base_hasInsuranceUndertakingID
-eiopa_base_hasNCA
-eiopa_base_hasOperationStartDate
-ek@@
-el@@
-em@@
-en
-en@@
-enel
-eno
-ens@@
-ent@@
-entity
-er
-er@@
-erste
-es
-europe
-f
-f@@
-fa@@
-fbto
-fonds
-form
-fries@@
-friesche
-friese
-friesland
-from
-fruit
-g
-g@@
-ga@@
-ge@@
-gezondheidszorg
-glas@@
-glasassurantie
-glasverzekering
-gleif_Base_identifies
-gleif_base_hasAbbreviationLocal
-gleif_base_hasCity
-gleif_base_hasCountry
-gleif_base_hasEntityStatus
-gleif_base_hasNameLocal
-gleif_l1_hasHeadquartersAddress
-gleif_l1_hasLegalForm
-gleif_l1_hasLegalName
-global
-goudse
-groene
-groep
-groot
-h
-h0073
-h0074
-h0088
-h0089
-h0125
-h0132
-h0133
-h0134
-h@@
-ha@@
-hagel@@
-hagelunie
-hagelverzekering
-hart
-have
-he
-he@@
-head
-headquarters
-hei@@
-her
-her@@
-herverzekeringsmaatschappij
-het
-ho@@
-hol@@
-holland
-hoop
-i
-i@@
-id
-if@@
-in
-in@@
-ing
-ing@@
-instellingen
-insurance
-insurances
-interpolis
-ion
-is
-it@@
-its
-iza
-jurisdiction
-k
-k@@
-ker
-kind
-klaverblad
-kmu
-kruis
-l
-l0008
-l0017
-l0025
-l0029
-l0046
-l0058
-l0077
-l0093
-l0104
-l0116
-l0119
-l0129
-l0131
-l0150
-l0151
-l0155
-l0171
-l0180
-l0182
-l0187
-l0215
-l0216
-l@@
-la
-lan@@
-land
-le
-le@@
-legal
-lei@@
-leidsche
-lemonade
-leven
-levensverzekering
-levensverzekering-maatschappij
-levensverzekeringen
-levensverzekeringsmaatschappij
-lg@@
-lgem@@
-life
-life@@
-lifetri
-lloyd
-located
-m
-m@@
-ma@@
-maas
-maatschappij
-me@@
-medi@@
-medirisk
-men@@
-menzis
-mer@@
-merc@@
-mercurius
-metaal
-midglas
-monuta
-munis
-mutual
-n
-n.v.
-n0015
-n0042
-n0048
-n@@
-n_v
-name
-nationa@@
-national
-nationale-nederlanden
-natura
-natura-
-ne@@
-nederlandsche
-nederlandse
-netherlands
-new
-nn
-no@@
-nobel
-non-life
-noord
-noord-holland
-noord-nederland
-noordhollandsche
-ns
-nt@@
-number
-nzv
-o
-o@@
-ob@@
-oc@@
-of
-oh@@
-ohra
-om@@
-omstreken
-on
-on@@
-onderling
-onderlinge
-onderlingen
-onvz
-oom
-oost
-op@@
-operate
-operation
-or@@
-org@@
-orm
-os@@
-ot@@
-ou@@
-ovm
-p
-p&i
-p@@
-paarden
-par@@
-paribas
-pensioen-
-pp@@
-proteq
-quarter
-quot_mark_l
-quot_mark_r
-r
-r140252
-r140256
-r161237
-r161238
-r161589
-r162036
-r@@
-ra
-ra@@
-rabo
-re
-re@@
-recht@@
-rechtsbijstand
-rechtshulp
-register
-rei@@
-reinsurance
-reis-
-ri@@
-rie@@
-rijn
-risk
-ro
-ro@@
-robein
-roeminck
-rot@@
-rote@@
-ru@@
-s
-s-
-s-@@
-s-g@@
-s-gravenhage
-s@@
-sa@@
-samen
-samenwerking
-sazas
-sb@@
-sc@@
-scha@@
-schade
-schade@@
-schadeverzekering
-schadeverzekering-maatschappij
-schadeverzekeringen
-schadeverzekeringsmaatschappij
-sche
-schepenverzekering
-scildon
-se@@
-sep@@
-sep_dot
-sh@@
-short
-sk
-sliedrecht
-so@@
-som
-spaarkas
-square
-srlev
-st@@
-stad
-stan@@
-start
-starting
-status
-steenwijker
-ster
-ster@@
-sti@@
-stichtsche
-su@@
-supervisor
-t
-t@@
-ta@@
-te@@
-technische
-ter@@
-the
-ti@@
-to
-tvm
-twente
-twenthe
-type
-u
-u.a.
-u@@
-u_a
-ue
-uitvaartverzekering
-uitvaartverzekeringen
-uk
-umc
-un@@
-uni@@
-unilever
-univé
-ur@@
-uri@@
-urop@@
-ut@@
-uvm
-v
-v@@
-va@@
-van
-var_a
-var_e
-var_l
-var_o
-var_p
-var_s
-veenhoop
-ver
-ver@@
-vereende
-vereniging
-verzekeraar
-verzekerd
-verzekering
-verzekeringen
-verzekeringmaatschappij
-verzekerings
-verzekerings-maatschappij
-verzekeringsbedrijf
-verzekeringsmaatschappij
-vga
-vgz
-vi@@
-viva@@
-vivat
-vm
-voor
-vvaa
-w0010
-w0035
-w0060
-w0064
-w0065
-w0083
-w0087
-w0109
-w0123
-w0128
-w0132
-w0143
-w0145
-w0147
-w0164
-w0174
-w0186
-w0192
-w0219
-w0281
-w0301
-w0302
-w0319
-w0344
-w0355
-w0389
-w0393
-w0449
-w1027
-w1031
-w1090
-w1104
-w1219
-w1258
-w1292
-w1423
-w1487
-w1497
-w1576
-w1589
-w1619
-w1642
-w1650
-w1680
-w1686
-w1702
-w1706
-w1709
-w1710
-w1711
-w1727
-w1743
-w1749
-w1752
-w1767
-w1788
-w1789
-w1805
-w1806
-w1817
-w1825
-w1840
-w1860
-w1868
-w1875
-w1877
-w1886
-w1889
-w1899
-w1902
-w1904
-w1906
-w1908
-w1909
-w1910
-w1911
-w1913
-w1920
-w1921
-w1922
-w1938
-w1940
-w1942
-w1943
-w1954
-w1958
-w1961
-w1963
-w1969
-w1972
-w1973
-w1974
-w1976
-w1977
-w1978
-w1981
-w1983
-w1986
-w1988
-w@@
-waarborg
-waarborgmaatschappij
-waard
-waterland
-what
-when
-where
-who
-woningborg
-x
-x@@
-y
-y@@
-yarden
-z
-z@@
-ze@@
-zekerheid
-zevenwouden
-zi@@
-ziektekostenverzekeraar
-ziektekostenverzekering
-ziektekostenverzekeringen
-zilveren
-zlm
-zorg
-zorgverzekeraar
-zorgverzekeraars
-zorgverzekeringen
-zuid-nederland
-ä@@
-ö@@
-ü@@
+& 23
+&amp; 56
+&apos; 333
+&apos;s 739
+'s-gravenhage 12
++ 34
++@@ 34
+- 35
+-@@ 266
+. 176
+.@@ 195
+0 104
+00@@ 48
+01@@ 47
+04 13
+0@@ 488
+1 134
+16 22
+1816 29
+19 9
+1@@ 977
+2 155
+21@@ 20
+25 37
+27 6
+29 21
+2@@ 158
+3 114
+31 25
+3@@ 379
+4 165
+49 11
+4@@ 514
+5 143
+52 21
+58 31
+5@@ 1259
+6 118
+6@@ 291
+7 116
+74 9
+77 11
+7@@ 141
+8 194
+80 15
+81 6
+83 16
+86 14
+87 11
+88 3
+89 2
+8@@ 201
+9 94
+92 27
+93 26
+9@@ 272
+? 7176
+DISTINCT 7176
+SELECT 7176
+WHERE 7176
+a 230
+a. 48
+a@@ 1539
+aanvullende 69
+aar 17
+aar@@ 17
+aardappelen 4
+abn 50
+academic 10
+achmea 67
+achterhoek 12
+actua 8
+ad@@ 47
+address 422
+aegon 42
+agriver 22
+ak@@ 661
+akzo 2
+al 93
+algemene 11
+am@@ 56
+amro 50
+amsterdam 16
+an@@ 118
+anderzorg 12
+anker 11
+ansvar 20
+ar@@ 144
+art 1
+art@@ 13
+as 15
+as@@ 180
+asr 55
+association 13
+assurant 25
+assurantie 2
+at@@ 9
+b 21
+b.a. 47
+b@@ 979
+bas@@ 4
+basis 9
+be@@ 68
+bedrijfstakken 19
+bfao 4
+bl@@ 26
+blue 16
+bn 11
+bnp 20
+border 615
+bos 4
+bovemij 19
+bra@@ 6
+brack_close 7176
+brack_open 7176
+bran@@ 19
+brand 11
+brand-@@ 4
+brand-herverzekering 22
+brand@@ 39
+brandassurantie 12
+brandverzekeraar 67
+brandwaarborg 10
+burcht 21
+c 38
+c@@ 2119
+captive 21
+cardif 20
+care 3
+centrale 40
+centramed 4
+ch@@ 147
+cht@@ 53
+city 205
+club 33
+company 27
+country 1039
+cross 615
+ct@@ 10
+cz 15
+d 76
+d@@ 177
+das 14
+date 847
+day 11
+de 118
+de@@ 390
+dela 15
+der 98
+di@@ 154
+dichtbij 8
+did 215
+dle 15
+do@@ 29
+does 1034
+donatus 4
+dsw 19
+e 464
+e.o.c 13
+e.o.c. 13
+e@@ 421
+eerste 7
+ei@@ 408
+eiopa_base_hasCrossBorderStatus 615
+eiopa_base_hasEUCountryWhereEntityOperates 932
+eiopa_base_hasIdentifyingName 7176
+eiopa_base_hasInsuranceUndertakingID 521
+eiopa_base_hasNCA 410
+eiopa_base_hasOperationStartDate 1062
+ek@@ 98
+el@@ 12
+em@@ 30
+en 313
+en@@ 1151
+enel 14
+eno 26
+ens@@ 403
+ent@@ 68
+entity 196
+er 283
+er@@ 436
+erste 6
+es 10
+europe 50
+f 174
+f@@ 1079
+fa@@ 18
+fbto 17
+fonds 15
+form 847
+fries@@ 16
+friesche 7
+friese 11
+friesland 10
+from 411
+fruit 4
+g 2086
+g@@ 1659
+ga@@ 10
+ge@@ 929
+gezondheidszorg 6
+glas@@ 6
+glasassurantie 19
+glasverzekering 13
+gleif_Base_identifies 3636
+gleif_base_hasAbbreviationLocal 417
+gleif_base_hasCity 205
+gleif_base_hasCountry 837
+gleif_base_hasEntityStatus 196
+gleif_base_hasNameLocal 1034
+gleif_l1_hasHeadquartersAddress 1669
+gleif_l1_hasLegalForm 1451
+gleif_l1_hasLegalName 320
+global 18
+goudse 37
+groene 13
+groep 25
+groot 16
+h 30
+h0073 12
+h0074 8
+h0088 15
+h0089 7
+h0125 9
+h0132 14
+h0133 18
+h0134 19
+h@@ 395
+ha@@ 165
+hagel@@ 10
+hagelunie 9
+hagelverzekering 22
+hart 13
+have 207
+he 75
+he@@ 66
+head 210
+headquarters 207
+hei@@ 68
+her 47
+her@@ 1802
+herverzekeringsmaatschappij 11
+het 13
+ho@@ 13
+hol@@ 28
+holland 32
+hoop 20
+i 57
+i@@ 2636
+id 212
+if@@ 11
+in 1081
+in@@ 388
+ing 16
+ing@@ 5
+instellingen 6
+insurance 159
+insurances 14
+interpolis 9
+ion 26
+is 1
+it@@ 223
+its 207
+iza 7
+jurisdiction 730
+k 51
+k@@ 1034
+ker 1
+kind 406
+klaverblad 35
+kmu 16
+kruis 22
+l 26
+l0008 8
+l0017 7
+l0025 11
+l0029 15
+l0046 16
+l0058 15
+l0077 16
+l0093 12
+l0104 10
+l0116 10
+l0119 16
+l0129 10
+l0131 12
+l0150 17
+l0151 1
+l0155 16
+l0171 10
+l0180 3
+l0182 9
+l0187 10
+l0215 22
+l0216 16
+l@@ 2186
+la 13
+lan@@ 49
+land 118
+le 53
+le@@ 524
+legal 1167
+lei@@ 14
+leidsche 18
+lemonade 18
+leven 42
+levensverzekering 66
+levensverzekering-maatschappij 32
+levensverzekeringen 103
+levensverzekeringsmaatschappij 13
+lg@@ 123
+lgem@@ 7
+life 22
+life@@ 8
+lifetri 32
+lloyd 15
+located 414
+m 89
+m@@ 197
+ma@@ 23
+maas 10
+maatschappij 202
+me@@ 194
+medi@@ 13
+medirisk 6
+men@@ 53
+menzis 18
+mer@@ 52
+merc@@ 6
+mercurius 7
+metaal 19
+midglas 19
+monuta 6
+munis 26
+mutual 13
+n 305
+n.v. 1483
+n0015 5
+n0042 14
+n0048 8
+n@@ 640
+n_v 1483
+name 1067
+nationa@@ 8
+national 10
+nationale-nederlanden 22
+natura 15
+natura- 15
+ne@@ 62
+nederlandsche 11
+nederlandse 14
+netherlands 19
+new 11
+nn 41
+no@@ 11
+nobel 2
+non-life 22
+noord 21
+noord-holland 7
+noord-nederland 4
+noordhollandsche 29
+ns 12
+nt@@ 36
+number 212
+nzv 15
+o 69
+o@@ 164
+ob@@ 34
+oc@@ 13
+of 2
+oh@@ 11
+ohra 13
+om@@ 21
+omstreken 22
+on 18
+on@@ 32
+onderling 25
+onderlinge 385
+onderlingen 17
+onvz 40
+oom 15
+oost 20
+op@@ 1
+operate 827
+operation 425
+or@@ 58
+org@@ 16
+orm 10
+os@@ 45
+ot@@ 32
+ou@@ 3
+ovm 12
+p 3
+p&i 33
+p@@ 188
+paarden 7
+par@@ 47
+paribas 20
+pensioen- 21
+pp@@ 3
+proteq 15
+quarter 210
+quot_mark_l 7176
+quot_mark_r 7176
+r 109
+r140252 11
+r140256 4
+r161237 17
+r161238 20
+r161589 11
+r162036 8
+r@@ 407
+ra 8
+ra@@ 247
+rabo 11
+re 37
+re@@ 64
+recht@@ 50
+rechtsbijstand 14
+rechtshulp 19
+register 309
+rei@@ 28
+reinsurance 27
+reis- 19
+ri@@ 36
+rie@@ 19
+rijn 17
+risk 3
+ro 2
+ro@@ 61
+robein 16
+roeminck 15
+rot@@ 1
+rote@@ 13
+ru@@ 33
+s 418
+s- 20
+s-@@ 274
+s-g@@ 14
+s-gravenhage 12
+s@@ 2534
+sa@@ 64
+samen 16
+samenwerking 13
+sazas 13
+sb@@ 4
+sc@@ 205
+scha@@ 732
+schade 27
+schade@@ 9
+schadeverzekering 101
+schadeverzekering-maatschappij 19
+schadeverzekeringen 91
+schadeverzekeringsmaatschappij 52
+sche 196
+schepenverzekering 13
+scildon 12
+se@@ 1010
+sep@@ 3
+sep_dot 21227
+sh@@ 13
+short 417
+sk 5
+sliedrecht 15
+so@@ 20
+som 13
+spaarkas 11
+square 16
+srlev 22
+st@@ 105
+stad 41
+stan@@ 9
+start 215
+starting 847
+status 811
+steenwijker 12
+ster 23
+ster@@ 24
+sti@@ 28
+stichtsche 22
+su@@ 7
+supervisor 410
+t 1041
+t@@ 464
+ta@@ 6
+te@@ 1
+technische 19
+ter@@ 32
+the 2401
+ti@@ 689
+to 4
+tvm 11
+twente 18
+twenthe 15
+type 198
+u 6
+u.a. 363
+u@@ 458
+u_a 363
+ue 18
+uitvaartverzekering 15
+uitvaartverzekeringen 43
+uk 29
+umc 12
+un@@ 1932
+uni@@ 11
+unilever 14
+univé 129
+ur@@ 120
+uri@@ 4
+urop@@ 5
+ut@@ 258
+uvm 8
+v 95
+v@@ 387
+va@@ 138
+van 29
+var_a 4380
+var_e 14352
+var_l 2902
+var_o 13310
+var_p 627
+var_s 7272
+veenhoop 9
+ver 11
+ver@@ 2077
+vereende 18
+vereniging 12
+verzekeraar 4
+verzekerd 10
+verzekering 120
+verzekeringen 79
+verzekeringmaatschappij 27
+verzekerings 34
+verzekerings-maatschappij 11
+verzekeringsbedrijf 16
+verzekeringsmaatschappij 105
+vga 16
+vgz 17
+vi@@ 29
+viva@@ 8
+vivat 17
+vm 28
+voor 6
+vvaa 30
+w0010 16
+w0035 9
+w0060 17
+w0064 17
+w0065 17
+w0083 13
+w0087 7
+w0109 14
+w0123 9
+w0128 14
+w0132 15
+w0143 12
+w0145 8
+w0147 9
+w0164 13
+w0174 18
+w0186 9
+w0192 7
+w0219 11
+w0281 11
+w0301 8
+w0302 16
+w0319 9
+w0344 7
+w0355 10
+w0389 9
+w0393 15
+w0449 10
+w1027 12
+w1031 17
+w1090 9
+w1104 14
+w1219 25
+w1258 16
+w1292 12
+w1423 13
+w1487 10
+w1497 6
+w1576 21
+w1589 4
+w1619 10
+w1642 4
+w1650 10
+w1680 13
+w1686 13
+w1702 15
+w1706 18
+w1709 23
+w1710 10
+w1711 15
+w1727 13
+w1743 5
+w1749 12
+w1752 17
+w1767 11
+w1788 11
+w1789 7
+w1805 12
+w1806 6
+w1817 22
+w1825 12
+w1840 13
+w1860 14
+w1868 16
+w1875 10
+w1877 20
+w1886 14
+w1889 14
+w1899 14
+w1902 10
+w1904 16
+w1906 13
+w1908 15
+w1909 16
+w1910 9
+w1911 18
+w1913 12
+w1920 9
+w1921 17
+w1922 16
+w1938 17
+w1940 18
+w1942 11
+w1943 14
+w1954 4
+w1958 7
+w1961 12
+w1963 10
+w1969 22
+w1972 14
+w1973 9
+w1974 22
+w1976 4
+w1977 14
+w1978 21
+w1981 9
+w1983 10
+w1986 7
+w1988 8
+w@@ 177
+waarborg 12
+waarborgmaatschappij 86
+waard 39
+waterland 22
+what 4905
+when 215
+where 205
+who 206
+woningborg 1
+x 6
+x@@ 43
+y 18
+y@@ 73
+yarden 10
+z 86
+z@@ 127
+ze@@ 20
+zekerheid 10
+zevenwouden 11
+zi@@ 93
+ziektekostenverzekeraar 20
+ziektekostenverzekering 15
+ziektekostenverzekeringen 55
+zilveren 22
+zlm 22
+zorg 22
+zorgverzekeraar 131
+zorgverzekeraars 25
+zorgverzekeringen 72
+zuid-nederland 4
+ä@@ 46
+ö@@ 78
+ü@@ 293
