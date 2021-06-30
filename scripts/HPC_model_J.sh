@@ -2,20 +2,20 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=18G
+#SBATCH --mem-per-cpu=14G
 #SBATCH --time=24:00:00
-#SBATCH --job-name=HOTEL
+#SBATCH --job-name=JULIETT
 #SBATCH --output=output-%J.log
 
 module switch intel gcc
 module load python
 
-# Pointer-generator model using unknown names
+# SUBWORDS with pointer-generator model, names known and unknown
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
-ID=714
-ID_MODEL=HOTEL
+ID=21846
+ID_MODEL=JULIETT
 TEST_TEMPLATES=test_templates
 
 WORK_DIR=$HOME/nqm
@@ -63,6 +63,6 @@ $SRC_DIR/fairseq-train $DATA_BIN \
       --eval-bleu-detok space \
       --eval-bleu-remove-bpe \
       --best-checkpoint-metric bleu --maximize-best-checkpoint-metric \
-    --stop-time-hours 12 --cpu
+    --stop-time-hours 20 --cpu
 
-. scripts/_fairseq_evaluation_pg.sh HPC $ID $ID_MODEL
+. scripts/_fairseq_evaluation_subwords.sh HPC BPE $ID $ID_MODEL
