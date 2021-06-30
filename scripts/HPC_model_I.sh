@@ -14,7 +14,7 @@ module load python
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
-ID=15385
+ID=15386
 ID_MODEL=INDIA
 TEST_TEMPLATES=test_templates
 
@@ -57,7 +57,7 @@ $SRC_DIR/fairseq-train $DATA_BIN \
     --truncate-source --layernorm-embedding --share-all-embeddings \
     --encoder-normalize-before --decoder-normalize-before \
     --required-batch-size-multiple 1 --skip-invalid-size-inputs-valid-test \
-    --alignment-layer -2 --alignment-heads 1 --source-position-markers 100 \
+    --alignment-layer -2 --alignment-heads 1 --source-position-markers 0 \
     --eval-bleu \
       --eval-bleu-args '{"beam": 5, "max_len_a": 1.2, "max_len_b": 10}' \
       --eval-bleu-detok space \
