@@ -4,18 +4,18 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=7G
 #SBATCH --time=15:00:00
-#SBATCH --job-name=BRAVO
+#SBATCH --job-name=CHARLIE2
 #SBATCH --output=output-%J.log
 
 module switch intel gcc
 module load python
 
-# Names known and unknown in train set, NO TRAINING ON ALIGNMENTS
+# All names known in train set, TRAINING ON ALIGNMENTS
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
-ID=10488
-ID_MODEL=BRAVO
+ID=31743
+ID_MODEL=CHARLIE2
 TEST_TEMPLATES=test_templates
 
 WORK_DIR=$HOME/nqm
@@ -41,10 +41,10 @@ mkdir -p $MODEL_DIR/out_$ID
 
 echo "Model training is started"
 $SRC_DIR/fairseq-train $DATA_BIN \
-  --arch transformer_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
+  --arch transformer_align_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
   --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
   --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
-  --criterion label_smoothed_cross_entropy --scoring sacrebleu \
+  --criterion label_smoothed_cross_entropy_with_alignment --scoring sacrebleu \
   --warmup-updates 4000 --warmup-init-lr '1e-07' \
   --max-epoch 200 --save-interval 30 --valid-subset valid \
   --adam-betas '(0.9, 0.98)' --save-dir $MODEL_DIR \
@@ -57,4 +57,4 @@ $SRC_DIR/fairseq-train $DATA_BIN \
   --stop-time-hours 12 --cpu  \
   --tensorboard-logdir $MODEL_DIR/out_$ID/ \
 
-. scripts/_fairseq_evaluation_subwords.sh HPC No-BPE $ID $ID_MODEL
+. scripts/_fairseq_evaluation_align.sh HPC No-BPE $ID $ID_MODEL

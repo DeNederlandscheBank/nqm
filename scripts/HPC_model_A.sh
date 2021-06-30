@@ -14,7 +14,7 @@ module load python
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
-ID=5883
+ID=31743
 ID_MODEL=ALPHA
 TEST_TEMPLATES=test_templates
 
@@ -25,7 +25,7 @@ IN_DIR=$WORK_DIR/data/eiopa/5_model_input # model input folder
 FILE=$IN_DIR/data_"$ID"/data_$ID # Files used for preprocessing
 MODEL_DIR=$WORK_DIR/models/$ID_MODEL
 OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
-COUNT_TEST=$((`ls -l $IN_DIR/*"$ID"-test*.nl | wc -l`))
+COUNT_TEST=$((`ls -l $FILE/*"$ID"-test*.nl | wc -l`))
 DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
 
 #pip3 install --quiet --user -r $WORK_DIR/requirements.txt
@@ -40,7 +40,7 @@ mkdir -p $MODEL_DIR/out_$ID
  || { . scripts/_build_fairseq_dataset.sh HPC $ID }
 
 echo "Model training is started"
-$SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
+$SRC_DIR/fairseq-train $DATA_BIN \
   --arch transformer_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
   --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
   --lr-scheduler inverse_sqrt --weight-decay 0.0001 \

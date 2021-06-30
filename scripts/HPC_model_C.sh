@@ -10,11 +10,11 @@
 module switch intel gcc
 module load python
 
-# SUBWORDS, NO TRAINING ON ALIGNMENTS, EXTERNAL NL DICT
+# All names known in train set, NO TRAINING ON ALIGNMENTS
 
 # Adapt the three variables below as required. The corresponding language files .ql and .nl, bpe.codes
 # must be in 5_model_input folder.
-ID=30387
+ID=31743
 ID_MODEL=CHARLIE
 TEST_TEMPLATES=test_templates
 
@@ -22,10 +22,10 @@ WORK_DIR=$HOME/nqm
 SRC_DIR=$HOME/.local/bin # location of installed packages
 DATA_DIR=$WORK_DIR/data/eiopa/1_external
 IN_DIR=$WORK_DIR/data/eiopa/5_model_input # model input folder
-FILE=$IN_DIR/data_$ID # Files used for preprocessing
+FILE=$IN_DIR/data_"$ID"/data_$ID # Files used for preprocessing
 MODEL_DIR=$WORK_DIR/models/$ID_MODEL
 OUT_DIR=$MODEL_DIR/out_$ID # output directory for model
-COUNT_TEST=$((`ls -l $IN_DIR/*"$ID"-test*.nl | wc -l`))
+COUNT_TEST=$((`ls -l $FILE/*"$ID"-test*.nl | wc -l`))
 DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
 
 #pip3 install --quiet --user -r $WORK_DIR/requirements.txt
@@ -40,7 +40,7 @@ mkdir -p $MODEL_DIR/out_$ID
  || { . scripts/_build_fairseq_dataset.sh HPC $ID }
 
 echo "Model training is started"
-$SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
+$SRC_DIR/fairseq-train $DATA_BIN \
   --arch transformer_iwslt_de_en --optimizer adam --lr 0.0005 -s nl -t ql \
   --label-smoothing 0.1 --dropout 0.3 --max-tokens 4000 \
   --lr-scheduler inverse_sqrt --weight-decay 0.0001 \
@@ -57,4 +57,4 @@ $SRC_DIR/fairseq-train $IN_DIR/fairseq-data-bin-$ID \
   --stop-time-hours 12 --cpu  \
   --tensorboard-logdir $MODEL_DIR/out_$ID/ \
 
-. scripts/_fairseq_evaluation_align.sh HPC BPE $ID $ID_MODEL
+. scripts/_fairseq_evaluation_align.sh HPC No-BPE $ID $ID_MODEL
