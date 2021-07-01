@@ -1,0 +1,787 @@
+2021-06-30 20:32:37 | INFO | fairseq_cli.interactive | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': '/home/ph541404/nqm/models/CHARLIE/checkpoint.best_bleu_90.13.pt', 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': '/home/ph541404/nqm/models/CHARLIE/out_31743'}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_algorithm': 'LocalSGD', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'distributed_num_procs': 0}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 1, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0}, 'optimization': {'_name': None, 'max_epoch': 0, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.25], 'stop_min_lr': -1.0, 'use_bmuf': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints', 'restore_file': 'checkpoint_last.pt', 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': '@@ ', 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': 'hard', 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 1, 'input': '-'}, 'model': None, 'task': {'_name': 'translation', 'data': '/home/ph541404/nqm/data/eiopa/5_model_input/fairseq-data-bin-31743', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': True}, 'optimizer': None, 'lr_scheduler': {'_name': 'fixed', 'force_anneal': None, 'lr_shrink': 0.1, 'warmup_updates': 0, 'lr': [0.25]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None}
+2021-06-30 20:32:37 | INFO | fairseq.tasks.translation | [nl] dictionary: 405 types
+2021-06-30 20:32:37 | INFO | fairseq.tasks.translation | [ql] dictionary: 389 types
+2021-06-30 20:32:37 | INFO | fairseq_cli.interactive | loading model(s) from /home/ph541404/nqm/models/CHARLIE/checkpoint.best_bleu_90.13.pt
+2021-06-30 20:32:37 | INFO | fairseq_cli.interactive | NOTE: hypothesis and token scores are output in base 2
+2021-06-30 20:32:37 | INFO | fairseq_cli.interactive | Type the input sentence and press return:
+S-0	country <unk> <unk> number of onderlinge verzekering maatschappij donatus u.a. ?
+W-0	0.451	seconds
+H-0	-0.09843812137842178	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-0	-0.09843812137842178	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-0	-0.0857 -0.0828 -0.0931 -0.0763 -0.0848 -0.0836 -0.0796 -0.0769 -0.5725 -0.0237 -0.0863 -0.0076 -0.0164 -0.0821 -0.0723 -0.0796 -0.1238 -0.0991 -0.0710 -0.0827 -0.0875
+A-0	0-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 4-9 4-10 10-11 10-12 0-13 0-14 0-15 3-16 3-17 0-18 0-19
+S-1	country <unk> <unk> number of unilever insurances n.v. ?
+W-1	0.468	seconds
+H-1	-0.07318863272666931	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l unilever insurances n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-1	-0.07318863272666931	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l unilever insurances n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-1	-0.0786 -0.0783 -0.0867 -0.0705 -0.0745 -0.0810 -0.0761 -0.0706 -0.0226 -0.0231 -0.0682 -0.0794 -0.0716 -0.0803 -0.1187 -0.0866 -0.0677 -0.0777 -0.0784
+A-1	8-0 8-1 3-2 0-3 8-4 0-5 8-6 8-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-2	country <unk> <unk> number of glasassurantie maatschappij midglas n.v. ?
+W-2	0.428	seconds
+H-2	-0.07737245410680771	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l glasassurantie maatschappij midglas n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-2	-0.07737245410680771	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l glasassurantie maatschappij midglas n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-2	-0.0777 -0.0769 -0.0903 -0.0726 -0.0755 -0.0818 -0.0760 -0.0713 -0.0374 -0.0449 -0.1083 -0.0704 -0.0779 -0.0696 -0.0802 -0.1138 -0.0978 -0.0676 -0.0787 -0.0789
+A-2	9-0 9-1 3-2 0-3 9-4 0-5 0-6 0-7 5-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-3	country <unk> <unk> number of onderlinge verzekering maatschappij zlm u.a. ?
+W-3	0.492	seconds
+H-3	-0.09686745703220367	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-3	-0.09686745703220367	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-3	-0.0805 -0.0825 -0.0912 -0.0735 -0.0802 -0.0829 -0.0762 -0.0730 -0.5500 -0.0095 -0.0477 -0.0944 -0.0137 -0.0812 -0.0718 -0.0793 -0.1182 -0.0961 -0.0703 -0.0812 -0.0810
+A-3	10-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 10-9 4-10 9-11 10-12 4-13 4-14 0-15 3-16 3-17 4-18 10-19
+S-4	country <unk> <unk> number of vvaa levensverzekeringen n.v. ?
+W-4	0.442	seconds
+H-4	-0.0748349130153656	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l vvaa levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-4	-0.0748349130153656	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l vvaa levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-4	-0.0783 -0.0796 -0.0889 -0.0702 -0.0745 -0.0818 -0.0743 -0.0729 -0.0197 -0.0630 -0.0703 -0.0815 -0.0713 -0.0797 -0.0965 -0.0921 -0.0697 -0.0779 -0.0798
+A-4	8-0 8-1 3-2 0-3 8-4 0-5 0-6 0-7 8-8 8-9 8-10 8-11 4-12 0-13 3-14 3-15 4-16 8-17
+S-5	country <unk> <unk> number of interpolis zorgverzekeringen n.v. ?
+W-5	0.470	seconds
+H-5	-0.07331949472427368	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l interpolis zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-5	-0.07331949472427368	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l interpolis zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-5	-0.0778 -0.0788 -0.0905 -0.0711 -0.0756 -0.0813 -0.0748 -0.0706 -0.0229 -0.0255 -0.0731 -0.0735 -0.0685 -0.0793 -0.1148 -0.0942 -0.0665 -0.0770 -0.0774
+A-5	7-0 0-1 3-2 0-3 7-4 0-5 0-6 7-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-6	country <unk> <unk> number of eno zorgverzekeraar n.v. ?
+W-6	0.492	seconds
+H-6	-0.07436279952526093	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l eno zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-6	-0.07436279952526093	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l eno zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-6	-0.0796 -0.0813 -0.0869 -0.0709 -0.0758 -0.0829 -0.0762 -0.0716 -0.0207 -0.0388 -0.0736 -0.0779 -0.0700 -0.0806 -0.1105 -0.0893 -0.0682 -0.0783 -0.0799
+A-6	8-0 0-1 3-2 0-3 0-4 0-5 0-6 8-7 8-8 8-9 7-10 7-11 8-12 0-13 3-14 3-15 8-16 8-17
+S-7	country <unk> <unk> number of onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u.a. ?
+W-7	0.532	seconds
+H-7	-0.2226945459842682	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij zorgverzekeraar zorg en zekerheid u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-7	-0.2226945459842682	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij zorgverzekeraar zorg en zekerheid u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-7	-0.0843 -0.0826 -0.0944 -0.0757 -0.0813 -0.0836 -0.0743 -0.0781 -0.8121 -2.3523 -0.4350 -0.0522 -0.0431 -0.0648 -0.0250 -0.0836 -0.0685 -0.0794 -0.1173 -0.1021 -0.0674 -0.0802 -0.0848
+A-7	4-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 4-9 4-10 4-11 4-12 4-13 4-14 0-15 4-16 0-17 3-18 3-19 4-20 4-21
+S-8	country <unk> <unk> number of klaverblad levensverzekering n.v. ?
+W-8	0.462	seconds
+H-8	-0.07443659752607346	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l klaverblad levensverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-8	-0.07443659752607346	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l klaverblad levensverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-8	-0.0786 -0.0782 -0.0879 -0.0689 -0.0756 -0.0826 -0.0769 -0.0713 -0.0375 -0.0324 -0.0720 -0.0784 -0.0702 -0.0800 -0.1087 -0.0902 -0.0681 -0.0773 -0.0795
+A-8	7-0 0-1 3-2 0-3 0-4 0-5 0-6 4-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-9	country <unk> <unk> number of klaverblad schadeverzekeringsmaatschappij n.v. ?
+W-9	0.468	seconds
+H-9	-0.07196430116891861	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l klaverblad schadeverzekeringsmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-9	-0.07196430116891861	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l klaverblad schadeverzekeringsmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-9	-0.0771 -0.0771 -0.0890 -0.0682 -0.0736 -0.0815 -0.0738 -0.0693 -0.0233 -0.0144 -0.0703 -0.0783 -0.0688 -0.0800 -0.1113 -0.0899 -0.0669 -0.0771 -0.0774
+A-9	8-0 0-1 3-2 0-3 0-4 0-5 0-6 8-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-10	country <unk> <unk> number of univé noord-holland brandverzekeraar n.v. ?
+W-10	0.442	seconds
+H-10	-0.07932234555482864	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé noord-holland brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-10	-0.07932234555482864	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé noord-holland brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-10	-0.0787 -0.0782 -0.0894 -0.0717 -0.0746 -0.0816 -0.0760 -0.0693 -0.0961 -0.0713 -0.0706 -0.0719 -0.0764 -0.0690 -0.0801 -0.1167 -0.0910 -0.0666 -0.0783 -0.0790
+A-10	8-0 0-1 3-2 0-3 8-4 0-5 0-6 0-7 6-8 6-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+S-11	country <unk> <unk> number of vivat schadeverzekeringen n.v. ?
+W-11	0.455	seconds
+H-11	-0.07419276982545853	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l vivat schadeverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-11	-0.07419276982545853	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l vivat schadeverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-11	-0.0808 -0.0789 -0.0901 -0.0718 -0.0765 -0.0813 -0.0756 -0.0671 -0.0321 -0.0244 -0.0713 -0.0804 -0.0723 -0.0800 -0.1122 -0.0927 -0.0677 -0.0781 -0.0764
+A-11	8-0 8-1 3-2 0-3 8-4 0-5 8-6 8-7 5-8 5-9 7-10 7-11 4-12 0-13 3-14 3-15 7-16 8-17
+S-12	country <unk> <unk> number of ns insurance n.v. ?
+W-12	0.538	seconds
+H-12	-0.07428847253322601	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l ns insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-12	-0.07428847253322601	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l ns insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-12	-0.0787 -0.0794 -0.0878 -0.0692 -0.0759 -0.0807 -0.0756 -0.0707 -0.0240 -0.0445 -0.0676 -0.0778 -0.0712 -0.0787 -0.1088 -0.0943 -0.0684 -0.0791 -0.0791
+A-12	7-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-13	country <unk> <unk> number of nationale-nederlanden levensverzekering maatschappij n.v. ?
+W-13	0.453	seconds
+H-13	-0.0747852548956871	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l nationale-nederlanden levensverzekering maatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-13	-0.0747852548956871	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l nationale-nederlanden levensverzekering maatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-13	-0.0780 -0.0783 -0.0858 -0.0709 -0.0771 -0.0815 -0.0764 -0.0718 -0.0224 -0.0809 -0.0483 -0.0732 -0.0770 -0.0702 -0.0788 -0.1118 -0.0897 -0.0688 -0.0771 -0.0778
+A-13	8-0 0-1 3-2 0-3 0-4 0-5 0-6 9-7 8-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-14	country <unk> <unk> number of n.v. schadeverzekering-maatschappij bovemij ?
+W-14	0.421	seconds
+H-14	-0.07194847613573074	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v schadeverzekering-maatschappij bovemij quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-14	-0.07194847613573074	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v schadeverzekering-maatschappij bovemij quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-14	-0.0769 -0.0748 -0.0876 -0.0703 -0.0744 -0.0809 -0.0756 -0.0701 -0.0757 -0.0173 -0.0094 -0.0768 -0.0667 -0.0780 -0.1204 -0.0925 -0.0650 -0.0783 -0.0764
+A-14	8-0 8-1 3-2 0-3 8-4 0-5 0-6 0-7 6-8 5-9 5-10 5-11 5-12 0-13 3-14 3-15 5-16 8-17
+S-15	country <unk> <unk> number of assurant europe life insurance n.v. ?
+W-15	0.478	seconds
+H-15	-0.06988927721977234	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l assurant europe life insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-15	-0.06988927721977234	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l assurant europe life insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-15	-0.0787 -0.0790 -0.0900 -0.0707 -0.0757 -0.0810 -0.0773 -0.0706 -0.0380 -0.0276 -0.0150 -0.0417 -0.0682 -0.0797 -0.0687 -0.0782 -0.1116 -0.0921 -0.0673 -0.0775 -0.0791
+A-15	9-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 9-8 9-9 9-10 9-11 9-12 9-13 9-14 0-15 3-16 3-17 9-18 9-19
+S-16	country <unk> <unk> number of algemene friese onderlinge schadeverzekeringsmaatschappij zevenwouden u.a. ?
+W-16	0.523	seconds
+H-16	-0.08760850131511688	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l algemene friese onderlinge schadeverzekeringsmaatschappij zevenwouden u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-16	-0.08760850131511688	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l algemene friese onderlinge schadeverzekeringsmaatschappij zevenwouden u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-16	-0.0814 -0.0783 -0.0910 -0.0720 -0.0763 -0.0810 -0.0717 -0.0714 -0.0314 -0.0206 -0.4672 -0.0822 -0.0279 -0.0144 -0.0826 -0.0702 -0.0789 -0.1112 -0.0938 -0.0688 -0.0758 -0.0792
+A-16	4-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 10-8 11-9 10-10 4-11 4-12 4-13 4-14 4-15 0-16 3-17 3-18 4-19 11-20
+S-17	country <unk> <unk> number of akzo nobel assurantie n.v. ?
+W-17	0.432	seconds
+H-17	-0.07003597170114517	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l akzo nobel assurantie n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-17	-0.07003597170114517	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l akzo nobel assurantie n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-17	-0.0776 -0.0750 -0.0885 -0.0706 -0.0745 -0.0794 -0.0731 -0.0695 -0.0358 -0.0268 -0.0186 -0.0680 -0.0776 -0.0688 -0.0777 -0.1076 -0.0924 -0.0666 -0.0762 -0.0767
+A-17	8-0 0-1 3-2 0-3 8-4 0-5 0-6 8-7 7-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+S-18	country <unk> <unk> number of onderlinge verzekerings maatschappij rijn en aar u.a. ?
+W-18	0.529	seconds
+H-18	-0.10209790617227554	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekerings maatschappij rijn en aar u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-18	-0.10209790617227554	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekerings maatschappij rijn en aar u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-18	-0.0837 -0.0853 -0.0939 -0.0733 -0.0806 -0.0833 -0.0781 -0.0743 -0.6409 -0.1304 -0.0699 -0.0352 -0.0529 -0.0728 -0.0174 -0.0845 -0.0705 -0.0800 -0.1069 -0.0982 -0.0701 -0.0828 -0.0833
+A-18	4-0 4-1 3-2 0-3 4-4 0-5 0-6 4-7 5-8 4-9 4-10 11-11 4-12 11-13 4-14 4-15 4-16 0-17 3-18 3-19 4-20 11-21
+S-19	country <unk> <unk> number of brand new day levensverzekeringen n.v. ?
+W-19	0.458	seconds
+H-19	-0.07257132232189178	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l brand new day levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-19	-0.07257132232189178	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l brand new day levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-19	-0.0779 -0.0784 -0.0868 -0.0701 -0.0760 -0.0816 -0.0753 -0.0730 -0.0371 -0.0544 -0.0305 -0.0551 -0.0712 -0.0810 -0.0701 -0.0789 -0.1078 -0.0930 -0.0688 -0.0781 -0.0786
+A-19	9-0 9-1 3-2 0-3 9-4 0-5 0-6 9-7 7-8 9-9 9-10 9-11 9-12 9-13 9-14 0-15 3-16 3-17 9-18 9-19
+S-20	country <unk> <unk> number of assurant europe insurance n.v. ?
+W-20	0.490	seconds
+H-20	-0.07102416455745697	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l assurant europe insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-20	-0.07102416455745697	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l assurant europe insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-20	-0.0799 -0.0777 -0.0894 -0.0696 -0.0762 -0.0812 -0.0765 -0.0708 -0.0230 -0.0203 -0.0309 -0.0676 -0.0808 -0.0713 -0.0789 -0.1095 -0.0921 -0.0684 -0.0776 -0.0787
+A-20	9-0 9-1 3-2 0-3 9-4 0-5 0-6 4-7 5-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-21	country <unk> <unk> number of onderling fonds sliedrecht b.a. ?
+W-21	0.456	seconds
+H-21	-0.07123260945081711	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderling fonds sliedrecht b.a. quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-21	-0.07123260945081711	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderling fonds sliedrecht b.a. quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-21	-0.0807 -0.0795 -0.0889 -0.0714 -0.0765 -0.0826 -0.0760 -0.0719 -0.0249 -0.0278 -0.0424 -0.0510 -0.0799 -0.0677 -0.0800 -0.1097 -0.0889 -0.0663 -0.0785 -0.0801
+A-21	4-0 9-1 3-2 0-3 9-4 0-5 4-6 4-7 7-8 7-9 9-10 9-11 4-12 4-13 0-14 3-15 3-16 4-17 9-18
+S-22	country <unk> <unk> number of iza zorgverzekeraar n.v. ?
+W-22	0.482	seconds
+H-22	-0.07490892708301544	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l iza zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-22	-0.07490892708301544	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l iza zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-22	-0.0787 -0.0784 -0.0867 -0.0719 -0.0748 -0.0802 -0.0754 -0.0710 -0.0218 -0.0553 -0.0713 -0.0797 -0.0705 -0.0784 -0.1160 -0.0891 -0.0680 -0.0769 -0.0792
+A-22	7-0 7-1 3-2 0-3 7-4 0-5 8-6 8-7 7-8 8-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-23	country <unk> <unk> number of vgz zorgverzekeraar n.v. ?
+W-23	0.428	seconds
+H-23	-0.07531806826591492	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l vgz zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-23	-0.07531806826591492	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l vgz zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-23	-0.0789 -0.0797 -0.0876 -0.0715 -0.0742 -0.0813 -0.0759 -0.0715 -0.0317 -0.0467 -0.0723 -0.0803 -0.0707 -0.0797 -0.1120 -0.0899 -0.0683 -0.0789 -0.0800
+A-23	7-0 7-1 3-2 0-3 8-4 0-5 8-6 8-7 7-8 8-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-24	country <unk> <unk> number of achmea pensioen- en levensverzekeringen n.v. ?
+W-24	0.497	seconds
+H-24	-0.0781511664390564	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l achmea pensioen- en levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-24	-0.0781511664390564	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l achmea pensioen- en levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-24	-0.0800 -0.0793 -0.0885 -0.0702 -0.0745 -0.0824 -0.0747 -0.0727 -0.1559 -0.0093 -0.0345 -0.0895 -0.0715 -0.0800 -0.0704 -0.0805 -0.1088 -0.0915 -0.0690 -0.0789 -0.0790
+A-24	10-0 0-1 3-2 0-3 10-4 0-5 0-6 10-7 10-8 10-9 10-10 10-11 10-12 0-13 4-14 0-15 3-16 3-17 4-18 10-19
+S-25	country <unk> <unk> number of reis- en rechtshulp n.v. ?
+W-25	0.484	seconds
+H-25	-0.07445798814296722	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l reis- en rechtshulp n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-25	-0.07445798814296722	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l reis- en rechtshulp n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-25	-0.0806 -0.0808 -0.0900 -0.0719 -0.0760 -0.0824 -0.0786 -0.0733 -0.0405 -0.0402 -0.0387 -0.0705 -0.0791 -0.0707 -0.0809 -0.1151 -0.0922 -0.0684 -0.0794 -0.0797
+A-25	9-0 9-1 3-2 0-3 9-4 0-5 9-6 8-7 5-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-26	country <unk> <unk> number of menzis zorgverzekeraar n.v. ?
+W-26	0.451	seconds
+H-26	-0.07601158320903778	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l menzis zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-26	-0.07601158320903778	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l menzis zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-26	-0.0795 -0.0761 -0.0917 -0.0730 -0.0739 -0.0811 -0.0749 -0.0725 -0.0265 -0.0641 -0.0716 -0.0766 -0.0679 -0.0790 -0.1178 -0.0945 -0.0661 -0.0781 -0.0792
+A-26	7-0 7-1 3-2 0-3 7-4 0-5 0-6 0-7 7-8 0-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-27	country <unk> <unk> number of aegon schadeverzekering n.v. ?
+W-27	0.411	seconds
+H-27	-0.07470511645078659	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l aegon schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-27	-0.07470511645078659	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l aegon schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-27	-0.0818 -0.0819 -0.0894 -0.0700 -0.0783 -0.0837 -0.0762 -0.0752 -0.0165 -0.0385 -0.0708 -0.0814 -0.0699 -0.0802 -0.1057 -0.0913 -0.0681 -0.0802 -0.0802
+A-27	8-0 8-1 3-2 0-3 8-4 0-5 0-6 8-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-28	country <unk> <unk> number of onderlinge waarborgmaatschappij centrale zorgverzekeraars groep aanvullende verzekering zorgverzekeraar u.a. ?
+W-28	0.529	seconds
+H-28	-0.2058706134557724	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-28	-0.2058706134557724	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-28	-0.0792 -0.0788 -0.0877 -0.0691 -0.0760 -0.0806 -0.0763 -0.0721 -0.6059 -1.2926 -0.0624 -1.0818 -0.0114 -0.0800 -0.0688 -0.0775 -0.1049 -0.0942 -0.0672 -0.0772 -0.0795
+A-28	11-0 14-1 3-2 0-3 13-4 0-5 0-6 13-7 5-8 11-9 11-10 13-11 13-12 13-13 12-14 0-15 3-16 3-17 12-18 13-19
+S-29	country <unk> <unk> number of tvm verzekeringen n.v. ?
+W-29	0.481	seconds
+H-29	-0.07567375153303146	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l tvm verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-29	-0.07567375153303146	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l tvm verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-29	-0.0782 -0.0779 -0.0874 -0.0698 -0.0754 -0.0820 -0.0761 -0.0720 -0.0367 -0.0619 -0.0690 -0.0794 -0.0696 -0.0798 -0.1098 -0.0894 -0.0677 -0.0777 -0.0781
+A-29	7-0 0-1 3-2 0-3 7-4 0-5 0-6 7-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-30	country <unk> <unk> number of asr levensverzekering n.v. ?
+W-30	0.454	seconds
+H-30	-0.07479563355445862	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l asr levensverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-30	-0.07479563355445862	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l asr levensverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-30	-0.0796 -0.0783 -0.0886 -0.0687 -0.0768 -0.0820 -0.0765 -0.0704 -0.0218 -0.0555 -0.0744 -0.0783 -0.0701 -0.0795 -0.1052 -0.0907 -0.0682 -0.0762 -0.0802
+A-30	8-0 0-1 3-2 0-3 0-4 0-5 0-6 4-7 7-8 8-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-31	country <unk> <unk> number of achmea reinsurance company n.v. ?
+W-31	0.449	seconds
+H-31	-0.07931786775588989	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l achmea reinsurance company n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-31	-0.07931786775588989	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l achmea reinsurance company n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-31	-0.0792 -0.0793 -0.0867 -0.0713 -0.0770 -0.0812 -0.0738 -0.0704 -0.0811 -0.1172 -0.0370 -0.0718 -0.0799 -0.0704 -0.0788 -0.1139 -0.0912 -0.0677 -0.0795 -0.0790
+A-31	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 9-9 9-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+S-32	country <unk> <unk> number of asr schadeverzekering n.v. ?
+W-32	0.452	seconds
+H-32	-0.07576692849397659	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l asr schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-32	-0.07576692849397659	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l asr schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-32	-0.0817 -0.0820 -0.0907 -0.0714 -0.0771 -0.0827 -0.0764 -0.0733 -0.0197 -0.0508 -0.0735 -0.0818 -0.0702 -0.0801 -0.1064 -0.0933 -0.0685 -0.0788 -0.0812
+A-32	8-0 8-1 3-2 0-3 8-4 0-5 8-6 8-7 7-8 8-9 7-10 4-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-33	country <unk> <unk> number of de vereende n.v. ?
+W-33	0.475	seconds
+H-33	-0.07795699685811996	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l de vereende n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-33	-0.07795699685811996	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l de vereende n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-33	-0.0808 -0.0839 -0.0932 -0.0745 -0.0776 -0.0846 -0.0791 -0.0749 -0.0616 -0.0218 -0.0759 -0.0818 -0.0719 -0.0827 -0.1138 -0.0937 -0.0700 -0.0792 -0.0802
+A-33	7-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-34	country <unk> <unk> number of goudse levensverzekeringen n.v. ?
+W-34	0.444	seconds
+H-34	-0.07421080023050308	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l goudse levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-34	-0.07421080023050308	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l goudse levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-34	-0.0798 -0.0797 -0.0898 -0.0699 -0.0754 -0.0834 -0.0757 -0.0729 -0.0220 -0.0324 -0.0720 -0.0795 -0.0714 -0.0807 -0.1061 -0.0917 -0.0693 -0.0785 -0.0799
+A-34	8-0 8-1 3-2 0-3 8-4 0-5 0-6 8-7 7-8 8-9 8-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-35	country <unk> <unk> number of onderlinge waarborgmaatschappij voor instellingen in de gezondheidszorg medirisk b.a. ?
+W-35	0.542	seconds
+H-35	-0.3111005425453186	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij de gezondheidszorg medirisk b.a. quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-35	-0.3111005425453186	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij de gezondheidszorg medirisk b.a. quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-35	-0.0802 -0.0799 -0.0881 -0.0720 -0.0755 -0.0828 -0.0761 -0.0719 -0.6365 -4.0182 -0.1445 -0.5588 -0.1116 -0.0815 -0.0803 -0.0702 -0.0795 -0.1161 -0.0922 -0.0688 -0.0789 -0.0808
+A-35	14-0 14-1 3-2 0-3 9-4 0-5 0-6 14-7 5-8 6-9 9-10 8-11 8-12 8-13 4-14 9-15 0-16 3-17 3-18 9-19 9-20
+S-36	country <unk> <unk> number of onderling verzekerd u.a. ?
+W-36	0.457	seconds
+H-36	-0.07057883590459824	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderling verzekerd u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-36	-0.07057883590459824	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderling verzekerd u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-36	-0.0796 -0.0810 -0.0887 -0.0715 -0.0780 -0.0805 -0.0771 -0.0730 -0.0270 -0.0210 -0.0143 -0.0788 -0.0690 -0.0783 -0.1081 -0.0902 -0.0675 -0.0784 -0.0788
+A-36	4-0 8-1 3-2 0-3 8-4 0-5 7-6 4-7 7-8 7-9 4-10 4-11 4-12 0-13 3-14 3-15 4-16 7-17
+S-37	country <unk> <unk> number of bos fruit aardappelen onderlinge verzekeringen bfao u.a. ?
+W-37	0.528	seconds
+H-37	-0.08736046403646469	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l bos fruit aardappelen onderlinge verzekeringen bfao u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-37	-0.08736046403646469	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l bos fruit aardappelen onderlinge verzekeringen bfao u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-37	-0.0801 -0.0790 -0.0888 -0.0701 -0.0755 -0.0818 -0.0754 -0.0710 -0.0185 -0.0335 -0.0192 -0.5093 -0.0790 -0.0446 -0.0143 -0.0820 -0.0702 -0.0795 -0.1169 -0.0946 -0.0684 -0.0793 -0.0785
+A-37	12-0 12-1 3-2 0-3 12-4 0-5 11-6 12-7 8-8 11-9 8-10 8-11 12-12 12-13 12-14 12-15 12-16 0-17 3-18 3-19 12-20 8-21
+S-38	country <unk> <unk> number of abn amro levensverzekering n.v. ?
+W-38	0.457	seconds
+H-38	-0.0747159942984581	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l abn amro levensverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-38	-0.0747159942984581	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l abn amro levensverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-38	-0.0804 -0.0788 -0.0865 -0.0687 -0.0773 -0.0832 -0.0768 -0.0715 -0.0299 -0.0499 -0.0506 -0.0774 -0.0791 -0.0724 -0.0793 -0.1126 -0.0883 -0.0702 -0.0793 -0.0823
+A-38	8-0 0-1 3-2 0-3 0-4 0-5 0-6 8-7 9-8 9-9 9-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-39	country <unk> <unk> number of ansvar verzekeringsmaatschappij n.v. ?
+W-39	0.508	seconds
+H-39	-0.07784218341112137	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l ansvar verzekeringsmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-39	-0.07784218341112137	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l ansvar verzekeringsmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-39	-0.0803 -0.0821 -0.0900 -0.0732 -0.0749 -0.0837 -0.0782 -0.0720 -0.0679 -0.0368 -0.0723 -0.0792 -0.0712 -0.0817 -0.1127 -0.0938 -0.0692 -0.0789 -0.0809
+A-39	7-0 7-1 3-2 0-3 7-4 0-5 0-6 8-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-40	country <unk> <unk> number of ohra ziektekostenverzekeringen n.v. ?
+W-40	0.487	seconds
+H-40	-0.07573099434375763	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l ohra ziektekostenverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-40	-0.07573099434375763	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l ohra ziektekostenverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-40	-0.0793 -0.0793 -0.0897 -0.0707 -0.0765 -0.0807 -0.0744 -0.0693 -0.0288 -0.0694 -0.0737 -0.0783 -0.0692 -0.0785 -0.1033 -0.0934 -0.0672 -0.0774 -0.0800
+A-40	7-0 7-1 3-2 0-3 7-4 0-5 0-6 0-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-41	country <unk> <unk> number of onderlinge waarborgmaatschappij centramed b.a. ?
+W-41	0.529	seconds
+H-41	-0.2403644621372223	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-41	-0.2403644621372223	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-41	-0.0793 -0.0771 -0.0870 -0.0708 -0.0773 -0.0834 -0.0748 -0.0719 -0.7305 -1.9358 -1.1667 -0.1039 -0.0517 -0.2526 -0.0146 -0.0787 -0.0682 -0.0792 -0.1061 -0.0950 -0.0672 -0.0767 -0.0800
+A-41	4-0 0-1 3-2 0-3 9-4 0-5 4-6 4-7 5-8 4-9 4-10 9-11 4-12 9-13 4-14 4-15 4-16 0-17 3-18 3-19 4-20 9-21
+S-42	country <unk> <unk> number of vvaa schadeverzekeringen n.v. ?
+W-42	0.401	seconds
+H-42	-0.07455260306596756	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l vvaa schadeverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-42	-0.07455260306596756	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l vvaa schadeverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-42	-0.0799 -0.0778 -0.0898 -0.0713 -0.0761 -0.0808 -0.0749 -0.0682 -0.0515 -0.0097 -0.0738 -0.0815 -0.0727 -0.0794 -0.1106 -0.0935 -0.0685 -0.0788 -0.0778
+A-42	8-0 8-1 3-2 0-3 8-4 0-5 0-6 0-7 5-8 8-9 7-10 7-11 4-12 0-13 3-14 3-15 7-16 8-17
+S-43	country <unk> <unk> number of roeminck insurance n.v. ?
+W-43	0.526	seconds
+H-43	-0.07596437633037567	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l roeminck insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-43	-0.07596437633037567	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l roeminck insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-43	-0.0817 -0.0793 -0.0890 -0.0697 -0.0770 -0.0827 -0.0778 -0.0718 -0.0204 -0.0515 -0.0758 -0.0800 -0.0713 -0.0806 -0.1127 -0.0946 -0.0692 -0.0793 -0.0789
+A-43	4-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 7-9 4-10 4-11 4-12 0-13 3-14 3-15 7-16 8-17
+S-44	country <unk> <unk> number of abn amro captive n.v. ?
+W-44	0.467	seconds
+H-44	-0.07639071345329285	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l abn amro captive n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-44	-0.07639071345329285	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l abn amro captive n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-44	-0.0808 -0.0782 -0.0886 -0.0699 -0.0765 -0.0829 -0.0775 -0.0692 -0.0405 -0.0528 -0.0593 -0.0782 -0.0786 -0.0731 -0.0794 -0.1181 -0.0922 -0.0699 -0.0806 -0.0817
+A-44	8-0 0-1 3-2 0-3 8-4 0-5 0-6 0-7 7-8 4-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+S-45	country <unk> <unk> number of univé noord-nederland verzekeraar n.v. ?
+W-45	0.475	seconds
+H-45	-0.09095928072929382	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé noord-nederland verzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-45	-0.09095928072929382	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé noord-nederland verzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-45	-0.0807 -0.0820 -0.0908 -0.0729 -0.0791 -0.0817 -0.0754 -0.0736 -0.0525 -0.2907 -0.0946 -0.0732 -0.0810 -0.0714 -0.0798 -0.1159 -0.0932 -0.0693 -0.0800 -0.0815
+A-45	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 0-18
+S-46	country <unk> <unk> number of n.v. verzekering maatschappij de burcht ?
+W-46	0.488	seconds
+H-46	-0.0712902769446373	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v verzekering maatschappij de burcht quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-46	-0.0712902769446373	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v verzekering maatschappij de burcht quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-46	-0.0807 -0.0776 -0.0926 -0.0739 -0.0779 -0.0829 -0.0768 -0.0727 -0.0141 -0.0317 -0.0541 -0.0377 -0.0504 -0.0787 -0.0693 -0.0795 -0.1260 -0.0940 -0.0676 -0.0785 -0.0804
+A-46	0-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 6-8 10-9 4-10 10-11 10-12 10-13 10-14 0-15 3-16 3-17 10-18 0-19
+S-47	country <unk> <unk> number of n.v. noordhollandsche van 1816 schadeverzekeringsmaatschappij ?
+W-47	0.497	seconds
+H-47	-0.06814548373222351	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v noordhollandsche van 1816 schadeverzekeringsmaatschappij quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-47	-0.06814548373222351	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v noordhollandsche van 1816 schadeverzekeringsmaatschappij quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-47	-0.0801 -0.0764 -0.0899 -0.0719 -0.0751 -0.0815 -0.0745 -0.0689 -0.0216 -0.0434 -0.0079 -0.0057 -0.0694 -0.0758 -0.0683 -0.0778 -0.1272 -0.0927 -0.0656 -0.0778 -0.0794
+A-47	5-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 8-9 8-10 8-11 5-12 5-13 5-14 0-15 3-16 3-17 5-18 10-19
+S-48	country <unk> <unk> number of n.v. hagelunie ?
+W-48	0.471	seconds
+H-48	-0.07987912744283676	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v hagelunie quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-48	-0.07987912744283676	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v hagelunie quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-48	-0.0824 -0.0803 -0.0918 -0.0736 -0.0780 -0.0843 -0.0790 -0.0721 -0.0377 -0.0837 -0.0822 -0.0709 -0.0816 -0.1172 -0.0922 -0.0689 -0.0807 -0.0812
+A-48	7-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 6-8 7-9 4-10 4-11 0-12 3-13 3-14 4-15 7-16
+S-49	country <unk> <unk> number of achmea schadeverzekeringen n.v. ?
+W-49	0.434	seconds
+H-49	-0.09922195225954056	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l achmea schadeverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-49	-0.09922195225954056	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l achmea schadeverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-49	-0.0810 -0.0774 -0.0902 -0.0732 -0.0774 -0.0821 -0.0763 -0.0686 -0.4970 -0.0113 -0.0750 -0.0815 -0.0745 -0.0805 -0.1191 -0.0932 -0.0690 -0.0802 -0.0777
+A-49	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 8-9 8-10 4-11 4-12 0-13 3-14 3-15 4-16 8-17
+S-50	country <unk> <unk> number of mercurius schadeverzekeringen n.v. ?
+W-50	0.437	seconds
+H-50	-0.07259329408407211	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l mercurius schadeverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-50	-0.07259329408407211	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l mercurius schadeverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-50	-0.0773 -0.0765 -0.0879 -0.0696 -0.0744 -0.0820 -0.0750 -0.0682 -0.0295 -0.0164 -0.0733 -0.0775 -0.0690 -0.0805 -0.1124 -0.0891 -0.0666 -0.0786 -0.0757
+A-50	7-0 0-1 3-2 0-3 7-4 0-5 7-6 7-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-51	country <unk> <unk> number of stichtsche onderlinge brand-herverzekering u.a. ?
+W-51	0.463	seconds
+H-51	-0.09200478345155716	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l stichtsche onderlinge brand-herverzekering u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-51	-0.09200478345155716	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l stichtsche onderlinge brand-herverzekering u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-51	-0.0792 -0.0789 -0.0898 -0.0693 -0.0750 -0.0825 -0.0735 -0.0692 -0.0291 -0.4936 -0.0356 -0.0152 -0.0794 -0.0692 -0.0805 -0.1073 -0.0911 -0.0674 -0.0762 -0.0781
+A-51	4-0 0-1 3-2 0-3 9-4 0-5 0-6 0-7 6-8 6-9 4-10 4-11 4-12 4-13 0-14 3-15 3-16 4-17 9-18
+S-52	country <unk> <unk> number of achmea zorgverzekeringen n.v. ?
+W-52	0.423	seconds
+H-52	-0.07410097122192383	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l achmea zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-52	-0.07410097122192383	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l achmea zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-52	-0.0779 -0.0761 -0.0887 -0.0708 -0.0761 -0.0809 -0.0748 -0.0692 -0.0625 -0.0152 -0.0710 -0.0742 -0.0683 -0.0787 -0.1120 -0.0913 -0.0666 -0.0769 -0.0769
+A-52	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 8-9 8-10 4-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-53	country <unk> <unk> number of abn amro schadeverzekering n.v. ?
+W-53	0.442	seconds
+H-53	-0.07659535109996796	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l abn amro schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-53	-0.07659535109996796	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l abn amro schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-53	-0.0822 -0.0822 -0.0876 -0.0707 -0.0780 -0.0834 -0.0769 -0.0725 -0.0424 -0.0316 -0.0773 -0.0762 -0.0820 -0.0732 -0.0794 -0.1122 -0.0902 -0.0707 -0.0808 -0.0825
+A-53	9-0 9-1 3-2 0-3 9-4 0-5 0-6 8-7 9-8 9-9 9-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-54	country <unk> <unk> number of onderlinge hagelverzekering maatschappij agriver b.a. ?
+W-54	0.549	seconds
+H-54	-0.10705142468214035	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge hagelverzekering maatschappij agriver b.a. quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-54	-0.10705142468214035	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge hagelverzekering maatschappij agriver b.a. quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-54	-0.0795 -0.0805 -0.0890 -0.0742 -0.0754 -0.0820 -0.0795 -0.0725 -0.6076 -0.1303 -0.0455 -0.0886 -0.0767 -0.0832 -0.0707 -0.0792 -0.1069 -0.0976 -0.0692 -0.0796 -0.0805
+A-54	10-0 0-1 3-2 0-3 10-4 0-5 0-6 10-7 5-8 10-9 10-10 10-11 8-12 10-13 10-14 0-15 3-16 3-17 10-18 10-19
+S-55	country <unk> <unk> number of srlev n.v. ?
+W-55	0.402	seconds
+H-55	-0.07561349123716354	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l srlev n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-55	-0.07561349123716354	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l srlev n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-55	-0.0788 -0.0790 -0.0870 -0.0700 -0.0751 -0.0816 -0.0747 -0.0695 -0.0295 -0.0683 -0.0762 -0.0700 -0.0807 -0.1066 -0.0922 -0.0670 -0.0778 -0.0772
+A-55	6-0 6-1 3-2 0-3 6-4 0-5 6-6 6-7 6-8 6-9 6-10 6-11 0-12 3-13 3-14 6-15 6-16
+S-56	country <unk> <unk> number of aegon levensverzekering n.v. ?
+W-56	0.456	seconds
+H-56	-0.07365980744361877	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l aegon levensverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-56	-0.07365980744361877	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l aegon levensverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-56	-0.0789 -0.0781 -0.0878 -0.0678 -0.0764 -0.0834 -0.0754 -0.0727 -0.0201 -0.0452 -0.0715 -0.0777 -0.0691 -0.0798 -0.1043 -0.0883 -0.0676 -0.0766 -0.0786
+A-56	8-0 0-1 3-2 0-3 0-4 0-5 0-6 8-7 5-8 8-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-57	country <unk> <unk> number of fbto zorgverzekeringen n.v. ?
+W-57	0.511	seconds
+H-57	-0.07312227040529251	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l fbto zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-57	-0.07312227040529251	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l fbto zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-57	-0.0801 -0.0797 -0.0897 -0.0713 -0.0779 -0.0837 -0.0758 -0.0697 -0.0129 -0.0222 -0.0729 -0.0761 -0.0704 -0.0802 -0.1089 -0.0942 -0.0682 -0.0770 -0.0785
+A-57	8-0 8-1 3-2 0-3 8-4 0-5 8-6 8-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-58	country <unk> <unk> number of onderlinge verzekering maatschappij twente u.a. ?
+W-58	0.488	seconds
+H-58	-0.11018182337284088	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-58	-0.11018182337284088	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-58	-0.0816 -0.0821 -0.0924 -0.0751 -0.0810 -0.0831 -0.0756 -0.0750 -0.5464 -0.0084 -0.0567 -0.3591 -0.0135 -0.0824 -0.0714 -0.0797 -0.1185 -0.0972 -0.0698 -0.0819 -0.0827
+A-58	10-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 6-9 4-10 9-11 10-12 4-13 4-14 0-15 3-16 3-17 4-18 0-19
+S-59	country <unk> <unk> number of onderlinge levensverzekering-maatschappij &apos; s-gravenhage u.a. ?
+W-59	0.499	seconds
+H-59	-0.11269646883010864	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge levensverzekering-maatschappij 's-gravenhage u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-59	-0.11269646883010864	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge levensverzekering-maatschappij 's-gravenhage u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-59	-0.0788 -0.0845 -0.0904 -0.0731 -0.0793 -0.0811 -0.0761 -0.0732 -0.6024 -0.2965 -0.0418 -0.0152 -0.0807 -0.0707 -0.0782 -0.1069 -0.0966 -0.0690 -0.0791 -0.0801
+A-59	4-0 0-1 3-2 0-3 10-4 0-5 0-6 0-7 5-8 10-9 9-10 10-11 4-12 4-13 0-14 3-15 3-16 4-17 10-18
+S-60	country <unk> <unk> number of cz zorgverzekeringen n.v. ?
+W-60	0.440	seconds
+H-60	-0.07542707771062851	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l cz zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-60	-0.07542707771062851	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l cz zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-60	-0.0820 -0.0785 -0.0929 -0.0723 -0.0789 -0.0834 -0.0773 -0.0715 -0.0299 -0.0333 -0.0728 -0.0777 -0.0704 -0.0807 -0.1077 -0.0972 -0.0683 -0.0777 -0.0804
+A-60	8-0 8-1 3-2 0-3 8-4 0-5 0-6 8-7 5-8 7-9 8-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-61	country <unk> <unk> number of mutual insurance association munis onderlinge verzekeringsmaatschappij munis u.a. ?
+W-61	0.582	seconds
+H-61	-0.08530842512845993	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l mutual insurance association munis onderlinge verzekeringsmaatschappij munis u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-61	-0.08530842512845993	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l mutual insurance association munis onderlinge verzekeringsmaatschappij munis u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-61	-0.0818 -0.0798 -0.0881 -0.0710 -0.0775 -0.0795 -0.0751 -0.0738 -0.0098 -0.0341 -0.0440 -0.0433 -0.5410 -0.0233 -0.0518 -0.0132 -0.0816 -0.0713 -0.0761 -0.1077 -0.0955 -0.0693 -0.0776 -0.0810
+A-61	13-0 13-1 3-2 0-3 13-4 0-5 13-6 13-7 9-8 7-9 12-10 12-11 9-12 4-13 13-14 13-15 4-16 4-17 0-18 3-19 3-20 4-21 13-22
+S-62	country <unk> <unk> number of dsw ziektekostenverzekeringen n.v. ?
+W-62	0.479	seconds
+H-62	-0.07325393706560135	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l dsw ziektekostenverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-62	-0.07325393706560135	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l dsw ziektekostenverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-62	-0.0774 -0.0764 -0.0893 -0.0714 -0.0717 -0.0799 -0.0738 -0.0671 -0.0144 -0.0539 -0.0746 -0.0748 -0.0705 -0.0784 -0.1053 -0.0907 -0.0670 -0.0777 -0.0777
+A-62	8-0 0-1 3-2 0-3 8-4 0-5 0-6 0-7 8-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-63	country <unk> <unk> number of n.v. zorgverzekeraar umc ?
+W-63	0.465	seconds
+H-63	-0.07470008730888367	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v zorgverzekeraar umc quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-63	-0.07470008730888367	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v zorgverzekeraar umc quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-63	-0.0806 -0.0780 -0.0926 -0.0753 -0.0752 -0.0826 -0.0766 -0.0742 -0.0467 -0.0297 -0.0302 -0.0805 -0.0682 -0.0806 -0.1270 -0.0950 -0.0666 -0.0788 -0.0807
+A-63	8-0 0-1 3-2 0-3 8-4 0-5 0-6 0-7 7-8 5-9 5-10 5-11 4-12 0-13 3-14 3-15 4-16 5-17
+S-64	country <unk> <unk> number of woningborg n.v. ?
+W-64	0.445	seconds
+H-64	-0.07613812386989594	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l woningborg n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-64	-0.07613812386989594	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l woningborg n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-64	-0.0776 -0.0771 -0.0922 -0.0692 -0.0758 -0.0815 -0.0768 -0.0700 -0.0301 -0.0717 -0.0752 -0.0673 -0.0797 -0.1095 -0.0959 -0.0661 -0.0769 -0.0780
+A-64	6-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 6-8 6-9 6-10 6-11 0-12 3-13 3-14 6-15 6-16
+S-65	country <unk> <unk> number of stad holland zorgverzekeraar onderlinge waarborgmaatschappij u.a. ?
+W-65	0.579	seconds
+H-65	-0.18028254806995392	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l stad holland zorgverzekeraar onderlinge waarborgmaatschappij u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-65	-0.18028254806995392	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l stad holland zorgverzekeraar onderlinge waarborgmaatschappij u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-65	-0.0798 -0.0790 -0.0860 -0.0713 -0.0775 -0.0815 -0.0747 -0.0718 -0.0166 -0.1436 -0.0338 -0.5754 -1.9098 -0.0138 -0.0801 -0.0694 -0.0784 -0.1101 -0.0877 -0.0678 -0.0768 -0.0816
+A-65	11-0 0-1 3-2 0-3 11-4 0-5 0-6 0-7 8-8 10-9 11-10 8-11 4-12 11-13 4-14 11-15 0-16 3-17 3-18 11-19 11-20
+S-66	country <unk> <unk> number of uitvaartverzekering twenthe n.v. ?
+W-66	0.443	seconds
+H-66	-0.07548260688781738	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l uitvaartverzekering twenthe n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-66	-0.07548260688781738	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l uitvaartverzekering twenthe n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-66	-0.0779 -0.0780 -0.0917 -0.0711 -0.0763 -0.0813 -0.0760 -0.0703 -0.0478 -0.0352 -0.0723 -0.0777 -0.0676 -0.0799 -0.1146 -0.0952 -0.0662 -0.0777 -0.0775
+A-66	7-0 7-1 3-2 0-3 7-4 0-5 7-6 7-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-67	country <unk> <unk> number of onvz ziektekostenverzekeraar n.v. ?
+W-67	0.459	seconds
+H-67	-0.07357583194971085	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onvz ziektekostenverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-67	-0.07357583194971085	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onvz ziektekostenverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-67	-0.0800 -0.0781 -0.0884 -0.0703 -0.0745 -0.0808 -0.0769 -0.0708 -0.0267 -0.0366 -0.0685 -0.0761 -0.0679 -0.0792 -0.1102 -0.0897 -0.0665 -0.0778 -0.0789
+A-67	7-0 0-1 3-2 0-3 0-4 0-5 0-6 7-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-68	country <unk> <unk> number of onderlinge verzekeringsmaatschappij univé samen u.a. ?
+W-68	0.507	seconds
+H-68	-0.09918054938316345	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij univé samen u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-68	-0.09918054938316345	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij univé samen u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-68	-0.0830 -0.0816 -0.0921 -0.0730 -0.0790 -0.0837 -0.0756 -0.0723 -0.5745 -0.0250 -0.1092 -0.0529 -0.0154 -0.0779 -0.0685 -0.0803 -0.1079 -0.0963 -0.0679 -0.0820 -0.0848
+A-68	10-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 4-9 10-10 9-11 9-12 4-13 4-14 0-15 3-16 3-17 4-18 9-19
+S-69	country <unk> <unk> number of n.v. schadeverzekering metaal en technische bedrijfstakken ?
+W-69	0.462	seconds
+H-69	-0.0694582387804985	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v schadeverzekering metaal en technische bedrijfstakken quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-69	-0.0694582387804985	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v schadeverzekering metaal en technische bedrijfstakken quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-69	-0.0803 -0.0797 -0.0882 -0.0716 -0.0765 -0.0827 -0.0750 -0.0725 -0.0340 -0.0424 -0.0231 -0.0335 -0.0382 -0.0710 -0.0815 -0.0682 -0.0791 -0.1116 -0.0930 -0.0669 -0.0798 -0.0794
+A-69	11-0 0-1 3-2 0-3 11-4 0-5 0-6 11-7 5-8 5-9 5-10 5-11 11-12 4-13 5-14 4-15 0-16 3-17 3-18 4-19 11-20
+S-70	country <unk> <unk> number of nationale-nederlanden schadeverzekering maatschappij n.v. ?
+W-70	0.517	seconds
+H-70	-0.07554759085178375	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l nationale-nederlanden schadeverzekering maatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-70	-0.07554759085178375	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l nationale-nederlanden schadeverzekering maatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-70	-0.0803 -0.0811 -0.0879 -0.0737 -0.0775 -0.0825 -0.0763 -0.0740 -0.0168 -0.0666 -0.0573 -0.0726 -0.0805 -0.0706 -0.0794 -0.1141 -0.0921 -0.0690 -0.0799 -0.0788
+A-70	9-0 0-1 3-2 0-3 9-4 0-5 0-6 9-7 9-8 9-9 4-10 9-11 4-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-71	country <unk> <unk> number of asr aanvullende ziektekostenverzekeringen n.v. ?
+W-71	0.468	seconds
+H-71	-0.07156197726726532	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l asr aanvullende ziektekostenverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-71	-0.07156197726726532	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l asr aanvullende ziektekostenverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-71	-0.0763 -0.0760 -0.0895 -0.0673 -0.0742 -0.0801 -0.0752 -0.0682 -0.0258 -0.0179 -0.0693 -0.0727 -0.0776 -0.0688 -0.0780 -0.1041 -0.0902 -0.0666 -0.0747 -0.0788
+A-71	9-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 9-9 9-10 9-11 4-12 4-13 0-14 3-15 3-16 4-17 9-18
+S-72	country <unk> <unk> number of onderlinge verzekeringsmaatschappij waterland en omstreken u.a. ?
+W-72	0.525	seconds
+H-72	-0.1021454930305481	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij waterland en omstreken u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-72	-0.1021454930305481	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij waterland en omstreken u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-72	-0.0859 -0.0849 -0.0911 -0.0768 -0.0783 -0.0846 -0.0799 -0.0781 -0.6789 -0.0357 -0.0463 -0.0761 -0.0472 -0.0193 -0.0849 -0.0729 -0.0815 -0.1097 -0.0963 -0.0721 -0.0812 -0.0855
+A-72	11-0 11-1 3-2 0-3 11-4 0-5 0-6 0-7 5-8 4-9 11-10 4-11 10-12 11-13 4-14 4-15 0-16 3-17 3-18 4-19 11-20
+S-73	country <unk> <unk> number of n.v. univé zorg ?
+W-73	0.444	seconds
+H-73	-0.07807924598455429	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v univé zorg quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-73	-0.07807924598455429	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v univé zorg quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-73	-0.0809 -0.0801 -0.0962 -0.0713 -0.0799 -0.0845 -0.0761 -0.0721 -0.0835 -0.0538 -0.0317 -0.0781 -0.0672 -0.0802 -0.1213 -0.0991 -0.0659 -0.0801 -0.0817
+A-73	0-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 2-8 5-9 5-10 0-11 4-12 0-13 3-14 3-15 4-16 0-17
+S-74	country <unk> <unk> number of bnp paribas cardif levensverzekeringen n.v. ?
+W-74	0.492	seconds
+H-74	-0.07175799459218979	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l bnp paribas cardif levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-74	-0.07175799459218979	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l bnp paribas cardif levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-74	-0.0811 -0.0811 -0.0893 -0.0703 -0.0756 -0.0840 -0.0781 -0.0729 -0.0403 -0.0224 -0.0280 -0.0482 -0.0708 -0.0819 -0.0717 -0.0815 -0.1092 -0.0903 -0.0698 -0.0785 -0.0817
+A-74	10-0 10-1 3-2 0-3 10-4 0-5 10-6 10-7 6-8 9-9 9-10 9-11 10-12 4-13 9-14 0-15 3-16 3-17 9-18 10-19
+S-75	country <unk> <unk> number of de friesland zorgverzekeraar n.v. ?
+W-75	0.462	seconds
+H-75	-0.08608611673116684	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l de friesland zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-75	-0.08608611673116684	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l de friesland zorgverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-75	-0.0788 -0.0823 -0.0910 -0.0728 -0.0761 -0.0837 -0.0761 -0.0736 -0.0436 -0.2248 -0.0774 -0.0763 -0.0787 -0.0696 -0.0812 -0.1180 -0.0914 -0.0681 -0.0767 -0.0813
+A-75	8-0 0-1 3-2 0-3 8-4 0-5 0-6 0-7 8-8 8-9 9-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+S-76	country <unk> <unk> number of oom schadeverzekering n.v. ?
+W-76	0.450	seconds
+H-76	-0.07716671377420425	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l oom schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-76	-0.07716671377420425	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l oom schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-76	-0.0819 -0.0823 -0.0896 -0.0727 -0.0775 -0.0824 -0.0772 -0.0734 -0.0361 -0.0539 -0.0701 -0.0818 -0.0707 -0.0798 -0.1158 -0.0917 -0.0685 -0.0806 -0.0802
+A-76	8-0 8-1 3-2 0-3 8-4 0-5 8-6 8-7 5-8 8-9 7-10 7-11 4-12 0-13 3-14 3-15 7-16 8-17
+S-77	country <unk> <unk> number of kmu verzekeringen n.v. ?
+W-77	0.471	seconds
+H-77	-0.07402387261390686	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l kmu verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-77	-0.07402387261390686	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l kmu verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-77	-0.0799 -0.0811 -0.0881 -0.0696 -0.0760 -0.0830 -0.0769 -0.0709 -0.0210 -0.0316 -0.0705 -0.0812 -0.0719 -0.0808 -0.1061 -0.0902 -0.0695 -0.0782 -0.0801
+A-77	8-0 8-1 3-2 0-3 8-4 0-5 0-6 0-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-78	country <unk> <unk> number of rabo herverzekeringsmaatschappij n.v. ?
+W-78	0.442	seconds
+H-78	-0.07310595363378525	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l rabo herverzekeringsmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-78	-0.07310595363378525	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l rabo herverzekeringsmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-78	-0.0774 -0.0787 -0.0874 -0.0699 -0.0759 -0.0795 -0.0755 -0.0687 -0.0260 -0.0337 -0.0679 -0.0771 -0.0710 -0.0771 -0.1082 -0.0931 -0.0678 -0.0761 -0.0780
+A-78	7-0 8-1 3-2 0-3 8-4 0-5 0-6 0-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-79	country <unk> <unk> number of monuta verzekeringen n.v. ?
+W-79	0.449	seconds
+H-79	-0.07597198337316513	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l monuta verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-79	-0.07597198337316513	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l monuta verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-79	-0.0789 -0.0808 -0.0898 -0.0697 -0.0791 -0.0833 -0.0767 -0.0718 -0.0359 -0.0464 -0.0751 -0.0806 -0.0713 -0.0802 -0.1033 -0.0904 -0.0696 -0.0805 -0.0800
+A-79	7-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-80	country <unk> <unk> number of onderlinge waarborgmaatschappij dsw zorgverzekeraar u.a. ?
+W-80	0.506	seconds
+H-80	-0.18884789943695068	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-80	-0.18884789943695068	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-80	-0.0794 -0.0779 -0.0895 -0.0739 -0.0735 -0.0812 -0.0740 -0.0708 -0.7271 -1.2101 -0.6040 -0.2500 -0.0436 -0.2126 -0.0138 -0.0788 -0.0684 -0.0781 -0.1189 -0.0950 -0.0669 -0.0761 -0.0799
+A-80	10-0 0-1 3-2 0-3 10-4 0-5 0-6 0-7 5-8 10-9 10-10 9-11 10-12 9-13 10-14 10-15 10-16 0-17 3-18 3-19 10-20 10-21
+S-81	country <unk> <unk> number of lemonade insurance n.v. ?
+W-81	0.438	seconds
+H-81	-0.0764368399977684	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l lemonade insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-81	-0.0764368399977684	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l lemonade insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-81	-0.0805 -0.0786 -0.0864 -0.0711 -0.0757 -0.0825 -0.0761 -0.0718 -0.0523 -0.0490 -0.0685 -0.0809 -0.0726 -0.0810 -0.1102 -0.0900 -0.0692 -0.0782 -0.0775
+A-81	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 7-9 7-10 7-11 4-12 0-13 3-14 3-15 7-16 8-17
+S-82	country <unk> <unk> number of nn non-life insurance n.v. ?
+W-82	0.457	seconds
+H-82	-0.07588300108909607	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l nn non-life insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-82	-0.07588300108909607	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l nn non-life insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-82	-0.0786 -0.0765 -0.0880 -0.0692 -0.0739 -0.0813 -0.0735 -0.0706 -0.0248 -0.1031 -0.0460 -0.0697 -0.0782 -0.0719 -0.0795 -0.1194 -0.0912 -0.0683 -0.0768 -0.0771
+A-82	9-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 6-8 9-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-83	country <unk> <unk> number of ovm onderlinge verzekeringen u.a. ?
+W-83	0.445	seconds
+H-83	-0.0968007817864418	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l ovm onderlinge verzekeringen u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-83	-0.0968007817864418	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l ovm onderlinge verzekeringen u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-83	-0.0761 -0.0779 -0.0876 -0.0696 -0.0754 -0.0813 -0.0743 -0.0715 -0.0278 -0.4792 -0.1497 -0.0131 -0.0815 -0.0718 -0.0789 -0.1077 -0.0898 -0.0693 -0.0751 -0.0786
+A-83	9-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 6-8 6-9 4-10 9-11 9-12 4-13 0-14 3-15 3-16 4-17 9-18
+S-84	country <unk> <unk> number of onderlinge waarborgmaatschappij sazas u.a. ?
+W-84	0.494	seconds
+H-84	-0.21921846270561218	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-84	-0.21921846270561218	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij zorgverzekeraar zorg en zekerheid u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-84	-0.0802 -0.0772 -0.0888 -0.0728 -0.0780 -0.0817 -0.0741 -0.0716 -0.7304 -2.6618 -0.1325 -0.0568 -0.0462 -0.1195 -0.0131 -0.0776 -0.0685 -0.0776 -0.1130 -0.0981 -0.0674 -0.0760 -0.0792
+A-84	4-0 0-1 3-2 0-3 9-4 0-5 0-6 0-7 5-8 4-9 9-10 9-11 4-12 8-13 4-14 4-15 4-16 0-17 3-18 3-19 4-20 9-21
+S-85	country <unk> <unk> number of bnp paribas cardif schadeverzekeringen n.v. ?
+W-85	0.423	seconds
+H-85	-0.4729689657688141	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l unilever insurances n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-85	-0.4729689657688141	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l unilever insurances n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-85	-0.0803 -0.0787 -0.0892 -0.0714 -0.0762 -0.0827 -0.0780 -0.0698 -6.5774 -1.0452 -0.0708 -0.0817 -0.0723 -0.0816 -0.1160 -0.0886 -0.0683 -0.0791 -0.0792
+A-85	4-0 10-1 3-2 0-3 10-4 0-5 4-6 4-7 6-8 9-9 9-10 4-11 9-12 0-13 3-14 3-15 9-16 10-17
+S-86	country <unk> <unk> number of onderlinge waarborg maatschappij achterhoek u.a. ?
+W-86	0.496	seconds
+H-86	-0.09634516388177872	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborg maatschappij achterhoek u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-86	-0.09634516388177872	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborg maatschappij achterhoek u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-86	-0.0802 -0.0829 -0.0862 -0.0725 -0.0794 -0.0841 -0.0751 -0.0732 -0.5920 -0.0378 -0.0598 -0.0311 -0.0137 -0.0798 -0.0684 -0.0814 -0.1069 -0.0928 -0.0679 -0.0781 -0.0799
+A-86	10-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 10-9 4-10 9-11 10-12 4-13 4-14 0-15 3-16 3-17 4-18 0-19
+S-87	country <unk> <unk> number of univé zuid-nederland verzekeringen n.v. ?
+W-87	0.486	seconds
+H-87	-0.07520685344934464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé zuid-nederland verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-87	-0.07520685344934464	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé zuid-nederland verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-87	-0.0800 -0.0802 -0.0898 -0.0706 -0.0805 -0.0826 -0.0762 -0.0719 -0.0449 -0.0363 -0.0524 -0.0727 -0.0791 -0.0693 -0.0801 -0.1156 -0.0933 -0.0678 -0.0792 -0.0815
+A-87	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 9-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+S-88	country <unk> <unk> number of proteq levensverzekeringen n.v. ?
+W-88	0.433	seconds
+H-88	-0.07455311715602875	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l proteq levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-88	-0.07455311715602875	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l proteq levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-88	-0.0800 -0.0809 -0.0908 -0.0716 -0.0751 -0.0829 -0.0769 -0.0736 -0.0150 -0.0452 -0.0670 -0.0795 -0.0705 -0.0812 -0.1031 -0.0950 -0.0688 -0.0789 -0.0804
+A-88	8-0 8-1 3-2 0-3 8-4 0-5 0-6 8-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-89	country <unk> <unk> number of onderlinge brandwaarborg maatschappij noord holland u.a. ?
+W-89	0.519	seconds
+H-89	-0.09804731607437134	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge brandwaarborg maatschappij noord holland u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-89	-0.09804731607437134	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge brandwaarborg maatschappij noord holland u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-89	-0.0802 -0.0807 -0.0866 -0.0706 -0.0777 -0.0801 -0.0779 -0.0722 -0.5696 -0.1966 -0.0510 -0.0243 -0.0191 -0.0156 -0.0791 -0.0705 -0.0777 -0.1124 -0.0884 -0.0688 -0.0802 -0.0776
+A-89	11-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 4-9 4-10 11-11 10-12 11-13 0-14 4-15 0-16 3-17 3-18 4-19 0-20
+S-90	country <unk> <unk> number of aegon spaarkas n.v. ?
+W-90	0.442	seconds
+H-90	-0.07274863123893738	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l aegon spaarkas n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-90	-0.07274863123893738	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l aegon spaarkas n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-90	-0.0785 -0.0768 -0.0905 -0.0680 -0.0751 -0.0818 -0.0753 -0.0710 -0.0202 -0.0264 -0.0707 -0.0770 -0.0693 -0.0794 -0.1095 -0.0889 -0.0669 -0.0789 -0.0781
+A-90	7-0 0-1 3-2 0-3 8-4 0-5 0-6 7-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-91	country <unk> <unk> number of centrale ziektekostenverzekering nzv n.v. ?
+W-91	0.451	seconds
+H-91	-0.07798101752996445	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l centrale ziektekostenverzekering nzv n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-91	-0.07798101752996445	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l centrale ziektekostenverzekering nzv n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-91	-0.0794 -0.0802 -0.0875 -0.0703 -0.0753 -0.0805 -0.0755 -0.0719 -0.0724 -0.1101 -0.0315 -0.0704 -0.0781 -0.0695 -0.0783 -0.1149 -0.0892 -0.0672 -0.0771 -0.0804
+A-91	9-0 9-1 3-2 0-3 9-4 0-5 9-6 9-7 6-8 9-9 9-10 9-11 4-12 4-13 0-14 3-15 3-16 4-17 9-18
+S-92	country <unk> <unk> number of eno aanvullende verzekeringen n.v. ?
+W-92	0.468	seconds
+H-92	-0.08361974358558655	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l eno aanvullende verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-92	-0.08361974358558655	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l eno aanvullende verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-92	-0.0782 -0.0781 -0.0859 -0.0663 -0.0753 -0.0816 -0.0761 -0.0700 -0.0232 -0.2978 -0.0292 -0.0701 -0.0779 -0.0702 -0.0800 -0.1012 -0.0887 -0.0677 -0.0774 -0.0774
+A-92	9-0 0-1 3-2 0-3 0-4 0-5 0-6 9-7 9-8 9-9 8-10 9-11 9-12 9-13 0-14 3-15 3-16 9-17 9-18
+S-93	country <unk> <unk> number of eerste friesche onderlinge paarden verzekeringsmaatschappij u.a. ?
+W-93	0.524	seconds
+H-93	-0.08854549378156662	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l eerste friesche onderlinge paarden verzekeringsmaatschappij u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-93	-0.08854549378156662	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l eerste friesche onderlinge paarden verzekeringsmaatschappij u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-93	-0.0831 -0.0829 -0.0903 -0.0715 -0.0784 -0.0828 -0.0755 -0.0740 -0.0111 -0.0452 -0.4904 -0.0608 -0.0180 -0.0150 -0.0829 -0.0717 -0.0800 -0.1057 -0.0952 -0.0701 -0.0798 -0.0837
+A-93	11-0 0-1 3-2 0-3 11-4 0-5 0-6 11-7 7-8 10-9 7-10 11-11 4-12 11-13 11-14 4-15 0-16 3-17 3-18 4-19 11-20
+S-94	country <unk> <unk> number of uk p &amp; i club n.v. ?
+W-94	0.437	seconds
+H-94	-0.5184471011161804	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l unilever insurances n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-94	-0.5184471011161804	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l unilever insurances n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-94	-0.0793 -0.0812 -0.0878 -0.0713 -0.0782 -0.0828 -0.0762 -0.0734 -7.1569 -1.3256 -0.0732 -0.0815 -0.0723 -0.0811 -0.1070 -0.0898 -0.0692 -0.0803 -0.0834
+A-94	10-0 0-1 3-2 0-3 10-4 0-5 0-6 0-7 10-8 10-9 10-10 10-11 10-12 0-13 3-14 3-15 10-16 10-17
+S-95	country <unk> <unk> number of anderzorg n.v. ?
+W-95	0.451	seconds
+H-95	-0.07730434089899063	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l anderzorg n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-95	-0.07730434089899063	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l anderzorg n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-95	-0.0792 -0.0798 -0.0892 -0.0712 -0.0773 -0.0832 -0.0772 -0.0705 -0.0239 -0.0713 -0.0789 -0.0708 -0.0816 -0.1178 -0.0929 -0.0677 -0.0794 -0.0797
+A-95	6-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 6-8 6-9 6-10 6-11 0-12 3-13 3-14 6-15 7-16
+S-96	country <unk> <unk> number of nn re netherlands n.v. ?
+W-96	0.482	seconds
+H-96	-0.07390885800123215	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l nn re netherlands n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-96	-0.07390885800123215	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l nn re netherlands n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-96	-0.0786 -0.0804 -0.0895 -0.0713 -0.0771 -0.0820 -0.0745 -0.0721 -0.0329 -0.0447 -0.0396 -0.0715 -0.0799 -0.0693 -0.0800 -0.1161 -0.0932 -0.0677 -0.0784 -0.0796
+A-96	9-0 0-1 3-2 0-3 9-4 0-5 0-6 0-7 6-8 9-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-97	country <unk> <unk> number of n.v. verzekeringsbedrijf groot amsterdam vga ?
+W-97	0.484	seconds
+H-97	-0.06741175800561905	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v verzekeringsbedrijf groot amsterdam vga quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-97	-0.06741175800561905	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v verzekeringsbedrijf groot amsterdam vga quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-97	-0.0800 -0.0772 -0.0930 -0.0721 -0.0768 -0.0816 -0.0793 -0.0703 -0.0157 -0.0424 -0.0107 -0.0260 -0.0236 -0.0798 -0.0683 -0.0788 -0.1200 -0.0952 -0.0667 -0.0796 -0.0785
+A-97	10-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 6-8 5-9 10-10 10-11 10-12 10-13 10-14 0-15 3-16 3-17 5-18 10-19
+S-98	country <unk> <unk> number of univé het groene hart brandverzekeraar n.v. ?
+W-98	0.534	seconds
+H-98	-0.07958877086639404	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé het groene hart brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-98	-0.07958877086639404	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé het groene hart brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-98	-0.0785 -0.0796 -0.0890 -0.0725 -0.0745 -0.0800 -0.0750 -0.0714 -0.0463 -0.2297 -0.0238 -0.0195 -0.0800 -0.0726 -0.0788 -0.0693 -0.0785 -0.1170 -0.0901 -0.0672 -0.0774 -0.0804
+A-98	11-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 10-8 10-9 10-10 10-11 10-12 10-13 10-14 10-15 0-16 3-17 3-18 10-19 11-20
+S-99	country <unk> <unk> number of waard schade n.v. ?
+W-99	0.426	seconds
+H-99	-0.07184502482414246	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l waard schade n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-99	-0.07184502482414246	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l waard schade n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-99	-0.0766 -0.0794 -0.0863 -0.0691 -0.0747 -0.0808 -0.0742 -0.0707 -0.0242 -0.0209 -0.0677 -0.0779 -0.0688 -0.0795 -0.1063 -0.0881 -0.0667 -0.0754 -0.0778
+A-99	7-0 0-1 3-2 0-3 8-4 0-5 0-6 7-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-100	country <unk> <unk> number of actua schadeverzekering n.v. ?
+W-100	0.448	seconds
+H-100	-0.07595807313919067	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l actua schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-100	-0.07595807313919067	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l actua schadeverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-100	-0.0822 -0.0818 -0.0880 -0.0720 -0.0769 -0.0818 -0.0765 -0.0727 -0.0515 -0.0292 -0.0723 -0.0799 -0.0698 -0.0802 -0.1114 -0.0907 -0.0672 -0.0788 -0.0804
+A-100	7-0 8-1 3-2 0-3 8-4 0-5 8-6 7-7 7-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-101	country <unk> <unk> number of n.v. univé her ?
+W-101	0.459	seconds
+H-101	-0.07498041540384293	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v univé her quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-101	-0.07498041540384293	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v univé her quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-101	-0.0805 -0.0772 -0.0942 -0.0734 -0.0791 -0.0825 -0.0779 -0.0694 -0.0155 -0.0536 -0.0493 -0.0757 -0.0675 -0.0788 -0.1292 -0.0969 -0.0660 -0.0787 -0.0794
+A-101	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 2-8 8-9 8-10 4-11 4-12 0-13 3-14 3-15 4-16 8-17
+S-102	country <unk> <unk> number of zilveren kruis zorgverzekeringen n.v. ?
+W-102	0.515	seconds
+H-102	-0.06988793611526489	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l zilveren kruis zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-102	-0.06988793611526489	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l zilveren kruis zorgverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-102	-0.0796 -0.0786 -0.0878 -0.0702 -0.0757 -0.0810 -0.0754 -0.0692 -0.0164 -0.0189 -0.0204 -0.0710 -0.0771 -0.0679 -0.0781 -0.1145 -0.0959 -0.0662 -0.0754 -0.0787
+A-102	9-0 9-1 3-2 0-3 9-4 0-5 0-6 9-7 6-8 9-9 8-10 9-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-103	country <unk> <unk> number of lifetri verzekeringen n.v. ?
+W-103	0.482	seconds
+H-103	-0.0737045630812645	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l lifetri verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-103	-0.0737045630812645	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l lifetri verzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-103	-0.0781 -0.0788 -0.0863 -0.0680 -0.0746 -0.0817 -0.0748 -0.0701 -0.0238 -0.0454 -0.0690 -0.0793 -0.0708 -0.0797 -0.1053 -0.0916 -0.0681 -0.0769 -0.0779
+A-103	8-0 0-1 3-2 0-3 8-4 0-5 0-6 0-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-104	country <unk> <unk> number of onderlinge verzekeringmaatschappij som u.a. ?
+W-104	0.474	seconds
+H-104	-0.11639159917831421	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringmaatschappij som u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-104	-0.11639159917831421	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringmaatschappij som u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-104	-0.0792 -0.0769 -0.0888 -0.0720 -0.0744 -0.0805 -0.0762 -0.0691 -0.6249 -0.3611 -0.0498 -0.0124 -0.0804 -0.0688 -0.0778 -0.1131 -0.0978 -0.0674 -0.0782 -0.0790
+A-104	4-0 0-1 3-2 0-3 4-4 0-5 0-6 0-7 5-8 4-9 4-10 4-11 4-12 4-13 0-14 3-15 3-16 4-17 9-18
+S-105	country <unk> <unk> number of blue square re n.v. ?
+W-105	0.473	seconds
+H-105	-0.07443664222955704	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l blue square re n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-105	-0.07443664222955704	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l blue square re n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-105	-0.0795 -0.0838 -0.0889 -0.0730 -0.0785 -0.0833 -0.0762 -0.0726 -0.0261 -0.0355 -0.0460 -0.0739 -0.0827 -0.0719 -0.0816 -0.1094 -0.0921 -0.0700 -0.0808 -0.0828
+A-105	9-0 9-1 3-2 0-3 9-4 0-5 0-6 8-7 5-8 8-9 9-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-106	country <unk> <unk> number of onderlinge waarborgmaatschappij centrale zorgverzekeraars groep zorgverzekeraar u.a. ?
+W-106	0.522	seconds
+H-106	-0.2736581861972809	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centrale zorgverzekeraars groep zorgverzekeraar u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-106	-0.2736581861972809	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge waarborgmaatschappij centrale zorgverzekeraars groep zorgverzekeraar u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-106	-0.0819 -0.0824 -0.0880 -0.0746 -0.0785 -0.0821 -0.0762 -0.0739 -0.6481 -2.7817 -1.4364 -0.0594 -0.0214 -0.0278 -0.0131 -0.0830 -0.0702 -0.0792 -0.1155 -0.0917 -0.0686 -0.0780 -0.0825
+A-106	12-0 12-1 3-2 0-3 12-4 0-5 11-6 12-7 5-8 4-9 4-10 11-11 11-12 4-13 12-14 11-15 4-16 0-17 3-18 3-19 4-20 11-21
+S-107	country <unk> <unk> number of yarden uitvaartverzekeringen n.v. ?
+W-107	0.498	seconds
+H-107	-0.07375817745923996	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l yarden uitvaartverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-107	-0.07375817745923996	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l yarden uitvaartverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-107	-0.0797 -0.0807 -0.0910 -0.0709 -0.0762 -0.0828 -0.0778 -0.0729 -0.0262 -0.0199 -0.0699 -0.0775 -0.0688 -0.0808 -0.1114 -0.0908 -0.0672 -0.0772 -0.0796
+A-107	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 7-8 7-9 8-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-108	country <unk> <unk> number of n.v. levensverzekering-maatschappij de hoop ?
+W-108	0.457	seconds
+H-108	-0.07928787916898727	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v levensverzekering-maatschappij de hoop quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-108	-0.07928787916898727	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v levensverzekering-maatschappij de hoop quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-108	-0.0808 -0.0784 -0.0903 -0.0740 -0.0772 -0.0827 -0.0761 -0.0725 -0.0454 -0.1234 -0.0395 -0.0755 -0.0806 -0.0703 -0.0804 -0.1194 -0.0929 -0.0680 -0.0788 -0.0796
+A-108	9-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 9-9 9-10 9-11 4-12 4-13 0-14 3-15 3-16 4-17 9-18
+S-109	country <unk> <unk> number of n.v. schadeverzekeringsmaatschappij maas lloyd ?
+W-109	0.485	seconds
+H-109	-0.06834529340267181	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v schadeverzekeringsmaatschappij maas lloyd quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-109	-0.06834529340267181	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v schadeverzekeringsmaatschappij maas lloyd quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-109	-0.0794 -0.0751 -0.0887 -0.0703 -0.0739 -0.0801 -0.0720 -0.0694 -0.0559 -0.0239 -0.0141 -0.0136 -0.0791 -0.0675 -0.0779 -0.1165 -0.0903 -0.0654 -0.0781 -0.0757
+A-109	9-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 5-9 8-10 5-11 4-12 4-13 0-14 3-15 3-16 4-17 9-18
+S-110	country <unk> <unk> number of univé stad en land brandverzekeraar n.v. ?
+W-110	0.560	seconds
+H-110	-0.08239444345235825	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé stad en land brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-110	-0.08239444345235825	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé stad en land brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-110	-0.0803 -0.0790 -0.0898 -0.0712 -0.0786 -0.0814 -0.0764 -0.0721 -0.0400 -0.2423 -0.0494 -0.0393 -0.0822 -0.0720 -0.0780 -0.0689 -0.0787 -0.1158 -0.0912 -0.0671 -0.0789 -0.0799
+A-110	10-0 0-1 3-2 0-3 10-4 0-5 0-6 0-7 6-8 6-9 10-10 6-11 10-12 10-13 10-14 10-15 0-16 3-17 3-18 10-19 10-20
+S-111	country <unk> <unk> number of onderlinge verzekerings-maatschappij noord nederlandsche p &amp; i club u.a. ?
+W-111	0.552	seconds
+H-111	-0.2170724868774414	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-111	-0.2170724868774414	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekering maatschappij donatus u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-111	-0.0778 -0.0778 -0.0887 -0.0686 -0.0759 -0.0808 -0.0740 -0.0710 -0.5884 -0.3179 -0.0502 -2.3238 -0.0121 -0.0765 -0.0682 -0.0782 -0.1066 -0.0955 -0.0674 -0.0787 -0.0806
+A-111	4-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 10-9 4-10 13-11 4-12 4-13 4-14 0-15 3-16 3-17 4-18 0-19
+S-112	country <unk> <unk> number of n.v. univé schade ?
+W-112	0.508	seconds
+H-112	-0.07792787253856659	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v univé schade quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-112	-0.07792787253856659	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v univé schade quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-112	-0.0808 -0.0786 -0.0944 -0.0751 -0.0790 -0.0817 -0.0757 -0.0710 -0.0184 -0.0680 -0.0919 -0.0780 -0.0678 -0.0784 -0.1212 -0.0952 -0.0662 -0.0791 -0.0801
+A-112	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 8-9 8-10 4-11 4-12 0-13 3-14 3-15 4-16 8-17
+S-113	country <unk> <unk> number of n.v. noordhollandsche van 1816 levensverzekeringsmaatschappij ?
+W-113	0.457	seconds
+H-113	-0.07057897001504898	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v noordhollandsche van 1816 levensverzekeringsmaatschappij quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-113	-0.07057897001504898	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l n_v noordhollandsche van 1816 levensverzekeringsmaatschappij quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-113	-0.0796 -0.0775 -0.0903 -0.0726 -0.0761 -0.0820 -0.0772 -0.0693 -0.0189 -0.1168 -0.0158 -0.0117 -0.0194 -0.0771 -0.0692 -0.0782 -0.1305 -0.0949 -0.0663 -0.0779 -0.0809
+A-113	10-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 9-8 9-9 9-10 9-11 9-12 5-13 5-14 0-15 3-16 3-17 5-18 10-19
+S-114	country <unk> <unk> number of univé dichtbij brandverzekeraar n.v. ?
+W-114	0.493	seconds
+H-114	-0.07469438761472702	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé dichtbij brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-114	-0.07469438761472702	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé dichtbij brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-114	-0.0802 -0.0813 -0.0867 -0.0704 -0.0788 -0.0811 -0.0783 -0.0726 -0.0375 -0.0205 -0.0737 -0.0748 -0.0778 -0.0708 -0.0794 -0.1132 -0.0886 -0.0687 -0.0792 -0.0802
+A-114	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+S-115	country <unk> <unk> number of asr basis ziektekostenverzekeringen n.v. ?
+W-115	0.434	seconds
+H-115	-0.07466672360897064	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l asr basis ziektekostenverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-115	-0.07466672360897064	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l asr basis ziektekostenverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-115	-0.0788 -0.0789 -0.0911 -0.0706 -0.0748 -0.0804 -0.0754 -0.0680 -0.0181 -0.0725 -0.0519 -0.0747 -0.0773 -0.0704 -0.0782 -0.1144 -0.0932 -0.0679 -0.0774 -0.0794
+A-115	9-0 0-1 3-2 0-3 9-4 0-5 0-6 0-7 7-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-116	country <unk> <unk> number of dela natura- en levensverzekeringen n.v. ?
+W-116	0.485	seconds
+H-116	-0.0699162632226944	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l dela natura- en levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-116	-0.0699162632226944	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l dela natura- en levensverzekeringen n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-116	-0.0789 -0.0805 -0.0882 -0.0687 -0.0761 -0.0821 -0.0746 -0.0733 -0.0129 -0.0137 -0.0365 -0.0604 -0.0695 -0.0805 -0.0704 -0.0792 -0.1018 -0.0933 -0.0690 -0.0786 -0.0802
+A-116	9-0 0-1 3-2 0-3 9-4 0-5 0-6 9-7 9-8 9-9 9-10 9-11 9-12 9-13 9-14 0-15 3-16 3-17 9-18 9-19
+S-117	country <unk> <unk> number of leidsche verzekering maatschappij n.v. ?
+W-117	0.482	seconds
+H-117	-0.07270368933677673	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l leidsche verzekering maatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-117	-0.07270368933677673	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l leidsche verzekering maatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-117	-0.0787 -0.0797 -0.0903 -0.0710 -0.0774 -0.0817 -0.0761 -0.0712 -0.0268 -0.0148 -0.0526 -0.0731 -0.0773 -0.0706 -0.0786 -0.1136 -0.0927 -0.0689 -0.0796 -0.0795
+A-117	8-0 0-1 3-2 0-3 8-4 0-5 0-6 0-7 8-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+S-118	country <unk> <unk> number of e.o.c. onderlinge schepenverzekering u.a. ?
+W-118	0.479	seconds
+H-118	-0.09587553143501282	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l e.o.c sep_dot onderlinge schepenverzekering u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-118	-0.09587553143501282	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l e.o.c sep_dot onderlinge schepenverzekering u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-118	-0.0811 -0.0790 -0.0889 -0.0702 -0.0763 -0.0803 -0.0770 -0.0735 -0.0253 -0.0699 -0.4787 -0.1493 -0.0168 -0.0791 -0.0702 -0.0757 -0.1083 -0.0898 -0.0685 -0.0747 -0.0807
+A-118	9-0 0-1 3-2 0-3 9-4 0-5 9-6 9-7 6-8 9-9 6-10 9-11 9-12 9-13 4-14 0-15 3-16 3-17 4-18 9-19
+S-119	country <unk> <unk> number of robein leven n.v. ?
+W-119	0.445	seconds
+H-119	-0.0757739245891571	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l robein leven n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-119	-0.0757739245891571	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l robein leven n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-119	-0.0818 -0.0827 -0.0902 -0.0716 -0.0769 -0.0824 -0.0785 -0.0717 -0.0352 -0.0194 -0.0770 -0.0795 -0.0707 -0.0811 -0.1160 -0.0933 -0.0684 -0.0818 -0.0816
+A-119	8-0 0-1 3-2 0-3 8-4 0-5 0-6 0-7 6-8 8-9 8-10 4-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-120	country <unk> <unk> number of samenwerking glasverzekering n.v. ?
+W-120	0.444	seconds
+H-120	-0.07642938196659088	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l samenwerking glasverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-120	-0.07642938196659088	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l samenwerking glasverzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-120	-0.0773 -0.0792 -0.0929 -0.0728 -0.0747 -0.0823 -0.0756 -0.0696 -0.0474 -0.0367 -0.0701 -0.0786 -0.0715 -0.0806 -0.1176 -0.0981 -0.0679 -0.0802 -0.0789
+A-120	7-0 0-1 3-2 0-3 7-4 0-5 0-6 7-7 5-8 7-9 7-10 7-11 7-12 0-13 3-14 3-15 7-16 7-17
+S-121	country <unk> <unk> number of das nederlandse rechtsbijstand verzekeringmaatschappij n.v. ?
+W-121	0.483	seconds
+H-121	-0.07206615060567856	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l das nederlandse rechtsbijstand verzekeringmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-121	-0.07206615060567856	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l das nederlandse rechtsbijstand verzekeringmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-121	-0.0796 -0.0775 -0.0886 -0.0710 -0.0752 -0.0816 -0.0781 -0.0695 -0.0646 -0.0556 -0.0122 -0.0252 -0.0708 -0.0776 -0.0693 -0.0786 -0.1204 -0.0932 -0.0676 -0.0776 -0.0797
+A-121	9-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 5-8 5-9 5-10 5-11 9-12 9-13 9-14 0-15 3-16 3-17 9-18 9-19
+S-122	country <unk> <unk> number of onderlinge verzekeringsmaatschappij de veenhoop u.a. ?
+W-122	0.465	seconds
+H-122	-0.09642951935529709	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij de veenhoop u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-122	-0.09642951935529709	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onderlinge verzekeringsmaatschappij de veenhoop u_a quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-122	-0.0830 -0.0830 -0.0913 -0.0744 -0.0770 -0.0838 -0.0769 -0.0747 -0.5756 -0.0427 -0.0372 -0.0413 -0.0163 -0.0807 -0.0710 -0.0816 -0.1087 -0.0950 -0.0701 -0.0789 -0.0821
+A-122	10-0 0-1 3-2 0-3 10-4 0-5 0-6 0-7 5-8 4-9 10-10 9-11 10-12 10-13 10-14 0-15 3-16 3-17 10-18 10-19
+S-123	country <unk> <unk> number of univé oost brandverzekeraar n.v. ?
+W-123	0.494	seconds
+H-123	-0.08528687059879303	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé oost brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-123	-0.08528687059879303	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l univé oost brandverzekeraar n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-123	-0.0787 -0.0855 -0.0901 -0.0746 -0.0809 -0.0834 -0.0793 -0.0759 -0.1199 -0.0097 -0.1767 -0.0781 -0.0826 -0.0707 -0.0818 -0.1138 -0.0922 -0.0691 -0.0800 -0.0828
+A-123	8-0 0-1 3-2 0-3 0-4 0-5 0-6 0-7 8-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+S-124	country <unk> <unk> number of anker insurance company n.v. ?
+W-124	0.472	seconds
+H-124	-0.07834945619106293	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l anker insurance company n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-124	-0.07834945619106293	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l anker insurance company n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-124	-0.0794 -0.0794 -0.0878 -0.0711 -0.0756 -0.0816 -0.0750 -0.0704 -0.0553 -0.0585 -0.0966 -0.0716 -0.0794 -0.0719 -0.0794 -0.1104 -0.0979 -0.0681 -0.0791 -0.0785
+A-124	9-0 9-1 3-2 0-3 9-4 0-5 0-6 9-7 9-8 8-9 9-10 9-11 8-12 8-13 0-14 3-15 3-16 8-17 9-18
+S-125	country <unk> <unk> number of national academic verzekeringsmaatschappij n.v. ?
+W-125	0.439	seconds
+H-125	-0.07621579617261887	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l national academic verzekeringsmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-125	-0.07621579617261887	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l national academic verzekeringsmaatschappij n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-125	-0.0841 -0.0847 -0.0909 -0.0746 -0.0770 -0.0852 -0.0779 -0.0743 -0.0564 -0.0388 -0.0309 -0.0742 -0.0817 -0.0721 -0.0823 -0.1093 -0.0963 -0.0708 -0.0809 -0.0821
+A-125	4-0 8-1 3-2 0-3 8-4 0-5 4-6 4-7 8-8 8-9 4-10 8-11 4-12 8-13 0-14 3-15 3-16 8-17 4-18
+S-126	country <unk> <unk> number of scildon n.v. ?
+W-126	0.404	seconds
+H-126	-0.07743775844573975	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l scildon n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-126	-0.07743775844573975	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l scildon n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-126	-0.0774 -0.0786 -0.0895 -0.0716 -0.0762 -0.0803 -0.0768 -0.0702 -0.0530 -0.0735 -0.0786 -0.0697 -0.0785 -0.1052 -0.0909 -0.0675 -0.0783 -0.0783
+A-126	7-0 7-1 3-2 0-3 7-4 0-5 0-6 7-7 7-8 6-9 6-10 6-11 0-12 3-13 3-14 6-15 7-16
+S-127	country <unk> <unk> number of oom global care n.v. ?
+W-127	0.481	seconds
+H-127	-0.07648271322250366	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l oom global care n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-127	-0.07648271322250366	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l oom global care n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-127	-0.0797 -0.0781 -0.0891 -0.0717 -0.0756 -0.0812 -0.0776 -0.0703 -0.0587 -0.0330 -0.0649 -0.0708 -0.0787 -0.0713 -0.0796 -0.1280 -0.0948 -0.0681 -0.0798 -0.0788
+A-127	9-0 9-1 3-2 0-3 9-4 0-5 9-6 9-7 5-8 5-9 4-10 9-11 4-12 4-13 0-14 3-15 3-16 4-17 5-18
+S-128	country <unk> <unk> number of enel insurance n.v. ?
+W-128	0.452	seconds
+H-128	-0.07423313707113266	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l enel insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-128	-0.07423313707113266	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l enel insurance n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-128	-0.0791 -0.0789 -0.0877 -0.0704 -0.0754 -0.0824 -0.0727 -0.0711 -0.0309 -0.0392 -0.0687 -0.0804 -0.0709 -0.0808 -0.1041 -0.0928 -0.0685 -0.0776 -0.0787
+A-128	8-0 0-1 3-2 0-3 8-4 0-5 0-6 0-7 7-8 7-9 8-10 7-11 7-12 0-13 3-14 3-15 7-16 8-17
+S-129	country <unk> <unk> number of onvz aanvullende verzekering n.v. ?
+W-129	0.482	seconds
+H-129	-0.06956298649311066	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onvz aanvullende verzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+D-129	-0.06956298649311066	SELECT DISTINCT var_a WHERE brack_open var_e eiopa_base_hasIdentifyingName quot_mark_l onvz aanvullende verzekering n_v quot_mark_r sep_dot var_e eiopa_base_hasInsuranceUndertakingID var_a sep_dot brack_close
+P-129	-0.0786 -0.0771 -0.0885 -0.0689 -0.0745 -0.0809 -0.0756 -0.0707 -0.0222 -0.0281 -0.0162 -0.0680 -0.0768 -0.0680 -0.0781 -0.1075 -0.0902 -0.0665 -0.0769 -0.0780
+A-129	8-0 8-1 3-2 0-3 8-4 0-5 0-6 8-7 6-8 8-9 8-10 8-11 8-12 8-13 0-14 3-15 3-16 8-17 8-18
+2021-06-30 20:33:40 | INFO | fairseq_cli.interactive | Total time: 63.053 seconds; translation time: 61.655
