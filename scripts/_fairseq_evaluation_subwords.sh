@@ -43,10 +43,10 @@ if [ -n "$4" ]
     then ID_MODEL=$4
 fi
 CHECKPOINT_BEST_BLEU=$(find $MODEL_DIR -name 'checkpoint.best_bleu_*.pt')
-BPE_CODES=$IN_DIR/$ID-bpe.codes
 ALIGN_FILE=$DATA_BIN/alignment.nl-ql.txt
 DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
 IN_DIR=$WORK_DIR/data/eiopa/5_model_input/data_$ID # model input folder adapted to subfolder
+BPE_CODES=$IN_DIR/$ID-bpe.codes
 
 mkdir -p $OUT_DIR
 
