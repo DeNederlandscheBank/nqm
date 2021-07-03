@@ -1,0 +1,17 @@
+SUMMARY OF RESULTS 
+decoded-test_1.txt:
+SacreBLEU score: 93.07; Name match accuracy: 0.7273; Mean String Similarity Score: 0.993688
+decoded-test_1.txt:
+Query Result Accuracy: 0.5378, correct: 313, false: 269
+decoded-test_2.txt:
+SacreBLEU score: 39.48; Name match accuracy: 0.0000; Mean String Similarity Score: 0.941008
+decoded-test_2.txt:
+Query Result Accuracy: 0.0000, correct: 0, false: 65
+decoded-test_3.txt:
+SacreBLEU score: 98.41; Name match accuracy: 0.8419; Mean String Similarity Score: 0.998416
+decoded-test_3.txt:
+Query Result Accuracy: 0.8084, correct: 460, false: 109
+decoded-test_4.txt:
+SacreBLEU score: 99.69; Name match accuracy: 0.9966; Mean String Similarity Score: 0.999803
+decoded-test_4.txt:
+Query Result Accuracy: 0.9708, correct: 566, false: 17
