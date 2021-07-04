@@ -10,11 +10,26 @@ model files in the correct directory.
 import argparse
 import glob
 import os
+import re
 from os.path import join, split
 
 from fairseq.models.transformer import TransformerModel
+from sacremoses import MosesTokenizer
 
-from src.generator_utils import sparql_decode
+try:
+    from src.generator import initialize_graph, query_database
+    from src.generator_utils import sparql_decode
+    from src.pg_postprocess import replace_oovs
+    from src.pg_preprocess import replace_oov_input, remove_counts_vocabulary
+except ImportError:
+    # noinspection PyUnresolvedReferences
+    from nqm.src.generator import initialize_graph, query_database
+    from nqm.src.generator_utils import sparql_decode
+    from nqm.src.pg_postprocess import replace_oovs
+    from nqm.src.pg_preprocess import replace_oov_input, \
+        remove_counts_vocabulary
+
+GRAPH_DIR = join('data', 'eiopa', '1_external')
 
 OPTIONS = {
     'a': 'ALPHA',
@@ -55,7 +70,10 @@ def get_model_directory(model_option):
     """
     :return: path to model files
      """
-    return join("models", model_option, "")
+    if split(os.getcwd())[1] == 'src':
+        return join("..", "models", model_option, "")
+    else:
+        return join("models", model_option, "")
 
 
 def get_checkpoint_file(path, checkpoint):
@@ -80,6 +98,7 @@ def get_checkpoint_file(path, checkpoint):
 
 
 def get_model(choice, checkpoint_choice=None):
+    print("Model is loading...")
     option = OPTIONS.get(str.lower(choice))
     assert option is not None, "Recheck if you gave a valid value for '--model'"
     model_type = MODELS.get(option)
@@ -112,6 +131,7 @@ def get_model(choice, checkpoint_choice=None):
             data_name_or_path=model_path,
             eval_bleu=False
         )
+        return model, model_path
     elif model_type == 'xlmr':
         model = TransformerModel.from_pretrained(
             model_path,
@@ -128,25 +148,76 @@ def get_model(choice, checkpoint_choice=None):
             checkpoint_file=checkpoint,
             eval_bleu=False
         )
-    return model
+    print('Model loading finished!')
+    return model, None
 
 
-def translate(question, model):
+def translate(question, model, path):
     encoded_sparql = model.translate(question)
     decoded_sparql = sparql_decode(encoded_sparql)
     return decoded_sparql
 
 
-def main(model_choice, checkpoint_choice, query_choice):
-    model = get_model(model_choice, checkpoint_choice)
+def translate_and_query(question, model, graph, path):
+    if path is not None:
+        sparql = translate_pointer_generator(question, model, path)
+    else:
+        sparql = translate(question, model, path)
+    results = query_database(sparql, graph)
+    names = re.findall(r'"(.*?)"', sparql)
+    name_string = ' and '.join(names)
+    return results, sparql, name_string
+
+
+def translate_pointer_generator(question, model, path):
+    tokenizer = MosesTokenizer(lang='en')
+
+    with open(path + '/dict.nl.txt', encoding="utf-8") as vocab:
+        vocabulary_with_numbers = vocab.read().splitlines()
+    vocab = remove_counts_vocabulary(vocabulary_with_numbers)
+
+    question_preprocessed = replace_oov_input(question, vocab, tokenizer)
+    encoded_sparql = model.translate(question_preprocessed)
+    sparql_postprocessed = replace_oovs(encoded_sparql, question,
+                                        interactive=True)[0]
+    sparql = sparql_decode(sparql_postprocessed)
+    return sparql
+
+
+def main_translate(model_choice, checkpoint_choice):
+    model, model_path = get_model(model_choice, checkpoint_choice)
+    if model_path is not None:
+        translate_function = translate_pointer_generator
+    else:
+        translate_function = translate
     try:
         while True:
             source_raw = input("\tUse Ctr+C to close the prompt\n"
                                "Enter the sequence to be translated:\n")
-            translation = translate(source_raw,model)
+            translation = translate_function(source_raw, model, model_path)
             print(translation + "\n")
     except KeyboardInterrupt:
-        print("\t Receveived Keyboard Interrupt\nFinishing the process")
+        print("\t Received Keyboard Interrupt\nFinishing the process")
+
+
+def main_translate_query(model_choice, checkpoint_choice, graph):
+    model, model_path = get_model(model_choice, checkpoint_choice)
+    try:
+        while True:
+            source_raw = input("\tUse Ctr+C to close the prompt\n"
+                               "Enter your question:\n")
+            results, query, _ = translate_and_query(source_raw, model, graph,
+                                                    model_path)
+            if results:
+                for result in results:
+                    result_string = ', '.join(result)
+            else:
+                result_string = 'no result'
+            print("Translation: " + query)
+            print("Result: " + result_string + "\n")
+    except KeyboardInterrupt:
+        print("\t Received Keyboard Interrupt\nFinishing the process")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -156,7 +227,14 @@ if __name__ == "__main__":
     parser.add_argument('--checkpoint', dest='checkpoint_choice',
                         help='indicate which checkpoint to use if multiple '
                              'present', required=False)
-    parser.add_argument('--query', dest='choice_query',
+    parser.add_argument('--query-database', dest='choice_query',
                         action='store_true', required=False)
     args = parser.parse_args()
-    main(args.chosen_model, args.checkpoint_choice, args.choice_query)
+    if args.choice_query is True:
+        if split(os.getcwd())[1] == 'src':
+            GRAPH_DIR = join("..", GRAPH_DIR)
+        graph_database = initialize_graph(GRAPH_DIR)
+        main_translate_query(args.chosen_model, args.checkpoint_choice,
+                             graph_database)
+    else:
+        main_translate(args.chosen_model, args.checkpoint_choice)
