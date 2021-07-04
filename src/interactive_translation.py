@@ -86,7 +86,7 @@ def get_checkpoint_file(path, checkpoint):
         file_list = glob.glob(path + "/*.pt")
         if not file_list:
             raise AssertionError("Please ensure a checkpoint file (.pt)"
-                                 " is present")
+                                 f" is present in folder {path}")
         elif len(file_list) > 1:
             raise AssertionError(
                 "Multiple checkpoint files present. Either ensure only 1 "
