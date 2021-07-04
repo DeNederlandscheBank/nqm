@@ -97,12 +97,14 @@ def get_checkpoint_file(path, checkpoint):
             return split(file_list[0])[1]
 
 
-def get_model(choice, checkpoint_choice=None):
+def get_model(choice, checkpoint_choice=None, bot_mode=False):
     print("Model is loading...")
     option = OPTIONS.get(str.lower(choice))
     assert option is not None, "Recheck if you gave a valid value for '--model'"
     model_type = MODELS.get(option)
     model_path = get_model_directory(option)
+    if bot_mode is True:
+        model_path = join("nqm", model_path)
     checkpoint = get_checkpoint_file(model_path, checkpoint_choice)
 
     if model_type == 'subwords':

@@ -34,7 +34,7 @@ try:
         read_template_file, add_quotation_marks
 except ImportError:  # use this when running the bot
     # noinspection PyUnresolvedReferences
-    from nqm.src_eiopa.generator_utils import strip_item, sparql_encode, \
+    from nqm.src.generator_utils import strip_item, sparql_encode, \
         read_template_file, add_quotation_marks
 
 
