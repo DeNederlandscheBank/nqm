@@ -22,7 +22,6 @@ try:
     from src.pg_postprocess import replace_oovs
     from src.pg_preprocess import replace_oov_input, remove_counts_vocabulary
 except ImportError:
-    # noinspection PyUnresolvedReferences
     from nqm.src.generator import initialize_graph, query_database
     from nqm.src.generator_utils import sparql_decode
     from nqm.src.pg_postprocess import replace_oovs
@@ -188,15 +187,18 @@ def translate_pointer_generator(question, model, path):
 
 def main_translate(model_choice, checkpoint_choice):
     model, model_path = get_model(model_choice, checkpoint_choice)
+    # model_path is only returned when using pointer-generator style model
+    # otherwise None is returned
     if model_path is not None:
-        translate_function = translate_pointer_generator
+        # ensure correct function is used
+        translate_func = translate_pointer_generator
     else:
-        translate_function = translate
+        translate_func = translate
     try:
         while True:
             source_raw = input("\tUse Ctr+C to close the prompt\n"
                                "Enter the sequence to be translated:\n")
-            translation = translate_function(source_raw, model, model_path)
+            translation = translate_func(source_raw, model, model_path)
             print(translation + "\n")
     except KeyboardInterrupt:
         print("\t Received Keyboard Interrupt\nFinishing the process")
