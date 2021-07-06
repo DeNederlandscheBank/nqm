@@ -36,9 +36,9 @@ ID=$(date +"%d-%m_%H-%M")_"$ID_SHORT"
 echo "Job ID is set at:"
 echo "$ID"
 
-# reverse columns of dict.iwslt.en
-cat $DATA_DIR/dict.iwslt.en |
-    awk '{ print $2 " " $1 }' >$DATA_DIR/dict.iwslt.reversed.en
+## reverse columns of dict.iwslt.en
+#cat $DATA_DIR/dict.iwslt.en |
+#    awk '{ print $2 " " $1 }' >$DATA_DIR/dict.iwslt.reversed.en
 
 echo 'Generating data (train, validation) for NL insurers...'
 python src/generator.py \

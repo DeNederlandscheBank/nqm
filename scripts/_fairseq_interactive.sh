@@ -2,8 +2,8 @@
 
 # This script should be run from root and can be used to check the translation of a particular sentence.
 
-ID=30101
-ID_MODEL=INDIA
+ID=1073
+ID_MODEL=LIMA
 
 MODEL_DIR=models/$ID_MODEL
 IN_DIR=data/eiopa/5_model_input
@@ -14,7 +14,7 @@ DATA_BIN=$IN_DIR/fairseq-data-bin-$ID
 CHECKPOINT_BEST_BLEU=$(find $MODEL_DIR -name 'checkpoint.best_bleu_*.pt')
 
 # XLMR model
-fairseq-interactive $DATA_BIN \
+fairseq-interactive $MODEL_DIR \
     --path $CHECKPOINT_BEST_BLEU  \
     --beam 5 --source-lang nl --target-lang ql \
     --tokenizer moses \

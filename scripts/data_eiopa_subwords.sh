@@ -6,7 +6,7 @@ COPY=YES # set this variable to YES, if the generated files should be directly c
 USE_SUBWORDS=YES # use of subword splitting
 USE_KNOWN_AND_UNKNOWN_NAMES=YES
 BILINGUAL=NO # need 2 version of test templates
-PG=YES
+PG=NO
 EXAMPLES_PER_TEMPLATE=130
 VOCAB_SIZE=15000
 
