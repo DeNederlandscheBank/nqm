@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=7G
-#SBATCH --time=15:00:00
+#SBATCH --time=20:00:00
 #SBATCH --job-name=KILO1
 #SBATCH --output=output-%J.log
 
