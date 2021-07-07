@@ -141,7 +141,7 @@ def get_model(choice, checkpoint_choice=None, bot_mode=False):
             eval_bleu=False,
             bpe='sentencepiece',
             sentencepiece_model='sentencepiece.bpe.xlmr.model',
-            model_overrides={'pretrained_xlm_checkpoint': 'interactive'}
+            pretrained_xlm_checkpoint='interactive'
         )
     else:
         model = TransformerModel.from_pretrained(
