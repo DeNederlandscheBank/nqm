@@ -1,12 +1,6 @@
 [submodule "subword-nmt"]
 	path = subword-nmt
 	url = https://github.com/rsennrich/subword-nmt
-[submodule "fast_align"]
-	path = fast_align
-	url = https://github.com/clab/fast_align.git
 [submodule "fairseq"]
 	path = fairseq
 	url = https://github.com/jm-glowienke/fairseq.git
-[submodule "sentencepiece"]
-	path = sentencepiece
-	url = https://github.com/google/sentencepiece
