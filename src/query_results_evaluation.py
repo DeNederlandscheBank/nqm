@@ -27,6 +27,8 @@ def compare_results(graph, query_pairs):
         try:
             results_reference = query_database(pair[0], graph)
         except Exception:
+            # syntax error in query might lead to error in query
+            # process, breaking the code if not catched by try
             logging.error(f'Error in Reference Query; {pair[0]}')
             continue
         try:
@@ -40,9 +42,10 @@ def compare_results(graph, query_pairs):
         queries_results.append(pair)
         if results_reference and results_generated:
             # value is not [], hence some result was found
-
             # the results are list of list, but we only have on result, hence
             # extracting first element of list
+            # If there are several results, then more these are stored in a
+            # list of list with multiple elements in the inner list
             results_reference = results_reference[0]
             results_generated = results_generated[0]
             for ref_result in results_reference:
@@ -70,6 +73,7 @@ def compare_results(graph, query_pairs):
                              f'{pair[0]}; {pair[1]}; {results_reference};'
                              f' {results_generated}')
     if cnt_correct != 0 or cnt_false != 0:
+        # prevent division by 0
         accuracy = cnt_correct / (cnt_correct + cnt_false)
     else:
         accuracy = 0
@@ -94,6 +98,7 @@ def read_queries(file, interactive=False):
 
 
 def save_query_results(file, result_list):
+    """ Write translation, reference and result to output file """
     with open(file, 'w', encoding='utf-8') as target:
         for line in result_list:
             for item in line[:-1]:
@@ -117,6 +122,7 @@ if __name__ == '__main__':
                         help='file to summarize evaluation results')
     args = parser.parse_args()
 
+    # use the name of the output file for the log file minus the extension
     log_file = f'{args.out_file[:-4]}.log'
     logging.basicConfig(filename=log_file,
                         format='%(levelname)s - %(message)s',

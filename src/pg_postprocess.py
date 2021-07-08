@@ -29,8 +29,8 @@ class OOVIndexError(IndexError):
         self.target_seq = target_seq
 
 
-def replace_oovs(target_in, source_file_in, interactive = False):
-    """
+def replace_oovs(target_in, source_file_in, interactive=False):
+    """ Adapted for interactive use
     Replaces <unk-N> tokens in the target text with the corresponding word in
     the source text.
 

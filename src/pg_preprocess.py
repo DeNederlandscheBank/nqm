@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-# Copyright (c) Facebook, Inc. and its affiliates.
-#
-# https://github.com/pytorch/fairseq/blob/master/examples/pointer_generator/preprocess.py
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
+"""
+This file contains code to preprocess input of a pointer-generator
+translation model, where <unk-N> need to be placed.
+
+Modified by Jan-Marc Glowienke and taken from:
+https://github.com/pytorch/fairseq/blob/master/examples/pointer_generator/preprocess.py
+Copyright (c) Facebook, Inc. and its affiliates.
+
+This source code is licensed under the MIT license found in the
+LICENSE file in the root directory of this source tree.
+"""
 
 import argparse
 from itertools import zip_longest
@@ -53,7 +59,7 @@ def replace_oovs(source_in, target_in, vocabulary, source_out, target_out):
 
 
 def replace_oov_input(source, vocabulary, tokenizer):
-    """
+    """  Marc Glowienke
     replace OOV words by <unk-N> inplace in input sequence
     can be used for interactive translation
     """
@@ -79,7 +85,8 @@ def replace_oov_input(source, vocabulary, tokenizer):
     return ' '.join(source_tokens_out)
 
 
-def remove_counts_vocabulary(vocab):
+def remove_counts_vocabulary(vocab)
+    """ Marc Glowienke, return vocabulary without counts """
     vocabulary = []
     for item in vocab:
         if len(item.split(" ")) > 1:
