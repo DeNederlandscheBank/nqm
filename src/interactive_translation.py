@@ -43,7 +43,8 @@ OPTIONS = {
     'h': 'HOTEL',
     'i': 'INDIA',
     'j': 'JULIETT',
-    'k': 'KILO',
+    'k1': 'KILO1',
+    'k2': 'KILO2',
     'l': 'LIMA'
 }
 
@@ -60,7 +61,8 @@ MODELS = {
     'HOTEL': 'pointer_generator',
     'INDIA': 'subwords',
     'JULIETT': 'subwords',
-    'KILO': None,
+    'KILO1': 'subwords',
+    'KILO2': 'pointer_generator',
     'LIMA': 'xlmr'
 }
 
