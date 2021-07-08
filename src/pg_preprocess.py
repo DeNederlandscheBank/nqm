@@ -85,7 +85,7 @@ def replace_oov_input(source, vocabulary, tokenizer):
     return ' '.join(source_tokens_out)
 
 
-def remove_counts_vocabulary(vocab)
+def remove_counts_vocabulary(vocab):
     """ Marc Glowienke, return vocabulary without counts """
     vocabulary = []
     for item in vocab:
