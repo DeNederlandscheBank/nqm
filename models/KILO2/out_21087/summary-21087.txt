@@ -1,0 +1,33 @@
+SUMMARY OF RESULTS 
+decoded-test_1.txt:
+SacreBLEU score: 93.44; Name match accuracy: 0.7932; Mean String Similarity Score: 0.994949
+decoded-test_1.txt:
+Query Result Accuracy: 0.7509, correct: 437, false: 145
+decoded-test_2.txt:
+SacreBLEU score: 36.66; Name match accuracy: 0.0000; Mean String Similarity Score: 0.943192
+decoded-test_2.txt:
+Query Result Accuracy: 0.0000, correct: 0, false: 64
+decoded-test_3.txt:
+SacreBLEU score: 98.64; Name match accuracy: 0.8705; Mean String Similarity Score: 0.998452
+decoded-test_3.txt:
+Query Result Accuracy: 0.8936, correct: 504, false: 60
+decoded-test_4.txt:
+SacreBLEU score: 99.12; Name match accuracy: 0.9931; Mean String Similarity Score: 0.999338
+decoded-test_4.txt:
+Query Result Accuracy: 0.9174, correct: 533, false: 48
+decoded-test_5.txt:
+SacreBLEU score: 95.14; Name match accuracy: 0.8581; Mean String Similarity Score: 0.996420
+decoded-test_5.txt:
+Query Result Accuracy: 0.7393, correct: 431, false: 152
+decoded-test_6.txt:
+SacreBLEU score: 38.14; Name match accuracy: 0.6462; Mean String Similarity Score: 0.950209
+decoded-test_6.txt:
+Query Result Accuracy: 0.3925, correct: 42, false: 65
+decoded-test_7.txt:
+SacreBLEU score: 96.96; Name match accuracy: 0.8872; Mean String Similarity Score: 0.995010
+decoded-test_7.txt:
+Query Result Accuracy: 0.6885, correct: 389, false: 176
+decoded-test_8.txt:
+SacreBLEU score: 99.19; Name match accuracy: 0.9932; Mean String Similarity Score: 0.999415
+decoded-test_8.txt:
+Query Result Accuracy: 0.9296, correct: 541, false: 41
