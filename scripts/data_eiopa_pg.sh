@@ -141,8 +141,6 @@ echo "Copy shared dict to nl and ql dict for building fairseq dataset..."
   cat $DICT_DIR/dict."$ID".shared > $DICT_DIR/dict-"$ID".nl
   cat $DICT_DIR/dict."$ID".shared > $DICT_DIR/dict-"$ID".ql
 
-#echo 'Learning alignments using script...'
-#. src/learn_alignments.sh $ID
 
 if [ "$COPY" = YES ]; then
   echo 'Copy files to model_input'

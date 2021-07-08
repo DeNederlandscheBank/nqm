@@ -7,7 +7,6 @@ USE_SENTENCEPIECE=YES # use of subword splitting, in this script using sentencep
 BILINGUAL=YES
 USE_KNOWN_AND_UNKNOWN_NAMES=NO
 EXAMPLES_PER_TEMPLATE=130
-VOCAB_SIZE=15000
 
 
 if [ $USE_KNOWN_AND_UNKNOWN_NAMES = YES ]; then
@@ -54,67 +53,6 @@ if [ $BILINGUAL = "YES" ]; then
     --examples-per-template $EXAMPLES_PER_TEMPLATE
 fi
 
-#if [ $USE_KNOWN_AND_UNKNOWN_NAMES = "YES" ]; then
-#  echo 'Generating data (train, validation) for DE insurers...'
-#  python src/generator.py \
-#    --templates $DATA_DIR/templates_DE.csv \
-#    --output $INT_DIR --id "$ID" --type train_val_de \
-#    --graph-data-path $DATA_DIR --input-language en \
-#    --examples-per-template $EXAMPLES_PER_TEMPLATE
-#
-#    if [ $BILINGUAL = "YES" ]; then
-#  echo 'Generating dutch data (train, validation) for DE insurers...'
-#  python src/generator.py \
-#    --templates $DATA_DIR/templates_dutch_DE.csv \
-#    --output $INT_DIR --id "$ID" --type train_val_de \
-#    --graph-data-path $DATA_DIR --input-language nl\
-#    --examples-per-template $EXAMPLES_PER_TEMPLATE
-#  fi
-#
-#  echo "Concatenate files with NL and DE insurance names..."
-#  for L in nl ql; do
-#    cat $INT_DIR/data_"$ID"-train_val_nl.$L $INT_DIR/data_"$ID"-train_val_de.$L > $INT_DIR/data_"$ID"-train_val.$L
-#  done
-#
-#  echo "Create dictionaries and add position markers for OOV words..."
-#  # shellcheck disable=SC2002
-#  cat $INT_DIR/data_"$ID"-train_val_nl.nl  |
-#    tr -s '[:space:]' '\n' | # turns every space into a \n, so every word into new line; several spaces into single one
-#    sort |
-#    uniq -c > $INT_DIR/dict.pg.interim # counts how many duplicate lines there are, returns count before line
-#
-#    cat $INT_DIR/dict.pg.interim $DATA_DIR/dict.iwslt.reversed.en |
-#    sort -k2 |
-#    uniq -f 1 | # filter out double elements
-#    sort -k1,1 -b -n -r -k2 | # sort based on first column, numeric values reversed
-#    head -n "$((VOCAB_SIZE - 4))" | # display first n elements of file
-#    awk '{ print $2 " " $1 }' > $DICT_DIR/dict-"$ID".nl
-#
-#  python subword-nmt/subword_nmt/get_vocab.py \
-#    --input $INT_DIR/data_"$ID"-train_val_nl.ql --output $DICT_DIR/dict-$ID.ql
-#else
-  # rename the train_val files
-  for L in nl ql; do
-    cat $INT_DIR/data_"$ID"-train_val_nl.$L > $INT_DIR/data_"$ID"-train_val.$L
-  done
-#
-#  echo "Create dictionaries using raw input files..."
-#  cat $INT_DIR/data_"$ID"-train_val_nl.nl.raw |
-#    tr -s '[:space:]' '\n' | # turns every space into a \n, so every word into new line; several spaces into single one
-#    sort |
-#    uniq -c > $INT_DIR/dict.pg.interim # counts how many duplicate lines there are, returns count before line
-#
-#    cat $INT_DIR/dict.pg.interim $DATA_DIR/dict.iwslt.reversed.en |
-#    sort -k2 |
-#    uniq -f 1 | # filter out double elements
-#    sort -k1,1 -b -n -r -k2 | # sort based on first column, numeric values reversed
-#    head -n "$((VOCAB_SIZE - 4))" | # display first n elements of file
-#    awk '{ print $2 " " $1 }' > $DICT_DIR/dict-"$ID".nl
-#
-#  python subword-nmt/subword_nmt/get_vocab.py \
-#    --input $INT_DIR/data_"$ID"-train_val_nl.ql.raw --output $DICT_DIR/dict-$ID.ql
-#fi
-#rm $INT_DIR/dict.pg.interim
 
 echo 'Splitting data intro train and validation...'
 python src/splitter.py \
@@ -158,8 +96,6 @@ else
   done
 fi
 
-#echo 'Learning alignments using script...'
-#. src/learn_alignments.sh $ID
 
 if [ "$COPY" = YES ]; then
   echo 'Copy files to model_input'

@@ -153,8 +153,6 @@ if [ $PG = "YES" ]; then
   rm $DICT/dict.shared
 fi
 
-#echo 'Learning alignments using script...'
-#. src/learn_alignments.sh $ID
 
 if [ "$COPY" = YES ]; then
   echo 'Copy files to model_input'
