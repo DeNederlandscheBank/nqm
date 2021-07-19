@@ -27,25 +27,30 @@ to use conda:
 conda env create -f environment_cross_platform.yml
 conda activate fairseq_local
 pip install subword_nmt
-cd fairseq
-pip install --editable ./
-
-# on MacOS:
-# CFLAGS="-stdlib=libc++" pip install --editable ./
+pip install --editable ./fairseq
 ```
 
 When working on this project using MacOS, working with the conda environment
-has been more stable. When you want to use jupyter notebooks, then 'nb_conda'
+has been more stable. When you want to use jupyter notebooks, then `nb_conda`
 has to be installed additionally.
 
 Another option is to use pip together with your favourite virtual environment
 application.
 
     pip install -r requirements.txt
-    pip install fairseq
+    pip install --editable ./fairseq
 
 First installing the 'requirements.txt' including pytorch amongst others and
 then 'fairseq' separately prevents possible issues with Intel OpenMP library.
+
+__Remark__: The source code in this repo is compatible with the version of fairseq from the 
+following repo (<!-- TODO: add Repo -->). This repo has some adjustments for using the replacement, 
+pointer-generator and alignment model.
+Via the Python Package Index, version 0.10.2 is available at the moment. However, in 
+the meantime the storing and saving of checkpoints has been adapted in fairseq and is not
+backwards compatible to 0.10.2. With a 
+new update of the PyPI version, it might be possible to use to the version installed with pip. Please pay attention 
+that for certain models, the corresponding model file needs to be placed in the correct directory.
 
 ## Template files
 
