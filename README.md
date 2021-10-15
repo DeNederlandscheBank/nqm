@@ -44,8 +44,11 @@ First installing the 'requirements.txt' including pytorch amongst others and
 then 'fairseq' separately prevents possible issues with Intel OpenMP library.
 
 __Remark__: The source code in this repo is compatible with the version of fairseq from the 
-following repo (<!-- TODO: add Repo -->). This repo has some adjustments for using the replacement, 
+following repo (https://github.com/jm-glowienke/fairseq). This repo has some adjustments for using the replacement, 
 pointer-generator and alignment model.
+
+To install fairseq properly, please use: git clone --recurse-submodules https://github.com/jm-glowienke/fairseq
+
 Via the Python Package Index, version 0.10.2 is available at the moment. However, in 
 the meantime the storing and saving of checkpoints has been adapted in fairseq and is not
 backwards compatible to 0.10.2. With a 
